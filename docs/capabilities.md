@@ -28,7 +28,7 @@
 | CAP-09 | 配置、注册表与临时资源 | 追踪范围和私有可变版本 | R2 | 待研究 | 无 |
 | CAP-10 | 未完成 I/O、计时器与回调 | 一致性与完成语义；不支持时拒绝 | R1/R2 | 待研究 | 无 |
 | CAP-11 | 窗口树、消息队列及 GDI 状态 | 图形现场重建及实际重绘 | R3 | 待研究 | [R3-001](../experiments/r3/results/20261024-r3/report.md)：真实后台窗口创建和绘制基线已测；窗口/队列/GDI 现场重建及恢复未做 |
-| CAP-12 | 键盘投递及按键状态查询 | A/B/宿主互不影响，覆盖所声明查询路径 | R3 | 部分支持 | [R3-002](../experiments/r3-002/results/20261024-r3002/report.md)：受管消息入口、单 GUI 线程下，WH_GETMESSAGE + 目标线程 SetKeyboardState 已验证 Ctrl/Shift 左右组合、逐事件队列键态、原生 EDIT Shift+End、X 字符、A/B 独立及释放失败失效；[R3-001](../experiments/r3/results/20261024-r3/report.md) 无介入失败保持。GetAsyncKeyState 未修复，本轮静止宿主采样通过但人工未执行；完整键盘隔离与 GUI 恢复未支持 |
+| CAP-12 | 键盘投递及按键状态查询 | A/B/宿主互不影响，覆盖所声明查询路径 | R3 | 部分支持 | [R3-003](../experiments/r3-003/results/20261024-r3003/report.md)：主 EXE 指定 IAT 路径、单 GUI 线程的 GetAsyncKeyState 已虚拟化 Ctrl/Shift 左右键和 X 高位；接受时生效，与出队队列键态区分，A/B 独立、取消及安装/移除/退出失败有实测。原版 API 返回与动态原生路径保持对照；低位、其他模块、动态解析、多线程、鼠标和 GUI 恢复未覆盖，宿主人工未执行。[R3-002](../experiments/r3-002/results/20261024-r3002/report.md) 队列键态/原生 EDIT 子集完整回归符合预期；旧原生失败保持 |
 | CAP-13 | 鼠标、焦点、选择及捕获 | 并行点击拖拽；各 View 状态一致 | R3 | 部分支持 | [R3-001](../experiments/r3/results/20261024-r3/report.md)：原生控件定向鼠标消息及 GUI 线程焦点/捕获查询有局部证据；原生按键状态失败，真实越界路由未验证，图形恢复未做 |
 | CAP-14 | Frame 采集与无预览执行 | 真实新帧、来源时序、预览无执行依赖 | R3 | 部分支持 | [R3-001](../experiments/r3/results/20261024-r3/report.md)：正常后台 GDI PrintWindow 图像以目标绘制日志及像素 Tick 核验；挂起/退出明确失败，取消后的再次采集未确认；GPU、任意应用和人工宿主交互未验证 |
 | CAP-15 | Direct3D / GPU 资源 | 对象重建、设备状态及画面连续性 | R3 | 待研究 | 无 |

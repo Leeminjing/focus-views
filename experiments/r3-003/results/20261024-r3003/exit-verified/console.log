@@ -1,0 +1,5 @@
+assertion exit-pending.probe-is-real-EXE-GUI-thread: pass (read-only EXE extension and unchanged fixture call the same real import; repeated query is non-consuming)
+assertion exit-case-really-held-async: pass (pending accepted input exists before target exits)
+assertion negative.target-exit-invalidates: pass (target process confirmed exited; preserve primary exit error and clear private async state)
+static_host_observation: pass (real host native foreground/desktop/cursor/async modifiers; external activity not attributed to runtime)
+manual_host_interaction: not_executed (no human verdict generated; existing R3-002 manual procedure retained)

@@ -1,0 +1,226 @@
+Microsoft (R) COFF/PE Dumper Version 14.44.35229.0
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+
+Dump of file experiments\r3-003\out\r303.exe
+
+File Type: EXECUTABLE IMAGE
+
+  Section contains the following imports:
+
+    USER32.dll
+             14004D428 Import Address Table
+             1400660A0 Import Name Table
+                     0 time date stamp
+                     0 Index of first forwarder reference
+
+                         29F OpenInputDesktop
+                          50 CloseDesktop
+                         1AD GetProcessWindowStation
+                         1D7 GetUserObjectInformationW
+                         121 GetAsyncKeyState
+                          4D ClientToScreen
+                         1EF GetWindowRect
+                         2B1 PrintWindow
+                         256 LoadCursorW
+                         374 SetWindowLongPtrW
+                         117 FrameRect
+                         110 FillRect
+                         133 GetClientRect
+                         1F6 GetWindowTextW
+                         220 InvalidateRect
+                          F4 EndPaint
+                          11 BeginPaint
+                         3C2 UpdateWindow
+                         367 SetTimer
+                         2F8 ReleaseCapture
+                         319 SetCapture
+                         125 GetCapture
+                         157 GetFocus
+                         388 ShowWindow
+                         245 IsWindow
+                          76 CreateWindowExW
+                         2DC RegisterClassW
+                          21 CallWindowProcW
+                         2AE PostQuitMessage
+                          A7 DefWindowProcW
+                         315 SendMessageW
+                         189 GetMessageW
+                         16D GetKeyboardState
+                         168 GetKeyState
+                         3AD UnhookWindowsHookEx
+                         380 SetWindowsHookExW
+                         1F7 GetWindowThreadProcessId
+                         2AD PostMessageW
+                         314 SendMessageTimeoutW
+                         2A9 PeekMessageW
+                          BD DispatchMessageW
+                         3A8 TranslateMessage
+                         1CB GetThreadDesktop
+                         141 GetCursorPos
+                         158 GetForegroundWindow
+                         170 GetLastInputInfo
+                          65 CreateDesktopW
+
+    GDI32.dll
+             14004D000 Import Address Table
+             140065C78 Import Name Table
+                     0 time date stamp
+                     0 Index of first forwarder reference
+
+                          37 CreateDIBSection
+                         17C DeleteDC
+                          31 CreateCompatibleDC
+                         39E TextOutW
+                         38B SetTextColor
+                         364 SetBkMode
+                         35C SelectObject
+                         2B9 GetStockObject
+                         187 Ellipse
+                         17F DeleteObject
+                          5A CreateSolidBrush
+
+    ole32.dll
+             14004D5A8 Import Address Table
+             140066220 Import Name Table
+                     0 time date stamp
+                     0 Index of first forwarder reference
+
+                          2B CoCreateInstance
+                          61 CoInitializeEx
+                          90 CoUninitialize
+
+    KERNEL32.dll
+             14004D060 Import Address Table
+             140065CD8 Import Name Table
+                     0 time date stamp
+                     0 Index of first forwarder reference
+
+                         38E IsValidCodePage
+                         355 HeapReAlloc
+                         474 ReadConsoleW
+                         531 SetFilePointerEx
+                         253 GetFileSizeEx
+                         477 ReadFile
+                         202 GetConsoleMode
+                         1F0 GetConsoleCP
+                         1A5 FlushFileBuffers
+                         255 GetFileType
+                         159 EnumSystemLocalesW
+                         31B GetUserDefaultLCID
+                         390 IsValidLocale
+                         26B GetLocaleInfoW
+                         3B4 LCMapStringW
+                         1B8 GetACP
+                         352 HeapFree
+                         34E HeapAlloc
+                         1DD GetCommandLineW
+                         1DC GetCommandLineA
+                         621 WriteFile
+                         2D9 GetStdHandle
+                         164 ExitProcess
+                         27D GetModuleHandleExW
+                         1B2 FreeLibraryAndExitThread
+                         165 ExitThread
+                          F2 CreateThread
+                         3C6 LoadLibraryExW
+                         5AD TlsFree
+                         5AF TlsSetValue
+                         5AE TlsGetValue
+                         29E GetOEMCP
+                         23E GetEnvironmentStringsW
+                         1B0 FreeEnvironmentStringsW
+                         522 SetEnvironmentVariableW
+                         2BB GetProcessHeap
+                         557 SetStdHandle
+                         357 HeapSize
+                         620 WriteConsoleW
+                         51E SetEndOfFile
+                          9B CompareStringW
+                         5AC TlsAlloc
+                         368 InitializeCriticalSectionAndSpinCount
+                          86 CloseHandle
+                         267 GetLastError
+                         5E6 WaitForSingleObject
+                          BF CreateEventW
+                         58B Sleep
+                         5E4 WaitForMultipleObjects
+                         21E GetCurrentProcessId
+                         59A TerminateProcess
+                         243 GetExitCodeProcess
+                         4D1 ResumeThread
+                          E5 CreateProcessW
+                         30F GetTickCount64
+                         47A ReadProcessMemory
+                          C8 CreateFileMappingW
+                         408 OpenFileMappingW
+                         3E1 MapViewOfFile
+                         5BF UnmapViewOfFile
+                          D2 CreateJobObjectW
+                          24 AssignProcessToJobObject
+                         53C SetInformationJobObject
+                         27A GetModuleFileNameW
+                         60D WideCharToMultiByte
+                         222 GetCurrentThreadId
+                         410 OpenProcess
+                         1B1 FreeLibrary
+                         2B5 GetProcAddress
+                         3C7 LoadLibraryW
+                         27E GetModuleHandleW
+                         524 SetEvent
+                         404 OpenEventW
+                         21D GetCurrentProcess
+                         53F SetLastError
+                         3EB MoveFileExW
+                         3D2 LocalFree
+                         1AC FormatMessageA
+                         26A GetLocaleInfoEx
+                         5E7 WaitForSingleObjectEx
+                         244 GetExitCodeThread
+                          BA CreateDirectoryW
+                          CB CreateFileW
+                         17B FindClose
+                         186 FindFirstFileW
+                         181 FindFirstFileExW
+                         192 FindNextFileW
+                         4DF RtlUnwind
+                         249 GetFileAttributesExW
+                         260 GetFullPathNameW
+                          23 AreFileApisANSI
+                         24F GetFileInformationByHandleEx
+                         3F2 MultiByteToWideChar
+                         135 EnterCriticalSection
+                         3C0 LeaveCriticalSection
+                         369 InitializeCriticalSectionEx
+                         111 DeleteCriticalSection
+                         450 QueryPerformanceCounter
+                         4B6 ReleaseSRWLockExclusive
+                           0 AcquireSRWLockExclusive
+                         5B3 TryAcquireSRWLockExclusive
+                         5EE WakeAllConditionVariable
+                         131 EncodePointer
+                         10A DecodePointer
+                         3B3 LCMapStringEx
+                         2F0 GetSystemTimeAsFileTime
+                         2DE GetStringTypeW
+                         1C7 GetCPInfo
+                         4D3 RtlCaptureContext
+                         4DA RtlLookupFunctionEntry
+                         4E1 RtlVirtualUnwind
+                         5BC UnhandledExceptionFilter
+                         57B SetUnhandledExceptionFilter
+                         389 IsProcessorFeaturePresent
+                         382 IsDebuggerPresent
+                         2D7 GetStartupInfoW
+                         36C InitializeSListHead
+                         4E0 RtlUnwindEx
+                         4DC RtlPcToFileHeader
+                         466 RaiseException
+
+  Summary
+
+        4000 .data
+        4000 .pdata
+       1A000 .rdata
+        1000 .reloc
+       4C000 .text

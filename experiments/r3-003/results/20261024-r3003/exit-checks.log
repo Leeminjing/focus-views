@@ -1,0 +1,22 @@
+assertion exit-pending.probe-is-real-EXE-GUI-thread: pass (read-only EXE extension and unchanged fixture call the same real import; repeated query is non-consuming)
+assertion exit-case-really-held-async: pass (pending accepted input exists before target exits)
+assertion negative.target-exit-invalidates: pass (target process confirmed exited; preserve primary exit error and clear private async state)
+static_host_observation: pass (real host native foreground/desktop/cursor/async modifiers; external activity not attributed to runtime)
+manual_host_interaction: not_executed (no human verdict generated; existing R3-002 manual procedure retained)
+evidence experiment-completed=True
+evidence controller-assertions-pass=True
+evidence actual-failures-stay-fail=True
+evidence R3-and-GUI-restore-not-claimed=True
+evidence exit-pending.native-query-thread=True
+evidence exit-pending.no-callback-failures=True
+evidence exit-pending.EXE-native-replacement-module-identity=True
+evidence exit-pending.exact-import-installation=True
+evidence exit-pending.acceptance-state-version-ledger=True
+evidence exit-pending.actual-API-queries-match-accepted-version=True
+evidence exit.primary-error-preserved-and-address-space-gone=True
+evidence all-owned-processes-confirmed-exited=True
+evidence all-owned-desktops-released=True
+evidence no-cleanup-errors=True
+evidence existing-experiment-source-and-baselines-unchanged=True
+evidence no-host-input-or-business-state-setters=True
+R3_003_EVIDENCE_PASSED (only the declared owned EXE IAT path and key high bits)

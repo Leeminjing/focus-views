@@ -1,0 +1,114 @@
+{
+  "scenario": "exit",
+  "processExit": 0,
+  "allEvidenceChecksPassed": true,
+  "checks": [
+    {
+      "name": "experiment-completed",
+      "passed": true
+    },
+    {
+      "name": "controller-assertions-pass",
+      "passed": true
+    },
+    {
+      "name": "actual-failures-stay-fail",
+      "passed": true
+    },
+    {
+      "name": "R3-and-GUI-restore-not-claimed",
+      "passed": true
+    },
+    {
+      "name": "exit-pending.native-query-thread",
+      "passed": true
+    },
+    {
+      "name": "exit-pending.no-callback-failures",
+      "passed": true
+    },
+    {
+      "name": "exit-pending.EXE-native-replacement-module-identity",
+      "passed": true
+    },
+    {
+      "name": "exit-pending.exact-import-installation",
+      "passed": true
+    },
+    {
+      "name": "exit-pending.acceptance-state-version-ledger",
+      "passed": true
+    },
+    {
+      "name": "exit-pending.actual-API-queries-match-accepted-version",
+      "passed": true
+    },
+    {
+      "name": "exit.primary-error-preserved-and-address-space-gone",
+      "passed": true
+    },
+    {
+      "name": "all-owned-processes-confirmed-exited",
+      "passed": true
+    },
+    {
+      "name": "all-owned-desktops-released",
+      "passed": true
+    },
+    {
+      "name": "no-cleanup-errors",
+      "passed": true
+    },
+    {
+      "name": "existing-experiment-source-and-baselines-unchanged",
+      "passed": true
+    },
+    {
+      "name": "no-host-input-or-business-state-setters",
+      "passed": true
+    }
+  ],
+  "assertions": [
+    {
+      "type": "assertion",
+      "tickMs": 15669593,
+      "name": "exit-pending.probe-is-real-EXE-GUI-thread",
+      "passed": true,
+      "detail": "read-only EXE extension and unchanged fixture call the same real import; repeated query is non-consuming"
+    },
+    {
+      "type": "assertion",
+      "tickMs": 15669593,
+      "name": "exit-case-really-held-async",
+      "passed": true,
+      "detail": "pending accepted input exists before target exits"
+    },
+    {
+      "type": "assertion",
+      "tickMs": 15669609,
+      "name": "negative.target-exit-invalidates",
+      "passed": true,
+      "detail": "target process confirmed exited; preserve primary exit error and clear private async state"
+    }
+  ],
+  "capabilities": [
+    {
+      "type": "capability",
+      "tickMs": 15669656,
+      "name": "static_host_observation",
+      "status": "pass",
+      "detail": "real host native foreground/desktop/cursor/async modifiers; external activity not attributed to runtime"
+    },
+    {
+      "type": "capability",
+      "tickMs": 15669656,
+      "name": "manual_host_interaction",
+      "status": "not_executed",
+      "detail": "no human verdict generated; existing R3-002 manual procedure retained"
+    }
+  ],
+  "manualHostTest": "not_executed",
+  "R3Complete": false,
+  "guiRestore": false,
+  "R1R2Rerun": false
+}

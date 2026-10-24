@@ -45,3 +45,5 @@ focus-views 是一个 Windows 原生隔离与恢复运行时研发项目，完�
 后台原生图形与输入的实际能力和限制见 [R3-001 运行说明](experiments/r3/README.md) 和 [诊断报告](experiments/r3/results/20261024-r3/report.md)。本轮是冷启动 GUI 基线，不构成 GUI 快照恢复证明。
 
 受管键盘机制见 [R3-002 运行说明](experiments/r3-002/README.md) 和 [实际报告](experiments/r3-002/results/20261024-r3002/report.md)：线程钩子在目标 GUI 线程更新真实队列键态后，同一个原生 EDIT 的 Shift+End 从无效变为真实选择。仅验证指定键盘子集，后台异步键态和完整 R3 仍未完成；原生基线与历史失败保持不变。
+
+[R3-003](experiments/r3-003/README.md) 已实测通过指定 EXE IAT 路径上的私有异步按下高位，并验证它在输入接受时生效、独立于消息消费；这是明确的 API 虚拟化。详见 [原始记录与报告](experiments/r3-003/results/20261024-r3003/report.md)。范围仍限于单 GUI 线程及指定按键，不代表完整异步 API、键鼠隔离或 GUI 恢复。

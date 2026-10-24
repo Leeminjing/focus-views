@@ -1,0 +1,56 @@
+assertion native.probe-is-real-EXE-GUI-thread: pass (read-only EXE extension and unchanged fixture call the same real import; repeated query is non-consuming)
+assertion native.probe-is-real-EXE-GUI-thread: pass (read-only EXE extension and unchanged fixture call the same real import; repeated query is non-consuming)
+assertion native.baseline-failure-retained: pass (queue mechanism enabled, EXE IAT native: async remains native zero)
+native.async_private_Ctrl: fail (actual unpatched import; expected native background limitation)
+assertion native.IAT-unchanged: pass (no IAT replacement in native control)
+assertion native.closed-cleanly: pass (queue bits clear, original IAT/protection restored, self reference released, bridge exited)
+assertion A.IAT-installed: pass (only owned EXE import replaced; runtime pinned until restore)
+assertion A.probe-is-real-EXE-GUI-thread: pass (read-only EXE extension and unchanged fixture call the same real import; repeated query is non-consuming)
+assertion B.probe-is-real-EXE-GUI-thread: pass (read-only EXE extension and unchanged fixture call the same real import; repeated query is non-consuming)
+assertion async.before-dequeue: pass (accepted async input is effective before queued keyboard messages are delivered)
+assertion async.A-B-independent: pass (B reads its own accepted input state)
+assertion async.native-dynamic-path-remains-native: pass (GetProcAddress USER32 call is intentionally not intercepted)
+managed.EXE_IAT_async_Ctrl: pass (actual EXE GetAsyncKeyState call, high bit virtualized)
+assertion A.actual-call-instructions-target-IAT: pass (controller reads live EXE call instructions; RIP-relative import calls resolve to the recorded slot)
+assertion B.actual-call-instructions-target-IAT: pass (controller reads live EXE call instructions; RIP-relative import calls resolve to the recorded slot)
+assertion A.closed-cleanly: pass (queue bits clear, original IAT/protection restored, self reference released, bridge exited)
+assertion B.closed-cleanly: pass (queue bits clear, original IAT/protection restored, self reference released, bridge exited)
+static_host_observation: inconclusive (real host native foreground/desktop/cursor/async modifiers; external activity not attributed to runtime)
+manual_host_interaction: not_executed (no human verdict generated; existing R3-002 manual procedure retained)
+evidence experiment-completed=True
+evidence controller-assertions-pass=True
+evidence actual-failures-stay-fail=True
+evidence R3-and-GUI-restore-not-claimed=True
+evidence native.native-query-thread=True
+evidence native.no-callback-failures=True
+evidence native.EXE-native-replacement-module-identity=True
+evidence native.exact-import-installation=True
+evidence native.acceptance-state-version-ledger=True
+evidence native.actual-API-queries-match-accepted-version=True
+evidence native.normal-unload-restores-IAT-and-protection=True
+evidence A.native-query-thread=True
+evidence A.no-callback-failures=True
+evidence A.EXE-native-replacement-module-identity=True
+evidence A.exact-import-installation=True
+evidence A.acceptance-state-version-ledger=True
+evidence A.actual-API-queries-match-accepted-version=True
+evidence A.original-EXE-IAT-calls-observed=True
+evidence A.live-callsite-instructions-reference-IAT=True
+evidence A.normal-unload-restores-IAT-and-protection=True
+evidence B.native-query-thread=True
+evidence B.no-callback-failures=True
+evidence B.EXE-native-replacement-module-identity=True
+evidence B.exact-import-installation=True
+evidence B.acceptance-state-version-ledger=True
+evidence B.actual-API-queries-match-accepted-version=True
+evidence B.original-EXE-IAT-calls-observed=True
+evidence B.live-callsite-instructions-reference-IAT=True
+evidence B.normal-unload-restores-IAT-and-protection=True
+evidence async-effective-before-key-message-consumption=True
+evidence native-dynamic-path-not-claimed-virtualized=True
+evidence all-owned-processes-confirmed-exited=True
+evidence all-owned-desktops-released=True
+evidence no-cleanup-errors=True
+evidence existing-experiment-source-and-baselines-unchanged=True
+evidence no-host-input-or-business-state-setters=True
+R3_003_EVIDENCE_PASSED (only the declared owned EXE IAT path and key high bits)
