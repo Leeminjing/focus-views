@@ -49,3 +49,5 @@ focus-views 是一个 Windows 原生隔离与恢复运行时研发项目，完�
 [R3-003](experiments/r3-003/README.md) 已实测通过指定 EXE IAT 路径上的私有异步按下高位，并验证它在输入接受时生效、独立于消息消费；这是明确的 API 虚拟化。详见 [原始记录与报告](experiments/r3-003/results/20261024-r3003/report.md)。范围仍限于单 GUI 线程及指定按键，不代表完整异步 API、键鼠隔离或 GUI 恢复。
 
 [R3-004](experiments/r3-004/README.md) 已实际验证受管左键/虚拟光标、所属窗口命中、真实捕获的越界路由，以及 A 保持拖拽时 B 点击原生按钮；原版 fixture 的真实 GDI 图像和失败日志见 [报告](experiments/r3-004/results/20261024-r3004/report.md)。宿主静止采样与人工交互分别判定，人工未执行；这仍是冷启动 GUI 子集，完整 R3 和 GUI 恢复尚未完成。
+
+[R3-005a](experiments/r3-005a/README.md) 已编译并实测，但 GUI 执行恢复未通过：新进程中已重建固定自绘窗口并写回声明的内存、C++ 栈和基本上下文，首个 RET 因 CET 影子栈不匹配失败。原始异常、最小复现和分层结果见 [报告](experiments/r3-005a/results/20261024-r305a/report.md)。未关闭保护，未发布恢复成功的 View，尚未推进 R3-005b 或 R4。

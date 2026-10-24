@@ -1,0 +1,606 @@
+{
+  "scenario": "all",
+  "processExit": 0,
+  "allEvidenceChecksPassed": true,
+  "checks": [
+    {
+      "name": "experiment-completed",
+      "passed": true
+    },
+    {
+      "name": "controller-assertions-pass",
+      "passed": true
+    },
+    {
+      "name": "actual-failures-stay-fail",
+      "passed": true
+    },
+    {
+      "name": "R3-and-GUI-restore-not-claimed",
+      "passed": true
+    },
+    {
+      "name": "native.native-query-thread",
+      "passed": true
+    },
+    {
+      "name": "native.no-callback-failures",
+      "passed": true
+    },
+    {
+      "name": "native.EXE-native-replacement-module-identity",
+      "passed": true
+    },
+    {
+      "name": "native.exact-import-installation",
+      "passed": true
+    },
+    {
+      "name": "native.acceptance-state-version-ledger",
+      "passed": true
+    },
+    {
+      "name": "native.actual-API-queries-match-accepted-version",
+      "passed": true
+    },
+    {
+      "name": "native.normal-unload-restores-IAT-and-protection",
+      "passed": true
+    },
+    {
+      "name": "A.native-query-thread",
+      "passed": true
+    },
+    {
+      "name": "A.no-callback-failures",
+      "passed": true
+    },
+    {
+      "name": "A.EXE-native-replacement-module-identity",
+      "passed": true
+    },
+    {
+      "name": "A.exact-import-installation",
+      "passed": true
+    },
+    {
+      "name": "A.acceptance-state-version-ledger",
+      "passed": true
+    },
+    {
+      "name": "A.actual-API-queries-match-accepted-version",
+      "passed": true
+    },
+    {
+      "name": "A.original-EXE-IAT-calls-observed",
+      "passed": true
+    },
+    {
+      "name": "A.live-callsite-instructions-reference-IAT",
+      "passed": true
+    },
+    {
+      "name": "A.normal-unload-restores-IAT-and-protection",
+      "passed": true
+    },
+    {
+      "name": "B.native-query-thread",
+      "passed": true
+    },
+    {
+      "name": "B.no-callback-failures",
+      "passed": true
+    },
+    {
+      "name": "B.EXE-native-replacement-module-identity",
+      "passed": true
+    },
+    {
+      "name": "B.exact-import-installation",
+      "passed": true
+    },
+    {
+      "name": "B.acceptance-state-version-ledger",
+      "passed": true
+    },
+    {
+      "name": "B.actual-API-queries-match-accepted-version",
+      "passed": true
+    },
+    {
+      "name": "B.original-EXE-IAT-calls-observed",
+      "passed": true
+    },
+    {
+      "name": "B.live-callsite-instructions-reference-IAT",
+      "passed": true
+    },
+    {
+      "name": "B.normal-unload-restores-IAT-and-protection",
+      "passed": true
+    },
+    {
+      "name": "missing-import.native-query-thread",
+      "passed": true
+    },
+    {
+      "name": "missing-import.no-callback-failures",
+      "passed": true
+    },
+    {
+      "name": "missing-import.never-published-ready",
+      "passed": true
+    },
+    {
+      "name": "missing-import.acceptance-state-version-ledger",
+      "passed": true
+    },
+    {
+      "name": "missing-import.actual-API-queries-match-accepted-version",
+      "passed": true
+    },
+    {
+      "name": "install-rollback.native-query-thread",
+      "passed": true
+    },
+    {
+      "name": "install-rollback.no-callback-failures",
+      "passed": true
+    },
+    {
+      "name": "install-rollback.never-published-ready",
+      "passed": true
+    },
+    {
+      "name": "install-rollback.acceptance-state-version-ledger",
+      "passed": true
+    },
+    {
+      "name": "install-rollback.actual-API-queries-match-accepted-version",
+      "passed": true
+    },
+    {
+      "name": "unload-failure.native-query-thread",
+      "passed": true
+    },
+    {
+      "name": "unload-failure.no-callback-failures",
+      "passed": true
+    },
+    {
+      "name": "unload-failure.EXE-native-replacement-module-identity",
+      "passed": true
+    },
+    {
+      "name": "unload-failure.exact-import-installation",
+      "passed": true
+    },
+    {
+      "name": "unload-failure.acceptance-state-version-ledger",
+      "passed": true
+    },
+    {
+      "name": "unload-failure.actual-API-queries-match-accepted-version",
+      "passed": true
+    },
+    {
+      "name": "exit-pending.native-query-thread",
+      "passed": true
+    },
+    {
+      "name": "exit-pending.no-callback-failures",
+      "passed": true
+    },
+    {
+      "name": "exit-pending.EXE-native-replacement-module-identity",
+      "passed": true
+    },
+    {
+      "name": "exit-pending.exact-import-installation",
+      "passed": true
+    },
+    {
+      "name": "exit-pending.acceptance-state-version-ledger",
+      "passed": true
+    },
+    {
+      "name": "exit-pending.actual-API-queries-match-accepted-version",
+      "passed": true
+    },
+    {
+      "name": "exit.primary-error-preserved-and-address-space-gone",
+      "passed": true
+    },
+    {
+      "name": "async-effective-before-key-message-consumption",
+      "passed": true
+    },
+    {
+      "name": "native-dynamic-path-not-claimed-virtualized",
+      "passed": true
+    },
+    {
+      "name": "original-fixture-observes-different-async-and-queue-times",
+      "passed": true
+    },
+    {
+      "name": "refused-unload-keeps-DLL-pinned-and-channel-invalid",
+      "passed": true
+    },
+    {
+      "name": "full-R3-002-regression",
+      "passed": true
+    },
+    {
+      "name": "all-owned-processes-confirmed-exited",
+      "passed": true
+    },
+    {
+      "name": "all-owned-desktops-released",
+      "passed": true
+    },
+    {
+      "name": "no-cleanup-errors",
+      "passed": true
+    },
+    {
+      "name": "existing-experiment-source-and-baselines-unchanged",
+      "passed": true
+    },
+    {
+      "name": "no-host-input-or-business-state-setters",
+      "passed": true
+    }
+  ],
+  "assertions": [
+    {
+      "type": "assertion",
+      "tickMs": 23224687,
+      "name": "native.probe-is-real-EXE-GUI-thread",
+      "passed": true,
+      "detail": "read-only EXE extension and unchanged fixture call the same real import; repeated query is non-consuming"
+    },
+    {
+      "type": "assertion",
+      "tickMs": 23224750,
+      "name": "native.probe-is-real-EXE-GUI-thread",
+      "passed": true,
+      "detail": "read-only EXE extension and unchanged fixture call the same real import; repeated query is non-consuming"
+    },
+    {
+      "type": "assertion",
+      "tickMs": 23224750,
+      "name": "native.baseline-failure-retained",
+      "passed": true,
+      "detail": "queue mechanism enabled, EXE IAT native: async remains native zero"
+    },
+    {
+      "type": "assertion",
+      "tickMs": 23224750,
+      "name": "native.IAT-unchanged",
+      "passed": true,
+      "detail": "no IAT replacement in native control"
+    },
+    {
+      "type": "assertion",
+      "tickMs": 23224781,
+      "name": "native.closed-cleanly",
+      "passed": true,
+      "detail": "queue bits clear, original IAT/protection restored, self reference released, bridge exited"
+    },
+    {
+      "type": "assertion",
+      "tickMs": 23225109,
+      "name": "A.IAT-installed",
+      "passed": true,
+      "detail": "only owned EXE import replaced; runtime pinned until restore"
+    },
+    {
+      "type": "assertion",
+      "tickMs": 23225156,
+      "name": "A.probe-is-real-EXE-GUI-thread",
+      "passed": true,
+      "detail": "read-only EXE extension and unchanged fixture call the same real import; repeated query is non-consuming"
+    },
+    {
+      "type": "assertion",
+      "tickMs": 23225187,
+      "name": "B.probe-is-real-EXE-GUI-thread",
+      "passed": true,
+      "detail": "read-only EXE extension and unchanged fixture call the same real import; repeated query is non-consuming"
+    },
+    {
+      "type": "assertion",
+      "tickMs": 23225187,
+      "name": "async.before-dequeue",
+      "passed": true,
+      "detail": "accepted async input is effective before queued keyboard messages are delivered"
+    },
+    {
+      "type": "assertion",
+      "tickMs": 23225187,
+      "name": "async.A-B-independent",
+      "passed": true,
+      "detail": "B reads its own accepted input state"
+    },
+    {
+      "type": "assertion",
+      "tickMs": 23225187,
+      "name": "async.native-dynamic-path-remains-native",
+      "passed": true,
+      "detail": "GetProcAddress USER32 call is intentionally not intercepted"
+    },
+    {
+      "type": "assertion",
+      "tickMs": 23225250,
+      "name": "A.probe-is-real-EXE-GUI-thread",
+      "passed": true,
+      "detail": "read-only EXE extension and unchanged fixture call the same real import; repeated query is non-consuming"
+    },
+    {
+      "type": "assertion",
+      "tickMs": 23225250,
+      "name": "async.up-before-dequeue",
+      "passed": true,
+      "detail": "up visible immediately, neither key event consumed"
+    },
+    {
+      "type": "assertion",
+      "tickMs": 23225312,
+      "name": "A.probe-is-real-EXE-GUI-thread",
+      "passed": true,
+      "detail": "read-only EXE extension and unchanged fixture call the same real import; repeated query is non-consuming"
+    },
+    {
+      "type": "assertion",
+      "tickMs": 23225312,
+      "name": "queue-and-async-different-time-semantics",
+      "passed": true,
+      "detail": "fixture per-message trace independently checks async up while queue down"
+    },
+    {
+      "type": "assertion",
+      "tickMs": 23225375,
+      "name": "A.probe-is-real-EXE-GUI-thread",
+      "passed": true,
+      "detail": "read-only EXE extension and unchanged fixture call the same real import; repeated query is non-consuming"
+    },
+    {
+      "type": "assertion",
+      "tickMs": 23225375,
+      "name": "async.burst-and-repeated-query",
+      "passed": true,
+      "detail": "four accepted transitions; repeat reads do not consume low-bit history"
+    },
+    {
+      "type": "assertion",
+      "tickMs": 23225406,
+      "name": "A.probe-is-real-EXE-GUI-thread",
+      "passed": true,
+      "detail": "read-only EXE extension and unchanged fixture call the same real import; repeated query is non-consuming"
+    },
+    {
+      "type": "assertion",
+      "tickMs": 23225406,
+      "name": "async.Ctrl-sides-OR",
+      "passed": true,
+      "detail": "generic Ctrl is OR of independent side states"
+    },
+    {
+      "type": "assertion",
+      "tickMs": 23225500,
+      "name": "A.probe-is-real-EXE-GUI-thread",
+      "passed": true,
+      "detail": "read-only EXE extension and unchanged fixture call the same real import; repeated query is non-consuming"
+    },
+    {
+      "type": "assertion",
+      "tickMs": 23225500,
+      "name": "async.Shift-and-X",
+      "passed": true,
+      "detail": "supported ordinary key and side-specific modifier states"
+    },
+    {
+      "type": "assertion",
+      "tickMs": 23225562,
+      "name": "B.probe-is-real-EXE-GUI-thread",
+      "passed": true,
+      "detail": "read-only EXE extension and unchanged fixture call the same real import; repeated query is non-consuming"
+    },
+    {
+      "type": "assertion",
+      "tickMs": 23225578,
+      "name": "A.probe-is-real-EXE-GUI-thread",
+      "passed": true,
+      "detail": "read-only EXE extension and unchanged fixture call the same real import; repeated query is non-consuming"
+    },
+    {
+      "type": "assertion",
+      "tickMs": 23225578,
+      "name": "async.interleaved-inputs",
+      "passed": true,
+      "detail": "A and B states differ while both process API calls"
+    },
+    {
+      "type": "assertion",
+      "tickMs": 23225656,
+      "name": "A.probe-is-real-EXE-GUI-thread",
+      "passed": true,
+      "detail": "read-only EXE extension and unchanged fixture call the same real import; repeated query is non-consuming"
+    },
+    {
+      "type": "assertion",
+      "tickMs": 23225656,
+      "name": "async.cancel-linearization",
+      "passed": true,
+      "detail": "cancel clears accepted async state before queue release is consumed"
+    },
+    {
+      "type": "assertion",
+      "tickMs": 23225734,
+      "name": "A.probe-is-real-EXE-GUI-thread",
+      "passed": true,
+      "detail": "read-only EXE extension and unchanged fixture call the same real import; repeated query is non-consuming"
+    },
+    {
+      "type": "assertion",
+      "tickMs": 23225734,
+      "name": "async.cancel-queue-completes",
+      "passed": true,
+      "detail": "queue state clears when its release packet is consumed"
+    },
+    {
+      "type": "assertion",
+      "tickMs": 23225890,
+      "name": "negative.missing-import-rejected",
+      "passed": true,
+      "detail": "actual missing-name lookup; no ready input channel"
+    },
+    {
+      "type": "assertion",
+      "tickMs": 23226125,
+      "name": "negative.partial-install-rollback",
+      "passed": true,
+      "detail": "injected error after real exchange; original slot/protection restored"
+    },
+    {
+      "type": "assertion",
+      "tickMs": 23226406,
+      "name": "negative.unload-refusal-invalidates",
+      "passed": true,
+      "detail": "injected restoration refusal; no dangling pointer into unloaded DLL, no healthy result"
+    },
+    {
+      "type": "assertion",
+      "tickMs": 23226406,
+      "name": "negative.invalid-channel-rejects-input",
+      "passed": true,
+      "detail": "failed cleanup cannot accept future commands"
+    },
+    {
+      "type": "assertion",
+      "tickMs": 23226640,
+      "name": "exit-pending.probe-is-real-EXE-GUI-thread",
+      "passed": true,
+      "detail": "read-only EXE extension and unchanged fixture call the same real import; repeated query is non-consuming"
+    },
+    {
+      "type": "assertion",
+      "tickMs": 23226640,
+      "name": "exit-case-really-held-async",
+      "passed": true,
+      "detail": "pending accepted input exists before target exits"
+    },
+    {
+      "type": "assertion",
+      "tickMs": 23226671,
+      "name": "negative.target-exit-invalidates",
+      "passed": true,
+      "detail": "target process confirmed exited; preserve primary exit error and clear private async state"
+    },
+    {
+      "type": "assertion",
+      "tickMs": 23226703,
+      "name": "B.probe-is-real-EXE-GUI-thread",
+      "passed": true,
+      "detail": "read-only EXE extension and unchanged fixture call the same real import; repeated query is non-consuming"
+    },
+    {
+      "type": "assertion",
+      "tickMs": 23226703,
+      "name": "B-continues-after-other-failures",
+      "passed": true,
+      "detail": "existing B remains operational"
+    },
+    {
+      "type": "assertion",
+      "tickMs": 23226890,
+      "name": "B.native-EDIT-queue-regression",
+      "passed": true,
+      "detail": "native EDIT selects through real queue state even when accepted async Shift is already up"
+    },
+    {
+      "type": "assertion",
+      "tickMs": 23226890,
+      "name": "A.actual-call-instructions-target-IAT",
+      "passed": true,
+      "detail": "controller reads live EXE call instructions; RIP-relative import calls resolve to the recorded slot"
+    },
+    {
+      "type": "assertion",
+      "tickMs": 23226890,
+      "name": "B.actual-call-instructions-target-IAT",
+      "passed": true,
+      "detail": "controller reads live EXE call instructions; RIP-relative import calls resolve to the recorded slot"
+    },
+    {
+      "type": "assertion",
+      "tickMs": 23226921,
+      "name": "A.closed-cleanly",
+      "passed": true,
+      "detail": "queue bits clear, original IAT/protection restored, self reference released, bridge exited"
+    },
+    {
+      "type": "assertion",
+      "tickMs": 23226921,
+      "name": "A.IAT-restored",
+      "passed": true,
+      "detail": "controller reads actual original IAT address after bridge exits"
+    },
+    {
+      "type": "assertion",
+      "tickMs": 23226953,
+      "name": "A.native-after-unload",
+      "passed": true,
+      "detail": "unchanged fixture continues through restored native import"
+    },
+    {
+      "type": "assertion",
+      "tickMs": 23226984,
+      "name": "B.closed-cleanly",
+      "passed": true,
+      "detail": "queue bits clear, original IAT/protection restored, self reference released, bridge exited"
+    }
+  ],
+  "capabilities": [
+    {
+      "type": "capability",
+      "tickMs": 23224750,
+      "name": "native.async_private_Ctrl",
+      "status": "fail",
+      "detail": "actual unpatched import; expected native background limitation"
+    },
+    {
+      "type": "capability",
+      "tickMs": 23225187,
+      "name": "managed.EXE_IAT_async_Ctrl",
+      "status": "pass",
+      "detail": "actual EXE GetAsyncKeyState call, high bit virtualized"
+    },
+    {
+      "type": "capability",
+      "tickMs": 23226406,
+      "name": "injected_restore_refusal.healthy_unload",
+      "status": "fail",
+      "detail": "IAT still points at pinned runtime; channel rejected; target is later terminated"
+    },
+    {
+      "type": "capability",
+      "tickMs": 23227093,
+      "name": "static_host_observation",
+      "status": "inconclusive",
+      "detail": "real host native foreground/desktop/cursor/async modifiers; external activity not attributed to runtime"
+    },
+    {
+      "type": "capability",
+      "tickMs": 23227093,
+      "name": "manual_host_interaction",
+      "status": "not_executed",
+      "detail": "no human verdict generated; existing R3-002 manual procedure retained"
+    }
+  ],
+  "manualHostTest": "not_executed",
+  "R3Complete": false,
+  "guiRestore": false,
+  "R1R2Rerun": false
+}

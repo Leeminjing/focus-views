@@ -1,0 +1,345 @@
+assertion native.EXE-query-on-GUI-thread: pass (read-only EXE probe and unchanged fixture independently query native APIs)
+assertion native.EXE-query-on-GUI-thread: pass (read-only EXE probe and unchanged fixture independently query native APIs)
+assertion native.async-failure-retained: pass (same EXE; native async left does not reflect managed button; queue table intervention still active)
+native.private_async_mouse: fail (unpatched main EXE import; actual Windows result)
+native.private_cursor: fail (unpatched main EXE cursor result, no forced expectation)
+assertion native.IAT-async: pass (controller reads actual remote import slot)
+assertion native.IAT-cursor: pass (controller reads actual remote import slot)
+assertion native.clean-close: pass (button/capture released, both imports and protections restored before bridge exits)
+assertion native.IAT-async: pass (controller reads actual remote import slot)
+assertion native.IAT-cursor: pass (controller reads actual remote import slot)
+assertion A.IAT-async: pass (controller reads actual remote import slot)
+assertion A.IAT-cursor: pass (controller reads actual remote import slot)
+assertion B.IAT-async: pass (controller reads actual remote import slot)
+assertion B.IAT-cursor: pass (controller reads actual remote import slot)
+assertion A-B.same-initial-UI: pass (cold-start GUI instances, no restoration claim)
+assertion B.EXE-query-on-GUI-thread: pass (read-only EXE probe and unchanged fixture independently query native APIs)
+assertion A.EXE-query-on-GUI-thread: pass (read-only EXE probe and unchanged fixture independently query native APIs)
+assertion mouse.dual-time-semantics: pass (accepted left/cursor effective before dequeue; native queue and capture unchanged)
+assertion cursor.acceptance-visible: pass (actual GetCursorPos IAT call returns accepted screen coordinates)
+assertion A.EXE-query-on-GUI-thread: pass (read-only EXE probe and unchanged fixture independently query native APIs)
+assertion A.native-capture-and-button-state: pass (unchanged native drag procedure called SetCapture; real queue query sees left held)
+assertion A.EXE-query-on-GUI-thread: pass (read-only EXE probe and unchanged fixture independently query native APIs)
+assertion A.capture-routes-outside: pass (top-client (650,350) routes to captured drag client (626,146), beyond both bounds)
+assertion B.EXE-query-on-GUI-thread: pass (read-only EXE probe and unchanged fixture independently query native APIs)
+assertion A.EXE-query-on-GUI-thread: pass (read-only EXE probe and unchanged fixture independently query native APIs)
+assertion B.native-button-click: pass (ordinary BUTTON received routed down/up and emitted BN_CLICKED)
+assertion A.unaffected-by-B: pass (actual capture/focus/drag plus accepted cursor and button remain A-private)
+assertion B.independent-cursor: pass (B position and button state separate from A)
+assertion A-outside-held.fresh-GDI: pass (unchanged native PrintWindow helper checks real target paint and decoded Tick pixels)
+assertion B-clicked.fresh-GDI: pass (unchanged native PrintWindow helper checks real target paint and decoded Tick pixels)
+assertion A-inside-held.fresh-GDI: pass (unchanged native PrintWindow helper checks real target paint and decoded Tick pixels)
+assertion A.EXE-query-on-GUI-thread: pass (read-only EXE probe and unchanged fixture independently query native APIs)
+assertion A.release-clears-native-capture: pass (native WM_LBUTTONUP calls ReleaseCapture)
+assertion A.route-resumes-hit-test: pass (after release, coordinates route to BUTTON instead of stale drag target)
+assertion A-final.fresh-GDI: pass (unchanged native PrintWindow helper checks real target paint and decoded Tick pixels)
+assertion B-final.fresh-GDI: pass (unchanged native PrintWindow helper checks real target paint and decoded Tick pixels)
+assertion A.EXE-query-on-GUI-thread: pass (read-only EXE probe and unchanged fixture independently query native APIs)
+assertion mouse.burst-peek-order: pass (non-consuming peeks do not apply future up; actual per-event queue table changes)
+assertion B.EDIT-Shift-End-regression: pass (unmodified EDIT uses native queue state with routed focus)
+assertion negative.foreign-window-rejected: pass (mouse.route.ownership error=5)
+negative.foreign-window-rejected: fail (input capability refused; negative-test assertion is separate)
+assertion B.survives-other-channel-failure: pass (native button remains usable after another View fails)
+assertion negative.destroyed-capture-invalidates: pass (captured_window.destroyed error=1400)
+negative.destroyed-capture-invalidates: fail (input capability refused; negative-test assertion is separate)
+assertion B.survives-other-channel-failure: pass (native button remains usable after another View fails)
+assertion negative.omitted-up-invalidates: pass (mouse.button_up.lease_expired error=1460)
+negative.omitted-up-invalidates: fail (input capability refused; negative-test assertion is separate)
+assertion negative.omitted-up-cleaned: pass (lease expiry sends native release and restores imports, channel remains invalid)
+assertion B.survives-other-channel-failure: pass (native button remains usable after another View fails)
+assertion close-held.clean-close: pass (button/capture released, both imports and protections restored before bridge exits)
+assertion close-held.IAT-async: pass (controller reads actual remote import slot)
+assertion close-held.IAT-cursor: pass (controller reads actual remote import slot)
+assertion B.survives-other-channel-failure: pass (native button remains usable after another View fails)
+assertion negative.bridge-exit-watchdog: pass (GUI timer confirms bridge process death, clears capture/state, restores imports, retains self pin until target exits)
+assertion bridge-exit.IAT-async: pass (controller reads actual remote import slot)
+assertion bridge-exit.IAT-cursor: pass (controller reads actual remote import slot)
+assertion B.survives-other-channel-failure: pass (native button remains usable after another View fails)
+assertion negative.hung-thread-invalidates: pass (dequeue and cleanup timeout; no healthy unload or dangling imports)
+assertion B.survives-other-channel-failure: pass (native button remains usable after another View fails)
+assertion negative.uninstall-refused: pass (injected.IAT.restore_refused error=5)
+negative.uninstall-refused: fail (input capability refused; negative-test assertion is separate)
+assertion negative.uninstall-keeps-runtime-pinned: pass (input channel invalid; native release completed; two IAT references still backed by live DLL)
+assertion uninstall-refusal.IAT-async: pass (controller reads actual remote import slot)
+assertion uninstall-refusal.IAT-cursor: pass (controller reads actual remote import slot)
+assertion B.survives-other-channel-failure: pass (native button remains usable after another View fails)
+assertion negative.two-slot-install-rollback: pass (second-slot transaction failure rolls back actual first slot)
+assertion partial-install.IAT-async: pass (controller reads actual remote import slot)
+assertion partial-install.IAT-cursor: pass (controller reads actual remote import slot)
+assertion A.actual-IAT-call-sites: pass (actual EXE instructions and caller module/thread checked for both APIs)
+assertion B.actual-IAT-call-sites: pass (actual EXE instructions and caller module/thread checked for both APIs)
+assertion A.clean-close: pass (button/capture released, both imports and protections restored before bridge exits)
+assertion A.IAT-async: pass (controller reads actual remote import slot)
+assertion A.IAT-cursor: pass (controller reads actual remote import slot)
+assertion B.clean-close: pass (button/capture released, both imports and protections restored before bridge exits)
+assertion B.IAT-async: pass (controller reads actual remote import slot)
+assertion B.IAT-cursor: pass (controller reads actual remote import slot)
+static_host_observation: pass (real host native foreground/desktop/cursor/async modifiers; external activity not attributed to runtime)
+manual_host_interaction: not_executed (hold window alone is not a human verdict; follow R3-004 README procedure)
+evidence controller-completed-with-no-failed-assertions=True
+evidence R3-and-GUI-restore-not-claimed=True
+evidence native-and-negative-capability-failures-stay-fail=True
+evidence native.real-query-thread=True
+evidence native.checked-module-and-page-protection=True
+evidence native.two-imports-installation=True
+evidence native.actual-queries-match-accepted-action-ledger=True
+evidence native.normal-close-restores-both-imports=True
+evidence A.real-query-thread=True
+evidence A.checked-module-and-page-protection=True
+evidence A.two-imports-installation=True
+evidence A.actual-queries-match-accepted-action-ledger=True
+evidence A.route-targets-and-dequeue-button-order=True
+evidence A.peeks-non-consuming=True
+evidence A.actual-import-call-instructions=True
+evidence A.normal-close-restores-both-imports=True
+evidence B.real-query-thread=True
+evidence B.checked-module-and-page-protection=True
+evidence B.two-imports-installation=True
+evidence B.actual-queries-match-accepted-action-ledger=True
+evidence B.route-targets-and-dequeue-button-order=True
+evidence B.peeks-non-consuming=True
+evidence B.actual-import-call-instructions=True
+evidence B.normal-close-restores-both-imports=True
+evidence wrong-owner.real-query-thread=True
+evidence wrong-owner.checked-module-and-page-protection=True
+evidence wrong-owner.two-imports-installation=True
+evidence wrong-owner.actual-queries-match-accepted-action-ledger=True
+evidence destroyed-capture.real-query-thread=True
+evidence destroyed-capture.checked-module-and-page-protection=True
+evidence destroyed-capture.two-imports-installation=True
+evidence destroyed-capture.actual-queries-match-accepted-action-ledger=True
+evidence omitted-up.real-query-thread=True
+evidence omitted-up.checked-module-and-page-protection=True
+evidence omitted-up.two-imports-installation=True
+evidence omitted-up.actual-queries-match-accepted-action-ledger=True
+evidence close-held.real-query-thread=True
+evidence close-held.checked-module-and-page-protection=True
+evidence close-held.two-imports-installation=True
+evidence close-held.actual-queries-match-accepted-action-ledger=True
+evidence close-held.normal-close-restores-both-imports=True
+evidence bridge-exit.real-query-thread=True
+evidence bridge-exit.checked-module-and-page-protection=True
+evidence bridge-exit.two-imports-installation=True
+evidence bridge-exit.actual-queries-match-accepted-action-ledger=True
+evidence hung-thread.real-query-thread=True
+evidence hung-thread.checked-module-and-page-protection=True
+evidence hung-thread.two-imports-installation=True
+evidence hung-thread.actual-queries-match-accepted-action-ledger=True
+evidence uninstall-refusal.real-query-thread=True
+evidence uninstall-refusal.checked-module-and-page-protection=True
+evidence uninstall-refusal.two-imports-installation=True
+evidence uninstall-refusal.actual-queries-match-accepted-action-ledger=True
+evidence partial-install.real-query-thread=True
+evidence partial-install.no-ready-or-input-on-install-failure=True
+evidence actual-drag-procedure-sees-outside-coordinate-and-capture=True
+evidence B-native-button-produces-command=True
+evidence burst-separates-accepted-up-from-dequeued-down-in-fixture=True
+evidence hung-cleanup-explicitly-unconfirmed=True
+evidence uninstall-refusal-retains-live-runtime-and-failure=True
+evidence A-outside-held.independent-PNG-and-native-paint=True
+evidence B-clicked.independent-PNG-and-native-paint=True
+evidence A.drag-actually-painted-at-routed-location=False
+evidence A-inside-held.independent-PNG-and-native-paint=True
+evidence A-final.independent-PNG-and-native-paint=True
+evidence B-final.independent-PNG-and-native-paint=True
+assertion native.probe-is-real-EXE-GUI-thread: pass (read-only EXE extension and unchanged fixture call the same real import; repeated query is non-consuming)
+assertion native.probe-is-real-EXE-GUI-thread: pass (read-only EXE extension and unchanged fixture call the same real import; repeated query is non-consuming)
+assertion native.baseline-failure-retained: pass (queue mechanism enabled, EXE IAT native: async remains native zero)
+native.async_private_Ctrl: fail (actual unpatched import; expected native background limitation)
+assertion native.IAT-unchanged: pass (no IAT replacement in native control)
+assertion native.closed-cleanly: pass (queue bits clear, original IAT/protection restored, self reference released, bridge exited)
+assertion A.IAT-installed: pass (only owned EXE import replaced; runtime pinned until restore)
+assertion A.probe-is-real-EXE-GUI-thread: pass (read-only EXE extension and unchanged fixture call the same real import; repeated query is non-consuming)
+assertion B.probe-is-real-EXE-GUI-thread: pass (read-only EXE extension and unchanged fixture call the same real import; repeated query is non-consuming)
+assertion async.before-dequeue: pass (accepted async input is effective before queued keyboard messages are delivered)
+assertion async.A-B-independent: pass (B reads its own accepted input state)
+assertion async.native-dynamic-path-remains-native: pass (GetProcAddress USER32 call is intentionally not intercepted)
+managed.EXE_IAT_async_Ctrl: pass (actual EXE GetAsyncKeyState call, high bit virtualized)
+assertion A.probe-is-real-EXE-GUI-thread: pass (read-only EXE extension and unchanged fixture call the same real import; repeated query is non-consuming)
+assertion async.up-before-dequeue: pass (up visible immediately, neither key event consumed)
+assertion A.probe-is-real-EXE-GUI-thread: pass (read-only EXE extension and unchanged fixture call the same real import; repeated query is non-consuming)
+assertion queue-and-async-different-time-semantics: pass (fixture per-message trace independently checks async up while queue down)
+assertion A.probe-is-real-EXE-GUI-thread: pass (read-only EXE extension and unchanged fixture call the same real import; repeated query is non-consuming)
+assertion async.burst-and-repeated-query: pass (four accepted transitions; repeat reads do not consume low-bit history)
+assertion A.probe-is-real-EXE-GUI-thread: pass (read-only EXE extension and unchanged fixture call the same real import; repeated query is non-consuming)
+assertion async.Ctrl-sides-OR: pass (generic Ctrl is OR of independent side states)
+assertion A.probe-is-real-EXE-GUI-thread: pass (read-only EXE extension and unchanged fixture call the same real import; repeated query is non-consuming)
+assertion async.Shift-and-X: pass (supported ordinary key and side-specific modifier states)
+assertion B.probe-is-real-EXE-GUI-thread: pass (read-only EXE extension and unchanged fixture call the same real import; repeated query is non-consuming)
+assertion A.probe-is-real-EXE-GUI-thread: pass (read-only EXE extension and unchanged fixture call the same real import; repeated query is non-consuming)
+assertion async.interleaved-inputs: pass (A and B states differ while both process API calls)
+assertion A.probe-is-real-EXE-GUI-thread: pass (read-only EXE extension and unchanged fixture call the same real import; repeated query is non-consuming)
+assertion async.cancel-linearization: pass (cancel clears accepted async state before queue release is consumed)
+assertion A.probe-is-real-EXE-GUI-thread: pass (read-only EXE extension and unchanged fixture call the same real import; repeated query is non-consuming)
+assertion async.cancel-queue-completes: pass (queue state clears when its release packet is consumed)
+assertion negative.missing-import-rejected: pass (actual missing-name lookup; no ready input channel)
+assertion negative.partial-install-rollback: pass (injected error after real exchange; original slot/protection restored)
+assertion negative.unload-refusal-invalidates: pass (injected restoration refusal; no dangling pointer into unloaded DLL, no healthy result)
+injected_restore_refusal.healthy_unload: fail (IAT still points at pinned runtime; channel rejected; target is later terminated)
+assertion negative.invalid-channel-rejects-input: pass (failed cleanup cannot accept future commands)
+assertion exit-pending.probe-is-real-EXE-GUI-thread: pass (read-only EXE extension and unchanged fixture call the same real import; repeated query is non-consuming)
+assertion exit-case-really-held-async: pass (pending accepted input exists before target exits)
+assertion negative.target-exit-invalidates: pass (target process confirmed exited; preserve primary exit error and clear private async state)
+assertion B.probe-is-real-EXE-GUI-thread: pass (read-only EXE extension and unchanged fixture call the same real import; repeated query is non-consuming)
+assertion B-continues-after-other-failures: pass (existing B remains operational)
+assertion B.native-EDIT-queue-regression: pass (native EDIT selects through real queue state even when accepted async Shift is already up)
+assertion A.actual-call-instructions-target-IAT: pass (controller reads live EXE call instructions; RIP-relative import calls resolve to the recorded slot)
+assertion B.actual-call-instructions-target-IAT: pass (controller reads live EXE call instructions; RIP-relative import calls resolve to the recorded slot)
+assertion A.closed-cleanly: pass (queue bits clear, original IAT/protection restored, self reference released, bridge exited)
+assertion A.IAT-restored: pass (controller reads actual original IAT address after bridge exits)
+assertion A.native-after-unload: pass (unchanged fixture continues through restored native import)
+assertion B.closed-cleanly: pass (queue bits clear, original IAT/protection restored, self reference released, bridge exited)
+static_host_observation: inconclusive (real host native foreground/desktop/cursor/async modifiers; external activity not attributed to runtime)
+manual_host_interaction: not_executed (no human verdict generated; existing R3-002 manual procedure retained)
+evidence experiment-completed=True
+evidence controller-assertions-pass=True
+evidence actual-failures-stay-fail=True
+evidence R3-and-GUI-restore-not-claimed=True
+evidence native.native-query-thread=True
+evidence native.no-callback-failures=True
+evidence native.EXE-native-replacement-module-identity=True
+evidence native.exact-import-installation=True
+evidence native.acceptance-state-version-ledger=True
+evidence native.actual-API-queries-match-accepted-version=True
+evidence native.normal-unload-restores-IAT-and-protection=True
+evidence A.native-query-thread=True
+evidence A.no-callback-failures=True
+evidence A.EXE-native-replacement-module-identity=True
+evidence A.exact-import-installation=True
+evidence A.acceptance-state-version-ledger=True
+evidence A.actual-API-queries-match-accepted-version=True
+evidence A.original-EXE-IAT-calls-observed=True
+evidence A.live-callsite-instructions-reference-IAT=True
+evidence A.normal-unload-restores-IAT-and-protection=True
+evidence B.native-query-thread=True
+evidence B.no-callback-failures=True
+evidence B.EXE-native-replacement-module-identity=True
+evidence B.exact-import-installation=True
+evidence B.acceptance-state-version-ledger=True
+evidence B.actual-API-queries-match-accepted-version=True
+evidence B.original-EXE-IAT-calls-observed=True
+evidence B.live-callsite-instructions-reference-IAT=True
+evidence B.normal-unload-restores-IAT-and-protection=True
+evidence missing-import.native-query-thread=True
+evidence missing-import.no-callback-failures=True
+evidence missing-import.never-published-ready=True
+evidence missing-import.acceptance-state-version-ledger=True
+evidence missing-import.actual-API-queries-match-accepted-version=True
+evidence install-rollback.native-query-thread=True
+evidence install-rollback.no-callback-failures=True
+evidence install-rollback.never-published-ready=True
+evidence install-rollback.acceptance-state-version-ledger=True
+evidence install-rollback.actual-API-queries-match-accepted-version=True
+evidence unload-failure.native-query-thread=True
+evidence unload-failure.no-callback-failures=True
+evidence unload-failure.EXE-native-replacement-module-identity=True
+evidence unload-failure.exact-import-installation=True
+evidence unload-failure.acceptance-state-version-ledger=True
+evidence unload-failure.actual-API-queries-match-accepted-version=True
+evidence exit-pending.native-query-thread=True
+evidence exit-pending.no-callback-failures=True
+evidence exit-pending.EXE-native-replacement-module-identity=True
+evidence exit-pending.exact-import-installation=True
+evidence exit-pending.acceptance-state-version-ledger=True
+evidence exit-pending.actual-API-queries-match-accepted-version=True
+evidence exit.primary-error-preserved-and-address-space-gone=True
+evidence async-effective-before-key-message-consumption=True
+evidence native-dynamic-path-not-claimed-virtualized=True
+evidence original-fixture-observes-different-async-and-queue-times=True
+evidence refused-unload-keeps-DLL-pinned-and-channel-invalid=True
+assertion baseline.native-edit-seeded: pass (WM_CHAR and native mouse focus; no text/selection setter)
+baseline.queue_ctrl_consistency: fail (state intervention disabled; same fixture and envelope transport)
+assertion baseline.message-without-queue-state: pass (same fixture; same envelope transport; SetKeyboardState disabled)
+assertion baseline.Home-at-start: pass (native EDIT processed Home)
+baseline.native_shift_selection: fail (actual native EDIT selection=5..5)
+assertion baseline.baseline-selection-failure-retained: pass (actual native EDIT selection=5..5)
+assertion baseline-selection.fresh-target-paint: pass (unchanged R3-001 PrintWindow helper and pixel/paint validator)
+assertion baseline.closed-cleanly: pass (native generic/side high bits clear before unhook; bridge process exited)
+unhooked.queue_ctrl_consistency: fail (plain native PostMessage after runtime input hook removed)
+assertion baseline.fully-unhooked-failure-retained: pass (plain R3-001 PostMessage after hook and input bridge removed)
+assertion A.native-edit-seeded: pass (WM_CHAR and native mouse focus; no text/selection setter)
+assertion B.native-edit-seeded: pass (WM_CHAR and native mouse focus; no text/selection setter)
+managed.queue_ctrl_consistency: pass (original GetKeyState and GetKeyboardState; target GUI thread)
+assertion managed.Ctrl-native-queries: pass (GetKeyState and GetKeyboardState read actual target thread table)
+assertion managed.B-isolated: pass (B has independent native table and EDIT)
+assertion managed.interleaved-B-does-not-release-A: pass (B native navigation completes while A Ctrl remains held)
+assertion managed.normal-key-TranslateMessage: pass (B X down/up generated native WM_CHAR through unchanged TranslateMessage; A Ctrl still held)
+assertion managed.Ctrl-side-OR: pass (left release preserves held right and generic Ctrl)
+assertion managed.Ctrl-up-clears: pass (both sides released)
+assertion managed.Shift-side-OR: pass (generic Shift remains held)
+assertion managed.Shift-up-clears: pass (no remaining Shift)
+injected_missing_update.queue_ctrl_consistency: fail (intentionally omitted SetKeyboardState for this message)
+assertion negative.omitted-state-update-detected: pass (message alone retains original mismatch; this is an injected capability failure)
+assertion managed.burst-dequeue-state: pass (four events in one batch; each consumed query follows that event)
+assertion managed.repeated-peek-no-apply: pass (next envelope viewed twice using PM_NOREMOVE; not consumed or applied)
+assertion A.Home-at-start: pass (native EDIT processed Home)
+A.native_shift_selection: pass (actual native EDIT selection=0..5)
+assertion A.native-Shift-End-selection: pass (actual native EDIT selection=0..5)
+assertion A-selection.fresh-target-paint: pass (unchanged R3-001 PrintWindow helper and pixel/paint validator)
+assertion B.Home-at-start: pass (native EDIT processed Home)
+B.native_shift_selection: pass (actual native EDIT selection=0..6)
+assertion B.native-Shift-End-selection: pass (actual native EDIT selection=0..6)
+assertion B-selection.fresh-target-paint: pass (unchanged R3-001 PrintWindow helper and pixel/paint validator)
+assertion managed.cancel-releases: pass (release packet runs on target thread; channel remains usable)
+assertion managed.channel-continues-after-cancel: pass (subsequent sequence consumed)
+injected_cleanup_timeout.release_confirmed: fail (A GUI thread intentionally suspended; cleanup not acknowledged; channel invalid)
+assertion negative.unconfirmed-release-invalidates: pass (owned A suspended; no target ack; channel invalid instead of healthy)
+assertion managed.B-continues-after-A-invalid: pass (B independently processes new input)
+assertion managed.unload-has-held-modifiers: pass (Ctrl and Shift actually held before normal cleanup)
+assertion B.closed-cleanly: pass (native generic/side high bits clear before unhook; bridge process exited)
+static_host_observation: inconclusive (50ms samples; external user activity is not runtime interference)
+manual_host_interaction: not_executed (hold mode alone is not a human verdict; static samples do not replace it)
+async_private_state: not_supported (original GetAsyncKeyState recorded without replacement)
+evidence experiment-completed-with-assertions=True
+evidence expected-capability-failures-remain-fail=True
+evidence evidence-assertions-separate-from-capabilities=True
+evidence R3-not-claimed=True
+evidence same-fixture-binary-distinct-owned-desktops=True
+evidence baseline.unique-contiguous-removal-on-target-thread=True
+evidence baseline.original-query-thread=True
+evidence baseline.no-callback-failure=True
+evidence baseline.accepted-dequeued-processed-distinguished=True
+evidence baseline.all-accepted-have-removal-or-explicit-failure=True
+evidence baseline.per-event-real-queue-table-and-peek-state=True
+evidence baseline.repeated-peek-witness=True
+evidence baseline.original-control-processing-matches-hook=True
+evidence baseline.never-updates-keyboard-table=True
+evidence A.unique-contiguous-removal-on-target-thread=True
+evidence A.original-query-thread=True
+evidence A.no-callback-failure=True
+evidence A.accepted-dequeued-processed-distinguished=True
+evidence A.all-accepted-have-removal-or-explicit-failure=True
+evidence A.per-event-real-queue-table-and-peek-state=True
+evidence A.repeated-peek-witness=True
+evidence A.original-control-processing-matches-hook=True
+evidence B.unique-contiguous-removal-on-target-thread=True
+evidence B.original-query-thread=True
+evidence B.no-callback-failure=True
+evidence B.accepted-dequeued-processed-distinguished=True
+evidence B.all-accepted-have-removal-or-explicit-failure=True
+evidence B.per-event-real-queue-table-and-peek-state=True
+evidence B.repeated-peek-witness=True
+evidence B.original-control-processing-matches-hook=True
+evidence baseline-selection.independent-pixel-and-paint-provenance=True
+evidence A-selection.independent-pixel-and-paint-provenance=True
+evidence B-selection.independent-pixel-and-paint-provenance=True
+evidence every-owned-process-confirmed-exited=True
+evidence every-owned-desktop-released=True
+evidence no-cleanup-errors=True
+evidence no-host-input-or-business-setters=True
+evidence only-runtime-DLL-updates-native-keyboard-table=True
+evidence R3-001-and-existing-experiments-unchanged=True
+R3_002_EVIDENCE_CHECKS_PASSED (only the declared managed queue-keyboard subset)
+evidence full-R3-002-regression=True
+evidence all-owned-processes-confirmed-exited=True
+evidence all-owned-desktops-released=True
+evidence no-cleanup-errors=True
+evidence existing-experiment-source-and-baselines-unchanged=True
+evidence no-host-input-or-business-state-setters=True
+R3_003_EVIDENCE_PASSED (only the declared owned EXE IAT path and key high bits)
+evidence full-R3-003-and-nested-R3-002-regression=True
+evidence every-owned-process-confirmed-exited=True
+evidence every-owned-desktop-released=True
+evidence no-lifecycle-cleanup-errors=True
+evidence no-host-input-or-business-state-setters=True
+evidence all-existing-experiments-unchanged=True
