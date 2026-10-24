@@ -1,0 +1,159 @@
+{
+  "scenario": "ret-probe",
+  "processExit": 2,
+  "evidenceChecksPassed": true,
+  "experimentPassed": false,
+  "checks": [
+    {
+      "name": "diagnostic-finished-without-instrumentation-assertion-failures",
+      "passed": true
+    },
+    {
+      "name": "exit-status-preserves-experiment-verdict",
+      "passed": true
+    },
+    {
+      "name": "raw-stack-register-and-independent-receipt-agree",
+      "passed": true
+    },
+    {
+      "name": "source-returned-through-the-captured-ordinary-CPP-frames",
+      "passed": true
+    },
+    {
+      "name": "source-confirmed-dead-before-new-carrier",
+      "passed": true
+    },
+    {
+      "name": "source-changed-after-fixed-S0",
+      "passed": true
+    },
+    {
+      "name": "only-declared-live-window-references-rebound-in-raw-bytes",
+      "passed": true
+    },
+    {
+      "name": "raw-target-context-has-saved-RIP-RSP-register",
+      "passed": true
+    },
+    {
+      "name": "SSE-register-bytes-readback-matches-capture",
+      "passed": true
+    },
+    {
+      "name": "window-resource-actually-created-in-target-thread",
+      "passed": true
+    },
+    {
+      "name": "carrier-never-replays-business-initialization-or-S0-checkpoint",
+      "passed": true
+    },
+    {
+      "name": "actual-first-RET-fails-with-CET-subcode-57",
+      "passed": true
+    },
+    {
+      "name": "unchanged-target-SSP-and-different-shadow-return-proven",
+      "passed": true
+    },
+    {
+      "name": "failed-restore-never-publishes-usable-View-or-stale-frame",
+      "passed": true
+    },
+    {
+      "name": "minimal-failure-independent-of-input-hooks-and-capture",
+      "passed": true
+    },
+    {
+      "name": "all-owned-process-exits-confirmed",
+      "passed": true
+    },
+    {
+      "name": "all-owned-desktops-closed",
+      "passed": true
+    },
+    {
+      "name": "no-cleanup-errors",
+      "passed": true
+    },
+    {
+      "name": "original-experiments-and-evidence-unchanged",
+      "passed": true
+    },
+    {
+      "name": "no-host-input-business-setters-or-security-policy-change",
+      "passed": true
+    }
+  ],
+  "assertions": [
+    {
+      "type": "assertion",
+      "tickMs": 26888687,
+      "name": "source.native-unwind-sees-three-CPP-frames",
+      "passed": true,
+      "detail": "Windows unwind metadata independently walks leaf/middle/outer from captured raw stack; no guessed pointer scan"
+    },
+    {
+      "type": "assertion",
+      "tickMs": 26888687,
+      "name": "source.initialization-once",
+      "passed": true,
+      "detail": "controller independently observes original init and safe checkpoint exactly once"
+    },
+    {
+      "type": "assertion",
+      "tickMs": 26888687,
+      "name": "source.normal-return-chain",
+      "passed": true,
+      "detail": "source executes the same ordinary C++ returns before changing further"
+    },
+    {
+      "type": "assertion",
+      "tickMs": 26888765,
+      "name": "source.terminated-before-restore",
+      "passed": true,
+      "detail": "WaitForDebugEvent EXIT and signaled source process handle precede creation of new carrier"
+    },
+    {
+      "type": "assertion",
+      "tickMs": 26888796,
+      "name": "new-PID",
+      "passed": true,
+      "detail": "different native process, source is dead"
+    },
+    {
+      "type": "assertion",
+      "tickMs": 26888796,
+      "name": "restored.raw-memory-restored",
+      "passed": true,
+      "detail": "entire data page read back equals S0 except declared HWND relocation"
+    },
+    {
+      "type": "assertion",
+      "tickMs": 26888812,
+      "name": "restored.raw-stack-restored",
+      "passed": true,
+      "detail": "entire managed stack read back equals S0 except explicitly registered live HWND references"
+    },
+    {
+      "type": "assertion",
+      "tickMs": 26888812,
+      "name": "restored.CPU-context-readback",
+      "passed": true,
+      "detail": "stopped target RIP/RSP/register and floating point control read back after SetThreadContext"
+    }
+  ],
+  "manualHostTest": "not_executed",
+  "R1R2Rerun": false,
+  "R3Complete": false,
+  "generalGUIRestore": false,
+  "components": {
+    "rawMemory": "readback_verified",
+    "rawStack": "readback_verified",
+    "CPUContext": "legacy_fields_readback_verified",
+    "executionContinuation": "failed",
+    "fixedWindowRecreation": "descriptor_and_references_verified",
+    "GDI": "not_captured",
+    "restoredInput": "not_reached"
+  }
+}

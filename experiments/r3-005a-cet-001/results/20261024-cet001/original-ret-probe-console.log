@@ -1,0 +1,29 @@
+source.native-unwind-sees-three-CPP-frames: pass (Windows unwind metadata independently walks leaf/middle/outer from captured raw stack; no guessed pointer scan)
+source.initialization-once: pass (controller independently observes original init and safe checkpoint exactly once)
+source.normal-return-chain: pass (source executes the same ordinary C++ returns before changing further)
+source.terminated-before-restore: pass (WaitForDebugEvent EXIT and signaled source process handle precede creation of new carrier)
+new-PID: pass (different native process, source is dead)
+restored.raw-memory-restored: pass (entire data page read back equals S0 except declared HWND relocation)
+restored.raw-stack-restored: pass (entire managed stack read back equals S0 except explicitly registered live HWND references)
+restored.CPU-context-readback: pass (stopped target RIP/RSP/register and floating point control read back after SetThreadContext)
+evidence diagnostic-finished-without-instrumentation-assertion-failures=True
+evidence exit-status-preserves-experiment-verdict=True
+evidence raw-stack-register-and-independent-receipt-agree=True
+evidence source-returned-through-the-captured-ordinary-CPP-frames=True
+evidence source-confirmed-dead-before-new-carrier=True
+evidence source-changed-after-fixed-S0=True
+evidence only-declared-live-window-references-rebound-in-raw-bytes=True
+evidence raw-target-context-has-saved-RIP-RSP-register=True
+evidence SSE-register-bytes-readback-matches-capture=True
+evidence window-resource-actually-created-in-target-thread=True
+evidence carrier-never-replays-business-initialization-or-S0-checkpoint=True
+evidence actual-first-RET-fails-with-CET-subcode-57=True
+evidence unchanged-target-SSP-and-different-shadow-return-proven=True
+evidence failed-restore-never-publishes-usable-View-or-stale-frame=True
+evidence minimal-failure-independent-of-input-hooks-and-capture=True
+evidence all-owned-process-exits-confirmed=True
+evidence all-owned-desktops-closed=True
+evidence no-cleanup-errors=True
+evidence original-experiments-and-evidence-unchanged=True
+evidence no-host-input-business-setters-or-security-policy-change=True
+R3_005A_RESTORE_FAILED (diagnostic evidence is consistent; GUI execution restore did not pass)

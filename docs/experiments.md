@@ -86,3 +86,9 @@ R3-003 的 [实际报告](../experiments/r3-003/results/20261024-r3003/report.md
 [实际报告](../experiments/r3-005a/results/20261024-r305a/report.md) 保留最小无输入钩子/无采集的 RET 失败复现，以及完整源 GUI 操作、S0、源变化/退出、资源重建和上下文恢复记录。本机首个 RET 触发 0xC0000409 / FAST_FAIL_CONTROL_INVALID_RETURN_ADDRESS (57)，未取得恢复后的业务画面或输入证据，不能推进 R3-005b。
 
 构建、窗口创建、引用和 SetThreadContext 权限拒绝分别检测。因为更早的 CET 失败会遮蔽后续状态检验，故意遗漏栈/寄存器/cookie 的用例标为未执行。脚本将“证据与记录一致”与“GUI 恢复通过”分开，后一项为 false 时保留失败退出状态。保留所有旧实验，相关 R3 回归有本轮实际记录，R1/R2 未重跑。
+
+## R3-005a-CET-001：受保护返回链机制对照
+
+[源码与复现](../experiments/r3-005a-cet-001/README.md)、[实际报告](../experiments/r3-005a-cet-001/results/20261024-cet001/report.md) 分别保留正常 C++ 返回、真正 SEH、同线程 RtlRestoreContext，以及源退出后的基本上下文、目标 CET_U 原值和 RtlRestoreContext 恢复对照。三种构建各执行七条路径、重复两轮；24 次源现场恢复均失败，未发布 View。
+
+无 EHCONT 时，受管布局内的 RtlRestoreContext 仍到首个 RET 后失败 57；启用 EHCONT 后在 ntdll 中拒绝 48。原生引导栈直接切向源受管栈的拒绝 13 单独记录，不与 RET 故障混同。目标自身链可正常返回，CET_U 原值写回接受不等于影子返回链可克隆；原始 ret-probe 回归继续失败。R3-005a 不改记通过，不推进 R3-005b/R4；本轮未重跑其他旧关口。

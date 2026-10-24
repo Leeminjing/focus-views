@@ -1,0 +1,446 @@
+Microsoft (R) COFF/PE Dumper Version 14.44.35229.0
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+
+Dump of file D:\focus-views\experiments\r3-005a-cet-001\out\control-md\r305a.exe
+
+File Type: EXECUTABLE IMAGE
+
+  Section contains the following load config:
+
+            00000140 size
+                   0 time date stamp
+                0.00 Version
+                   0 GlobalFlags Clear
+                   0 GlobalFlags Set
+                   0 Critical Section Default Timeout
+                   0 Decommit Free Block Threshold
+                   0 Decommit Total Free Threshold
+    0000000000000000 Lock Prefix Table
+                   0 Maximum Allocation Size
+                   0 Virtual Memory Threshold
+                   0 Process Affinity Mask
+                   0 Process Heap Flags
+                   0 CSD Version
+                0000 Dependent Load Flag
+    0000000000000000 Edit List
+    000000014005CD00 Security Cookie
+    0000000140048A10 Guard CF address of check-function pointer
+    0000000140048A20 Guard CF address of dispatch-function pointer
+    0000000140048AC8 Guard CF function table
+                  83 Guard CF function count
+            10017500 Guard Flags
+                       CF instrumented
+                       FID table present
+                       Protect delayload IAT
+                       Delayload IAT in its own section
+                       Export suppression info present
+                       Long jump target table present
+                0000 Code Integrity Flags
+                0000 Code Integrity Catalog
+            00000000 Code Integrity Catalog Offset
+            00000000 Code Integrity Reserved
+    0000000140048D58 Guard CF address taken IAT entry table
+                   1 Guard CF address taken IAT entry count
+    0000000000000000 Guard CF long jump target table
+                   0 Guard CF long jump target count
+    0000000000000000 Dynamic value relocation table
+    0000000000000000 Hybrid metadata pointer
+    0000000000000000 Guard RF address of failure-function
+    0000000000000000 Guard RF address of failure-function pointer
+            00000000 Dynamic value relocation table offset
+                0000 Dynamic value relocation table section
+                0000 Reserved2
+    0000000000000000 Guard RF address of stack pointer verification function pointer
+            00000000 Hot patching table offset
+                0000 Reserved3
+    0000000000000000 Enclave configuration pointer
+    00000001400502E4 Volatile metadata pointer
+    0000000000000000 Guard EH continuation table
+                   0 Guard EH continuation count
+    0000000140048A18 Guard XFG address of check-function pointer
+    0000000140048A28 Guard XFG address of dispatch-function pointer
+    0000000140048A30 Guard XFG address of dispatch-table-function pointer
+    0000000140048A38 CastGuard OS determined failure mode
+    0000000140048A40 Guard memcpy function pointer
+
+    Guard CF Function Table
+
+          Address
+          --------
+           0000000140001000
+           0000000140001010
+           0000000140001020
+           0000000140001030
+           0000000140001110
+           0000000140001139  InitTrap
+           0000000140001155  ContinuationTrap
+           0000000140001157  RejectTrap
+           000000014000FC10  ??1?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QEAA@XZ (public: __cdecl std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >::~basic_string<char,struct std::char_traits<char>,class std::allocator<char> >(void))
+           000000014000FC20  ??1?$basic_string@_WU?$char_traits@_W@std@@V?$allocator@_W@2@@std@@QEAA@XZ (public: __cdecl std::basic_string<wchar_t,struct std::char_traits<wchar_t>,class std::allocator<wchar_t> >::~basic_string<wchar_t,struct std::char_traits<wchar_t>,class std::allocator<wchar_t> >(void))
+           0000000140012400  ??_E?$basic_ifstream@DU?$char_traits@D@std@@@std@@$4PPPPPPPM@A@EAAPEAXI@Z ([thunk]:public: virtual void * __cdecl std::basic_ifstream<char,struct std::char_traits<char> >::`vector deleting destructor'`vtordisp{4294967292,0}' (unsigned int))
+           0000000140012410  ??_E?$basic_ofstream@DU?$char_traits@D@std@@@std@@$4PPPPPPPM@A@EAAPEAXI@Z ([thunk]:public: virtual void * __cdecl std::basic_ofstream<char,struct std::char_traits<char> >::`vector deleting destructor'`vtordisp{4294967292,0}' (unsigned int))
+           0000000140012420  ??_E?$basic_ostringstream@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@$4PPPPPPPM@A@EAAPEAXI@Z ([thunk]:public: virtual void * __cdecl std::basic_ostringstream<char,struct std::char_traits<char>,class std::allocator<char> >::`vector deleting destructor'`vtordisp{4294967292,0}' (unsigned int))
+           0000000140012430  ??_E?$basic_filebuf@DU?$char_traits@D@std@@@std@@UEAAPEAXI@Z (public: virtual void * __cdecl std::basic_filebuf<char,struct std::char_traits<char> >::`vector deleting destructor'(unsigned int))
+           00000001400126A0  ??_E?$basic_stringbuf@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@UEAAPEAXI@Z (public: virtual void * __cdecl std::basic_stringbuf<char,struct std::char_traits<char>,class std::allocator<char> >::`vector deleting destructor'(unsigned int))
+           00000001400127A0  ??_EError@r3@@UEAAPEAXI@Z (public: virtual void * __cdecl r3::Error::`vector deleting destructor'(unsigned int))
+           00000001400127F0  ??_EFailure@native@@UEAAPEAXI@Z (public: virtual void * __cdecl native::Failure::`vector deleting destructor'(unsigned int))
+           00000001400129B0  ??_E_Generic_error_category@std@@UEAAPEAXI@Z (public: virtual void * __cdecl std::_Generic_error_category::`vector deleting destructor'(unsigned int))
+           00000001400129E0  ??_E_System_error@std@@UEAAPEAXI@Z (public: virtual void * __cdecl std::_System_error::`vector deleting destructor'(unsigned int))
+           0000000140012A30  ??_E_System_error_category@std@@UEAAPEAXI@Z (public: virtual void * __cdecl std::_System_error_category::`vector deleting destructor'(unsigned int))
+           0000000140012A60  ??_Ebad_alloc@std@@UEAAPEAXI@Z (public: virtual void * __cdecl std::bad_alloc::`vector deleting destructor'(unsigned int))
+           0000000140012AB0  ??_Ebad_array_new_length@std@@UEAAPEAXI@Z (public: virtual void * __cdecl std::bad_array_new_length::`vector deleting destructor'(unsigned int))
+           0000000140012B00  ??_Ebad_cast@std@@UEAAPEAXI@Z (public: virtual void * __cdecl std::bad_cast::`vector deleting destructor'(unsigned int))
+           0000000140012B50  ??_Eexception@std@@UEAAPEAXI@Z (public: virtual void * __cdecl std::exception::`vector deleting destructor'(unsigned int))
+           0000000140012BA0  ??_Efilesystem_error@filesystem@std@@UEAAPEAXI@Z (public: virtual void * __cdecl std::filesystem::filesystem_error::`vector deleting destructor'(unsigned int))
+           0000000140012C00  ??_Eruntime_error@std@@UEAAPEAXI@Z (public: virtual void * __cdecl std::runtime_error::`vector deleting destructor'(unsigned int))
+           0000000140012C50  ??_Esystem_error@std@@UEAAPEAXI@Z (public: virtual void * __cdecl std::system_error::`vector deleting destructor'(unsigned int))
+           0000000140013780
+           00000001400137A0
+           00000001400137C0
+           00000001400137E0
+           0000000140013800
+           0000000140013820
+           0000000140013840
+           0000000140013920
+           0000000140013930
+           0000000140013940
+           0000000140013950
+           0000000140013960
+           0000000140013970
+           0000000140013980
+           0000000140013990
+           00000001400139C0
+           00000001400139D0
+           0000000140013A00
+           0000000140013A30
+           0000000140013AB0
+           0000000140013AE0
+           0000000140013F80
+           0000000140013F90
+           0000000140013FA0
+           0000000140013FB0
+           0000000140013FC0
+           0000000140013FD0
+           0000000140013FE0
+           0000000140014950  ?_Lock@?$basic_filebuf@DU?$char_traits@D@std@@@std@@UEAAXXZ (public: virtual void __cdecl std::basic_filebuf<char,struct std::char_traits<char> >::_Lock(void))
+           0000000140014BC0
+           0000000140014BE0
+           0000000140014C00
+           0000000140014C20
+           0000000140014C40
+           0000000140014C60
+           0000000140014C80
+           00000001400155B0
+           00000001400155C0
+           00000001400155D0
+           00000001400155E0
+           00000001400155F0
+           0000000140015600
+           0000000140015610
+           0000000140015EB0  ?_Unlock@?$basic_filebuf@DU?$char_traits@D@std@@@std@@UEAAXXZ (public: virtual void __cdecl std::basic_filebuf<char,struct std::char_traits<char> >::_Unlock(void))
+           0000000140019D10  ?default_error_condition@_System_error_category@std@@UEBA?AVerror_condition@2@H@Z (public: virtual class std::error_condition __cdecl std::_System_error_category::default_error_condition(int)const )
+           0000000140019D90  ?default_error_condition@error_category@std@@UEBA?AVerror_condition@2@H@Z (public: virtual class std::error_condition __cdecl std::error_category::default_error_condition(int)const )
+           000000014001A3A0  ?equivalent@error_category@std@@UEBA_NAEBVerror_code@2@H@Z (public: virtual bool __cdecl std::error_category::equivalent(class std::error_code const &,int)const )
+           000000014001A3C0  ?equivalent@error_category@std@@UEBA_NHAEBVerror_condition@2@@Z (public: virtual bool __cdecl std::error_category::equivalent(int,class std::error_condition const &)const )
+           000000014001C200  ?hex@std@@YAAEAVios_base@1@AEAV21@@Z (class std::ios_base & __cdecl std::hex(class std::ios_base &))
+           000000014001C230  ?imbue@?$basic_filebuf@DU?$char_traits@D@std@@@std@@MEAAXAEBVlocale@2@@Z (protected: virtual void __cdecl std::basic_filebuf<char,struct std::char_traits<char> >::imbue(class std::locale const &))
+           000000014001F220  ?message@_Generic_error_category@std@@UEBA?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@2@H@Z (public: virtual class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > __cdecl std::_Generic_error_category::message(int)const )
+           000000014001F280  ?message@_System_error_category@std@@UEBA?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@2@H@Z (public: virtual class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > __cdecl std::_System_error_category::message(int)const )
+           000000014001FC50  ?name@_Generic_error_category@std@@UEBAPEBDXZ (public: virtual char const * __cdecl std::_Generic_error_category::name(void)const )
+           000000014001FC60  ?name@_System_error_category@std@@UEBAPEBDXZ (public: virtual char const * __cdecl std::_System_error_category::name(void)const )
+           000000014001FDE0  ?overflow@?$basic_filebuf@DU?$char_traits@D@std@@@std@@MEAAHH@Z (protected: virtual int __cdecl std::basic_filebuf<char,struct std::char_traits<char> >::overflow(int))
+           000000014001FFA0  ?overflow@?$basic_stringbuf@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@MEAAHH@Z (protected: virtual int __cdecl std::basic_stringbuf<char,struct std::char_traits<char>,class std::allocator<char> >::overflow(int))
+           00000001400201F0  ?pbackfail@?$basic_filebuf@DU?$char_traits@D@std@@@std@@MEAAHH@Z (protected: virtual int __cdecl std::basic_filebuf<char,struct std::char_traits<char> >::pbackfail(int))
+           0000000140020310  ?pbackfail@?$basic_stringbuf@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@MEAAHH@Z (protected: virtual int __cdecl std::basic_stringbuf<char,struct std::char_traits<char>,class std::allocator<char> >::pbackfail(int))
+           000000014002B0C0  ?seekoff@?$basic_filebuf@DU?$char_traits@D@std@@@std@@MEAA?AV?$fpos@U_Mbstatet@@@2@_JHH@Z (protected: virtual class std::fpos<struct _Mbstatet> __cdecl std::basic_filebuf<char,struct std::char_traits<char> >::seekoff(__int64,int,int))
+           000000014002B1A0  ?seekoff@?$basic_stringbuf@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@MEAA?AV?$fpos@U_Mbstatet@@@2@_JHH@Z (protected: virtual class std::fpos<struct _Mbstatet> __cdecl std::basic_stringbuf<char,struct std::char_traits<char>,class std::allocator<char> >::seekoff(__int64,int,int))
+           000000014002B350  ?seekpos@?$basic_filebuf@DU?$char_traits@D@std@@@std@@MEAA?AV?$fpos@U_Mbstatet@@@2@V32@H@Z (protected: virtual class std::fpos<struct _Mbstatet> __cdecl std::basic_filebuf<char,struct std::char_traits<char> >::seekpos(class std::fpos<struct _Mbstatet>,int))
+           000000014002B400  ?seekpos@?$basic_stringbuf@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@MEAA?AV?$fpos@U_Mbstatet@@@2@V32@H@Z (protected: virtual class std::fpos<struct _Mbstatet> __cdecl std::basic_stringbuf<char,struct std::char_traits<char>,class std::allocator<char> >::seekpos(class std::fpos<struct _Mbstatet>,int))
+           000000014002B580  ?setbuf@?$basic_filebuf@DU?$char_traits@D@std@@@std@@MEAAPEAV?$basic_streambuf@DU?$char_traits@D@std@@@2@PEAD_J@Z (protected: virtual class std::basic_streambuf<char,struct std::char_traits<char> > * __cdecl std::basic_filebuf<char,struct std::char_traits<char> >::setbuf(char *,__int64))
+           000000014002DFC0  ?sync@?$basic_filebuf@DU?$char_traits@D@std@@@std@@MEAAHXZ (protected: virtual int __cdecl std::basic_filebuf<char,struct std::char_traits<char> >::sync(void))
+           000000014002E640  ?uflow@?$basic_filebuf@DU?$char_traits@D@std@@@std@@MEAAHXZ (protected: virtual int __cdecl std::basic_filebuf<char,struct std::char_traits<char> >::uflow(void))
+           000000014002E9F0  ?underflow@?$basic_filebuf@DU?$char_traits@D@std@@@std@@MEAAHXZ (protected: virtual int __cdecl std::basic_filebuf<char,struct std::char_traits<char> >::underflow(void))
+           000000014002EA80  ?underflow@?$basic_stringbuf@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@MEAAHXZ (protected: virtual int __cdecl std::basic_stringbuf<char,struct std::char_traits<char>,class std::allocator<char> >::underflow(void))
+           000000014002EB50  ?unitbuf@std@@YAAEAVios_base@1@AEAV21@@Z (class std::ios_base & __cdecl std::unitbuf(class std::ios_base &))
+           0000000140030910  ?what@exception@std@@UEBAPEBDXZ (public: virtual char const * __cdecl std::exception::what(void)const )
+           0000000140030930  ?what@filesystem_error@filesystem@std@@UEBAPEBDXZ (public: virtual char const * __cdecl std::filesystem::filesystem_error::what(void)const )
+           0000000140030E80  ?xsgetn@?$basic_filebuf@DU?$char_traits@D@std@@@std@@MEAA_JPEAD_J@Z (protected: virtual __int64 __cdecl std::basic_filebuf<char,struct std::char_traits<char> >::xsgetn(char *,__int64))
+           0000000140030FB0  ?xsputn@?$basic_filebuf@DU?$char_traits@D@std@@@std@@MEAA_JPEBD_J@Z (protected: virtual __int64 __cdecl std::basic_filebuf<char,struct std::char_traits<char> >::xsputn(char const *,__int64))
+       E   0000000140036A90  R304ReadOnlyProbe
+           0000000140038BE0
+           0000000140038D00
+           0000000140038E10
+           0000000140039780
+           0000000140039870
+           0000000140039FD0
+           000000014003EF20  ?xsgetn@?$basic_streambuf@DU?$char_traits@D@std@@@std@@MEAA_JPEAD_J@Z (protected: virtual __int64 __cdecl std::basic_streambuf<char,struct std::char_traits<char> >::xsgetn(char *,__int64))
+           000000014003EF30  ?xsputn@?$basic_streambuf@DU?$char_traits@D@std@@@std@@MEAA_JPEBD_J@Z (protected: virtual __int64 __cdecl std::basic_streambuf<char,struct std::char_traits<char> >::xsputn(char const *,__int64))
+           000000014003EFD0  ?imbue@?$basic_streambuf@DU?$char_traits@D@std@@@std@@MEAAXAEBVlocale@2@@Z (protected: virtual void __cdecl std::basic_streambuf<char,struct std::char_traits<char> >::imbue(class std::locale const &))
+           000000014003EFE0  ?sync@?$basic_streambuf@DU?$char_traits@D@std@@@std@@MEAAHXZ (protected: virtual int __cdecl std::basic_streambuf<char,struct std::char_traits<char> >::sync(void))
+           000000014003EFF0  ?setbuf@?$basic_streambuf@DU?$char_traits@D@std@@@std@@MEAAPEAV12@PEAD_J@Z (protected: virtual class std::basic_streambuf<char,struct std::char_traits<char> > * __cdecl std::basic_streambuf<char,struct std::char_traits<char> >::setbuf(char *,__int64))
+           000000014003F000  ?uflow@?$basic_streambuf@DU?$char_traits@D@std@@@std@@MEAAHXZ (protected: virtual int __cdecl std::basic_streambuf<char,struct std::char_traits<char> >::uflow(void))
+           000000014003F010  ?showmanyc@?$basic_streambuf@DU?$char_traits@D@std@@@std@@MEAA_JXZ (protected: virtual __int64 __cdecl std::basic_streambuf<char,struct std::char_traits<char> >::showmanyc(void))
+           000000014003F020  ?_Unlock@?$basic_streambuf@DU?$char_traits@D@std@@@std@@UEAAXXZ (public: virtual void __cdecl std::basic_streambuf<char,struct std::char_traits<char> >::_Unlock(void))
+           000000014003F030  ?_Lock@?$basic_streambuf@DU?$char_traits@D@std@@@std@@UEAAXXZ (public: virtual void __cdecl std::basic_streambuf<char,struct std::char_traits<char> >::_Lock(void))
+           000000014003F780  ??_Etype_info@@UEAAPEAXI@Z (public: virtual void * __cdecl type_info::`vector deleting destructor'(unsigned int))
+           000000014003F7B0  _guard_check_icall_nop
+           000000014003FA20
+           000000014003FAE0
+           000000014003FAF0
+           000000014003FD30  wmainCRTStartup
+           0000000140040270  __scrt_unhandled_exception_filter
+           0000000140040310  __report_gsfailure
+           00000001400407B0  _matherr
+           0000000140040870  _RTC_Terminate
+           0000000140040AE0  memcpy
+           0000000140046E80
+           0000000140046F00
+           0000000140046F80
+           0000000140046FE0
+           0000000140047050
+
+    Guard CF Address Taken IAT Entry Table
+
+          Address
+          --------
+           0000000140048158  __imp_GetTempPathW
+
+    Volatile Metadata
+
+                      18 size
+                       3 min version (8003)
+                       3 max version (8003)
+        00000000000502FC volatile access RVA table
+                     32C volatile access RVA table size
+        0000000000050628 volatile range info table
+                      40 volatile range info table size
+
+    Volatile Access RVA Table
+
+          Address
+          --------
+           0000000140009AA3
+           0000000140009AEB
+           0000000140009AF6
+           0000000140011803
+           0000000140011B5B
+           0000000140011B66
+           00000001400139C4
+           0000000140013A0C
+           0000000140013A18
+           0000000140016FEB
+           0000000140017FEF
+           00000001400188D1
+           00000001400188E8
+           00000001400188F9
+           000000014001C441
+           000000014001C445
+           000000014001C449
+           000000014001C44D
+           000000014001C451
+           000000014001C455
+           000000014001C459
+           000000014001C48C
+           000000014001C493
+           000000014001C49A
+           000000014001C4A1
+           000000014001C4A8
+           000000014001C4AF
+           000000014001C530
+           000000014001C537
+           000000014001D50B
+           000000014001D513
+           00000001400226F4
+           0000000140022AD3
+           000000014002BDB4
+           000000014002D439
+           000000014002D527
+           000000014002D536
+           000000014002D5A3
+           000000014002D5AF
+           000000014002DF78
+           0000000140033460
+           000000014003347F
+           00000001400334E8
+           000000014003350A
+           00000001400335B8
+           0000000140033641
+           000000014003383D
+           0000000140033BB6
+           0000000140033BB9
+           0000000140033F6B
+           0000000140033F72
+           000000014003438A
+           00000001400343C8
+           00000001400344D2
+           00000001400344E6
+           0000000140034568
+           000000014003456F
+           00000001400346EE
+           00000001400346F5
+           0000000140034778
+           0000000140034780
+           0000000140034C56
+           0000000140034C7B
+           0000000140034C7E
+           0000000140035529
+           000000014003553B
+           0000000140035542
+           0000000140035570
+           000000014003562B
+           0000000140035641
+           000000014003565A
+           0000000140035698
+           000000014003571A
+           000000014003595D
+           000000014003599D
+           00000001400359F0
+           0000000140035A00
+           0000000140035AA6
+           0000000140035AB3
+           0000000140035B60
+           0000000140035BA2
+           0000000140035C28
+           0000000140035CEC
+           0000000140035D0F
+           0000000140035D15
+           0000000140035D51
+           0000000140035D74
+           0000000140035D7A
+           0000000140035DB6
+           0000000140035DD9
+           0000000140035DDD
+           0000000140035DF8
+           0000000140035E04
+           0000000140035E08
+           0000000140035E21
+           0000000140035E35
+           0000000140035E39
+           00000001400361D7
+           0000000140036551
+           00000001400368F2
+           0000000140036906
+           0000000140036988
+           000000014003698E
+           0000000140037240
+           0000000140037245
+           000000014003724E
+           0000000140037257
+           0000000140037383
+           00000001400373E9
+           00000001400373EE
+           00000001400373F7
+           0000000140037400
+           0000000140037450
+           0000000140037468
+           000000014003746D
+           0000000140037476
+           000000014003747F
+           0000000140037497
+           00000001400374EB
+           00000001400374F0
+           00000001400374F9
+           0000000140037502
+           0000000140037537
+           0000000140038B41
+           0000000140038B9A
+           0000000140038C83
+           0000000140038C8D
+           0000000140038C9C
+           0000000140038CBD
+           0000000140038D1A
+           0000000140038EA6
+           0000000140038EBC
+           0000000140039219
+           000000014003921C
+           00000001400392B8
+           00000001400392C3
+           00000001400397B6
+           00000001400397BB
+           00000001400397C4
+           00000001400397CD
+           00000001400397EA
+           000000014003A2E0  NtCurrentTeb
+           000000014003B48D
+           000000014003B842
+           000000014003B847
+           000000014003CC51
+           000000014003CC6A
+           000000014003CDC8
+           000000014003CDCC
+           000000014003F255
+           000000014003F26B
+           000000014003F52B
+           000000014003F7B4  ReadNoFence64
+           000000014003F7B8  ReadPointerNoFence
+           000000014003F820
+           000000014003F838
+           000000014003F86C
+           000000014003F888
+           000000014003F8C0  __castguard_set_user_handler
+           000000014003F979
+           000000014003F9C5
+           000000014003F9F8  _guard_icall_checks_enforced
+           000000014003FF07
+           000000014003FF16
+           000000014003FF78
+           000000014003FFC8
+           0000000140040019
+           0000000140040115
+           0000000140040147
+           000000014004033B
+           00000001400403B7
+           00000001400403CC
+           0000000140040423
+           00000001400404CC
+           0000000140040DF0
+           0000000140040E50
+           0000000140040FF0
+           00000001400418E0
+           00000001400444E0
+           0000000140044690
+           0000000140044800
+           0000000140045900
+           0000000140045D10
+           0000000140046240
+           0000000140046297
+           00000001400462A1
+           00000001400462AB
+           00000001400462C6
+           0000000140046310
+           0000000140046329
+           0000000140046352
+           000000014004635A
+           0000000140046A50
+           0000000140046AA3
+           0000000140046AAD
+           0000000140046DF2
+           0000000140046DF6
+           0000000140046DFD
+           0000000140046E01
+           0000000140046E0D
+           0000000140046E14
+           0000000140046E1E
+           0000000140046E25
+
+    Volatile Info Range Table
+
+          Ranges
+          -------
+          0000000140001000 - 0000000140001120
+          0000000140001170 - 000000014003D004
+          000000014003D180 - 000000014003D28B
+          000000014003D298 - 000000014003EE2B
+          000000014003F05C - 000000014003F6E0
+          000000014003F770 - 00000001400408AC
+          0000000140040C78 - 0000000140040C90
+          0000000140040CD0 - 00000001400470A7
+
+  Summary
+
+        3000 .data
+        4000 .pdata
+       14000 .rdata
+        1000 .reloc
+       47000 .text

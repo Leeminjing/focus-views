@@ -1,0 +1,758 @@
+source.native-unwind-sees-three-CPP-frames: pass (Windows unwind metadata independently walks leaf/middle/outer from captured raw stack; no guessed pointer scan)
+source.initialization-once: pass (controller independently observes original init and safe checkpoint exactly once)
+source.normal-return-chain: pass (source executes the same ordinary C++ returns before changing further)
+source.terminated-before-restore: pass (WaitForDebugEvent EXIT and signaled source process handle precede creation of new carrier)
+new-PID: pass (different native process, source is dead)
+restored.raw-memory-restored: pass (entire data page read back equals S0 except declared HWND relocation)
+restored.raw-stack-restored: pass (entire managed stack read back equals S0 except explicitly registered live HWND references)
+restored.CPU-context-readback: pass (stopped target RIP/RSP/register and floating point control read back after SetThreadContext)
+evidence diagnostic-finished-without-instrumentation-assertion-failures=True
+evidence exit-status-preserves-experiment-verdict=True
+evidence raw-stack-register-and-independent-receipt-agree=True
+evidence source-returned-through-the-captured-ordinary-CPP-frames=True
+evidence source-confirmed-dead-before-new-carrier=True
+evidence source-changed-after-fixed-S0=True
+evidence only-declared-live-window-references-rebound-in-raw-bytes=True
+evidence raw-target-context-has-saved-RIP-RSP-register=True
+evidence SSE-register-bytes-readback-matches-capture=True
+evidence window-resource-actually-created-in-target-thread=True
+evidence carrier-never-replays-business-initialization-or-S0-checkpoint=True
+evidence actual-first-RET-fails-with-CET-subcode-57=True
+evidence unchanged-target-SSP-and-different-shadow-return-proven=True
+evidence failed-restore-never-publishes-usable-View-or-stale-frame=True
+evidence minimal-failure-independent-of-input-hooks-and-capture=True
+evidence all-owned-process-exits-confirmed=True
+evidence all-owned-desktops-closed=True
+evidence no-cleanup-errors=True
+evidence original-experiments-and-evidence-unchanged=True
+evidence no-host-input-business-setters-or-security-policy-change=True
+R3_005A_RESTORE_FAILED (diagnostic evidence is consistent; GUI execution restore did not pass)
+original-red-capable-loop-retains-actual-failure=True
+legacy.EHCONT-metadata-observed=True
+native.ordinary-CPP-return-chain: pass (diagnostic leaf/middle/outer genuinely return on the native stack; this is not source restoration)
+legacy/native-chain-1.CET-and-IP-validation-enabled=True
+legacy/native-chain-1.actual-CET_U-readable-and-enabled=True
+legacy/native-chain-1.instrumentation-assertions=True
+legacy/native-chain-1.native-control-verdict=True
+legacy/native-chain-1.native-SSP-balances-after-returns=True
+legacy/native-chain-1.all-owned-processes-confirmed-dead=True
+legacy/native-chain-1.owned-desktops-closed-without-cleanup-errors=True
+native.ordinary-CPP-return-chain: pass (diagnostic leaf/middle/outer genuinely return on the native stack; this is not source restoration)
+legacy/native-seh-1.CET-and-IP-validation-enabled=True
+legacy/native-seh-1.actual-CET_U-readable-and-enabled=True
+legacy/native-seh-1.instrumentation-assertions=True
+legacy/native-seh-1.native-control-verdict=True
+legacy/native-seh-1.native-SSP-balances-after-returns=True
+legacy/native-seh-1.real-SEH-delivered-to-application=True
+legacy/native-seh-1.all-owned-processes-confirmed-dead=True
+legacy/native-seh-1.owned-desktops-closed-without-cleanup-errors=True
+native.ordinary-CPP-return-chain: pass (diagnostic leaf/middle/outer genuinely return on the native stack; this is not source restoration)
+legacy/rtl-local-1.CET-and-IP-validation-enabled=True
+legacy/rtl-local-1.actual-CET_U-readable-and-enabled=True
+legacy/rtl-local-1.instrumentation-assertions=True
+legacy/rtl-local-1.native-control-verdict=True
+legacy/rtl-local-1.native-SSP-balances-after-returns=True
+legacy/rtl-local-1.RtlRestoreContext-actually-called-once=True
+legacy/rtl-local-1.all-owned-processes-confirmed-dead=True
+legacy/rtl-local-1.owned-desktops-closed-without-cleanup-errors=True
+source.native-unwind-sees-three-CPP-frames: pass (Windows unwind metadata independently walks leaf/middle/outer from captured raw stack; no guessed pointer scan)
+source.initialization-once: pass (controller independently observes original init and safe checkpoint exactly once)
+source.normal-return-chain: pass (source executes the same ordinary C++ returns before changing further)
+source.terminated-before-restore: pass (WaitForDebugEvent EXIT and signaled source process handle precede creation of new carrier)
+new-PID: pass (different native process, source is dead)
+restored.raw-memory-restored: pass (entire data page read back equals S0 except declared HWND relocation)
+restored.raw-stack-restored: pass (entire managed stack read back equals S0 except explicitly registered live HWND references)
+restored.CPU-context-readback: pass (stopped target RIP/RSP/register and floating point control read back after SetThreadContext)
+legacy/legacy-1.CET-and-IP-validation-enabled=True
+legacy/legacy-1.actual-CET_U-readable-and-enabled=True
+legacy/legacy-1.instrumentation-assertions=True
+legacy/legacy-1.source-dead-before-new-PID=True
+legacy/legacy-1.no-business-init-or-checkpoint-replay=True
+legacy/legacy-1.source-return-depends-on-raw-stack-and-register=True
+legacy/legacy-1.reference-1859720839208-preimage=True
+legacy/legacy-1.reference-1859723001392-preimage=True
+legacy/legacy-1.reference-1859723001296-preimage=True
+legacy/legacy-1.only-declared-HWND-bytes-rebound=True
+legacy/legacy-1.failure-not-published-or-masked=True
+legacy/legacy-1.actual-protected-continuation-fault=True
+legacy/legacy-1.first-RET-and-shadow-mismatch=True
+legacy/legacy-1.all-owned-processes-confirmed-dead=True
+legacy/legacy-1.owned-desktops-closed-without-cleanup-errors=True
+source.native-unwind-sees-three-CPP-frames: pass (Windows unwind metadata independently walks leaf/middle/outer from captured raw stack; no guessed pointer scan)
+source.initialization-once: pass (controller independently observes original init and safe checkpoint exactly once)
+source.normal-return-chain: pass (source executes the same ordinary C++ returns before changing further)
+source.terminated-before-restore: pass (WaitForDebugEvent EXIT and signaled source process handle precede creation of new carrier)
+new-PID: pass (different native process, source is dead)
+restored.raw-memory-restored: pass (entire data page read back equals S0 except declared HWND relocation)
+restored.raw-stack-restored: pass (entire managed stack read back equals S0 except explicitly registered live HWND references)
+restored.CPU-context-readback: pass (stopped target RIP/RSP/register and floating point control read back after SetThreadContext)
+legacy/xstate-1.CET-and-IP-validation-enabled=True
+legacy/xstate-1.actual-CET_U-readable-and-enabled=True
+legacy/xstate-1.instrumentation-assertions=True
+legacy/xstate-1.source-dead-before-new-PID=True
+legacy/xstate-1.no-business-init-or-checkpoint-replay=True
+legacy/xstate-1.source-return-depends-on-raw-stack-and-register=True
+legacy/xstate-1.reference-1859720839208-preimage=True
+legacy/xstate-1.reference-1859723001392-preimage=True
+legacy/xstate-1.reference-1859723001296-preimage=True
+legacy/xstate-1.only-declared-HWND-bytes-rebound=True
+legacy/xstate-1.failure-not-published-or-masked=True
+legacy/xstate-1.actual-protected-continuation-fault=True
+legacy/xstate-1.first-RET-and-shadow-mismatch=True
+legacy/xstate-1.CET_U-no-op-accepted-without-SSP-transplant=True
+legacy/xstate-1.all-owned-processes-confirmed-dead=True
+legacy/xstate-1.owned-desktops-closed-without-cleanup-errors=True
+source.native-unwind-sees-three-CPP-frames: pass (Windows unwind metadata independently walks leaf/middle/outer from captured raw stack; no guessed pointer scan)
+source.initialization-once: pass (controller independently observes original init and safe checkpoint exactly once)
+source.normal-return-chain: pass (source executes the same ordinary C++ returns before changing further)
+source.terminated-before-restore: pass (WaitForDebugEvent EXIT and signaled source process handle precede creation of new carrier)
+new-PID: pass (different native process, source is dead)
+restored.raw-memory-restored: pass (entire data page read back equals S0 except declared HWND relocation)
+restored.raw-stack-restored: pass (entire managed stack read back equals S0 except explicitly registered live HWND references)
+legacy/rtl-1.CET-and-IP-validation-enabled=True
+legacy/rtl-1.actual-CET_U-readable-and-enabled=True
+legacy/rtl-1.instrumentation-assertions=True
+legacy/rtl-1.source-dead-before-new-PID=True
+legacy/rtl-1.no-business-init-or-checkpoint-replay=True
+legacy/rtl-1.source-return-depends-on-raw-stack-and-register=True
+legacy/rtl-1.reference-1859720839208-preimage=True
+legacy/rtl-1.reference-1859723001392-preimage=True
+legacy/rtl-1.reference-1859723001296-preimage=True
+legacy/rtl-1.only-declared-HWND-bytes-rebound=True
+legacy/rtl-1.failure-not-published-or-masked=True
+legacy/rtl-1.actual-protected-continuation-fault=True
+legacy/rtl-1.first-RET-and-shadow-mismatch=True
+legacy/rtl-1.RtlRestoreContext-runtime-call-reached=True
+legacy/rtl-1.transfer-stack-boundary-explicit=True
+legacy/rtl-1.all-owned-processes-confirmed-dead=True
+legacy/rtl-1.owned-desktops-closed-without-cleanup-errors=True
+source.native-unwind-sees-three-CPP-frames: pass (Windows unwind metadata independently walks leaf/middle/outer from captured raw stack; no guessed pointer scan)
+source.initialization-once: pass (controller independently observes original init and safe checkpoint exactly once)
+source.normal-return-chain: pass (source executes the same ordinary C++ returns before changing further)
+source.terminated-before-restore: pass (WaitForDebugEvent EXIT and signaled source process handle precede creation of new carrier)
+new-PID: pass (different native process, source is dead)
+restored.raw-memory-restored: pass (entire data page read back equals S0 except declared HWND relocation)
+restored.raw-stack-restored: pass (entire managed stack read back equals S0 except explicitly registered live HWND references)
+legacy/rtl-native-1.CET-and-IP-validation-enabled=True
+legacy/rtl-native-1.actual-CET_U-readable-and-enabled=True
+legacy/rtl-native-1.instrumentation-assertions=True
+legacy/rtl-native-1.source-dead-before-new-PID=True
+legacy/rtl-native-1.no-business-init-or-checkpoint-replay=True
+legacy/rtl-native-1.source-return-depends-on-raw-stack-and-register=True
+legacy/rtl-native-1.reference-1859720839208-preimage=True
+legacy/rtl-native-1.reference-1859723001392-preimage=True
+legacy/rtl-native-1.reference-1859723001296-preimage=True
+legacy/rtl-native-1.only-declared-HWND-bytes-rebound=True
+legacy/rtl-native-1.failure-not-published-or-masked=True
+legacy/rtl-native-1.actual-protected-continuation-fault=True
+legacy/rtl-native-1.RtlRestoreContext-runtime-call-reached=True
+legacy/rtl-native-1.transfer-stack-boundary-explicit=True
+legacy/rtl-native-1.all-owned-processes-confirmed-dead=True
+legacy/rtl-native-1.owned-desktops-closed-without-cleanup-errors=True
+native.ordinary-CPP-return-chain: pass (diagnostic leaf/middle/outer genuinely return on the native stack; this is not source restoration)
+legacy/native-chain-2.CET-and-IP-validation-enabled=True
+legacy/native-chain-2.actual-CET_U-readable-and-enabled=True
+legacy/native-chain-2.instrumentation-assertions=True
+legacy/native-chain-2.native-control-verdict=True
+legacy/native-chain-2.native-SSP-balances-after-returns=True
+legacy/native-chain-2.all-owned-processes-confirmed-dead=True
+legacy/native-chain-2.owned-desktops-closed-without-cleanup-errors=True
+native.ordinary-CPP-return-chain: pass (diagnostic leaf/middle/outer genuinely return on the native stack; this is not source restoration)
+legacy/native-seh-2.CET-and-IP-validation-enabled=True
+legacy/native-seh-2.actual-CET_U-readable-and-enabled=True
+legacy/native-seh-2.instrumentation-assertions=True
+legacy/native-seh-2.native-control-verdict=True
+legacy/native-seh-2.native-SSP-balances-after-returns=True
+legacy/native-seh-2.real-SEH-delivered-to-application=True
+legacy/native-seh-2.all-owned-processes-confirmed-dead=True
+legacy/native-seh-2.owned-desktops-closed-without-cleanup-errors=True
+native.ordinary-CPP-return-chain: pass (diagnostic leaf/middle/outer genuinely return on the native stack; this is not source restoration)
+legacy/rtl-local-2.CET-and-IP-validation-enabled=True
+legacy/rtl-local-2.actual-CET_U-readable-and-enabled=True
+legacy/rtl-local-2.instrumentation-assertions=True
+legacy/rtl-local-2.native-control-verdict=True
+legacy/rtl-local-2.native-SSP-balances-after-returns=True
+legacy/rtl-local-2.RtlRestoreContext-actually-called-once=True
+legacy/rtl-local-2.all-owned-processes-confirmed-dead=True
+legacy/rtl-local-2.owned-desktops-closed-without-cleanup-errors=True
+source.native-unwind-sees-three-CPP-frames: pass (Windows unwind metadata independently walks leaf/middle/outer from captured raw stack; no guessed pointer scan)
+source.initialization-once: pass (controller independently observes original init and safe checkpoint exactly once)
+source.normal-return-chain: pass (source executes the same ordinary C++ returns before changing further)
+source.terminated-before-restore: pass (WaitForDebugEvent EXIT and signaled source process handle precede creation of new carrier)
+new-PID: pass (different native process, source is dead)
+restored.raw-memory-restored: pass (entire data page read back equals S0 except declared HWND relocation)
+restored.raw-stack-restored: pass (entire managed stack read back equals S0 except explicitly registered live HWND references)
+restored.CPU-context-readback: pass (stopped target RIP/RSP/register and floating point control read back after SetThreadContext)
+legacy/legacy-2.CET-and-IP-validation-enabled=True
+legacy/legacy-2.actual-CET_U-readable-and-enabled=True
+legacy/legacy-2.instrumentation-assertions=True
+legacy/legacy-2.source-dead-before-new-PID=True
+legacy/legacy-2.no-business-init-or-checkpoint-replay=True
+legacy/legacy-2.source-return-depends-on-raw-stack-and-register=True
+legacy/legacy-2.reference-1859720839208-preimage=True
+legacy/legacy-2.reference-1859723001392-preimage=True
+legacy/legacy-2.reference-1859723001296-preimage=True
+legacy/legacy-2.only-declared-HWND-bytes-rebound=True
+legacy/legacy-2.failure-not-published-or-masked=True
+legacy/legacy-2.actual-protected-continuation-fault=True
+legacy/legacy-2.first-RET-and-shadow-mismatch=True
+legacy/legacy-2.all-owned-processes-confirmed-dead=True
+legacy/legacy-2.owned-desktops-closed-without-cleanup-errors=True
+source.native-unwind-sees-three-CPP-frames: pass (Windows unwind metadata independently walks leaf/middle/outer from captured raw stack; no guessed pointer scan)
+source.initialization-once: pass (controller independently observes original init and safe checkpoint exactly once)
+source.normal-return-chain: pass (source executes the same ordinary C++ returns before changing further)
+source.terminated-before-restore: pass (WaitForDebugEvent EXIT and signaled source process handle precede creation of new carrier)
+new-PID: pass (different native process, source is dead)
+restored.raw-memory-restored: pass (entire data page read back equals S0 except declared HWND relocation)
+restored.raw-stack-restored: pass (entire managed stack read back equals S0 except explicitly registered live HWND references)
+restored.CPU-context-readback: pass (stopped target RIP/RSP/register and floating point control read back after SetThreadContext)
+legacy/xstate-2.CET-and-IP-validation-enabled=True
+legacy/xstate-2.actual-CET_U-readable-and-enabled=True
+legacy/xstate-2.instrumentation-assertions=True
+legacy/xstate-2.source-dead-before-new-PID=True
+legacy/xstate-2.no-business-init-or-checkpoint-replay=True
+legacy/xstate-2.source-return-depends-on-raw-stack-and-register=True
+legacy/xstate-2.reference-1859720839208-preimage=True
+legacy/xstate-2.reference-1859723001392-preimage=True
+legacy/xstate-2.reference-1859723001296-preimage=True
+legacy/xstate-2.only-declared-HWND-bytes-rebound=True
+legacy/xstate-2.failure-not-published-or-masked=True
+legacy/xstate-2.actual-protected-continuation-fault=True
+legacy/xstate-2.first-RET-and-shadow-mismatch=True
+legacy/xstate-2.CET_U-no-op-accepted-without-SSP-transplant=True
+legacy/xstate-2.all-owned-processes-confirmed-dead=True
+legacy/xstate-2.owned-desktops-closed-without-cleanup-errors=True
+source.native-unwind-sees-three-CPP-frames: pass (Windows unwind metadata independently walks leaf/middle/outer from captured raw stack; no guessed pointer scan)
+source.initialization-once: pass (controller independently observes original init and safe checkpoint exactly once)
+source.normal-return-chain: pass (source executes the same ordinary C++ returns before changing further)
+source.terminated-before-restore: pass (WaitForDebugEvent EXIT and signaled source process handle precede creation of new carrier)
+new-PID: pass (different native process, source is dead)
+restored.raw-memory-restored: pass (entire data page read back equals S0 except declared HWND relocation)
+restored.raw-stack-restored: pass (entire managed stack read back equals S0 except explicitly registered live HWND references)
+legacy/rtl-2.CET-and-IP-validation-enabled=True
+legacy/rtl-2.actual-CET_U-readable-and-enabled=True
+legacy/rtl-2.instrumentation-assertions=True
+legacy/rtl-2.source-dead-before-new-PID=True
+legacy/rtl-2.no-business-init-or-checkpoint-replay=True
+legacy/rtl-2.source-return-depends-on-raw-stack-and-register=True
+legacy/rtl-2.reference-1859720839208-preimage=True
+legacy/rtl-2.reference-1859723001392-preimage=True
+legacy/rtl-2.reference-1859723001296-preimage=True
+legacy/rtl-2.only-declared-HWND-bytes-rebound=True
+legacy/rtl-2.failure-not-published-or-masked=True
+legacy/rtl-2.actual-protected-continuation-fault=True
+legacy/rtl-2.first-RET-and-shadow-mismatch=True
+legacy/rtl-2.RtlRestoreContext-runtime-call-reached=True
+legacy/rtl-2.transfer-stack-boundary-explicit=True
+legacy/rtl-2.all-owned-processes-confirmed-dead=True
+legacy/rtl-2.owned-desktops-closed-without-cleanup-errors=True
+source.native-unwind-sees-three-CPP-frames: pass (Windows unwind metadata independently walks leaf/middle/outer from captured raw stack; no guessed pointer scan)
+source.initialization-once: pass (controller independently observes original init and safe checkpoint exactly once)
+source.normal-return-chain: pass (source executes the same ordinary C++ returns before changing further)
+source.terminated-before-restore: pass (WaitForDebugEvent EXIT and signaled source process handle precede creation of new carrier)
+new-PID: pass (different native process, source is dead)
+restored.raw-memory-restored: pass (entire data page read back equals S0 except declared HWND relocation)
+restored.raw-stack-restored: pass (entire managed stack read back equals S0 except explicitly registered live HWND references)
+legacy/rtl-native-2.CET-and-IP-validation-enabled=True
+legacy/rtl-native-2.actual-CET_U-readable-and-enabled=True
+legacy/rtl-native-2.instrumentation-assertions=True
+legacy/rtl-native-2.source-dead-before-new-PID=True
+legacy/rtl-native-2.no-business-init-or-checkpoint-replay=True
+legacy/rtl-native-2.source-return-depends-on-raw-stack-and-register=True
+legacy/rtl-native-2.reference-1859720839208-preimage=True
+legacy/rtl-native-2.reference-1859723001392-preimage=True
+legacy/rtl-native-2.reference-1859723001296-preimage=True
+legacy/rtl-native-2.only-declared-HWND-bytes-rebound=True
+legacy/rtl-native-2.failure-not-published-or-masked=True
+legacy/rtl-native-2.actual-protected-continuation-fault=True
+legacy/rtl-native-2.RtlRestoreContext-runtime-call-reached=True
+legacy/rtl-native-2.transfer-stack-boundary-explicit=True
+legacy/rtl-native-2.all-owned-processes-confirmed-dead=True
+legacy/rtl-native-2.owned-desktops-closed-without-cleanup-errors=True
+control-md.EHCONT-metadata-observed=True
+native.ordinary-CPP-return-chain: pass (diagnostic leaf/middle/outer genuinely return on the native stack; this is not source restoration)
+control-md/native-chain-1.CET-and-IP-validation-enabled=True
+control-md/native-chain-1.actual-CET_U-readable-and-enabled=True
+control-md/native-chain-1.instrumentation-assertions=True
+control-md/native-chain-1.native-control-verdict=True
+control-md/native-chain-1.native-SSP-balances-after-returns=True
+control-md/native-chain-1.all-owned-processes-confirmed-dead=True
+control-md/native-chain-1.owned-desktops-closed-without-cleanup-errors=True
+native.ordinary-CPP-return-chain: pass (diagnostic leaf/middle/outer genuinely return on the native stack; this is not source restoration)
+control-md/native-seh-1.CET-and-IP-validation-enabled=True
+control-md/native-seh-1.actual-CET_U-readable-and-enabled=True
+control-md/native-seh-1.instrumentation-assertions=True
+control-md/native-seh-1.native-control-verdict=True
+control-md/native-seh-1.native-SSP-balances-after-returns=True
+control-md/native-seh-1.real-SEH-delivered-to-application=True
+control-md/native-seh-1.all-owned-processes-confirmed-dead=True
+control-md/native-seh-1.owned-desktops-closed-without-cleanup-errors=True
+native.ordinary-CPP-return-chain: pass (diagnostic leaf/middle/outer genuinely return on the native stack; this is not source restoration)
+control-md/rtl-local-1.CET-and-IP-validation-enabled=True
+control-md/rtl-local-1.actual-CET_U-readable-and-enabled=True
+control-md/rtl-local-1.instrumentation-assertions=True
+control-md/rtl-local-1.native-control-verdict=True
+control-md/rtl-local-1.native-SSP-balances-after-returns=True
+control-md/rtl-local-1.RtlRestoreContext-actually-called-once=True
+control-md/rtl-local-1.all-owned-processes-confirmed-dead=True
+control-md/rtl-local-1.owned-desktops-closed-without-cleanup-errors=True
+source.native-unwind-sees-three-CPP-frames: pass (Windows unwind metadata independently walks leaf/middle/outer from captured raw stack; no guessed pointer scan)
+source.initialization-once: pass (controller independently observes original init and safe checkpoint exactly once)
+source.normal-return-chain: pass (source executes the same ordinary C++ returns before changing further)
+source.terminated-before-restore: pass (WaitForDebugEvent EXIT and signaled source process handle precede creation of new carrier)
+new-PID: pass (different native process, source is dead)
+restored.raw-memory-restored: pass (entire data page read back equals S0 except declared HWND relocation)
+restored.raw-stack-restored: pass (entire managed stack read back equals S0 except explicitly registered live HWND references)
+restored.CPU-context-readback: pass (stopped target RIP/RSP/register and floating point control read back after SetThreadContext)
+control-md/legacy-1.CET-and-IP-validation-enabled=True
+control-md/legacy-1.actual-CET_U-readable-and-enabled=True
+control-md/legacy-1.instrumentation-assertions=True
+control-md/legacy-1.source-dead-before-new-PID=True
+control-md/legacy-1.no-business-init-or-checkpoint-replay=True
+control-md/legacy-1.source-return-depends-on-raw-stack-and-register=True
+control-md/legacy-1.reference-1859720839208-preimage=True
+control-md/legacy-1.reference-1859723001392-preimage=True
+control-md/legacy-1.reference-1859723001296-preimage=True
+control-md/legacy-1.only-declared-HWND-bytes-rebound=True
+control-md/legacy-1.failure-not-published-or-masked=True
+control-md/legacy-1.actual-protected-continuation-fault=True
+control-md/legacy-1.first-RET-and-shadow-mismatch=True
+control-md/legacy-1.all-owned-processes-confirmed-dead=True
+control-md/legacy-1.owned-desktops-closed-without-cleanup-errors=True
+source.native-unwind-sees-three-CPP-frames: pass (Windows unwind metadata independently walks leaf/middle/outer from captured raw stack; no guessed pointer scan)
+source.initialization-once: pass (controller independently observes original init and safe checkpoint exactly once)
+source.normal-return-chain: pass (source executes the same ordinary C++ returns before changing further)
+source.terminated-before-restore: pass (WaitForDebugEvent EXIT and signaled source process handle precede creation of new carrier)
+new-PID: pass (different native process, source is dead)
+restored.raw-memory-restored: pass (entire data page read back equals S0 except declared HWND relocation)
+restored.raw-stack-restored: pass (entire managed stack read back equals S0 except explicitly registered live HWND references)
+restored.CPU-context-readback: pass (stopped target RIP/RSP/register and floating point control read back after SetThreadContext)
+control-md/xstate-1.CET-and-IP-validation-enabled=True
+control-md/xstate-1.actual-CET_U-readable-and-enabled=True
+control-md/xstate-1.instrumentation-assertions=True
+control-md/xstate-1.source-dead-before-new-PID=True
+control-md/xstate-1.no-business-init-or-checkpoint-replay=True
+control-md/xstate-1.source-return-depends-on-raw-stack-and-register=True
+control-md/xstate-1.reference-1859720839208-preimage=True
+control-md/xstate-1.reference-1859723001392-preimage=True
+control-md/xstate-1.reference-1859723001296-preimage=True
+control-md/xstate-1.only-declared-HWND-bytes-rebound=True
+control-md/xstate-1.failure-not-published-or-masked=True
+control-md/xstate-1.actual-protected-continuation-fault=True
+control-md/xstate-1.first-RET-and-shadow-mismatch=True
+control-md/xstate-1.CET_U-no-op-accepted-without-SSP-transplant=True
+control-md/xstate-1.all-owned-processes-confirmed-dead=True
+control-md/xstate-1.owned-desktops-closed-without-cleanup-errors=True
+source.native-unwind-sees-three-CPP-frames: pass (Windows unwind metadata independently walks leaf/middle/outer from captured raw stack; no guessed pointer scan)
+source.initialization-once: pass (controller independently observes original init and safe checkpoint exactly once)
+source.normal-return-chain: pass (source executes the same ordinary C++ returns before changing further)
+source.terminated-before-restore: pass (WaitForDebugEvent EXIT and signaled source process handle precede creation of new carrier)
+new-PID: pass (different native process, source is dead)
+restored.raw-memory-restored: pass (entire data page read back equals S0 except declared HWND relocation)
+restored.raw-stack-restored: pass (entire managed stack read back equals S0 except explicitly registered live HWND references)
+control-md/rtl-1.CET-and-IP-validation-enabled=True
+control-md/rtl-1.actual-CET_U-readable-and-enabled=True
+control-md/rtl-1.instrumentation-assertions=True
+control-md/rtl-1.source-dead-before-new-PID=True
+control-md/rtl-1.no-business-init-or-checkpoint-replay=True
+control-md/rtl-1.source-return-depends-on-raw-stack-and-register=True
+control-md/rtl-1.reference-1859720839208-preimage=True
+control-md/rtl-1.reference-1859723001392-preimage=True
+control-md/rtl-1.reference-1859723001296-preimage=True
+control-md/rtl-1.only-declared-HWND-bytes-rebound=True
+control-md/rtl-1.failure-not-published-or-masked=True
+control-md/rtl-1.actual-protected-continuation-fault=True
+control-md/rtl-1.first-RET-and-shadow-mismatch=True
+control-md/rtl-1.RtlRestoreContext-runtime-call-reached=True
+control-md/rtl-1.transfer-stack-boundary-explicit=True
+control-md/rtl-1.all-owned-processes-confirmed-dead=True
+control-md/rtl-1.owned-desktops-closed-without-cleanup-errors=True
+source.native-unwind-sees-three-CPP-frames: pass (Windows unwind metadata independently walks leaf/middle/outer from captured raw stack; no guessed pointer scan)
+source.initialization-once: pass (controller independently observes original init and safe checkpoint exactly once)
+source.normal-return-chain: pass (source executes the same ordinary C++ returns before changing further)
+source.terminated-before-restore: pass (WaitForDebugEvent EXIT and signaled source process handle precede creation of new carrier)
+new-PID: pass (different native process, source is dead)
+restored.raw-memory-restored: pass (entire data page read back equals S0 except declared HWND relocation)
+restored.raw-stack-restored: pass (entire managed stack read back equals S0 except explicitly registered live HWND references)
+control-md/rtl-native-1.CET-and-IP-validation-enabled=True
+control-md/rtl-native-1.actual-CET_U-readable-and-enabled=True
+control-md/rtl-native-1.instrumentation-assertions=True
+control-md/rtl-native-1.source-dead-before-new-PID=True
+control-md/rtl-native-1.no-business-init-or-checkpoint-replay=True
+control-md/rtl-native-1.source-return-depends-on-raw-stack-and-register=True
+control-md/rtl-native-1.reference-1859720839208-preimage=True
+control-md/rtl-native-1.reference-1859723001392-preimage=True
+control-md/rtl-native-1.reference-1859723001296-preimage=True
+control-md/rtl-native-1.only-declared-HWND-bytes-rebound=True
+control-md/rtl-native-1.failure-not-published-or-masked=True
+control-md/rtl-native-1.actual-protected-continuation-fault=True
+control-md/rtl-native-1.RtlRestoreContext-runtime-call-reached=True
+control-md/rtl-native-1.transfer-stack-boundary-explicit=True
+control-md/rtl-native-1.all-owned-processes-confirmed-dead=True
+control-md/rtl-native-1.owned-desktops-closed-without-cleanup-errors=True
+native.ordinary-CPP-return-chain: pass (diagnostic leaf/middle/outer genuinely return on the native stack; this is not source restoration)
+control-md/native-chain-2.CET-and-IP-validation-enabled=True
+control-md/native-chain-2.actual-CET_U-readable-and-enabled=True
+control-md/native-chain-2.instrumentation-assertions=True
+control-md/native-chain-2.native-control-verdict=True
+control-md/native-chain-2.native-SSP-balances-after-returns=True
+control-md/native-chain-2.all-owned-processes-confirmed-dead=True
+control-md/native-chain-2.owned-desktops-closed-without-cleanup-errors=True
+native.ordinary-CPP-return-chain: pass (diagnostic leaf/middle/outer genuinely return on the native stack; this is not source restoration)
+control-md/native-seh-2.CET-and-IP-validation-enabled=True
+control-md/native-seh-2.actual-CET_U-readable-and-enabled=True
+control-md/native-seh-2.instrumentation-assertions=True
+control-md/native-seh-2.native-control-verdict=True
+control-md/native-seh-2.native-SSP-balances-after-returns=True
+control-md/native-seh-2.real-SEH-delivered-to-application=True
+control-md/native-seh-2.all-owned-processes-confirmed-dead=True
+control-md/native-seh-2.owned-desktops-closed-without-cleanup-errors=True
+native.ordinary-CPP-return-chain: pass (diagnostic leaf/middle/outer genuinely return on the native stack; this is not source restoration)
+control-md/rtl-local-2.CET-and-IP-validation-enabled=True
+control-md/rtl-local-2.actual-CET_U-readable-and-enabled=True
+control-md/rtl-local-2.instrumentation-assertions=True
+control-md/rtl-local-2.native-control-verdict=True
+control-md/rtl-local-2.native-SSP-balances-after-returns=True
+control-md/rtl-local-2.RtlRestoreContext-actually-called-once=True
+control-md/rtl-local-2.all-owned-processes-confirmed-dead=True
+control-md/rtl-local-2.owned-desktops-closed-without-cleanup-errors=True
+source.native-unwind-sees-three-CPP-frames: pass (Windows unwind metadata independently walks leaf/middle/outer from captured raw stack; no guessed pointer scan)
+source.initialization-once: pass (controller independently observes original init and safe checkpoint exactly once)
+source.normal-return-chain: pass (source executes the same ordinary C++ returns before changing further)
+source.terminated-before-restore: pass (WaitForDebugEvent EXIT and signaled source process handle precede creation of new carrier)
+new-PID: pass (different native process, source is dead)
+restored.raw-memory-restored: pass (entire data page read back equals S0 except declared HWND relocation)
+restored.raw-stack-restored: pass (entire managed stack read back equals S0 except explicitly registered live HWND references)
+restored.CPU-context-readback: pass (stopped target RIP/RSP/register and floating point control read back after SetThreadContext)
+control-md/legacy-2.CET-and-IP-validation-enabled=True
+control-md/legacy-2.actual-CET_U-readable-and-enabled=True
+control-md/legacy-2.instrumentation-assertions=True
+control-md/legacy-2.source-dead-before-new-PID=True
+control-md/legacy-2.no-business-init-or-checkpoint-replay=True
+control-md/legacy-2.source-return-depends-on-raw-stack-and-register=True
+control-md/legacy-2.reference-1859720839208-preimage=True
+control-md/legacy-2.reference-1859723001392-preimage=True
+control-md/legacy-2.reference-1859723001296-preimage=True
+control-md/legacy-2.only-declared-HWND-bytes-rebound=True
+control-md/legacy-2.failure-not-published-or-masked=True
+control-md/legacy-2.actual-protected-continuation-fault=True
+control-md/legacy-2.first-RET-and-shadow-mismatch=True
+control-md/legacy-2.all-owned-processes-confirmed-dead=True
+control-md/legacy-2.owned-desktops-closed-without-cleanup-errors=True
+source.native-unwind-sees-three-CPP-frames: pass (Windows unwind metadata independently walks leaf/middle/outer from captured raw stack; no guessed pointer scan)
+source.initialization-once: pass (controller independently observes original init and safe checkpoint exactly once)
+source.normal-return-chain: pass (source executes the same ordinary C++ returns before changing further)
+source.terminated-before-restore: pass (WaitForDebugEvent EXIT and signaled source process handle precede creation of new carrier)
+new-PID: pass (different native process, source is dead)
+restored.raw-memory-restored: pass (entire data page read back equals S0 except declared HWND relocation)
+restored.raw-stack-restored: pass (entire managed stack read back equals S0 except explicitly registered live HWND references)
+restored.CPU-context-readback: pass (stopped target RIP/RSP/register and floating point control read back after SetThreadContext)
+control-md/xstate-2.CET-and-IP-validation-enabled=True
+control-md/xstate-2.actual-CET_U-readable-and-enabled=True
+control-md/xstate-2.instrumentation-assertions=True
+control-md/xstate-2.source-dead-before-new-PID=True
+control-md/xstate-2.no-business-init-or-checkpoint-replay=True
+control-md/xstate-2.source-return-depends-on-raw-stack-and-register=True
+control-md/xstate-2.reference-1859720839208-preimage=True
+control-md/xstate-2.reference-1859723001392-preimage=True
+control-md/xstate-2.reference-1859723001296-preimage=True
+control-md/xstate-2.only-declared-HWND-bytes-rebound=True
+control-md/xstate-2.failure-not-published-or-masked=True
+control-md/xstate-2.actual-protected-continuation-fault=True
+control-md/xstate-2.first-RET-and-shadow-mismatch=True
+control-md/xstate-2.CET_U-no-op-accepted-without-SSP-transplant=True
+control-md/xstate-2.all-owned-processes-confirmed-dead=True
+control-md/xstate-2.owned-desktops-closed-without-cleanup-errors=True
+source.native-unwind-sees-three-CPP-frames: pass (Windows unwind metadata independently walks leaf/middle/outer from captured raw stack; no guessed pointer scan)
+source.initialization-once: pass (controller independently observes original init and safe checkpoint exactly once)
+source.normal-return-chain: pass (source executes the same ordinary C++ returns before changing further)
+source.terminated-before-restore: pass (WaitForDebugEvent EXIT and signaled source process handle precede creation of new carrier)
+new-PID: pass (different native process, source is dead)
+restored.raw-memory-restored: pass (entire data page read back equals S0 except declared HWND relocation)
+restored.raw-stack-restored: pass (entire managed stack read back equals S0 except explicitly registered live HWND references)
+control-md/rtl-2.CET-and-IP-validation-enabled=True
+control-md/rtl-2.actual-CET_U-readable-and-enabled=True
+control-md/rtl-2.instrumentation-assertions=True
+control-md/rtl-2.source-dead-before-new-PID=True
+control-md/rtl-2.no-business-init-or-checkpoint-replay=True
+control-md/rtl-2.source-return-depends-on-raw-stack-and-register=True
+control-md/rtl-2.reference-1859720839208-preimage=True
+control-md/rtl-2.reference-1859723001392-preimage=True
+control-md/rtl-2.reference-1859723001296-preimage=True
+control-md/rtl-2.only-declared-HWND-bytes-rebound=True
+control-md/rtl-2.failure-not-published-or-masked=True
+control-md/rtl-2.actual-protected-continuation-fault=True
+control-md/rtl-2.first-RET-and-shadow-mismatch=True
+control-md/rtl-2.RtlRestoreContext-runtime-call-reached=True
+control-md/rtl-2.transfer-stack-boundary-explicit=True
+control-md/rtl-2.all-owned-processes-confirmed-dead=True
+control-md/rtl-2.owned-desktops-closed-without-cleanup-errors=True
+source.native-unwind-sees-three-CPP-frames: pass (Windows unwind metadata independently walks leaf/middle/outer from captured raw stack; no guessed pointer scan)
+source.initialization-once: pass (controller independently observes original init and safe checkpoint exactly once)
+source.normal-return-chain: pass (source executes the same ordinary C++ returns before changing further)
+source.terminated-before-restore: pass (WaitForDebugEvent EXIT and signaled source process handle precede creation of new carrier)
+new-PID: pass (different native process, source is dead)
+restored.raw-memory-restored: pass (entire data page read back equals S0 except declared HWND relocation)
+restored.raw-stack-restored: pass (entire managed stack read back equals S0 except explicitly registered live HWND references)
+control-md/rtl-native-2.CET-and-IP-validation-enabled=True
+control-md/rtl-native-2.actual-CET_U-readable-and-enabled=True
+control-md/rtl-native-2.instrumentation-assertions=True
+control-md/rtl-native-2.source-dead-before-new-PID=True
+control-md/rtl-native-2.no-business-init-or-checkpoint-replay=True
+control-md/rtl-native-2.source-return-depends-on-raw-stack-and-register=True
+control-md/rtl-native-2.reference-1859720839208-preimage=True
+control-md/rtl-native-2.reference-1859723001392-preimage=True
+control-md/rtl-native-2.reference-1859723001296-preimage=True
+control-md/rtl-native-2.only-declared-HWND-bytes-rebound=True
+control-md/rtl-native-2.failure-not-published-or-masked=True
+control-md/rtl-native-2.actual-protected-continuation-fault=True
+control-md/rtl-native-2.RtlRestoreContext-runtime-call-reached=True
+control-md/rtl-native-2.transfer-stack-boundary-explicit=True
+control-md/rtl-native-2.all-owned-processes-confirmed-dead=True
+control-md/rtl-native-2.owned-desktops-closed-without-cleanup-errors=True
+ehcont-md.EHCONT-metadata-observed=True
+ehcont-md.actual-EHCONT-table-not-empty=True
+native.ordinary-CPP-return-chain: pass (diagnostic leaf/middle/outer genuinely return on the native stack; this is not source restoration)
+ehcont-md/native-chain-1.CET-and-IP-validation-enabled=True
+ehcont-md/native-chain-1.actual-CET_U-readable-and-enabled=True
+ehcont-md/native-chain-1.instrumentation-assertions=True
+ehcont-md/native-chain-1.native-control-verdict=True
+ehcont-md/native-chain-1.native-SSP-balances-after-returns=True
+ehcont-md/native-chain-1.all-owned-processes-confirmed-dead=True
+ehcont-md/native-chain-1.owned-desktops-closed-without-cleanup-errors=True
+native.ordinary-CPP-return-chain: pass (diagnostic leaf/middle/outer genuinely return on the native stack; this is not source restoration)
+ehcont-md/native-seh-1.CET-and-IP-validation-enabled=True
+ehcont-md/native-seh-1.actual-CET_U-readable-and-enabled=True
+ehcont-md/native-seh-1.instrumentation-assertions=True
+ehcont-md/native-seh-1.native-control-verdict=True
+ehcont-md/native-seh-1.native-SSP-balances-after-returns=True
+ehcont-md/native-seh-1.real-SEH-delivered-to-application=True
+ehcont-md/native-seh-1.all-owned-processes-confirmed-dead=True
+ehcont-md/native-seh-1.owned-desktops-closed-without-cleanup-errors=True
+ehcont-md/rtl-local-1.CET-and-IP-validation-enabled=True
+ehcont-md/rtl-local-1.actual-CET_U-readable-and-enabled=True
+ehcont-md/rtl-local-1.instrumentation-assertions=True
+ehcont-md/rtl-local-1.native-control-verdict=True
+ehcont-md/rtl-local-1.captured-IP-not-an-EHCONT-entry=True
+ehcont-md/rtl-local-1.all-owned-processes-confirmed-dead=True
+ehcont-md/rtl-local-1.owned-desktops-closed-without-cleanup-errors=True
+source.native-unwind-sees-three-CPP-frames: pass (Windows unwind metadata independently walks leaf/middle/outer from captured raw stack; no guessed pointer scan)
+source.initialization-once: pass (controller independently observes original init and safe checkpoint exactly once)
+source.normal-return-chain: pass (source executes the same ordinary C++ returns before changing further)
+source.terminated-before-restore: pass (WaitForDebugEvent EXIT and signaled source process handle precede creation of new carrier)
+new-PID: pass (different native process, source is dead)
+restored.raw-memory-restored: pass (entire data page read back equals S0 except declared HWND relocation)
+restored.raw-stack-restored: pass (entire managed stack read back equals S0 except explicitly registered live HWND references)
+restored.CPU-context-readback: pass (stopped target RIP/RSP/register and floating point control read back after SetThreadContext)
+ehcont-md/legacy-1.CET-and-IP-validation-enabled=True
+ehcont-md/legacy-1.actual-CET_U-readable-and-enabled=True
+ehcont-md/legacy-1.instrumentation-assertions=True
+ehcont-md/legacy-1.saved-IP-not-an-EHCONT-entry=True
+ehcont-md/legacy-1.source-dead-before-new-PID=True
+ehcont-md/legacy-1.no-business-init-or-checkpoint-replay=True
+ehcont-md/legacy-1.source-return-depends-on-raw-stack-and-register=True
+ehcont-md/legacy-1.reference-1859720839208-preimage=True
+ehcont-md/legacy-1.reference-1859723001392-preimage=True
+ehcont-md/legacy-1.reference-1859723001296-preimage=True
+ehcont-md/legacy-1.only-declared-HWND-bytes-rebound=True
+ehcont-md/legacy-1.failure-not-published-or-masked=True
+ehcont-md/legacy-1.actual-protected-continuation-fault=True
+ehcont-md/legacy-1.first-RET-and-shadow-mismatch=True
+ehcont-md/legacy-1.all-owned-processes-confirmed-dead=True
+ehcont-md/legacy-1.owned-desktops-closed-without-cleanup-errors=True
+source.native-unwind-sees-three-CPP-frames: pass (Windows unwind metadata independently walks leaf/middle/outer from captured raw stack; no guessed pointer scan)
+source.initialization-once: pass (controller independently observes original init and safe checkpoint exactly once)
+source.normal-return-chain: pass (source executes the same ordinary C++ returns before changing further)
+source.terminated-before-restore: pass (WaitForDebugEvent EXIT and signaled source process handle precede creation of new carrier)
+new-PID: pass (different native process, source is dead)
+restored.raw-memory-restored: pass (entire data page read back equals S0 except declared HWND relocation)
+restored.raw-stack-restored: pass (entire managed stack read back equals S0 except explicitly registered live HWND references)
+restored.CPU-context-readback: pass (stopped target RIP/RSP/register and floating point control read back after SetThreadContext)
+ehcont-md/xstate-1.CET-and-IP-validation-enabled=True
+ehcont-md/xstate-1.actual-CET_U-readable-and-enabled=True
+ehcont-md/xstate-1.instrumentation-assertions=True
+ehcont-md/xstate-1.saved-IP-not-an-EHCONT-entry=True
+ehcont-md/xstate-1.source-dead-before-new-PID=True
+ehcont-md/xstate-1.no-business-init-or-checkpoint-replay=True
+ehcont-md/xstate-1.source-return-depends-on-raw-stack-and-register=True
+ehcont-md/xstate-1.reference-1859720839208-preimage=True
+ehcont-md/xstate-1.reference-1859723001392-preimage=True
+ehcont-md/xstate-1.reference-1859723001296-preimage=True
+ehcont-md/xstate-1.only-declared-HWND-bytes-rebound=True
+ehcont-md/xstate-1.failure-not-published-or-masked=True
+ehcont-md/xstate-1.actual-protected-continuation-fault=True
+ehcont-md/xstate-1.first-RET-and-shadow-mismatch=True
+ehcont-md/xstate-1.CET_U-no-op-accepted-without-SSP-transplant=True
+ehcont-md/xstate-1.all-owned-processes-confirmed-dead=True
+ehcont-md/xstate-1.owned-desktops-closed-without-cleanup-errors=True
+source.native-unwind-sees-three-CPP-frames: pass (Windows unwind metadata independently walks leaf/middle/outer from captured raw stack; no guessed pointer scan)
+source.initialization-once: pass (controller independently observes original init and safe checkpoint exactly once)
+source.normal-return-chain: pass (source executes the same ordinary C++ returns before changing further)
+source.terminated-before-restore: pass (WaitForDebugEvent EXIT and signaled source process handle precede creation of new carrier)
+new-PID: pass (different native process, source is dead)
+restored.raw-memory-restored: pass (entire data page read back equals S0 except declared HWND relocation)
+restored.raw-stack-restored: pass (entire managed stack read back equals S0 except explicitly registered live HWND references)
+ehcont-md/rtl-1.CET-and-IP-validation-enabled=True
+ehcont-md/rtl-1.actual-CET_U-readable-and-enabled=True
+ehcont-md/rtl-1.instrumentation-assertions=True
+ehcont-md/rtl-1.saved-IP-not-an-EHCONT-entry=True
+ehcont-md/rtl-1.source-dead-before-new-PID=True
+ehcont-md/rtl-1.no-business-init-or-checkpoint-replay=True
+ehcont-md/rtl-1.source-return-depends-on-raw-stack-and-register=True
+ehcont-md/rtl-1.reference-1859720839208-preimage=True
+ehcont-md/rtl-1.reference-1859723001392-preimage=True
+ehcont-md/rtl-1.reference-1859723001296-preimage=True
+ehcont-md/rtl-1.only-declared-HWND-bytes-rebound=True
+ehcont-md/rtl-1.failure-not-published-or-masked=True
+ehcont-md/rtl-1.actual-protected-continuation-fault=True
+ehcont-md/rtl-1.RtlRestoreContext-runtime-call-reached=True
+ehcont-md/rtl-1.transfer-stack-boundary-explicit=True
+ehcont-md/rtl-1.all-owned-processes-confirmed-dead=True
+ehcont-md/rtl-1.owned-desktops-closed-without-cleanup-errors=True
+source.native-unwind-sees-three-CPP-frames: pass (Windows unwind metadata independently walks leaf/middle/outer from captured raw stack; no guessed pointer scan)
+source.initialization-once: pass (controller independently observes original init and safe checkpoint exactly once)
+source.normal-return-chain: pass (source executes the same ordinary C++ returns before changing further)
+source.terminated-before-restore: pass (WaitForDebugEvent EXIT and signaled source process handle precede creation of new carrier)
+new-PID: pass (different native process, source is dead)
+restored.raw-memory-restored: pass (entire data page read back equals S0 except declared HWND relocation)
+restored.raw-stack-restored: pass (entire managed stack read back equals S0 except explicitly registered live HWND references)
+ehcont-md/rtl-native-1.CET-and-IP-validation-enabled=True
+ehcont-md/rtl-native-1.actual-CET_U-readable-and-enabled=True
+ehcont-md/rtl-native-1.instrumentation-assertions=True
+ehcont-md/rtl-native-1.saved-IP-not-an-EHCONT-entry=True
+ehcont-md/rtl-native-1.source-dead-before-new-PID=True
+ehcont-md/rtl-native-1.no-business-init-or-checkpoint-replay=True
+ehcont-md/rtl-native-1.source-return-depends-on-raw-stack-and-register=True
+ehcont-md/rtl-native-1.reference-1859720839208-preimage=True
+ehcont-md/rtl-native-1.reference-1859723001392-preimage=True
+ehcont-md/rtl-native-1.reference-1859723001296-preimage=True
+ehcont-md/rtl-native-1.only-declared-HWND-bytes-rebound=True
+ehcont-md/rtl-native-1.failure-not-published-or-masked=True
+ehcont-md/rtl-native-1.actual-protected-continuation-fault=True
+ehcont-md/rtl-native-1.RtlRestoreContext-runtime-call-reached=True
+ehcont-md/rtl-native-1.transfer-stack-boundary-explicit=True
+ehcont-md/rtl-native-1.all-owned-processes-confirmed-dead=True
+ehcont-md/rtl-native-1.owned-desktops-closed-without-cleanup-errors=True
+native.ordinary-CPP-return-chain: pass (diagnostic leaf/middle/outer genuinely return on the native stack; this is not source restoration)
+ehcont-md/native-chain-2.CET-and-IP-validation-enabled=True
+ehcont-md/native-chain-2.actual-CET_U-readable-and-enabled=True
+ehcont-md/native-chain-2.instrumentation-assertions=True
+ehcont-md/native-chain-2.native-control-verdict=True
+ehcont-md/native-chain-2.native-SSP-balances-after-returns=True
+ehcont-md/native-chain-2.all-owned-processes-confirmed-dead=True
+ehcont-md/native-chain-2.owned-desktops-closed-without-cleanup-errors=True
+native.ordinary-CPP-return-chain: pass (diagnostic leaf/middle/outer genuinely return on the native stack; this is not source restoration)
+ehcont-md/native-seh-2.CET-and-IP-validation-enabled=True
+ehcont-md/native-seh-2.actual-CET_U-readable-and-enabled=True
+ehcont-md/native-seh-2.instrumentation-assertions=True
+ehcont-md/native-seh-2.native-control-verdict=True
+ehcont-md/native-seh-2.native-SSP-balances-after-returns=True
+ehcont-md/native-seh-2.real-SEH-delivered-to-application=True
+ehcont-md/native-seh-2.all-owned-processes-confirmed-dead=True
+ehcont-md/native-seh-2.owned-desktops-closed-without-cleanup-errors=True
+ehcont-md/rtl-local-2.CET-and-IP-validation-enabled=True
+ehcont-md/rtl-local-2.actual-CET_U-readable-and-enabled=True
+ehcont-md/rtl-local-2.instrumentation-assertions=True
+ehcont-md/rtl-local-2.native-control-verdict=True
+ehcont-md/rtl-local-2.captured-IP-not-an-EHCONT-entry=True
+ehcont-md/rtl-local-2.all-owned-processes-confirmed-dead=True
+ehcont-md/rtl-local-2.owned-desktops-closed-without-cleanup-errors=True
+source.native-unwind-sees-three-CPP-frames: pass (Windows unwind metadata independently walks leaf/middle/outer from captured raw stack; no guessed pointer scan)
+source.initialization-once: pass (controller independently observes original init and safe checkpoint exactly once)
+source.normal-return-chain: pass (source executes the same ordinary C++ returns before changing further)
+source.terminated-before-restore: pass (WaitForDebugEvent EXIT and signaled source process handle precede creation of new carrier)
+new-PID: pass (different native process, source is dead)
+restored.raw-memory-restored: pass (entire data page read back equals S0 except declared HWND relocation)
+restored.raw-stack-restored: pass (entire managed stack read back equals S0 except explicitly registered live HWND references)
+restored.CPU-context-readback: pass (stopped target RIP/RSP/register and floating point control read back after SetThreadContext)
+ehcont-md/legacy-2.CET-and-IP-validation-enabled=True
+ehcont-md/legacy-2.actual-CET_U-readable-and-enabled=True
+ehcont-md/legacy-2.instrumentation-assertions=True
+ehcont-md/legacy-2.saved-IP-not-an-EHCONT-entry=True
+ehcont-md/legacy-2.source-dead-before-new-PID=True
+ehcont-md/legacy-2.no-business-init-or-checkpoint-replay=True
+ehcont-md/legacy-2.source-return-depends-on-raw-stack-and-register=True
+ehcont-md/legacy-2.reference-1859720839208-preimage=True
+ehcont-md/legacy-2.reference-1859723001392-preimage=True
+ehcont-md/legacy-2.reference-1859723001296-preimage=True
+ehcont-md/legacy-2.only-declared-HWND-bytes-rebound=True
+ehcont-md/legacy-2.failure-not-published-or-masked=True
+ehcont-md/legacy-2.actual-protected-continuation-fault=True
+ehcont-md/legacy-2.first-RET-and-shadow-mismatch=True
+ehcont-md/legacy-2.all-owned-processes-confirmed-dead=True
+ehcont-md/legacy-2.owned-desktops-closed-without-cleanup-errors=True
+source.native-unwind-sees-three-CPP-frames: pass (Windows unwind metadata independently walks leaf/middle/outer from captured raw stack; no guessed pointer scan)
+source.initialization-once: pass (controller independently observes original init and safe checkpoint exactly once)
+source.normal-return-chain: pass (source executes the same ordinary C++ returns before changing further)
+source.terminated-before-restore: pass (WaitForDebugEvent EXIT and signaled source process handle precede creation of new carrier)
+new-PID: pass (different native process, source is dead)
+restored.raw-memory-restored: pass (entire data page read back equals S0 except declared HWND relocation)
+restored.raw-stack-restored: pass (entire managed stack read back equals S0 except explicitly registered live HWND references)
+restored.CPU-context-readback: pass (stopped target RIP/RSP/register and floating point control read back after SetThreadContext)
+ehcont-md/xstate-2.CET-and-IP-validation-enabled=True
+ehcont-md/xstate-2.actual-CET_U-readable-and-enabled=True
+ehcont-md/xstate-2.instrumentation-assertions=True
+ehcont-md/xstate-2.saved-IP-not-an-EHCONT-entry=True
+ehcont-md/xstate-2.source-dead-before-new-PID=True
+ehcont-md/xstate-2.no-business-init-or-checkpoint-replay=True
+ehcont-md/xstate-2.source-return-depends-on-raw-stack-and-register=True
+ehcont-md/xstate-2.reference-1859720839208-preimage=True
+ehcont-md/xstate-2.reference-1859723001392-preimage=True
+ehcont-md/xstate-2.reference-1859723001296-preimage=True
+ehcont-md/xstate-2.only-declared-HWND-bytes-rebound=True
+ehcont-md/xstate-2.failure-not-published-or-masked=True
+ehcont-md/xstate-2.actual-protected-continuation-fault=True
+ehcont-md/xstate-2.first-RET-and-shadow-mismatch=True
+ehcont-md/xstate-2.CET_U-no-op-accepted-without-SSP-transplant=True
+ehcont-md/xstate-2.all-owned-processes-confirmed-dead=True
+ehcont-md/xstate-2.owned-desktops-closed-without-cleanup-errors=True
+source.native-unwind-sees-three-CPP-frames: pass (Windows unwind metadata independently walks leaf/middle/outer from captured raw stack; no guessed pointer scan)
+source.initialization-once: pass (controller independently observes original init and safe checkpoint exactly once)
+source.normal-return-chain: pass (source executes the same ordinary C++ returns before changing further)
+source.terminated-before-restore: pass (WaitForDebugEvent EXIT and signaled source process handle precede creation of new carrier)
+new-PID: pass (different native process, source is dead)
+restored.raw-memory-restored: pass (entire data page read back equals S0 except declared HWND relocation)
+restored.raw-stack-restored: pass (entire managed stack read back equals S0 except explicitly registered live HWND references)
+ehcont-md/rtl-2.CET-and-IP-validation-enabled=True
+ehcont-md/rtl-2.actual-CET_U-readable-and-enabled=True
+ehcont-md/rtl-2.instrumentation-assertions=True
+ehcont-md/rtl-2.saved-IP-not-an-EHCONT-entry=True
+ehcont-md/rtl-2.source-dead-before-new-PID=True
+ehcont-md/rtl-2.no-business-init-or-checkpoint-replay=True
+ehcont-md/rtl-2.source-return-depends-on-raw-stack-and-register=True
+ehcont-md/rtl-2.reference-1859720839208-preimage=True
+ehcont-md/rtl-2.reference-1859723001392-preimage=True
+ehcont-md/rtl-2.reference-1859723001296-preimage=True
+ehcont-md/rtl-2.only-declared-HWND-bytes-rebound=True
+ehcont-md/rtl-2.failure-not-published-or-masked=True
+ehcont-md/rtl-2.actual-protected-continuation-fault=True
+ehcont-md/rtl-2.RtlRestoreContext-runtime-call-reached=True
+ehcont-md/rtl-2.transfer-stack-boundary-explicit=True
+ehcont-md/rtl-2.all-owned-processes-confirmed-dead=True
+ehcont-md/rtl-2.owned-desktops-closed-without-cleanup-errors=True
+source.native-unwind-sees-three-CPP-frames: pass (Windows unwind metadata independently walks leaf/middle/outer from captured raw stack; no guessed pointer scan)
+source.initialization-once: pass (controller independently observes original init and safe checkpoint exactly once)
+source.normal-return-chain: pass (source executes the same ordinary C++ returns before changing further)
+source.terminated-before-restore: pass (WaitForDebugEvent EXIT and signaled source process handle precede creation of new carrier)
+new-PID: pass (different native process, source is dead)
+restored.raw-memory-restored: pass (entire data page read back equals S0 except declared HWND relocation)
+restored.raw-stack-restored: pass (entire managed stack read back equals S0 except explicitly registered live HWND references)
+ehcont-md/rtl-native-2.CET-and-IP-validation-enabled=True
+ehcont-md/rtl-native-2.actual-CET_U-readable-and-enabled=True
+ehcont-md/rtl-native-2.instrumentation-assertions=True
+ehcont-md/rtl-native-2.saved-IP-not-an-EHCONT-entry=True
+ehcont-md/rtl-native-2.source-dead-before-new-PID=True
+ehcont-md/rtl-native-2.no-business-init-or-checkpoint-replay=True
+ehcont-md/rtl-native-2.source-return-depends-on-raw-stack-and-register=True
+ehcont-md/rtl-native-2.reference-1859720839208-preimage=True
+ehcont-md/rtl-native-2.reference-1859723001392-preimage=True
+ehcont-md/rtl-native-2.reference-1859723001296-preimage=True
+ehcont-md/rtl-native-2.only-declared-HWND-bytes-rebound=True
+ehcont-md/rtl-native-2.failure-not-published-or-masked=True
+ehcont-md/rtl-native-2.actual-protected-continuation-fault=True
+ehcont-md/rtl-native-2.RtlRestoreContext-runtime-call-reached=True
+ehcont-md/rtl-native-2.transfer-stack-boundary-explicit=True
+ehcont-md/rtl-native-2.all-owned-processes-confirmed-dead=True
+ehcont-md/rtl-native-2.owned-desktops-closed-without-cleanup-errors=True
+old-experiments-and-original-evidence-unchanged=True
+CET001_SOURCE_RESTORE_FAILED; native controls and failure evidence are separately recorded

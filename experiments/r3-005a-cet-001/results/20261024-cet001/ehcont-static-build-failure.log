@@ -1,0 +1,15 @@
+runtime.cpp
+   Creating library D:\focus-views\experiments\r3-005a-cet-001\out\ehcont-static\runtime304.lib and object D:\focus-views\experiments\r3-005a-cet-001\out\ehcont-static\runtime304.exp
+libucrt.lib(cfout.obj) : warning LNK4291: module may contain '__except' (Structured Exception Handling) but was not compiled with /guard:ehcont; generating conservative metadata
+libucrt.lib(terminate.obj) : warning LNK4291: module may contain '__except' (Structured Exception Handling) but was not compiled with /guard:ehcont; generating conservative metadata
+libucrt.lib(exit.obj) : warning LNK4291: module may contain '__except' (Structured Exception Handling) but was not compiled with /guard:ehcont; generating conservative metadata
+libucrt.lib(fputc.obj) : error LNK2046: module contains _local_unwind but was not compiled with /guard:ehcont
+libucrt.lib(qsort.obj) : warning LNK4291: module may contain '__except' (Structured Exception Handling) but was not compiled with /guard:ehcont; generating conservative metadata
+libucrt.lib(fpctrl.obj) : warning LNK4291: module may contain '__except' (Structured Exception Handling) but was not compiled with /guard:ehcont; generating conservative metadata
+libucrt.lib(ieee.obj) : warning LNK4291: module may contain '__except' (Structured Exception Handling) but was not compiled with /guard:ehcont; generating conservative metadata
+D:\focus-views\experiments\r3-005a-cet-001\out\ehcont-static\runtime304.dll : fatal error LNK1386: could not generate metadata for one or more modules not compiled with /guard:ehcont; use /force:guardehcont to link anyways
+Exception: D:\focus-views\experiments\r3-005a-cet-001\build.ps1:41
+Line |
+  41 |      if ($LASTEXITCODE -ne 0) { throw 'Runtime DLL build failed' }
+     |                                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     | Runtime DLL build failed
