@@ -1,0 +1,7 @@
+CASE timeout timeout_ms=1000 pointer_bits=64
+FIXTURE_SHA256 465004b62506b4089b9e2b972315fbf97aada603749fd0c67dcfcb6c28e83f4f
+ORACLE seed=0x20fcbe41cbe5e8d8 memory=0xddff09f683042908 stack=0x4ed80bdbca963017 r15=0xf94a904b34e70c01 expected=0x232334fafa0a3b33
+PROCESS_CREATED pid=43988 tid=42236
+SYSTEM_STARTUP_BREAKPOINT pid=43988 address=0x7fffaf1e26c9
+PROCESS_TERMINATED_CONFIRMED pid=43988 exit_event=0xe0420000
+EXPERIMENT_FAILED phase=source_ready api=WaitForDebugEvent code=0x5b4 detail=experiment deadline

@@ -1,0 +1,29 @@
+CASE omit-memory timeout_ms=10000 pointer_bits=64
+FIXTURE_SHA256 62449eb53f8449e4baadda469a6eda3f7f16b96ff550b2dbf2827b1f399c77e8
+ORACLE seed=0x905f9d0bbee9712c memory=0x9b6be3efb0ed484e stack=0xfe7b2891bf9aa9e3 r15=0xf2cc54756c987b66 expected=0x8621e9443ed4ace0
+PROCESS_CREATED pid=40644 tid=43444
+SYSTEM_STARTUP_BREAKPOINT pid=40644 address=0x7fffaf1e26c9
+FIXTURE_READY pid=40644 build=efcf0315de294b94522ee24cb8cfb13acc5efec40f37718df45898329a33a43d
+MITIGATION shadow_stack_flags=0x105
+MITIGATION dynamic_code_flags=0x0
+TASK_INIT role=source pid=40644 count=1
+TRAP_CONTEXT raw_rip=0x1b000000001 resume_rip=0x1b000000001
+CHECKPOINT role=source pid=40644 count=1
+TRAP_CONTEXT raw_rip=0x1b00000004b resume_rip=0x1b00000004b
+CAPTURE_REGION address=0x1b000000000 size=4096 protection=0x20 sha256=d23a77a111ac2e55c37a20c3ef437747005c45a18ae4cbc537cfd0bd9713a657
+CAPTURE_REGION address=0x1b000010000 size=4096 protection=0x4 sha256=6dffe6668adfc47215ef0a8bb4c6ce430cb69163df97bb3d10ed346914a62731
+CAPTURE_REGION address=0x1b000020000 size=65536 protection=0x4 sha256=c788cf8acf792fcd4027379f8c1a3c866b77ae4b13b9f469901077503d687a5d
+CAPTURE_CONTEXT rip=0x1b00000004b rsp=0x1b00002ff70 r15=0xf2cc54756c987b66 eflags=0x287
+PROCESS_TERMINATED_CONFIRMED pid=40644 exit_event=0xe0420000
+SOURCE_EXIT_CONFIRMED_BEFORE_RESTORE pid=40644
+PROCESS_CREATED pid=19184 tid=25104
+SYSTEM_STARTUP_BREAKPOINT pid=19184 address=0x7fffaf1e26c9
+FIXTURE_READY pid=19184 build=efcf0315de294b94522ee24cb8cfb13acc5efec40f37718df45898329a33a43d
+MITIGATION shadow_stack_flags=0x105
+MITIGATION dynamic_code_flags=0x0
+INJECTED_OMISSION region=0x1b000010000
+RESTORED_CONTEXT pid=19184 rip=0x1b00000004b rsp=0x1b00002ff70 r15=0xf2cc54756c987b66 eflags=0x285
+RESULT restore=1 pid=19184 actual=0x6ef9c9a605a50819 expected=0x8621e9443ed4ace0 observed_memory=0x0 observed_r15=0xf2cc54756c987b66 observed_stack=0xfe7b2891bf9aa9e3
+EVENT_COUNTS role=restore init=0 checkpoint=0 result=1
+PROCESS_TERMINATED_CONFIRMED pid=19184 exit_event=0xe0420000
+EXPERIMENT_FAILED phase=target_termination api=result_oracle code=0xd detail=RESULT_MISMATCH restored execution failed validation

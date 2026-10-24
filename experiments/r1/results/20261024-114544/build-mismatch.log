@@ -1,0 +1,25 @@
+CASE build-mismatch timeout_ms=10000 pointer_bits=64
+FIXTURE_SHA256 62449eb53f8449e4baadda469a6eda3f7f16b96ff550b2dbf2827b1f399c77e8
+ORACLE seed=0xa4c0a25446b775a5 memory=0xe5d41353b9ff2170 stack=0xcae417ce47c4ad6a r15=0x36b356b1f6c8fe0b expected=0xc6fb97ee19642dac
+PROCESS_CREATED pid=35080 tid=42060
+SYSTEM_STARTUP_BREAKPOINT pid=35080 address=0x7fffaf1e26c9
+FIXTURE_READY pid=35080 build=efcf0315de294b94522ee24cb8cfb13acc5efec40f37718df45898329a33a43d
+MITIGATION shadow_stack_flags=0x105
+MITIGATION dynamic_code_flags=0x0
+TASK_INIT role=source pid=35080 count=1
+TRAP_CONTEXT raw_rip=0x1b000000001 resume_rip=0x1b000000001
+CHECKPOINT role=source pid=35080 count=1
+TRAP_CONTEXT raw_rip=0x1b00000004b resume_rip=0x1b00000004b
+CAPTURE_REGION address=0x1b000000000 size=4096 protection=0x20 sha256=d23a77a111ac2e55c37a20c3ef437747005c45a18ae4cbc537cfd0bd9713a657
+CAPTURE_REGION address=0x1b000010000 size=4096 protection=0x4 sha256=07bc4f86b13fb6c83d78abe66d8aac8e506d954c8a8db6ee7a22ec64e4f774ff
+CAPTURE_REGION address=0x1b000020000 size=65536 protection=0x4 sha256=af9e5aca2c9afc6e6575498bb2b338230f0b209e23fcc10c16d8456c19143de7
+CAPTURE_CONTEXT rip=0x1b00000004b rsp=0x1b00002ff70 r15=0x36b356b1f6c8fe0b eflags=0x203
+PROCESS_TERMINATED_CONFIRMED pid=35080 exit_event=0xe0420000
+SOURCE_EXIT_CONFIRMED_BEFORE_RESTORE pid=35080
+PROCESS_CREATED pid=19908 tid=23644
+SYSTEM_STARTUP_BREAKPOINT pid=19908 address=0x7fffaf1e26c9
+FIXTURE_READY pid=19908 build=efcf0315de294b94522ee24cb8cfb13acc5efec40f37718df45898329a33a43d
+MITIGATION shadow_stack_flags=0x105
+MITIGATION dynamic_code_flags=0x0
+PROCESS_TERMINATED_CONFIRMED pid=19908 exit_event=0xe0420000
+EXPERIMENT_FAILED phase=restore_preflight api=validate_snapshot code=0x51a detail=BUILD_MISMATCH restore rejected before writes

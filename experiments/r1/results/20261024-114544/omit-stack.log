@@ -1,0 +1,29 @@
+CASE omit-stack timeout_ms=10000 pointer_bits=64
+FIXTURE_SHA256 62449eb53f8449e4baadda469a6eda3f7f16b96ff550b2dbf2827b1f399c77e8
+ORACLE seed=0xa89e3966e5dbe86b memory=0xd3b1558a826339cd stack=0xc6ba8cfce4a830a4 r15=0x86459014f8b7c994 expected=0x98d2c73f66678d3e
+PROCESS_CREATED pid=35624 tid=38992
+SYSTEM_STARTUP_BREAKPOINT pid=35624 address=0x7fffaf1e26c9
+FIXTURE_READY pid=35624 build=efcf0315de294b94522ee24cb8cfb13acc5efec40f37718df45898329a33a43d
+MITIGATION shadow_stack_flags=0x105
+MITIGATION dynamic_code_flags=0x0
+TASK_INIT role=source pid=35624 count=1
+TRAP_CONTEXT raw_rip=0x1b000000001 resume_rip=0x1b000000001
+CHECKPOINT role=source pid=35624 count=1
+TRAP_CONTEXT raw_rip=0x1b00000004b resume_rip=0x1b00000004b
+CAPTURE_REGION address=0x1b000000000 size=4096 protection=0x20 sha256=d23a77a111ac2e55c37a20c3ef437747005c45a18ae4cbc537cfd0bd9713a657
+CAPTURE_REGION address=0x1b000010000 size=4096 protection=0x4 sha256=7e2618919dad83747a78f2dfad444b3f9bea9eaafc348c64c76224e726276784
+CAPTURE_REGION address=0x1b000020000 size=65536 protection=0x4 sha256=30db1ac26b4c7ab150c144afdc7bfa2a8527b98ee0621ea9bd2d03093cbd2c26
+CAPTURE_CONTEXT rip=0x1b00000004b rsp=0x1b00002ff70 r15=0x86459014f8b7c994 eflags=0xa83
+PROCESS_TERMINATED_CONFIRMED pid=35624 exit_event=0xe0420000
+SOURCE_EXIT_CONFIRMED_BEFORE_RESTORE pid=35624
+PROCESS_CREATED pid=6396 tid=21964
+SYSTEM_STARTUP_BREAKPOINT pid=6396 address=0x7fffaf1e26c9
+FIXTURE_READY pid=6396 build=efcf0315de294b94522ee24cb8cfb13acc5efec40f37718df45898329a33a43d
+MITIGATION shadow_stack_flags=0x105
+MITIGATION dynamic_code_flags=0x0
+INJECTED_OMISSION region=0x1b000020000
+RESTORED_CONTEXT pid=6396 rip=0x1b00000004b rsp=0x1b00002ff70 r15=0x86459014f8b7c994 eflags=0xa81
+RESULT restore=1 pid=6396 actual=0xedcb3ef63606c4b3 expected=0x98d2c73f66678d3e observed_memory=0xd3b1558a826339cd observed_r15=0x86459014f8b7c994 observed_stack=0x0
+EVENT_COUNTS role=restore init=0 checkpoint=0 result=1
+PROCESS_TERMINATED_CONFIRMED pid=6396 exit_event=0xe0420000
+EXPERIMENT_FAILED phase=target_termination api=result_oracle code=0xd detail=RESULT_MISMATCH restored execution failed validation

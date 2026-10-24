@@ -1,0 +1,51 @@
+Microsoft (R) COFF/PE Dumper Version 14.44.35229.0
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+
+Dump of file experiments\r1\out\workload.obj
+
+File Type: COFF OBJECT
+
+FixtureReady:
+  0000000000000000: CC                 int         3
+  0000000000000001: 0F 0B              ud2
+WorkloadStart:
+  0000000000000003: CC                 int         3
+  0000000000000004: 4C 8B E2           mov         r12,rdx
+  0000000000000007: 48 8B C1           mov         rax,rcx
+  000000000000000A: 48 C1 C0 11        rol         rax,11h
+  000000000000000E: 49 BB F1 68 B4 52  mov         r11,0A17C9E3D52B468F1h
+                    3D 9E 7C A1
+  0000000000000018: 49 33 C3           xor         rax,r11
+  000000000000001B: 49 89 04 24        mov         qword ptr [r12],rax
+  000000000000001F: 48 81 EC 80 00 00  sub         rsp,80h
+                    00
+  0000000000000026: 48 B8 CF D8 73 01  mov         rax,6E24B59A0173D8CFh
+                    9A B5 24 6E
+  0000000000000030: 48 33 C1           xor         rax,rcx
+  0000000000000033: 48 89 44 24 20     mov         qword ptr [rsp+20h],rax
+  0000000000000038: 4C 8B F9           mov         r15,rcx
+  000000000000003B: 49 C1 C7 1F        rol         r15,1Fh
+  000000000000003F: 49 BB E1 AC 68 24  mov         r11,13579BDF2468ACE1h
+                    DF 9B 57 13
+  0000000000000049: 4D 03 FB           add         r15,r11
+  000000000000004C: F9                 stc
+WorkloadCheckpoint:
+  000000000000004D: CC                 int         3
+  000000000000004E: 49 8B 04 24        mov         rax,qword ptr [r12]
+  0000000000000052: 49 13 C7           adc         rax,r15
+  0000000000000055: 48 33 44 24 20     xor         rax,qword ptr [rsp+20h]
+  000000000000005A: 48 C1 C0 09        rol         rax,9
+  000000000000005E: 49 89 44 24 08     mov         qword ptr [r12+8],rax
+  0000000000000063: 4D 89 7C 24 10     mov         qword ptr [r12+10h],r15
+  0000000000000068: 48 8B 54 24 20     mov         rdx,qword ptr [rsp+20h]
+  000000000000006D: 49 89 54 24 18     mov         qword ptr [r12+18h],rdx
+WorkloadResult:
+  0000000000000072: CC                 int         3
+  0000000000000073: EB FE              jmp         0000000000000073
+
+  Summary
+
+           0 .data
+          7C .debug$S
+          75 .text$mn
