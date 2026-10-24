@@ -1,0 +1,85 @@
+CASE memory
+FIXTURE_SHA256 e734760d58e0e552a34ef3445c506948b703e7a172d905a3272b7ac72a214a2e
+PROCESS_CREATED role=source pid=20924 tid=40212
+SYSTEM_STARTUP_BREAKPOINT role=source pid=20924
+MITIGATION role=source shadow_stack_flags=0x105
+MITIGATION role=source dynamic_code_flags=0x0
+HALT role=source pid=20924 kind=1 init=0 checkpoint=0 results=0
+ORACLE seed=0x746e79d2ee836a00 baseline=0x52d9433b86b4802d receipt=0x70b0a41549b66f8e
+TASK_INIT role=source pid=20924
+HALT role=source pid=20924 kind=2 init=1 checkpoint=0 results=0
+CHECKPOINT role=source pid=20924
+HALT role=source pid=20924 kind=3 init=1 checkpoint=1 results=0
+CAPTURE_REGION address=0x1b000000000 size=4096 sha256=86b3e35b7c9d37720215fe955844211aefe7dfa6473737732fc7e0a9491e2c21
+CAPTURE_REGION address=0x1b000010000 size=4096 sha256=1b3f003b47ab20a64ebf57e50add932b439e0507c2af0eff15c3a7f0b75b4d09
+CAPTURE_REGION address=0x1b000020000 size=65536 sha256=2dd62d9a79725fa862e07322fc0f9cb4a87dc779041fc5bf02b2ffc07441ec95
+CAPTURE_CONTEXT rip=0x1b00000013e rsp=0x1b00002ff70 r15=0x8a9950df5e9fe9ca
+S0_FIXED sha256=2f45c873678ac0844beb5f8fa9d738a44c3380199ec2e90e9e3d7da09da69652
+PROCESS_TERMINATED_CONFIRMED role=source pid=20924 code=0xe0420000
+EVENT_COUNTS role=source init=1 checkpoint=1 results=0 services=0
+SOURCE_EXIT_CONFIRMED_BEFORE_RESTORE
+PROCESS_CREATED role=A pid=39788 tid=42812
+SYSTEM_STARTUP_BREAKPOINT role=A pid=39788
+MITIGATION role=A shadow_stack_flags=0x105
+MITIGATION role=A dynamic_code_flags=0x0
+HALT role=A pid=39788 kind=1 init=0 checkpoint=0 results=0
+RESTORED_CONTEXT role=A pid=39788 rip=0x1b00000013e rsp=0x1b00002ff70 r15=0x8a9950df5e9fe9ca
+HALT role=A pid=39788 kind=4 init=0 checkpoint=0 results=1
+MEMORY_VERIFIED role=A value=0x52d9433b86b4802d steps=0 alias1=0x1b000010000 alias2=0x1b000010000
+VIEW_PUBLISHED role=A pid=39788
+INPUT role=A op=1 arg=11 logical=0
+PROCESS_CREATED role=B pid=43444 tid=36300
+HALT role=A pid=39788 kind=4 init=0 checkpoint=0 results=2
+SYSTEM_STARTUP_BREAKPOINT role=B pid=43444
+MITIGATION role=B shadow_stack_flags=0x105
+MITIGATION role=B dynamic_code_flags=0x0
+HALT role=B pid=43444 kind=1 init=0 checkpoint=0 results=0
+RESTORED_CONTEXT role=B pid=43444 rip=0x1b00000013e rsp=0x1b00002ff70 r15=0x8a9950df5e9fe9ca
+HALT role=B pid=43444 kind=4 init=0 checkpoint=0 results=1
+MEMORY_VERIFIED role=B value=0x52d9433b86b4802d steps=0 alias1=0x1b000010000 alias2=0x1b000010000
+VIEW_PUBLISHED role=B pid=43444
+MEMORY_VERIFIED role=A value=0x52d9433b86b48038 steps=1 alias1=0x1b000010000 alias2=0x1b000010000
+MEMORY_VERIFIED role=B value=0x52d9433b86b4802d steps=0 alias1=0x1b000010000 alias2=0x1b000010000
+SIMULTANEOUSLY_ALIVE A=39788 B=43444
+INPUT role=B op=1 arg=101 logical=0
+HALT role=B pid=43444 kind=4 init=0 checkpoint=0 results=2
+MEMORY_VERIFIED role=A value=0x52d9433b86b48038 steps=1 alias1=0x1b000010000 alias2=0x1b000010000
+MEMORY_VERIFIED role=B value=0x52d9433b86b48092 steps=1 alias1=0x1b000010000 alias2=0x1b000010000
+INPUT role=A op=1 arg=7 logical=0
+INPUT role=B op=1 arg=17 logical=0
+HALT role=A pid=39788 kind=4 init=0 checkpoint=0 results=3
+HALT role=B pid=43444 kind=4 init=0 checkpoint=0 results=3
+MEMORY_VERIFIED role=A value=0x52d9433b86b4803f steps=2 alias1=0x1b000010000 alias2=0x1b000010000
+MEMORY_VERIFIED role=B value=0x52d9433b86b480a3 steps=2 alias1=0x1b000010000 alias2=0x1b000010000
+S0_UNCHANGED sha256=2f45c873678ac0844beb5f8fa9d738a44c3380199ec2e90e9e3d7da09da69652 file_graph=0020bd656ca1c80cc5854d42f68b0ba484c370f6c4757fcb0809168482318e6e
+PROCESS_CREATED role=C pid=40800 tid=33568
+SYSTEM_STARTUP_BREAKPOINT role=C pid=40800
+MITIGATION role=C shadow_stack_flags=0x105
+MITIGATION role=C dynamic_code_flags=0x0
+HALT role=C pid=40800 kind=1 init=0 checkpoint=0 results=0
+RESTORED_CONTEXT role=C pid=40800 rip=0x1b00000013e rsp=0x1b00002ff70 r15=0x8a9950df5e9fe9ca
+HALT role=C pid=40800 kind=4 init=0 checkpoint=0 results=1
+MEMORY_VERIFIED role=C value=0x52d9433b86b4802d steps=0 alias1=0x1b000010000 alias2=0x1b000010000
+VIEW_PUBLISHED role=C pid=40800
+SIMULTANEOUSLY_ALIVE A=39788 B=43444 C=40800
+MEMORY_VERIFIED role=A value=0x52d9433b86b4803f steps=2 alias1=0x1b000010000 alias2=0x1b000010000
+MEMORY_VERIFIED role=B value=0x52d9433b86b480a3 steps=2 alias1=0x1b000010000 alias2=0x1b000010000
+MEMORY_VERIFIED role=C value=0x52d9433b86b4802d steps=0 alias1=0x1b000010000 alias2=0x1b000010000
+INPUT role=A op=1 arg=1 logical=0
+INPUT role=B op=1 arg=2 logical=0
+INPUT role=C op=1 arg=3 logical=0
+HALT role=A pid=39788 kind=4 init=0 checkpoint=0 results=4
+HALT role=B pid=43444 kind=4 init=0 checkpoint=0 results=4
+HALT role=C pid=40800 kind=4 init=0 checkpoint=0 results=2
+MEMORY_VERIFIED role=A value=0x52d9433b86b48040 steps=3 alias1=0x1b000010000 alias2=0x1b000010000
+MEMORY_VERIFIED role=B value=0x52d9433b86b480a5 steps=3 alias1=0x1b000010000 alias2=0x1b000010000
+MEMORY_VERIFIED role=C value=0x52d9433b86b48030 steps=1 alias1=0x1b000010000 alias2=0x1b000010000
+S0_UNCHANGED sha256=2f45c873678ac0844beb5f8fa9d738a44c3380199ec2e90e9e3d7da09da69652 file_graph=0020bd656ca1c80cc5854d42f68b0ba484c370f6c4757fcb0809168482318e6e
+SIMULTANEOUSLY_ALIVE A=39788 B=43444 C=40800
+R2_001_MEMORY_PASS
+PROCESS_TERMINATED_CONFIRMED role=A pid=39788 code=0xe0420000
+EVENT_COUNTS role=A init=0 checkpoint=0 results=4 services=0
+PROCESS_TERMINATED_CONFIRMED role=C pid=40800 code=0xe0420000
+EVENT_COUNTS role=C init=0 checkpoint=0 results=2 services=0
+PROCESS_TERMINATED_CONFIRMED role=B pid=43444 code=0xe0420000
+EVENT_COUNTS role=B init=0 checkpoint=0 results=4 services=0

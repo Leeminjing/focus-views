@@ -2,7 +2,8 @@ param(
     [string]$MsvcRoot,
     [string]$SdkRoot,
     [string]$SdkVersion,
-    [string]$OutDir = (Join-Path $PSScriptRoot 'out')
+    [string]$OutDir = (Join-Path $PSScriptRoot 'out'),
+    [string]$SourceDir = $PSScriptRoot
 )
 $ErrorActionPreference = 'Stop'
 Set-StrictMode -Version Latest
@@ -36,9 +37,10 @@ foreach ($taskTool in @($taskCompiler, $taskAssembler)) {
 $OutDir = [IO.Path]::GetFullPath($OutDir)
 New-Item -ItemType Directory -Path $OutDir -Force | Out-Null
 
-$taskHashMaterial = @('snapshot.hpp','fixture.cpp','workload.asm','build.ps1') | ForEach-Object {
-    (Get-FileHash -LiteralPath (Join-Path $PSScriptRoot $_) -Algorithm SHA256).Hash
-}
+$SourceDir = (Resolve-Path -LiteralPath $SourceDir).Path
+$taskHashSources = @(Get-ChildItem -LiteralPath $SourceDir -File | Where-Object { $_.Extension -in '.cpp','.hpp','.asm','.ps1' } | Sort-Object Name)
+$taskHashSources += Get-Item (Join-Path $PSScriptRoot '../common/native.hpp'), $PSCommandPath
+$taskHashMaterial = $taskHashSources | ForEach-Object { (Get-FileHash -LiteralPath $_.FullName -Algorithm SHA256).Hash }
 $taskSha = [Security.Cryptography.SHA256]::Create()
 try {
     $taskBuildId = [BitConverter]::ToString($taskSha.ComputeHash([Text.Encoding]::UTF8.GetBytes(($taskHashMaterial -join '')))).Replace('-','').ToLowerInvariant()
@@ -60,12 +62,12 @@ try {
         buildId = $taskBuildId; architecture = 'x64'; runtime = 'static /MT'; systemSettingsChanged = $false
     }
     $taskMetadata | ConvertTo-Json | Set-Content -LiteralPath (Join-Path $OutDir 'build.json') -Encoding UTF8
-    & $taskAssembler /nologo /c "/Fo$(Join-Path $OutDir 'workload.obj')" (Join-Path $PSScriptRoot 'workload.asm')
+    & $taskAssembler /nologo /c "/Fo$(Join-Path $OutDir 'workload.obj')" (Join-Path $SourceDir 'workload.asm')
     if ($LASTEXITCODE -ne 0) { throw "ml64 failed: $LASTEXITCODE" }
     $taskCommon = @('/nologo','/std:c++20','/EHsc','/W4','/WX','/O2','/MT','/utf-8','/D_WIN32_WINNT=0x0A00',"/I$OutDir")
-    & $taskCompiler @taskCommon "/Fo$(Join-Path $OutDir 'fixture.obj')" "/Fe$(Join-Path $OutDir 'fixture.exe')" (Join-Path $PSScriptRoot 'fixture.cpp') (Join-Path $OutDir 'workload.obj') /link /INCREMENTAL:NO /DYNAMICBASE /NXCOMPAT /CETCOMPAT
+    & $taskCompiler @taskCommon "/Fo$(Join-Path $OutDir 'fixture.obj')" "/Fe$(Join-Path $OutDir 'fixture.exe')" (Join-Path $SourceDir 'fixture.cpp') (Join-Path $OutDir 'workload.obj') /link /INCREMENTAL:NO /DYNAMICBASE /NXCOMPAT /CETCOMPAT
     if ($LASTEXITCODE -ne 0) { throw "fixture build failed: $LASTEXITCODE" }
-    & $taskCompiler @taskCommon "/Fo$(Join-Path $OutDir 'controller.obj')" "/Fe$(Join-Path $OutDir 'controller.exe')" (Join-Path $PSScriptRoot 'controller.cpp') bcrypt.lib /link /INCREMENTAL:NO /DYNAMICBASE /NXCOMPAT /CETCOMPAT
+    & $taskCompiler @taskCommon "/Fo$(Join-Path $OutDir 'controller.obj')" "/Fe$(Join-Path $OutDir 'controller.exe')" (Join-Path $SourceDir 'controller.cpp') bcrypt.lib /link /INCREMENTAL:NO /DYNAMICBASE /NXCOMPAT /CETCOMPAT
     if ($LASTEXITCODE -ne 0) { throw "controller build failed: $LASTEXITCODE" }
     Write-Output "BUILD_OK out=$OutDir build=$taskBuildId"
 } finally {

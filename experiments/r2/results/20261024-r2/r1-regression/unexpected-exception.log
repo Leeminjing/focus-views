@@ -1,0 +1,7 @@
+CASE unexpected-exception timeout_ms=10000 pointer_bits=64
+FIXTURE_SHA256 9d0e90af7fbe901f394942326c2318ff47b69b85c8aaa13340eab8b3d5f0e13c
+ORACLE seed=0xbc59ba36f9aad7e1 memory=0xd5116d68fd771042 stack=0xd27d0facf8d90f2e r15=0x902d07d0029589fc expected=0x86f52bf1ab2a236e
+PROCESS_CREATED pid=22380 tid=17656
+SYSTEM_STARTUP_BREAKPOINT pid=22380 address=0x7fffaf1e26c9
+PROCESS_TERMINATED_CONFIRMED pid=22380 exit_event=0xe0420000
+EXPERIMENT_FAILED phase=source_ready api=debug_exception code=0xe0421001 detail=pid=22380 address=0x7fffac9c408a

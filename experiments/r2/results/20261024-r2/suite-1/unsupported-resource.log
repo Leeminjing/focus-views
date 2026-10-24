@@ -1,0 +1,100 @@
+CASE unsupported-resource
+FIXTURE_SHA256 003e6d9f30b515c6f16cde2b4272cbe353b2467c57c8f246a3609e9c4308c1e7
+PROCESS_CREATED role=source pid=44412 tid=19064
+SYSTEM_STARTUP_BREAKPOINT role=source pid=44412
+MITIGATION role=source shadow_stack_flags=0x105
+MITIGATION role=source dynamic_code_flags=0x0
+HALT role=source pid=44412 kind=1 init=0 checkpoint=0 results=0
+FILE_COPY role=source id=0 size=10 sha256=84d89877f0d4041efb6bf91a16f0248f2fd573e6af05c19f96bedb9f882f7882
+ORACLE seed=0xa930ea52158a5a54 baseline=0x75d8b529e61d3a90 receipt=0xc243f697cfbc00a9
+TASK_INIT role=source pid=44412
+HALT role=source pid=44412 kind=2 init=1 checkpoint=0 results=0
+FILE_SERVICE role=source op=10 logical=0 response=1 error=0
+FILE_SERVICE role=source op=14 logical=1 response=2 error=0
+FILE_SERVICE role=source op=13 logical=1 response=2 error=0
+FILE_SERVICE role=source op=10 logical=1 response=3 error=0
+FILE_SERVICE role=source op=13 logical=3 response=6 error=0
+CHECKPOINT role=source pid=44412
+HALT role=source pid=44412 kind=3 init=1 checkpoint=1 results=0
+CAPTURE_REGION address=0x1b000000000 size=4096 sha256=86b3e35b7c9d37720215fe955844211aefe7dfa6473737732fc7e0a9491e2c21
+CAPTURE_REGION address=0x1b000010000 size=4096 sha256=0da92934823ec12fb9ffec52055cf25d801f651d6ba6431f2552e7ed3f899509
+CAPTURE_REGION address=0x1b000020000 size=65536 sha256=369b02744a9dd02e01e3caddc08ed7e42f2768806aa18fe457a4be93cac826b5
+CAPTURE_CONTEXT rip=0x1b00000013e rsp=0x1b00002ff70 r15=0x1e1cc9097901220a
+FILE_SNAPSHOT files=1 instances=2 handles=3 sha256=1b5626aaca40ae3beaabee52a816665f173dda550a8d28171cc5de7965074c30
+OPEN_INSTANCE id=1 file=0 position=2
+OPEN_INSTANCE id=2 file=0 position=6
+HANDLE_RELATION logical=1 instance=1
+HANDLE_RELATION logical=2 instance=1
+HANDLE_RELATION logical=3 instance=2
+S0_FIXED sha256=609a52b537fa17715052ce47c2f234489693f5cf1f7ed0597460e1d4c76d0d20
+PROCESS_TERMINATED_CONFIRMED role=source pid=44412 code=0xe0420000
+EVENT_COUNTS role=source init=1 checkpoint=1 results=0 services=5
+SOURCE_EXIT_CONFIRMED_BEFORE_RESTORE
+PROCESS_CREATED role=A pid=3480 tid=19212
+SYSTEM_STARTUP_BREAKPOINT role=A pid=3480
+MITIGATION role=A shadow_stack_flags=0x105
+MITIGATION role=A dynamic_code_flags=0x0
+HALT role=A pid=3480 kind=1 init=0 checkpoint=0 results=0
+RESTORED_CONTEXT role=A pid=3480 rip=0x1b00000013e rsp=0x1b00002ff70 r15=0x1e1cc9097901220a
+FILE_COPY role=A id=0 size=10 sha256=84d89877f0d4041efb6bf91a16f0248f2fd573e6af05c19f96bedb9f882f7882
+FILE_GRAPH_RESTORED role=A instances=2 handles=3 fault=none
+HALT role=A pid=3480 kind=4 init=0 checkpoint=0 results=1
+MEMORY_VERIFIED role=A value=0x75d8b529e61d3a90 steps=0 alias1=0x1b000010000 alias2=0x1b000010000
+VIEW_PUBLISHED role=A pid=3480
+INPUT role=A op=1 arg=11 logical=0
+PROCESS_CREATED role=B pid=8552 tid=30656
+HALT role=A pid=3480 kind=4 init=0 checkpoint=0 results=2
+SYSTEM_STARTUP_BREAKPOINT role=B pid=8552
+MITIGATION role=B shadow_stack_flags=0x105
+MITIGATION role=B dynamic_code_flags=0x0
+HALT role=B pid=8552 kind=1 init=0 checkpoint=0 results=0
+RESTORED_CONTEXT role=B pid=8552 rip=0x1b00000013e rsp=0x1b00002ff70 r15=0x1e1cc9097901220a
+PROCESS_TERMINATED_CONFIRMED role=B pid=8552 code=0xe0420000
+EVENT_COUNTS role=B init=0 checkpoint=0 results=0 services=0
+FILE_ROLLBACK role=B handles=0 files=0
+VIEW_ROLLBACK role=B published=false alive=false
+CREATION_REJECTED phase=B/restore_files_preflight api=resource_policy code=0x32 detail=unsupported snapshot resource
+MEMORY_VERIFIED role=A value=0x75d8b529e61d3a9b steps=1 alias1=0x1b000010000 alias2=0x1b000010000
+INPUT role=A op=1 arg=7 logical=0
+HALT role=A pid=3480 kind=4 init=0 checkpoint=0 results=3
+MEMORY_VERIFIED role=A value=0x75d8b529e61d3aa2 steps=2 alias1=0x1b000010000 alias2=0x1b000010000
+S0_UNCHANGED sha256=609a52b537fa17715052ce47c2f234489693f5cf1f7ed0597460e1d4c76d0d20 file_graph=1b5626aaca40ae3beaabee52a816665f173dda550a8d28171cc5de7965074c30
+PROCESS_CREATED role=C pid=38024 tid=16824
+SYSTEM_STARTUP_BREAKPOINT role=C pid=38024
+MITIGATION role=C shadow_stack_flags=0x105
+MITIGATION role=C dynamic_code_flags=0x0
+HALT role=C pid=38024 kind=1 init=0 checkpoint=0 results=0
+RESTORED_CONTEXT role=C pid=38024 rip=0x1b00000013e rsp=0x1b00002ff70 r15=0x1e1cc9097901220a
+FILE_COPY role=C id=0 size=10 sha256=84d89877f0d4041efb6bf91a16f0248f2fd573e6af05c19f96bedb9f882f7882
+FILE_GRAPH_RESTORED role=C instances=2 handles=3 fault=none
+HALT role=C pid=38024 kind=4 init=0 checkpoint=0 results=1
+MEMORY_VERIFIED role=C value=0x75d8b529e61d3a90 steps=0 alias1=0x1b000010000 alias2=0x1b000010000
+VIEW_PUBLISHED role=C pid=38024
+SIMULTANEOUSLY_ALIVE A=3480 C=38024
+INPUT role=A op=1 arg=1 logical=0
+HALT role=A pid=3480 kind=4 init=0 checkpoint=0 results=4
+INPUT role=C op=1 arg=3 logical=0
+HALT role=C pid=38024 kind=4 init=0 checkpoint=0 results=2
+MEMORY_VERIFIED role=A value=0x75d8b529e61d3aa3 steps=3 alias1=0x1b000010000 alias2=0x1b000010000
+MEMORY_VERIFIED role=C value=0x75d8b529e61d3a93 steps=1 alias1=0x1b000010000 alias2=0x1b000010000
+INPUT role=A op=11 arg=0 logical=1
+FILE_SERVICE role=A op=11 logical=1 response=2 error=0
+HALT role=A pid=3480 kind=4 init=0 checkpoint=0 results=5
+INPUT role=A op=16 arg=0 logical=2
+FILE_SERVICE role=A op=16 logical=2 response=4 error=0
+HALT role=A pid=3480 kind=4 init=0 checkpoint=0 results=6
+INPUT role=C op=16 arg=0 logical=1
+FILE_SERVICE role=C op=16 logical=1 response=2 error=0
+HALT role=C pid=38024 kind=4 init=0 checkpoint=0 results=3
+S0_UNCHANGED sha256=609a52b537fa17715052ce47c2f234489693f5cf1f7ed0597460e1d4c76d0d20 file_graph=1b5626aaca40ae3beaabee52a816665f173dda550a8d28171cc5de7965074c30
+SIMULTANEOUSLY_ALIVE A=3480 C=38024
+NO_HALF_PUBLISHED_B A_CONTINUES C_FROM_S0
+PROCESS_TERMINATED_CONFIRMED role=A pid=3480 code=0xe0420000
+EVENT_COUNTS role=A init=0 checkpoint=0 results=6 services=2
+PROCESS_TERMINATED_CONFIRMED role=C pid=38024 code=0xe0420000
+EVENT_COUNTS role=C init=0 checkpoint=0 results=3 services=1
+FILE_HANDLES_CLOSED role=source count=0
+FILE_HANDLES_CLOSED role=A count=0
+FILE_HANDLES_CLOSED role=B count=0
+FILE_HANDLES_CLOSED role=C count=0
+REJECTION_PATH_VERIFIED case=unsupported-resource

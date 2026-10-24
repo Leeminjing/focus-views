@@ -1,0 +1,167 @@
+Microsoft (R) COFF/PE Dumper Version 14.44.35229.0
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+
+Dump of file experiments\r2\out\workload.obj
+
+File Type: COFF OBJECT
+
+FixtureReady:
+  0000000000000000: CC                 int         3
+  0000000000000001: 0F 0B              ud2
+WorkloadStart:
+  0000000000000003: CC                 int         3
+  0000000000000004: 4C 8B E2           mov         r12,rdx
+  0000000000000007: 4D 8B E8           mov         r13,r8
+  000000000000000A: 48 8B C1           mov         rax,rcx
+  000000000000000D: 48 C1 C0 11        rol         rax,11h
+  0000000000000011: 49 BB F1 68 B4 52  mov         r11,0A17C9E3D52B468F1h
+                    3D 9E 7C A1
+  000000000000001B: 49 33 C3           xor         rax,r11
+  000000000000001E: 49 89 04 24        mov         qword ptr [r12],rax
+  0000000000000022: 4D 89 64 24 08     mov         qword ptr [r12+8],r12
+  0000000000000027: 4D 89 64 24 10     mov         qword ptr [r12+10h],r12
+  000000000000002C: 48 81 EC 80 00 00  sub         rsp,80h
+                    00
+  0000000000000033: 48 B8 CF D8 73 01  mov         rax,6E24B59A0173D8CFh
+                    9A B5 24 6E
+  000000000000003D: 48 33 C1           xor         rax,rcx
+  0000000000000040: 48 89 44 24 20     mov         qword ptr [rsp+20h],rax
+  0000000000000045: 4C 8B F9           mov         r15,rcx
+  0000000000000048: 49 C1 C7 1F        rol         r15,1Fh
+  000000000000004C: 49 BB E1 AC 68 24  mov         r11,13579BDF2468ACE1h
+                    DF 9B 57 13
+  0000000000000056: 4D 03 FB           add         r15,r11
+  0000000000000059: 49 83 FD 00        cmp         r13,0
+  000000000000005D: 0F 84 DC 00 00 00  je          BeforeCheckpoint
+  0000000000000063: 49 C7 84 24 00 01  mov         qword ptr [r12+100h],0Ah
+                    00 00 0A 00 00 00
+  000000000000006F: 4C 8D 35 00 00 00  lea         r14,[AfterOpen1]
+                    00
+  0000000000000076: E9 DC 01 00 00     jmp         WorkloadService
+AfterOpen1:
+  000000000000007B: 49 8B 84 24 30 01  mov         rax,qword ptr [r12+130h]
+                    00 00
+  0000000000000083: 49 89 84 24 90 00  mov         qword ptr [r12+90h],rax
+                    00 00
+  000000000000008B: 49 89 84 24 08 01  mov         qword ptr [r12+108h],rax
+                    00 00
+  0000000000000093: 49 C7 84 24 00 01  mov         qword ptr [r12+100h],0Eh
+                    00 00 0E 00 00 00
+  000000000000009F: 4C 8D 35 00 00 00  lea         r14,[AfterDuplicate]
+                    00
+  00000000000000A6: E9 AC 01 00 00     jmp         WorkloadService
+AfterDuplicate:
+  00000000000000AB: 49 8B 84 24 30 01  mov         rax,qword ptr [r12+130h]
+                    00 00
+  00000000000000B3: 49 89 84 24 98 00  mov         qword ptr [r12+98h],rax
+                    00 00
+  00000000000000BB: 49 C7 84 24 00 01  mov         qword ptr [r12+100h],0Dh
+                    00 00 0D 00 00 00
+  00000000000000C7: 49 C7 84 24 10 01  mov         qword ptr [r12+110h],2
+                    00 00 02 00 00 00
+  00000000000000D3: 4C 8D 35 00 00 00  lea         r14,[AfterSeek1]
+                    00
+  00000000000000DA: E9 78 01 00 00     jmp         WorkloadService
+AfterSeek1:
+  00000000000000DF: 49 C7 84 24 00 01  mov         qword ptr [r12+100h],0Ah
+                    00 00 0A 00 00 00
+  00000000000000EB: 49 C7 84 24 10 01  mov         qword ptr [r12+110h],0
+                    00 00 00 00 00 00
+  00000000000000F7: 4C 8D 35 00 00 00  lea         r14,[AfterOpen2]
+                    00
+  00000000000000FE: E9 54 01 00 00     jmp         WorkloadService
+AfterOpen2:
+  0000000000000103: 49 8B 84 24 30 01  mov         rax,qword ptr [r12+130h]
+                    00 00
+  000000000000010B: 49 89 84 24 A0 00  mov         qword ptr [r12+0A0h],rax
+                    00 00
+  0000000000000113: 49 89 84 24 08 01  mov         qword ptr [r12+108h],rax
+                    00 00
+  000000000000011B: 49 C7 84 24 00 01  mov         qword ptr [r12+100h],0Dh
+                    00 00 0D 00 00 00
+  0000000000000127: 49 C7 84 24 10 01  mov         qword ptr [r12+110h],6
+                    00 00 06 00 00 00
+  0000000000000133: 4C 8D 35 00 00 00  lea         r14,[BeforeCheckpoint]
+                    00
+  000000000000013A: E9 18 01 00 00     jmp         WorkloadService
+BeforeCheckpoint:
+  000000000000013F: F9                 stc
+WorkloadCheckpoint:
+  0000000000000140: CC                 int         3
+  0000000000000141: 49 8B 04 24        mov         rax,qword ptr [r12]
+  0000000000000145: 49 13 C7           adc         rax,r15
+  0000000000000148: 48 33 44 24 20     xor         rax,qword ptr [rsp+20h]
+  000000000000014D: 48 C1 C0 09        rol         rax,9
+  0000000000000151: 49 89 44 24 20     mov         qword ptr [r12+20h],rax
+  0000000000000156: 49 8B 04 24        mov         rax,qword ptr [r12]
+  000000000000015A: 49 89 44 24 60     mov         qword ptr [r12+60h],rax
+  000000000000015F: 48 8B 44 24 20     mov         rax,qword ptr [rsp+20h]
+  0000000000000164: 49 89 44 24 68     mov         qword ptr [r12+68h],rax
+  0000000000000169: 4D 89 7C 24 70     mov         qword ptr [r12+70h],r15
+WorkloadResult:
+  000000000000016E: CC                 int         3
+  000000000000016F: 49 83 7C 24 28 01  cmp         qword ptr [r12+28h],1
+  0000000000000175: 75 31              jne         00000000000001A8
+  0000000000000177: 4D 8B 54 24 08     mov         r10,qword ptr [r12+8]
+  000000000000017C: 49 8B 44 24 30     mov         rax,qword ptr [r12+30h]
+  0000000000000181: 49 01 02           add         qword ptr [r10],rax
+  0000000000000184: 4D 8B 54 24 10     mov         r10,qword ptr [r12+10h]
+  0000000000000189: 49 8B 02           mov         rax,qword ptr [r10]
+  000000000000018C: 49 89 44 24 60     mov         qword ptr [r12+60h],rax
+  0000000000000191: 49 FF 44 24 18     inc         qword ptr [r12+18h]
+  0000000000000196: 49 33 C7           xor         rax,r15
+  0000000000000199: 48 33 44 24 20     xor         rax,qword ptr [rsp+20h]
+  000000000000019E: 49 89 44 24 20     mov         qword ptr [r12+20h],rax
+  00000000000001A3: E9 C6 FF FF FF     jmp         WorkloadResult
+  00000000000001A8: 49 8B 44 24 28     mov         rax,qword ptr [r12+28h]
+  00000000000001AD: 49 89 84 24 00 01  mov         qword ptr [r12+100h],rax
+                    00 00
+  00000000000001B5: 49 8B 44 24 38     mov         rax,qword ptr [r12+38h]
+  00000000000001BA: 49 89 84 24 08 01  mov         qword ptr [r12+108h],rax
+                    00 00
+  00000000000001C2: 49 8B 44 24 30     mov         rax,qword ptr [r12+30h]
+  00000000000001C7: 49 89 84 24 10 01  mov         qword ptr [r12+110h],rax
+                    00 00
+  00000000000001CF: 49 8B 44 24 40     mov         rax,qword ptr [r12+40h]
+  00000000000001D4: 49 89 84 24 18 01  mov         qword ptr [r12+118h],rax
+                    00 00
+  00000000000001DC: 49 8B 44 24 48     mov         rax,qword ptr [r12+48h]
+  00000000000001E1: 49 89 84 24 20 01  mov         qword ptr [r12+120h],rax
+                    00 00
+  00000000000001E9: 49 8B 44 24 50     mov         rax,qword ptr [r12+50h]
+  00000000000001EE: 49 89 84 24 28 01  mov         qword ptr [r12+128h],rax
+                    00 00
+  00000000000001F6: 4C 8D 35 00 00 00  lea         r14,[AfterRequest]
+                    00
+  00000000000001FD: E9 55 00 00 00     jmp         WorkloadService
+AfterRequest:
+  0000000000000202: 49 8B 84 24 30 01  mov         rax,qword ptr [r12+130h]
+                    00 00
+  000000000000020A: 49 89 44 24 58     mov         qword ptr [r12+58h],rax
+  000000000000020F: 49 33 04 24        xor         rax,qword ptr [r12]
+  0000000000000213: 49 33 C7           xor         rax,r15
+  0000000000000216: 48 33 44 24 20     xor         rax,qword ptr [rsp+20h]
+  000000000000021B: 49 89 44 24 20     mov         qword ptr [r12+20h],rax
+  0000000000000220: 49 8B 84 24 38 01  mov         rax,qword ptr [r12+138h]
+                    00 00
+  0000000000000228: 49 89 84 24 88 00  mov         qword ptr [r12+88h],rax
+                    00 00
+  0000000000000230: 49 8B 84 24 20 01  mov         rax,qword ptr [r12+120h]
+                    00 00
+  0000000000000238: 49 89 44 24 78     mov         qword ptr [r12+78h],rax
+  000000000000023D: 49 8B 84 24 28 01  mov         rax,qword ptr [r12+128h]
+                    00 00
+  0000000000000245: 49 89 84 24 80 00  mov         qword ptr [r12+80h],rax
+                    00 00
+  000000000000024D: 49 FF 44 24 18     inc         qword ptr [r12+18h]
+  0000000000000252: E9 17 FF FF FF     jmp         WorkloadResult
+WorkloadService:
+  0000000000000257: CC                 int         3
+  0000000000000258: 41 FF E6           jmp         r14
+
+  Summary
+
+           0 .data
+          7C .debug$S
+         25B .text$mn

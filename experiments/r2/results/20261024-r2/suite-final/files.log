@@ -1,0 +1,215 @@
+CASE files
+FIXTURE_SHA256 e734760d58e0e552a34ef3445c506948b703e7a172d905a3272b7ac72a214a2e
+PROCESS_CREATED role=source pid=13788 tid=25688
+SYSTEM_STARTUP_BREAKPOINT role=source pid=13788
+MITIGATION role=source shadow_stack_flags=0x105
+MITIGATION role=source dynamic_code_flags=0x0
+HALT role=source pid=13788 kind=1 init=0 checkpoint=0 results=0
+FILE_COPY role=source id=0 size=10 sha256=84d89877f0d4041efb6bf91a16f0248f2fd573e6af05c19f96bedb9f882f7882
+ORACLE seed=0xe2a5025b32593abd baseline=0xa5cafa8f27cfadbb receipt=0x9d08181d407371bd
+TASK_INIT role=source pid=13788
+HALT role=source pid=13788 kind=2 init=1 checkpoint=0 results=0
+FILE_SERVICE role=source op=10 logical=0 response=1 error=0
+FILE_SERVICE role=source op=14 logical=1 response=2 error=0
+FILE_SERVICE role=source op=13 logical=1 response=2 error=0
+FILE_SERVICE role=source op=10 logical=1 response=3 error=0
+FILE_SERVICE role=source op=13 logical=3 response=6 error=0
+CHECKPOINT role=source pid=13788
+HALT role=source pid=13788 kind=3 init=1 checkpoint=1 results=0
+CAPTURE_REGION address=0x1b000000000 size=4096 sha256=86b3e35b7c9d37720215fe955844211aefe7dfa6473737732fc7e0a9491e2c21
+CAPTURE_REGION address=0x1b000010000 size=4096 sha256=22964e5a8f5f10f339b42488d95f2f29a61a85ed3c64d2ca935253cdeea2c03a
+CAPTURE_REGION address=0x1b000020000 size=65536 sha256=06ce4a44a12648cf025e4150d025df03281724e88ac36da11ba5824c2afb4d97
+CAPTURE_CONTEXT rip=0x1b00000013e rsp=0x1b00002ff70 r15=0xac84393e15bb2e0e
+FILE_SNAPSHOT files=1 instances=2 handles=3 sha256=1b5626aaca40ae3beaabee52a816665f173dda550a8d28171cc5de7965074c30
+OPEN_INSTANCE id=1 file=0 position=2
+OPEN_INSTANCE id=2 file=0 position=6
+HANDLE_RELATION logical=1 instance=1
+HANDLE_RELATION logical=2 instance=1
+HANDLE_RELATION logical=3 instance=2
+S0_FIXED sha256=a56a83363240aeabf40b4c2e2da05efa4af995ac18291dfd5f671c05dcc4e1e3
+PROCESS_TERMINATED_CONFIRMED role=source pid=13788 code=0xe0420000
+EVENT_COUNTS role=source init=1 checkpoint=1 results=0 services=5
+SOURCE_EXIT_CONFIRMED_BEFORE_RESTORE
+PROCESS_CREATED role=A pid=33476 tid=43584
+SYSTEM_STARTUP_BREAKPOINT role=A pid=33476
+MITIGATION role=A shadow_stack_flags=0x105
+MITIGATION role=A dynamic_code_flags=0x0
+HALT role=A pid=33476 kind=1 init=0 checkpoint=0 results=0
+RESTORED_CONTEXT role=A pid=33476 rip=0x1b00000013e rsp=0x1b00002ff70 r15=0xac84393e15bb2e0e
+FILE_COPY role=A id=0 size=10 sha256=84d89877f0d4041efb6bf91a16f0248f2fd573e6af05c19f96bedb9f882f7882
+FILE_GRAPH_RESTORED role=A instances=2 handles=3 fault=none
+HALT role=A pid=33476 kind=4 init=0 checkpoint=0 results=1
+MEMORY_VERIFIED role=A value=0xa5cafa8f27cfadbb steps=0 alias1=0x1b000010000 alias2=0x1b000010000
+VIEW_PUBLISHED role=A pid=33476
+INPUT role=A op=1 arg=11 logical=0
+PROCESS_CREATED role=B pid=15264 tid=44584
+HALT role=A pid=33476 kind=4 init=0 checkpoint=0 results=2
+SYSTEM_STARTUP_BREAKPOINT role=B pid=15264
+MITIGATION role=B shadow_stack_flags=0x105
+MITIGATION role=B dynamic_code_flags=0x0
+HALT role=B pid=15264 kind=1 init=0 checkpoint=0 results=0
+RESTORED_CONTEXT role=B pid=15264 rip=0x1b00000013e rsp=0x1b00002ff70 r15=0xac84393e15bb2e0e
+FILE_COPY role=B id=0 size=10 sha256=84d89877f0d4041efb6bf91a16f0248f2fd573e6af05c19f96bedb9f882f7882
+FILE_GRAPH_RESTORED role=B instances=2 handles=3 fault=none
+HALT role=B pid=15264 kind=4 init=0 checkpoint=0 results=1
+MEMORY_VERIFIED role=B value=0xa5cafa8f27cfadbb steps=0 alias1=0x1b000010000 alias2=0x1b000010000
+VIEW_PUBLISHED role=B pid=15264
+MEMORY_VERIFIED role=A value=0xa5cafa8f27cfadc6 steps=1 alias1=0x1b000010000 alias2=0x1b000010000
+MEMORY_VERIFIED role=B value=0xa5cafa8f27cfadbb steps=0 alias1=0x1b000010000 alias2=0x1b000010000
+SIMULTANEOUSLY_ALIVE A=33476 B=15264
+INPUT role=B op=1 arg=101 logical=0
+HALT role=B pid=15264 kind=4 init=0 checkpoint=0 results=2
+MEMORY_VERIFIED role=A value=0xa5cafa8f27cfadc6 steps=1 alias1=0x1b000010000 alias2=0x1b000010000
+MEMORY_VERIFIED role=B value=0xa5cafa8f27cfae20 steps=1 alias1=0x1b000010000 alias2=0x1b000010000
+INPUT role=A op=1 arg=7 logical=0
+INPUT role=B op=1 arg=17 logical=0
+HALT role=A pid=33476 kind=4 init=0 checkpoint=0 results=3
+HALT role=B pid=15264 kind=4 init=0 checkpoint=0 results=3
+MEMORY_VERIFIED role=A value=0xa5cafa8f27cfadcd steps=2 alias1=0x1b000010000 alias2=0x1b000010000
+MEMORY_VERIFIED role=B value=0xa5cafa8f27cfae31 steps=2 alias1=0x1b000010000 alias2=0x1b000010000
+INPUT role=A op=16 arg=0 logical=1
+FILE_SERVICE role=A op=16 logical=1 response=2 error=0
+HALT role=A pid=33476 kind=4 init=0 checkpoint=0 results=4
+POSITION role=A logical=1 actual=2 expected=2
+INPUT role=A op=16 arg=0 logical=2
+FILE_SERVICE role=A op=16 logical=2 response=2 error=0
+HALT role=A pid=33476 kind=4 init=0 checkpoint=0 results=5
+POSITION role=A logical=2 actual=2 expected=2
+INPUT role=A op=16 arg=0 logical=3
+FILE_SERVICE role=A op=16 logical=3 response=6 error=0
+HALT role=A pid=33476 kind=4 init=0 checkpoint=0 results=6
+POSITION role=A logical=3 actual=6 expected=6
+INPUT role=B op=16 arg=0 logical=1
+FILE_SERVICE role=B op=16 logical=1 response=2 error=0
+HALT role=B pid=15264 kind=4 init=0 checkpoint=0 results=4
+POSITION role=B logical=1 actual=2 expected=2
+INPUT role=B op=16 arg=0 logical=2
+FILE_SERVICE role=B op=16 logical=2 response=2 error=0
+HALT role=B pid=15264 kind=4 init=0 checkpoint=0 results=5
+POSITION role=B logical=2 actual=2 expected=2
+INPUT role=B op=16 arg=0 logical=3
+FILE_SERVICE role=B op=16 logical=3 response=6 error=0
+HALT role=B pid=15264 kind=4 init=0 checkpoint=0 results=6
+POSITION role=B logical=3 actual=6 expected=6
+INPUT role=A op=11 arg=0 logical=1
+FILE_SERVICE role=A op=11 logical=1 response=2 error=0
+HALT role=A pid=33476 kind=4 init=0 checkpoint=0 results=7
+READ_VERIFIED role=A bytes=23
+INPUT role=A op=16 arg=0 logical=2
+FILE_SERVICE role=A op=16 logical=2 response=4 error=0
+HALT role=A pid=33476 kind=4 init=0 checkpoint=0 results=8
+POSITION role=A logical=2 actual=4 expected=4
+INPUT role=A op=16 arg=0 logical=3
+FILE_SERVICE role=A op=16 logical=3 response=6 error=0
+HALT role=A pid=33476 kind=4 init=0 checkpoint=0 results=9
+POSITION role=A logical=3 actual=6 expected=6
+INPUT role=B op=16 arg=0 logical=2
+FILE_SERVICE role=B op=16 logical=2 response=2 error=0
+HALT role=B pid=15264 kind=4 init=0 checkpoint=0 results=7
+POSITION role=B logical=2 actual=2 expected=2
+INPUT role=A op=12 arg=0 logical=2
+FILE_SERVICE role=A op=12 logical=2 response=2 error=0
+HALT role=A pid=33476 kind=4 init=0 checkpoint=0 results=10
+CONTENT_VERIFIED role=A bytes=0123AA6789
+CONTENT_VERIFIED role=B bytes=0123456789
+INPUT role=B op=13 arg=7 logical=2
+FILE_SERVICE role=B op=13 logical=2 response=7 error=0
+HALT role=B pid=15264 kind=4 init=0 checkpoint=0 results=8
+INPUT role=B op=12 arg=0 logical=2
+FILE_SERVICE role=B op=12 logical=2 response=2 error=0
+HALT role=B pid=15264 kind=4 init=0 checkpoint=0 results=9
+CONTENT_VERIFIED role=A bytes=0123AA6789
+CONTENT_VERIFIED role=B bytes=0123456BB9
+INPUT role=A op=16 arg=0 logical=2
+FILE_SERVICE role=A op=16 logical=2 response=6 error=0
+HALT role=A pid=33476 kind=4 init=0 checkpoint=0 results=11
+POSITION role=A logical=2 actual=6 expected=6
+INPUT role=B op=16 arg=0 logical=1
+FILE_SERVICE role=B op=16 logical=1 response=9 error=0
+HALT role=B pid=15264 kind=4 init=0 checkpoint=0 results=10
+POSITION role=B logical=1 actual=9 expected=9
+INPUT role=A op=15 arg=0 logical=1
+FILE_SERVICE role=A op=15 logical=1 response=0 error=0
+HALT role=A pid=33476 kind=4 init=0 checkpoint=0 results=12
+INPUT role=A op=11 arg=0 logical=2
+FILE_SERVICE role=A op=11 logical=2 response=1 error=0
+HALT role=A pid=33476 kind=4 init=0 checkpoint=0 results=13
+READ_VERIFIED role=A bytes=6
+INPUT role=B op=16 arg=0 logical=2
+FILE_SERVICE role=B op=16 logical=2 response=9 error=0
+HALT role=B pid=15264 kind=4 init=0 checkpoint=0 results=11
+POSITION role=B logical=2 actual=9 expected=9
+DISTINCT_NATIVE_FILES A=0x20000000020e0 B=0x20000000020e2
+S0_UNCHANGED sha256=a56a83363240aeabf40b4c2e2da05efa4af995ac18291dfd5f671c05dcc4e1e3 file_graph=1b5626aaca40ae3beaabee52a816665f173dda550a8d28171cc5de7965074c30
+PROCESS_CREATED role=C pid=31472 tid=21528
+SYSTEM_STARTUP_BREAKPOINT role=C pid=31472
+MITIGATION role=C shadow_stack_flags=0x105
+MITIGATION role=C dynamic_code_flags=0x0
+HALT role=C pid=31472 kind=1 init=0 checkpoint=0 results=0
+RESTORED_CONTEXT role=C pid=31472 rip=0x1b00000013e rsp=0x1b00002ff70 r15=0xac84393e15bb2e0e
+FILE_COPY role=C id=0 size=10 sha256=84d89877f0d4041efb6bf91a16f0248f2fd573e6af05c19f96bedb9f882f7882
+FILE_GRAPH_RESTORED role=C instances=2 handles=3 fault=none
+HALT role=C pid=31472 kind=4 init=0 checkpoint=0 results=1
+MEMORY_VERIFIED role=C value=0xa5cafa8f27cfadbb steps=0 alias1=0x1b000010000 alias2=0x1b000010000
+VIEW_PUBLISHED role=C pid=31472
+SIMULTANEOUSLY_ALIVE A=33476 B=15264 C=31472
+MEMORY_VERIFIED role=A value=0xa5cafa8f27cfadcd steps=12 alias1=0x1b000010000 alias2=0x1b000010000
+MEMORY_VERIFIED role=B value=0xa5cafa8f27cfae31 steps=10 alias1=0x1b000010000 alias2=0x1b000010000
+MEMORY_VERIFIED role=C value=0xa5cafa8f27cfadbb steps=0 alias1=0x1b000010000 alias2=0x1b000010000
+CONTENT_VERIFIED role=C bytes=0123456789
+INPUT role=C op=16 arg=0 logical=1
+FILE_SERVICE role=C op=16 logical=1 response=2 error=0
+HALT role=C pid=31472 kind=4 init=0 checkpoint=0 results=2
+POSITION role=C logical=1 actual=2 expected=2
+INPUT role=C op=16 arg=0 logical=2
+FILE_SERVICE role=C op=16 logical=2 response=2 error=0
+HALT role=C pid=31472 kind=4 init=0 checkpoint=0 results=3
+POSITION role=C logical=2 actual=2 expected=2
+INPUT role=C op=16 arg=0 logical=3
+FILE_SERVICE role=C op=16 logical=3 response=6 error=0
+HALT role=C pid=31472 kind=4 init=0 checkpoint=0 results=4
+POSITION role=C logical=3 actual=6 expected=6
+INPUT role=C op=11 arg=0 logical=1
+FILE_SERVICE role=C op=11 logical=1 response=2 error=0
+HALT role=C pid=31472 kind=4 init=0 checkpoint=0 results=5
+READ_VERIFIED role=C bytes=23
+INPUT role=C op=16 arg=0 logical=2
+FILE_SERVICE role=C op=16 logical=2 response=4 error=0
+HALT role=C pid=31472 kind=4 init=0 checkpoint=0 results=6
+POSITION role=C logical=2 actual=4 expected=4
+INPUT role=C op=12 arg=0 logical=2
+FILE_SERVICE role=C op=12 logical=2 response=2 error=0
+HALT role=C pid=31472 kind=4 init=0 checkpoint=0 results=7
+CONTENT_VERIFIED role=C bytes=0123CC6789
+CONTENT_VERIFIED role=A bytes=0123AA6789
+CONTENT_VERIFIED role=B bytes=0123456BB9
+INPUT role=A op=16 arg=0 logical=2
+FILE_SERVICE role=A op=16 logical=2 response=7 error=0
+HALT role=A pid=33476 kind=4 init=0 checkpoint=0 results=14
+POSITION role=A logical=2 actual=7 expected=7
+INPUT role=B op=16 arg=0 logical=2
+FILE_SERVICE role=B op=16 logical=2 response=9 error=0
+HALT role=B pid=15264 kind=4 init=0 checkpoint=0 results=12
+POSITION role=B logical=2 actual=9 expected=9
+INPUT role=A op=1 arg=1 logical=0
+INPUT role=B op=1 arg=2 logical=0
+INPUT role=C op=1 arg=3 logical=0
+HALT role=A pid=33476 kind=4 init=0 checkpoint=0 results=15
+HALT role=B pid=15264 kind=4 init=0 checkpoint=0 results=13
+HALT role=C pid=31472 kind=4 init=0 checkpoint=0 results=8
+MEMORY_VERIFIED role=A value=0xa5cafa8f27cfadce steps=14 alias1=0x1b000010000 alias2=0x1b000010000
+MEMORY_VERIFIED role=B value=0xa5cafa8f27cfae33 steps=12 alias1=0x1b000010000 alias2=0x1b000010000
+MEMORY_VERIFIED role=C value=0xa5cafa8f27cfadbe steps=7 alias1=0x1b000010000 alias2=0x1b000010000
+S0_UNCHANGED sha256=a56a83363240aeabf40b4c2e2da05efa4af995ac18291dfd5f671c05dcc4e1e3 file_graph=1b5626aaca40ae3beaabee52a816665f173dda550a8d28171cc5de7965074c30
+SIMULTANEOUSLY_ALIVE A=33476 B=15264 C=31472
+R2_002_FILE_PASS
+PROCESS_TERMINATED_CONFIRMED role=B pid=15264 code=0xe0420000
+EVENT_COUNTS role=B init=0 checkpoint=0 results=13 services=9
+PROCESS_TERMINATED_CONFIRMED role=C pid=31472 code=0xe0420000
+EVENT_COUNTS role=C init=0 checkpoint=0 results=8 services=6
+PROCESS_TERMINATED_CONFIRMED role=A pid=33476 code=0xe0420000
+EVENT_COUNTS role=A init=0 checkpoint=0 results=15 services=11
+FILE_HANDLES_CLOSED role=source count=0
+FILE_HANDLES_CLOSED role=A count=0
+FILE_HANDLES_CLOSED role=B count=0
+FILE_HANDLES_CLOSED role=C count=0

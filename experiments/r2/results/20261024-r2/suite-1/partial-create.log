@@ -1,0 +1,102 @@
+CASE partial-create
+FIXTURE_SHA256 003e6d9f30b515c6f16cde2b4272cbe353b2467c57c8f246a3609e9c4308c1e7
+PROCESS_CREATED role=source pid=32944 tid=3388
+SYSTEM_STARTUP_BREAKPOINT role=source pid=32944
+MITIGATION role=source shadow_stack_flags=0x105
+MITIGATION role=source dynamic_code_flags=0x0
+HALT role=source pid=32944 kind=1 init=0 checkpoint=0 results=0
+FILE_COPY role=source id=0 size=10 sha256=84d89877f0d4041efb6bf91a16f0248f2fd573e6af05c19f96bedb9f882f7882
+ORACLE seed=0x1f91878254e81de baseline=0x918cd4a051086b03 receipt=0xac3918a4a1fa61b0
+TASK_INIT role=source pid=32944
+HALT role=source pid=32944 kind=2 init=1 checkpoint=0 results=0
+FILE_SERVICE role=source op=10 logical=0 response=1 error=0
+FILE_SERVICE role=source op=14 logical=1 response=2 error=0
+FILE_SERVICE role=source op=13 logical=1 response=2 error=0
+FILE_SERVICE role=source op=10 logical=1 response=3 error=0
+FILE_SERVICE role=source op=13 logical=3 response=6 error=0
+CHECKPOINT role=source pid=32944
+HALT role=source pid=32944 kind=3 init=1 checkpoint=1 results=0
+CAPTURE_REGION address=0x1b000000000 size=4096 sha256=86b3e35b7c9d37720215fe955844211aefe7dfa6473737732fc7e0a9491e2c21
+CAPTURE_REGION address=0x1b000010000 size=4096 sha256=eb1ea86246844e490aa90fdb9ba90d00f39a9da2364da948cc6aefdd554cca7a
+CAPTURE_REGION address=0x1b000020000 size=65536 sha256=043bf947726b25f7f227dc3042f26d0a1a325507a2c7c9ffd3cb98b23e6c1038
+CAPTURE_CONTEXT rip=0x1b00000013e rsp=0x1b00002ff70 r15=0x25fedcce2565391d
+FILE_SNAPSHOT files=1 instances=2 handles=3 sha256=1b5626aaca40ae3beaabee52a816665f173dda550a8d28171cc5de7965074c30
+OPEN_INSTANCE id=1 file=0 position=2
+OPEN_INSTANCE id=2 file=0 position=6
+HANDLE_RELATION logical=1 instance=1
+HANDLE_RELATION logical=2 instance=1
+HANDLE_RELATION logical=3 instance=2
+S0_FIXED sha256=738af7e19ae2ad42c68dc15203c1440e5748554fe2d96516d669163f9e8ece09
+PROCESS_TERMINATED_CONFIRMED role=source pid=32944 code=0xe0420000
+EVENT_COUNTS role=source init=1 checkpoint=1 results=0 services=5
+SOURCE_EXIT_CONFIRMED_BEFORE_RESTORE
+PROCESS_CREATED role=A pid=41288 tid=45744
+SYSTEM_STARTUP_BREAKPOINT role=A pid=41288
+MITIGATION role=A shadow_stack_flags=0x105
+MITIGATION role=A dynamic_code_flags=0x0
+HALT role=A pid=41288 kind=1 init=0 checkpoint=0 results=0
+RESTORED_CONTEXT role=A pid=41288 rip=0x1b00000013e rsp=0x1b00002ff70 r15=0x25fedcce2565391d
+FILE_COPY role=A id=0 size=10 sha256=84d89877f0d4041efb6bf91a16f0248f2fd573e6af05c19f96bedb9f882f7882
+FILE_GRAPH_RESTORED role=A instances=2 handles=3 fault=none
+HALT role=A pid=41288 kind=4 init=0 checkpoint=0 results=1
+MEMORY_VERIFIED role=A value=0x918cd4a051086b03 steps=0 alias1=0x1b000010000 alias2=0x1b000010000
+VIEW_PUBLISHED role=A pid=41288
+INPUT role=A op=1 arg=11 logical=0
+PROCESS_CREATED role=B pid=776 tid=4028
+HALT role=A pid=41288 kind=4 init=0 checkpoint=0 results=2
+SYSTEM_STARTUP_BREAKPOINT role=B pid=776
+MITIGATION role=B shadow_stack_flags=0x105
+MITIGATION role=B dynamic_code_flags=0x0
+HALT role=B pid=776 kind=1 init=0 checkpoint=0 results=0
+RESTORED_CONTEXT role=B pid=776 rip=0x1b00000013e rsp=0x1b00002ff70 r15=0x25fedcce2565391d
+FILE_COPY role=B id=0 size=10 sha256=84d89877f0d4041efb6bf91a16f0248f2fd573e6af05c19f96bedb9f882f7882
+INJECTED_PARTIAL_CREATE role=B copied_files=1 native_opens=1
+PROCESS_TERMINATED_CONFIRMED role=B pid=776 code=0xe0420000
+EVENT_COUNTS role=B init=0 checkpoint=0 results=0 services=0
+FILE_ROLLBACK role=B handles=0 files=0
+VIEW_ROLLBACK role=B published=false alive=false
+CREATION_REJECTED phase=B/restore_files_copy api=injected_create_failure code=0x1f detail=failure after file copy and native open, before publication
+MEMORY_VERIFIED role=A value=0x918cd4a051086b0e steps=1 alias1=0x1b000010000 alias2=0x1b000010000
+INPUT role=A op=1 arg=7 logical=0
+HALT role=A pid=41288 kind=4 init=0 checkpoint=0 results=3
+MEMORY_VERIFIED role=A value=0x918cd4a051086b15 steps=2 alias1=0x1b000010000 alias2=0x1b000010000
+S0_UNCHANGED sha256=738af7e19ae2ad42c68dc15203c1440e5748554fe2d96516d669163f9e8ece09 file_graph=1b5626aaca40ae3beaabee52a816665f173dda550a8d28171cc5de7965074c30
+PROCESS_CREATED role=C pid=41644 tid=33928
+SYSTEM_STARTUP_BREAKPOINT role=C pid=41644
+MITIGATION role=C shadow_stack_flags=0x105
+MITIGATION role=C dynamic_code_flags=0x0
+HALT role=C pid=41644 kind=1 init=0 checkpoint=0 results=0
+RESTORED_CONTEXT role=C pid=41644 rip=0x1b00000013e rsp=0x1b00002ff70 r15=0x25fedcce2565391d
+FILE_COPY role=C id=0 size=10 sha256=84d89877f0d4041efb6bf91a16f0248f2fd573e6af05c19f96bedb9f882f7882
+FILE_GRAPH_RESTORED role=C instances=2 handles=3 fault=none
+HALT role=C pid=41644 kind=4 init=0 checkpoint=0 results=1
+MEMORY_VERIFIED role=C value=0x918cd4a051086b03 steps=0 alias1=0x1b000010000 alias2=0x1b000010000
+VIEW_PUBLISHED role=C pid=41644
+SIMULTANEOUSLY_ALIVE A=41288 C=41644
+INPUT role=A op=1 arg=1 logical=0
+HALT role=A pid=41288 kind=4 init=0 checkpoint=0 results=4
+INPUT role=C op=1 arg=3 logical=0
+HALT role=C pid=41644 kind=4 init=0 checkpoint=0 results=2
+MEMORY_VERIFIED role=A value=0x918cd4a051086b16 steps=3 alias1=0x1b000010000 alias2=0x1b000010000
+MEMORY_VERIFIED role=C value=0x918cd4a051086b06 steps=1 alias1=0x1b000010000 alias2=0x1b000010000
+INPUT role=A op=11 arg=0 logical=1
+FILE_SERVICE role=A op=11 logical=1 response=2 error=0
+HALT role=A pid=41288 kind=4 init=0 checkpoint=0 results=5
+INPUT role=A op=16 arg=0 logical=2
+FILE_SERVICE role=A op=16 logical=2 response=4 error=0
+HALT role=A pid=41288 kind=4 init=0 checkpoint=0 results=6
+INPUT role=C op=16 arg=0 logical=1
+FILE_SERVICE role=C op=16 logical=1 response=2 error=0
+HALT role=C pid=41644 kind=4 init=0 checkpoint=0 results=3
+S0_UNCHANGED sha256=738af7e19ae2ad42c68dc15203c1440e5748554fe2d96516d669163f9e8ece09 file_graph=1b5626aaca40ae3beaabee52a816665f173dda550a8d28171cc5de7965074c30
+SIMULTANEOUSLY_ALIVE A=41288 C=41644
+NO_HALF_PUBLISHED_B A_CONTINUES C_FROM_S0
+PROCESS_TERMINATED_CONFIRMED role=A pid=41288 code=0xe0420000
+EVENT_COUNTS role=A init=0 checkpoint=0 results=6 services=2
+PROCESS_TERMINATED_CONFIRMED role=C pid=41644 code=0xe0420000
+EVENT_COUNTS role=C init=0 checkpoint=0 results=3 services=1
+FILE_HANDLES_CLOSED role=source count=0
+FILE_HANDLES_CLOSED role=A count=0
+FILE_HANDLES_CLOSED role=B count=0
+FILE_HANDLES_CLOSED role=C count=0
+REJECTION_PATH_VERIFIED case=partial-create

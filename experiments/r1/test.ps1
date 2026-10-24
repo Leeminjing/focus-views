@@ -54,6 +54,7 @@ $taskSummary = [ordered]@{
     elevated = $taskPrincipal.IsInRole([Security.Principal.WindowsBuiltInRole]::Administrator)
     build = Get-Content -LiteralPath (Join-Path $OutDir 'build.json') -Raw | ConvertFrom-Json
     sourceHashes = @(Get-ChildItem -LiteralPath $PSScriptRoot -File | Where-Object { $_.Extension -in '.cpp','.hpp','.asm','.ps1' } | Get-FileHash -Algorithm SHA256 | Select-Object Path,Hash)
+    sharedSourceHashes = @(Get-FileHash -LiteralPath (Join-Path $PSScriptRoot '../common/native.hpp') -Algorithm SHA256 | Select-Object Path,Hash)
     executableHashes = @(Get-FileHash -LiteralPath $taskController,$taskFixture -Algorithm SHA256 | Select-Object Path,Hash)
     cases = $taskResults; allHarnessChecksPassed = @($taskResults | Where-Object { -not $_.harnessPassed }).Count -eq 0
 }

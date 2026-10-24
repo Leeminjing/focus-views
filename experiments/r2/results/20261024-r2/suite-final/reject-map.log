@@ -1,0 +1,76 @@
+CASE reject-map
+FIXTURE_SHA256 e734760d58e0e552a34ef3445c506948b703e7a172d905a3272b7ac72a214a2e
+PROCESS_CREATED role=source pid=40536 tid=44108
+SYSTEM_STARTUP_BREAKPOINT role=source pid=40536
+MITIGATION role=source shadow_stack_flags=0x105
+MITIGATION role=source dynamic_code_flags=0x0
+HALT role=source pid=40536 kind=1 init=0 checkpoint=0 results=0
+FILE_COPY role=source id=0 size=10 sha256=84d89877f0d4041efb6bf91a16f0248f2fd573e6af05c19f96bedb9f882f7882
+ORACLE seed=0x88182430a8f6eb7f baseline=0xe91dcfd0844b78c1 receipt=0x98e18b8a8a08176d
+TASK_INIT role=source pid=40536
+HALT role=source pid=40536 kind=2 init=1 checkpoint=0 results=0
+FILE_SERVICE role=source op=10 logical=0 response=1 error=0
+FILE_SERVICE role=source op=14 logical=1 response=2 error=0
+FILE_SERVICE role=source op=13 logical=1 response=2 error=0
+FILE_SERVICE role=source op=10 logical=1 response=3 error=0
+FILE_SERVICE role=source op=13 logical=3 response=6 error=0
+CHECKPOINT role=source pid=40536
+HALT role=source pid=40536 kind=3 init=1 checkpoint=1 results=0
+CAPTURE_REGION address=0x1b000000000 size=4096 sha256=86b3e35b7c9d37720215fe955844211aefe7dfa6473737732fc7e0a9491e2c21
+CAPTURE_REGION address=0x1b000010000 size=4096 sha256=bbf605ea4f9cb53c6bfe44b743d47358dd2608387a6d6c13c960540e4e6c0a8a
+CAPTURE_REGION address=0x1b000020000 size=65536 sha256=414e97b57244f2c85d648e00deefacbe6b056ea672af238f737fba44689a9096
+CAPTURE_CONTEXT rip=0x1b00000013e rsp=0x1b00002ff70 r15=0x67d3119ee874bef9
+FILE_SNAPSHOT files=1 instances=2 handles=3 sha256=1b5626aaca40ae3beaabee52a816665f173dda550a8d28171cc5de7965074c30
+OPEN_INSTANCE id=1 file=0 position=2
+OPEN_INSTANCE id=2 file=0 position=6
+HANDLE_RELATION logical=1 instance=1
+HANDLE_RELATION logical=2 instance=1
+HANDLE_RELATION logical=3 instance=2
+S0_FIXED sha256=66fca5f96ae6d8524494d864b766b25c61ff4d5ddb8d3588aaa2702f17dde1cf
+PROCESS_TERMINATED_CONFIRMED role=source pid=40536 code=0xe0420000
+EVENT_COUNTS role=source init=1 checkpoint=1 results=0 services=5
+SOURCE_EXIT_CONFIRMED_BEFORE_RESTORE
+PROCESS_CREATED role=A pid=42500 tid=38404
+SYSTEM_STARTUP_BREAKPOINT role=A pid=42500
+MITIGATION role=A shadow_stack_flags=0x105
+MITIGATION role=A dynamic_code_flags=0x0
+HALT role=A pid=42500 kind=1 init=0 checkpoint=0 results=0
+RESTORED_CONTEXT role=A pid=42500 rip=0x1b00000013e rsp=0x1b00002ff70 r15=0x67d3119ee874bef9
+FILE_COPY role=A id=0 size=10 sha256=84d89877f0d4041efb6bf91a16f0248f2fd573e6af05c19f96bedb9f882f7882
+FILE_GRAPH_RESTORED role=A instances=2 handles=3 fault=none
+HALT role=A pid=42500 kind=4 init=0 checkpoint=0 results=1
+MEMORY_VERIFIED role=A value=0xe91dcfd0844b78c1 steps=0 alias1=0x1b000010000 alias2=0x1b000010000
+VIEW_PUBLISHED role=A pid=42500
+INPUT role=A op=1 arg=11 logical=0
+PROCESS_CREATED role=B pid=33364 tid=35548
+HALT role=A pid=42500 kind=4 init=0 checkpoint=0 results=2
+SYSTEM_STARTUP_BREAKPOINT role=B pid=33364
+MITIGATION role=B shadow_stack_flags=0x105
+MITIGATION role=B dynamic_code_flags=0x0
+HALT role=B pid=33364 kind=1 init=0 checkpoint=0 results=0
+RESTORED_CONTEXT role=B pid=33364 rip=0x1b00000013e rsp=0x1b00002ff70 r15=0x67d3119ee874bef9
+FILE_COPY role=B id=0 size=10 sha256=84d89877f0d4041efb6bf91a16f0248f2fd573e6af05c19f96bedb9f882f7882
+FILE_GRAPH_RESTORED role=B instances=2 handles=3 fault=none
+HALT role=B pid=33364 kind=4 init=0 checkpoint=0 results=1
+MEMORY_VERIFIED role=B value=0xe91dcfd0844b78c1 steps=0 alias1=0x1b000010000 alias2=0x1b000010000
+VIEW_PUBLISHED role=B pid=33364
+MEMORY_VERIFIED role=A value=0xe91dcfd0844b78cc steps=1 alias1=0x1b000010000 alias2=0x1b000010000
+MEMORY_VERIFIED role=B value=0xe91dcfd0844b78c1 steps=0 alias1=0x1b000010000 alias2=0x1b000010000
+SIMULTANEOUSLY_ALIVE A=42500 B=33364
+INPUT role=B op=1 arg=101 logical=0
+HALT role=B pid=33364 kind=4 init=0 checkpoint=0 results=2
+MEMORY_VERIFIED role=A value=0xe91dcfd0844b78cc steps=1 alias1=0x1b000010000 alias2=0x1b000010000
+MEMORY_VERIFIED role=B value=0xe91dcfd0844b7926 steps=1 alias1=0x1b000010000 alias2=0x1b000010000
+INPUT role=A op=1 arg=7 logical=0
+INPUT role=B op=1 arg=17 logical=0
+HALT role=A pid=42500 kind=4 init=0 checkpoint=0 results=3
+HALT role=B pid=33364 kind=4 init=0 checkpoint=0 results=3
+MEMORY_VERIFIED role=A value=0xe91dcfd0844b78d3 steps=2 alias1=0x1b000010000 alias2=0x1b000010000
+MEMORY_VERIFIED role=B value=0xe91dcfd0844b7937 steps=2 alias1=0x1b000010000 alias2=0x1b000010000
+INPUT role=A op=21 arg=0 logical=1
+UNSUPPORTED_MANAGED_REQUEST role=A op=21
+PROCESS_TERMINATED_CONFIRMED role=B pid=33364 code=0xe0420000
+EVENT_COUNTS role=B init=0 checkpoint=0 results=3 services=0
+PROCESS_TERMINATED_CONFIRMED role=A pid=42500 code=0xe0420000
+EVENT_COUNTS role=A init=0 checkpoint=0 results=3 services=0
+EXPERIMENT_FAILED phase=A/operation api=resource_policy code=0x32 detail=async/mapping/lock/device/unknown managed resource rejected
