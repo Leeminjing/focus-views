@@ -1,0 +1,426 @@
+{
+  "scenario": "minimal",
+  "processExit": 0,
+  "allEvidenceChecksPassed": true,
+  "checks": [
+    {
+      "name": "controller-completed-with-no-failed-assertions",
+      "passed": true
+    },
+    {
+      "name": "R3-and-GUI-restore-not-claimed",
+      "passed": true
+    },
+    {
+      "name": "native-and-negative-capability-failures-stay-fail",
+      "passed": true
+    },
+    {
+      "name": "native.real-query-thread",
+      "passed": true
+    },
+    {
+      "name": "native.checked-module-and-page-protection",
+      "passed": true
+    },
+    {
+      "name": "native.two-imports-installation",
+      "passed": true
+    },
+    {
+      "name": "native.actual-queries-match-accepted-action-ledger",
+      "passed": true
+    },
+    {
+      "name": "native.normal-close-restores-both-imports",
+      "passed": true
+    },
+    {
+      "name": "A.real-query-thread",
+      "passed": true
+    },
+    {
+      "name": "A.checked-module-and-page-protection",
+      "passed": true
+    },
+    {
+      "name": "A.two-imports-installation",
+      "passed": true
+    },
+    {
+      "name": "A.actual-queries-match-accepted-action-ledger",
+      "passed": true
+    },
+    {
+      "name": "A.route-targets-and-dequeue-button-order",
+      "passed": true
+    },
+    {
+      "name": "A.peeks-non-consuming",
+      "passed": true
+    },
+    {
+      "name": "A.actual-import-call-instructions",
+      "passed": true
+    },
+    {
+      "name": "A.normal-close-restores-both-imports",
+      "passed": true
+    },
+    {
+      "name": "B.real-query-thread",
+      "passed": true
+    },
+    {
+      "name": "B.checked-module-and-page-protection",
+      "passed": true
+    },
+    {
+      "name": "B.two-imports-installation",
+      "passed": true
+    },
+    {
+      "name": "B.actual-queries-match-accepted-action-ledger",
+      "passed": true
+    },
+    {
+      "name": "B.route-targets-and-dequeue-button-order",
+      "passed": true
+    },
+    {
+      "name": "B.peeks-non-consuming",
+      "passed": true
+    },
+    {
+      "name": "B.actual-import-call-instructions",
+      "passed": true
+    },
+    {
+      "name": "B.normal-close-restores-both-imports",
+      "passed": true
+    },
+    {
+      "name": "actual-drag-procedure-sees-outside-coordinate-and-capture",
+      "passed": true
+    },
+    {
+      "name": "B-native-button-produces-command",
+      "passed": true
+    },
+    {
+      "name": "every-owned-process-confirmed-exited",
+      "passed": true
+    },
+    {
+      "name": "every-owned-desktop-released",
+      "passed": true
+    },
+    {
+      "name": "no-lifecycle-cleanup-errors",
+      "passed": true
+    },
+    {
+      "name": "no-host-input-or-business-state-setters",
+      "passed": true
+    },
+    {
+      "name": "all-existing-experiments-unchanged",
+      "passed": true
+    }
+  ],
+  "assertions": [
+    {
+      "type": "assertion",
+      "tickMs": 20385156,
+      "name": "native.EXE-query-on-GUI-thread",
+      "passed": true,
+      "detail": "read-only EXE probe and unchanged fixture independently query native APIs"
+    },
+    {
+      "type": "assertion",
+      "tickMs": 20385218,
+      "name": "native.EXE-query-on-GUI-thread",
+      "passed": true,
+      "detail": "read-only EXE probe and unchanged fixture independently query native APIs"
+    },
+    {
+      "type": "assertion",
+      "tickMs": 20385218,
+      "name": "native.async-failure-retained",
+      "passed": true,
+      "detail": "same EXE; native async left does not reflect managed button; queue table intervention still active"
+    },
+    {
+      "type": "assertion",
+      "tickMs": 20385218,
+      "name": "native.IAT-async",
+      "passed": true,
+      "detail": "controller reads actual remote import slot"
+    },
+    {
+      "type": "assertion",
+      "tickMs": 20385218,
+      "name": "native.IAT-cursor",
+      "passed": true,
+      "detail": "controller reads actual remote import slot"
+    },
+    {
+      "type": "assertion",
+      "tickMs": 20385265,
+      "name": "native.clean-close",
+      "passed": true,
+      "detail": "button/capture released, both imports and protections restored before bridge exits"
+    },
+    {
+      "type": "assertion",
+      "tickMs": 20385265,
+      "name": "native.IAT-async",
+      "passed": true,
+      "detail": "controller reads actual remote import slot"
+    },
+    {
+      "type": "assertion",
+      "tickMs": 20385265,
+      "name": "native.IAT-cursor",
+      "passed": true,
+      "detail": "controller reads actual remote import slot"
+    },
+    {
+      "type": "assertion",
+      "tickMs": 20385593,
+      "name": "A.IAT-async",
+      "passed": true,
+      "detail": "controller reads actual remote import slot"
+    },
+    {
+      "type": "assertion",
+      "tickMs": 20385593,
+      "name": "A.IAT-cursor",
+      "passed": true,
+      "detail": "controller reads actual remote import slot"
+    },
+    {
+      "type": "assertion",
+      "tickMs": 20385593,
+      "name": "B.IAT-async",
+      "passed": true,
+      "detail": "controller reads actual remote import slot"
+    },
+    {
+      "type": "assertion",
+      "tickMs": 20385593,
+      "name": "B.IAT-cursor",
+      "passed": true,
+      "detail": "controller reads actual remote import slot"
+    },
+    {
+      "type": "assertion",
+      "tickMs": 20385593,
+      "name": "A-B.same-initial-UI",
+      "passed": true,
+      "detail": "cold-start GUI instances, no restoration claim"
+    },
+    {
+      "type": "assertion",
+      "tickMs": 20385703,
+      "name": "B.EXE-query-on-GUI-thread",
+      "passed": true,
+      "detail": "read-only EXE probe and unchanged fixture independently query native APIs"
+    },
+    {
+      "type": "assertion",
+      "tickMs": 20385750,
+      "name": "A.EXE-query-on-GUI-thread",
+      "passed": true,
+      "detail": "read-only EXE probe and unchanged fixture independently query native APIs"
+    },
+    {
+      "type": "assertion",
+      "tickMs": 20385750,
+      "name": "mouse.dual-time-semantics",
+      "passed": true,
+      "detail": "accepted left/cursor effective before dequeue; native queue and capture unchanged"
+    },
+    {
+      "type": "assertion",
+      "tickMs": 20385750,
+      "name": "cursor.acceptance-visible",
+      "passed": true,
+      "detail": "actual GetCursorPos IAT call returns accepted screen coordinates"
+    },
+    {
+      "type": "assertion",
+      "tickMs": 20385828,
+      "name": "A.EXE-query-on-GUI-thread",
+      "passed": true,
+      "detail": "read-only EXE probe and unchanged fixture independently query native APIs"
+    },
+    {
+      "type": "assertion",
+      "tickMs": 20385828,
+      "name": "A.native-capture-and-button-state",
+      "passed": true,
+      "detail": "unchanged native drag procedure called SetCapture; real queue query sees left held"
+    },
+    {
+      "type": "assertion",
+      "tickMs": 20385890,
+      "name": "A.EXE-query-on-GUI-thread",
+      "passed": true,
+      "detail": "read-only EXE probe and unchanged fixture independently query native APIs"
+    },
+    {
+      "type": "assertion",
+      "tickMs": 20385890,
+      "name": "A.capture-routes-outside",
+      "passed": true,
+      "detail": "top-client (650,350) routes to captured drag client (626,146), beyond both bounds"
+    },
+    {
+      "type": "assertion",
+      "tickMs": 20385968,
+      "name": "B.EXE-query-on-GUI-thread",
+      "passed": true,
+      "detail": "read-only EXE probe and unchanged fixture independently query native APIs"
+    },
+    {
+      "type": "assertion",
+      "tickMs": 20386000,
+      "name": "A.EXE-query-on-GUI-thread",
+      "passed": true,
+      "detail": "read-only EXE probe and unchanged fixture independently query native APIs"
+    },
+    {
+      "type": "assertion",
+      "tickMs": 20386000,
+      "name": "B.native-button-click",
+      "passed": true,
+      "detail": "ordinary BUTTON received routed down/up and emitted BN_CLICKED"
+    },
+    {
+      "type": "assertion",
+      "tickMs": 20386000,
+      "name": "A.unaffected-by-B",
+      "passed": true,
+      "detail": "actual capture/focus/drag plus accepted cursor and button remain A-private"
+    },
+    {
+      "type": "assertion",
+      "tickMs": 20386000,
+      "name": "B.independent-cursor",
+      "passed": true,
+      "detail": "B position and button state separate from A"
+    },
+    {
+      "type": "assertion",
+      "tickMs": 20386078,
+      "name": "A.EXE-query-on-GUI-thread",
+      "passed": true,
+      "detail": "read-only EXE probe and unchanged fixture independently query native APIs"
+    },
+    {
+      "type": "assertion",
+      "tickMs": 20386078,
+      "name": "A.release-clears-native-capture",
+      "passed": true,
+      "detail": "native WM_LBUTTONUP calls ReleaseCapture"
+    },
+    {
+      "type": "assertion",
+      "tickMs": 20386125,
+      "name": "A.route-resumes-hit-test",
+      "passed": true,
+      "detail": "after release, coordinates route to BUTTON instead of stale drag target"
+    },
+    {
+      "type": "assertion",
+      "tickMs": 20386125,
+      "name": "A.actual-IAT-call-sites",
+      "passed": true,
+      "detail": "actual EXE instructions and caller module/thread checked for both APIs"
+    },
+    {
+      "type": "assertion",
+      "tickMs": 20386125,
+      "name": "B.actual-IAT-call-sites",
+      "passed": true,
+      "detail": "actual EXE instructions and caller module/thread checked for both APIs"
+    },
+    {
+      "type": "assertion",
+      "tickMs": 20386156,
+      "name": "A.clean-close",
+      "passed": true,
+      "detail": "button/capture released, both imports and protections restored before bridge exits"
+    },
+    {
+      "type": "assertion",
+      "tickMs": 20386156,
+      "name": "A.IAT-async",
+      "passed": true,
+      "detail": "controller reads actual remote import slot"
+    },
+    {
+      "type": "assertion",
+      "tickMs": 20386156,
+      "name": "A.IAT-cursor",
+      "passed": true,
+      "detail": "controller reads actual remote import slot"
+    },
+    {
+      "type": "assertion",
+      "tickMs": 20386203,
+      "name": "B.clean-close",
+      "passed": true,
+      "detail": "button/capture released, both imports and protections restored before bridge exits"
+    },
+    {
+      "type": "assertion",
+      "tickMs": 20386203,
+      "name": "B.IAT-async",
+      "passed": true,
+      "detail": "controller reads actual remote import slot"
+    },
+    {
+      "type": "assertion",
+      "tickMs": 20386203,
+      "name": "B.IAT-cursor",
+      "passed": true,
+      "detail": "controller reads actual remote import slot"
+    }
+  ],
+  "capabilities": [
+    {
+      "type": "capability",
+      "tickMs": 20385218,
+      "name": "native.private_async_mouse",
+      "status": "fail",
+      "detail": "unpatched main EXE import; actual Windows result"
+    },
+    {
+      "type": "capability",
+      "tickMs": 20385218,
+      "name": "native.private_cursor",
+      "status": "fail",
+      "detail": "unpatched main EXE cursor result, no forced expectation"
+    },
+    {
+      "type": "capability",
+      "tickMs": 20386265,
+      "name": "static_host_observation",
+      "status": "inconclusive",
+      "detail": "real host native foreground/desktop/cursor/async modifiers; external activity not attributed to runtime"
+    },
+    {
+      "type": "capability",
+      "tickMs": 20386265,
+      "name": "manual_host_interaction",
+      "status": "not_executed",
+      "detail": "hold window alone is not a human verdict; follow R3-004 README procedure"
+    }
+  ],
+  "manualHostTest": "not_executed",
+  "R3Complete": false,
+  "guiRestore": false,
+  "R1R2Rerun": false
+}

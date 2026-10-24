@@ -1,0 +1,471 @@
+{
+  "scenario": "all",
+  "processExit": 0,
+  "allEvidenceChecksPassed": true,
+  "checks": [
+    {
+      "name": "experiment-completed-with-assertions",
+      "passed": true
+    },
+    {
+      "name": "expected-capability-failures-remain-fail",
+      "passed": true
+    },
+    {
+      "name": "evidence-assertions-separate-from-capabilities",
+      "passed": true
+    },
+    {
+      "name": "R3-not-claimed",
+      "passed": true
+    },
+    {
+      "name": "same-fixture-binary-distinct-owned-desktops",
+      "passed": true
+    },
+    {
+      "name": "baseline.unique-contiguous-removal-on-target-thread",
+      "passed": true
+    },
+    {
+      "name": "baseline.original-query-thread",
+      "passed": true
+    },
+    {
+      "name": "baseline.no-callback-failure",
+      "passed": true
+    },
+    {
+      "name": "baseline.accepted-dequeued-processed-distinguished",
+      "passed": true
+    },
+    {
+      "name": "baseline.all-accepted-have-removal-or-explicit-failure",
+      "passed": true
+    },
+    {
+      "name": "baseline.per-event-real-queue-table-and-peek-state",
+      "passed": true
+    },
+    {
+      "name": "baseline.repeated-peek-witness",
+      "passed": true
+    },
+    {
+      "name": "baseline.original-control-processing-matches-hook",
+      "passed": true
+    },
+    {
+      "name": "baseline.never-updates-keyboard-table",
+      "passed": true
+    },
+    {
+      "name": "A.unique-contiguous-removal-on-target-thread",
+      "passed": true
+    },
+    {
+      "name": "A.original-query-thread",
+      "passed": true
+    },
+    {
+      "name": "A.no-callback-failure",
+      "passed": true
+    },
+    {
+      "name": "A.accepted-dequeued-processed-distinguished",
+      "passed": true
+    },
+    {
+      "name": "A.all-accepted-have-removal-or-explicit-failure",
+      "passed": true
+    },
+    {
+      "name": "A.per-event-real-queue-table-and-peek-state",
+      "passed": true
+    },
+    {
+      "name": "A.repeated-peek-witness",
+      "passed": true
+    },
+    {
+      "name": "A.original-control-processing-matches-hook",
+      "passed": true
+    },
+    {
+      "name": "B.unique-contiguous-removal-on-target-thread",
+      "passed": true
+    },
+    {
+      "name": "B.original-query-thread",
+      "passed": true
+    },
+    {
+      "name": "B.no-callback-failure",
+      "passed": true
+    },
+    {
+      "name": "B.accepted-dequeued-processed-distinguished",
+      "passed": true
+    },
+    {
+      "name": "B.all-accepted-have-removal-or-explicit-failure",
+      "passed": true
+    },
+    {
+      "name": "B.per-event-real-queue-table-and-peek-state",
+      "passed": true
+    },
+    {
+      "name": "B.repeated-peek-witness",
+      "passed": true
+    },
+    {
+      "name": "B.original-control-processing-matches-hook",
+      "passed": true
+    },
+    {
+      "name": "baseline-selection.independent-pixel-and-paint-provenance",
+      "passed": true
+    },
+    {
+      "name": "A-selection.independent-pixel-and-paint-provenance",
+      "passed": true
+    },
+    {
+      "name": "B-selection.independent-pixel-and-paint-provenance",
+      "passed": true
+    },
+    {
+      "name": "every-owned-process-confirmed-exited",
+      "passed": true
+    },
+    {
+      "name": "every-owned-desktop-released",
+      "passed": true
+    },
+    {
+      "name": "no-cleanup-errors",
+      "passed": true
+    },
+    {
+      "name": "no-host-input-or-business-setters",
+      "passed": true
+    },
+    {
+      "name": "only-runtime-DLL-updates-native-keyboard-table",
+      "passed": true
+    },
+    {
+      "name": "R3-001-and-existing-experiments-unchanged",
+      "passed": true
+    }
+  ],
+  "capabilityResults": [
+    {
+      "type": "capability",
+      "tickMs": 20398375,
+      "name": "baseline.queue_ctrl_consistency",
+      "status": "fail",
+      "detail": "state intervention disabled; same fixture and envelope transport"
+    },
+    {
+      "type": "capability",
+      "tickMs": 20398562,
+      "name": "baseline.native_shift_selection",
+      "status": "fail",
+      "detail": "actual native EDIT selection=5..5"
+    },
+    {
+      "type": "capability",
+      "tickMs": 20398687,
+      "name": "unhooked.queue_ctrl_consistency",
+      "status": "fail",
+      "detail": "plain native PostMessage after runtime input hook removed"
+    },
+    {
+      "type": "capability",
+      "tickMs": 20399156,
+      "name": "managed.queue_ctrl_consistency",
+      "status": "pass",
+      "detail": "original GetKeyState and GetKeyboardState; target GUI thread"
+    },
+    {
+      "type": "capability",
+      "tickMs": 20399687,
+      "name": "injected_missing_update.queue_ctrl_consistency",
+      "status": "fail",
+      "detail": "intentionally omitted SetKeyboardState for this message"
+    },
+    {
+      "type": "capability",
+      "tickMs": 20399843,
+      "name": "A.native_shift_selection",
+      "status": "pass",
+      "detail": "actual native EDIT selection=0..5"
+    },
+    {
+      "type": "capability",
+      "tickMs": 20400031,
+      "name": "B.native_shift_selection",
+      "status": "pass",
+      "detail": "actual native EDIT selection=0..6"
+    },
+    {
+      "type": "capability",
+      "tickMs": 20402343,
+      "name": "injected_cleanup_timeout.release_confirmed",
+      "status": "fail",
+      "detail": "A GUI thread intentionally suspended; cleanup not acknowledged; channel invalid"
+    },
+    {
+      "type": "capability",
+      "tickMs": 20402609,
+      "name": "static_host_observation",
+      "status": "pass",
+      "detail": "50ms samples; external user activity is not runtime interference"
+    },
+    {
+      "type": "capability",
+      "tickMs": 20402609,
+      "name": "manual_host_interaction",
+      "status": "not_executed",
+      "detail": "hold mode alone is not a human verdict; static samples do not replace it"
+    },
+    {
+      "type": "capability",
+      "tickMs": 20402609,
+      "name": "async_private_state",
+      "status": "not_supported",
+      "detail": "original GetAsyncKeyState recorded without replacement"
+    }
+  ],
+  "assertions": [
+    {
+      "type": "assertion",
+      "tickMs": 20398281,
+      "name": "baseline.native-edit-seeded",
+      "passed": true,
+      "detail": "WM_CHAR and native mouse focus; no text/selection setter"
+    },
+    {
+      "type": "assertion",
+      "tickMs": 20398375,
+      "name": "baseline.message-without-queue-state",
+      "passed": true,
+      "detail": "same fixture; same envelope transport; SetKeyboardState disabled"
+    },
+    {
+      "type": "assertion",
+      "tickMs": 20398484,
+      "name": "baseline.Home-at-start",
+      "passed": true,
+      "detail": "native EDIT processed Home"
+    },
+    {
+      "type": "assertion",
+      "tickMs": 20398562,
+      "name": "baseline.baseline-selection-failure-retained",
+      "passed": true,
+      "detail": "actual native EDIT selection=5..5"
+    },
+    {
+      "type": "assertion",
+      "tickMs": 20398625,
+      "name": "baseline-selection.fresh-target-paint",
+      "passed": true,
+      "detail": "unchanged R3-001 PrintWindow helper and pixel/paint validator"
+    },
+    {
+      "type": "assertion",
+      "tickMs": 20398656,
+      "name": "baseline.closed-cleanly",
+      "passed": true,
+      "detail": "native generic/side high bits clear before unhook; bridge process exited"
+    },
+    {
+      "type": "assertion",
+      "tickMs": 20398687,
+      "name": "baseline.fully-unhooked-failure-retained",
+      "passed": true,
+      "detail": "plain R3-001 PostMessage after hook and input bridge removed"
+    },
+    {
+      "type": "assertion",
+      "tickMs": 20399015,
+      "name": "A.native-edit-seeded",
+      "passed": true,
+      "detail": "WM_CHAR and native mouse focus; no text/selection setter"
+    },
+    {
+      "type": "assertion",
+      "tickMs": 20399078,
+      "name": "B.native-edit-seeded",
+      "passed": true,
+      "detail": "WM_CHAR and native mouse focus; no text/selection setter"
+    },
+    {
+      "type": "assertion",
+      "tickMs": 20399156,
+      "name": "managed.Ctrl-native-queries",
+      "passed": true,
+      "detail": "GetKeyState and GetKeyboardState read actual target thread table"
+    },
+    {
+      "type": "assertion",
+      "tickMs": 20399156,
+      "name": "managed.B-isolated",
+      "passed": true,
+      "detail": "B has independent native table and EDIT"
+    },
+    {
+      "type": "assertion",
+      "tickMs": 20399265,
+      "name": "managed.interleaved-B-does-not-release-A",
+      "passed": true,
+      "detail": "B native navigation completes while A Ctrl remains held"
+    },
+    {
+      "type": "assertion",
+      "tickMs": 20399359,
+      "name": "managed.normal-key-TranslateMessage",
+      "passed": true,
+      "detail": "B X down/up generated native WM_CHAR through unchanged TranslateMessage; A Ctrl still held"
+    },
+    {
+      "type": "assertion",
+      "tickMs": 20399421,
+      "name": "managed.Ctrl-side-OR",
+      "passed": true,
+      "detail": "left release preserves held right and generic Ctrl"
+    },
+    {
+      "type": "assertion",
+      "tickMs": 20399484,
+      "name": "managed.Ctrl-up-clears",
+      "passed": true,
+      "detail": "both sides released"
+    },
+    {
+      "type": "assertion",
+      "tickMs": 20399562,
+      "name": "managed.Shift-side-OR",
+      "passed": true,
+      "detail": "generic Shift remains held"
+    },
+    {
+      "type": "assertion",
+      "tickMs": 20399625,
+      "name": "managed.Shift-up-clears",
+      "passed": true,
+      "detail": "no remaining Shift"
+    },
+    {
+      "type": "assertion",
+      "tickMs": 20399687,
+      "name": "negative.omitted-state-update-detected",
+      "passed": true,
+      "detail": "message alone retains original mismatch; this is an injected capability failure"
+    },
+    {
+      "type": "assertion",
+      "tickMs": 20399734,
+      "name": "managed.burst-dequeue-state",
+      "passed": true,
+      "detail": "four events in one batch; each consumed query follows that event"
+    },
+    {
+      "type": "assertion",
+      "tickMs": 20399734,
+      "name": "managed.repeated-peek-no-apply",
+      "passed": true,
+      "detail": "next envelope viewed twice using PM_NOREMOVE; not consumed or applied"
+    },
+    {
+      "type": "assertion",
+      "tickMs": 20399796,
+      "name": "A.Home-at-start",
+      "passed": true,
+      "detail": "native EDIT processed Home"
+    },
+    {
+      "type": "assertion",
+      "tickMs": 20399843,
+      "name": "A.native-Shift-End-selection",
+      "passed": true,
+      "detail": "actual native EDIT selection=0..5"
+    },
+    {
+      "type": "assertion",
+      "tickMs": 20399906,
+      "name": "A-selection.fresh-target-paint",
+      "passed": true,
+      "detail": "unchanged R3-001 PrintWindow helper and pixel/paint validator"
+    },
+    {
+      "type": "assertion",
+      "tickMs": 20399968,
+      "name": "B.Home-at-start",
+      "passed": true,
+      "detail": "native EDIT processed Home"
+    },
+    {
+      "type": "assertion",
+      "tickMs": 20400031,
+      "name": "B.native-Shift-End-selection",
+      "passed": true,
+      "detail": "actual native EDIT selection=0..6"
+    },
+    {
+      "type": "assertion",
+      "tickMs": 20400062,
+      "name": "B-selection.fresh-target-paint",
+      "passed": true,
+      "detail": "unchanged R3-001 PrintWindow helper and pixel/paint validator"
+    },
+    {
+      "type": "assertion",
+      "tickMs": 20400203,
+      "name": "managed.cancel-releases",
+      "passed": true,
+      "detail": "release packet runs on target thread; channel remains usable"
+    },
+    {
+      "type": "assertion",
+      "tickMs": 20400281,
+      "name": "managed.channel-continues-after-cancel",
+      "passed": true,
+      "detail": "subsequent sequence consumed"
+    },
+    {
+      "type": "assertion",
+      "tickMs": 20402343,
+      "name": "negative.unconfirmed-release-invalidates",
+      "passed": true,
+      "detail": "owned A suspended; no target ack; channel invalid instead of healthy"
+    },
+    {
+      "type": "assertion",
+      "tickMs": 20402437,
+      "name": "managed.B-continues-after-A-invalid",
+      "passed": true,
+      "detail": "B independently processes new input"
+    },
+    {
+      "type": "assertion",
+      "tickMs": 20402484,
+      "name": "managed.unload-has-held-modifiers",
+      "passed": true,
+      "detail": "Ctrl and Shift actually held before normal cleanup"
+    },
+    {
+      "type": "assertion",
+      "tickMs": 20402531,
+      "name": "B.closed-cleanly",
+      "passed": true,
+      "detail": "native generic/side high bits clear before unhook; bridge process exited"
+    }
+  ],
+  "manualHostTest": "not_executed",
+  "R3Complete": false,
+  "guiRestore": false
+}
