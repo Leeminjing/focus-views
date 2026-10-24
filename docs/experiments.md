@@ -92,3 +92,9 @@ R3-003 的 [实际报告](../experiments/r3-003/results/20261024-r3003/report.md
 [源码与复现](../experiments/r3-005a-cet-001/README.md)、[实际报告](../experiments/r3-005a-cet-001/results/20261024-cet001/report.md) 分别保留正常 C++ 返回、真正 SEH、同线程 RtlRestoreContext，以及源退出后的基本上下文、目标 CET_U 原值和 RtlRestoreContext 恢复对照。三种构建各执行七条路径、重复两轮；24 次源现场恢复均失败，未发布 View。
 
 无 EHCONT 时，受管布局内的 RtlRestoreContext 仍到首个 RET 后失败 57；启用 EHCONT 后在 ntdll 中拒绝 48。原生引导栈直接切向源受管栈的拒绝 13 单独记录，不与 RET 故障混同。目标自身链可正常返回，CET_U 原值写回接受不等于影子返回链可克隆；原始 ret-probe 回归继续失败。R3-005a 不改记通过，不推进 R3-005b/R4；本轮未重跑其他旧关口。
+
+## R3-005a-CET-002：协作式续接通过受限验收
+
+[运行说明](../experiments/r3-005a-cet-002/README.md) 和 [真实报告](../experiments/r3-005a-cet-002/results/20261024-cet002/report.md) 保留 14 次运行及 285 项证据检查。无 GUI 的最小续接首先通过，随后固定自绘窗口、三个 HWND 引用、真实 GDI 和现有输入整合通过；各重复两轮。源变化并退出后，新进程跳过业务前缀，通过相同 CALL 位置建立合法 CET 链，再恢复原始状态并完成普通 C++ 返回。
+
+返回位置不匹配在写回前拒绝；遗漏局部量、R10 或数据页 seed 分别完成真实返回后得到错误计算；不恢复 CRT cookie 单独触发 /GS 失败。负向 EXE 仍返回 2，不作为恢复成功。只将编译期协作、O0 已知固定帧及单自绘窗口子集记为通过；原 R3-005a/CET-001 的直接恢复失败不变，不宣布任意应用、完整 R3、R3-005b 或 R4 完成。
