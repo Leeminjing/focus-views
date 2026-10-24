@@ -1,0 +1,491 @@
+{
+  "time": "2026-10-24T12:56:55.0263342+08:00",
+  "baseCommit": "d4a3d0b18f81a23561c617a81cdbdbb6f2e7b24a",
+  "os": "Microsoft Windows 11 家庭版 中文版",
+  "osVersion": "10.0.26200",
+  "osBuild": "26200",
+  "architecture": "AMD64",
+  "elevated": false,
+  "build": {
+    "time": "2026-10-24T12:56:45.2665422+08:00",
+    "architecture": "x64",
+    "compilerVersion": "19.44.35229.0",
+    "msvc": "D:\\focus-distinct-browser\\.tools\\msvc\\VC\\Tools\\MSVC\\14.44.35207",
+    "sdk": "D:\\Windows Kits\\10",
+    "sdkVersion": "10.0.18362.0",
+    "runtime": "static /MT",
+    "systemSettingsChanged": false
+  },
+  "sourceHashes": [
+    {
+      "Path": "D:\\focus-views\\experiments\\r3\\bridge.cpp",
+      "Hash": "E9323FD24D47C878A60F3CB9526AA0525510B7BF2E38E41591262D175F93CFAC"
+    },
+    {
+      "Path": "D:\\focus-views\\experiments\\r3\\build.ps1",
+      "Hash": "494A9EBBB4F43C0395B0222DA13ED70BFF38641008AB04E0ACE4F81EDB0394F6"
+    },
+    {
+      "Path": "D:\\focus-views\\experiments\\r3\\controller.cpp",
+      "Hash": "0003C95FF989AAFF6FAFD63AD46B5215534DC875A2D1A54EA669DFEB0095B083"
+    },
+    {
+      "Path": "D:\\focus-views\\experiments\\r3\\fixture.cpp",
+      "Hash": "DD68AA119CE9689C3B2DB185EF5F20F88C99677B9157C119D147C503F159C7AF"
+    },
+    {
+      "Path": "D:\\focus-views\\experiments\\r3\\protocol.hpp",
+      "Hash": "2CE18FDAAF14DF642A9C78B1761FB5D46B00B3B893AB6C5C9DC6D737D37B5606"
+    },
+    {
+      "Path": "D:\\focus-views\\experiments\\r3\\test.ps1",
+      "Hash": "0664C0BFFD20A92DFBD506DCC4ADBE74C53C98458546BFC096BE924D4B64B64F"
+    }
+  ],
+  "sharedSourceHashes": [
+    {
+      "Path": "D:\\focus-views\\experiments\\common\\native.hpp",
+      "Hash": "732EBEC822865F4457BE253BB2DA8322F3FB4CA1C5324ADDF7E1EF0B689B6721"
+    },
+    {
+      "Path": "D:\\focus-views\\experiments\\r1\\snapshot.hpp",
+      "Hash": "D236EDCC87DD1AE87ED096F25809CC45090B4D04D1C2FC05604FED6ED2F40822"
+    }
+  ],
+  "executableHash": {
+    "Path": "D:\\focus-views\\experiments\\r3\\out\\r3.exe",
+    "Hash": "A8BC355954E2090F1FC6B9B109A6E0654CBB7D24FD6EBC96E10810B3E9242EE7"
+  },
+  "diagnosticCompleted": true,
+  "capabilities": [
+    {
+      "type": "capability",
+      "tickMs": 10360296,
+      "name": "background_windows",
+      "status": "pass",
+      "detail": "two native GUI processes on distinct non-input desktops; cold-start only"
+    },
+    {
+      "type": "capability",
+      "tickMs": 10361718,
+      "name": "no_preview_execution",
+      "status": "pass",
+      "detail": "target GUI timers advanced without any preview"
+    },
+    {
+      "type": "capability",
+      "tickMs": 10361718,
+      "name": "gdi_printwindow",
+      "status": "pass",
+      "detail": "requires PNG visual tick plus matching target paint/update observations; not a DWM/GPU capability claim"
+    },
+    {
+      "type": "capability",
+      "tickMs": 10362046,
+      "name": "directed_char_messages",
+      "status": "pass",
+      "detail": "WM_CHAR to native EDIT only; not a full keyboard-input capability"
+    },
+    {
+      "type": "capability",
+      "tickMs": 10362109,
+      "name": "directed_button_messages",
+      "status": "pass",
+      "detail": "native button generated BN_CLICKED from directed mouse messages"
+    },
+    {
+      "type": "capability",
+      "tickMs": 10362234,
+      "name": "posted_ctrl_queue_state",
+      "status": "fail",
+      "detail": "WM_KEYDOWN arrival compared with target GetKeyState/GetKeyboardState high bits"
+    },
+    {
+      "type": "capability",
+      "tickMs": 10362234,
+      "name": "background_async_ctrl",
+      "status": "fail",
+      "detail": "inactive-desktop GetAsyncKeyState limitation; zero alone does not distinguish key-up from API restriction"
+    },
+    {
+      "type": "capability",
+      "tickMs": 10362234,
+      "name": "B_ctrl_unaffected",
+      "status": "pass",
+      "detail": "B did not receive A's directed modifier message"
+    },
+    {
+      "type": "capability",
+      "tickMs": 10362468,
+      "name": "keyboard_shift_selection",
+      "status": "fail",
+      "detail": "native EDIT selection after posted Home/Shift/End messages"
+    },
+    {
+      "type": "capability",
+      "tickMs": 10362562,
+      "name": "directed_mouse_selection",
+      "status": "pass",
+      "detail": "explicitly addressed native EDIT mouse-message path only"
+    },
+    {
+      "type": "capability",
+      "tickMs": 10362734,
+      "name": "capture_query_across_B_messages",
+      "status": "pass",
+      "detail": "GetCapture observed in A GUI thread before and after B interaction; routing unproven"
+    },
+    {
+      "type": "capability",
+      "tickMs": 10362734,
+      "name": "focus_query_across_B_messages",
+      "status": "pass",
+      "detail": "target GUI-thread GetFocus values; no controller-thread focus inference"
+    },
+    {
+      "type": "capability",
+      "tickMs": 10362734,
+      "name": "native_mouse_button_state",
+      "status": "fail",
+      "detail": "MK_LBUTTON message flag compared with target native button-state queries"
+    },
+    {
+      "type": "capability",
+      "tickMs": 10362781,
+      "name": "native_cross_boundary_capture_routing",
+      "status": "not_verified",
+      "detail": "outside move was explicitly sent to drag HWND; it cannot prove OS capture routing without real isolated input"
+    },
+    {
+      "type": "capability",
+      "tickMs": 10363203,
+      "name": "creation_failure_isolation",
+      "status": "pass",
+      "detail": "failed new process was never published; B retained native execution and drawing"
+    },
+    {
+      "type": "capability",
+      "tickMs": 10364796,
+      "name": "hung_target_failure",
+      "status": "pass",
+      "detail": "blocked/failed PrintWindow must publish no image; auxiliary process bounded by deadline"
+    },
+    {
+      "type": "capability",
+      "tickMs": 10364796,
+      "name": "hung_A_does_not_block_B",
+      "status": "pass",
+      "detail": "B observed and captured while A GUI thread was suspended"
+    },
+    {
+      "type": "capability",
+      "tickMs": 10365078,
+      "name": "A_execution_after_capture_timeout",
+      "status": "pass",
+      "detail": "target GUI execution resumes after auxiliary process cleanup"
+    },
+    {
+      "type": "capability",
+      "tickMs": 10365109,
+      "name": "A_capture_after_capture_timeout",
+      "status": "fail",
+      "detail": "requires fresh paint during capture as well as matching visual tick; an unconfirmed frame is rejected"
+    },
+    {
+      "type": "capability",
+      "tickMs": 10365109,
+      "name": "manual_host_interaction",
+      "status": "not_executed",
+      "detail": "automated run does not substitute for a person's host-side judgment; see README procedure"
+    },
+    {
+      "type": "capability",
+      "tickMs": 10365171,
+      "name": "exited_target_failure",
+      "status": "pass",
+      "detail": "stale HWND rejected; no previous image returned"
+    },
+    {
+      "type": "capability",
+      "tickMs": 10365218,
+      "name": "exit_A_does_not_stop_B",
+      "status": "pass",
+      "detail": "B remains independently observable and drawable"
+    },
+    {
+      "type": "capability",
+      "tickMs": 10365296,
+      "name": "static_host_observation",
+      "status": "inconclusive",
+      "detail": "50ms foreground/input-desktop/cursor samples; external input intervals are not counted as runtime interference"
+    }
+  ],
+  "hostObservation": {
+    "type": "host_result",
+    "tickMs": 10365296,
+    "samples": 87,
+    "quietChanges": 0,
+    "externalInputIntervals": 49,
+    "errors": 0
+  },
+  "images": [
+    {
+      "name": "A-initial",
+      "file": "D:\\focus-views\\experiments\\r3\\results\\20261024-r3\\suite-final\\run\\A-initial.png",
+      "tick": 5,
+      "hash": "cc3da5ee6056d87f507db25e7787f211753c753f24f0f585ad583de6592ddf88",
+      "matchedPaints": 1,
+      "verified": true
+    },
+    {
+      "name": "B-initial",
+      "file": "D:\\focus-views\\experiments\\r3\\results\\20261024-r3\\suite-final\\run\\B-initial.png",
+      "tick": 5,
+      "hash": "7c602ae699ea6958ec50ba7bc1387429e9d8aa0ffabad1483be06d32df0d7dc8",
+      "matchedPaints": 1,
+      "verified": true
+    },
+    {
+      "name": "A-later",
+      "file": "D:\\focus-views\\experiments\\r3\\results\\20261024-r3\\suite-final\\run\\A-later.png",
+      "tick": 12,
+      "hash": "34c4ffe42da0d9f6b6441a358fe21d5dfe26cdff6a31b1bbc607051549a4fafa",
+      "matchedPaints": 1,
+      "verified": true
+    },
+    {
+      "name": "B-later",
+      "file": "D:\\focus-views\\experiments\\r3\\results\\20261024-r3\\suite-final\\run\\B-later.png",
+      "tick": 12,
+      "hash": "ff22ce3e47434739ef836aafbb10386a9ef23387f3a7f1260df3975ef078e7a9",
+      "matchedPaints": 1,
+      "verified": true
+    },
+    {
+      "name": "A-after-input",
+      "file": "D:\\focus-views\\experiments\\r3\\results\\20261024-r3\\suite-final\\run\\A-after-input.png",
+      "tick": 23,
+      "hash": "1c391b82c051ce3809b4fb6cdacab1580ed8f541d0e2a570ea4360dae5241dda",
+      "matchedPaints": 1,
+      "verified": true
+    },
+    {
+      "name": "B-after-input",
+      "file": "D:\\focus-views\\experiments\\r3\\results\\20261024-r3\\suite-final\\run\\B-after-input.png",
+      "tick": 23,
+      "hash": "db0838e2b48c95925522e8400c258c0808e4c94342f00e9146cdb7ca4e9cb7c3",
+      "matchedPaints": 1,
+      "verified": true
+    },
+    {
+      "name": "B-after-create-failure",
+      "file": "D:\\focus-views\\experiments\\r3\\results\\20261024-r3\\suite-final\\run\\B-after-create-failure.png",
+      "tick": 26,
+      "hash": "5fb2781cef05961eb69b61fa9afe001c3787b6ecbe236aec6b69dffe10b8b16b",
+      "matchedPaints": 1,
+      "verified": true
+    },
+    {
+      "name": "B-while-A-hung",
+      "file": "D:\\focus-views\\experiments\\r3\\results\\20261024-r3\\suite-final\\run\\B-while-A-hung.png",
+      "tick": 41,
+      "hash": "8fc1cbc2d5d7dad8b131ef5c493fec0c1fdf195d001a74640c0a5bd08bf934f9",
+      "matchedPaints": 1,
+      "verified": true
+    },
+    {
+      "name": "B-after-A-exit",
+      "file": "D:\\focus-views\\experiments\\r3\\results\\20261024-r3\\suite-final\\run\\B-after-A-exit.png",
+      "tick": 44,
+      "hash": "509e046df5b5ab3148d4b3bef5ffd4d6683a02cb614c99fbc6672bef5e16abd8",
+      "matchedPaints": 1,
+      "verified": true
+    }
+  ],
+  "harnessChecks": [
+    {
+      "name": "diagnostic-completed",
+      "passed": true
+    },
+    {
+      "name": "all.process-cleanup",
+      "passed": true
+    },
+    {
+      "name": "all.desktop-cleanup",
+      "passed": true
+    },
+    {
+      "name": "all.no-cleanup-errors",
+      "passed": true
+    },
+    {
+      "name": "distinct-desktops",
+      "passed": true
+    },
+    {
+      "name": "A.native-query-thread",
+      "passed": true
+    },
+    {
+      "name": "A.no-callback-failure",
+      "passed": true
+    },
+    {
+      "name": "B.native-query-thread",
+      "passed": true
+    },
+    {
+      "name": "B.no-callback-failure",
+      "passed": true
+    },
+    {
+      "name": "image-paint-provenance.A-initial",
+      "passed": true
+    },
+    {
+      "name": "image-paint-provenance.B-initial",
+      "passed": true
+    },
+    {
+      "name": "image-paint-provenance.A-later",
+      "passed": true
+    },
+    {
+      "name": "image-paint-provenance.B-later",
+      "passed": true
+    },
+    {
+      "name": "image-paint-provenance.A-after-input",
+      "passed": true
+    },
+    {
+      "name": "image-paint-provenance.B-after-input",
+      "passed": true
+    },
+    {
+      "name": "image-paint-provenance.B-after-create-failure",
+      "passed": true
+    },
+    {
+      "name": "rejected-frame-absent.A-hung-must-not-exist",
+      "passed": true
+    },
+    {
+      "name": "image-paint-provenance.B-while-A-hung",
+      "passed": true
+    },
+    {
+      "name": "rejected-frame-absent.A-after-resume",
+      "passed": true
+    },
+    {
+      "name": "rejected-frame-absent.A-exited-must-not-exist",
+      "passed": true
+    },
+    {
+      "name": "image-paint-provenance.B-after-A-exit",
+      "passed": true
+    },
+    {
+      "name": "modifier-verdict-matches-native-evidence",
+      "passed": true
+    },
+    {
+      "name": "modifier-message-arrived",
+      "passed": true
+    },
+    {
+      "name": "selection-verdict-matches-control",
+      "passed": true
+    },
+    {
+      "name": "routing-not-claimed",
+      "passed": true
+    },
+    {
+      "name": "manual-not-fabricated",
+      "passed": true
+    },
+    {
+      "name": "PrintWindow-block-exercised",
+      "passed": true
+    },
+    {
+      "name": "failed-instance-rollback",
+      "passed": true
+    },
+    {
+      "name": "external-input-not-claimed-static-pass",
+      "passed": true
+    },
+    {
+      "name": "A.actual-image-progress",
+      "passed": true
+    },
+    {
+      "name": "B.actual-image-progress",
+      "passed": true
+    },
+    {
+      "name": "probe.capture.completed",
+      "passed": true
+    },
+    {
+      "name": "probe.capture.process-cleanup",
+      "passed": true
+    },
+    {
+      "name": "probe.capture.desktop-cleanup",
+      "passed": true
+    },
+    {
+      "name": "probe.capture.no-cleanup-errors",
+      "passed": true
+    },
+    {
+      "name": "probe.modifier.completed",
+      "passed": true
+    },
+    {
+      "name": "probe.modifier.process-cleanup",
+      "passed": true
+    },
+    {
+      "name": "probe.modifier.desktop-cleanup",
+      "passed": true
+    },
+    {
+      "name": "probe.modifier.no-cleanup-errors",
+      "passed": true
+    },
+    {
+      "name": "probe.capture-recovery.completed",
+      "passed": true
+    },
+    {
+      "name": "probe.capture-recovery.process-cleanup",
+      "passed": true
+    },
+    {
+      "name": "probe.capture-recovery.desktop-cleanup",
+      "passed": true
+    },
+    {
+      "name": "probe.capture-recovery.no-cleanup-errors",
+      "passed": true
+    },
+    {
+      "name": "no-forbidden-native-input-calls",
+      "passed": true
+    },
+    {
+      "name": "no-owned-processes-left",
+      "passed": true
+    }
+  ],
+  "allHarnessChecksPassed": true,
+  "manualInteractionExecuted": false,
+  "guiSnapshotRestoreVerified": false,
+  "R3Complete": false
+}
