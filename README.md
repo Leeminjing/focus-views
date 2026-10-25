@@ -63,3 +63,7 @@ focus-views 是一个 Windows 原生隔离与恢复运行时研发项目，完�
 [R4-001](experiments/r4-001/README.md) 已实测应用通过真实 BUTTON 和 Win32 文件 API 生成成果，发布固定 A-v1/B-v1 与 A-v2，C 从 S0 恢复后读取和修改私有副本。常驻桥版本本体 8 次完成、2,859 项本体检查通过，120 个显式进程实例和 32 个 Desktop 清理确认；**整套脚本因旧回归的 PID 核对及 CreateProcessW 拒绝仍为失败**，不能称全绿。来源、Action、原始文件/哈希、真实图像及所有失败见 [分层报告](experiments/r4-001/results/20261025-r4001-resident/report.md)。SA/SB 非空撤销继续拒绝，没有完成完整 R4 或通用文件系统隔离。
 
 [GATE-002 系统诊断](experiments/r4-001-gate-002/report.md) 已按固定边界执行：本轮 3,024 次自然创建未复现拒绝；ETW 普通会话及内存/标记可用，但启用 Kernel-Process 返回访问拒绝。交付生命周期日志、44 个内存样本及 3,072 个标记，根因仍未确认，管理员独立采集未执行。原功能实现和成功回归证据不变，本轮未重跑功能回归，可靠性门禁保持未关闭。
+
+[R4-002a](experiments/r4-002a/README.md) 已实测通过单次标准 EDIT Undo 与修改后 SA/SB 的受限恢复：原 A/B 退出后，新 PID 恢复各自原始内存、栈、R10 和原生控件撤销语义，正常 CET CALL/RET、两次 Undo 及继续输入/绘制。20 个集成场景、2 次最小原生对照、1,674 项证据检查及 c001/b001/CET-002 完整回归通过，详见 [正式报告](experiments/r4-002a/results/20261025-r4002a/report.md)。仅全选后一次 ASCII 字符替换、固定窗口树与编译协作；完整 R4 尚未验收。
+
+[最后一次管理员 ETW 取证](experiments/r4-001-gate-002/results/20261025-admin-final/report.md) 已完成：仅 collector 提升，普通探针 64 次调试创建成功；Kernel-Process 可采集，但历史拒绝未复现、根因未确认。系统诊断停止追加次数，可靠性 gateClosed=false 与恢复机制研究分别判定。

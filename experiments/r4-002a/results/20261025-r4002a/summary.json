@@ -1,0 +1,6870 @@
+{
+  "allEvidenceChecksPassed": true,
+  "declaredSingleUndoAndTerminalRestorePassed": true,
+  "fullR4": false,
+  "generalGUIRestore": false,
+  "gateClosed": false,
+  "oldRegressions": "passed",
+  "manualHostTest": "not_executed",
+  "checks": [
+    {
+      "name": "native-undo-1.real-native-reference",
+      "passed": true
+    },
+    {
+      "name": "positive-1.completed",
+      "passed": true
+    },
+    {
+      "name": "positive-1.controller-assertions",
+      "passed": true
+    },
+    {
+      "name": "positive-1.CET-CFG-enabled",
+      "passed": true
+    },
+    {
+      "name": "positive-1.one-pump-exact-routing",
+      "passed": true
+    },
+    {
+      "name": "positive-1.source-S0-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "positive-1.source-changed-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "positive-1.A-prepared-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "positive-1.A-initial-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "positive-1.B-prepared-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "positive-1.B-initial-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "positive-1.B-before-A-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "positive-1.A-single-edit-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "positive-1.B-after-A-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "positive-1.A-before-B-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "positive-1.B-single-edit-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "positive-1.A-after-B-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "positive-1.A-SA-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "positive-1.B-SB-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "positive-1.RA-prepared-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "positive-1.RA-initial-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "positive-1.RB-prepared-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "positive-1.RB-initial-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "positive-1.RB-before-RA-Undo-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "positive-1.RA-undo1-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "positive-1.RA-undo2-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "positive-1.RA-continued-input-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "positive-1.RB-after-RA-Undo-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "positive-1.RA-before-RB-Undo-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "positive-1.RB-undo1-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "positive-1.RB-undo2-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "positive-1.RB-continued-input-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "positive-1.RA-after-RB-Undo-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "positive-1.S0.raw-computation",
+      "passed": true
+    },
+    {
+      "name": "positive-1.S0.fingerprints-immutable",
+      "passed": true
+    },
+    {
+      "name": "positive-1.S0.raw-memory-hash",
+      "passed": true
+    },
+    {
+      "name": "positive-1.S0.raw-stack-hash",
+      "passed": true
+    },
+    {
+      "name": "positive-1.S0.raw-context-hash",
+      "passed": true
+    },
+    {
+      "name": "positive-1.S0.raw-resources-hash",
+      "passed": true
+    },
+    {
+      "name": "positive-1.S0.raw-metadata-hash",
+      "passed": true
+    },
+    {
+      "name": "positive-1.S0.raw-returns-hash",
+      "passed": true
+    },
+    {
+      "name": "positive-1.S0.raw-abi-hash",
+      "passed": true
+    },
+    {
+      "name": "positive-1.S0.raw-executable-hash",
+      "passed": true
+    },
+    {
+      "name": "positive-1.S0.whole-hash",
+      "passed": true
+    },
+    {
+      "name": "positive-1.A.execution-not-replayed",
+      "passed": true
+    },
+    {
+      "name": "positive-1.A.actual-memory-and-counter",
+      "passed": true
+    },
+    {
+      "name": "positive-1.A.target-owned-CET",
+      "passed": true
+    },
+    {
+      "name": "positive-1.A.declared-HWND-preimage-40",
+      "passed": true
+    },
+    {
+      "name": "positive-1.A.declared-HWND-preimage-320",
+      "passed": true
+    },
+    {
+      "name": "positive-1.A.declared-HWND-preimage-328",
+      "passed": true
+    },
+    {
+      "name": "positive-1.A.declared-HWND-preimage-176",
+      "passed": true
+    },
+    {
+      "name": "positive-1.A.declared-HWND-preimage-168",
+      "passed": true
+    },
+    {
+      "name": "positive-1.A.declared-HWND-preimage-40",
+      "passed": true
+    },
+    {
+      "name": "positive-1.A.declared-HWND-preimage-48",
+      "passed": true
+    },
+    {
+      "name": "positive-1.A.only-declared-relocations",
+      "passed": true
+    },
+    {
+      "name": "positive-1.B.execution-not-replayed",
+      "passed": true
+    },
+    {
+      "name": "positive-1.B.actual-memory-and-counter",
+      "passed": true
+    },
+    {
+      "name": "positive-1.B.target-owned-CET",
+      "passed": true
+    },
+    {
+      "name": "positive-1.B.declared-HWND-preimage-40",
+      "passed": true
+    },
+    {
+      "name": "positive-1.B.declared-HWND-preimage-320",
+      "passed": true
+    },
+    {
+      "name": "positive-1.B.declared-HWND-preimage-328",
+      "passed": true
+    },
+    {
+      "name": "positive-1.B.declared-HWND-preimage-176",
+      "passed": true
+    },
+    {
+      "name": "positive-1.B.declared-HWND-preimage-168",
+      "passed": true
+    },
+    {
+      "name": "positive-1.B.declared-HWND-preimage-40",
+      "passed": true
+    },
+    {
+      "name": "positive-1.B.declared-HWND-preimage-48",
+      "passed": true
+    },
+    {
+      "name": "positive-1.B.only-declared-relocations",
+      "passed": true
+    },
+    {
+      "name": "positive-1.SA.raw-computation",
+      "passed": true
+    },
+    {
+      "name": "positive-1.SA.fingerprints-immutable",
+      "passed": true
+    },
+    {
+      "name": "positive-1.SA.raw-memory-hash",
+      "passed": true
+    },
+    {
+      "name": "positive-1.SA.raw-stack-hash",
+      "passed": true
+    },
+    {
+      "name": "positive-1.SA.raw-context-hash",
+      "passed": true
+    },
+    {
+      "name": "positive-1.SA.raw-resources-hash",
+      "passed": true
+    },
+    {
+      "name": "positive-1.SA.raw-metadata-hash",
+      "passed": true
+    },
+    {
+      "name": "positive-1.SA.raw-returns-hash",
+      "passed": true
+    },
+    {
+      "name": "positive-1.SA.raw-abi-hash",
+      "passed": true
+    },
+    {
+      "name": "positive-1.SA.raw-executable-hash",
+      "passed": true
+    },
+    {
+      "name": "positive-1.SA.whole-hash",
+      "passed": true
+    },
+    {
+      "name": "positive-1.RA.execution-not-replayed",
+      "passed": true
+    },
+    {
+      "name": "positive-1.RA.actual-memory-and-counter",
+      "passed": true
+    },
+    {
+      "name": "positive-1.RA.target-owned-CET",
+      "passed": true
+    },
+    {
+      "name": "positive-1.RA.declared-HWND-preimage-40",
+      "passed": true
+    },
+    {
+      "name": "positive-1.RA.declared-HWND-preimage-320",
+      "passed": true
+    },
+    {
+      "name": "positive-1.RA.declared-HWND-preimage-328",
+      "passed": true
+    },
+    {
+      "name": "positive-1.RA.declared-HWND-preimage-176",
+      "passed": true
+    },
+    {
+      "name": "positive-1.RA.declared-HWND-preimage-168",
+      "passed": true
+    },
+    {
+      "name": "positive-1.RA.declared-HWND-preimage-40",
+      "passed": true
+    },
+    {
+      "name": "positive-1.RA.declared-HWND-preimage-48",
+      "passed": true
+    },
+    {
+      "name": "positive-1.RA.only-declared-relocations",
+      "passed": true
+    },
+    {
+      "name": "positive-1.SB.raw-computation",
+      "passed": true
+    },
+    {
+      "name": "positive-1.SB.fingerprints-immutable",
+      "passed": true
+    },
+    {
+      "name": "positive-1.SB.raw-memory-hash",
+      "passed": true
+    },
+    {
+      "name": "positive-1.SB.raw-stack-hash",
+      "passed": true
+    },
+    {
+      "name": "positive-1.SB.raw-context-hash",
+      "passed": true
+    },
+    {
+      "name": "positive-1.SB.raw-resources-hash",
+      "passed": true
+    },
+    {
+      "name": "positive-1.SB.raw-metadata-hash",
+      "passed": true
+    },
+    {
+      "name": "positive-1.SB.raw-returns-hash",
+      "passed": true
+    },
+    {
+      "name": "positive-1.SB.raw-abi-hash",
+      "passed": true
+    },
+    {
+      "name": "positive-1.SB.raw-executable-hash",
+      "passed": true
+    },
+    {
+      "name": "positive-1.SB.whole-hash",
+      "passed": true
+    },
+    {
+      "name": "positive-1.RB.execution-not-replayed",
+      "passed": true
+    },
+    {
+      "name": "positive-1.RB.actual-memory-and-counter",
+      "passed": true
+    },
+    {
+      "name": "positive-1.RB.target-owned-CET",
+      "passed": true
+    },
+    {
+      "name": "positive-1.RB.declared-HWND-preimage-40",
+      "passed": true
+    },
+    {
+      "name": "positive-1.RB.declared-HWND-preimage-320",
+      "passed": true
+    },
+    {
+      "name": "positive-1.RB.declared-HWND-preimage-328",
+      "passed": true
+    },
+    {
+      "name": "positive-1.RB.declared-HWND-preimage-176",
+      "passed": true
+    },
+    {
+      "name": "positive-1.RB.declared-HWND-preimage-168",
+      "passed": true
+    },
+    {
+      "name": "positive-1.RB.declared-HWND-preimage-40",
+      "passed": true
+    },
+    {
+      "name": "positive-1.RB.declared-HWND-preimage-48",
+      "passed": true
+    },
+    {
+      "name": "positive-1.RB.only-declared-relocations",
+      "passed": true
+    },
+    {
+      "name": "positive-1.no-target-initialization",
+      "passed": true
+    },
+    {
+      "name": "positive-1.source-S0-fresh-GDI-pixels",
+      "passed": true
+    },
+    {
+      "name": "positive-1.A-initial-fresh-GDI-pixels",
+      "passed": true
+    },
+    {
+      "name": "positive-1.B-initial-fresh-GDI-pixels",
+      "passed": true
+    },
+    {
+      "name": "positive-1.A-single-edit-fresh-GDI-pixels",
+      "passed": true
+    },
+    {
+      "name": "positive-1.B-single-edit-fresh-GDI-pixels",
+      "passed": true
+    },
+    {
+      "name": "positive-1.A-SA-fresh-GDI-pixels",
+      "passed": true
+    },
+    {
+      "name": "positive-1.B-SB-fresh-GDI-pixels",
+      "passed": true
+    },
+    {
+      "name": "positive-1.RA-initial-fresh-GDI-pixels",
+      "passed": true
+    },
+    {
+      "name": "positive-1.RB-initial-fresh-GDI-pixels",
+      "passed": true
+    },
+    {
+      "name": "positive-1.RA-undo1-fresh-GDI-pixels",
+      "passed": true
+    },
+    {
+      "name": "positive-1.RA-undo2-fresh-GDI-pixels",
+      "passed": true
+    },
+    {
+      "name": "positive-1.RA-continued-input-fresh-GDI-pixels",
+      "passed": true
+    },
+    {
+      "name": "positive-1.RB-undo1-fresh-GDI-pixels",
+      "passed": true
+    },
+    {
+      "name": "positive-1.RB-undo2-fresh-GDI-pixels",
+      "passed": true
+    },
+    {
+      "name": "positive-1.RB-continued-input-fresh-GDI-pixels",
+      "passed": true
+    },
+    {
+      "name": "positive-1.only-four-restored-Views",
+      "passed": true
+    },
+    {
+      "name": "positive-1.source-exit-before-restore",
+      "passed": true
+    },
+    {
+      "name": "positive-1.RA.old-exit-first",
+      "passed": true
+    },
+    {
+      "name": "positive-1.RA.native-undo-current-state",
+      "passed": true
+    },
+    {
+      "name": "positive-1.RA.native-EDIT-pixels",
+      "passed": true
+    },
+    {
+      "name": "positive-1.RB.old-exit-first",
+      "passed": true
+    },
+    {
+      "name": "positive-1.RB.native-undo-current-state",
+      "passed": true
+    },
+    {
+      "name": "positive-1.RB.native-EDIT-pixels",
+      "passed": true
+    },
+    {
+      "name": "positive-1.scope-preserved",
+      "passed": true
+    },
+    {
+      "name": "positive-1.owned-resources-cleaned",
+      "passed": true
+    },
+    {
+      "name": "multiple-1.completed",
+      "passed": true
+    },
+    {
+      "name": "multiple-1.controller-assertions",
+      "passed": true
+    },
+    {
+      "name": "multiple-1.CET-CFG-enabled",
+      "passed": true
+    },
+    {
+      "name": "multiple-1.one-pump-exact-routing",
+      "passed": true
+    },
+    {
+      "name": "multiple-1.source-S0-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "multiple-1.source-changed-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "multiple-1.A-prepared-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "multiple-1.A-initial-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "multiple-1.B-prepared-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "multiple-1.B-initial-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "multiple-1.B-before-A-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "multiple-1.A-single-edit-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "multiple-1.B-after-A-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "multiple-1.A-before-B-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "multiple-1.B-single-edit-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "multiple-1.A-after-B-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "multiple-1.A-rejected-terminal-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "multiple-1.S0.raw-computation",
+      "passed": true
+    },
+    {
+      "name": "multiple-1.S0.fingerprints-immutable",
+      "passed": true
+    },
+    {
+      "name": "multiple-1.S0.raw-memory-hash",
+      "passed": true
+    },
+    {
+      "name": "multiple-1.S0.raw-stack-hash",
+      "passed": true
+    },
+    {
+      "name": "multiple-1.S0.raw-context-hash",
+      "passed": true
+    },
+    {
+      "name": "multiple-1.S0.raw-resources-hash",
+      "passed": true
+    },
+    {
+      "name": "multiple-1.S0.raw-metadata-hash",
+      "passed": true
+    },
+    {
+      "name": "multiple-1.S0.raw-returns-hash",
+      "passed": true
+    },
+    {
+      "name": "multiple-1.S0.raw-abi-hash",
+      "passed": true
+    },
+    {
+      "name": "multiple-1.S0.raw-executable-hash",
+      "passed": true
+    },
+    {
+      "name": "multiple-1.S0.whole-hash",
+      "passed": true
+    },
+    {
+      "name": "multiple-1.A.execution-not-replayed",
+      "passed": true
+    },
+    {
+      "name": "multiple-1.A.actual-memory-and-counter",
+      "passed": true
+    },
+    {
+      "name": "multiple-1.A.target-owned-CET",
+      "passed": true
+    },
+    {
+      "name": "multiple-1.A.declared-HWND-preimage-40",
+      "passed": true
+    },
+    {
+      "name": "multiple-1.A.declared-HWND-preimage-320",
+      "passed": true
+    },
+    {
+      "name": "multiple-1.A.declared-HWND-preimage-328",
+      "passed": true
+    },
+    {
+      "name": "multiple-1.A.declared-HWND-preimage-176",
+      "passed": true
+    },
+    {
+      "name": "multiple-1.A.declared-HWND-preimage-168",
+      "passed": true
+    },
+    {
+      "name": "multiple-1.A.declared-HWND-preimage-40",
+      "passed": true
+    },
+    {
+      "name": "multiple-1.A.declared-HWND-preimage-48",
+      "passed": true
+    },
+    {
+      "name": "multiple-1.A.only-declared-relocations",
+      "passed": true
+    },
+    {
+      "name": "multiple-1.B.execution-not-replayed",
+      "passed": true
+    },
+    {
+      "name": "multiple-1.B.actual-memory-and-counter",
+      "passed": true
+    },
+    {
+      "name": "multiple-1.B.target-owned-CET",
+      "passed": true
+    },
+    {
+      "name": "multiple-1.B.declared-HWND-preimage-40",
+      "passed": true
+    },
+    {
+      "name": "multiple-1.B.declared-HWND-preimage-320",
+      "passed": true
+    },
+    {
+      "name": "multiple-1.B.declared-HWND-preimage-328",
+      "passed": true
+    },
+    {
+      "name": "multiple-1.B.declared-HWND-preimage-176",
+      "passed": true
+    },
+    {
+      "name": "multiple-1.B.declared-HWND-preimage-168",
+      "passed": true
+    },
+    {
+      "name": "multiple-1.B.declared-HWND-preimage-40",
+      "passed": true
+    },
+    {
+      "name": "multiple-1.B.declared-HWND-preimage-48",
+      "passed": true
+    },
+    {
+      "name": "multiple-1.B.only-declared-relocations",
+      "passed": true
+    },
+    {
+      "name": "multiple-1.no-target-initialization",
+      "passed": true
+    },
+    {
+      "name": "multiple-1.source-S0-fresh-GDI-pixels",
+      "passed": true
+    },
+    {
+      "name": "multiple-1.A-initial-fresh-GDI-pixels",
+      "passed": true
+    },
+    {
+      "name": "multiple-1.B-initial-fresh-GDI-pixels",
+      "passed": true
+    },
+    {
+      "name": "multiple-1.A-single-edit-fresh-GDI-pixels",
+      "passed": true
+    },
+    {
+      "name": "multiple-1.B-single-edit-fresh-GDI-pixels",
+      "passed": true
+    },
+    {
+      "name": "multiple-1.A-after-rejection-fresh-GDI-pixels",
+      "passed": true
+    },
+    {
+      "name": "multiple-1.B-after-rejection-fresh-GDI-pixels",
+      "passed": true
+    },
+    {
+      "name": "multiple-1.rejection-not-capability-pass",
+      "passed": true
+    },
+    {
+      "name": "multiple-1.scope-preserved",
+      "passed": true
+    },
+    {
+      "name": "multiple-1.owned-resources-cleaned",
+      "passed": true
+    },
+    {
+      "name": "IME-1.completed",
+      "passed": true
+    },
+    {
+      "name": "IME-1.controller-assertions",
+      "passed": true
+    },
+    {
+      "name": "IME-1.CET-CFG-enabled",
+      "passed": true
+    },
+    {
+      "name": "IME-1.one-pump-exact-routing",
+      "passed": true
+    },
+    {
+      "name": "IME-1.source-S0-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "IME-1.source-changed-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "IME-1.A-prepared-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "IME-1.A-initial-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "IME-1.B-prepared-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "IME-1.B-initial-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "IME-1.B-before-A-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "IME-1.A-single-edit-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "IME-1.B-after-A-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "IME-1.A-before-B-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "IME-1.B-single-edit-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "IME-1.A-after-B-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "IME-1.A-synthetic-IME-guard-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "IME-1.A-rejected-terminal-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "IME-1.S0.raw-computation",
+      "passed": true
+    },
+    {
+      "name": "IME-1.S0.fingerprints-immutable",
+      "passed": true
+    },
+    {
+      "name": "IME-1.S0.raw-memory-hash",
+      "passed": true
+    },
+    {
+      "name": "IME-1.S0.raw-stack-hash",
+      "passed": true
+    },
+    {
+      "name": "IME-1.S0.raw-context-hash",
+      "passed": true
+    },
+    {
+      "name": "IME-1.S0.raw-resources-hash",
+      "passed": true
+    },
+    {
+      "name": "IME-1.S0.raw-metadata-hash",
+      "passed": true
+    },
+    {
+      "name": "IME-1.S0.raw-returns-hash",
+      "passed": true
+    },
+    {
+      "name": "IME-1.S0.raw-abi-hash",
+      "passed": true
+    },
+    {
+      "name": "IME-1.S0.raw-executable-hash",
+      "passed": true
+    },
+    {
+      "name": "IME-1.S0.whole-hash",
+      "passed": true
+    },
+    {
+      "name": "IME-1.A.execution-not-replayed",
+      "passed": true
+    },
+    {
+      "name": "IME-1.A.actual-memory-and-counter",
+      "passed": true
+    },
+    {
+      "name": "IME-1.A.target-owned-CET",
+      "passed": true
+    },
+    {
+      "name": "IME-1.A.declared-HWND-preimage-40",
+      "passed": true
+    },
+    {
+      "name": "IME-1.A.declared-HWND-preimage-320",
+      "passed": true
+    },
+    {
+      "name": "IME-1.A.declared-HWND-preimage-328",
+      "passed": true
+    },
+    {
+      "name": "IME-1.A.declared-HWND-preimage-176",
+      "passed": true
+    },
+    {
+      "name": "IME-1.A.declared-HWND-preimage-168",
+      "passed": true
+    },
+    {
+      "name": "IME-1.A.declared-HWND-preimage-40",
+      "passed": true
+    },
+    {
+      "name": "IME-1.A.declared-HWND-preimage-48",
+      "passed": true
+    },
+    {
+      "name": "IME-1.A.only-declared-relocations",
+      "passed": true
+    },
+    {
+      "name": "IME-1.B.execution-not-replayed",
+      "passed": true
+    },
+    {
+      "name": "IME-1.B.actual-memory-and-counter",
+      "passed": true
+    },
+    {
+      "name": "IME-1.B.target-owned-CET",
+      "passed": true
+    },
+    {
+      "name": "IME-1.B.declared-HWND-preimage-40",
+      "passed": true
+    },
+    {
+      "name": "IME-1.B.declared-HWND-preimage-320",
+      "passed": true
+    },
+    {
+      "name": "IME-1.B.declared-HWND-preimage-328",
+      "passed": true
+    },
+    {
+      "name": "IME-1.B.declared-HWND-preimage-176",
+      "passed": true
+    },
+    {
+      "name": "IME-1.B.declared-HWND-preimage-168",
+      "passed": true
+    },
+    {
+      "name": "IME-1.B.declared-HWND-preimage-40",
+      "passed": true
+    },
+    {
+      "name": "IME-1.B.declared-HWND-preimage-48",
+      "passed": true
+    },
+    {
+      "name": "IME-1.B.only-declared-relocations",
+      "passed": true
+    },
+    {
+      "name": "IME-1.no-target-initialization",
+      "passed": true
+    },
+    {
+      "name": "IME-1.source-S0-fresh-GDI-pixels",
+      "passed": true
+    },
+    {
+      "name": "IME-1.A-initial-fresh-GDI-pixels",
+      "passed": true
+    },
+    {
+      "name": "IME-1.B-initial-fresh-GDI-pixels",
+      "passed": true
+    },
+    {
+      "name": "IME-1.A-single-edit-fresh-GDI-pixels",
+      "passed": true
+    },
+    {
+      "name": "IME-1.B-single-edit-fresh-GDI-pixels",
+      "passed": true
+    },
+    {
+      "name": "IME-1.A-after-rejection-fresh-GDI-pixels",
+      "passed": true
+    },
+    {
+      "name": "IME-1.B-after-rejection-fresh-GDI-pixels",
+      "passed": true
+    },
+    {
+      "name": "IME-1.rejection-not-capability-pass",
+      "passed": true
+    },
+    {
+      "name": "IME-1.scope-preserved",
+      "passed": true
+    },
+    {
+      "name": "IME-1.owned-resources-cleaned",
+      "passed": true
+    },
+    {
+      "name": "no-undo-1.completed",
+      "passed": true
+    },
+    {
+      "name": "no-undo-1.controller-assertions",
+      "passed": true
+    },
+    {
+      "name": "no-undo-1.CET-CFG-enabled",
+      "passed": true
+    },
+    {
+      "name": "no-undo-1.one-pump-exact-routing",
+      "passed": true
+    },
+    {
+      "name": "no-undo-1.source-S0-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "no-undo-1.source-changed-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "no-undo-1.A-prepared-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "no-undo-1.A-initial-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "no-undo-1.B-prepared-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "no-undo-1.B-initial-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "no-undo-1.B-before-A-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "no-undo-1.A-single-edit-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "no-undo-1.B-after-A-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "no-undo-1.A-before-B-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "no-undo-1.B-single-edit-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "no-undo-1.A-after-B-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "no-undo-1.A-SA-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "no-undo-1.B-SB-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "no-undo-1.RA-prepared-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "no-undo-1.S0.raw-computation",
+      "passed": true
+    },
+    {
+      "name": "no-undo-1.S0.fingerprints-immutable",
+      "passed": true
+    },
+    {
+      "name": "no-undo-1.S0.raw-memory-hash",
+      "passed": true
+    },
+    {
+      "name": "no-undo-1.S0.raw-stack-hash",
+      "passed": true
+    },
+    {
+      "name": "no-undo-1.S0.raw-context-hash",
+      "passed": true
+    },
+    {
+      "name": "no-undo-1.S0.raw-resources-hash",
+      "passed": true
+    },
+    {
+      "name": "no-undo-1.S0.raw-metadata-hash",
+      "passed": true
+    },
+    {
+      "name": "no-undo-1.S0.raw-returns-hash",
+      "passed": true
+    },
+    {
+      "name": "no-undo-1.S0.raw-abi-hash",
+      "passed": true
+    },
+    {
+      "name": "no-undo-1.S0.raw-executable-hash",
+      "passed": true
+    },
+    {
+      "name": "no-undo-1.S0.whole-hash",
+      "passed": true
+    },
+    {
+      "name": "no-undo-1.A.execution-not-replayed",
+      "passed": true
+    },
+    {
+      "name": "no-undo-1.A.actual-memory-and-counter",
+      "passed": true
+    },
+    {
+      "name": "no-undo-1.A.target-owned-CET",
+      "passed": true
+    },
+    {
+      "name": "no-undo-1.A.declared-HWND-preimage-40",
+      "passed": true
+    },
+    {
+      "name": "no-undo-1.A.declared-HWND-preimage-320",
+      "passed": true
+    },
+    {
+      "name": "no-undo-1.A.declared-HWND-preimage-328",
+      "passed": true
+    },
+    {
+      "name": "no-undo-1.A.declared-HWND-preimage-176",
+      "passed": true
+    },
+    {
+      "name": "no-undo-1.A.declared-HWND-preimage-168",
+      "passed": true
+    },
+    {
+      "name": "no-undo-1.A.declared-HWND-preimage-40",
+      "passed": true
+    },
+    {
+      "name": "no-undo-1.A.declared-HWND-preimage-48",
+      "passed": true
+    },
+    {
+      "name": "no-undo-1.A.only-declared-relocations",
+      "passed": true
+    },
+    {
+      "name": "no-undo-1.B.execution-not-replayed",
+      "passed": true
+    },
+    {
+      "name": "no-undo-1.B.actual-memory-and-counter",
+      "passed": true
+    },
+    {
+      "name": "no-undo-1.B.target-owned-CET",
+      "passed": true
+    },
+    {
+      "name": "no-undo-1.B.declared-HWND-preimage-40",
+      "passed": true
+    },
+    {
+      "name": "no-undo-1.B.declared-HWND-preimage-320",
+      "passed": true
+    },
+    {
+      "name": "no-undo-1.B.declared-HWND-preimage-328",
+      "passed": true
+    },
+    {
+      "name": "no-undo-1.B.declared-HWND-preimage-176",
+      "passed": true
+    },
+    {
+      "name": "no-undo-1.B.declared-HWND-preimage-168",
+      "passed": true
+    },
+    {
+      "name": "no-undo-1.B.declared-HWND-preimage-40",
+      "passed": true
+    },
+    {
+      "name": "no-undo-1.B.declared-HWND-preimage-48",
+      "passed": true
+    },
+    {
+      "name": "no-undo-1.B.only-declared-relocations",
+      "passed": true
+    },
+    {
+      "name": "no-undo-1.SA.raw-computation",
+      "passed": true
+    },
+    {
+      "name": "no-undo-1.SA.fingerprints-immutable",
+      "passed": true
+    },
+    {
+      "name": "no-undo-1.SA.raw-memory-hash",
+      "passed": true
+    },
+    {
+      "name": "no-undo-1.SA.raw-stack-hash",
+      "passed": true
+    },
+    {
+      "name": "no-undo-1.SA.raw-context-hash",
+      "passed": true
+    },
+    {
+      "name": "no-undo-1.SA.raw-resources-hash",
+      "passed": true
+    },
+    {
+      "name": "no-undo-1.SA.raw-metadata-hash",
+      "passed": true
+    },
+    {
+      "name": "no-undo-1.SA.raw-returns-hash",
+      "passed": true
+    },
+    {
+      "name": "no-undo-1.SA.raw-abi-hash",
+      "passed": true
+    },
+    {
+      "name": "no-undo-1.SA.raw-executable-hash",
+      "passed": true
+    },
+    {
+      "name": "no-undo-1.SA.whole-hash",
+      "passed": true
+    },
+    {
+      "name": "no-undo-1.SB.raw-computation",
+      "passed": true
+    },
+    {
+      "name": "no-undo-1.SB.fingerprints-immutable",
+      "passed": true
+    },
+    {
+      "name": "no-undo-1.SB.raw-memory-hash",
+      "passed": true
+    },
+    {
+      "name": "no-undo-1.SB.raw-stack-hash",
+      "passed": true
+    },
+    {
+      "name": "no-undo-1.SB.raw-context-hash",
+      "passed": true
+    },
+    {
+      "name": "no-undo-1.SB.raw-resources-hash",
+      "passed": true
+    },
+    {
+      "name": "no-undo-1.SB.raw-metadata-hash",
+      "passed": true
+    },
+    {
+      "name": "no-undo-1.SB.raw-returns-hash",
+      "passed": true
+    },
+    {
+      "name": "no-undo-1.SB.raw-abi-hash",
+      "passed": true
+    },
+    {
+      "name": "no-undo-1.SB.raw-executable-hash",
+      "passed": true
+    },
+    {
+      "name": "no-undo-1.SB.whole-hash",
+      "passed": true
+    },
+    {
+      "name": "no-undo-1.no-target-initialization",
+      "passed": true
+    },
+    {
+      "name": "no-undo-1.source-S0-fresh-GDI-pixels",
+      "passed": true
+    },
+    {
+      "name": "no-undo-1.A-initial-fresh-GDI-pixels",
+      "passed": true
+    },
+    {
+      "name": "no-undo-1.B-initial-fresh-GDI-pixels",
+      "passed": true
+    },
+    {
+      "name": "no-undo-1.A-single-edit-fresh-GDI-pixels",
+      "passed": true
+    },
+    {
+      "name": "no-undo-1.B-single-edit-fresh-GDI-pixels",
+      "passed": true
+    },
+    {
+      "name": "no-undo-1.A-SA-fresh-GDI-pixels",
+      "passed": true
+    },
+    {
+      "name": "no-undo-1.B-SB-fresh-GDI-pixels",
+      "passed": true
+    },
+    {
+      "name": "no-undo-1.actual-failed-native-readback",
+      "passed": true
+    },
+    {
+      "name": "no-undo-1.rejection-not-capability-pass",
+      "passed": true
+    },
+    {
+      "name": "no-undo-1.scope-preserved",
+      "passed": true
+    },
+    {
+      "name": "no-undo-1.owned-resources-cleaned",
+      "passed": true
+    },
+    {
+      "name": "stack-1.completed",
+      "passed": true
+    },
+    {
+      "name": "stack-1.controller-assertions",
+      "passed": true
+    },
+    {
+      "name": "stack-1.CET-CFG-enabled",
+      "passed": true
+    },
+    {
+      "name": "stack-1.one-pump-exact-routing",
+      "passed": true
+    },
+    {
+      "name": "stack-1.source-S0-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "stack-1.source-changed-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "stack-1.A-prepared-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "stack-1.A-initial-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "stack-1.B-prepared-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "stack-1.B-initial-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "stack-1.B-before-A-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "stack-1.A-single-edit-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "stack-1.B-after-A-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "stack-1.A-before-B-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "stack-1.B-single-edit-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "stack-1.A-after-B-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "stack-1.A-SA-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "stack-1.B-SB-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "stack-1.RA-prepared-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "stack-1.S0.raw-computation",
+      "passed": true
+    },
+    {
+      "name": "stack-1.S0.fingerprints-immutable",
+      "passed": true
+    },
+    {
+      "name": "stack-1.S0.raw-memory-hash",
+      "passed": true
+    },
+    {
+      "name": "stack-1.S0.raw-stack-hash",
+      "passed": true
+    },
+    {
+      "name": "stack-1.S0.raw-context-hash",
+      "passed": true
+    },
+    {
+      "name": "stack-1.S0.raw-resources-hash",
+      "passed": true
+    },
+    {
+      "name": "stack-1.S0.raw-metadata-hash",
+      "passed": true
+    },
+    {
+      "name": "stack-1.S0.raw-returns-hash",
+      "passed": true
+    },
+    {
+      "name": "stack-1.S0.raw-abi-hash",
+      "passed": true
+    },
+    {
+      "name": "stack-1.S0.raw-executable-hash",
+      "passed": true
+    },
+    {
+      "name": "stack-1.S0.whole-hash",
+      "passed": true
+    },
+    {
+      "name": "stack-1.A.execution-not-replayed",
+      "passed": true
+    },
+    {
+      "name": "stack-1.A.actual-memory-and-counter",
+      "passed": true
+    },
+    {
+      "name": "stack-1.A.target-owned-CET",
+      "passed": true
+    },
+    {
+      "name": "stack-1.A.declared-HWND-preimage-40",
+      "passed": true
+    },
+    {
+      "name": "stack-1.A.declared-HWND-preimage-320",
+      "passed": true
+    },
+    {
+      "name": "stack-1.A.declared-HWND-preimage-328",
+      "passed": true
+    },
+    {
+      "name": "stack-1.A.declared-HWND-preimage-176",
+      "passed": true
+    },
+    {
+      "name": "stack-1.A.declared-HWND-preimage-168",
+      "passed": true
+    },
+    {
+      "name": "stack-1.A.declared-HWND-preimage-40",
+      "passed": true
+    },
+    {
+      "name": "stack-1.A.declared-HWND-preimage-48",
+      "passed": true
+    },
+    {
+      "name": "stack-1.A.only-declared-relocations",
+      "passed": true
+    },
+    {
+      "name": "stack-1.B.execution-not-replayed",
+      "passed": true
+    },
+    {
+      "name": "stack-1.B.actual-memory-and-counter",
+      "passed": true
+    },
+    {
+      "name": "stack-1.B.target-owned-CET",
+      "passed": true
+    },
+    {
+      "name": "stack-1.B.declared-HWND-preimage-40",
+      "passed": true
+    },
+    {
+      "name": "stack-1.B.declared-HWND-preimage-320",
+      "passed": true
+    },
+    {
+      "name": "stack-1.B.declared-HWND-preimage-328",
+      "passed": true
+    },
+    {
+      "name": "stack-1.B.declared-HWND-preimage-176",
+      "passed": true
+    },
+    {
+      "name": "stack-1.B.declared-HWND-preimage-168",
+      "passed": true
+    },
+    {
+      "name": "stack-1.B.declared-HWND-preimage-40",
+      "passed": true
+    },
+    {
+      "name": "stack-1.B.declared-HWND-preimage-48",
+      "passed": true
+    },
+    {
+      "name": "stack-1.B.only-declared-relocations",
+      "passed": true
+    },
+    {
+      "name": "stack-1.SA.raw-computation",
+      "passed": true
+    },
+    {
+      "name": "stack-1.SA.fingerprints-immutable",
+      "passed": true
+    },
+    {
+      "name": "stack-1.SA.raw-memory-hash",
+      "passed": true
+    },
+    {
+      "name": "stack-1.SA.raw-stack-hash",
+      "passed": true
+    },
+    {
+      "name": "stack-1.SA.raw-context-hash",
+      "passed": true
+    },
+    {
+      "name": "stack-1.SA.raw-resources-hash",
+      "passed": true
+    },
+    {
+      "name": "stack-1.SA.raw-metadata-hash",
+      "passed": true
+    },
+    {
+      "name": "stack-1.SA.raw-returns-hash",
+      "passed": true
+    },
+    {
+      "name": "stack-1.SA.raw-abi-hash",
+      "passed": true
+    },
+    {
+      "name": "stack-1.SA.raw-executable-hash",
+      "passed": true
+    },
+    {
+      "name": "stack-1.SA.whole-hash",
+      "passed": true
+    },
+    {
+      "name": "stack-1.RA.execution-not-replayed",
+      "passed": true
+    },
+    {
+      "name": "stack-1.SB.raw-computation",
+      "passed": true
+    },
+    {
+      "name": "stack-1.SB.fingerprints-immutable",
+      "passed": true
+    },
+    {
+      "name": "stack-1.SB.raw-memory-hash",
+      "passed": true
+    },
+    {
+      "name": "stack-1.SB.raw-stack-hash",
+      "passed": true
+    },
+    {
+      "name": "stack-1.SB.raw-context-hash",
+      "passed": true
+    },
+    {
+      "name": "stack-1.SB.raw-resources-hash",
+      "passed": true
+    },
+    {
+      "name": "stack-1.SB.raw-metadata-hash",
+      "passed": true
+    },
+    {
+      "name": "stack-1.SB.raw-returns-hash",
+      "passed": true
+    },
+    {
+      "name": "stack-1.SB.raw-abi-hash",
+      "passed": true
+    },
+    {
+      "name": "stack-1.SB.raw-executable-hash",
+      "passed": true
+    },
+    {
+      "name": "stack-1.SB.whole-hash",
+      "passed": true
+    },
+    {
+      "name": "stack-1.no-target-initialization",
+      "passed": true
+    },
+    {
+      "name": "stack-1.source-S0-fresh-GDI-pixels",
+      "passed": true
+    },
+    {
+      "name": "stack-1.A-initial-fresh-GDI-pixels",
+      "passed": true
+    },
+    {
+      "name": "stack-1.B-initial-fresh-GDI-pixels",
+      "passed": true
+    },
+    {
+      "name": "stack-1.A-single-edit-fresh-GDI-pixels",
+      "passed": true
+    },
+    {
+      "name": "stack-1.B-single-edit-fresh-GDI-pixels",
+      "passed": true
+    },
+    {
+      "name": "stack-1.A-SA-fresh-GDI-pixels",
+      "passed": true
+    },
+    {
+      "name": "stack-1.B-SB-fresh-GDI-pixels",
+      "passed": true
+    },
+    {
+      "name": "stack-1.rejection-not-capability-pass",
+      "passed": true
+    },
+    {
+      "name": "stack-1.scope-preserved",
+      "passed": true
+    },
+    {
+      "name": "stack-1.owned-resources-cleaned",
+      "passed": true
+    },
+    {
+      "name": "register-1.completed",
+      "passed": true
+    },
+    {
+      "name": "register-1.controller-assertions",
+      "passed": true
+    },
+    {
+      "name": "register-1.CET-CFG-enabled",
+      "passed": true
+    },
+    {
+      "name": "register-1.one-pump-exact-routing",
+      "passed": true
+    },
+    {
+      "name": "register-1.source-S0-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "register-1.source-changed-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "register-1.A-prepared-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "register-1.A-initial-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "register-1.B-prepared-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "register-1.B-initial-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "register-1.B-before-A-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "register-1.A-single-edit-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "register-1.B-after-A-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "register-1.A-before-B-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "register-1.B-single-edit-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "register-1.A-after-B-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "register-1.A-SA-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "register-1.B-SB-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "register-1.RA-prepared-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "register-1.S0.raw-computation",
+      "passed": true
+    },
+    {
+      "name": "register-1.S0.fingerprints-immutable",
+      "passed": true
+    },
+    {
+      "name": "register-1.S0.raw-memory-hash",
+      "passed": true
+    },
+    {
+      "name": "register-1.S0.raw-stack-hash",
+      "passed": true
+    },
+    {
+      "name": "register-1.S0.raw-context-hash",
+      "passed": true
+    },
+    {
+      "name": "register-1.S0.raw-resources-hash",
+      "passed": true
+    },
+    {
+      "name": "register-1.S0.raw-metadata-hash",
+      "passed": true
+    },
+    {
+      "name": "register-1.S0.raw-returns-hash",
+      "passed": true
+    },
+    {
+      "name": "register-1.S0.raw-abi-hash",
+      "passed": true
+    },
+    {
+      "name": "register-1.S0.raw-executable-hash",
+      "passed": true
+    },
+    {
+      "name": "register-1.S0.whole-hash",
+      "passed": true
+    },
+    {
+      "name": "register-1.A.execution-not-replayed",
+      "passed": true
+    },
+    {
+      "name": "register-1.A.actual-memory-and-counter",
+      "passed": true
+    },
+    {
+      "name": "register-1.A.target-owned-CET",
+      "passed": true
+    },
+    {
+      "name": "register-1.A.declared-HWND-preimage-40",
+      "passed": true
+    },
+    {
+      "name": "register-1.A.declared-HWND-preimage-320",
+      "passed": true
+    },
+    {
+      "name": "register-1.A.declared-HWND-preimage-328",
+      "passed": true
+    },
+    {
+      "name": "register-1.A.declared-HWND-preimage-176",
+      "passed": true
+    },
+    {
+      "name": "register-1.A.declared-HWND-preimage-168",
+      "passed": true
+    },
+    {
+      "name": "register-1.A.declared-HWND-preimage-40",
+      "passed": true
+    },
+    {
+      "name": "register-1.A.declared-HWND-preimage-48",
+      "passed": true
+    },
+    {
+      "name": "register-1.A.only-declared-relocations",
+      "passed": true
+    },
+    {
+      "name": "register-1.B.execution-not-replayed",
+      "passed": true
+    },
+    {
+      "name": "register-1.B.actual-memory-and-counter",
+      "passed": true
+    },
+    {
+      "name": "register-1.B.target-owned-CET",
+      "passed": true
+    },
+    {
+      "name": "register-1.B.declared-HWND-preimage-40",
+      "passed": true
+    },
+    {
+      "name": "register-1.B.declared-HWND-preimage-320",
+      "passed": true
+    },
+    {
+      "name": "register-1.B.declared-HWND-preimage-328",
+      "passed": true
+    },
+    {
+      "name": "register-1.B.declared-HWND-preimage-176",
+      "passed": true
+    },
+    {
+      "name": "register-1.B.declared-HWND-preimage-168",
+      "passed": true
+    },
+    {
+      "name": "register-1.B.declared-HWND-preimage-40",
+      "passed": true
+    },
+    {
+      "name": "register-1.B.declared-HWND-preimage-48",
+      "passed": true
+    },
+    {
+      "name": "register-1.B.only-declared-relocations",
+      "passed": true
+    },
+    {
+      "name": "register-1.SA.raw-computation",
+      "passed": true
+    },
+    {
+      "name": "register-1.SA.fingerprints-immutable",
+      "passed": true
+    },
+    {
+      "name": "register-1.SA.raw-memory-hash",
+      "passed": true
+    },
+    {
+      "name": "register-1.SA.raw-stack-hash",
+      "passed": true
+    },
+    {
+      "name": "register-1.SA.raw-context-hash",
+      "passed": true
+    },
+    {
+      "name": "register-1.SA.raw-resources-hash",
+      "passed": true
+    },
+    {
+      "name": "register-1.SA.raw-metadata-hash",
+      "passed": true
+    },
+    {
+      "name": "register-1.SA.raw-returns-hash",
+      "passed": true
+    },
+    {
+      "name": "register-1.SA.raw-abi-hash",
+      "passed": true
+    },
+    {
+      "name": "register-1.SA.raw-executable-hash",
+      "passed": true
+    },
+    {
+      "name": "register-1.SA.whole-hash",
+      "passed": true
+    },
+    {
+      "name": "register-1.RA.execution-not-replayed",
+      "passed": true
+    },
+    {
+      "name": "register-1.SB.raw-computation",
+      "passed": true
+    },
+    {
+      "name": "register-1.SB.fingerprints-immutable",
+      "passed": true
+    },
+    {
+      "name": "register-1.SB.raw-memory-hash",
+      "passed": true
+    },
+    {
+      "name": "register-1.SB.raw-stack-hash",
+      "passed": true
+    },
+    {
+      "name": "register-1.SB.raw-context-hash",
+      "passed": true
+    },
+    {
+      "name": "register-1.SB.raw-resources-hash",
+      "passed": true
+    },
+    {
+      "name": "register-1.SB.raw-metadata-hash",
+      "passed": true
+    },
+    {
+      "name": "register-1.SB.raw-returns-hash",
+      "passed": true
+    },
+    {
+      "name": "register-1.SB.raw-abi-hash",
+      "passed": true
+    },
+    {
+      "name": "register-1.SB.raw-executable-hash",
+      "passed": true
+    },
+    {
+      "name": "register-1.SB.whole-hash",
+      "passed": true
+    },
+    {
+      "name": "register-1.no-target-initialization",
+      "passed": true
+    },
+    {
+      "name": "register-1.source-S0-fresh-GDI-pixels",
+      "passed": true
+    },
+    {
+      "name": "register-1.A-initial-fresh-GDI-pixels",
+      "passed": true
+    },
+    {
+      "name": "register-1.B-initial-fresh-GDI-pixels",
+      "passed": true
+    },
+    {
+      "name": "register-1.A-single-edit-fresh-GDI-pixels",
+      "passed": true
+    },
+    {
+      "name": "register-1.B-single-edit-fresh-GDI-pixels",
+      "passed": true
+    },
+    {
+      "name": "register-1.A-SA-fresh-GDI-pixels",
+      "passed": true
+    },
+    {
+      "name": "register-1.B-SB-fresh-GDI-pixels",
+      "passed": true
+    },
+    {
+      "name": "register-1.rejection-not-capability-pass",
+      "passed": true
+    },
+    {
+      "name": "register-1.scope-preserved",
+      "passed": true
+    },
+    {
+      "name": "register-1.owned-resources-cleaned",
+      "passed": true
+    },
+    {
+      "name": "memory-1.completed",
+      "passed": true
+    },
+    {
+      "name": "memory-1.controller-assertions",
+      "passed": true
+    },
+    {
+      "name": "memory-1.CET-CFG-enabled",
+      "passed": true
+    },
+    {
+      "name": "memory-1.one-pump-exact-routing",
+      "passed": true
+    },
+    {
+      "name": "memory-1.source-S0-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "memory-1.source-changed-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "memory-1.A-prepared-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "memory-1.A-initial-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "memory-1.B-prepared-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "memory-1.B-initial-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "memory-1.B-before-A-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "memory-1.A-single-edit-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "memory-1.B-after-A-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "memory-1.A-before-B-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "memory-1.B-single-edit-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "memory-1.A-after-B-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "memory-1.A-SA-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "memory-1.B-SB-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "memory-1.RA-prepared-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "memory-1.S0.raw-computation",
+      "passed": true
+    },
+    {
+      "name": "memory-1.S0.fingerprints-immutable",
+      "passed": true
+    },
+    {
+      "name": "memory-1.S0.raw-memory-hash",
+      "passed": true
+    },
+    {
+      "name": "memory-1.S0.raw-stack-hash",
+      "passed": true
+    },
+    {
+      "name": "memory-1.S0.raw-context-hash",
+      "passed": true
+    },
+    {
+      "name": "memory-1.S0.raw-resources-hash",
+      "passed": true
+    },
+    {
+      "name": "memory-1.S0.raw-metadata-hash",
+      "passed": true
+    },
+    {
+      "name": "memory-1.S0.raw-returns-hash",
+      "passed": true
+    },
+    {
+      "name": "memory-1.S0.raw-abi-hash",
+      "passed": true
+    },
+    {
+      "name": "memory-1.S0.raw-executable-hash",
+      "passed": true
+    },
+    {
+      "name": "memory-1.S0.whole-hash",
+      "passed": true
+    },
+    {
+      "name": "memory-1.A.execution-not-replayed",
+      "passed": true
+    },
+    {
+      "name": "memory-1.A.actual-memory-and-counter",
+      "passed": true
+    },
+    {
+      "name": "memory-1.A.target-owned-CET",
+      "passed": true
+    },
+    {
+      "name": "memory-1.A.declared-HWND-preimage-40",
+      "passed": true
+    },
+    {
+      "name": "memory-1.A.declared-HWND-preimage-320",
+      "passed": true
+    },
+    {
+      "name": "memory-1.A.declared-HWND-preimage-328",
+      "passed": true
+    },
+    {
+      "name": "memory-1.A.declared-HWND-preimage-176",
+      "passed": true
+    },
+    {
+      "name": "memory-1.A.declared-HWND-preimage-168",
+      "passed": true
+    },
+    {
+      "name": "memory-1.A.declared-HWND-preimage-40",
+      "passed": true
+    },
+    {
+      "name": "memory-1.A.declared-HWND-preimage-48",
+      "passed": true
+    },
+    {
+      "name": "memory-1.A.only-declared-relocations",
+      "passed": true
+    },
+    {
+      "name": "memory-1.B.execution-not-replayed",
+      "passed": true
+    },
+    {
+      "name": "memory-1.B.actual-memory-and-counter",
+      "passed": true
+    },
+    {
+      "name": "memory-1.B.target-owned-CET",
+      "passed": true
+    },
+    {
+      "name": "memory-1.B.declared-HWND-preimage-40",
+      "passed": true
+    },
+    {
+      "name": "memory-1.B.declared-HWND-preimage-320",
+      "passed": true
+    },
+    {
+      "name": "memory-1.B.declared-HWND-preimage-328",
+      "passed": true
+    },
+    {
+      "name": "memory-1.B.declared-HWND-preimage-176",
+      "passed": true
+    },
+    {
+      "name": "memory-1.B.declared-HWND-preimage-168",
+      "passed": true
+    },
+    {
+      "name": "memory-1.B.declared-HWND-preimage-40",
+      "passed": true
+    },
+    {
+      "name": "memory-1.B.declared-HWND-preimage-48",
+      "passed": true
+    },
+    {
+      "name": "memory-1.B.only-declared-relocations",
+      "passed": true
+    },
+    {
+      "name": "memory-1.SA.raw-computation",
+      "passed": true
+    },
+    {
+      "name": "memory-1.SA.fingerprints-immutable",
+      "passed": true
+    },
+    {
+      "name": "memory-1.SA.raw-memory-hash",
+      "passed": true
+    },
+    {
+      "name": "memory-1.SA.raw-stack-hash",
+      "passed": true
+    },
+    {
+      "name": "memory-1.SA.raw-context-hash",
+      "passed": true
+    },
+    {
+      "name": "memory-1.SA.raw-resources-hash",
+      "passed": true
+    },
+    {
+      "name": "memory-1.SA.raw-metadata-hash",
+      "passed": true
+    },
+    {
+      "name": "memory-1.SA.raw-returns-hash",
+      "passed": true
+    },
+    {
+      "name": "memory-1.SA.raw-abi-hash",
+      "passed": true
+    },
+    {
+      "name": "memory-1.SA.raw-executable-hash",
+      "passed": true
+    },
+    {
+      "name": "memory-1.SA.whole-hash",
+      "passed": true
+    },
+    {
+      "name": "memory-1.RA.execution-not-replayed",
+      "passed": true
+    },
+    {
+      "name": "memory-1.SB.raw-computation",
+      "passed": true
+    },
+    {
+      "name": "memory-1.SB.fingerprints-immutable",
+      "passed": true
+    },
+    {
+      "name": "memory-1.SB.raw-memory-hash",
+      "passed": true
+    },
+    {
+      "name": "memory-1.SB.raw-stack-hash",
+      "passed": true
+    },
+    {
+      "name": "memory-1.SB.raw-context-hash",
+      "passed": true
+    },
+    {
+      "name": "memory-1.SB.raw-resources-hash",
+      "passed": true
+    },
+    {
+      "name": "memory-1.SB.raw-metadata-hash",
+      "passed": true
+    },
+    {
+      "name": "memory-1.SB.raw-returns-hash",
+      "passed": true
+    },
+    {
+      "name": "memory-1.SB.raw-abi-hash",
+      "passed": true
+    },
+    {
+      "name": "memory-1.SB.raw-executable-hash",
+      "passed": true
+    },
+    {
+      "name": "memory-1.SB.whole-hash",
+      "passed": true
+    },
+    {
+      "name": "memory-1.no-target-initialization",
+      "passed": true
+    },
+    {
+      "name": "memory-1.source-S0-fresh-GDI-pixels",
+      "passed": true
+    },
+    {
+      "name": "memory-1.A-initial-fresh-GDI-pixels",
+      "passed": true
+    },
+    {
+      "name": "memory-1.B-initial-fresh-GDI-pixels",
+      "passed": true
+    },
+    {
+      "name": "memory-1.A-single-edit-fresh-GDI-pixels",
+      "passed": true
+    },
+    {
+      "name": "memory-1.B-single-edit-fresh-GDI-pixels",
+      "passed": true
+    },
+    {
+      "name": "memory-1.A-SA-fresh-GDI-pixels",
+      "passed": true
+    },
+    {
+      "name": "memory-1.B-SB-fresh-GDI-pixels",
+      "passed": true
+    },
+    {
+      "name": "memory-1.rejection-not-capability-pass",
+      "passed": true
+    },
+    {
+      "name": "memory-1.scope-preserved",
+      "passed": true
+    },
+    {
+      "name": "memory-1.owned-resources-cleaned",
+      "passed": true
+    },
+    {
+      "name": "bad-chain-1.completed",
+      "passed": true
+    },
+    {
+      "name": "bad-chain-1.controller-assertions",
+      "passed": true
+    },
+    {
+      "name": "bad-chain-1.CET-CFG-enabled",
+      "passed": true
+    },
+    {
+      "name": "bad-chain-1.one-pump-exact-routing",
+      "passed": true
+    },
+    {
+      "name": "bad-chain-1.source-S0-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "bad-chain-1.source-changed-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "bad-chain-1.A-prepared-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "bad-chain-1.A-initial-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "bad-chain-1.B-prepared-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "bad-chain-1.B-initial-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "bad-chain-1.B-before-A-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "bad-chain-1.A-single-edit-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "bad-chain-1.B-after-A-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "bad-chain-1.A-before-B-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "bad-chain-1.B-single-edit-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "bad-chain-1.A-after-B-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "bad-chain-1.A-SA-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "bad-chain-1.B-SB-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "bad-chain-1.RA-prepared-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "bad-chain-1.S0.raw-computation",
+      "passed": true
+    },
+    {
+      "name": "bad-chain-1.S0.fingerprints-immutable",
+      "passed": true
+    },
+    {
+      "name": "bad-chain-1.S0.raw-memory-hash",
+      "passed": true
+    },
+    {
+      "name": "bad-chain-1.S0.raw-stack-hash",
+      "passed": true
+    },
+    {
+      "name": "bad-chain-1.S0.raw-context-hash",
+      "passed": true
+    },
+    {
+      "name": "bad-chain-1.S0.raw-resources-hash",
+      "passed": true
+    },
+    {
+      "name": "bad-chain-1.S0.raw-metadata-hash",
+      "passed": true
+    },
+    {
+      "name": "bad-chain-1.S0.raw-returns-hash",
+      "passed": true
+    },
+    {
+      "name": "bad-chain-1.S0.raw-abi-hash",
+      "passed": true
+    },
+    {
+      "name": "bad-chain-1.S0.raw-executable-hash",
+      "passed": true
+    },
+    {
+      "name": "bad-chain-1.S0.whole-hash",
+      "passed": true
+    },
+    {
+      "name": "bad-chain-1.A.execution-not-replayed",
+      "passed": true
+    },
+    {
+      "name": "bad-chain-1.A.actual-memory-and-counter",
+      "passed": true
+    },
+    {
+      "name": "bad-chain-1.A.target-owned-CET",
+      "passed": true
+    },
+    {
+      "name": "bad-chain-1.A.declared-HWND-preimage-40",
+      "passed": true
+    },
+    {
+      "name": "bad-chain-1.A.declared-HWND-preimage-320",
+      "passed": true
+    },
+    {
+      "name": "bad-chain-1.A.declared-HWND-preimage-328",
+      "passed": true
+    },
+    {
+      "name": "bad-chain-1.A.declared-HWND-preimage-176",
+      "passed": true
+    },
+    {
+      "name": "bad-chain-1.A.declared-HWND-preimage-168",
+      "passed": true
+    },
+    {
+      "name": "bad-chain-1.A.declared-HWND-preimage-40",
+      "passed": true
+    },
+    {
+      "name": "bad-chain-1.A.declared-HWND-preimage-48",
+      "passed": true
+    },
+    {
+      "name": "bad-chain-1.A.only-declared-relocations",
+      "passed": true
+    },
+    {
+      "name": "bad-chain-1.B.execution-not-replayed",
+      "passed": true
+    },
+    {
+      "name": "bad-chain-1.B.actual-memory-and-counter",
+      "passed": true
+    },
+    {
+      "name": "bad-chain-1.B.target-owned-CET",
+      "passed": true
+    },
+    {
+      "name": "bad-chain-1.B.declared-HWND-preimage-40",
+      "passed": true
+    },
+    {
+      "name": "bad-chain-1.B.declared-HWND-preimage-320",
+      "passed": true
+    },
+    {
+      "name": "bad-chain-1.B.declared-HWND-preimage-328",
+      "passed": true
+    },
+    {
+      "name": "bad-chain-1.B.declared-HWND-preimage-176",
+      "passed": true
+    },
+    {
+      "name": "bad-chain-1.B.declared-HWND-preimage-168",
+      "passed": true
+    },
+    {
+      "name": "bad-chain-1.B.declared-HWND-preimage-40",
+      "passed": true
+    },
+    {
+      "name": "bad-chain-1.B.declared-HWND-preimage-48",
+      "passed": true
+    },
+    {
+      "name": "bad-chain-1.B.only-declared-relocations",
+      "passed": true
+    },
+    {
+      "name": "bad-chain-1.SA.raw-computation",
+      "passed": true
+    },
+    {
+      "name": "bad-chain-1.SA.fingerprints-immutable",
+      "passed": true
+    },
+    {
+      "name": "bad-chain-1.SA.raw-memory-hash",
+      "passed": true
+    },
+    {
+      "name": "bad-chain-1.SA.raw-stack-hash",
+      "passed": true
+    },
+    {
+      "name": "bad-chain-1.SA.raw-context-hash",
+      "passed": true
+    },
+    {
+      "name": "bad-chain-1.SA.raw-resources-hash",
+      "passed": true
+    },
+    {
+      "name": "bad-chain-1.SA.raw-metadata-hash",
+      "passed": true
+    },
+    {
+      "name": "bad-chain-1.SA.raw-returns-hash",
+      "passed": true
+    },
+    {
+      "name": "bad-chain-1.SA.raw-abi-hash",
+      "passed": true
+    },
+    {
+      "name": "bad-chain-1.SA.raw-executable-hash",
+      "passed": true
+    },
+    {
+      "name": "bad-chain-1.SA.whole-hash",
+      "passed": true
+    },
+    {
+      "name": "bad-chain-1.SB.raw-computation",
+      "passed": true
+    },
+    {
+      "name": "bad-chain-1.SB.fingerprints-immutable",
+      "passed": true
+    },
+    {
+      "name": "bad-chain-1.SB.raw-memory-hash",
+      "passed": true
+    },
+    {
+      "name": "bad-chain-1.SB.raw-stack-hash",
+      "passed": true
+    },
+    {
+      "name": "bad-chain-1.SB.raw-context-hash",
+      "passed": true
+    },
+    {
+      "name": "bad-chain-1.SB.raw-resources-hash",
+      "passed": true
+    },
+    {
+      "name": "bad-chain-1.SB.raw-metadata-hash",
+      "passed": true
+    },
+    {
+      "name": "bad-chain-1.SB.raw-returns-hash",
+      "passed": true
+    },
+    {
+      "name": "bad-chain-1.SB.raw-abi-hash",
+      "passed": true
+    },
+    {
+      "name": "bad-chain-1.SB.raw-executable-hash",
+      "passed": true
+    },
+    {
+      "name": "bad-chain-1.SB.whole-hash",
+      "passed": true
+    },
+    {
+      "name": "bad-chain-1.no-target-initialization",
+      "passed": true
+    },
+    {
+      "name": "bad-chain-1.source-S0-fresh-GDI-pixels",
+      "passed": true
+    },
+    {
+      "name": "bad-chain-1.A-initial-fresh-GDI-pixels",
+      "passed": true
+    },
+    {
+      "name": "bad-chain-1.B-initial-fresh-GDI-pixels",
+      "passed": true
+    },
+    {
+      "name": "bad-chain-1.A-single-edit-fresh-GDI-pixels",
+      "passed": true
+    },
+    {
+      "name": "bad-chain-1.B-single-edit-fresh-GDI-pixels",
+      "passed": true
+    },
+    {
+      "name": "bad-chain-1.A-SA-fresh-GDI-pixels",
+      "passed": true
+    },
+    {
+      "name": "bad-chain-1.B-SB-fresh-GDI-pixels",
+      "passed": true
+    },
+    {
+      "name": "bad-chain-1.rejection-not-capability-pass",
+      "passed": true
+    },
+    {
+      "name": "bad-chain-1.scope-preserved",
+      "passed": true
+    },
+    {
+      "name": "bad-chain-1.owned-resources-cleaned",
+      "passed": true
+    },
+    {
+      "name": "unknown-edit-1.completed",
+      "passed": true
+    },
+    {
+      "name": "unknown-edit-1.controller-assertions",
+      "passed": true
+    },
+    {
+      "name": "unknown-edit-1.CET-CFG-enabled",
+      "passed": true
+    },
+    {
+      "name": "unknown-edit-1.one-pump-exact-routing",
+      "passed": true
+    },
+    {
+      "name": "unknown-edit-1.source-S0-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "unknown-edit-1.source-changed-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "unknown-edit-1.A-prepared-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "unknown-edit-1.A-initial-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "unknown-edit-1.B-prepared-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "unknown-edit-1.B-initial-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "unknown-edit-1.B-before-A-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "unknown-edit-1.A-single-edit-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "unknown-edit-1.B-after-A-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "unknown-edit-1.A-before-B-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "unknown-edit-1.B-single-edit-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "unknown-edit-1.A-after-B-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "unknown-edit-1.A-unsupported-native-edit-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "unknown-edit-1.A-rejected-terminal-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "unknown-edit-1.S0.raw-computation",
+      "passed": true
+    },
+    {
+      "name": "unknown-edit-1.S0.fingerprints-immutable",
+      "passed": true
+    },
+    {
+      "name": "unknown-edit-1.S0.raw-memory-hash",
+      "passed": true
+    },
+    {
+      "name": "unknown-edit-1.S0.raw-stack-hash",
+      "passed": true
+    },
+    {
+      "name": "unknown-edit-1.S0.raw-context-hash",
+      "passed": true
+    },
+    {
+      "name": "unknown-edit-1.S0.raw-resources-hash",
+      "passed": true
+    },
+    {
+      "name": "unknown-edit-1.S0.raw-metadata-hash",
+      "passed": true
+    },
+    {
+      "name": "unknown-edit-1.S0.raw-returns-hash",
+      "passed": true
+    },
+    {
+      "name": "unknown-edit-1.S0.raw-abi-hash",
+      "passed": true
+    },
+    {
+      "name": "unknown-edit-1.S0.raw-executable-hash",
+      "passed": true
+    },
+    {
+      "name": "unknown-edit-1.S0.whole-hash",
+      "passed": true
+    },
+    {
+      "name": "unknown-edit-1.A.execution-not-replayed",
+      "passed": true
+    },
+    {
+      "name": "unknown-edit-1.A.actual-memory-and-counter",
+      "passed": true
+    },
+    {
+      "name": "unknown-edit-1.A.target-owned-CET",
+      "passed": true
+    },
+    {
+      "name": "unknown-edit-1.A.declared-HWND-preimage-40",
+      "passed": true
+    },
+    {
+      "name": "unknown-edit-1.A.declared-HWND-preimage-320",
+      "passed": true
+    },
+    {
+      "name": "unknown-edit-1.A.declared-HWND-preimage-328",
+      "passed": true
+    },
+    {
+      "name": "unknown-edit-1.A.declared-HWND-preimage-176",
+      "passed": true
+    },
+    {
+      "name": "unknown-edit-1.A.declared-HWND-preimage-168",
+      "passed": true
+    },
+    {
+      "name": "unknown-edit-1.A.declared-HWND-preimage-40",
+      "passed": true
+    },
+    {
+      "name": "unknown-edit-1.A.declared-HWND-preimage-48",
+      "passed": true
+    },
+    {
+      "name": "unknown-edit-1.A.only-declared-relocations",
+      "passed": true
+    },
+    {
+      "name": "unknown-edit-1.B.execution-not-replayed",
+      "passed": true
+    },
+    {
+      "name": "unknown-edit-1.B.actual-memory-and-counter",
+      "passed": true
+    },
+    {
+      "name": "unknown-edit-1.B.target-owned-CET",
+      "passed": true
+    },
+    {
+      "name": "unknown-edit-1.B.declared-HWND-preimage-40",
+      "passed": true
+    },
+    {
+      "name": "unknown-edit-1.B.declared-HWND-preimage-320",
+      "passed": true
+    },
+    {
+      "name": "unknown-edit-1.B.declared-HWND-preimage-328",
+      "passed": true
+    },
+    {
+      "name": "unknown-edit-1.B.declared-HWND-preimage-176",
+      "passed": true
+    },
+    {
+      "name": "unknown-edit-1.B.declared-HWND-preimage-168",
+      "passed": true
+    },
+    {
+      "name": "unknown-edit-1.B.declared-HWND-preimage-40",
+      "passed": true
+    },
+    {
+      "name": "unknown-edit-1.B.declared-HWND-preimage-48",
+      "passed": true
+    },
+    {
+      "name": "unknown-edit-1.B.only-declared-relocations",
+      "passed": true
+    },
+    {
+      "name": "unknown-edit-1.no-target-initialization",
+      "passed": true
+    },
+    {
+      "name": "unknown-edit-1.source-S0-fresh-GDI-pixels",
+      "passed": true
+    },
+    {
+      "name": "unknown-edit-1.A-initial-fresh-GDI-pixels",
+      "passed": true
+    },
+    {
+      "name": "unknown-edit-1.B-initial-fresh-GDI-pixels",
+      "passed": true
+    },
+    {
+      "name": "unknown-edit-1.A-single-edit-fresh-GDI-pixels",
+      "passed": true
+    },
+    {
+      "name": "unknown-edit-1.B-single-edit-fresh-GDI-pixels",
+      "passed": true
+    },
+    {
+      "name": "unknown-edit-1.A-after-rejection-fresh-GDI-pixels",
+      "passed": true
+    },
+    {
+      "name": "unknown-edit-1.B-after-rejection-fresh-GDI-pixels",
+      "passed": true
+    },
+    {
+      "name": "unknown-edit-1.rejection-not-capability-pass",
+      "passed": true
+    },
+    {
+      "name": "unknown-edit-1.scope-preserved",
+      "passed": true
+    },
+    {
+      "name": "unknown-edit-1.owned-resources-cleaned",
+      "passed": true
+    },
+    {
+      "name": "wrong-undo-1.completed",
+      "passed": true
+    },
+    {
+      "name": "wrong-undo-1.controller-assertions",
+      "passed": true
+    },
+    {
+      "name": "wrong-undo-1.CET-CFG-enabled",
+      "passed": true
+    },
+    {
+      "name": "wrong-undo-1.one-pump-exact-routing",
+      "passed": true
+    },
+    {
+      "name": "wrong-undo-1.source-S0-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "wrong-undo-1.source-changed-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "wrong-undo-1.A-prepared-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "wrong-undo-1.A-initial-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "wrong-undo-1.B-prepared-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "wrong-undo-1.B-initial-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "wrong-undo-1.B-before-A-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "wrong-undo-1.A-single-edit-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "wrong-undo-1.B-after-A-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "wrong-undo-1.A-before-B-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "wrong-undo-1.B-single-edit-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "wrong-undo-1.A-after-B-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "wrong-undo-1.A-SA-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "wrong-undo-1.B-SB-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "wrong-undo-1.RA-prepared-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "wrong-undo-1.S0.raw-computation",
+      "passed": true
+    },
+    {
+      "name": "wrong-undo-1.S0.fingerprints-immutable",
+      "passed": true
+    },
+    {
+      "name": "wrong-undo-1.S0.raw-memory-hash",
+      "passed": true
+    },
+    {
+      "name": "wrong-undo-1.S0.raw-stack-hash",
+      "passed": true
+    },
+    {
+      "name": "wrong-undo-1.S0.raw-context-hash",
+      "passed": true
+    },
+    {
+      "name": "wrong-undo-1.S0.raw-resources-hash",
+      "passed": true
+    },
+    {
+      "name": "wrong-undo-1.S0.raw-metadata-hash",
+      "passed": true
+    },
+    {
+      "name": "wrong-undo-1.S0.raw-returns-hash",
+      "passed": true
+    },
+    {
+      "name": "wrong-undo-1.S0.raw-abi-hash",
+      "passed": true
+    },
+    {
+      "name": "wrong-undo-1.S0.raw-executable-hash",
+      "passed": true
+    },
+    {
+      "name": "wrong-undo-1.S0.whole-hash",
+      "passed": true
+    },
+    {
+      "name": "wrong-undo-1.A.execution-not-replayed",
+      "passed": true
+    },
+    {
+      "name": "wrong-undo-1.A.actual-memory-and-counter",
+      "passed": true
+    },
+    {
+      "name": "wrong-undo-1.A.target-owned-CET",
+      "passed": true
+    },
+    {
+      "name": "wrong-undo-1.A.declared-HWND-preimage-40",
+      "passed": true
+    },
+    {
+      "name": "wrong-undo-1.A.declared-HWND-preimage-320",
+      "passed": true
+    },
+    {
+      "name": "wrong-undo-1.A.declared-HWND-preimage-328",
+      "passed": true
+    },
+    {
+      "name": "wrong-undo-1.A.declared-HWND-preimage-176",
+      "passed": true
+    },
+    {
+      "name": "wrong-undo-1.A.declared-HWND-preimage-168",
+      "passed": true
+    },
+    {
+      "name": "wrong-undo-1.A.declared-HWND-preimage-40",
+      "passed": true
+    },
+    {
+      "name": "wrong-undo-1.A.declared-HWND-preimage-48",
+      "passed": true
+    },
+    {
+      "name": "wrong-undo-1.A.only-declared-relocations",
+      "passed": true
+    },
+    {
+      "name": "wrong-undo-1.B.execution-not-replayed",
+      "passed": true
+    },
+    {
+      "name": "wrong-undo-1.B.actual-memory-and-counter",
+      "passed": true
+    },
+    {
+      "name": "wrong-undo-1.B.target-owned-CET",
+      "passed": true
+    },
+    {
+      "name": "wrong-undo-1.B.declared-HWND-preimage-40",
+      "passed": true
+    },
+    {
+      "name": "wrong-undo-1.B.declared-HWND-preimage-320",
+      "passed": true
+    },
+    {
+      "name": "wrong-undo-1.B.declared-HWND-preimage-328",
+      "passed": true
+    },
+    {
+      "name": "wrong-undo-1.B.declared-HWND-preimage-176",
+      "passed": true
+    },
+    {
+      "name": "wrong-undo-1.B.declared-HWND-preimage-168",
+      "passed": true
+    },
+    {
+      "name": "wrong-undo-1.B.declared-HWND-preimage-40",
+      "passed": true
+    },
+    {
+      "name": "wrong-undo-1.B.declared-HWND-preimage-48",
+      "passed": true
+    },
+    {
+      "name": "wrong-undo-1.B.only-declared-relocations",
+      "passed": true
+    },
+    {
+      "name": "wrong-undo-1.SA.raw-computation",
+      "passed": true
+    },
+    {
+      "name": "wrong-undo-1.SA.fingerprints-immutable",
+      "passed": true
+    },
+    {
+      "name": "wrong-undo-1.SA.raw-memory-hash",
+      "passed": true
+    },
+    {
+      "name": "wrong-undo-1.SA.raw-stack-hash",
+      "passed": true
+    },
+    {
+      "name": "wrong-undo-1.SA.raw-context-hash",
+      "passed": true
+    },
+    {
+      "name": "wrong-undo-1.SA.raw-resources-hash",
+      "passed": true
+    },
+    {
+      "name": "wrong-undo-1.SA.raw-metadata-hash",
+      "passed": true
+    },
+    {
+      "name": "wrong-undo-1.SA.raw-returns-hash",
+      "passed": true
+    },
+    {
+      "name": "wrong-undo-1.SA.raw-abi-hash",
+      "passed": true
+    },
+    {
+      "name": "wrong-undo-1.SA.raw-executable-hash",
+      "passed": true
+    },
+    {
+      "name": "wrong-undo-1.SA.whole-hash",
+      "passed": true
+    },
+    {
+      "name": "wrong-undo-1.SB.raw-computation",
+      "passed": true
+    },
+    {
+      "name": "wrong-undo-1.SB.fingerprints-immutable",
+      "passed": true
+    },
+    {
+      "name": "wrong-undo-1.SB.raw-memory-hash",
+      "passed": true
+    },
+    {
+      "name": "wrong-undo-1.SB.raw-stack-hash",
+      "passed": true
+    },
+    {
+      "name": "wrong-undo-1.SB.raw-context-hash",
+      "passed": true
+    },
+    {
+      "name": "wrong-undo-1.SB.raw-resources-hash",
+      "passed": true
+    },
+    {
+      "name": "wrong-undo-1.SB.raw-metadata-hash",
+      "passed": true
+    },
+    {
+      "name": "wrong-undo-1.SB.raw-returns-hash",
+      "passed": true
+    },
+    {
+      "name": "wrong-undo-1.SB.raw-abi-hash",
+      "passed": true
+    },
+    {
+      "name": "wrong-undo-1.SB.raw-executable-hash",
+      "passed": true
+    },
+    {
+      "name": "wrong-undo-1.SB.whole-hash",
+      "passed": true
+    },
+    {
+      "name": "wrong-undo-1.no-target-initialization",
+      "passed": true
+    },
+    {
+      "name": "wrong-undo-1.source-S0-fresh-GDI-pixels",
+      "passed": true
+    },
+    {
+      "name": "wrong-undo-1.A-initial-fresh-GDI-pixels",
+      "passed": true
+    },
+    {
+      "name": "wrong-undo-1.B-initial-fresh-GDI-pixels",
+      "passed": true
+    },
+    {
+      "name": "wrong-undo-1.A-single-edit-fresh-GDI-pixels",
+      "passed": true
+    },
+    {
+      "name": "wrong-undo-1.B-single-edit-fresh-GDI-pixels",
+      "passed": true
+    },
+    {
+      "name": "wrong-undo-1.A-SA-fresh-GDI-pixels",
+      "passed": true
+    },
+    {
+      "name": "wrong-undo-1.B-SB-fresh-GDI-pixels",
+      "passed": true
+    },
+    {
+      "name": "wrong-undo-1.actual-failed-native-readback",
+      "passed": true
+    },
+    {
+      "name": "wrong-undo-1.rejection-not-capability-pass",
+      "passed": true
+    },
+    {
+      "name": "wrong-undo-1.scope-preserved",
+      "passed": true
+    },
+    {
+      "name": "wrong-undo-1.owned-resources-cleaned",
+      "passed": true
+    },
+    {
+      "name": "native-undo-2.real-native-reference",
+      "passed": true
+    },
+    {
+      "name": "positive-2.completed",
+      "passed": true
+    },
+    {
+      "name": "positive-2.controller-assertions",
+      "passed": true
+    },
+    {
+      "name": "positive-2.CET-CFG-enabled",
+      "passed": true
+    },
+    {
+      "name": "positive-2.one-pump-exact-routing",
+      "passed": true
+    },
+    {
+      "name": "positive-2.source-S0-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "positive-2.source-changed-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "positive-2.A-prepared-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "positive-2.A-initial-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "positive-2.B-prepared-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "positive-2.B-initial-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "positive-2.B-before-A-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "positive-2.A-single-edit-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "positive-2.B-after-A-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "positive-2.A-before-B-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "positive-2.B-single-edit-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "positive-2.A-after-B-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "positive-2.A-SA-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "positive-2.B-SB-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "positive-2.RA-prepared-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "positive-2.RA-initial-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "positive-2.RB-prepared-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "positive-2.RB-initial-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "positive-2.RB-before-RA-Undo-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "positive-2.RA-undo1-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "positive-2.RA-undo2-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "positive-2.RA-continued-input-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "positive-2.RB-after-RA-Undo-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "positive-2.RA-before-RB-Undo-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "positive-2.RB-undo1-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "positive-2.RB-undo2-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "positive-2.RB-continued-input-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "positive-2.RA-after-RB-Undo-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "positive-2.S0.raw-computation",
+      "passed": true
+    },
+    {
+      "name": "positive-2.S0.fingerprints-immutable",
+      "passed": true
+    },
+    {
+      "name": "positive-2.S0.raw-memory-hash",
+      "passed": true
+    },
+    {
+      "name": "positive-2.S0.raw-stack-hash",
+      "passed": true
+    },
+    {
+      "name": "positive-2.S0.raw-context-hash",
+      "passed": true
+    },
+    {
+      "name": "positive-2.S0.raw-resources-hash",
+      "passed": true
+    },
+    {
+      "name": "positive-2.S0.raw-metadata-hash",
+      "passed": true
+    },
+    {
+      "name": "positive-2.S0.raw-returns-hash",
+      "passed": true
+    },
+    {
+      "name": "positive-2.S0.raw-abi-hash",
+      "passed": true
+    },
+    {
+      "name": "positive-2.S0.raw-executable-hash",
+      "passed": true
+    },
+    {
+      "name": "positive-2.S0.whole-hash",
+      "passed": true
+    },
+    {
+      "name": "positive-2.A.execution-not-replayed",
+      "passed": true
+    },
+    {
+      "name": "positive-2.A.actual-memory-and-counter",
+      "passed": true
+    },
+    {
+      "name": "positive-2.A.target-owned-CET",
+      "passed": true
+    },
+    {
+      "name": "positive-2.A.declared-HWND-preimage-40",
+      "passed": true
+    },
+    {
+      "name": "positive-2.A.declared-HWND-preimage-320",
+      "passed": true
+    },
+    {
+      "name": "positive-2.A.declared-HWND-preimage-328",
+      "passed": true
+    },
+    {
+      "name": "positive-2.A.declared-HWND-preimage-176",
+      "passed": true
+    },
+    {
+      "name": "positive-2.A.declared-HWND-preimage-168",
+      "passed": true
+    },
+    {
+      "name": "positive-2.A.declared-HWND-preimage-40",
+      "passed": true
+    },
+    {
+      "name": "positive-2.A.declared-HWND-preimage-48",
+      "passed": true
+    },
+    {
+      "name": "positive-2.A.only-declared-relocations",
+      "passed": true
+    },
+    {
+      "name": "positive-2.B.execution-not-replayed",
+      "passed": true
+    },
+    {
+      "name": "positive-2.B.actual-memory-and-counter",
+      "passed": true
+    },
+    {
+      "name": "positive-2.B.target-owned-CET",
+      "passed": true
+    },
+    {
+      "name": "positive-2.B.declared-HWND-preimage-40",
+      "passed": true
+    },
+    {
+      "name": "positive-2.B.declared-HWND-preimage-320",
+      "passed": true
+    },
+    {
+      "name": "positive-2.B.declared-HWND-preimage-328",
+      "passed": true
+    },
+    {
+      "name": "positive-2.B.declared-HWND-preimage-176",
+      "passed": true
+    },
+    {
+      "name": "positive-2.B.declared-HWND-preimage-168",
+      "passed": true
+    },
+    {
+      "name": "positive-2.B.declared-HWND-preimage-40",
+      "passed": true
+    },
+    {
+      "name": "positive-2.B.declared-HWND-preimage-48",
+      "passed": true
+    },
+    {
+      "name": "positive-2.B.only-declared-relocations",
+      "passed": true
+    },
+    {
+      "name": "positive-2.SA.raw-computation",
+      "passed": true
+    },
+    {
+      "name": "positive-2.SA.fingerprints-immutable",
+      "passed": true
+    },
+    {
+      "name": "positive-2.SA.raw-memory-hash",
+      "passed": true
+    },
+    {
+      "name": "positive-2.SA.raw-stack-hash",
+      "passed": true
+    },
+    {
+      "name": "positive-2.SA.raw-context-hash",
+      "passed": true
+    },
+    {
+      "name": "positive-2.SA.raw-resources-hash",
+      "passed": true
+    },
+    {
+      "name": "positive-2.SA.raw-metadata-hash",
+      "passed": true
+    },
+    {
+      "name": "positive-2.SA.raw-returns-hash",
+      "passed": true
+    },
+    {
+      "name": "positive-2.SA.raw-abi-hash",
+      "passed": true
+    },
+    {
+      "name": "positive-2.SA.raw-executable-hash",
+      "passed": true
+    },
+    {
+      "name": "positive-2.SA.whole-hash",
+      "passed": true
+    },
+    {
+      "name": "positive-2.RA.execution-not-replayed",
+      "passed": true
+    },
+    {
+      "name": "positive-2.RA.actual-memory-and-counter",
+      "passed": true
+    },
+    {
+      "name": "positive-2.RA.target-owned-CET",
+      "passed": true
+    },
+    {
+      "name": "positive-2.RA.declared-HWND-preimage-40",
+      "passed": true
+    },
+    {
+      "name": "positive-2.RA.declared-HWND-preimage-320",
+      "passed": true
+    },
+    {
+      "name": "positive-2.RA.declared-HWND-preimage-328",
+      "passed": true
+    },
+    {
+      "name": "positive-2.RA.declared-HWND-preimage-176",
+      "passed": true
+    },
+    {
+      "name": "positive-2.RA.declared-HWND-preimage-168",
+      "passed": true
+    },
+    {
+      "name": "positive-2.RA.declared-HWND-preimage-40",
+      "passed": true
+    },
+    {
+      "name": "positive-2.RA.declared-HWND-preimage-48",
+      "passed": true
+    },
+    {
+      "name": "positive-2.RA.only-declared-relocations",
+      "passed": true
+    },
+    {
+      "name": "positive-2.SB.raw-computation",
+      "passed": true
+    },
+    {
+      "name": "positive-2.SB.fingerprints-immutable",
+      "passed": true
+    },
+    {
+      "name": "positive-2.SB.raw-memory-hash",
+      "passed": true
+    },
+    {
+      "name": "positive-2.SB.raw-stack-hash",
+      "passed": true
+    },
+    {
+      "name": "positive-2.SB.raw-context-hash",
+      "passed": true
+    },
+    {
+      "name": "positive-2.SB.raw-resources-hash",
+      "passed": true
+    },
+    {
+      "name": "positive-2.SB.raw-metadata-hash",
+      "passed": true
+    },
+    {
+      "name": "positive-2.SB.raw-returns-hash",
+      "passed": true
+    },
+    {
+      "name": "positive-2.SB.raw-abi-hash",
+      "passed": true
+    },
+    {
+      "name": "positive-2.SB.raw-executable-hash",
+      "passed": true
+    },
+    {
+      "name": "positive-2.SB.whole-hash",
+      "passed": true
+    },
+    {
+      "name": "positive-2.RB.execution-not-replayed",
+      "passed": true
+    },
+    {
+      "name": "positive-2.RB.actual-memory-and-counter",
+      "passed": true
+    },
+    {
+      "name": "positive-2.RB.target-owned-CET",
+      "passed": true
+    },
+    {
+      "name": "positive-2.RB.declared-HWND-preimage-40",
+      "passed": true
+    },
+    {
+      "name": "positive-2.RB.declared-HWND-preimage-320",
+      "passed": true
+    },
+    {
+      "name": "positive-2.RB.declared-HWND-preimage-328",
+      "passed": true
+    },
+    {
+      "name": "positive-2.RB.declared-HWND-preimage-176",
+      "passed": true
+    },
+    {
+      "name": "positive-2.RB.declared-HWND-preimage-168",
+      "passed": true
+    },
+    {
+      "name": "positive-2.RB.declared-HWND-preimage-40",
+      "passed": true
+    },
+    {
+      "name": "positive-2.RB.declared-HWND-preimage-48",
+      "passed": true
+    },
+    {
+      "name": "positive-2.RB.only-declared-relocations",
+      "passed": true
+    },
+    {
+      "name": "positive-2.no-target-initialization",
+      "passed": true
+    },
+    {
+      "name": "positive-2.source-S0-fresh-GDI-pixels",
+      "passed": true
+    },
+    {
+      "name": "positive-2.A-initial-fresh-GDI-pixels",
+      "passed": true
+    },
+    {
+      "name": "positive-2.B-initial-fresh-GDI-pixels",
+      "passed": true
+    },
+    {
+      "name": "positive-2.A-single-edit-fresh-GDI-pixels",
+      "passed": true
+    },
+    {
+      "name": "positive-2.B-single-edit-fresh-GDI-pixels",
+      "passed": true
+    },
+    {
+      "name": "positive-2.A-SA-fresh-GDI-pixels",
+      "passed": true
+    },
+    {
+      "name": "positive-2.B-SB-fresh-GDI-pixels",
+      "passed": true
+    },
+    {
+      "name": "positive-2.RA-initial-fresh-GDI-pixels",
+      "passed": true
+    },
+    {
+      "name": "positive-2.RB-initial-fresh-GDI-pixels",
+      "passed": true
+    },
+    {
+      "name": "positive-2.RA-undo1-fresh-GDI-pixels",
+      "passed": true
+    },
+    {
+      "name": "positive-2.RA-undo2-fresh-GDI-pixels",
+      "passed": true
+    },
+    {
+      "name": "positive-2.RA-continued-input-fresh-GDI-pixels",
+      "passed": true
+    },
+    {
+      "name": "positive-2.RB-undo1-fresh-GDI-pixels",
+      "passed": true
+    },
+    {
+      "name": "positive-2.RB-undo2-fresh-GDI-pixels",
+      "passed": true
+    },
+    {
+      "name": "positive-2.RB-continued-input-fresh-GDI-pixels",
+      "passed": true
+    },
+    {
+      "name": "positive-2.only-four-restored-Views",
+      "passed": true
+    },
+    {
+      "name": "positive-2.source-exit-before-restore",
+      "passed": true
+    },
+    {
+      "name": "positive-2.RA.old-exit-first",
+      "passed": true
+    },
+    {
+      "name": "positive-2.RA.native-undo-current-state",
+      "passed": true
+    },
+    {
+      "name": "positive-2.RA.native-EDIT-pixels",
+      "passed": true
+    },
+    {
+      "name": "positive-2.RB.old-exit-first",
+      "passed": true
+    },
+    {
+      "name": "positive-2.RB.native-undo-current-state",
+      "passed": true
+    },
+    {
+      "name": "positive-2.RB.native-EDIT-pixels",
+      "passed": true
+    },
+    {
+      "name": "positive-2.scope-preserved",
+      "passed": true
+    },
+    {
+      "name": "positive-2.owned-resources-cleaned",
+      "passed": true
+    },
+    {
+      "name": "multiple-2.completed",
+      "passed": true
+    },
+    {
+      "name": "multiple-2.controller-assertions",
+      "passed": true
+    },
+    {
+      "name": "multiple-2.CET-CFG-enabled",
+      "passed": true
+    },
+    {
+      "name": "multiple-2.one-pump-exact-routing",
+      "passed": true
+    },
+    {
+      "name": "multiple-2.source-S0-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "multiple-2.source-changed-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "multiple-2.A-prepared-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "multiple-2.A-initial-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "multiple-2.B-prepared-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "multiple-2.B-initial-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "multiple-2.B-before-A-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "multiple-2.A-single-edit-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "multiple-2.B-after-A-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "multiple-2.A-before-B-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "multiple-2.B-single-edit-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "multiple-2.A-after-B-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "multiple-2.A-rejected-terminal-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "multiple-2.S0.raw-computation",
+      "passed": true
+    },
+    {
+      "name": "multiple-2.S0.fingerprints-immutable",
+      "passed": true
+    },
+    {
+      "name": "multiple-2.S0.raw-memory-hash",
+      "passed": true
+    },
+    {
+      "name": "multiple-2.S0.raw-stack-hash",
+      "passed": true
+    },
+    {
+      "name": "multiple-2.S0.raw-context-hash",
+      "passed": true
+    },
+    {
+      "name": "multiple-2.S0.raw-resources-hash",
+      "passed": true
+    },
+    {
+      "name": "multiple-2.S0.raw-metadata-hash",
+      "passed": true
+    },
+    {
+      "name": "multiple-2.S0.raw-returns-hash",
+      "passed": true
+    },
+    {
+      "name": "multiple-2.S0.raw-abi-hash",
+      "passed": true
+    },
+    {
+      "name": "multiple-2.S0.raw-executable-hash",
+      "passed": true
+    },
+    {
+      "name": "multiple-2.S0.whole-hash",
+      "passed": true
+    },
+    {
+      "name": "multiple-2.A.execution-not-replayed",
+      "passed": true
+    },
+    {
+      "name": "multiple-2.A.actual-memory-and-counter",
+      "passed": true
+    },
+    {
+      "name": "multiple-2.A.target-owned-CET",
+      "passed": true
+    },
+    {
+      "name": "multiple-2.A.declared-HWND-preimage-40",
+      "passed": true
+    },
+    {
+      "name": "multiple-2.A.declared-HWND-preimage-320",
+      "passed": true
+    },
+    {
+      "name": "multiple-2.A.declared-HWND-preimage-328",
+      "passed": true
+    },
+    {
+      "name": "multiple-2.A.declared-HWND-preimage-176",
+      "passed": true
+    },
+    {
+      "name": "multiple-2.A.declared-HWND-preimage-168",
+      "passed": true
+    },
+    {
+      "name": "multiple-2.A.declared-HWND-preimage-40",
+      "passed": true
+    },
+    {
+      "name": "multiple-2.A.declared-HWND-preimage-48",
+      "passed": true
+    },
+    {
+      "name": "multiple-2.A.only-declared-relocations",
+      "passed": true
+    },
+    {
+      "name": "multiple-2.B.execution-not-replayed",
+      "passed": true
+    },
+    {
+      "name": "multiple-2.B.actual-memory-and-counter",
+      "passed": true
+    },
+    {
+      "name": "multiple-2.B.target-owned-CET",
+      "passed": true
+    },
+    {
+      "name": "multiple-2.B.declared-HWND-preimage-40",
+      "passed": true
+    },
+    {
+      "name": "multiple-2.B.declared-HWND-preimage-320",
+      "passed": true
+    },
+    {
+      "name": "multiple-2.B.declared-HWND-preimage-328",
+      "passed": true
+    },
+    {
+      "name": "multiple-2.B.declared-HWND-preimage-176",
+      "passed": true
+    },
+    {
+      "name": "multiple-2.B.declared-HWND-preimage-168",
+      "passed": true
+    },
+    {
+      "name": "multiple-2.B.declared-HWND-preimage-40",
+      "passed": true
+    },
+    {
+      "name": "multiple-2.B.declared-HWND-preimage-48",
+      "passed": true
+    },
+    {
+      "name": "multiple-2.B.only-declared-relocations",
+      "passed": true
+    },
+    {
+      "name": "multiple-2.no-target-initialization",
+      "passed": true
+    },
+    {
+      "name": "multiple-2.source-S0-fresh-GDI-pixels",
+      "passed": true
+    },
+    {
+      "name": "multiple-2.A-initial-fresh-GDI-pixels",
+      "passed": true
+    },
+    {
+      "name": "multiple-2.B-initial-fresh-GDI-pixels",
+      "passed": true
+    },
+    {
+      "name": "multiple-2.A-single-edit-fresh-GDI-pixels",
+      "passed": true
+    },
+    {
+      "name": "multiple-2.B-single-edit-fresh-GDI-pixels",
+      "passed": true
+    },
+    {
+      "name": "multiple-2.A-after-rejection-fresh-GDI-pixels",
+      "passed": true
+    },
+    {
+      "name": "multiple-2.B-after-rejection-fresh-GDI-pixels",
+      "passed": true
+    },
+    {
+      "name": "multiple-2.rejection-not-capability-pass",
+      "passed": true
+    },
+    {
+      "name": "multiple-2.scope-preserved",
+      "passed": true
+    },
+    {
+      "name": "multiple-2.owned-resources-cleaned",
+      "passed": true
+    },
+    {
+      "name": "IME-2.completed",
+      "passed": true
+    },
+    {
+      "name": "IME-2.controller-assertions",
+      "passed": true
+    },
+    {
+      "name": "IME-2.CET-CFG-enabled",
+      "passed": true
+    },
+    {
+      "name": "IME-2.one-pump-exact-routing",
+      "passed": true
+    },
+    {
+      "name": "IME-2.source-S0-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "IME-2.source-changed-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "IME-2.A-prepared-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "IME-2.A-initial-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "IME-2.B-prepared-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "IME-2.B-initial-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "IME-2.B-before-A-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "IME-2.A-single-edit-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "IME-2.B-after-A-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "IME-2.A-before-B-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "IME-2.B-single-edit-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "IME-2.A-after-B-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "IME-2.A-synthetic-IME-guard-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "IME-2.A-rejected-terminal-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "IME-2.S0.raw-computation",
+      "passed": true
+    },
+    {
+      "name": "IME-2.S0.fingerprints-immutable",
+      "passed": true
+    },
+    {
+      "name": "IME-2.S0.raw-memory-hash",
+      "passed": true
+    },
+    {
+      "name": "IME-2.S0.raw-stack-hash",
+      "passed": true
+    },
+    {
+      "name": "IME-2.S0.raw-context-hash",
+      "passed": true
+    },
+    {
+      "name": "IME-2.S0.raw-resources-hash",
+      "passed": true
+    },
+    {
+      "name": "IME-2.S0.raw-metadata-hash",
+      "passed": true
+    },
+    {
+      "name": "IME-2.S0.raw-returns-hash",
+      "passed": true
+    },
+    {
+      "name": "IME-2.S0.raw-abi-hash",
+      "passed": true
+    },
+    {
+      "name": "IME-2.S0.raw-executable-hash",
+      "passed": true
+    },
+    {
+      "name": "IME-2.S0.whole-hash",
+      "passed": true
+    },
+    {
+      "name": "IME-2.A.execution-not-replayed",
+      "passed": true
+    },
+    {
+      "name": "IME-2.A.actual-memory-and-counter",
+      "passed": true
+    },
+    {
+      "name": "IME-2.A.target-owned-CET",
+      "passed": true
+    },
+    {
+      "name": "IME-2.A.declared-HWND-preimage-40",
+      "passed": true
+    },
+    {
+      "name": "IME-2.A.declared-HWND-preimage-320",
+      "passed": true
+    },
+    {
+      "name": "IME-2.A.declared-HWND-preimage-328",
+      "passed": true
+    },
+    {
+      "name": "IME-2.A.declared-HWND-preimage-176",
+      "passed": true
+    },
+    {
+      "name": "IME-2.A.declared-HWND-preimage-168",
+      "passed": true
+    },
+    {
+      "name": "IME-2.A.declared-HWND-preimage-40",
+      "passed": true
+    },
+    {
+      "name": "IME-2.A.declared-HWND-preimage-48",
+      "passed": true
+    },
+    {
+      "name": "IME-2.A.only-declared-relocations",
+      "passed": true
+    },
+    {
+      "name": "IME-2.B.execution-not-replayed",
+      "passed": true
+    },
+    {
+      "name": "IME-2.B.actual-memory-and-counter",
+      "passed": true
+    },
+    {
+      "name": "IME-2.B.target-owned-CET",
+      "passed": true
+    },
+    {
+      "name": "IME-2.B.declared-HWND-preimage-40",
+      "passed": true
+    },
+    {
+      "name": "IME-2.B.declared-HWND-preimage-320",
+      "passed": true
+    },
+    {
+      "name": "IME-2.B.declared-HWND-preimage-328",
+      "passed": true
+    },
+    {
+      "name": "IME-2.B.declared-HWND-preimage-176",
+      "passed": true
+    },
+    {
+      "name": "IME-2.B.declared-HWND-preimage-168",
+      "passed": true
+    },
+    {
+      "name": "IME-2.B.declared-HWND-preimage-40",
+      "passed": true
+    },
+    {
+      "name": "IME-2.B.declared-HWND-preimage-48",
+      "passed": true
+    },
+    {
+      "name": "IME-2.B.only-declared-relocations",
+      "passed": true
+    },
+    {
+      "name": "IME-2.no-target-initialization",
+      "passed": true
+    },
+    {
+      "name": "IME-2.source-S0-fresh-GDI-pixels",
+      "passed": true
+    },
+    {
+      "name": "IME-2.A-initial-fresh-GDI-pixels",
+      "passed": true
+    },
+    {
+      "name": "IME-2.B-initial-fresh-GDI-pixels",
+      "passed": true
+    },
+    {
+      "name": "IME-2.A-single-edit-fresh-GDI-pixels",
+      "passed": true
+    },
+    {
+      "name": "IME-2.B-single-edit-fresh-GDI-pixels",
+      "passed": true
+    },
+    {
+      "name": "IME-2.A-after-rejection-fresh-GDI-pixels",
+      "passed": true
+    },
+    {
+      "name": "IME-2.B-after-rejection-fresh-GDI-pixels",
+      "passed": true
+    },
+    {
+      "name": "IME-2.rejection-not-capability-pass",
+      "passed": true
+    },
+    {
+      "name": "IME-2.scope-preserved",
+      "passed": true
+    },
+    {
+      "name": "IME-2.owned-resources-cleaned",
+      "passed": true
+    },
+    {
+      "name": "no-undo-2.completed",
+      "passed": true
+    },
+    {
+      "name": "no-undo-2.controller-assertions",
+      "passed": true
+    },
+    {
+      "name": "no-undo-2.CET-CFG-enabled",
+      "passed": true
+    },
+    {
+      "name": "no-undo-2.one-pump-exact-routing",
+      "passed": true
+    },
+    {
+      "name": "no-undo-2.source-S0-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "no-undo-2.source-changed-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "no-undo-2.A-prepared-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "no-undo-2.A-initial-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "no-undo-2.B-prepared-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "no-undo-2.B-initial-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "no-undo-2.B-before-A-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "no-undo-2.A-single-edit-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "no-undo-2.B-after-A-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "no-undo-2.A-before-B-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "no-undo-2.B-single-edit-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "no-undo-2.A-after-B-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "no-undo-2.A-SA-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "no-undo-2.B-SB-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "no-undo-2.RA-prepared-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "no-undo-2.S0.raw-computation",
+      "passed": true
+    },
+    {
+      "name": "no-undo-2.S0.fingerprints-immutable",
+      "passed": true
+    },
+    {
+      "name": "no-undo-2.S0.raw-memory-hash",
+      "passed": true
+    },
+    {
+      "name": "no-undo-2.S0.raw-stack-hash",
+      "passed": true
+    },
+    {
+      "name": "no-undo-2.S0.raw-context-hash",
+      "passed": true
+    },
+    {
+      "name": "no-undo-2.S0.raw-resources-hash",
+      "passed": true
+    },
+    {
+      "name": "no-undo-2.S0.raw-metadata-hash",
+      "passed": true
+    },
+    {
+      "name": "no-undo-2.S0.raw-returns-hash",
+      "passed": true
+    },
+    {
+      "name": "no-undo-2.S0.raw-abi-hash",
+      "passed": true
+    },
+    {
+      "name": "no-undo-2.S0.raw-executable-hash",
+      "passed": true
+    },
+    {
+      "name": "no-undo-2.S0.whole-hash",
+      "passed": true
+    },
+    {
+      "name": "no-undo-2.A.execution-not-replayed",
+      "passed": true
+    },
+    {
+      "name": "no-undo-2.A.actual-memory-and-counter",
+      "passed": true
+    },
+    {
+      "name": "no-undo-2.A.target-owned-CET",
+      "passed": true
+    },
+    {
+      "name": "no-undo-2.A.declared-HWND-preimage-40",
+      "passed": true
+    },
+    {
+      "name": "no-undo-2.A.declared-HWND-preimage-320",
+      "passed": true
+    },
+    {
+      "name": "no-undo-2.A.declared-HWND-preimage-328",
+      "passed": true
+    },
+    {
+      "name": "no-undo-2.A.declared-HWND-preimage-176",
+      "passed": true
+    },
+    {
+      "name": "no-undo-2.A.declared-HWND-preimage-168",
+      "passed": true
+    },
+    {
+      "name": "no-undo-2.A.declared-HWND-preimage-40",
+      "passed": true
+    },
+    {
+      "name": "no-undo-2.A.declared-HWND-preimage-48",
+      "passed": true
+    },
+    {
+      "name": "no-undo-2.A.only-declared-relocations",
+      "passed": true
+    },
+    {
+      "name": "no-undo-2.B.execution-not-replayed",
+      "passed": true
+    },
+    {
+      "name": "no-undo-2.B.actual-memory-and-counter",
+      "passed": true
+    },
+    {
+      "name": "no-undo-2.B.target-owned-CET",
+      "passed": true
+    },
+    {
+      "name": "no-undo-2.B.declared-HWND-preimage-40",
+      "passed": true
+    },
+    {
+      "name": "no-undo-2.B.declared-HWND-preimage-320",
+      "passed": true
+    },
+    {
+      "name": "no-undo-2.B.declared-HWND-preimage-328",
+      "passed": true
+    },
+    {
+      "name": "no-undo-2.B.declared-HWND-preimage-176",
+      "passed": true
+    },
+    {
+      "name": "no-undo-2.B.declared-HWND-preimage-168",
+      "passed": true
+    },
+    {
+      "name": "no-undo-2.B.declared-HWND-preimage-40",
+      "passed": true
+    },
+    {
+      "name": "no-undo-2.B.declared-HWND-preimage-48",
+      "passed": true
+    },
+    {
+      "name": "no-undo-2.B.only-declared-relocations",
+      "passed": true
+    },
+    {
+      "name": "no-undo-2.SA.raw-computation",
+      "passed": true
+    },
+    {
+      "name": "no-undo-2.SA.fingerprints-immutable",
+      "passed": true
+    },
+    {
+      "name": "no-undo-2.SA.raw-memory-hash",
+      "passed": true
+    },
+    {
+      "name": "no-undo-2.SA.raw-stack-hash",
+      "passed": true
+    },
+    {
+      "name": "no-undo-2.SA.raw-context-hash",
+      "passed": true
+    },
+    {
+      "name": "no-undo-2.SA.raw-resources-hash",
+      "passed": true
+    },
+    {
+      "name": "no-undo-2.SA.raw-metadata-hash",
+      "passed": true
+    },
+    {
+      "name": "no-undo-2.SA.raw-returns-hash",
+      "passed": true
+    },
+    {
+      "name": "no-undo-2.SA.raw-abi-hash",
+      "passed": true
+    },
+    {
+      "name": "no-undo-2.SA.raw-executable-hash",
+      "passed": true
+    },
+    {
+      "name": "no-undo-2.SA.whole-hash",
+      "passed": true
+    },
+    {
+      "name": "no-undo-2.SB.raw-computation",
+      "passed": true
+    },
+    {
+      "name": "no-undo-2.SB.fingerprints-immutable",
+      "passed": true
+    },
+    {
+      "name": "no-undo-2.SB.raw-memory-hash",
+      "passed": true
+    },
+    {
+      "name": "no-undo-2.SB.raw-stack-hash",
+      "passed": true
+    },
+    {
+      "name": "no-undo-2.SB.raw-context-hash",
+      "passed": true
+    },
+    {
+      "name": "no-undo-2.SB.raw-resources-hash",
+      "passed": true
+    },
+    {
+      "name": "no-undo-2.SB.raw-metadata-hash",
+      "passed": true
+    },
+    {
+      "name": "no-undo-2.SB.raw-returns-hash",
+      "passed": true
+    },
+    {
+      "name": "no-undo-2.SB.raw-abi-hash",
+      "passed": true
+    },
+    {
+      "name": "no-undo-2.SB.raw-executable-hash",
+      "passed": true
+    },
+    {
+      "name": "no-undo-2.SB.whole-hash",
+      "passed": true
+    },
+    {
+      "name": "no-undo-2.no-target-initialization",
+      "passed": true
+    },
+    {
+      "name": "no-undo-2.source-S0-fresh-GDI-pixels",
+      "passed": true
+    },
+    {
+      "name": "no-undo-2.A-initial-fresh-GDI-pixels",
+      "passed": true
+    },
+    {
+      "name": "no-undo-2.B-initial-fresh-GDI-pixels",
+      "passed": true
+    },
+    {
+      "name": "no-undo-2.A-single-edit-fresh-GDI-pixels",
+      "passed": true
+    },
+    {
+      "name": "no-undo-2.B-single-edit-fresh-GDI-pixels",
+      "passed": true
+    },
+    {
+      "name": "no-undo-2.A-SA-fresh-GDI-pixels",
+      "passed": true
+    },
+    {
+      "name": "no-undo-2.B-SB-fresh-GDI-pixels",
+      "passed": true
+    },
+    {
+      "name": "no-undo-2.actual-failed-native-readback",
+      "passed": true
+    },
+    {
+      "name": "no-undo-2.rejection-not-capability-pass",
+      "passed": true
+    },
+    {
+      "name": "no-undo-2.scope-preserved",
+      "passed": true
+    },
+    {
+      "name": "no-undo-2.owned-resources-cleaned",
+      "passed": true
+    },
+    {
+      "name": "stack-2.completed",
+      "passed": true
+    },
+    {
+      "name": "stack-2.controller-assertions",
+      "passed": true
+    },
+    {
+      "name": "stack-2.CET-CFG-enabled",
+      "passed": true
+    },
+    {
+      "name": "stack-2.one-pump-exact-routing",
+      "passed": true
+    },
+    {
+      "name": "stack-2.source-S0-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "stack-2.source-changed-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "stack-2.A-prepared-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "stack-2.A-initial-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "stack-2.B-prepared-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "stack-2.B-initial-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "stack-2.B-before-A-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "stack-2.A-single-edit-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "stack-2.B-after-A-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "stack-2.A-before-B-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "stack-2.B-single-edit-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "stack-2.A-after-B-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "stack-2.A-SA-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "stack-2.B-SB-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "stack-2.RA-prepared-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "stack-2.S0.raw-computation",
+      "passed": true
+    },
+    {
+      "name": "stack-2.S0.fingerprints-immutable",
+      "passed": true
+    },
+    {
+      "name": "stack-2.S0.raw-memory-hash",
+      "passed": true
+    },
+    {
+      "name": "stack-2.S0.raw-stack-hash",
+      "passed": true
+    },
+    {
+      "name": "stack-2.S0.raw-context-hash",
+      "passed": true
+    },
+    {
+      "name": "stack-2.S0.raw-resources-hash",
+      "passed": true
+    },
+    {
+      "name": "stack-2.S0.raw-metadata-hash",
+      "passed": true
+    },
+    {
+      "name": "stack-2.S0.raw-returns-hash",
+      "passed": true
+    },
+    {
+      "name": "stack-2.S0.raw-abi-hash",
+      "passed": true
+    },
+    {
+      "name": "stack-2.S0.raw-executable-hash",
+      "passed": true
+    },
+    {
+      "name": "stack-2.S0.whole-hash",
+      "passed": true
+    },
+    {
+      "name": "stack-2.A.execution-not-replayed",
+      "passed": true
+    },
+    {
+      "name": "stack-2.A.actual-memory-and-counter",
+      "passed": true
+    },
+    {
+      "name": "stack-2.A.target-owned-CET",
+      "passed": true
+    },
+    {
+      "name": "stack-2.A.declared-HWND-preimage-40",
+      "passed": true
+    },
+    {
+      "name": "stack-2.A.declared-HWND-preimage-320",
+      "passed": true
+    },
+    {
+      "name": "stack-2.A.declared-HWND-preimage-328",
+      "passed": true
+    },
+    {
+      "name": "stack-2.A.declared-HWND-preimage-176",
+      "passed": true
+    },
+    {
+      "name": "stack-2.A.declared-HWND-preimage-168",
+      "passed": true
+    },
+    {
+      "name": "stack-2.A.declared-HWND-preimage-40",
+      "passed": true
+    },
+    {
+      "name": "stack-2.A.declared-HWND-preimage-48",
+      "passed": true
+    },
+    {
+      "name": "stack-2.A.only-declared-relocations",
+      "passed": true
+    },
+    {
+      "name": "stack-2.B.execution-not-replayed",
+      "passed": true
+    },
+    {
+      "name": "stack-2.B.actual-memory-and-counter",
+      "passed": true
+    },
+    {
+      "name": "stack-2.B.target-owned-CET",
+      "passed": true
+    },
+    {
+      "name": "stack-2.B.declared-HWND-preimage-40",
+      "passed": true
+    },
+    {
+      "name": "stack-2.B.declared-HWND-preimage-320",
+      "passed": true
+    },
+    {
+      "name": "stack-2.B.declared-HWND-preimage-328",
+      "passed": true
+    },
+    {
+      "name": "stack-2.B.declared-HWND-preimage-176",
+      "passed": true
+    },
+    {
+      "name": "stack-2.B.declared-HWND-preimage-168",
+      "passed": true
+    },
+    {
+      "name": "stack-2.B.declared-HWND-preimage-40",
+      "passed": true
+    },
+    {
+      "name": "stack-2.B.declared-HWND-preimage-48",
+      "passed": true
+    },
+    {
+      "name": "stack-2.B.only-declared-relocations",
+      "passed": true
+    },
+    {
+      "name": "stack-2.SA.raw-computation",
+      "passed": true
+    },
+    {
+      "name": "stack-2.SA.fingerprints-immutable",
+      "passed": true
+    },
+    {
+      "name": "stack-2.SA.raw-memory-hash",
+      "passed": true
+    },
+    {
+      "name": "stack-2.SA.raw-stack-hash",
+      "passed": true
+    },
+    {
+      "name": "stack-2.SA.raw-context-hash",
+      "passed": true
+    },
+    {
+      "name": "stack-2.SA.raw-resources-hash",
+      "passed": true
+    },
+    {
+      "name": "stack-2.SA.raw-metadata-hash",
+      "passed": true
+    },
+    {
+      "name": "stack-2.SA.raw-returns-hash",
+      "passed": true
+    },
+    {
+      "name": "stack-2.SA.raw-abi-hash",
+      "passed": true
+    },
+    {
+      "name": "stack-2.SA.raw-executable-hash",
+      "passed": true
+    },
+    {
+      "name": "stack-2.SA.whole-hash",
+      "passed": true
+    },
+    {
+      "name": "stack-2.RA.execution-not-replayed",
+      "passed": true
+    },
+    {
+      "name": "stack-2.SB.raw-computation",
+      "passed": true
+    },
+    {
+      "name": "stack-2.SB.fingerprints-immutable",
+      "passed": true
+    },
+    {
+      "name": "stack-2.SB.raw-memory-hash",
+      "passed": true
+    },
+    {
+      "name": "stack-2.SB.raw-stack-hash",
+      "passed": true
+    },
+    {
+      "name": "stack-2.SB.raw-context-hash",
+      "passed": true
+    },
+    {
+      "name": "stack-2.SB.raw-resources-hash",
+      "passed": true
+    },
+    {
+      "name": "stack-2.SB.raw-metadata-hash",
+      "passed": true
+    },
+    {
+      "name": "stack-2.SB.raw-returns-hash",
+      "passed": true
+    },
+    {
+      "name": "stack-2.SB.raw-abi-hash",
+      "passed": true
+    },
+    {
+      "name": "stack-2.SB.raw-executable-hash",
+      "passed": true
+    },
+    {
+      "name": "stack-2.SB.whole-hash",
+      "passed": true
+    },
+    {
+      "name": "stack-2.no-target-initialization",
+      "passed": true
+    },
+    {
+      "name": "stack-2.source-S0-fresh-GDI-pixels",
+      "passed": true
+    },
+    {
+      "name": "stack-2.A-initial-fresh-GDI-pixels",
+      "passed": true
+    },
+    {
+      "name": "stack-2.B-initial-fresh-GDI-pixels",
+      "passed": true
+    },
+    {
+      "name": "stack-2.A-single-edit-fresh-GDI-pixels",
+      "passed": true
+    },
+    {
+      "name": "stack-2.B-single-edit-fresh-GDI-pixels",
+      "passed": true
+    },
+    {
+      "name": "stack-2.A-SA-fresh-GDI-pixels",
+      "passed": true
+    },
+    {
+      "name": "stack-2.B-SB-fresh-GDI-pixels",
+      "passed": true
+    },
+    {
+      "name": "stack-2.rejection-not-capability-pass",
+      "passed": true
+    },
+    {
+      "name": "stack-2.scope-preserved",
+      "passed": true
+    },
+    {
+      "name": "stack-2.owned-resources-cleaned",
+      "passed": true
+    },
+    {
+      "name": "register-2.completed",
+      "passed": true
+    },
+    {
+      "name": "register-2.controller-assertions",
+      "passed": true
+    },
+    {
+      "name": "register-2.CET-CFG-enabled",
+      "passed": true
+    },
+    {
+      "name": "register-2.one-pump-exact-routing",
+      "passed": true
+    },
+    {
+      "name": "register-2.source-S0-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "register-2.source-changed-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "register-2.A-prepared-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "register-2.A-initial-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "register-2.B-prepared-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "register-2.B-initial-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "register-2.B-before-A-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "register-2.A-single-edit-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "register-2.B-after-A-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "register-2.A-before-B-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "register-2.B-single-edit-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "register-2.A-after-B-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "register-2.A-SA-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "register-2.B-SB-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "register-2.RA-prepared-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "register-2.S0.raw-computation",
+      "passed": true
+    },
+    {
+      "name": "register-2.S0.fingerprints-immutable",
+      "passed": true
+    },
+    {
+      "name": "register-2.S0.raw-memory-hash",
+      "passed": true
+    },
+    {
+      "name": "register-2.S0.raw-stack-hash",
+      "passed": true
+    },
+    {
+      "name": "register-2.S0.raw-context-hash",
+      "passed": true
+    },
+    {
+      "name": "register-2.S0.raw-resources-hash",
+      "passed": true
+    },
+    {
+      "name": "register-2.S0.raw-metadata-hash",
+      "passed": true
+    },
+    {
+      "name": "register-2.S0.raw-returns-hash",
+      "passed": true
+    },
+    {
+      "name": "register-2.S0.raw-abi-hash",
+      "passed": true
+    },
+    {
+      "name": "register-2.S0.raw-executable-hash",
+      "passed": true
+    },
+    {
+      "name": "register-2.S0.whole-hash",
+      "passed": true
+    },
+    {
+      "name": "register-2.A.execution-not-replayed",
+      "passed": true
+    },
+    {
+      "name": "register-2.A.actual-memory-and-counter",
+      "passed": true
+    },
+    {
+      "name": "register-2.A.target-owned-CET",
+      "passed": true
+    },
+    {
+      "name": "register-2.A.declared-HWND-preimage-40",
+      "passed": true
+    },
+    {
+      "name": "register-2.A.declared-HWND-preimage-320",
+      "passed": true
+    },
+    {
+      "name": "register-2.A.declared-HWND-preimage-328",
+      "passed": true
+    },
+    {
+      "name": "register-2.A.declared-HWND-preimage-176",
+      "passed": true
+    },
+    {
+      "name": "register-2.A.declared-HWND-preimage-168",
+      "passed": true
+    },
+    {
+      "name": "register-2.A.declared-HWND-preimage-40",
+      "passed": true
+    },
+    {
+      "name": "register-2.A.declared-HWND-preimage-48",
+      "passed": true
+    },
+    {
+      "name": "register-2.A.only-declared-relocations",
+      "passed": true
+    },
+    {
+      "name": "register-2.B.execution-not-replayed",
+      "passed": true
+    },
+    {
+      "name": "register-2.B.actual-memory-and-counter",
+      "passed": true
+    },
+    {
+      "name": "register-2.B.target-owned-CET",
+      "passed": true
+    },
+    {
+      "name": "register-2.B.declared-HWND-preimage-40",
+      "passed": true
+    },
+    {
+      "name": "register-2.B.declared-HWND-preimage-320",
+      "passed": true
+    },
+    {
+      "name": "register-2.B.declared-HWND-preimage-328",
+      "passed": true
+    },
+    {
+      "name": "register-2.B.declared-HWND-preimage-176",
+      "passed": true
+    },
+    {
+      "name": "register-2.B.declared-HWND-preimage-168",
+      "passed": true
+    },
+    {
+      "name": "register-2.B.declared-HWND-preimage-40",
+      "passed": true
+    },
+    {
+      "name": "register-2.B.declared-HWND-preimage-48",
+      "passed": true
+    },
+    {
+      "name": "register-2.B.only-declared-relocations",
+      "passed": true
+    },
+    {
+      "name": "register-2.SA.raw-computation",
+      "passed": true
+    },
+    {
+      "name": "register-2.SA.fingerprints-immutable",
+      "passed": true
+    },
+    {
+      "name": "register-2.SA.raw-memory-hash",
+      "passed": true
+    },
+    {
+      "name": "register-2.SA.raw-stack-hash",
+      "passed": true
+    },
+    {
+      "name": "register-2.SA.raw-context-hash",
+      "passed": true
+    },
+    {
+      "name": "register-2.SA.raw-resources-hash",
+      "passed": true
+    },
+    {
+      "name": "register-2.SA.raw-metadata-hash",
+      "passed": true
+    },
+    {
+      "name": "register-2.SA.raw-returns-hash",
+      "passed": true
+    },
+    {
+      "name": "register-2.SA.raw-abi-hash",
+      "passed": true
+    },
+    {
+      "name": "register-2.SA.raw-executable-hash",
+      "passed": true
+    },
+    {
+      "name": "register-2.SA.whole-hash",
+      "passed": true
+    },
+    {
+      "name": "register-2.RA.execution-not-replayed",
+      "passed": true
+    },
+    {
+      "name": "register-2.SB.raw-computation",
+      "passed": true
+    },
+    {
+      "name": "register-2.SB.fingerprints-immutable",
+      "passed": true
+    },
+    {
+      "name": "register-2.SB.raw-memory-hash",
+      "passed": true
+    },
+    {
+      "name": "register-2.SB.raw-stack-hash",
+      "passed": true
+    },
+    {
+      "name": "register-2.SB.raw-context-hash",
+      "passed": true
+    },
+    {
+      "name": "register-2.SB.raw-resources-hash",
+      "passed": true
+    },
+    {
+      "name": "register-2.SB.raw-metadata-hash",
+      "passed": true
+    },
+    {
+      "name": "register-2.SB.raw-returns-hash",
+      "passed": true
+    },
+    {
+      "name": "register-2.SB.raw-abi-hash",
+      "passed": true
+    },
+    {
+      "name": "register-2.SB.raw-executable-hash",
+      "passed": true
+    },
+    {
+      "name": "register-2.SB.whole-hash",
+      "passed": true
+    },
+    {
+      "name": "register-2.no-target-initialization",
+      "passed": true
+    },
+    {
+      "name": "register-2.source-S0-fresh-GDI-pixels",
+      "passed": true
+    },
+    {
+      "name": "register-2.A-initial-fresh-GDI-pixels",
+      "passed": true
+    },
+    {
+      "name": "register-2.B-initial-fresh-GDI-pixels",
+      "passed": true
+    },
+    {
+      "name": "register-2.A-single-edit-fresh-GDI-pixels",
+      "passed": true
+    },
+    {
+      "name": "register-2.B-single-edit-fresh-GDI-pixels",
+      "passed": true
+    },
+    {
+      "name": "register-2.A-SA-fresh-GDI-pixels",
+      "passed": true
+    },
+    {
+      "name": "register-2.B-SB-fresh-GDI-pixels",
+      "passed": true
+    },
+    {
+      "name": "register-2.rejection-not-capability-pass",
+      "passed": true
+    },
+    {
+      "name": "register-2.scope-preserved",
+      "passed": true
+    },
+    {
+      "name": "register-2.owned-resources-cleaned",
+      "passed": true
+    },
+    {
+      "name": "memory-2.completed",
+      "passed": true
+    },
+    {
+      "name": "memory-2.controller-assertions",
+      "passed": true
+    },
+    {
+      "name": "memory-2.CET-CFG-enabled",
+      "passed": true
+    },
+    {
+      "name": "memory-2.one-pump-exact-routing",
+      "passed": true
+    },
+    {
+      "name": "memory-2.source-S0-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "memory-2.source-changed-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "memory-2.A-prepared-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "memory-2.A-initial-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "memory-2.B-prepared-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "memory-2.B-initial-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "memory-2.B-before-A-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "memory-2.A-single-edit-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "memory-2.B-after-A-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "memory-2.A-before-B-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "memory-2.B-single-edit-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "memory-2.A-after-B-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "memory-2.A-SA-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "memory-2.B-SB-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "memory-2.RA-prepared-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "memory-2.S0.raw-computation",
+      "passed": true
+    },
+    {
+      "name": "memory-2.S0.fingerprints-immutable",
+      "passed": true
+    },
+    {
+      "name": "memory-2.S0.raw-memory-hash",
+      "passed": true
+    },
+    {
+      "name": "memory-2.S0.raw-stack-hash",
+      "passed": true
+    },
+    {
+      "name": "memory-2.S0.raw-context-hash",
+      "passed": true
+    },
+    {
+      "name": "memory-2.S0.raw-resources-hash",
+      "passed": true
+    },
+    {
+      "name": "memory-2.S0.raw-metadata-hash",
+      "passed": true
+    },
+    {
+      "name": "memory-2.S0.raw-returns-hash",
+      "passed": true
+    },
+    {
+      "name": "memory-2.S0.raw-abi-hash",
+      "passed": true
+    },
+    {
+      "name": "memory-2.S0.raw-executable-hash",
+      "passed": true
+    },
+    {
+      "name": "memory-2.S0.whole-hash",
+      "passed": true
+    },
+    {
+      "name": "memory-2.A.execution-not-replayed",
+      "passed": true
+    },
+    {
+      "name": "memory-2.A.actual-memory-and-counter",
+      "passed": true
+    },
+    {
+      "name": "memory-2.A.target-owned-CET",
+      "passed": true
+    },
+    {
+      "name": "memory-2.A.declared-HWND-preimage-40",
+      "passed": true
+    },
+    {
+      "name": "memory-2.A.declared-HWND-preimage-320",
+      "passed": true
+    },
+    {
+      "name": "memory-2.A.declared-HWND-preimage-328",
+      "passed": true
+    },
+    {
+      "name": "memory-2.A.declared-HWND-preimage-176",
+      "passed": true
+    },
+    {
+      "name": "memory-2.A.declared-HWND-preimage-168",
+      "passed": true
+    },
+    {
+      "name": "memory-2.A.declared-HWND-preimage-40",
+      "passed": true
+    },
+    {
+      "name": "memory-2.A.declared-HWND-preimage-48",
+      "passed": true
+    },
+    {
+      "name": "memory-2.A.only-declared-relocations",
+      "passed": true
+    },
+    {
+      "name": "memory-2.B.execution-not-replayed",
+      "passed": true
+    },
+    {
+      "name": "memory-2.B.actual-memory-and-counter",
+      "passed": true
+    },
+    {
+      "name": "memory-2.B.target-owned-CET",
+      "passed": true
+    },
+    {
+      "name": "memory-2.B.declared-HWND-preimage-40",
+      "passed": true
+    },
+    {
+      "name": "memory-2.B.declared-HWND-preimage-320",
+      "passed": true
+    },
+    {
+      "name": "memory-2.B.declared-HWND-preimage-328",
+      "passed": true
+    },
+    {
+      "name": "memory-2.B.declared-HWND-preimage-176",
+      "passed": true
+    },
+    {
+      "name": "memory-2.B.declared-HWND-preimage-168",
+      "passed": true
+    },
+    {
+      "name": "memory-2.B.declared-HWND-preimage-40",
+      "passed": true
+    },
+    {
+      "name": "memory-2.B.declared-HWND-preimage-48",
+      "passed": true
+    },
+    {
+      "name": "memory-2.B.only-declared-relocations",
+      "passed": true
+    },
+    {
+      "name": "memory-2.SA.raw-computation",
+      "passed": true
+    },
+    {
+      "name": "memory-2.SA.fingerprints-immutable",
+      "passed": true
+    },
+    {
+      "name": "memory-2.SA.raw-memory-hash",
+      "passed": true
+    },
+    {
+      "name": "memory-2.SA.raw-stack-hash",
+      "passed": true
+    },
+    {
+      "name": "memory-2.SA.raw-context-hash",
+      "passed": true
+    },
+    {
+      "name": "memory-2.SA.raw-resources-hash",
+      "passed": true
+    },
+    {
+      "name": "memory-2.SA.raw-metadata-hash",
+      "passed": true
+    },
+    {
+      "name": "memory-2.SA.raw-returns-hash",
+      "passed": true
+    },
+    {
+      "name": "memory-2.SA.raw-abi-hash",
+      "passed": true
+    },
+    {
+      "name": "memory-2.SA.raw-executable-hash",
+      "passed": true
+    },
+    {
+      "name": "memory-2.SA.whole-hash",
+      "passed": true
+    },
+    {
+      "name": "memory-2.RA.execution-not-replayed",
+      "passed": true
+    },
+    {
+      "name": "memory-2.SB.raw-computation",
+      "passed": true
+    },
+    {
+      "name": "memory-2.SB.fingerprints-immutable",
+      "passed": true
+    },
+    {
+      "name": "memory-2.SB.raw-memory-hash",
+      "passed": true
+    },
+    {
+      "name": "memory-2.SB.raw-stack-hash",
+      "passed": true
+    },
+    {
+      "name": "memory-2.SB.raw-context-hash",
+      "passed": true
+    },
+    {
+      "name": "memory-2.SB.raw-resources-hash",
+      "passed": true
+    },
+    {
+      "name": "memory-2.SB.raw-metadata-hash",
+      "passed": true
+    },
+    {
+      "name": "memory-2.SB.raw-returns-hash",
+      "passed": true
+    },
+    {
+      "name": "memory-2.SB.raw-abi-hash",
+      "passed": true
+    },
+    {
+      "name": "memory-2.SB.raw-executable-hash",
+      "passed": true
+    },
+    {
+      "name": "memory-2.SB.whole-hash",
+      "passed": true
+    },
+    {
+      "name": "memory-2.no-target-initialization",
+      "passed": true
+    },
+    {
+      "name": "memory-2.source-S0-fresh-GDI-pixels",
+      "passed": true
+    },
+    {
+      "name": "memory-2.A-initial-fresh-GDI-pixels",
+      "passed": true
+    },
+    {
+      "name": "memory-2.B-initial-fresh-GDI-pixels",
+      "passed": true
+    },
+    {
+      "name": "memory-2.A-single-edit-fresh-GDI-pixels",
+      "passed": true
+    },
+    {
+      "name": "memory-2.B-single-edit-fresh-GDI-pixels",
+      "passed": true
+    },
+    {
+      "name": "memory-2.A-SA-fresh-GDI-pixels",
+      "passed": true
+    },
+    {
+      "name": "memory-2.B-SB-fresh-GDI-pixels",
+      "passed": true
+    },
+    {
+      "name": "memory-2.rejection-not-capability-pass",
+      "passed": true
+    },
+    {
+      "name": "memory-2.scope-preserved",
+      "passed": true
+    },
+    {
+      "name": "memory-2.owned-resources-cleaned",
+      "passed": true
+    },
+    {
+      "name": "bad-chain-2.completed",
+      "passed": true
+    },
+    {
+      "name": "bad-chain-2.controller-assertions",
+      "passed": true
+    },
+    {
+      "name": "bad-chain-2.CET-CFG-enabled",
+      "passed": true
+    },
+    {
+      "name": "bad-chain-2.one-pump-exact-routing",
+      "passed": true
+    },
+    {
+      "name": "bad-chain-2.source-S0-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "bad-chain-2.source-changed-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "bad-chain-2.A-prepared-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "bad-chain-2.A-initial-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "bad-chain-2.B-prepared-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "bad-chain-2.B-initial-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "bad-chain-2.B-before-A-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "bad-chain-2.A-single-edit-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "bad-chain-2.B-after-A-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "bad-chain-2.A-before-B-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "bad-chain-2.B-single-edit-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "bad-chain-2.A-after-B-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "bad-chain-2.A-SA-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "bad-chain-2.B-SB-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "bad-chain-2.RA-prepared-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "bad-chain-2.S0.raw-computation",
+      "passed": true
+    },
+    {
+      "name": "bad-chain-2.S0.fingerprints-immutable",
+      "passed": true
+    },
+    {
+      "name": "bad-chain-2.S0.raw-memory-hash",
+      "passed": true
+    },
+    {
+      "name": "bad-chain-2.S0.raw-stack-hash",
+      "passed": true
+    },
+    {
+      "name": "bad-chain-2.S0.raw-context-hash",
+      "passed": true
+    },
+    {
+      "name": "bad-chain-2.S0.raw-resources-hash",
+      "passed": true
+    },
+    {
+      "name": "bad-chain-2.S0.raw-metadata-hash",
+      "passed": true
+    },
+    {
+      "name": "bad-chain-2.S0.raw-returns-hash",
+      "passed": true
+    },
+    {
+      "name": "bad-chain-2.S0.raw-abi-hash",
+      "passed": true
+    },
+    {
+      "name": "bad-chain-2.S0.raw-executable-hash",
+      "passed": true
+    },
+    {
+      "name": "bad-chain-2.S0.whole-hash",
+      "passed": true
+    },
+    {
+      "name": "bad-chain-2.A.execution-not-replayed",
+      "passed": true
+    },
+    {
+      "name": "bad-chain-2.A.actual-memory-and-counter",
+      "passed": true
+    },
+    {
+      "name": "bad-chain-2.A.target-owned-CET",
+      "passed": true
+    },
+    {
+      "name": "bad-chain-2.A.declared-HWND-preimage-40",
+      "passed": true
+    },
+    {
+      "name": "bad-chain-2.A.declared-HWND-preimage-320",
+      "passed": true
+    },
+    {
+      "name": "bad-chain-2.A.declared-HWND-preimage-328",
+      "passed": true
+    },
+    {
+      "name": "bad-chain-2.A.declared-HWND-preimage-176",
+      "passed": true
+    },
+    {
+      "name": "bad-chain-2.A.declared-HWND-preimage-168",
+      "passed": true
+    },
+    {
+      "name": "bad-chain-2.A.declared-HWND-preimage-40",
+      "passed": true
+    },
+    {
+      "name": "bad-chain-2.A.declared-HWND-preimage-48",
+      "passed": true
+    },
+    {
+      "name": "bad-chain-2.A.only-declared-relocations",
+      "passed": true
+    },
+    {
+      "name": "bad-chain-2.B.execution-not-replayed",
+      "passed": true
+    },
+    {
+      "name": "bad-chain-2.B.actual-memory-and-counter",
+      "passed": true
+    },
+    {
+      "name": "bad-chain-2.B.target-owned-CET",
+      "passed": true
+    },
+    {
+      "name": "bad-chain-2.B.declared-HWND-preimage-40",
+      "passed": true
+    },
+    {
+      "name": "bad-chain-2.B.declared-HWND-preimage-320",
+      "passed": true
+    },
+    {
+      "name": "bad-chain-2.B.declared-HWND-preimage-328",
+      "passed": true
+    },
+    {
+      "name": "bad-chain-2.B.declared-HWND-preimage-176",
+      "passed": true
+    },
+    {
+      "name": "bad-chain-2.B.declared-HWND-preimage-168",
+      "passed": true
+    },
+    {
+      "name": "bad-chain-2.B.declared-HWND-preimage-40",
+      "passed": true
+    },
+    {
+      "name": "bad-chain-2.B.declared-HWND-preimage-48",
+      "passed": true
+    },
+    {
+      "name": "bad-chain-2.B.only-declared-relocations",
+      "passed": true
+    },
+    {
+      "name": "bad-chain-2.SA.raw-computation",
+      "passed": true
+    },
+    {
+      "name": "bad-chain-2.SA.fingerprints-immutable",
+      "passed": true
+    },
+    {
+      "name": "bad-chain-2.SA.raw-memory-hash",
+      "passed": true
+    },
+    {
+      "name": "bad-chain-2.SA.raw-stack-hash",
+      "passed": true
+    },
+    {
+      "name": "bad-chain-2.SA.raw-context-hash",
+      "passed": true
+    },
+    {
+      "name": "bad-chain-2.SA.raw-resources-hash",
+      "passed": true
+    },
+    {
+      "name": "bad-chain-2.SA.raw-metadata-hash",
+      "passed": true
+    },
+    {
+      "name": "bad-chain-2.SA.raw-returns-hash",
+      "passed": true
+    },
+    {
+      "name": "bad-chain-2.SA.raw-abi-hash",
+      "passed": true
+    },
+    {
+      "name": "bad-chain-2.SA.raw-executable-hash",
+      "passed": true
+    },
+    {
+      "name": "bad-chain-2.SA.whole-hash",
+      "passed": true
+    },
+    {
+      "name": "bad-chain-2.SB.raw-computation",
+      "passed": true
+    },
+    {
+      "name": "bad-chain-2.SB.fingerprints-immutable",
+      "passed": true
+    },
+    {
+      "name": "bad-chain-2.SB.raw-memory-hash",
+      "passed": true
+    },
+    {
+      "name": "bad-chain-2.SB.raw-stack-hash",
+      "passed": true
+    },
+    {
+      "name": "bad-chain-2.SB.raw-context-hash",
+      "passed": true
+    },
+    {
+      "name": "bad-chain-2.SB.raw-resources-hash",
+      "passed": true
+    },
+    {
+      "name": "bad-chain-2.SB.raw-metadata-hash",
+      "passed": true
+    },
+    {
+      "name": "bad-chain-2.SB.raw-returns-hash",
+      "passed": true
+    },
+    {
+      "name": "bad-chain-2.SB.raw-abi-hash",
+      "passed": true
+    },
+    {
+      "name": "bad-chain-2.SB.raw-executable-hash",
+      "passed": true
+    },
+    {
+      "name": "bad-chain-2.SB.whole-hash",
+      "passed": true
+    },
+    {
+      "name": "bad-chain-2.no-target-initialization",
+      "passed": true
+    },
+    {
+      "name": "bad-chain-2.source-S0-fresh-GDI-pixels",
+      "passed": true
+    },
+    {
+      "name": "bad-chain-2.A-initial-fresh-GDI-pixels",
+      "passed": true
+    },
+    {
+      "name": "bad-chain-2.B-initial-fresh-GDI-pixels",
+      "passed": true
+    },
+    {
+      "name": "bad-chain-2.A-single-edit-fresh-GDI-pixels",
+      "passed": true
+    },
+    {
+      "name": "bad-chain-2.B-single-edit-fresh-GDI-pixels",
+      "passed": true
+    },
+    {
+      "name": "bad-chain-2.A-SA-fresh-GDI-pixels",
+      "passed": true
+    },
+    {
+      "name": "bad-chain-2.B-SB-fresh-GDI-pixels",
+      "passed": true
+    },
+    {
+      "name": "bad-chain-2.rejection-not-capability-pass",
+      "passed": true
+    },
+    {
+      "name": "bad-chain-2.scope-preserved",
+      "passed": true
+    },
+    {
+      "name": "bad-chain-2.owned-resources-cleaned",
+      "passed": true
+    },
+    {
+      "name": "unknown-edit-2.completed",
+      "passed": true
+    },
+    {
+      "name": "unknown-edit-2.controller-assertions",
+      "passed": true
+    },
+    {
+      "name": "unknown-edit-2.CET-CFG-enabled",
+      "passed": true
+    },
+    {
+      "name": "unknown-edit-2.one-pump-exact-routing",
+      "passed": true
+    },
+    {
+      "name": "unknown-edit-2.source-S0-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "unknown-edit-2.source-changed-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "unknown-edit-2.A-prepared-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "unknown-edit-2.A-initial-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "unknown-edit-2.B-prepared-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "unknown-edit-2.B-initial-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "unknown-edit-2.B-before-A-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "unknown-edit-2.A-single-edit-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "unknown-edit-2.B-after-A-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "unknown-edit-2.A-before-B-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "unknown-edit-2.B-single-edit-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "unknown-edit-2.A-after-B-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "unknown-edit-2.A-unsupported-native-edit-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "unknown-edit-2.A-rejected-terminal-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "unknown-edit-2.S0.raw-computation",
+      "passed": true
+    },
+    {
+      "name": "unknown-edit-2.S0.fingerprints-immutable",
+      "passed": true
+    },
+    {
+      "name": "unknown-edit-2.S0.raw-memory-hash",
+      "passed": true
+    },
+    {
+      "name": "unknown-edit-2.S0.raw-stack-hash",
+      "passed": true
+    },
+    {
+      "name": "unknown-edit-2.S0.raw-context-hash",
+      "passed": true
+    },
+    {
+      "name": "unknown-edit-2.S0.raw-resources-hash",
+      "passed": true
+    },
+    {
+      "name": "unknown-edit-2.S0.raw-metadata-hash",
+      "passed": true
+    },
+    {
+      "name": "unknown-edit-2.S0.raw-returns-hash",
+      "passed": true
+    },
+    {
+      "name": "unknown-edit-2.S0.raw-abi-hash",
+      "passed": true
+    },
+    {
+      "name": "unknown-edit-2.S0.raw-executable-hash",
+      "passed": true
+    },
+    {
+      "name": "unknown-edit-2.S0.whole-hash",
+      "passed": true
+    },
+    {
+      "name": "unknown-edit-2.A.execution-not-replayed",
+      "passed": true
+    },
+    {
+      "name": "unknown-edit-2.A.actual-memory-and-counter",
+      "passed": true
+    },
+    {
+      "name": "unknown-edit-2.A.target-owned-CET",
+      "passed": true
+    },
+    {
+      "name": "unknown-edit-2.A.declared-HWND-preimage-40",
+      "passed": true
+    },
+    {
+      "name": "unknown-edit-2.A.declared-HWND-preimage-320",
+      "passed": true
+    },
+    {
+      "name": "unknown-edit-2.A.declared-HWND-preimage-328",
+      "passed": true
+    },
+    {
+      "name": "unknown-edit-2.A.declared-HWND-preimage-176",
+      "passed": true
+    },
+    {
+      "name": "unknown-edit-2.A.declared-HWND-preimage-168",
+      "passed": true
+    },
+    {
+      "name": "unknown-edit-2.A.declared-HWND-preimage-40",
+      "passed": true
+    },
+    {
+      "name": "unknown-edit-2.A.declared-HWND-preimage-48",
+      "passed": true
+    },
+    {
+      "name": "unknown-edit-2.A.only-declared-relocations",
+      "passed": true
+    },
+    {
+      "name": "unknown-edit-2.B.execution-not-replayed",
+      "passed": true
+    },
+    {
+      "name": "unknown-edit-2.B.actual-memory-and-counter",
+      "passed": true
+    },
+    {
+      "name": "unknown-edit-2.B.target-owned-CET",
+      "passed": true
+    },
+    {
+      "name": "unknown-edit-2.B.declared-HWND-preimage-40",
+      "passed": true
+    },
+    {
+      "name": "unknown-edit-2.B.declared-HWND-preimage-320",
+      "passed": true
+    },
+    {
+      "name": "unknown-edit-2.B.declared-HWND-preimage-328",
+      "passed": true
+    },
+    {
+      "name": "unknown-edit-2.B.declared-HWND-preimage-176",
+      "passed": true
+    },
+    {
+      "name": "unknown-edit-2.B.declared-HWND-preimage-168",
+      "passed": true
+    },
+    {
+      "name": "unknown-edit-2.B.declared-HWND-preimage-40",
+      "passed": true
+    },
+    {
+      "name": "unknown-edit-2.B.declared-HWND-preimage-48",
+      "passed": true
+    },
+    {
+      "name": "unknown-edit-2.B.only-declared-relocations",
+      "passed": true
+    },
+    {
+      "name": "unknown-edit-2.no-target-initialization",
+      "passed": true
+    },
+    {
+      "name": "unknown-edit-2.source-S0-fresh-GDI-pixels",
+      "passed": true
+    },
+    {
+      "name": "unknown-edit-2.A-initial-fresh-GDI-pixels",
+      "passed": true
+    },
+    {
+      "name": "unknown-edit-2.B-initial-fresh-GDI-pixels",
+      "passed": true
+    },
+    {
+      "name": "unknown-edit-2.A-single-edit-fresh-GDI-pixels",
+      "passed": true
+    },
+    {
+      "name": "unknown-edit-2.B-single-edit-fresh-GDI-pixels",
+      "passed": true
+    },
+    {
+      "name": "unknown-edit-2.A-after-rejection-fresh-GDI-pixels",
+      "passed": true
+    },
+    {
+      "name": "unknown-edit-2.B-after-rejection-fresh-GDI-pixels",
+      "passed": true
+    },
+    {
+      "name": "unknown-edit-2.rejection-not-capability-pass",
+      "passed": true
+    },
+    {
+      "name": "unknown-edit-2.scope-preserved",
+      "passed": true
+    },
+    {
+      "name": "unknown-edit-2.owned-resources-cleaned",
+      "passed": true
+    },
+    {
+      "name": "wrong-undo-2.completed",
+      "passed": true
+    },
+    {
+      "name": "wrong-undo-2.controller-assertions",
+      "passed": true
+    },
+    {
+      "name": "wrong-undo-2.CET-CFG-enabled",
+      "passed": true
+    },
+    {
+      "name": "wrong-undo-2.one-pump-exact-routing",
+      "passed": true
+    },
+    {
+      "name": "wrong-undo-2.source-S0-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "wrong-undo-2.source-changed-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "wrong-undo-2.A-prepared-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "wrong-undo-2.A-initial-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "wrong-undo-2.B-prepared-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "wrong-undo-2.B-initial-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "wrong-undo-2.B-before-A-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "wrong-undo-2.A-single-edit-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "wrong-undo-2.B-after-A-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "wrong-undo-2.A-before-B-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "wrong-undo-2.B-single-edit-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "wrong-undo-2.A-after-B-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "wrong-undo-2.A-SA-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "wrong-undo-2.B-SB-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "wrong-undo-2.RA-prepared-GUI-owner",
+      "passed": true
+    },
+    {
+      "name": "wrong-undo-2.S0.raw-computation",
+      "passed": true
+    },
+    {
+      "name": "wrong-undo-2.S0.fingerprints-immutable",
+      "passed": true
+    },
+    {
+      "name": "wrong-undo-2.S0.raw-memory-hash",
+      "passed": true
+    },
+    {
+      "name": "wrong-undo-2.S0.raw-stack-hash",
+      "passed": true
+    },
+    {
+      "name": "wrong-undo-2.S0.raw-context-hash",
+      "passed": true
+    },
+    {
+      "name": "wrong-undo-2.S0.raw-resources-hash",
+      "passed": true
+    },
+    {
+      "name": "wrong-undo-2.S0.raw-metadata-hash",
+      "passed": true
+    },
+    {
+      "name": "wrong-undo-2.S0.raw-returns-hash",
+      "passed": true
+    },
+    {
+      "name": "wrong-undo-2.S0.raw-abi-hash",
+      "passed": true
+    },
+    {
+      "name": "wrong-undo-2.S0.raw-executable-hash",
+      "passed": true
+    },
+    {
+      "name": "wrong-undo-2.S0.whole-hash",
+      "passed": true
+    },
+    {
+      "name": "wrong-undo-2.A.execution-not-replayed",
+      "passed": true
+    },
+    {
+      "name": "wrong-undo-2.A.actual-memory-and-counter",
+      "passed": true
+    },
+    {
+      "name": "wrong-undo-2.A.target-owned-CET",
+      "passed": true
+    },
+    {
+      "name": "wrong-undo-2.A.declared-HWND-preimage-40",
+      "passed": true
+    },
+    {
+      "name": "wrong-undo-2.A.declared-HWND-preimage-320",
+      "passed": true
+    },
+    {
+      "name": "wrong-undo-2.A.declared-HWND-preimage-328",
+      "passed": true
+    },
+    {
+      "name": "wrong-undo-2.A.declared-HWND-preimage-176",
+      "passed": true
+    },
+    {
+      "name": "wrong-undo-2.A.declared-HWND-preimage-168",
+      "passed": true
+    },
+    {
+      "name": "wrong-undo-2.A.declared-HWND-preimage-40",
+      "passed": true
+    },
+    {
+      "name": "wrong-undo-2.A.declared-HWND-preimage-48",
+      "passed": true
+    },
+    {
+      "name": "wrong-undo-2.A.only-declared-relocations",
+      "passed": true
+    },
+    {
+      "name": "wrong-undo-2.B.execution-not-replayed",
+      "passed": true
+    },
+    {
+      "name": "wrong-undo-2.B.actual-memory-and-counter",
+      "passed": true
+    },
+    {
+      "name": "wrong-undo-2.B.target-owned-CET",
+      "passed": true
+    },
+    {
+      "name": "wrong-undo-2.B.declared-HWND-preimage-40",
+      "passed": true
+    },
+    {
+      "name": "wrong-undo-2.B.declared-HWND-preimage-320",
+      "passed": true
+    },
+    {
+      "name": "wrong-undo-2.B.declared-HWND-preimage-328",
+      "passed": true
+    },
+    {
+      "name": "wrong-undo-2.B.declared-HWND-preimage-176",
+      "passed": true
+    },
+    {
+      "name": "wrong-undo-2.B.declared-HWND-preimage-168",
+      "passed": true
+    },
+    {
+      "name": "wrong-undo-2.B.declared-HWND-preimage-40",
+      "passed": true
+    },
+    {
+      "name": "wrong-undo-2.B.declared-HWND-preimage-48",
+      "passed": true
+    },
+    {
+      "name": "wrong-undo-2.B.only-declared-relocations",
+      "passed": true
+    },
+    {
+      "name": "wrong-undo-2.SA.raw-computation",
+      "passed": true
+    },
+    {
+      "name": "wrong-undo-2.SA.fingerprints-immutable",
+      "passed": true
+    },
+    {
+      "name": "wrong-undo-2.SA.raw-memory-hash",
+      "passed": true
+    },
+    {
+      "name": "wrong-undo-2.SA.raw-stack-hash",
+      "passed": true
+    },
+    {
+      "name": "wrong-undo-2.SA.raw-context-hash",
+      "passed": true
+    },
+    {
+      "name": "wrong-undo-2.SA.raw-resources-hash",
+      "passed": true
+    },
+    {
+      "name": "wrong-undo-2.SA.raw-metadata-hash",
+      "passed": true
+    },
+    {
+      "name": "wrong-undo-2.SA.raw-returns-hash",
+      "passed": true
+    },
+    {
+      "name": "wrong-undo-2.SA.raw-abi-hash",
+      "passed": true
+    },
+    {
+      "name": "wrong-undo-2.SA.raw-executable-hash",
+      "passed": true
+    },
+    {
+      "name": "wrong-undo-2.SA.whole-hash",
+      "passed": true
+    },
+    {
+      "name": "wrong-undo-2.SB.raw-computation",
+      "passed": true
+    },
+    {
+      "name": "wrong-undo-2.SB.fingerprints-immutable",
+      "passed": true
+    },
+    {
+      "name": "wrong-undo-2.SB.raw-memory-hash",
+      "passed": true
+    },
+    {
+      "name": "wrong-undo-2.SB.raw-stack-hash",
+      "passed": true
+    },
+    {
+      "name": "wrong-undo-2.SB.raw-context-hash",
+      "passed": true
+    },
+    {
+      "name": "wrong-undo-2.SB.raw-resources-hash",
+      "passed": true
+    },
+    {
+      "name": "wrong-undo-2.SB.raw-metadata-hash",
+      "passed": true
+    },
+    {
+      "name": "wrong-undo-2.SB.raw-returns-hash",
+      "passed": true
+    },
+    {
+      "name": "wrong-undo-2.SB.raw-abi-hash",
+      "passed": true
+    },
+    {
+      "name": "wrong-undo-2.SB.raw-executable-hash",
+      "passed": true
+    },
+    {
+      "name": "wrong-undo-2.SB.whole-hash",
+      "passed": true
+    },
+    {
+      "name": "wrong-undo-2.no-target-initialization",
+      "passed": true
+    },
+    {
+      "name": "wrong-undo-2.source-S0-fresh-GDI-pixels",
+      "passed": true
+    },
+    {
+      "name": "wrong-undo-2.A-initial-fresh-GDI-pixels",
+      "passed": true
+    },
+    {
+      "name": "wrong-undo-2.B-initial-fresh-GDI-pixels",
+      "passed": true
+    },
+    {
+      "name": "wrong-undo-2.A-single-edit-fresh-GDI-pixels",
+      "passed": true
+    },
+    {
+      "name": "wrong-undo-2.B-single-edit-fresh-GDI-pixels",
+      "passed": true
+    },
+    {
+      "name": "wrong-undo-2.A-SA-fresh-GDI-pixels",
+      "passed": true
+    },
+    {
+      "name": "wrong-undo-2.B-SB-fresh-GDI-pixels",
+      "passed": true
+    },
+    {
+      "name": "wrong-undo-2.actual-failed-native-readback",
+      "passed": true
+    },
+    {
+      "name": "wrong-undo-2.rejection-not-capability-pass",
+      "passed": true
+    },
+    {
+      "name": "wrong-undo-2.scope-preserved",
+      "passed": true
+    },
+    {
+      "name": "wrong-undo-2.owned-resources-cleaned",
+      "passed": true
+    },
+    {
+      "name": "c001-b001-CET002-regressions",
+      "passed": true
+    },
+    {
+      "name": "prior-experiments-unchanged",
+      "passed": true
+    }
+  ],
+  "cases": [
+    {
+      "case": "positive-1",
+      "exit": 0,
+      "completed": true,
+      "terminalRestorePassed": true,
+      "expectedRejection": false,
+      "controllerAssertions": 90
+    },
+    {
+      "case": "multiple-1",
+      "exit": 0,
+      "completed": true,
+      "terminalRestorePassed": false,
+      "expectedRejection": true,
+      "controllerAssertions": 44
+    },
+    {
+      "case": "IME-1",
+      "exit": 0,
+      "completed": true,
+      "terminalRestorePassed": false,
+      "expectedRejection": true,
+      "controllerAssertions": 44
+    },
+    {
+      "case": "no-undo-1",
+      "exit": 0,
+      "completed": true,
+      "terminalRestorePassed": false,
+      "expectedRejection": true,
+      "controllerAssertions": 51
+    },
+    {
+      "case": "stack-1",
+      "exit": 0,
+      "completed": true,
+      "terminalRestorePassed": false,
+      "expectedRejection": true,
+      "controllerAssertions": 54
+    },
+    {
+      "case": "register-1",
+      "exit": 0,
+      "completed": true,
+      "terminalRestorePassed": false,
+      "expectedRejection": true,
+      "controllerAssertions": 54
+    },
+    {
+      "case": "memory-1",
+      "exit": 0,
+      "completed": true,
+      "terminalRestorePassed": false,
+      "expectedRejection": true,
+      "controllerAssertions": 54
+    },
+    {
+      "case": "bad-chain-1",
+      "exit": 0,
+      "completed": true,
+      "terminalRestorePassed": false,
+      "expectedRejection": true,
+      "controllerAssertions": 51
+    },
+    {
+      "case": "unknown-edit-1",
+      "exit": 0,
+      "completed": true,
+      "terminalRestorePassed": false,
+      "expectedRejection": true,
+      "controllerAssertions": 44
+    },
+    {
+      "case": "wrong-undo-1",
+      "exit": 0,
+      "completed": true,
+      "terminalRestorePassed": false,
+      "expectedRejection": true,
+      "controllerAssertions": 51
+    },
+    {
+      "case": "positive-2",
+      "exit": 0,
+      "completed": true,
+      "terminalRestorePassed": true,
+      "expectedRejection": false,
+      "controllerAssertions": 90
+    },
+    {
+      "case": "multiple-2",
+      "exit": 0,
+      "completed": true,
+      "terminalRestorePassed": false,
+      "expectedRejection": true,
+      "controllerAssertions": 44
+    },
+    {
+      "case": "IME-2",
+      "exit": 0,
+      "completed": true,
+      "terminalRestorePassed": false,
+      "expectedRejection": true,
+      "controllerAssertions": 44
+    },
+    {
+      "case": "no-undo-2",
+      "exit": 0,
+      "completed": true,
+      "terminalRestorePassed": false,
+      "expectedRejection": true,
+      "controllerAssertions": 51
+    },
+    {
+      "case": "stack-2",
+      "exit": 0,
+      "completed": true,
+      "terminalRestorePassed": false,
+      "expectedRejection": true,
+      "controllerAssertions": 54
+    },
+    {
+      "case": "register-2",
+      "exit": 0,
+      "completed": true,
+      "terminalRestorePassed": false,
+      "expectedRejection": true,
+      "controllerAssertions": 54
+    },
+    {
+      "case": "memory-2",
+      "exit": 0,
+      "completed": true,
+      "terminalRestorePassed": false,
+      "expectedRejection": true,
+      "controllerAssertions": 54
+    },
+    {
+      "case": "bad-chain-2",
+      "exit": 0,
+      "completed": true,
+      "terminalRestorePassed": false,
+      "expectedRejection": true,
+      "controllerAssertions": 51
+    },
+    {
+      "case": "unknown-edit-2",
+      "exit": 0,
+      "completed": true,
+      "terminalRestorePassed": false,
+      "expectedRejection": true,
+      "controllerAssertions": 44
+    },
+    {
+      "case": "wrong-undo-2",
+      "exit": 0,
+      "completed": true,
+      "terminalRestorePassed": false,
+      "expectedRejection": true,
+      "controllerAssertions": 51
+    }
+  ],
+  "errors": []
+}
