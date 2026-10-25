@@ -36,8 +36,8 @@
 | CAP-17 | 网络连接及远端状态 | 远端不分叉；本地连接恢复语义另验 | R2 | 待研究 | 无 |
 | CAP-18 | 物理设备 | 设备不分叉；无法可靠处理时拒绝 | R2/R3 | 待研究 | 无 |
 | CAP-19 | Snapshot 固定性与失败清理 | 原子发布、源变化无污染、失败不损伤已有状态 | R1/R2 | 部分支持 | [R2 首轮](../experiments/r2/results/20261024-r2/report.md)：A/B 修改后 C 从原 S0 恢复，内存与文件图指纹不变；B 部分创建失败/不支持资源拒绝时未发布、资源回收、A/C 继续；其他故障和持久化发布未验证 ；[R3-005c-001](../experiments/r3-005c-001/results/20261025-r3005c001/report.md) 同一 GUI S0 的内存/完整受管栈/CPU/资源/引用/ABI 分项与整体 SHA256 经原始字节独立重算，A/B 修改及 C 创建后不变；B 实际资源重建失败后清理、不发布，A/C 继续。未覆盖管理进程重启持久性 |
-| CAP-20 | Artifact 版本与私有导入 | 来源明确，C 写入不影响 A/B 或固定成果 | R4 | 部分支持 | [R4-001](../experiments/r4-001/results/20261025-r4001-resident/report.md) 的既有受限 GUI 中，应用真实 CreateFile/WriteFile/Flush/Close 产生已关闭小文件；固定来源 View/PID/版本/Action/长度/SHA256，A-v2 不覆盖 A-v1，C 普通 ReadFile 读取私有副本并修改，源文件、版本和 S0 保持。八次本体完成；完整脚本因旧回归 PID 核对及 CreateProcessW / 5 仍失败。仅指定路径/完成文件协议，非通用文件系统沙箱或跨崩溃持久化保证 |
-| CAP-21 | A/B 保留与从 S0 再派生 C | SA/SB/记录/成果保留，三者继续执行 | R4 | 部分支持 | [R3-005c-001](../experiments/r3-005c-001/results/20261025-r3005c001/report.md) 仅验证既有受限 GUI 的 A/B 保持存活并修改、从原 S0 再恢复 C、三者继续输入/绘制；修改后非空撤销未支持保存，SA/SB 与完整 R4 尚未验证；[R4-001](../experiments/r4-001/results/20261025-r4001-resident/report.md) 补充了固定文件成果及 C 私有处理的本体证据，未完成可恢复终态保存，且整套回归仍未通过 |
+| CAP-20 | Artifact 版本与私有导入 | 来源明确，C 写入不影响 A/B 或固定成果 | R4 | 部分支持 | [R4-001](../experiments/r4-001/results/20261025-r4001-resident/report.md) 的既有受限 GUI 中，应用真实 CreateFile/WriteFile/Flush/Close 产生已关闭小文件；固定来源 View/PID/版本/Action/长度/SHA256，A-v2 不覆盖 A-v1，C 普通 ReadFile 读取私有副本并修改，源文件、版本和 S0 保持。八次本体完成；原完整脚本的 PID 核对及 CreateProcessW / 5 失败记录保留。后续 GATE 功能矩阵通过，纯创建拒绝诊断仍红。仅指定路径/完成文件协议，非通用文件系统沙箱或跨崩溃持久化保证 |
+| CAP-21 | A/B 保留与从 S0 再派生 C | SA/SB/记录/成果保留，三者继续执行 | R4 | 部分支持 | [R3-005c-001](../experiments/r3-005c-001/results/20261025-r3005c001/report.md) 仅验证既有受限 GUI 的 A/B 保持存活并修改、从原 S0 再恢复 C、三者继续输入/绘制；修改后非空撤销未支持保存，SA/SB 与完整 R4 尚未验证；[R4-001](../experiments/r4-001/results/20261025-r4001-resident/report.md) 补充了固定文件成果及 C 私有处理的本体证据，未完成可恢复终态保存，原矩阵回归失败；后续 GATE 功能矩阵通过，创建拒绝诊断仍未闭环 |
 
 ## 证据记录格式
 
@@ -56,3 +56,9 @@
 ## R4-001 的 Action 范围
 
 [R4-001](../experiments/r4-001/results/20261025-r4001-resident/report.md) 记录每 View 单调序号、提交/接受/投递/效果确认或失败，分别关联真实 GUI 查询、输入桥和应用文件完成回执。消息接受不代表文档生成完成，账本不代表确定性重放。当前只有声明的受控成果流得到实测，SA/SB 和完整 R4 的原目标不变；本体与完整回归判定分开，不能把失败汇总改写为通过。
+
+## R4-001-GATE-001 的后续回归
+
+[实际报告](../experiments/r4-001-gate-001/report.md) 保留旧失败，新增按生命周期核对、创建失败完整汇总、正确的调试句柄所有权，以及旧控制器的常驻桥。最新 b001/c001/R4 功能矩阵和完整 CET-002 嵌套回归实际通过；b001 保留按钮标题空白反例后改用目标 GUI 线程原生 WM_PRINT/DIB 采集，原 EDIT/按钮像素断言通过。CAP-14/CAP-20 仍限于既有资源子集，其他状态不升级。
+
+另一个不使用恢复、GUI 或输入钩子的最小程序，在现有 EXE 的第 55 次调试创建时再次得到 CreateProcessW / 5。根因未确认；[总 assessment](../experiments/r4-001-gate-001/assessment.json) 明确区分功能回归通过与创建诊断失败。不能宣称故障已根除、gate 全部闭环或完整 R4 完成；SA/SB 和非空撤销继续未支持。

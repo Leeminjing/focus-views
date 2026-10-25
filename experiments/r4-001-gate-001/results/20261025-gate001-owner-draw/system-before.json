@@ -1,0 +1,62 @@
+{
+  "time": "2026-10-25T15:46:08.8281091+08:00",
+  "since": "2026-10-25T15:41:08.440671+08:00",
+  "os": "Microsoft Windows NT 10.0.26200.0",
+  "callerPid": 13860,
+  "callerSid": "S-1-5-21-2703919260-1801774295-1865065416-1004",
+  "elevated": false,
+  "images": [
+    {
+      "image": "D:\\focus-views\\experiments\\r3-005b-001\\out\\r305a.exe",
+      "sha256": "a830f36770c3591aaa0bac1a257f3bc31475509c054dda107d712af490ffe8f0",
+      "owner": "COLDBING\\brubing",
+      "sddl": "O:S-1-5-21-2703919260-1801774295-1865065416-1004G:S-1-5-21-2703919260-1801774295-1865065416-513D:(A;ID;FA;;;BA)(A;ID;FA;;;SY)(A;ID;0x1301bf;;;AU)(A;ID;0x1200a9;;;BU)"
+    },
+    {
+      "image": "D:\\focus-views\\experiments\\r3-005c-001\\out\\r305a.exe",
+      "sha256": "b09533c3da81b6f532d9cdb0e7d91c122a28d201a4b0b2f321e2294cd7c738c7",
+      "owner": "COLDBING\\brubing",
+      "sddl": "O:S-1-5-21-2703919260-1801774295-1865065416-1004G:S-1-5-21-2703919260-1801774295-1865065416-513D:(A;ID;FA;;;BA)(A;ID;FA;;;SY)(A;ID;0x1301bf;;;AU)(A;ID;0x1200a9;;;BU)"
+    },
+    {
+      "image": "D:\\focus-views\\experiments\\r4-001\\out\\r305a.exe",
+      "sha256": "a668f766bc3d47ae7448641667a0e328d5be072465e99cfe4156a5d69be2bc89",
+      "owner": "COLDBING\\brubing",
+      "sddl": "O:S-1-5-21-2703919260-1801774295-1865065416-1004G:S-1-5-21-2703919260-1801774295-1865065416-513D:(A;ID;FA;;;BA)(A;ID;FA;;;SY)(A;ID;0x1301bf;;;AU)(A;ID;0x1200a9;;;BU)"
+    }
+  ],
+  "nativeLogs": [
+    {
+      "log": "Microsoft-Windows-Windows Defender/Operational",
+      "status": "unavailable_or_no_events",
+      "error": "No events were found that match the specified selection criteria."
+    },
+    {
+      "log": "Microsoft-Windows-CodeIntegrity/Operational",
+      "status": "unavailable_or_no_events",
+      "error": "No events were found that match the specified selection criteria."
+    },
+    {
+      "log": "Microsoft-Windows-Security-Mitigations/UserMode",
+      "status": "unavailable_or_no_events",
+      "error": "No events were found that match the specified selection criteria."
+    },
+    {
+      "log": "Microsoft-Windows-Security-Mitigations/KernelMode",
+      "status": "queried",
+      "boundedEvents": 8,
+      "matchingOwnEvents": []
+    },
+    {
+      "log": "Microsoft-Windows-AppLocker/EXE and DLL",
+      "status": "unavailable_or_no_events",
+      "error": "No events were found that match the specified selection criteria."
+    },
+    {
+      "log": "Security",
+      "status": "unavailable_or_no_events",
+      "error": "No events were found that match the specified selection criteria."
+    }
+  ],
+  "systemSettingsChanged": false
+}

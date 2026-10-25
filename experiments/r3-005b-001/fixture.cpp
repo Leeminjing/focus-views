@@ -74,6 +74,7 @@ LRESULT CALLBACK window_proc(HWND window,UINT message,WPARAM wp,LPARAM lp) {
     if (message == checkpoint_message) { R305Metadata.checkpoint_requested = 1; return 0; }
     if (message == prepare_stop_message) { R305Metadata.prepare_stop = 1; return 0; }
     if (message == resource_message) { resource_service(R305Metadata,work->window,work->edit,work->button);observe("runtime_resource_service",message);return 0; }
+    if (message == capture_message) { capture_owned_window(R305Metadata,window);observe("runtime_capture_end",message);return 0; }
     if (message == observe_message) { observe("read_only_observe",message); return 0; }
     if (message == WM_PAINT) {
         ++R305Metadata.paint_depth; PAINTSTRUCT ps{}; auto dc=BeginPaint(window,&ps); draw(dc); EndPaint(window,&ps); --R305Metadata.paint_depth;

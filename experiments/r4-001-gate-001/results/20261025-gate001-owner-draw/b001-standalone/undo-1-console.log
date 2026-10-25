@@ -1,0 +1,4 @@
+source.CET-and-CFG-enabled: pass (read actual process policies; no mitigation policy is modified)
+source.input-clean-close: pass (unmodified R304 lifecycle releases state and restores both imports before checkpoint/exit)
+negative.explicit-rejection: pass (resource.EDIT.undo_history error=50; unsupported state or failed reconstruction not published)
+negative.source-still-alive: pass (failed snapshot does not terminate source until owned cleanup)

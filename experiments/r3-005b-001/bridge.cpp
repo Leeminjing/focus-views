@@ -10,21 +10,6 @@ template<class T> struct Com {
     T** address() { return &value; }
     T* operator->() const { return value; }
 };
-struct Surface {
-    HDC dc = nullptr; HBITMAP bitmap = nullptr; HGDIOBJ old = nullptr; void* pixels = nullptr;
-    Surface(int width, int height) {
-        dc = CreateCompatibleDC(nullptr); check(dc != nullptr, "CreateCompatibleDC");
-        BITMAPINFO info{};
-        info.bmiHeader.biSize = sizeof(BITMAPINFOHEADER); info.bmiHeader.biWidth = width; info.bmiHeader.biHeight = -height;
-        info.bmiHeader.biPlanes = 1; info.bmiHeader.biBitCount = 32; info.bmiHeader.biCompression = BI_RGB;
-        bitmap = CreateDIBSection(dc, &info, DIB_RGB_COLORS, &pixels, nullptr, 0);
-        if (!bitmap) { DeleteDC(dc); dc = nullptr; throw Error("CreateDIBSection", GetLastError()); }
-        old = SelectObject(dc, bitmap);
-        demand(old && old != HGDI_ERROR, "SelectObject failed");
-        std::memset(pixels, 0, static_cast<std::size_t>(width) * height * 4);
-    }
-    ~Surface() { if (old && dc) SelectObject(dc, old); if (bitmap) DeleteObject(bitmap); if (dc) DeleteDC(dc); }
-};
 void encode_png(const std::filesystem::path& output, int width, int height, const void* bgra) {
     // Encode the returned GDI RGB pixels. No controller-rendered application UI.
     const auto stride = static_cast<UINT>((width * 3 + 3) & ~3);
@@ -91,39 +76,35 @@ int bridge_main(const Args& args) {
             RECT rect{}; check(GetWindowRect(window, &rect), "GetWindowRect");
             const auto width = rect.right - rect.left, height = rect.bottom - rect.top;
             demand(width > 0 && height > 0 && width <= 2048 && height <= 2048, "capture dimensions invalid");
-            Surface surface(width, height);
-            reply->width = width; reply->height = height; reply->before_update = before.update; reply->before_prints = before.prints;
-            reply->before_draws = before.draws;
-            strcpy_s(reply->api, "PrintWindow");
-            InterlockedExchange(reinterpret_cast<volatile LONG*>(&reply->print_called), 1);
-            reply->api_begin_ms = GetTickCount64();
-            SetLastError(ERROR_SUCCESS);
-            const auto okay = PrintWindow(window, surface.dc, 0);
-            const auto error = okay ? ERROR_SUCCESS : GetLastError();
-            if(okay){
-                // Explicit native window-tree paint pass. This is real target
-                // rendering, not reconstruction from telemetry or saved text.
-                DWORD_PTR print_result=0;
-                if(!SendMessageTimeoutW(window,WM_PRINT,reinterpret_cast<WPARAM>(surface.dc),PRF_NONCLIENT|PRF_CLIENT|PRF_ERASEBKGND|PRF_CHILDREN,SMTO_ABORTIFHUNG|SMTO_BLOCK,2000,&print_result))throw Error("SendMessageTimeoutW.WM_PRINT",GetLastError());
-                strcpy_s(reply->api,"PrintWindow+WM_PRINT_CHILDREN");
-            }
-            reply->api_end_ms = GetTickCount64();
-            reply->api_result = okay;
-            if (!okay) throw Error("PrintWindow", error ? error : ERROR_GEN_FAILURE, "no usable frame");
+            Mapping frame_map(r305::frame_name(before.pid,before.tid),sizeof(r305::NativeFrame),true);
+            auto& frame=*new(frame_map.view)r305::NativeFrame{};
+            frame.pid=before.pid;frame.tid=before.tid;frame.token=(GetTickCount64()<<16)^GetCurrentProcessId();
+            reply->width=width;reply->height=height;reply->before_update=before.update;reply->before_prints=before.prints;reply->before_draws=before.draws;
+            InterlockedExchange(reinterpret_cast<volatile LONG*>(&reply->print_called),1);
+            check(PostMessageW(window,r305::capture_message,0,0),"PostMessageW.native_frame");
+            const auto deadline=GetTickCount64()+2500;
+            while(!InterlockedCompareExchange(&frame.done,0,0)&&GetTickCount64()<deadline)Sleep(1);
+            if(!frame.done)throw Error("native_frame.timeout",ERROR_TIMEOUT);
+            MemoryBarrier();
+            if(frame.error)throw Error(frame.api,frame.error);
+            demand(frame.pid==before.pid&&frame.tid==before.tid&&frame.width==width&&frame.height==height,"native frame identity and geometry");
+            strcpy_s(reply->api,frame.api);reply->api_begin_ms=frame.begin_ms;reply->api_end_ms=frame.end_ms;reply->api_result=1;
             const auto after = read_shared(*shared);
             reply->after_update = after.update; reply->after_prints = after.prints; reply->after_draws = after.draws;
             validate(window, after);
-            POINT origin{}; check(ClientToScreen(window, &origin), "ClientToScreen");
-            const int dx = origin.x - rect.left, dy = origin.y - rect.top;
-            reply->client_dx = dx; reply->client_dy = dy;
+            const int dx=frame.client_dx,dy=frame.client_dy;
+            reply->client_dx=dx;reply->client_dy=dy;
             std::uint64_t drawn_tick = 0;
             for (int bit = 0; bit < 16; ++bit) {
                 const int x = dx + 28 + bit * 10, y = dy + 356;
                 demand(x >= 0 && y >= 0 && x < width && y < height, "visual counter outside surface");
-                const auto pixel = static_cast<const BYTE*>(surface.pixels) + (static_cast<std::size_t>(y) * width + x) * 4;
+                const auto pixel = frame.pixels + (static_cast<std::size_t>(y) * width + x) * 4;
                 const bool white = pixel[0] > 240 && pixel[1] > 240 && pixel[2] > 240;
                 const bool black = pixel[0] < 15 && pixel[1] < 15 && pixel[2] < 15;
-                demand(white || black, "visual tick pixel invalid; frame rejected");
+                if(!(white || black)){
+                    encode_png(output.wstring()+L".rejected.png",width,height,frame.pixels);
+                    throw Error("capture.counter_pixel",ERROR_INVALID_DATA,"x="+std::to_string(x)+" y="+std::to_string(y)+" BGR="+std::to_string(pixel[0])+","+std::to_string(pixel[1])+","+std::to_string(pixel[2])+"; diagnostic image only, no usable frame");
+                }
                 if (white) drawn_tick |= 1ULL << bit;
             }
             reply->print_update = drawn_tick;
@@ -131,7 +112,7 @@ int bridge_main(const Args& args) {
             // WM_PRINT. Require fresh target drawing plus the image's own tick.
             demand(after.draws > before.draws && drawn_tick >= before.update && drawn_tick <= after.update,
                 "no fresh target drawing matching image tick; frame rejected");
-            encode_png(output, width, height, surface.pixels);
+            encode_png(output, width, height, frame.pixels);
         } else if (op == L"post") {
             strcpy_s(reply->api, "PostMessageW");
             check(PostMessageW(window, static_cast<UINT>(args.number(L"--message")),
@@ -152,6 +133,8 @@ int bridge_main(const Args& args) {
         MemoryBarrier(); InterlockedExchange(&reply->done, 1);
         return 0;
     } catch (const Error& e) {
+        const auto path=args.get(L"--failure-log");
+        if(!path.empty()){std::ofstream file(std::filesystem::path(path),std::ios::binary);file<<"{\"message\":"<<json(e.what())<<",\"api\":"<<json(e.api)<<",\"error\":"<<e.code<<"}\n";}
         reply->error = e.code; strcpy_s(reply->api, e.api.c_str());
         reply->duration_ms = GetTickCount64() - start;
         MemoryBarrier(); InterlockedExchange(&reply->done, 1);

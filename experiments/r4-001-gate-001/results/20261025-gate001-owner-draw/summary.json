@@ -1,0 +1,92 @@
+{
+  "allEvidenceChecksPassed": true,
+  "checks": [
+    {
+      "name": "ordered-lifetimes-positive-and-negative-controls",
+      "passed": true
+    },
+    {
+      "name": "handle-ownership-early-close-control",
+      "passed": true
+    },
+    {
+      "name": "handle-ownership-correct-owner-control",
+      "passed": true
+    },
+    {
+      "name": "real-CreateProcess-denial-keeps-failed-summary-and-other-cases",
+      "passed": true
+    },
+    {
+      "name": "b001-standalone-complete-script-passed",
+      "passed": true
+    },
+    {
+      "name": "b001-standalone-CET002-executed-and-passed",
+      "passed": true
+    },
+    {
+      "name": "c001-full-complete-script-passed",
+      "passed": true
+    },
+    {
+      "name": "c001-full-nested-b001-and-CET002-passed",
+      "passed": true
+    },
+    {
+      "name": "r4-full-complete-script-passed",
+      "passed": true
+    },
+    {
+      "name": "r4-full-nested-c001-b001-and-CET002-passed",
+      "passed": true
+    }
+  ],
+  "runs": [
+    {
+      "name": "denied-launch",
+      "exitCode": 1,
+      "script": "D:\\focus-views\\experiments\\r4-001-gate-001\\..\\r3-005b-001\\test.ps1",
+      "arguments": [
+        "-ResultsDir",
+        "D:\\focus-views\\experiments\\r4-001-gate-001\\results\\20261025-gate001-owner-draw\\denied-launch",
+        "-Repeats",
+        "1",
+        "-SkipRegression",
+        "-GateDeniedLaunch"
+      ]
+    },
+    {
+      "name": "b001-standalone",
+      "exitCode": 0,
+      "script": "D:\\focus-views\\experiments\\r4-001-gate-001\\..\\r3-005b-001\\test.ps1",
+      "arguments": [
+        "-ResultsDir",
+        "D:\\focus-views\\experiments\\r4-001-gate-001\\results\\20261025-gate001-owner-draw\\b001-standalone"
+      ]
+    },
+    {
+      "name": "c001-full",
+      "exitCode": 0,
+      "script": "D:\\focus-views\\experiments\\r4-001-gate-001\\..\\r3-005c-001\\test.ps1",
+      "arguments": [
+        "-ResultsDir",
+        "D:\\focus-views\\experiments\\r4-001-gate-001\\results\\20261025-gate001-owner-draw\\c001-full"
+      ]
+    },
+    {
+      "name": "r4-full",
+      "exitCode": 0,
+      "script": "D:\\focus-views\\experiments\\r4-001-gate-001\\..\\r4-001\\test.ps1",
+      "arguments": [
+        "-ResultsDir",
+        "D:\\focus-views\\experiments\\r4-001-gate-001\\results\\20261025-gate001-owner-draw\\r4-full"
+      ]
+    }
+  ],
+  "historicalCreateProcess5Cause": "unconfirmed; separate debug-handle misuse reproduced and fixed",
+  "systemSettingsChanged": false,
+  "SA_SB_restore": false,
+  "R4Complete": false,
+  "manualHostTest": "not_executed"
+}

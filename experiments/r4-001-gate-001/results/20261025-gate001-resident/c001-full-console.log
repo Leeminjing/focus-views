@@ -1,0 +1,2059 @@
+source.CET-and-CFG-enabled: pass (read actual process policies; no mitigation policy is modified)
+source.input-clean-close: pass (unmodified R304 lifecycle releases state and restores both imports before checkpoint/exit)
+source.native-EDIT-preconditions: pass (native random unsaved text, nonempty selection and naturally empty undo; no source state rewriting by snapshotter)
+S0.actual-GDI: pass (private native PrintWindow/WM_PRINT helper records actual target paint; script checks counter/control pixels)
+source.native-unwind-sees-three-CPP-frames: pass (Windows unwind metadata independently walks leaf/middle/outer from captured raw stack; no guessed pointer scan)
+source.initialization-and-prefixes-once: pass (independent source breakpoint record)
+source.normal-return-chain: pass (ordinary source C++ chain)
+source.input-clean-close: pass (unmodified R304 lifecycle releases state and restores both imports before checkpoint/exit)
+changed.actual-GDI: pass (private native PrintWindow/WM_PRINT helper records actual target paint; script checks counter/control pixels)
+source.actually-changed: pass (source modified real EDIT after snapshot)
+S0.immutable-source-exited: pass (all original raw bytes, CPU, resources, references, returns and ABI remain unchanged)
+A.CET-and-CFG-enabled: pass (read actual process policies; no mitigation policy is modified)
+A.raw-memory-restored: pass (entire data page read back equals S0 except declared HWND relocation)
+A.raw-stack-restored: pass (entire managed stack read back equals S0 except explicitly registered live HWND references)
+A.CPU-context-readback: pass (stopped target RIP/RSP/register and floating point control read back after SetThreadContext)
+A.ordinary-CPP-return-chain: pass (actual leaf/middle/outer CALL/RET chain completed with restored register and volatile stack locals; structural checkpoint only, no business prefixes)
+A.original-S0-state: pass (counter and unsaved text match S0 at continuation before next GUI iteration)
+A.native-initial-S0: pass (original EDIT native state after actual restored C++ returns)
+initial.actual-GDI: pass (private native PrintWindow/WM_PRINT helper records actual target paint; script checks counter/control pixels)
+S0.immutable-A-created: pass (all original raw bytes, CPU, resources, references, returns and ABI remain unchanged)
+B.CET-and-CFG-enabled: pass (read actual process policies; no mitigation policy is modified)
+debug.foreign-PID-not-consumed: pass (actual B ready event rejected for A before any mutation or ContinueDebugEvent)
+debug.foreign-TID-not-consumed: pass (invalid TID rejected without consuming the genuine pending B event)
+B.raw-memory-restored: pass (entire data page read back equals S0 except declared HWND relocation)
+B.raw-stack-restored: pass (entire managed stack read back equals S0 except explicitly registered live HWND references)
+B.CPU-context-readback: pass (stopped target RIP/RSP/register and floating point control read back after SetThreadContext)
+B.ordinary-CPP-return-chain: pass (actual leaf/middle/outer CALL/RET chain completed with restored register and volatile stack locals; structural checkpoint only, no business prefixes)
+B.original-S0-state: pass (counter and unsaved text match S0 at continuation before next GUI iteration)
+B.native-initial-S0: pass (original EDIT native state after actual restored C++ returns)
+initial.actual-GDI: pass (private native PrintWindow/WM_PRINT helper records actual target paint; script checks counter/control pixels)
+S0.immutable-B-created: pass (all original raw bytes, CPU, resources, references, returns and ABI remain unchanged)
+A.running-AB-before-edits: pass (published process is alive, not debug-stopped or runtime-frozen)
+B.running-AB-before-edits: pass (published process is alive, not debug-stopped or runtime-frozen)
+AB-before-edits.distinct-native-environments: pass (distinct native PID/TID/Desktop for simultaneous Views)
+A.first-edit: pass (real native EDIT receives WM_CHAR and root application independently updates managed text through its original input handler)
+first-edit.actual-GDI: pass (private native PrintWindow/WM_PRINT helper records actual target paint; script checks counter/control pixels)
+B.unaffected-by-A: pass (native EDIT/selection/focus/undo and non-clock managed state unchanged; autonomous counter may advance)
+B.first-edit: pass (real native EDIT receives WM_CHAR and root application independently updates managed text through its original input handler)
+first-edit.actual-GDI: pass (private native PrintWindow/WM_PRINT helper records actual target paint; script checks counter/control pixels)
+A.unaffected-by-B: pass (native EDIT/selection/focus/undo and non-clock managed state unchanged; autonomous counter may advance)
+A.second-edit: pass (real native EDIT receives WM_CHAR and root application independently updates managed text through its original input handler)
+second-edit.actual-GDI: pass (private native PrintWindow/WM_PRINT helper records actual target paint; script checks counter/control pixels)
+B.unaffected-by-A-again: pass (native EDIT/selection/focus/undo and non-clock managed state unchanged; autonomous counter may advance)
+B.second-edit: pass (real native EDIT receives WM_CHAR and root application independently updates managed text through its original input handler)
+second-edit.actual-GDI: pass (private native PrintWindow/WM_PRINT helper records actual target paint; script checks counter/control pixels)
+A.unaffected-by-B-again: pass (native EDIT/selection/focus/undo and non-clock managed state unchanged; autonomous counter may advance)
+A.running-AB-after-edits: pass (published process is alive, not debug-stopped or runtime-frozen)
+B.running-AB-after-edits: pass (published process is alive, not debug-stopped or runtime-frozen)
+AB-after-edits.distinct-native-environments: pass (distinct native PID/TID/Desktop for simultaneous Views)
+S0.immutable-AB-edited: pass (all original raw bytes, CPU, resources, references, returns and ABI remain unchanged)
+S0.immutable-final: pass (all original raw bytes, CPU, resources, references, returns and ABI remain unchanged)
+final.actual-GDI: pass (private native PrintWindow/WM_PRINT helper records actual target paint; script checks counter/control pixels)
+final.actual-GDI: pass (private native PrintWindow/WM_PRINT helper records actual target paint; script checks counter/control pixels)
+B.input-clean-close: pass (unmodified R304 lifecycle releases state and restores both imports before checkpoint/exit)
+A.input-clean-close: pass (unmodified R304 lifecycle releases state and restores both imports before checkpoint/exit)
+AB-1.actual-run-completed=True
+AB-1.all-controller-assertions=True
+AB-1.raw-S0-calculation=True
+AB-1.only-one-S0-naturally-empty-undo=True
+AB-1.all-S0-fingerprints-unchanged=True
+AB-1.fingerprint-memory-matches-original-bytes=True
+AB-1.fingerprint-stack-matches-original-bytes=True
+AB-1.fingerprint-context-matches-original-bytes=True
+AB-1.fingerprint-resources-matches-original-bytes=True
+AB-1.fingerprint-metadata-matches-original-bytes=True
+AB-1.fingerprint-returns-matches-original-bytes=True
+AB-1.fingerprint-abi-matches-original-bytes=True
+AB-1.fingerprint-executable-matches-original-bytes=True
+AB-1.whole-S0-fingerprint-independently-recomputed=True
+AB-1.source-exit-before-new-A=True
+AB-1.no-target-initialization-or-business-replay=True
+AB-1.central-pump-exact-PID-routing=True
+AB-1.real-B-or-C-event-not-consumed-by-A=True
+AB-1.only-verified-Views-published=True
+AB-1.actual-CET-CFG-enabled=True
+AB-1.source-S0-native-owner-thread=True
+AB-1.source-changed-native-owner-thread=True
+AB-1.A-prepared-native-owner-thread=True
+AB-1.A-initial-native-owner-thread=True
+AB-1.B-prepared-native-owner-thread=True
+AB-1.B-initial-native-owner-thread=True
+AB-1.B-before-A-native-owner-thread=True
+AB-1.A-first-edit-native-owner-thread=True
+AB-1.B-after-A-native-owner-thread=True
+AB-1.A-before-B-native-owner-thread=True
+AB-1.B-first-edit-native-owner-thread=True
+AB-1.A-after-B-native-owner-thread=True
+AB-1.B-before-A-again-native-owner-thread=True
+AB-1.A-second-edit-native-owner-thread=True
+AB-1.B-after-A-again-native-owner-thread=True
+AB-1.A-before-B-again-native-owner-thread=True
+AB-1.B-second-edit-native-owner-thread=True
+AB-1.A-after-B-again-native-owner-thread=True
+AB-1.A-final-native-owner-thread=True
+AB-1.B-final-native-owner-thread=True
+AB-1.A-restored-native-control-state=True
+AB-1.A-window-0-native-identity=True
+AB-1.A-window-1-native-identity=True
+AB-1.A-window-2-native-identity=True
+AB-1.A-target-own-CET-chain-before-and-after=True
+AB-1.A-normal-CALL-not-source-SSP=True
+AB-1.A-real-restored-computation=True
+AB-1.A-ref-1859720839208-old-value=True
+AB-1.A-ref-1859720839488-old-value=True
+AB-1.A-ref-1859720839496-old-value=True
+AB-1.A-ref-1859723001272-old-value=True
+AB-1.A-ref-1859723001264-old-value=True
+AB-1.A-ref-1859723001136-old-value=True
+AB-1.A-ref-1859723001144-old-value=True
+AB-1.A-only-seven-declared-HWND-relocations=True
+AB-1.A-original-EDIT-actually-processes-input=True
+AB-1.A-final-native-edit-and-new-undo=True
+AB-1.B-restored-native-control-state=True
+AB-1.B-window-0-native-identity=True
+AB-1.B-window-1-native-identity=True
+AB-1.B-window-2-native-identity=True
+AB-1.B-target-own-CET-chain-before-and-after=True
+AB-1.B-normal-CALL-not-source-SSP=True
+AB-1.B-real-restored-computation=True
+AB-1.B-ref-1859720839208-old-value=True
+AB-1.B-ref-1859720839488-old-value=True
+AB-1.B-ref-1859720839496-old-value=True
+AB-1.B-ref-1859723001272-old-value=True
+AB-1.B-ref-1859723001264-old-value=True
+AB-1.B-ref-1859723001136-old-value=True
+AB-1.B-ref-1859723001144-old-value=True
+AB-1.B-only-seven-declared-HWND-relocations=True
+AB-1.B-original-EDIT-actually-processes-input=True
+AB-1.B-final-native-edit-and-new-undo=True
+AB-1.B-before-A-to-after-A-isolated=True
+AB-1.A-before-B-to-after-B-isolated=True
+AB-1.B-before-A-again-to-after-A-again-isolated=True
+AB-1.A-before-B-again-to-after-B-again-isolated=True
+AB-1.AB-before-edits-distinct-PID-TID-Desktop=True
+AB-1.AB-after-edits-distinct-PID-TID-Desktop=True
+AB-1.source-S0-real-owned-frame=True
+AB-1.source-changed-real-owned-frame=True
+AB-1.A-initial-real-owned-frame=True
+AB-1.B-initial-real-owned-frame=True
+AB-1.A-first-edit-real-owned-frame=True
+AB-1.B-first-edit-real-owned-frame=True
+AB-1.A-second-edit-real-owned-frame=True
+AB-1.B-second-edit-real-owned-frame=True
+AB-1.A-final-real-owned-frame=True
+AB-1.B-final-real-owned-frame=True
+AB-1.A-real-initial-EDIT-pixels-match-S0=True
+AB-1.B-real-initial-EDIT-pixels-match-S0=True
+AB-1.no-SA-SB-or-R4-claim=True
+AB-1.owned-processes-and-desktops-cleaned=True
+source.CET-and-CFG-enabled: pass (read actual process policies; no mitigation policy is modified)
+source.input-clean-close: pass (unmodified R304 lifecycle releases state and restores both imports before checkpoint/exit)
+source.native-EDIT-preconditions: pass (native random unsaved text, nonempty selection and naturally empty undo; no source state rewriting by snapshotter)
+S0.actual-GDI: pass (private native PrintWindow/WM_PRINT helper records actual target paint; script checks counter/control pixels)
+source.native-unwind-sees-three-CPP-frames: pass (Windows unwind metadata independently walks leaf/middle/outer from captured raw stack; no guessed pointer scan)
+source.initialization-and-prefixes-once: pass (independent source breakpoint record)
+source.normal-return-chain: pass (ordinary source C++ chain)
+source.input-clean-close: pass (unmodified R304 lifecycle releases state and restores both imports before checkpoint/exit)
+changed.actual-GDI: pass (private native PrintWindow/WM_PRINT helper records actual target paint; script checks counter/control pixels)
+source.actually-changed: pass (source modified real EDIT after snapshot)
+S0.immutable-source-exited: pass (all original raw bytes, CPU, resources, references, returns and ABI remain unchanged)
+A.CET-and-CFG-enabled: pass (read actual process policies; no mitigation policy is modified)
+A.raw-memory-restored: pass (entire data page read back equals S0 except declared HWND relocation)
+A.raw-stack-restored: pass (entire managed stack read back equals S0 except explicitly registered live HWND references)
+A.CPU-context-readback: pass (stopped target RIP/RSP/register and floating point control read back after SetThreadContext)
+A.ordinary-CPP-return-chain: pass (actual leaf/middle/outer CALL/RET chain completed with restored register and volatile stack locals; structural checkpoint only, no business prefixes)
+A.original-S0-state: pass (counter and unsaved text match S0 at continuation before next GUI iteration)
+A.native-initial-S0: pass (original EDIT native state after actual restored C++ returns)
+initial.actual-GDI: pass (private native PrintWindow/WM_PRINT helper records actual target paint; script checks counter/control pixels)
+S0.immutable-A-created: pass (all original raw bytes, CPU, resources, references, returns and ABI remain unchanged)
+B.CET-and-CFG-enabled: pass (read actual process policies; no mitigation policy is modified)
+debug.foreign-PID-not-consumed: pass (actual B ready event rejected for A before any mutation or ContinueDebugEvent)
+debug.foreign-TID-not-consumed: pass (invalid TID rejected without consuming the genuine pending B event)
+B.raw-memory-restored: pass (entire data page read back equals S0 except declared HWND relocation)
+B.raw-stack-restored: pass (entire managed stack read back equals S0 except explicitly registered live HWND references)
+B.CPU-context-readback: pass (stopped target RIP/RSP/register and floating point control read back after SetThreadContext)
+B.ordinary-CPP-return-chain: pass (actual leaf/middle/outer CALL/RET chain completed with restored register and volatile stack locals; structural checkpoint only, no business prefixes)
+B.original-S0-state: pass (counter and unsaved text match S0 at continuation before next GUI iteration)
+B.native-initial-S0: pass (original EDIT native state after actual restored C++ returns)
+initial.actual-GDI: pass (private native PrintWindow/WM_PRINT helper records actual target paint; script checks counter/control pixels)
+S0.immutable-B-created: pass (all original raw bytes, CPU, resources, references, returns and ABI remain unchanged)
+A.running-AB-before-edits: pass (published process is alive, not debug-stopped or runtime-frozen)
+B.running-AB-before-edits: pass (published process is alive, not debug-stopped or runtime-frozen)
+AB-before-edits.distinct-native-environments: pass (distinct native PID/TID/Desktop for simultaneous Views)
+A.first-edit: pass (real native EDIT receives WM_CHAR and root application independently updates managed text through its original input handler)
+first-edit.actual-GDI: pass (private native PrintWindow/WM_PRINT helper records actual target paint; script checks counter/control pixels)
+B.unaffected-by-A: pass (native EDIT/selection/focus/undo and non-clock managed state unchanged; autonomous counter may advance)
+B.first-edit: pass (real native EDIT receives WM_CHAR and root application independently updates managed text through its original input handler)
+first-edit.actual-GDI: pass (private native PrintWindow/WM_PRINT helper records actual target paint; script checks counter/control pixels)
+A.unaffected-by-B: pass (native EDIT/selection/focus/undo and non-clock managed state unchanged; autonomous counter may advance)
+A.second-edit: pass (real native EDIT receives WM_CHAR and root application independently updates managed text through its original input handler)
+second-edit.actual-GDI: pass (private native PrintWindow/WM_PRINT helper records actual target paint; script checks counter/control pixels)
+B.unaffected-by-A-again: pass (native EDIT/selection/focus/undo and non-clock managed state unchanged; autonomous counter may advance)
+B.second-edit: pass (real native EDIT receives WM_CHAR and root application independently updates managed text through its original input handler)
+second-edit.actual-GDI: pass (private native PrintWindow/WM_PRINT helper records actual target paint; script checks counter/control pixels)
+A.unaffected-by-B-again: pass (native EDIT/selection/focus/undo and non-clock managed state unchanged; autonomous counter may advance)
+A.running-AB-after-edits: pass (published process is alive, not debug-stopped or runtime-frozen)
+B.running-AB-after-edits: pass (published process is alive, not debug-stopped or runtime-frozen)
+AB-after-edits.distinct-native-environments: pass (distinct native PID/TID/Desktop for simultaneous Views)
+S0.immutable-AB-edited: pass (all original raw bytes, CPU, resources, references, returns and ABI remain unchanged)
+C.CET-and-CFG-enabled: pass (read actual process policies; no mitigation policy is modified)
+debug.foreign-PID-not-consumed: pass (actual B ready event rejected for A before any mutation or ContinueDebugEvent)
+debug.foreign-TID-not-consumed: pass (invalid TID rejected without consuming the genuine pending B event)
+C.raw-memory-restored: pass (entire data page read back equals S0 except declared HWND relocation)
+C.raw-stack-restored: pass (entire managed stack read back equals S0 except explicitly registered live HWND references)
+C.CPU-context-readback: pass (stopped target RIP/RSP/register and floating point control read back after SetThreadContext)
+C.ordinary-CPP-return-chain: pass (actual leaf/middle/outer CALL/RET chain completed with restored register and volatile stack locals; structural checkpoint only, no business prefixes)
+C.original-S0-state: pass (counter and unsaved text match S0 at continuation before next GUI iteration)
+C.native-initial-S0: pass (original EDIT native state after actual restored C++ returns)
+initial.actual-GDI: pass (private native PrintWindow/WM_PRINT helper records actual target paint; script checks counter/control pixels)
+S0.immutable-C-created: pass (all original raw bytes, CPU, resources, references, returns and ABI remain unchanged)
+A.preserved-through-C-creation: pass (native EDIT/selection/focus/undo and non-clock managed state unchanged; autonomous counter may advance)
+A.runs-through-C-creation: pass (A autonomous counter advances while C resources and CET chain are restored)
+B.preserved-through-C-creation: pass (native EDIT/selection/focus/undo and non-clock managed state unchanged; autonomous counter may advance)
+B.runs-through-C-creation: pass (B remains running during C creation)
+A.final-edit: pass (real native EDIT receives WM_CHAR and root application independently updates managed text through its original input handler)
+final-edit.actual-GDI: pass (private native PrintWindow/WM_PRINT helper records actual target paint; script checks counter/control pixels)
+C.unaffected-by-A: pass (native EDIT/selection/focus/undo and non-clock managed state unchanged; autonomous counter may advance)
+B.final-edit: pass (real native EDIT receives WM_CHAR and root application independently updates managed text through its original input handler)
+final-edit.actual-GDI: pass (private native PrintWindow/WM_PRINT helper records actual target paint; script checks counter/control pixels)
+A.unaffected-by-final-B: pass (native EDIT/selection/focus/undo and non-clock managed state unchanged; autonomous counter may advance)
+C.first-edit: pass (real native EDIT receives WM_CHAR and root application independently updates managed text through its original input handler)
+first-edit.actual-GDI: pass (private native PrintWindow/WM_PRINT helper records actual target paint; script checks counter/control pixels)
+A.unaffected-by-C: pass (native EDIT/selection/focus/undo and non-clock managed state unchanged; autonomous counter may advance)
+B.unaffected-by-C: pass (native EDIT/selection/focus/undo and non-clock managed state unchanged; autonomous counter may advance)
+A.running-final-concurrent: pass (published process is alive, not debug-stopped or runtime-frozen)
+B.running-final-concurrent: pass (published process is alive, not debug-stopped or runtime-frozen)
+C.running-final-concurrent: pass (published process is alive, not debug-stopped or runtime-frozen)
+final-concurrent.distinct-native-environments: pass (distinct native PID/TID/Desktop for simultaneous Views)
+S0.immutable-final: pass (all original raw bytes, CPU, resources, references, returns and ABI remain unchanged)
+final.actual-GDI: pass (private native PrintWindow/WM_PRINT helper records actual target paint; script checks counter/control pixels)
+final.actual-GDI: pass (private native PrintWindow/WM_PRINT helper records actual target paint; script checks counter/control pixels)
+final.actual-GDI: pass (private native PrintWindow/WM_PRINT helper records actual target paint; script checks counter/control pixels)
+C.input-clean-close: pass (unmodified R304 lifecycle releases state and restores both imports before checkpoint/exit)
+B.input-clean-close: pass (unmodified R304 lifecycle releases state and restores both imports before checkpoint/exit)
+A.input-clean-close: pass (unmodified R304 lifecycle releases state and restores both imports before checkpoint/exit)
+ABC-1.actual-run-completed=True
+ABC-1.all-controller-assertions=True
+ABC-1.raw-S0-calculation=True
+ABC-1.only-one-S0-naturally-empty-undo=True
+ABC-1.all-S0-fingerprints-unchanged=True
+ABC-1.fingerprint-memory-matches-original-bytes=True
+ABC-1.fingerprint-stack-matches-original-bytes=True
+ABC-1.fingerprint-context-matches-original-bytes=True
+ABC-1.fingerprint-resources-matches-original-bytes=True
+ABC-1.fingerprint-metadata-matches-original-bytes=True
+ABC-1.fingerprint-returns-matches-original-bytes=True
+ABC-1.fingerprint-abi-matches-original-bytes=True
+ABC-1.fingerprint-executable-matches-original-bytes=True
+ABC-1.whole-S0-fingerprint-independently-recomputed=True
+ABC-1.source-exit-before-new-A=True
+ABC-1.no-target-initialization-or-business-replay=True
+ABC-1.central-pump-exact-PID-routing=True
+ABC-1.real-B-or-C-event-not-consumed-by-A=True
+ABC-1.only-verified-Views-published=True
+ABC-1.actual-CET-CFG-enabled=True
+ABC-1.source-S0-native-owner-thread=True
+ABC-1.source-changed-native-owner-thread=True
+ABC-1.A-prepared-native-owner-thread=True
+ABC-1.A-initial-native-owner-thread=True
+ABC-1.B-prepared-native-owner-thread=True
+ABC-1.B-initial-native-owner-thread=True
+ABC-1.B-before-A-native-owner-thread=True
+ABC-1.A-first-edit-native-owner-thread=True
+ABC-1.B-after-A-native-owner-thread=True
+ABC-1.A-before-B-native-owner-thread=True
+ABC-1.B-first-edit-native-owner-thread=True
+ABC-1.A-after-B-native-owner-thread=True
+ABC-1.B-before-A-again-native-owner-thread=True
+ABC-1.A-second-edit-native-owner-thread=True
+ABC-1.B-after-A-again-native-owner-thread=True
+ABC-1.A-before-B-again-native-owner-thread=True
+ABC-1.B-second-edit-native-owner-thread=True
+ABC-1.A-after-B-again-native-owner-thread=True
+ABC-1.A-before-C-native-owner-thread=True
+ABC-1.B-before-C-native-owner-thread=True
+ABC-1.C-prepared-native-owner-thread=True
+ABC-1.C-initial-native-owner-thread=True
+ABC-1.A-after-C-native-owner-thread=True
+ABC-1.B-after-C-native-owner-thread=True
+ABC-1.C-before-final-A-native-owner-thread=True
+ABC-1.A-final-edit-native-owner-thread=True
+ABC-1.C-after-final-A-native-owner-thread=True
+ABC-1.A-before-final-B-native-owner-thread=True
+ABC-1.B-final-edit-native-owner-thread=True
+ABC-1.A-after-final-B-native-owner-thread=True
+ABC-1.A-before-C-edit-native-owner-thread=True
+ABC-1.B-before-C-edit-native-owner-thread=True
+ABC-1.C-first-edit-native-owner-thread=True
+ABC-1.A-after-C-edit-native-owner-thread=True
+ABC-1.B-after-C-edit-native-owner-thread=True
+ABC-1.A-final-native-owner-thread=True
+ABC-1.B-final-native-owner-thread=True
+ABC-1.C-final-native-owner-thread=True
+ABC-1.A-restored-native-control-state=True
+ABC-1.A-window-0-native-identity=True
+ABC-1.A-window-1-native-identity=True
+ABC-1.A-window-2-native-identity=True
+ABC-1.A-target-own-CET-chain-before-and-after=True
+ABC-1.A-normal-CALL-not-source-SSP=True
+ABC-1.A-real-restored-computation=True
+ABC-1.A-ref-1859720839208-old-value=True
+ABC-1.A-ref-1859720839488-old-value=True
+ABC-1.A-ref-1859720839496-old-value=True
+ABC-1.A-ref-1859723001272-old-value=True
+ABC-1.A-ref-1859723001264-old-value=True
+ABC-1.A-ref-1859723001136-old-value=True
+ABC-1.A-ref-1859723001144-old-value=True
+ABC-1.A-only-seven-declared-HWND-relocations=True
+ABC-1.A-original-EDIT-actually-processes-input=True
+ABC-1.A-final-native-edit-and-new-undo=True
+ABC-1.B-restored-native-control-state=True
+ABC-1.B-window-0-native-identity=True
+ABC-1.B-window-1-native-identity=True
+ABC-1.B-window-2-native-identity=True
+ABC-1.B-target-own-CET-chain-before-and-after=True
+ABC-1.B-normal-CALL-not-source-SSP=True
+ABC-1.B-real-restored-computation=True
+ABC-1.B-ref-1859720839208-old-value=True
+ABC-1.B-ref-1859720839488-old-value=True
+ABC-1.B-ref-1859720839496-old-value=True
+ABC-1.B-ref-1859723001272-old-value=True
+ABC-1.B-ref-1859723001264-old-value=True
+ABC-1.B-ref-1859723001136-old-value=True
+ABC-1.B-ref-1859723001144-old-value=True
+ABC-1.B-only-seven-declared-HWND-relocations=True
+ABC-1.B-original-EDIT-actually-processes-input=True
+ABC-1.B-final-native-edit-and-new-undo=True
+ABC-1.C-restored-native-control-state=True
+ABC-1.C-window-0-native-identity=True
+ABC-1.C-window-1-native-identity=True
+ABC-1.C-window-2-native-identity=True
+ABC-1.C-target-own-CET-chain-before-and-after=True
+ABC-1.C-normal-CALL-not-source-SSP=True
+ABC-1.C-real-restored-computation=True
+ABC-1.C-ref-1859720839208-old-value=True
+ABC-1.C-ref-1859720839488-old-value=True
+ABC-1.C-ref-1859720839496-old-value=True
+ABC-1.C-ref-1859723001272-old-value=True
+ABC-1.C-ref-1859723001264-old-value=True
+ABC-1.C-ref-1859723001136-old-value=True
+ABC-1.C-ref-1859723001144-old-value=True
+ABC-1.C-only-seven-declared-HWND-relocations=True
+ABC-1.C-original-EDIT-actually-processes-input=True
+ABC-1.C-final-native-edit-and-new-undo=True
+ABC-1.B-before-A-to-after-A-isolated=True
+ABC-1.A-before-B-to-after-B-isolated=True
+ABC-1.B-before-A-again-to-after-A-again-isolated=True
+ABC-1.A-before-B-again-to-after-B-again-isolated=True
+ABC-1.A-before-C-to-after-C-isolated=True
+ABC-1.C-before-final-A-to-after-final-A-isolated=True
+ABC-1.A-before-C-edit-to-after-C-edit-isolated=True
+ABC-1.B-before-C-to-after-C-isolated=True
+ABC-1.A-before-final-B-to-after-final-B-isolated=True
+ABC-1.B-before-C-edit-to-after-C-edit-isolated=True
+ABC-1.AB-before-edits-distinct-PID-TID-Desktop=True
+ABC-1.AB-after-edits-distinct-PID-TID-Desktop=True
+ABC-1.final-concurrent-distinct-PID-TID-Desktop=True
+ABC-1.A-not-paused-during-C-creation=True
+ABC-1.B-not-paused-during-C-creation=True
+ABC-1.source-S0-real-owned-frame=True
+ABC-1.source-changed-real-owned-frame=True
+ABC-1.A-initial-real-owned-frame=True
+ABC-1.B-initial-real-owned-frame=True
+ABC-1.A-first-edit-real-owned-frame=True
+ABC-1.B-first-edit-real-owned-frame=True
+ABC-1.A-second-edit-real-owned-frame=True
+ABC-1.B-second-edit-real-owned-frame=True
+ABC-1.C-initial-real-owned-frame=True
+ABC-1.A-final-edit-real-owned-frame=True
+ABC-1.B-final-edit-real-owned-frame=True
+ABC-1.C-first-edit-real-owned-frame=True
+ABC-1.A-final-real-owned-frame=True
+ABC-1.B-final-real-owned-frame=True
+ABC-1.C-final-real-owned-frame=True
+ABC-1.A-real-initial-EDIT-pixels-match-S0=True
+ABC-1.B-real-initial-EDIT-pixels-match-S0=True
+ABC-1.C-real-initial-EDIT-pixels-match-S0=True
+ABC-1.no-SA-SB-or-R4-claim=True
+ABC-1.owned-processes-and-desktops-cleaned=True
+source.CET-and-CFG-enabled: pass (read actual process policies; no mitigation policy is modified)
+source.input-clean-close: pass (unmodified R304 lifecycle releases state and restores both imports before checkpoint/exit)
+source.native-EDIT-preconditions: pass (native random unsaved text, nonempty selection and naturally empty undo; no source state rewriting by snapshotter)
+S0.actual-GDI: pass (private native PrintWindow/WM_PRINT helper records actual target paint; script checks counter/control pixels)
+source.native-unwind-sees-three-CPP-frames: pass (Windows unwind metadata independently walks leaf/middle/outer from captured raw stack; no guessed pointer scan)
+source.initialization-and-prefixes-once: pass (independent source breakpoint record)
+source.normal-return-chain: pass (ordinary source C++ chain)
+source.input-clean-close: pass (unmodified R304 lifecycle releases state and restores both imports before checkpoint/exit)
+changed.actual-GDI: pass (private native PrintWindow/WM_PRINT helper records actual target paint; script checks counter/control pixels)
+source.actually-changed: pass (source modified real EDIT after snapshot)
+S0.immutable-source-exited: pass (all original raw bytes, CPU, resources, references, returns and ABI remain unchanged)
+A.CET-and-CFG-enabled: pass (read actual process policies; no mitigation policy is modified)
+A.raw-memory-restored: pass (entire data page read back equals S0 except declared HWND relocation)
+A.raw-stack-restored: pass (entire managed stack read back equals S0 except explicitly registered live HWND references)
+A.CPU-context-readback: pass (stopped target RIP/RSP/register and floating point control read back after SetThreadContext)
+A.ordinary-CPP-return-chain: pass (actual leaf/middle/outer CALL/RET chain completed with restored register and volatile stack locals; structural checkpoint only, no business prefixes)
+A.original-S0-state: pass (counter and unsaved text match S0 at continuation before next GUI iteration)
+A.native-initial-S0: pass (original EDIT native state after actual restored C++ returns)
+initial.actual-GDI: pass (private native PrintWindow/WM_PRINT helper records actual target paint; script checks counter/control pixels)
+S0.immutable-A-created: pass (all original raw bytes, CPU, resources, references, returns and ABI remain unchanged)
+B.CET-and-CFG-enabled: pass (read actual process policies; no mitigation policy is modified)
+debug.foreign-PID-not-consumed: pass (actual B ready event rejected for A before any mutation or ContinueDebugEvent)
+debug.foreign-TID-not-consumed: pass (invalid TID rejected without consuming the genuine pending B event)
+B.expected-resource-failure: pass (resource.restore.parent_relation code=13)
+S0.immutable-B-failure: pass (all original raw bytes, CPU, resources, references, returns and ABI remain unchanged)
+A.preserved-through-B-failure: pass (native EDIT/selection/focus/undo and non-clock managed state unchanged; autonomous counter may advance)
+A.runs-through-B-failure: pass (A autonomous execution continues while failed B resources are cleaned)
+A.after-B-failure: pass (real native EDIT receives WM_CHAR and root application independently updates managed text through its original input handler)
+after-B-failure.actual-GDI: pass (private native PrintWindow/WM_PRINT helper records actual target paint; script checks counter/control pixels)
+A.running-A-survives-B: pass (published process is alive, not debug-stopped or runtime-frozen)
+A-survives-B.distinct-native-environments: pass (distinct native PID/TID/Desktop for simultaneous Views)
+C.CET-and-CFG-enabled: pass (read actual process policies; no mitigation policy is modified)
+debug.foreign-PID-not-consumed: pass (actual B ready event rejected for A before any mutation or ContinueDebugEvent)
+debug.foreign-TID-not-consumed: pass (invalid TID rejected without consuming the genuine pending B event)
+C.raw-memory-restored: pass (entire data page read back equals S0 except declared HWND relocation)
+C.raw-stack-restored: pass (entire managed stack read back equals S0 except explicitly registered live HWND references)
+C.CPU-context-readback: pass (stopped target RIP/RSP/register and floating point control read back after SetThreadContext)
+C.ordinary-CPP-return-chain: pass (actual leaf/middle/outer CALL/RET chain completed with restored register and volatile stack locals; structural checkpoint only, no business prefixes)
+C.original-S0-state: pass (counter and unsaved text match S0 at continuation before next GUI iteration)
+C.native-initial-S0: pass (original EDIT native state after actual restored C++ returns)
+initial.actual-GDI: pass (private native PrintWindow/WM_PRINT helper records actual target paint; script checks counter/control pixels)
+S0.immutable-C-created: pass (all original raw bytes, CPU, resources, references, returns and ABI remain unchanged)
+A.preserved-through-C-creation: pass (native EDIT/selection/focus/undo and non-clock managed state unchanged; autonomous counter may advance)
+A.runs-through-C-creation: pass (A autonomous counter advances while C resources and CET chain are restored)
+A.final-edit: pass (real native EDIT receives WM_CHAR and root application independently updates managed text through its original input handler)
+final-edit.actual-GDI: pass (private native PrintWindow/WM_PRINT helper records actual target paint; script checks counter/control pixels)
+C.unaffected-by-A: pass (native EDIT/selection/focus/undo and non-clock managed state unchanged; autonomous counter may advance)
+C.first-edit: pass (real native EDIT receives WM_CHAR and root application independently updates managed text through its original input handler)
+first-edit.actual-GDI: pass (private native PrintWindow/WM_PRINT helper records actual target paint; script checks counter/control pixels)
+A.unaffected-by-C: pass (native EDIT/selection/focus/undo and non-clock managed state unchanged; autonomous counter may advance)
+A.running-final-concurrent: pass (published process is alive, not debug-stopped or runtime-frozen)
+C.running-final-concurrent: pass (published process is alive, not debug-stopped or runtime-frozen)
+final-concurrent.distinct-native-environments: pass (distinct native PID/TID/Desktop for simultaneous Views)
+S0.immutable-final: pass (all original raw bytes, CPU, resources, references, returns and ABI remain unchanged)
+final.actual-GDI: pass (private native PrintWindow/WM_PRINT helper records actual target paint; script checks counter/control pixels)
+final.actual-GDI: pass (private native PrintWindow/WM_PRINT helper records actual target paint; script checks counter/control pixels)
+C.input-clean-close: pass (unmodified R304 lifecycle releases state and restores both imports before checkpoint/exit)
+A.input-clean-close: pass (unmodified R304 lifecycle releases state and restores both imports before checkpoint/exit)
+fail-B-1.actual-run-completed=True
+fail-B-1.all-controller-assertions=True
+fail-B-1.raw-S0-calculation=True
+fail-B-1.only-one-S0-naturally-empty-undo=True
+fail-B-1.all-S0-fingerprints-unchanged=True
+fail-B-1.fingerprint-memory-matches-original-bytes=True
+fail-B-1.fingerprint-stack-matches-original-bytes=True
+fail-B-1.fingerprint-context-matches-original-bytes=True
+fail-B-1.fingerprint-resources-matches-original-bytes=True
+fail-B-1.fingerprint-metadata-matches-original-bytes=True
+fail-B-1.fingerprint-returns-matches-original-bytes=True
+fail-B-1.fingerprint-abi-matches-original-bytes=True
+fail-B-1.fingerprint-executable-matches-original-bytes=True
+fail-B-1.whole-S0-fingerprint-independently-recomputed=True
+fail-B-1.source-exit-before-new-A=True
+fail-B-1.no-target-initialization-or-business-replay=True
+fail-B-1.central-pump-exact-PID-routing=True
+fail-B-1.real-B-or-C-event-not-consumed-by-A=True
+fail-B-1.only-verified-Views-published=True
+fail-B-1.actual-CET-CFG-enabled=True
+fail-B-1.source-S0-native-owner-thread=True
+fail-B-1.source-changed-native-owner-thread=True
+fail-B-1.A-prepared-native-owner-thread=True
+fail-B-1.A-initial-native-owner-thread=True
+fail-B-1.A-before-B-failure-native-owner-thread=True
+fail-B-1.B-prepared-native-owner-thread=True
+fail-B-1.A-after-B-failure-preserved-native-owner-thread=True
+fail-B-1.A-after-B-failure-native-owner-thread=True
+fail-B-1.A-before-C-native-owner-thread=True
+fail-B-1.C-prepared-native-owner-thread=True
+fail-B-1.C-initial-native-owner-thread=True
+fail-B-1.A-after-C-native-owner-thread=True
+fail-B-1.C-before-final-A-native-owner-thread=True
+fail-B-1.A-final-edit-native-owner-thread=True
+fail-B-1.C-after-final-A-native-owner-thread=True
+fail-B-1.A-before-C-edit-native-owner-thread=True
+fail-B-1.C-first-edit-native-owner-thread=True
+fail-B-1.A-after-C-edit-native-owner-thread=True
+fail-B-1.A-final-native-owner-thread=True
+fail-B-1.C-final-native-owner-thread=True
+fail-B-1.A-restored-native-control-state=True
+fail-B-1.A-window-0-native-identity=True
+fail-B-1.A-window-1-native-identity=True
+fail-B-1.A-window-2-native-identity=True
+fail-B-1.A-target-own-CET-chain-before-and-after=True
+fail-B-1.A-normal-CALL-not-source-SSP=True
+fail-B-1.A-real-restored-computation=True
+fail-B-1.A-ref-1859720839208-old-value=True
+fail-B-1.A-ref-1859720839488-old-value=True
+fail-B-1.A-ref-1859720839496-old-value=True
+fail-B-1.A-ref-1859723001272-old-value=True
+fail-B-1.A-ref-1859723001264-old-value=True
+fail-B-1.A-ref-1859723001136-old-value=True
+fail-B-1.A-ref-1859723001144-old-value=True
+fail-B-1.A-only-seven-declared-HWND-relocations=True
+fail-B-1.A-original-EDIT-actually-processes-input=True
+fail-B-1.A-final-native-edit-and-new-undo=True
+fail-B-1.C-restored-native-control-state=True
+fail-B-1.C-window-0-native-identity=True
+fail-B-1.C-window-1-native-identity=True
+fail-B-1.C-window-2-native-identity=True
+fail-B-1.C-target-own-CET-chain-before-and-after=True
+fail-B-1.C-normal-CALL-not-source-SSP=True
+fail-B-1.C-real-restored-computation=True
+fail-B-1.C-ref-1859720839208-old-value=True
+fail-B-1.C-ref-1859720839488-old-value=True
+fail-B-1.C-ref-1859720839496-old-value=True
+fail-B-1.C-ref-1859723001272-old-value=True
+fail-B-1.C-ref-1859723001264-old-value=True
+fail-B-1.C-ref-1859723001136-old-value=True
+fail-B-1.C-ref-1859723001144-old-value=True
+fail-B-1.C-only-seven-declared-HWND-relocations=True
+fail-B-1.C-original-EDIT-actually-processes-input=True
+fail-B-1.C-final-native-edit-and-new-undo=True
+fail-B-1.A-before-B-failure-to-after-B-failure-preserved-isolated=True
+fail-B-1.A-before-C-to-after-C-isolated=True
+fail-B-1.C-before-final-A-to-after-final-A-isolated=True
+fail-B-1.A-before-C-edit-to-after-C-edit-isolated=True
+fail-B-1.A-survives-B-distinct-PID-TID-Desktop=True
+fail-B-1.final-concurrent-distinct-PID-TID-Desktop=True
+fail-B-1.A-not-paused-during-C-creation=True
+fail-B-1.B-actual-resource-failure-not-published=True
+fail-B-1.B-cleaned-before-C-and-A-keeps-working=True
+fail-B-1.source-S0-real-owned-frame=True
+fail-B-1.source-changed-real-owned-frame=True
+fail-B-1.A-initial-real-owned-frame=True
+fail-B-1.A-after-B-failure-real-owned-frame=True
+fail-B-1.C-initial-real-owned-frame=True
+fail-B-1.A-final-edit-real-owned-frame=True
+fail-B-1.C-first-edit-real-owned-frame=True
+fail-B-1.A-final-real-owned-frame=True
+fail-B-1.C-final-real-owned-frame=True
+fail-B-1.A-real-initial-EDIT-pixels-match-S0=True
+fail-B-1.C-real-initial-EDIT-pixels-match-S0=True
+fail-B-1.no-SA-SB-or-R4-claim=True
+fail-B-1.owned-processes-and-desktops-cleaned=True
+source.CET-and-CFG-enabled: pass (read actual process policies; no mitigation policy is modified)
+source.input-clean-close: pass (unmodified R304 lifecycle releases state and restores both imports before checkpoint/exit)
+source.native-EDIT-preconditions: pass (native random unsaved text, nonempty selection and naturally empty undo; no source state rewriting by snapshotter)
+S0.actual-GDI: pass (private native PrintWindow/WM_PRINT helper records actual target paint; script checks counter/control pixels)
+source.native-unwind-sees-three-CPP-frames: pass (Windows unwind metadata independently walks leaf/middle/outer from captured raw stack; no guessed pointer scan)
+source.initialization-and-prefixes-once: pass (independent source breakpoint record)
+source.normal-return-chain: pass (ordinary source C++ chain)
+source.input-clean-close: pass (unmodified R304 lifecycle releases state and restores both imports before checkpoint/exit)
+changed.actual-GDI: pass (private native PrintWindow/WM_PRINT helper records actual target paint; script checks counter/control pixels)
+source.actually-changed: pass (source modified real EDIT after snapshot)
+S0.immutable-source-exited: pass (all original raw bytes, CPU, resources, references, returns and ABI remain unchanged)
+A.CET-and-CFG-enabled: pass (read actual process policies; no mitigation policy is modified)
+A.raw-memory-restored: pass (entire data page read back equals S0 except declared HWND relocation)
+A.raw-stack-restored: pass (entire managed stack read back equals S0 except explicitly registered live HWND references)
+A.CPU-context-readback: pass (stopped target RIP/RSP/register and floating point control read back after SetThreadContext)
+A.ordinary-CPP-return-chain: pass (actual leaf/middle/outer CALL/RET chain completed with restored register and volatile stack locals; structural checkpoint only, no business prefixes)
+A.original-S0-state: pass (counter and unsaved text match S0 at continuation before next GUI iteration)
+A.native-initial-S0: pass (original EDIT native state after actual restored C++ returns)
+initial.actual-GDI: pass (private native PrintWindow/WM_PRINT helper records actual target paint; script checks counter/control pixels)
+S0.immutable-A-created: pass (all original raw bytes, CPU, resources, references, returns and ABI remain unchanged)
+B.CET-and-CFG-enabled: pass (read actual process policies; no mitigation policy is modified)
+debug.foreign-PID-not-consumed: pass (actual B ready event rejected for A before any mutation or ContinueDebugEvent)
+debug.foreign-TID-not-consumed: pass (invalid TID rejected without consuming the genuine pending B event)
+B.raw-memory-restored: pass (entire data page read back equals S0 except declared HWND relocation)
+B.raw-stack-restored: pass (entire managed stack read back equals S0 except explicitly registered live HWND references)
+B.CPU-context-readback: pass (stopped target RIP/RSP/register and floating point control read back after SetThreadContext)
+B.ordinary-CPP-return-chain: pass (actual leaf/middle/outer CALL/RET chain completed with restored register and volatile stack locals; structural checkpoint only, no business prefixes)
+B.original-S0-state: pass (counter and unsaved text match S0 at continuation before next GUI iteration)
+B.native-initial-S0: pass (original EDIT native state after actual restored C++ returns)
+initial.actual-GDI: pass (private native PrintWindow/WM_PRINT helper records actual target paint; script checks counter/control pixels)
+S0.immutable-B-created: pass (all original raw bytes, CPU, resources, references, returns and ABI remain unchanged)
+A.running-AB-before-edits: pass (published process is alive, not debug-stopped or runtime-frozen)
+B.running-AB-before-edits: pass (published process is alive, not debug-stopped or runtime-frozen)
+AB-before-edits.distinct-native-environments: pass (distinct native PID/TID/Desktop for simultaneous Views)
+A.first-edit: pass (real native EDIT receives WM_CHAR and root application independently updates managed text through its original input handler)
+first-edit.actual-GDI: pass (private native PrintWindow/WM_PRINT helper records actual target paint; script checks counter/control pixels)
+B.unaffected-by-A: pass (native EDIT/selection/focus/undo and non-clock managed state unchanged; autonomous counter may advance)
+B.first-edit: pass (real native EDIT receives WM_CHAR and root application independently updates managed text through its original input handler)
+first-edit.actual-GDI: pass (private native PrintWindow/WM_PRINT helper records actual target paint; script checks counter/control pixels)
+A.unaffected-by-B: pass (native EDIT/selection/focus/undo and non-clock managed state unchanged; autonomous counter may advance)
+A.second-edit: pass (real native EDIT receives WM_CHAR and root application independently updates managed text through its original input handler)
+second-edit.actual-GDI: pass (private native PrintWindow/WM_PRINT helper records actual target paint; script checks counter/control pixels)
+B.unaffected-by-A-again: pass (native EDIT/selection/focus/undo and non-clock managed state unchanged; autonomous counter may advance)
+B.second-edit: pass (real native EDIT receives WM_CHAR and root application independently updates managed text through its original input handler)
+second-edit.actual-GDI: pass (private native PrintWindow/WM_PRINT helper records actual target paint; script checks counter/control pixels)
+A.unaffected-by-B-again: pass (native EDIT/selection/focus/undo and non-clock managed state unchanged; autonomous counter may advance)
+A.running-AB-after-edits: pass (published process is alive, not debug-stopped or runtime-frozen)
+B.running-AB-after-edits: pass (published process is alive, not debug-stopped or runtime-frozen)
+AB-after-edits.distinct-native-environments: pass (distinct native PID/TID/Desktop for simultaneous Views)
+S0.immutable-AB-edited: pass (all original raw bytes, CPU, resources, references, returns and ABI remain unchanged)
+S0.immutable-final: pass (all original raw bytes, CPU, resources, references, returns and ABI remain unchanged)
+final.actual-GDI: pass (private native PrintWindow/WM_PRINT helper records actual target paint; script checks counter/control pixels)
+final.actual-GDI: pass (private native PrintWindow/WM_PRINT helper records actual target paint; script checks counter/control pixels)
+B.input-clean-close: pass (unmodified R304 lifecycle releases state and restores both imports before checkpoint/exit)
+A.input-clean-close: pass (unmodified R304 lifecycle releases state and restores both imports before checkpoint/exit)
+AB-2.actual-run-completed=True
+AB-2.all-controller-assertions=True
+AB-2.raw-S0-calculation=True
+AB-2.only-one-S0-naturally-empty-undo=True
+AB-2.all-S0-fingerprints-unchanged=True
+AB-2.fingerprint-memory-matches-original-bytes=True
+AB-2.fingerprint-stack-matches-original-bytes=True
+AB-2.fingerprint-context-matches-original-bytes=True
+AB-2.fingerprint-resources-matches-original-bytes=True
+AB-2.fingerprint-metadata-matches-original-bytes=True
+AB-2.fingerprint-returns-matches-original-bytes=True
+AB-2.fingerprint-abi-matches-original-bytes=True
+AB-2.fingerprint-executable-matches-original-bytes=True
+AB-2.whole-S0-fingerprint-independently-recomputed=True
+AB-2.source-exit-before-new-A=True
+AB-2.no-target-initialization-or-business-replay=True
+AB-2.central-pump-exact-PID-routing=True
+AB-2.real-B-or-C-event-not-consumed-by-A=True
+AB-2.only-verified-Views-published=True
+AB-2.actual-CET-CFG-enabled=True
+AB-2.source-S0-native-owner-thread=True
+AB-2.source-changed-native-owner-thread=True
+AB-2.A-prepared-native-owner-thread=True
+AB-2.A-initial-native-owner-thread=True
+AB-2.B-prepared-native-owner-thread=True
+AB-2.B-initial-native-owner-thread=True
+AB-2.B-before-A-native-owner-thread=True
+AB-2.A-first-edit-native-owner-thread=True
+AB-2.B-after-A-native-owner-thread=True
+AB-2.A-before-B-native-owner-thread=True
+AB-2.B-first-edit-native-owner-thread=True
+AB-2.A-after-B-native-owner-thread=True
+AB-2.B-before-A-again-native-owner-thread=True
+AB-2.A-second-edit-native-owner-thread=True
+AB-2.B-after-A-again-native-owner-thread=True
+AB-2.A-before-B-again-native-owner-thread=True
+AB-2.B-second-edit-native-owner-thread=True
+AB-2.A-after-B-again-native-owner-thread=True
+AB-2.A-final-native-owner-thread=True
+AB-2.B-final-native-owner-thread=True
+AB-2.A-restored-native-control-state=True
+AB-2.A-window-0-native-identity=True
+AB-2.A-window-1-native-identity=True
+AB-2.A-window-2-native-identity=True
+AB-2.A-target-own-CET-chain-before-and-after=True
+AB-2.A-normal-CALL-not-source-SSP=True
+AB-2.A-real-restored-computation=True
+AB-2.A-ref-1859720839208-old-value=True
+AB-2.A-ref-1859720839488-old-value=True
+AB-2.A-ref-1859720839496-old-value=True
+AB-2.A-ref-1859723001272-old-value=True
+AB-2.A-ref-1859723001264-old-value=True
+AB-2.A-ref-1859723001136-old-value=True
+AB-2.A-ref-1859723001144-old-value=True
+AB-2.A-only-seven-declared-HWND-relocations=True
+AB-2.A-original-EDIT-actually-processes-input=True
+AB-2.A-final-native-edit-and-new-undo=True
+AB-2.B-restored-native-control-state=True
+AB-2.B-window-0-native-identity=True
+AB-2.B-window-1-native-identity=True
+AB-2.B-window-2-native-identity=True
+AB-2.B-target-own-CET-chain-before-and-after=True
+AB-2.B-normal-CALL-not-source-SSP=True
+AB-2.B-real-restored-computation=True
+AB-2.B-ref-1859720839208-old-value=True
+AB-2.B-ref-1859720839488-old-value=True
+AB-2.B-ref-1859720839496-old-value=True
+AB-2.B-ref-1859723001272-old-value=True
+AB-2.B-ref-1859723001264-old-value=True
+AB-2.B-ref-1859723001136-old-value=True
+AB-2.B-ref-1859723001144-old-value=True
+AB-2.B-only-seven-declared-HWND-relocations=True
+AB-2.B-original-EDIT-actually-processes-input=True
+AB-2.B-final-native-edit-and-new-undo=True
+AB-2.B-before-A-to-after-A-isolated=True
+AB-2.A-before-B-to-after-B-isolated=True
+AB-2.B-before-A-again-to-after-A-again-isolated=True
+AB-2.A-before-B-again-to-after-B-again-isolated=True
+AB-2.AB-before-edits-distinct-PID-TID-Desktop=True
+AB-2.AB-after-edits-distinct-PID-TID-Desktop=True
+AB-2.source-S0-real-owned-frame=True
+AB-2.source-changed-real-owned-frame=True
+AB-2.A-initial-real-owned-frame=True
+AB-2.B-initial-real-owned-frame=True
+AB-2.A-first-edit-real-owned-frame=True
+AB-2.B-first-edit-real-owned-frame=True
+AB-2.A-second-edit-real-owned-frame=True
+AB-2.B-second-edit-real-owned-frame=True
+AB-2.A-final-real-owned-frame=True
+AB-2.B-final-real-owned-frame=True
+AB-2.A-real-initial-EDIT-pixels-match-S0=True
+AB-2.B-real-initial-EDIT-pixels-match-S0=True
+AB-2.no-SA-SB-or-R4-claim=True
+AB-2.owned-processes-and-desktops-cleaned=True
+source.CET-and-CFG-enabled: pass (read actual process policies; no mitigation policy is modified)
+source.input-clean-close: pass (unmodified R304 lifecycle releases state and restores both imports before checkpoint/exit)
+source.native-EDIT-preconditions: pass (native random unsaved text, nonempty selection and naturally empty undo; no source state rewriting by snapshotter)
+S0.actual-GDI: pass (private native PrintWindow/WM_PRINT helper records actual target paint; script checks counter/control pixels)
+source.native-unwind-sees-three-CPP-frames: pass (Windows unwind metadata independently walks leaf/middle/outer from captured raw stack; no guessed pointer scan)
+source.initialization-and-prefixes-once: pass (independent source breakpoint record)
+source.normal-return-chain: pass (ordinary source C++ chain)
+source.input-clean-close: pass (unmodified R304 lifecycle releases state and restores both imports before checkpoint/exit)
+changed.actual-GDI: pass (private native PrintWindow/WM_PRINT helper records actual target paint; script checks counter/control pixels)
+source.actually-changed: pass (source modified real EDIT after snapshot)
+S0.immutable-source-exited: pass (all original raw bytes, CPU, resources, references, returns and ABI remain unchanged)
+A.CET-and-CFG-enabled: pass (read actual process policies; no mitigation policy is modified)
+A.raw-memory-restored: pass (entire data page read back equals S0 except declared HWND relocation)
+A.raw-stack-restored: pass (entire managed stack read back equals S0 except explicitly registered live HWND references)
+A.CPU-context-readback: pass (stopped target RIP/RSP/register and floating point control read back after SetThreadContext)
+A.ordinary-CPP-return-chain: pass (actual leaf/middle/outer CALL/RET chain completed with restored register and volatile stack locals; structural checkpoint only, no business prefixes)
+A.original-S0-state: pass (counter and unsaved text match S0 at continuation before next GUI iteration)
+A.native-initial-S0: pass (original EDIT native state after actual restored C++ returns)
+initial.actual-GDI: pass (private native PrintWindow/WM_PRINT helper records actual target paint; script checks counter/control pixels)
+S0.immutable-A-created: pass (all original raw bytes, CPU, resources, references, returns and ABI remain unchanged)
+B.CET-and-CFG-enabled: pass (read actual process policies; no mitigation policy is modified)
+debug.foreign-PID-not-consumed: pass (actual B ready event rejected for A before any mutation or ContinueDebugEvent)
+debug.foreign-TID-not-consumed: pass (invalid TID rejected without consuming the genuine pending B event)
+B.raw-memory-restored: pass (entire data page read back equals S0 except declared HWND relocation)
+B.raw-stack-restored: pass (entire managed stack read back equals S0 except explicitly registered live HWND references)
+B.CPU-context-readback: pass (stopped target RIP/RSP/register and floating point control read back after SetThreadContext)
+B.ordinary-CPP-return-chain: pass (actual leaf/middle/outer CALL/RET chain completed with restored register and volatile stack locals; structural checkpoint only, no business prefixes)
+B.original-S0-state: pass (counter and unsaved text match S0 at continuation before next GUI iteration)
+B.native-initial-S0: pass (original EDIT native state after actual restored C++ returns)
+initial.actual-GDI: pass (private native PrintWindow/WM_PRINT helper records actual target paint; script checks counter/control pixels)
+S0.immutable-B-created: pass (all original raw bytes, CPU, resources, references, returns and ABI remain unchanged)
+A.running-AB-before-edits: pass (published process is alive, not debug-stopped or runtime-frozen)
+B.running-AB-before-edits: pass (published process is alive, not debug-stopped or runtime-frozen)
+AB-before-edits.distinct-native-environments: pass (distinct native PID/TID/Desktop for simultaneous Views)
+A.first-edit: pass (real native EDIT receives WM_CHAR and root application independently updates managed text through its original input handler)
+first-edit.actual-GDI: pass (private native PrintWindow/WM_PRINT helper records actual target paint; script checks counter/control pixels)
+B.unaffected-by-A: pass (native EDIT/selection/focus/undo and non-clock managed state unchanged; autonomous counter may advance)
+B.first-edit: pass (real native EDIT receives WM_CHAR and root application independently updates managed text through its original input handler)
+first-edit.actual-GDI: pass (private native PrintWindow/WM_PRINT helper records actual target paint; script checks counter/control pixels)
+A.unaffected-by-B: pass (native EDIT/selection/focus/undo and non-clock managed state unchanged; autonomous counter may advance)
+A.second-edit: pass (real native EDIT receives WM_CHAR and root application independently updates managed text through its original input handler)
+second-edit.actual-GDI: pass (private native PrintWindow/WM_PRINT helper records actual target paint; script checks counter/control pixels)
+B.unaffected-by-A-again: pass (native EDIT/selection/focus/undo and non-clock managed state unchanged; autonomous counter may advance)
+B.second-edit: pass (real native EDIT receives WM_CHAR and root application independently updates managed text through its original input handler)
+second-edit.actual-GDI: pass (private native PrintWindow/WM_PRINT helper records actual target paint; script checks counter/control pixels)
+A.unaffected-by-B-again: pass (native EDIT/selection/focus/undo and non-clock managed state unchanged; autonomous counter may advance)
+A.running-AB-after-edits: pass (published process is alive, not debug-stopped or runtime-frozen)
+B.running-AB-after-edits: pass (published process is alive, not debug-stopped or runtime-frozen)
+AB-after-edits.distinct-native-environments: pass (distinct native PID/TID/Desktop for simultaneous Views)
+S0.immutable-AB-edited: pass (all original raw bytes, CPU, resources, references, returns and ABI remain unchanged)
+C.CET-and-CFG-enabled: pass (read actual process policies; no mitigation policy is modified)
+debug.foreign-PID-not-consumed: pass (actual B ready event rejected for A before any mutation or ContinueDebugEvent)
+debug.foreign-TID-not-consumed: pass (invalid TID rejected without consuming the genuine pending B event)
+C.raw-memory-restored: pass (entire data page read back equals S0 except declared HWND relocation)
+C.raw-stack-restored: pass (entire managed stack read back equals S0 except explicitly registered live HWND references)
+C.CPU-context-readback: pass (stopped target RIP/RSP/register and floating point control read back after SetThreadContext)
+C.ordinary-CPP-return-chain: pass (actual leaf/middle/outer CALL/RET chain completed with restored register and volatile stack locals; structural checkpoint only, no business prefixes)
+C.original-S0-state: pass (counter and unsaved text match S0 at continuation before next GUI iteration)
+C.native-initial-S0: pass (original EDIT native state after actual restored C++ returns)
+initial.actual-GDI: pass (private native PrintWindow/WM_PRINT helper records actual target paint; script checks counter/control pixels)
+S0.immutable-C-created: pass (all original raw bytes, CPU, resources, references, returns and ABI remain unchanged)
+A.preserved-through-C-creation: pass (native EDIT/selection/focus/undo and non-clock managed state unchanged; autonomous counter may advance)
+A.runs-through-C-creation: pass (A autonomous counter advances while C resources and CET chain are restored)
+B.preserved-through-C-creation: pass (native EDIT/selection/focus/undo and non-clock managed state unchanged; autonomous counter may advance)
+B.runs-through-C-creation: pass (B remains running during C creation)
+A.final-edit: pass (real native EDIT receives WM_CHAR and root application independently updates managed text through its original input handler)
+final-edit.actual-GDI: pass (private native PrintWindow/WM_PRINT helper records actual target paint; script checks counter/control pixels)
+C.unaffected-by-A: pass (native EDIT/selection/focus/undo and non-clock managed state unchanged; autonomous counter may advance)
+B.final-edit: pass (real native EDIT receives WM_CHAR and root application independently updates managed text through its original input handler)
+final-edit.actual-GDI: pass (private native PrintWindow/WM_PRINT helper records actual target paint; script checks counter/control pixels)
+A.unaffected-by-final-B: pass (native EDIT/selection/focus/undo and non-clock managed state unchanged; autonomous counter may advance)
+C.first-edit: pass (real native EDIT receives WM_CHAR and root application independently updates managed text through its original input handler)
+first-edit.actual-GDI: pass (private native PrintWindow/WM_PRINT helper records actual target paint; script checks counter/control pixels)
+A.unaffected-by-C: pass (native EDIT/selection/focus/undo and non-clock managed state unchanged; autonomous counter may advance)
+B.unaffected-by-C: pass (native EDIT/selection/focus/undo and non-clock managed state unchanged; autonomous counter may advance)
+A.running-final-concurrent: pass (published process is alive, not debug-stopped or runtime-frozen)
+B.running-final-concurrent: pass (published process is alive, not debug-stopped or runtime-frozen)
+C.running-final-concurrent: pass (published process is alive, not debug-stopped or runtime-frozen)
+final-concurrent.distinct-native-environments: pass (distinct native PID/TID/Desktop for simultaneous Views)
+S0.immutable-final: pass (all original raw bytes, CPU, resources, references, returns and ABI remain unchanged)
+final.actual-GDI: pass (private native PrintWindow/WM_PRINT helper records actual target paint; script checks counter/control pixels)
+final.actual-GDI: pass (private native PrintWindow/WM_PRINT helper records actual target paint; script checks counter/control pixels)
+final.actual-GDI: pass (private native PrintWindow/WM_PRINT helper records actual target paint; script checks counter/control pixels)
+C.input-clean-close: pass (unmodified R304 lifecycle releases state and restores both imports before checkpoint/exit)
+B.input-clean-close: pass (unmodified R304 lifecycle releases state and restores both imports before checkpoint/exit)
+A.input-clean-close: pass (unmodified R304 lifecycle releases state and restores both imports before checkpoint/exit)
+ABC-2.actual-run-completed=True
+ABC-2.all-controller-assertions=True
+ABC-2.raw-S0-calculation=True
+ABC-2.only-one-S0-naturally-empty-undo=True
+ABC-2.all-S0-fingerprints-unchanged=True
+ABC-2.fingerprint-memory-matches-original-bytes=True
+ABC-2.fingerprint-stack-matches-original-bytes=True
+ABC-2.fingerprint-context-matches-original-bytes=True
+ABC-2.fingerprint-resources-matches-original-bytes=True
+ABC-2.fingerprint-metadata-matches-original-bytes=True
+ABC-2.fingerprint-returns-matches-original-bytes=True
+ABC-2.fingerprint-abi-matches-original-bytes=True
+ABC-2.fingerprint-executable-matches-original-bytes=True
+ABC-2.whole-S0-fingerprint-independently-recomputed=True
+ABC-2.source-exit-before-new-A=True
+ABC-2.no-target-initialization-or-business-replay=True
+ABC-2.central-pump-exact-PID-routing=True
+ABC-2.real-B-or-C-event-not-consumed-by-A=True
+ABC-2.only-verified-Views-published=True
+ABC-2.actual-CET-CFG-enabled=True
+ABC-2.source-S0-native-owner-thread=True
+ABC-2.source-changed-native-owner-thread=True
+ABC-2.A-prepared-native-owner-thread=True
+ABC-2.A-initial-native-owner-thread=True
+ABC-2.B-prepared-native-owner-thread=True
+ABC-2.B-initial-native-owner-thread=True
+ABC-2.B-before-A-native-owner-thread=True
+ABC-2.A-first-edit-native-owner-thread=True
+ABC-2.B-after-A-native-owner-thread=True
+ABC-2.A-before-B-native-owner-thread=True
+ABC-2.B-first-edit-native-owner-thread=True
+ABC-2.A-after-B-native-owner-thread=True
+ABC-2.B-before-A-again-native-owner-thread=True
+ABC-2.A-second-edit-native-owner-thread=True
+ABC-2.B-after-A-again-native-owner-thread=True
+ABC-2.A-before-B-again-native-owner-thread=True
+ABC-2.B-second-edit-native-owner-thread=True
+ABC-2.A-after-B-again-native-owner-thread=True
+ABC-2.A-before-C-native-owner-thread=True
+ABC-2.B-before-C-native-owner-thread=True
+ABC-2.C-prepared-native-owner-thread=True
+ABC-2.C-initial-native-owner-thread=True
+ABC-2.A-after-C-native-owner-thread=True
+ABC-2.B-after-C-native-owner-thread=True
+ABC-2.C-before-final-A-native-owner-thread=True
+ABC-2.A-final-edit-native-owner-thread=True
+ABC-2.C-after-final-A-native-owner-thread=True
+ABC-2.A-before-final-B-native-owner-thread=True
+ABC-2.B-final-edit-native-owner-thread=True
+ABC-2.A-after-final-B-native-owner-thread=True
+ABC-2.A-before-C-edit-native-owner-thread=True
+ABC-2.B-before-C-edit-native-owner-thread=True
+ABC-2.C-first-edit-native-owner-thread=True
+ABC-2.A-after-C-edit-native-owner-thread=True
+ABC-2.B-after-C-edit-native-owner-thread=True
+ABC-2.A-final-native-owner-thread=True
+ABC-2.B-final-native-owner-thread=True
+ABC-2.C-final-native-owner-thread=True
+ABC-2.A-restored-native-control-state=True
+ABC-2.A-window-0-native-identity=True
+ABC-2.A-window-1-native-identity=True
+ABC-2.A-window-2-native-identity=True
+ABC-2.A-target-own-CET-chain-before-and-after=True
+ABC-2.A-normal-CALL-not-source-SSP=True
+ABC-2.A-real-restored-computation=True
+ABC-2.A-ref-1859720839208-old-value=True
+ABC-2.A-ref-1859720839488-old-value=True
+ABC-2.A-ref-1859720839496-old-value=True
+ABC-2.A-ref-1859723001272-old-value=True
+ABC-2.A-ref-1859723001264-old-value=True
+ABC-2.A-ref-1859723001136-old-value=True
+ABC-2.A-ref-1859723001144-old-value=True
+ABC-2.A-only-seven-declared-HWND-relocations=True
+ABC-2.A-original-EDIT-actually-processes-input=True
+ABC-2.A-final-native-edit-and-new-undo=True
+ABC-2.B-restored-native-control-state=True
+ABC-2.B-window-0-native-identity=True
+ABC-2.B-window-1-native-identity=True
+ABC-2.B-window-2-native-identity=True
+ABC-2.B-target-own-CET-chain-before-and-after=True
+ABC-2.B-normal-CALL-not-source-SSP=True
+ABC-2.B-real-restored-computation=True
+ABC-2.B-ref-1859720839208-old-value=True
+ABC-2.B-ref-1859720839488-old-value=True
+ABC-2.B-ref-1859720839496-old-value=True
+ABC-2.B-ref-1859723001272-old-value=True
+ABC-2.B-ref-1859723001264-old-value=True
+ABC-2.B-ref-1859723001136-old-value=True
+ABC-2.B-ref-1859723001144-old-value=True
+ABC-2.B-only-seven-declared-HWND-relocations=True
+ABC-2.B-original-EDIT-actually-processes-input=True
+ABC-2.B-final-native-edit-and-new-undo=True
+ABC-2.C-restored-native-control-state=True
+ABC-2.C-window-0-native-identity=True
+ABC-2.C-window-1-native-identity=True
+ABC-2.C-window-2-native-identity=True
+ABC-2.C-target-own-CET-chain-before-and-after=True
+ABC-2.C-normal-CALL-not-source-SSP=True
+ABC-2.C-real-restored-computation=True
+ABC-2.C-ref-1859720839208-old-value=True
+ABC-2.C-ref-1859720839488-old-value=True
+ABC-2.C-ref-1859720839496-old-value=True
+ABC-2.C-ref-1859723001272-old-value=True
+ABC-2.C-ref-1859723001264-old-value=True
+ABC-2.C-ref-1859723001136-old-value=True
+ABC-2.C-ref-1859723001144-old-value=True
+ABC-2.C-only-seven-declared-HWND-relocations=True
+ABC-2.C-original-EDIT-actually-processes-input=True
+ABC-2.C-final-native-edit-and-new-undo=True
+ABC-2.B-before-A-to-after-A-isolated=True
+ABC-2.A-before-B-to-after-B-isolated=True
+ABC-2.B-before-A-again-to-after-A-again-isolated=True
+ABC-2.A-before-B-again-to-after-B-again-isolated=True
+ABC-2.A-before-C-to-after-C-isolated=True
+ABC-2.C-before-final-A-to-after-final-A-isolated=True
+ABC-2.A-before-C-edit-to-after-C-edit-isolated=True
+ABC-2.B-before-C-to-after-C-isolated=True
+ABC-2.A-before-final-B-to-after-final-B-isolated=True
+ABC-2.B-before-C-edit-to-after-C-edit-isolated=True
+ABC-2.AB-before-edits-distinct-PID-TID-Desktop=True
+ABC-2.AB-after-edits-distinct-PID-TID-Desktop=True
+ABC-2.final-concurrent-distinct-PID-TID-Desktop=True
+ABC-2.A-not-paused-during-C-creation=True
+ABC-2.B-not-paused-during-C-creation=True
+ABC-2.source-S0-real-owned-frame=True
+ABC-2.source-changed-real-owned-frame=True
+ABC-2.A-initial-real-owned-frame=True
+ABC-2.B-initial-real-owned-frame=True
+ABC-2.A-first-edit-real-owned-frame=True
+ABC-2.B-first-edit-real-owned-frame=True
+ABC-2.A-second-edit-real-owned-frame=True
+ABC-2.B-second-edit-real-owned-frame=True
+ABC-2.C-initial-real-owned-frame=True
+ABC-2.A-final-edit-real-owned-frame=True
+ABC-2.B-final-edit-real-owned-frame=True
+ABC-2.C-first-edit-real-owned-frame=True
+ABC-2.A-final-real-owned-frame=True
+ABC-2.B-final-real-owned-frame=True
+ABC-2.C-final-real-owned-frame=True
+ABC-2.A-real-initial-EDIT-pixels-match-S0=True
+ABC-2.B-real-initial-EDIT-pixels-match-S0=True
+ABC-2.C-real-initial-EDIT-pixels-match-S0=True
+ABC-2.no-SA-SB-or-R4-claim=True
+ABC-2.owned-processes-and-desktops-cleaned=True
+source.CET-and-CFG-enabled: pass (read actual process policies; no mitigation policy is modified)
+source.input-clean-close: pass (unmodified R304 lifecycle releases state and restores both imports before checkpoint/exit)
+source.native-EDIT-preconditions: pass (native random unsaved text, nonempty selection and naturally empty undo; no source state rewriting by snapshotter)
+S0.actual-GDI: pass (private native PrintWindow/WM_PRINT helper records actual target paint; script checks counter/control pixels)
+source.native-unwind-sees-three-CPP-frames: pass (Windows unwind metadata independently walks leaf/middle/outer from captured raw stack; no guessed pointer scan)
+source.initialization-and-prefixes-once: pass (independent source breakpoint record)
+source.normal-return-chain: pass (ordinary source C++ chain)
+source.input-clean-close: pass (unmodified R304 lifecycle releases state and restores both imports before checkpoint/exit)
+changed.actual-GDI: pass (private native PrintWindow/WM_PRINT helper records actual target paint; script checks counter/control pixels)
+source.actually-changed: pass (source modified real EDIT after snapshot)
+S0.immutable-source-exited: pass (all original raw bytes, CPU, resources, references, returns and ABI remain unchanged)
+A.CET-and-CFG-enabled: pass (read actual process policies; no mitigation policy is modified)
+A.raw-memory-restored: pass (entire data page read back equals S0 except declared HWND relocation)
+A.raw-stack-restored: pass (entire managed stack read back equals S0 except explicitly registered live HWND references)
+A.CPU-context-readback: pass (stopped target RIP/RSP/register and floating point control read back after SetThreadContext)
+A.ordinary-CPP-return-chain: pass (actual leaf/middle/outer CALL/RET chain completed with restored register and volatile stack locals; structural checkpoint only, no business prefixes)
+A.original-S0-state: pass (counter and unsaved text match S0 at continuation before next GUI iteration)
+A.native-initial-S0: pass (original EDIT native state after actual restored C++ returns)
+initial.actual-GDI: pass (private native PrintWindow/WM_PRINT helper records actual target paint; script checks counter/control pixels)
+S0.immutable-A-created: pass (all original raw bytes, CPU, resources, references, returns and ABI remain unchanged)
+B.CET-and-CFG-enabled: pass (read actual process policies; no mitigation policy is modified)
+debug.foreign-PID-not-consumed: pass (actual B ready event rejected for A before any mutation or ContinueDebugEvent)
+debug.foreign-TID-not-consumed: pass (invalid TID rejected without consuming the genuine pending B event)
+B.expected-resource-failure: pass (resource.restore.parent_relation code=13)
+S0.immutable-B-failure: pass (all original raw bytes, CPU, resources, references, returns and ABI remain unchanged)
+A.preserved-through-B-failure: pass (native EDIT/selection/focus/undo and non-clock managed state unchanged; autonomous counter may advance)
+A.runs-through-B-failure: pass (A autonomous execution continues while failed B resources are cleaned)
+A.after-B-failure: pass (real native EDIT receives WM_CHAR and root application independently updates managed text through its original input handler)
+after-B-failure.actual-GDI: pass (private native PrintWindow/WM_PRINT helper records actual target paint; script checks counter/control pixels)
+A.running-A-survives-B: pass (published process is alive, not debug-stopped or runtime-frozen)
+A-survives-B.distinct-native-environments: pass (distinct native PID/TID/Desktop for simultaneous Views)
+C.CET-and-CFG-enabled: pass (read actual process policies; no mitigation policy is modified)
+debug.foreign-PID-not-consumed: pass (actual B ready event rejected for A before any mutation or ContinueDebugEvent)
+debug.foreign-TID-not-consumed: pass (invalid TID rejected without consuming the genuine pending B event)
+C.raw-memory-restored: pass (entire data page read back equals S0 except declared HWND relocation)
+C.raw-stack-restored: pass (entire managed stack read back equals S0 except explicitly registered live HWND references)
+C.CPU-context-readback: pass (stopped target RIP/RSP/register and floating point control read back after SetThreadContext)
+C.ordinary-CPP-return-chain: pass (actual leaf/middle/outer CALL/RET chain completed with restored register and volatile stack locals; structural checkpoint only, no business prefixes)
+C.original-S0-state: pass (counter and unsaved text match S0 at continuation before next GUI iteration)
+C.native-initial-S0: pass (original EDIT native state after actual restored C++ returns)
+initial.actual-GDI: pass (private native PrintWindow/WM_PRINT helper records actual target paint; script checks counter/control pixels)
+S0.immutable-C-created: pass (all original raw bytes, CPU, resources, references, returns and ABI remain unchanged)
+A.preserved-through-C-creation: pass (native EDIT/selection/focus/undo and non-clock managed state unchanged; autonomous counter may advance)
+A.runs-through-C-creation: pass (A autonomous counter advances while C resources and CET chain are restored)
+A.final-edit: pass (real native EDIT receives WM_CHAR and root application independently updates managed text through its original input handler)
+final-edit.actual-GDI: pass (private native PrintWindow/WM_PRINT helper records actual target paint; script checks counter/control pixels)
+C.unaffected-by-A: pass (native EDIT/selection/focus/undo and non-clock managed state unchanged; autonomous counter may advance)
+C.first-edit: pass (real native EDIT receives WM_CHAR and root application independently updates managed text through its original input handler)
+first-edit.actual-GDI: pass (private native PrintWindow/WM_PRINT helper records actual target paint; script checks counter/control pixels)
+A.unaffected-by-C: pass (native EDIT/selection/focus/undo and non-clock managed state unchanged; autonomous counter may advance)
+A.running-final-concurrent: pass (published process is alive, not debug-stopped or runtime-frozen)
+C.running-final-concurrent: pass (published process is alive, not debug-stopped or runtime-frozen)
+final-concurrent.distinct-native-environments: pass (distinct native PID/TID/Desktop for simultaneous Views)
+S0.immutable-final: pass (all original raw bytes, CPU, resources, references, returns and ABI remain unchanged)
+final.actual-GDI: pass (private native PrintWindow/WM_PRINT helper records actual target paint; script checks counter/control pixels)
+final.actual-GDI: pass (private native PrintWindow/WM_PRINT helper records actual target paint; script checks counter/control pixels)
+C.input-clean-close: pass (unmodified R304 lifecycle releases state and restores both imports before checkpoint/exit)
+A.input-clean-close: pass (unmodified R304 lifecycle releases state and restores both imports before checkpoint/exit)
+fail-B-2.actual-run-completed=True
+fail-B-2.all-controller-assertions=True
+fail-B-2.raw-S0-calculation=True
+fail-B-2.only-one-S0-naturally-empty-undo=True
+fail-B-2.all-S0-fingerprints-unchanged=True
+fail-B-2.fingerprint-memory-matches-original-bytes=True
+fail-B-2.fingerprint-stack-matches-original-bytes=True
+fail-B-2.fingerprint-context-matches-original-bytes=True
+fail-B-2.fingerprint-resources-matches-original-bytes=True
+fail-B-2.fingerprint-metadata-matches-original-bytes=True
+fail-B-2.fingerprint-returns-matches-original-bytes=True
+fail-B-2.fingerprint-abi-matches-original-bytes=True
+fail-B-2.fingerprint-executable-matches-original-bytes=True
+fail-B-2.whole-S0-fingerprint-independently-recomputed=True
+fail-B-2.source-exit-before-new-A=True
+fail-B-2.no-target-initialization-or-business-replay=True
+fail-B-2.central-pump-exact-PID-routing=True
+fail-B-2.real-B-or-C-event-not-consumed-by-A=True
+fail-B-2.only-verified-Views-published=True
+fail-B-2.actual-CET-CFG-enabled=True
+fail-B-2.source-S0-native-owner-thread=True
+fail-B-2.source-changed-native-owner-thread=True
+fail-B-2.A-prepared-native-owner-thread=True
+fail-B-2.A-initial-native-owner-thread=True
+fail-B-2.A-before-B-failure-native-owner-thread=True
+fail-B-2.B-prepared-native-owner-thread=True
+fail-B-2.A-after-B-failure-preserved-native-owner-thread=True
+fail-B-2.A-after-B-failure-native-owner-thread=True
+fail-B-2.A-before-C-native-owner-thread=True
+fail-B-2.C-prepared-native-owner-thread=True
+fail-B-2.C-initial-native-owner-thread=True
+fail-B-2.A-after-C-native-owner-thread=True
+fail-B-2.C-before-final-A-native-owner-thread=True
+fail-B-2.A-final-edit-native-owner-thread=True
+fail-B-2.C-after-final-A-native-owner-thread=True
+fail-B-2.A-before-C-edit-native-owner-thread=True
+fail-B-2.C-first-edit-native-owner-thread=True
+fail-B-2.A-after-C-edit-native-owner-thread=True
+fail-B-2.A-final-native-owner-thread=True
+fail-B-2.C-final-native-owner-thread=True
+fail-B-2.A-restored-native-control-state=True
+fail-B-2.A-window-0-native-identity=True
+fail-B-2.A-window-1-native-identity=True
+fail-B-2.A-window-2-native-identity=True
+fail-B-2.A-target-own-CET-chain-before-and-after=True
+fail-B-2.A-normal-CALL-not-source-SSP=True
+fail-B-2.A-real-restored-computation=True
+fail-B-2.A-ref-1859720839208-old-value=True
+fail-B-2.A-ref-1859720839488-old-value=True
+fail-B-2.A-ref-1859720839496-old-value=True
+fail-B-2.A-ref-1859723001272-old-value=True
+fail-B-2.A-ref-1859723001264-old-value=True
+fail-B-2.A-ref-1859723001136-old-value=True
+fail-B-2.A-ref-1859723001144-old-value=True
+fail-B-2.A-only-seven-declared-HWND-relocations=True
+fail-B-2.A-original-EDIT-actually-processes-input=True
+fail-B-2.A-final-native-edit-and-new-undo=True
+fail-B-2.C-restored-native-control-state=True
+fail-B-2.C-window-0-native-identity=True
+fail-B-2.C-window-1-native-identity=True
+fail-B-2.C-window-2-native-identity=True
+fail-B-2.C-target-own-CET-chain-before-and-after=True
+fail-B-2.C-normal-CALL-not-source-SSP=True
+fail-B-2.C-real-restored-computation=True
+fail-B-2.C-ref-1859720839208-old-value=True
+fail-B-2.C-ref-1859720839488-old-value=True
+fail-B-2.C-ref-1859720839496-old-value=True
+fail-B-2.C-ref-1859723001272-old-value=True
+fail-B-2.C-ref-1859723001264-old-value=True
+fail-B-2.C-ref-1859723001136-old-value=True
+fail-B-2.C-ref-1859723001144-old-value=True
+fail-B-2.C-only-seven-declared-HWND-relocations=True
+fail-B-2.C-original-EDIT-actually-processes-input=True
+fail-B-2.C-final-native-edit-and-new-undo=True
+fail-B-2.A-before-B-failure-to-after-B-failure-preserved-isolated=True
+fail-B-2.A-before-C-to-after-C-isolated=True
+fail-B-2.C-before-final-A-to-after-final-A-isolated=True
+fail-B-2.A-before-C-edit-to-after-C-edit-isolated=True
+fail-B-2.A-survives-B-distinct-PID-TID-Desktop=True
+fail-B-2.final-concurrent-distinct-PID-TID-Desktop=True
+fail-B-2.A-not-paused-during-C-creation=True
+fail-B-2.B-actual-resource-failure-not-published=True
+fail-B-2.B-cleaned-before-C-and-A-keeps-working=True
+fail-B-2.source-S0-real-owned-frame=True
+fail-B-2.source-changed-real-owned-frame=True
+fail-B-2.A-initial-real-owned-frame=True
+fail-B-2.A-after-B-failure-real-owned-frame=True
+fail-B-2.C-initial-real-owned-frame=True
+fail-B-2.A-final-edit-real-owned-frame=True
+fail-B-2.C-first-edit-real-owned-frame=True
+fail-B-2.A-final-real-owned-frame=True
+fail-B-2.C-final-real-owned-frame=True
+fail-B-2.A-real-initial-EDIT-pixels-match-S0=True
+fail-B-2.C-real-initial-EDIT-pixels-match-S0=True
+fail-B-2.no-SA-SB-or-R4-claim=True
+fail-B-2.owned-processes-and-desktops-cleaned=True
+adapter-does-not-empty-source-undo-buffer=True
+adapter-is-independent-of-business-text=True
+source.CET-and-CFG-enabled: pass (read actual process policies; no mitigation policy is modified)
+source.input-clean-close: pass (unmodified R304 lifecycle releases state and restores both imports before checkpoint/exit)
+source.native-EDIT-preconditions: pass (random native EDIT initialized by source business only; Home/Shift+End select text; capture does not clear undo)
+source-S0.actual-GDI: pass (unchanged PrintWindow helper checks actual target paint and counter pixels)
+source.native-unwind-sees-three-CPP-frames: pass (Windows unwind metadata independently walks leaf/middle/outer from captured raw stack; no guessed pointer scan)
+source.initialization-and-prefixes-once: pass (debugger evidence is separate from restored memory)
+source.normal-return-chain: pass (source ordinary call chain and captured receipt)
+source.input-clean-close: pass (unmodified R304 lifecycle releases state and restores both imports before checkpoint/exit)
+source-CHANGED.actual-GDI: pass (unchanged PrintWindow helper checks actual target paint and counter pixels)
+source.actual-EDIT-changed: pass (real WM_CHAR changed native EDIT and generated undo after S0)
+source.terminated-before-restore: pass (confirmed process exit before new carrier)
+restored.CET-and-CFG-enabled: pass (read actual process policies; no mitigation policy is modified)
+new-PID-TID: pass (new native GUI thread and process)
+restored.raw-memory-restored: pass (entire data page read back equals S0 except declared HWND relocation)
+restored.raw-stack-restored: pass (entire managed stack read back equals S0 except explicitly registered live HWND references)
+restored.CPU-context-readback: pass (stopped target RIP/RSP/register and floating point control read back after SetThreadContext)
+restored.ordinary-CPP-return-chain: pass (actual leaf/middle/outer CALL/RET chain completed with restored register and volatile stack locals; structural checkpoint only, no business prefixes)
+restored.original-S0-state: pass (counter and unsaved text match S0 at continuation before next GUI iteration)
+restored.native-EDIT-state: pass (native owner-thread readback after real CALL/RET; not just memory state)
+restored-S0.actual-GDI: pass (unchanged PrintWindow helper checks actual target paint and counter pixels)
+restored.native-keyboard-selection: pass (original EDIT procedure processes Home and Shift+End through existing managed input)
+restored.native-HOME: pass (native EDIT moves caret to start)
+restored.input-clean-close: pass (unmodified R304 lifecycle releases state and restores both imports before checkpoint/exit)
+restored.native-EDIT-edit-and-caret: pass (real WM_CHAR replaces native selection; Home/End move actual caret, undo appears naturally)
+restored-after-input.actual-GDI: pass (unchanged PrintWindow helper checks actual target paint and counter pixels)
+positive-1.actual-verdict-and-error-status=True
+positive-1.S0-owner-GUI-thread-query=True
+positive-1.source-changed-owner-GUI-thread-query=True
+positive-1.target-prepared-owner-GUI-thread-query=True
+positive-1.restored-S0-owner-GUI-thread-query=True
+positive-1.selected-after-restore-owner-GUI-thread-query=True
+positive-1.after-home-owner-GUI-thread-query=True
+positive-1.after-input-owner-GUI-thread-query=True
+positive-1.CET-CFG-stay-enabled=True
+positive-1.native-source-state-supported-with-empty-undo=True
+positive-1.resource-capture-before-debug-freeze=True
+positive-1.source-real-edit-changes-after-S0=True
+positive-1.source-exited-before-new-PID-TID=True
+positive-1.native-resource-preparation-matches-S0=True
+positive-1.window-1-identity-geometry-class=True
+positive-1.window-2-identity-geometry-class=True
+positive-1.window-3-identity-geometry-class=True
+positive-1.native-preparation-precedes-CET-chain-checkpoint=True
+positive-1.raw-memory-stack-register-computation-and-original-S0=True
+positive-1.normal-and-CET-shadow-returns-match-before-and-after-restore=True
+positive-1.target-does-not-replay-business=True
+positive-1.reference-1859720839208-source-preimage=True
+positive-1.reference-1859720839488-source-preimage=True
+positive-1.reference-1859720839496-source-preimage=True
+positive-1.reference-1859723001272-source-preimage=True
+positive-1.reference-1859723001264-source-preimage=True
+positive-1.reference-1859723001136-source-preimage=True
+positive-1.reference-1859723001144-source-preimage=True
+positive-1.only-seven-declared-HWND-relocations=True
+positive-1.native-state-after-CPU-return-still-S0=True
+positive-1.native-selection-edit-and-caret-after-restore=True
+positive-1.original-control-processes-key-and-char-messages=True
+positive-1.source-S0-native-paint-and-PNG=True
+positive-1.source-CHANGED-native-paint-and-PNG=True
+positive-1.restored-S0-native-paint-and-PNG=True
+positive-1.restored-after-input-native-paint-and-PNG=True
+positive-1.real-EDIT-region-restored-and-button-caption-painted=True
+positive-1.publish-only-after-control-execution-input-validation=True
+positive-1.owned-process-and-desktop-cleanup=True
+source.CET-and-CFG-enabled: pass (read actual process policies; no mitigation policy is modified)
+source.input-clean-close: pass (unmodified R304 lifecycle releases state and restores both imports before checkpoint/exit)
+negative.explicit-rejection: pass (resource.EDIT.undo_history error=50; unsupported state or failed reconstruction not published)
+negative.source-still-alive: pass (failed snapshot does not terminate source until owned cleanup)
+undo-1.actual-verdict-and-error-status=True
+undo-1.S0-owner-GUI-thread-query=True
+undo-1.source-after-rejection-owner-GUI-thread-query=True
+undo-1.CET-CFG-stay-enabled=True
+undo-1.snapshot-not-published=True
+undo-1.source-resource-state-not-changed-to-force-success=True
+undo-1.real-undo-history-refused-and-preserved=True
+undo-1.failed-case-not-published=True
+undo-1.owned-process-and-desktop-cleanup=True
+source.CET-and-CFG-enabled: pass (read actual process policies; no mitigation policy is modified)
+source.input-clean-close: pass (unmodified R304 lifecycle releases state and restores both imports before checkpoint/exit)
+negative.explicit-rejection: pass (resource.unknown_descendant error=50; unsupported state or failed reconstruction not published)
+negative.source-still-alive: pass (failed snapshot does not terminate source until owned cleanup)
+unknown-child-1.actual-verdict-and-error-status=True
+unknown-child-1.S0-owner-GUI-thread-query=True
+unknown-child-1.source-after-rejection-owner-GUI-thread-query=True
+unknown-child-1.CET-CFG-stay-enabled=True
+unknown-child-1.snapshot-not-published=True
+unknown-child-1.source-resource-state-not-changed-to-force-success=True
+unknown-child-1.actual-unknown-descendant-refused=True
+unknown-child-1.failed-case-not-published=True
+unknown-child-1.owned-process-and-desktop-cleanup=True
+source.CET-and-CFG-enabled: pass (read actual process policies; no mitigation policy is modified)
+source.input-clean-close: pass (unmodified R304 lifecycle releases state and restores both imports before checkpoint/exit)
+source.native-EDIT-preconditions: pass (random native EDIT initialized by source business only; Home/Shift+End select text; capture does not clear undo)
+source-S0.actual-GDI: pass (unchanged PrintWindow helper checks actual target paint and counter pixels)
+source.native-unwind-sees-three-CPP-frames: pass (Windows unwind metadata independently walks leaf/middle/outer from captured raw stack; no guessed pointer scan)
+source.initialization-and-prefixes-once: pass (debugger evidence is separate from restored memory)
+source.normal-return-chain: pass (source ordinary call chain and captured receipt)
+source.input-clean-close: pass (unmodified R304 lifecycle releases state and restores both imports before checkpoint/exit)
+source-CHANGED.actual-GDI: pass (unchanged PrintWindow helper checks actual target paint and counter pixels)
+source.actual-EDIT-changed: pass (real WM_CHAR changed native EDIT and generated undo after S0)
+source.terminated-before-restore: pass (confirmed process exit before new carrier)
+restored.CET-and-CFG-enabled: pass (read actual process policies; no mitigation policy is modified)
+new-PID-TID: pass (new native GUI thread and process)
+negative.explicit-rejection: pass (resource.restore.parent_relation error=13; unsupported state or failed reconstruction not published)
+bad-parent-1.actual-verdict-and-error-status=True
+bad-parent-1.S0-owner-GUI-thread-query=True
+bad-parent-1.source-changed-owner-GUI-thread-query=True
+bad-parent-1.target-prepared-owner-GUI-thread-query=True
+bad-parent-1.CET-CFG-stay-enabled=True
+bad-parent-1.native-source-state-supported-with-empty-undo=True
+bad-parent-1.resource-capture-before-debug-freeze=True
+bad-parent-1.source-real-edit-changes-after-S0=True
+bad-parent-1.source-exited-before-new-PID-TID=True
+bad-parent-1.actual-native-parent-mismatch-rejected=True
+bad-parent-1.failed-case-not-published=True
+bad-parent-1.owned-process-and-desktop-cleanup=True
+source.CET-and-CFG-enabled: pass (read actual process policies; no mitigation policy is modified)
+source.input-clean-close: pass (unmodified R304 lifecycle releases state and restores both imports before checkpoint/exit)
+source.native-EDIT-preconditions: pass (random native EDIT initialized by source business only; Home/Shift+End select text; capture does not clear undo)
+source-S0.actual-GDI: pass (unchanged PrintWindow helper checks actual target paint and counter pixels)
+source.native-unwind-sees-three-CPP-frames: pass (Windows unwind metadata independently walks leaf/middle/outer from captured raw stack; no guessed pointer scan)
+source.initialization-and-prefixes-once: pass (debugger evidence is separate from restored memory)
+source.normal-return-chain: pass (source ordinary call chain and captured receipt)
+source.input-clean-close: pass (unmodified R304 lifecycle releases state and restores both imports before checkpoint/exit)
+source-CHANGED.actual-GDI: pass (unchanged PrintWindow helper checks actual target paint and counter pixels)
+source.actual-EDIT-changed: pass (real WM_CHAR changed native EDIT and generated undo after S0)
+source.terminated-before-restore: pass (confirmed process exit before new carrier)
+restored.CET-and-CFG-enabled: pass (read actual process policies; no mitigation policy is modified)
+new-PID-TID: pass (new native GUI thread and process)
+negative.explicit-rejection: pass (restore.unregistered_live_HWND error=13; unsupported state or failed reconstruction not published)
+unregistered-ref-1.actual-verdict-and-error-status=True
+unregistered-ref-1.S0-owner-GUI-thread-query=True
+unregistered-ref-1.source-changed-owner-GUI-thread-query=True
+unregistered-ref-1.target-prepared-owner-GUI-thread-query=True
+unregistered-ref-1.CET-CFG-stay-enabled=True
+unregistered-ref-1.native-source-state-supported-with-empty-undo=True
+unregistered-ref-1.resource-capture-before-debug-freeze=True
+unregistered-ref-1.source-real-edit-changes-after-S0=True
+unregistered-ref-1.source-exited-before-new-PID-TID=True
+unregistered-ref-1.native-resource-preparation-matches-S0=True
+unregistered-ref-1.window-1-identity-geometry-class=True
+unregistered-ref-1.window-2-identity-geometry-class=True
+unregistered-ref-1.window-3-identity-geometry-class=True
+unregistered-ref-1.native-preparation-precedes-CET-chain-checkpoint=True
+unregistered-ref-1.declared-live-reference-omission-refused=True
+unregistered-ref-1.failed-case-not-published=True
+unregistered-ref-1.owned-process-and-desktop-cleanup=True
+source.CET-and-CFG-enabled: pass (read actual process policies; no mitigation policy is modified)
+source.input-clean-close: pass (unmodified R304 lifecycle releases state and restores both imports before checkpoint/exit)
+source.native-EDIT-preconditions: pass (random native EDIT initialized by source business only; Home/Shift+End select text; capture does not clear undo)
+source-S0.actual-GDI: pass (unchanged PrintWindow helper checks actual target paint and counter pixels)
+source.native-unwind-sees-three-CPP-frames: pass (Windows unwind metadata independently walks leaf/middle/outer from captured raw stack; no guessed pointer scan)
+source.initialization-and-prefixes-once: pass (debugger evidence is separate from restored memory)
+source.normal-return-chain: pass (source ordinary call chain and captured receipt)
+source.input-clean-close: pass (unmodified R304 lifecycle releases state and restores both imports before checkpoint/exit)
+source-CHANGED.actual-GDI: pass (unchanged PrintWindow helper checks actual target paint and counter pixels)
+source.actual-EDIT-changed: pass (real WM_CHAR changed native EDIT and generated undo after S0)
+source.terminated-before-restore: pass (confirmed process exit before new carrier)
+restored.CET-and-CFG-enabled: pass (read actual process policies; no mitigation policy is modified)
+new-PID-TID: pass (new native GUI thread and process)
+negative.explicit-rejection: pass (resource.restore.readback error=23; unsupported state or failed reconstruction not published)
+omit-text-1.actual-verdict-and-error-status=True
+omit-text-1.S0-owner-GUI-thread-query=True
+omit-text-1.source-changed-owner-GUI-thread-query=True
+omit-text-1.target-prepared-owner-GUI-thread-query=True
+omit-text-1.CET-CFG-stay-enabled=True
+omit-text-1.native-source-state-supported-with-empty-undo=True
+omit-text-1.resource-capture-before-debug-freeze=True
+omit-text-1.source-real-edit-changes-after-S0=True
+omit-text-1.source-exited-before-new-PID-TID=True
+omit-text-1.omission-refused-before-execution=True
+omit-text-1.actual-native-field-mismatch-recorded=True
+omit-text-1.failed-case-not-published=True
+omit-text-1.owned-process-and-desktop-cleanup=True
+source.CET-and-CFG-enabled: pass (read actual process policies; no mitigation policy is modified)
+source.input-clean-close: pass (unmodified R304 lifecycle releases state and restores both imports before checkpoint/exit)
+source.native-EDIT-preconditions: pass (random native EDIT initialized by source business only; Home/Shift+End select text; capture does not clear undo)
+source-S0.actual-GDI: pass (unchanged PrintWindow helper checks actual target paint and counter pixels)
+source.native-unwind-sees-three-CPP-frames: pass (Windows unwind metadata independently walks leaf/middle/outer from captured raw stack; no guessed pointer scan)
+source.initialization-and-prefixes-once: pass (debugger evidence is separate from restored memory)
+source.normal-return-chain: pass (source ordinary call chain and captured receipt)
+source.input-clean-close: pass (unmodified R304 lifecycle releases state and restores both imports before checkpoint/exit)
+source-CHANGED.actual-GDI: pass (unchanged PrintWindow helper checks actual target paint and counter pixels)
+source.actual-EDIT-changed: pass (real WM_CHAR changed native EDIT and generated undo after S0)
+source.terminated-before-restore: pass (confirmed process exit before new carrier)
+restored.CET-and-CFG-enabled: pass (read actual process policies; no mitigation policy is modified)
+new-PID-TID: pass (new native GUI thread and process)
+negative.explicit-rejection: pass (resource.restore.readback error=23; unsupported state or failed reconstruction not published)
+omit-selection-1.actual-verdict-and-error-status=True
+omit-selection-1.S0-owner-GUI-thread-query=True
+omit-selection-1.source-changed-owner-GUI-thread-query=True
+omit-selection-1.target-prepared-owner-GUI-thread-query=True
+omit-selection-1.CET-CFG-stay-enabled=True
+omit-selection-1.native-source-state-supported-with-empty-undo=True
+omit-selection-1.resource-capture-before-debug-freeze=True
+omit-selection-1.source-real-edit-changes-after-S0=True
+omit-selection-1.source-exited-before-new-PID-TID=True
+omit-selection-1.omission-refused-before-execution=True
+omit-selection-1.actual-native-field-mismatch-recorded=True
+omit-selection-1.failed-case-not-published=True
+omit-selection-1.owned-process-and-desktop-cleanup=True
+source.CET-and-CFG-enabled: pass (read actual process policies; no mitigation policy is modified)
+source.input-clean-close: pass (unmodified R304 lifecycle releases state and restores both imports before checkpoint/exit)
+source.native-EDIT-preconditions: pass (random native EDIT initialized by source business only; Home/Shift+End select text; capture does not clear undo)
+source-S0.actual-GDI: pass (unchanged PrintWindow helper checks actual target paint and counter pixels)
+source.native-unwind-sees-three-CPP-frames: pass (Windows unwind metadata independently walks leaf/middle/outer from captured raw stack; no guessed pointer scan)
+source.initialization-and-prefixes-once: pass (debugger evidence is separate from restored memory)
+source.normal-return-chain: pass (source ordinary call chain and captured receipt)
+source.input-clean-close: pass (unmodified R304 lifecycle releases state and restores both imports before checkpoint/exit)
+source-CHANGED.actual-GDI: pass (unchanged PrintWindow helper checks actual target paint and counter pixels)
+source.actual-EDIT-changed: pass (real WM_CHAR changed native EDIT and generated undo after S0)
+source.terminated-before-restore: pass (confirmed process exit before new carrier)
+restored.CET-and-CFG-enabled: pass (read actual process policies; no mitigation policy is modified)
+new-PID-TID: pass (new native GUI thread and process)
+negative.explicit-rejection: pass (resource.restore.readback error=23; unsupported state or failed reconstruction not published)
+omit-modify-1.actual-verdict-and-error-status=True
+omit-modify-1.S0-owner-GUI-thread-query=True
+omit-modify-1.source-changed-owner-GUI-thread-query=True
+omit-modify-1.target-prepared-owner-GUI-thread-query=True
+omit-modify-1.CET-CFG-stay-enabled=True
+omit-modify-1.native-source-state-supported-with-empty-undo=True
+omit-modify-1.resource-capture-before-debug-freeze=True
+omit-modify-1.source-real-edit-changes-after-S0=True
+omit-modify-1.source-exited-before-new-PID-TID=True
+omit-modify-1.omission-refused-before-execution=True
+omit-modify-1.actual-native-field-mismatch-recorded=True
+omit-modify-1.failed-case-not-published=True
+omit-modify-1.owned-process-and-desktop-cleanup=True
+source.CET-and-CFG-enabled: pass (read actual process policies; no mitigation policy is modified)
+source.input-clean-close: pass (unmodified R304 lifecycle releases state and restores both imports before checkpoint/exit)
+source.native-EDIT-preconditions: pass (random native EDIT initialized by source business only; Home/Shift+End select text; capture does not clear undo)
+source-S0.actual-GDI: pass (unchanged PrintWindow helper checks actual target paint and counter pixels)
+source.native-unwind-sees-three-CPP-frames: pass (Windows unwind metadata independently walks leaf/middle/outer from captured raw stack; no guessed pointer scan)
+source.initialization-and-prefixes-once: pass (debugger evidence is separate from restored memory)
+source.normal-return-chain: pass (source ordinary call chain and captured receipt)
+source.input-clean-close: pass (unmodified R304 lifecycle releases state and restores both imports before checkpoint/exit)
+source-CHANGED.actual-GDI: pass (unchanged PrintWindow helper checks actual target paint and counter pixels)
+source.actual-EDIT-changed: pass (real WM_CHAR changed native EDIT and generated undo after S0)
+source.terminated-before-restore: pass (confirmed process exit before new carrier)
+restored.CET-and-CFG-enabled: pass (read actual process policies; no mitigation policy is modified)
+new-PID-TID: pass (new native GUI thread and process)
+negative.explicit-rejection: pass (resource.restore.readback error=23; unsupported state or failed reconstruction not published)
+omit-focus-1.actual-verdict-and-error-status=True
+omit-focus-1.S0-owner-GUI-thread-query=True
+omit-focus-1.source-changed-owner-GUI-thread-query=True
+omit-focus-1.target-prepared-owner-GUI-thread-query=True
+omit-focus-1.CET-CFG-stay-enabled=True
+omit-focus-1.native-source-state-supported-with-empty-undo=True
+omit-focus-1.resource-capture-before-debug-freeze=True
+omit-focus-1.source-real-edit-changes-after-S0=True
+omit-focus-1.source-exited-before-new-PID-TID=True
+omit-focus-1.omission-refused-before-execution=True
+omit-focus-1.actual-native-field-mismatch-recorded=True
+omit-focus-1.failed-case-not-published=True
+omit-focus-1.owned-process-and-desktop-cleanup=True
+source.CET-and-CFG-enabled: pass (read actual process policies; no mitigation policy is modified)
+source.input-clean-close: pass (unmodified R304 lifecycle releases state and restores both imports before checkpoint/exit)
+source.native-EDIT-preconditions: pass (random native EDIT initialized by source business only; Home/Shift+End select text; capture does not clear undo)
+source-S0.actual-GDI: pass (unchanged PrintWindow helper checks actual target paint and counter pixels)
+source.native-unwind-sees-three-CPP-frames: pass (Windows unwind metadata independently walks leaf/middle/outer from captured raw stack; no guessed pointer scan)
+source.initialization-and-prefixes-once: pass (debugger evidence is separate from restored memory)
+source.normal-return-chain: pass (source ordinary call chain and captured receipt)
+source.input-clean-close: pass (unmodified R304 lifecycle releases state and restores both imports before checkpoint/exit)
+source-CHANGED.actual-GDI: pass (unchanged PrintWindow helper checks actual target paint and counter pixels)
+source.actual-EDIT-changed: pass (real WM_CHAR changed native EDIT and generated undo after S0)
+source.terminated-before-restore: pass (confirmed process exit before new carrier)
+restored.CET-and-CFG-enabled: pass (read actual process policies; no mitigation policy is modified)
+new-PID-TID: pass (new native GUI thread and process)
+restored.raw-memory-restored: pass (entire data page read back equals S0 except declared HWND relocation)
+restored.raw-stack-restored: pass (entire managed stack read back equals S0 except explicitly registered live HWND references)
+restored.CPU-context-readback: pass (stopped target RIP/RSP/register and floating point control read back after SetThreadContext)
+restored.ordinary-CPP-return-chain: pass (actual leaf/middle/outer CALL/RET chain completed with restored register and volatile stack locals; structural checkpoint only, no business prefixes)
+restored.original-S0-state: pass (counter and unsaved text match S0 at continuation before next GUI iteration)
+restored.native-EDIT-state: pass (native owner-thread readback after real CALL/RET; not just memory state)
+restored-S0.actual-GDI: pass (unchanged PrintWindow helper checks actual target paint and counter pixels)
+restored.native-keyboard-selection: pass (original EDIT procedure processes Home and Shift+End through existing managed input)
+restored.native-HOME: pass (native EDIT moves caret to start)
+restored.input-clean-close: pass (unmodified R304 lifecycle releases state and restores both imports before checkpoint/exit)
+restored.native-EDIT-edit-and-caret: pass (real WM_CHAR replaces native selection; Home/End move actual caret, undo appears naturally)
+restored-after-input.actual-GDI: pass (unchanged PrintWindow helper checks actual target paint and counter pixels)
+positive-2.actual-verdict-and-error-status=True
+positive-2.S0-owner-GUI-thread-query=True
+positive-2.source-changed-owner-GUI-thread-query=True
+positive-2.target-prepared-owner-GUI-thread-query=True
+positive-2.restored-S0-owner-GUI-thread-query=True
+positive-2.selected-after-restore-owner-GUI-thread-query=True
+positive-2.after-home-owner-GUI-thread-query=True
+positive-2.after-input-owner-GUI-thread-query=True
+positive-2.CET-CFG-stay-enabled=True
+positive-2.native-source-state-supported-with-empty-undo=True
+positive-2.resource-capture-before-debug-freeze=True
+positive-2.source-real-edit-changes-after-S0=True
+positive-2.source-exited-before-new-PID-TID=True
+positive-2.native-resource-preparation-matches-S0=True
+positive-2.window-1-identity-geometry-class=True
+positive-2.window-2-identity-geometry-class=True
+positive-2.window-3-identity-geometry-class=True
+positive-2.native-preparation-precedes-CET-chain-checkpoint=True
+positive-2.raw-memory-stack-register-computation-and-original-S0=True
+positive-2.normal-and-CET-shadow-returns-match-before-and-after-restore=True
+positive-2.target-does-not-replay-business=True
+positive-2.reference-1859720839208-source-preimage=True
+positive-2.reference-1859720839488-source-preimage=True
+positive-2.reference-1859720839496-source-preimage=True
+positive-2.reference-1859723001272-source-preimage=True
+positive-2.reference-1859723001264-source-preimage=True
+positive-2.reference-1859723001136-source-preimage=True
+positive-2.reference-1859723001144-source-preimage=True
+positive-2.only-seven-declared-HWND-relocations=True
+positive-2.native-state-after-CPU-return-still-S0=True
+positive-2.native-selection-edit-and-caret-after-restore=True
+positive-2.original-control-processes-key-and-char-messages=True
+positive-2.source-S0-native-paint-and-PNG=True
+positive-2.source-CHANGED-native-paint-and-PNG=True
+positive-2.restored-S0-native-paint-and-PNG=True
+positive-2.restored-after-input-native-paint-and-PNG=True
+positive-2.real-EDIT-region-restored-and-button-caption-painted=True
+positive-2.publish-only-after-control-execution-input-validation=True
+positive-2.owned-process-and-desktop-cleanup=True
+source.CET-and-CFG-enabled: pass (read actual process policies; no mitigation policy is modified)
+source.input-clean-close: pass (unmodified R304 lifecycle releases state and restores both imports before checkpoint/exit)
+negative.explicit-rejection: pass (resource.EDIT.undo_history error=50; unsupported state or failed reconstruction not published)
+negative.source-still-alive: pass (failed snapshot does not terminate source until owned cleanup)
+undo-2.actual-verdict-and-error-status=True
+undo-2.S0-owner-GUI-thread-query=True
+undo-2.source-after-rejection-owner-GUI-thread-query=True
+undo-2.CET-CFG-stay-enabled=True
+undo-2.snapshot-not-published=True
+undo-2.source-resource-state-not-changed-to-force-success=True
+undo-2.real-undo-history-refused-and-preserved=True
+undo-2.failed-case-not-published=True
+undo-2.owned-process-and-desktop-cleanup=True
+source.CET-and-CFG-enabled: pass (read actual process policies; no mitigation policy is modified)
+source.input-clean-close: pass (unmodified R304 lifecycle releases state and restores both imports before checkpoint/exit)
+negative.explicit-rejection: pass (resource.unknown_descendant error=50; unsupported state or failed reconstruction not published)
+negative.source-still-alive: pass (failed snapshot does not terminate source until owned cleanup)
+unknown-child-2.actual-verdict-and-error-status=True
+unknown-child-2.S0-owner-GUI-thread-query=True
+unknown-child-2.source-after-rejection-owner-GUI-thread-query=True
+unknown-child-2.CET-CFG-stay-enabled=True
+unknown-child-2.snapshot-not-published=True
+unknown-child-2.source-resource-state-not-changed-to-force-success=True
+unknown-child-2.actual-unknown-descendant-refused=True
+unknown-child-2.failed-case-not-published=True
+unknown-child-2.owned-process-and-desktop-cleanup=True
+source.CET-and-CFG-enabled: pass (read actual process policies; no mitigation policy is modified)
+source.input-clean-close: pass (unmodified R304 lifecycle releases state and restores both imports before checkpoint/exit)
+source.native-EDIT-preconditions: pass (random native EDIT initialized by source business only; Home/Shift+End select text; capture does not clear undo)
+source-S0.actual-GDI: pass (unchanged PrintWindow helper checks actual target paint and counter pixels)
+source.native-unwind-sees-three-CPP-frames: pass (Windows unwind metadata independently walks leaf/middle/outer from captured raw stack; no guessed pointer scan)
+source.initialization-and-prefixes-once: pass (debugger evidence is separate from restored memory)
+source.normal-return-chain: pass (source ordinary call chain and captured receipt)
+source.input-clean-close: pass (unmodified R304 lifecycle releases state and restores both imports before checkpoint/exit)
+source-CHANGED.actual-GDI: pass (unchanged PrintWindow helper checks actual target paint and counter pixels)
+source.actual-EDIT-changed: pass (real WM_CHAR changed native EDIT and generated undo after S0)
+source.terminated-before-restore: pass (confirmed process exit before new carrier)
+restored.CET-and-CFG-enabled: pass (read actual process policies; no mitigation policy is modified)
+new-PID-TID: pass (new native GUI thread and process)
+negative.explicit-rejection: pass (resource.restore.parent_relation error=13; unsupported state or failed reconstruction not published)
+bad-parent-2.actual-verdict-and-error-status=True
+bad-parent-2.S0-owner-GUI-thread-query=True
+bad-parent-2.source-changed-owner-GUI-thread-query=True
+bad-parent-2.target-prepared-owner-GUI-thread-query=True
+bad-parent-2.CET-CFG-stay-enabled=True
+bad-parent-2.native-source-state-supported-with-empty-undo=True
+bad-parent-2.resource-capture-before-debug-freeze=True
+bad-parent-2.source-real-edit-changes-after-S0=True
+bad-parent-2.source-exited-before-new-PID-TID=True
+bad-parent-2.actual-native-parent-mismatch-rejected=True
+bad-parent-2.failed-case-not-published=True
+bad-parent-2.owned-process-and-desktop-cleanup=True
+source.CET-and-CFG-enabled: pass (read actual process policies; no mitigation policy is modified)
+source.input-clean-close: pass (unmodified R304 lifecycle releases state and restores both imports before checkpoint/exit)
+source.native-EDIT-preconditions: pass (random native EDIT initialized by source business only; Home/Shift+End select text; capture does not clear undo)
+source-S0.actual-GDI: pass (unchanged PrintWindow helper checks actual target paint and counter pixels)
+source.native-unwind-sees-three-CPP-frames: pass (Windows unwind metadata independently walks leaf/middle/outer from captured raw stack; no guessed pointer scan)
+source.initialization-and-prefixes-once: pass (debugger evidence is separate from restored memory)
+source.normal-return-chain: pass (source ordinary call chain and captured receipt)
+source.input-clean-close: pass (unmodified R304 lifecycle releases state and restores both imports before checkpoint/exit)
+source-CHANGED.actual-GDI: pass (unchanged PrintWindow helper checks actual target paint and counter pixels)
+source.actual-EDIT-changed: pass (real WM_CHAR changed native EDIT and generated undo after S0)
+source.terminated-before-restore: pass (confirmed process exit before new carrier)
+restored.CET-and-CFG-enabled: pass (read actual process policies; no mitigation policy is modified)
+new-PID-TID: pass (new native GUI thread and process)
+negative.explicit-rejection: pass (restore.unregistered_live_HWND error=13; unsupported state or failed reconstruction not published)
+unregistered-ref-2.actual-verdict-and-error-status=True
+unregistered-ref-2.S0-owner-GUI-thread-query=True
+unregistered-ref-2.source-changed-owner-GUI-thread-query=True
+unregistered-ref-2.target-prepared-owner-GUI-thread-query=True
+unregistered-ref-2.CET-CFG-stay-enabled=True
+unregistered-ref-2.native-source-state-supported-with-empty-undo=True
+unregistered-ref-2.resource-capture-before-debug-freeze=True
+unregistered-ref-2.source-real-edit-changes-after-S0=True
+unregistered-ref-2.source-exited-before-new-PID-TID=True
+unregistered-ref-2.native-resource-preparation-matches-S0=True
+unregistered-ref-2.window-1-identity-geometry-class=True
+unregistered-ref-2.window-2-identity-geometry-class=True
+unregistered-ref-2.window-3-identity-geometry-class=True
+unregistered-ref-2.native-preparation-precedes-CET-chain-checkpoint=True
+unregistered-ref-2.declared-live-reference-omission-refused=True
+unregistered-ref-2.failed-case-not-published=True
+unregistered-ref-2.owned-process-and-desktop-cleanup=True
+source.CET-and-CFG-enabled: pass (read actual process policies; no mitigation policy is modified)
+source.input-clean-close: pass (unmodified R304 lifecycle releases state and restores both imports before checkpoint/exit)
+source.native-EDIT-preconditions: pass (random native EDIT initialized by source business only; Home/Shift+End select text; capture does not clear undo)
+source-S0.actual-GDI: pass (unchanged PrintWindow helper checks actual target paint and counter pixels)
+source.native-unwind-sees-three-CPP-frames: pass (Windows unwind metadata independently walks leaf/middle/outer from captured raw stack; no guessed pointer scan)
+source.initialization-and-prefixes-once: pass (debugger evidence is separate from restored memory)
+source.normal-return-chain: pass (source ordinary call chain and captured receipt)
+source.input-clean-close: pass (unmodified R304 lifecycle releases state and restores both imports before checkpoint/exit)
+source-CHANGED.actual-GDI: pass (unchanged PrintWindow helper checks actual target paint and counter pixels)
+source.actual-EDIT-changed: pass (real WM_CHAR changed native EDIT and generated undo after S0)
+source.terminated-before-restore: pass (confirmed process exit before new carrier)
+restored.CET-and-CFG-enabled: pass (read actual process policies; no mitigation policy is modified)
+new-PID-TID: pass (new native GUI thread and process)
+negative.explicit-rejection: pass (resource.restore.readback error=23; unsupported state or failed reconstruction not published)
+omit-text-2.actual-verdict-and-error-status=True
+omit-text-2.S0-owner-GUI-thread-query=True
+omit-text-2.source-changed-owner-GUI-thread-query=True
+omit-text-2.target-prepared-owner-GUI-thread-query=True
+omit-text-2.CET-CFG-stay-enabled=True
+omit-text-2.native-source-state-supported-with-empty-undo=True
+omit-text-2.resource-capture-before-debug-freeze=True
+omit-text-2.source-real-edit-changes-after-S0=True
+omit-text-2.source-exited-before-new-PID-TID=True
+omit-text-2.omission-refused-before-execution=True
+omit-text-2.actual-native-field-mismatch-recorded=True
+omit-text-2.failed-case-not-published=True
+omit-text-2.owned-process-and-desktop-cleanup=True
+source.CET-and-CFG-enabled: pass (read actual process policies; no mitigation policy is modified)
+source.input-clean-close: pass (unmodified R304 lifecycle releases state and restores both imports before checkpoint/exit)
+source.native-EDIT-preconditions: pass (random native EDIT initialized by source business only; Home/Shift+End select text; capture does not clear undo)
+source-S0.actual-GDI: pass (unchanged PrintWindow helper checks actual target paint and counter pixels)
+source.native-unwind-sees-three-CPP-frames: pass (Windows unwind metadata independently walks leaf/middle/outer from captured raw stack; no guessed pointer scan)
+source.initialization-and-prefixes-once: pass (debugger evidence is separate from restored memory)
+source.normal-return-chain: pass (source ordinary call chain and captured receipt)
+source.input-clean-close: pass (unmodified R304 lifecycle releases state and restores both imports before checkpoint/exit)
+source-CHANGED.actual-GDI: pass (unchanged PrintWindow helper checks actual target paint and counter pixels)
+source.actual-EDIT-changed: pass (real WM_CHAR changed native EDIT and generated undo after S0)
+source.terminated-before-restore: pass (confirmed process exit before new carrier)
+restored.CET-and-CFG-enabled: pass (read actual process policies; no mitigation policy is modified)
+new-PID-TID: pass (new native GUI thread and process)
+negative.explicit-rejection: pass (resource.restore.readback error=23; unsupported state or failed reconstruction not published)
+omit-selection-2.actual-verdict-and-error-status=True
+omit-selection-2.S0-owner-GUI-thread-query=True
+omit-selection-2.source-changed-owner-GUI-thread-query=True
+omit-selection-2.target-prepared-owner-GUI-thread-query=True
+omit-selection-2.CET-CFG-stay-enabled=True
+omit-selection-2.native-source-state-supported-with-empty-undo=True
+omit-selection-2.resource-capture-before-debug-freeze=True
+omit-selection-2.source-real-edit-changes-after-S0=True
+omit-selection-2.source-exited-before-new-PID-TID=True
+omit-selection-2.omission-refused-before-execution=True
+omit-selection-2.actual-native-field-mismatch-recorded=True
+omit-selection-2.failed-case-not-published=True
+omit-selection-2.owned-process-and-desktop-cleanup=True
+source.CET-and-CFG-enabled: pass (read actual process policies; no mitigation policy is modified)
+source.input-clean-close: pass (unmodified R304 lifecycle releases state and restores both imports before checkpoint/exit)
+source.native-EDIT-preconditions: pass (random native EDIT initialized by source business only; Home/Shift+End select text; capture does not clear undo)
+source-S0.actual-GDI: pass (unchanged PrintWindow helper checks actual target paint and counter pixels)
+source.native-unwind-sees-three-CPP-frames: pass (Windows unwind metadata independently walks leaf/middle/outer from captured raw stack; no guessed pointer scan)
+source.initialization-and-prefixes-once: pass (debugger evidence is separate from restored memory)
+source.normal-return-chain: pass (source ordinary call chain and captured receipt)
+source.input-clean-close: pass (unmodified R304 lifecycle releases state and restores both imports before checkpoint/exit)
+source-CHANGED.actual-GDI: pass (unchanged PrintWindow helper checks actual target paint and counter pixels)
+source.actual-EDIT-changed: pass (real WM_CHAR changed native EDIT and generated undo after S0)
+source.terminated-before-restore: pass (confirmed process exit before new carrier)
+restored.CET-and-CFG-enabled: pass (read actual process policies; no mitigation policy is modified)
+new-PID-TID: pass (new native GUI thread and process)
+negative.explicit-rejection: pass (resource.restore.readback error=23; unsupported state or failed reconstruction not published)
+omit-modify-2.actual-verdict-and-error-status=True
+omit-modify-2.S0-owner-GUI-thread-query=True
+omit-modify-2.source-changed-owner-GUI-thread-query=True
+omit-modify-2.target-prepared-owner-GUI-thread-query=True
+omit-modify-2.CET-CFG-stay-enabled=True
+omit-modify-2.native-source-state-supported-with-empty-undo=True
+omit-modify-2.resource-capture-before-debug-freeze=True
+omit-modify-2.source-real-edit-changes-after-S0=True
+omit-modify-2.source-exited-before-new-PID-TID=True
+omit-modify-2.omission-refused-before-execution=True
+omit-modify-2.actual-native-field-mismatch-recorded=True
+omit-modify-2.failed-case-not-published=True
+omit-modify-2.owned-process-and-desktop-cleanup=True
+source.CET-and-CFG-enabled: pass (read actual process policies; no mitigation policy is modified)
+source.input-clean-close: pass (unmodified R304 lifecycle releases state and restores both imports before checkpoint/exit)
+source.native-EDIT-preconditions: pass (random native EDIT initialized by source business only; Home/Shift+End select text; capture does not clear undo)
+source-S0.actual-GDI: pass (unchanged PrintWindow helper checks actual target paint and counter pixels)
+source.native-unwind-sees-three-CPP-frames: pass (Windows unwind metadata independently walks leaf/middle/outer from captured raw stack; no guessed pointer scan)
+source.initialization-and-prefixes-once: pass (debugger evidence is separate from restored memory)
+source.normal-return-chain: pass (source ordinary call chain and captured receipt)
+source.input-clean-close: pass (unmodified R304 lifecycle releases state and restores both imports before checkpoint/exit)
+source-CHANGED.actual-GDI: pass (unchanged PrintWindow helper checks actual target paint and counter pixels)
+source.actual-EDIT-changed: pass (real WM_CHAR changed native EDIT and generated undo after S0)
+source.terminated-before-restore: pass (confirmed process exit before new carrier)
+restored.CET-and-CFG-enabled: pass (read actual process policies; no mitigation policy is modified)
+new-PID-TID: pass (new native GUI thread and process)
+negative.explicit-rejection: pass (resource.restore.readback error=23; unsupported state or failed reconstruction not published)
+omit-focus-2.actual-verdict-and-error-status=True
+omit-focus-2.S0-owner-GUI-thread-query=True
+omit-focus-2.source-changed-owner-GUI-thread-query=True
+omit-focus-2.target-prepared-owner-GUI-thread-query=True
+omit-focus-2.CET-CFG-stay-enabled=True
+omit-focus-2.native-source-state-supported-with-empty-undo=True
+omit-focus-2.resource-capture-before-debug-freeze=True
+omit-focus-2.source-real-edit-changes-after-S0=True
+omit-focus-2.source-exited-before-new-PID-TID=True
+omit-focus-2.omission-refused-before-execution=True
+omit-focus-2.actual-native-field-mismatch-recorded=True
+omit-focus-2.failed-case-not-published=True
+omit-focus-2.owned-process-and-desktop-cleanup=True
+compiler-emits-normal-CALL-RET-and-GS-checks=True
+PE-contains-CFG-instrumentation-and-function-table=True
+source.CET-and-CFG-enabled: pass (read actual process policies; no mitigation policy is modified)
+source.native-unwind-sees-three-CPP-frames: pass (Windows unwind metadata independently walks leaf/middle/outer from captured raw stack; no guessed pointer scan)
+source.initialization-once: pass (controller independently observes original init and safe checkpoint exactly once)
+source.business-prefixes-once: pass (separate debugger-owned evidence for outer/middle/leaf computations)
+source.normal-return-chain: pass (source executes the same ordinary C++ returns before changing further)
+source.terminated-before-restore: pass (WaitForDebugEvent EXIT and signaled source process handle precede creation of new carrier)
+restored.CET-and-CFG-enabled: pass (read actual process policies; no mitigation policy is modified)
+new-PID: pass (different native process, source is dead)
+restored.raw-memory-restored: pass (entire data page read back equals S0 except declared HWND relocation)
+restored.raw-stack-restored: pass (entire managed stack read back equals S0 except explicitly registered live HWND references)
+restored.CPU-context-readback: pass (stopped target RIP/RSP/register and floating point control read back after SetThreadContext)
+restored.ordinary-CPP-return-chain: pass (actual leaf/middle/outer CALL/RET chain completed with restored register and volatile stack locals; structural checkpoint only, no business prefixes)
+restored.original-S0-state: pass (counter and unsaved text match S0 at continuation before next GUI iteration)
+core-1.verdict-and-exit=True
+core-1.independent-business-events-source-only=True
+core-1.actual-CET-CFG-policies-enabled=True
+core-1.source-dead-before-new-PID=True
+core-1.source-receipt-recomputed-from-raw-bytes=True
+core-1.normal-returns-match-kernel-observed-shadow-returns=True
+core-1.source-return-slot-0=True
+core-1.source-return-slot-1=True
+core-1.source-return-slot-2=True
+core-1.source-return-slot-3=True
+core-1.source-return-slot-4=True
+core-1.structural-entry-no-business-replay=True
+core-1.same-original-call-sites-and-RSP=True
+core-1.target-had-no-saved-business-data-before-restore=True
+core-1.only-declared-relocations-or-explicit-omission-in-raw-state=True
+core-1.rebuilt-chain-still-valid-after-raw-restore=True
+core-1.actual-computation-consumes-restored-memory-locals-register=True
+core-1.real-source-execution-restored=True
+core-1.minimal-run-no-windows-input-or-capture=True
+core-1.cleanup-owned-processes-and-desktops=True
+source.CET-and-CFG-enabled: pass (read actual process policies; no mitigation policy is modified)
+source.native-unwind-sees-three-CPP-frames: pass (Windows unwind metadata independently walks leaf/middle/outer from captured raw stack; no guessed pointer scan)
+source.initialization-once: pass (controller independently observes original init and safe checkpoint exactly once)
+source.business-prefixes-once: pass (separate debugger-owned evidence for outer/middle/leaf computations)
+source.normal-return-chain: pass (source executes the same ordinary C++ returns before changing further)
+source.terminated-before-restore: pass (WaitForDebugEvent EXIT and signaled source process handle precede creation of new carrier)
+restored.CET-and-CFG-enabled: pass (read actual process policies; no mitigation policy is modified)
+new-PID: pass (different native process, source is dead)
+negative.separate-failure: pass (each fault has its own case; chain mismatch rejected, state omissions finish all RETs, cookie omission triggers real /GS)
+return-mismatch-1.verdict-and-exit=True
+return-mismatch-1.independent-business-events-source-only=True
+return-mismatch-1.actual-CET-CFG-policies-enabled=True
+return-mismatch-1.source-dead-before-new-PID=True
+return-mismatch-1.source-receipt-recomputed-from-raw-bytes=True
+return-mismatch-1.normal-returns-match-kernel-observed-shadow-returns=True
+return-mismatch-1.source-return-slot-0=True
+return-mismatch-1.source-return-slot-1=True
+return-mismatch-1.source-return-slot-2=True
+return-mismatch-1.source-return-slot-3=True
+return-mismatch-1.source-return-slot-4=True
+return-mismatch-1.structural-entry-no-business-replay=True
+return-mismatch-1.actual-alternate-callsite-rejected-before-state-write=True
+return-mismatch-1.failed-case-never-published=True
+return-mismatch-1.cleanup-owned-processes-and-desktops=True
+source.CET-and-CFG-enabled: pass (read actual process policies; no mitigation policy is modified)
+source.native-unwind-sees-three-CPP-frames: pass (Windows unwind metadata independently walks leaf/middle/outer from captured raw stack; no guessed pointer scan)
+source.initialization-once: pass (controller independently observes original init and safe checkpoint exactly once)
+source.business-prefixes-once: pass (separate debugger-owned evidence for outer/middle/leaf computations)
+source.normal-return-chain: pass (source executes the same ordinary C++ returns before changing further)
+source.terminated-before-restore: pass (WaitForDebugEvent EXIT and signaled source process handle precede creation of new carrier)
+restored.CET-and-CFG-enabled: pass (read actual process policies; no mitigation policy is modified)
+new-PID: pass (different native process, source is dead)
+restored.raw-memory-restored: pass (entire data page read back equals S0 except declared HWND relocation)
+restored.raw-stack-restored: pass (entire managed stack read back equals S0 except explicitly registered live HWND references)
+restored.CPU-context-readback: pass (stopped target RIP/RSP/register and floating point control read back after SetThreadContext)
+negative.separate-failure: pass (each fault has its own case; chain mismatch rejected, state omissions finish all RETs, cookie omission triggers real /GS)
+stack-1.verdict-and-exit=True
+stack-1.independent-business-events-source-only=True
+stack-1.actual-CET-CFG-policies-enabled=True
+stack-1.source-dead-before-new-PID=True
+stack-1.source-receipt-recomputed-from-raw-bytes=True
+stack-1.normal-returns-match-kernel-observed-shadow-returns=True
+stack-1.source-return-slot-0=True
+stack-1.source-return-slot-1=True
+stack-1.source-return-slot-2=True
+stack-1.source-return-slot-3=True
+stack-1.source-return-slot-4=True
+stack-1.structural-entry-no-business-replay=True
+stack-1.same-original-call-sites-and-RSP=True
+stack-1.target-had-no-saved-business-data-before-restore=True
+stack-1.only-declared-relocations-or-explicit-omission-in-raw-state=True
+stack-1.rebuilt-chain-still-valid-after-raw-restore=True
+stack-1.actual-computation-consumes-restored-memory-locals-register=True
+stack-1.omission-not-masked-by-CET-or-early-fault=True
+stack-1.failed-case-never-published=True
+stack-1.cleanup-owned-processes-and-desktops=True
+source.CET-and-CFG-enabled: pass (read actual process policies; no mitigation policy is modified)
+source.native-unwind-sees-three-CPP-frames: pass (Windows unwind metadata independently walks leaf/middle/outer from captured raw stack; no guessed pointer scan)
+source.initialization-once: pass (controller independently observes original init and safe checkpoint exactly once)
+source.business-prefixes-once: pass (separate debugger-owned evidence for outer/middle/leaf computations)
+source.normal-return-chain: pass (source executes the same ordinary C++ returns before changing further)
+source.terminated-before-restore: pass (WaitForDebugEvent EXIT and signaled source process handle precede creation of new carrier)
+restored.CET-and-CFG-enabled: pass (read actual process policies; no mitigation policy is modified)
+new-PID: pass (different native process, source is dead)
+restored.raw-memory-restored: pass (entire data page read back equals S0 except declared HWND relocation)
+restored.raw-stack-restored: pass (entire managed stack read back equals S0 except explicitly registered live HWND references)
+restored.CPU-context-readback: pass (stopped target RIP/RSP/register and floating point control read back after SetThreadContext)
+negative.separate-failure: pass (each fault has its own case; chain mismatch rejected, state omissions finish all RETs, cookie omission triggers real /GS)
+register-1.verdict-and-exit=True
+register-1.independent-business-events-source-only=True
+register-1.actual-CET-CFG-policies-enabled=True
+register-1.source-dead-before-new-PID=True
+register-1.source-receipt-recomputed-from-raw-bytes=True
+register-1.normal-returns-match-kernel-observed-shadow-returns=True
+register-1.source-return-slot-0=True
+register-1.source-return-slot-1=True
+register-1.source-return-slot-2=True
+register-1.source-return-slot-3=True
+register-1.source-return-slot-4=True
+register-1.structural-entry-no-business-replay=True
+register-1.same-original-call-sites-and-RSP=True
+register-1.target-had-no-saved-business-data-before-restore=True
+register-1.only-declared-relocations-or-explicit-omission-in-raw-state=True
+register-1.rebuilt-chain-still-valid-after-raw-restore=True
+register-1.actual-computation-consumes-restored-memory-locals-register=True
+register-1.omission-not-masked-by-CET-or-early-fault=True
+register-1.failed-case-never-published=True
+register-1.cleanup-owned-processes-and-desktops=True
+source.CET-and-CFG-enabled: pass (read actual process policies; no mitigation policy is modified)
+source.native-unwind-sees-three-CPP-frames: pass (Windows unwind metadata independently walks leaf/middle/outer from captured raw stack; no guessed pointer scan)
+source.initialization-once: pass (controller independently observes original init and safe checkpoint exactly once)
+source.business-prefixes-once: pass (separate debugger-owned evidence for outer/middle/leaf computations)
+source.normal-return-chain: pass (source executes the same ordinary C++ returns before changing further)
+source.terminated-before-restore: pass (WaitForDebugEvent EXIT and signaled source process handle precede creation of new carrier)
+restored.CET-and-CFG-enabled: pass (read actual process policies; no mitigation policy is modified)
+new-PID: pass (different native process, source is dead)
+restored.raw-memory-restored: pass (entire data page read back equals S0 except declared HWND relocation)
+restored.raw-stack-restored: pass (entire managed stack read back equals S0 except explicitly registered live HWND references)
+restored.CPU-context-readback: pass (stopped target RIP/RSP/register and floating point control read back after SetThreadContext)
+negative.separate-failure: pass (each fault has its own case; chain mismatch rejected, state omissions finish all RETs, cookie omission triggers real /GS)
+memory-1.verdict-and-exit=True
+memory-1.independent-business-events-source-only=True
+memory-1.actual-CET-CFG-policies-enabled=True
+memory-1.source-dead-before-new-PID=True
+memory-1.source-receipt-recomputed-from-raw-bytes=True
+memory-1.normal-returns-match-kernel-observed-shadow-returns=True
+memory-1.source-return-slot-0=True
+memory-1.source-return-slot-1=True
+memory-1.source-return-slot-2=True
+memory-1.source-return-slot-3=True
+memory-1.source-return-slot-4=True
+memory-1.structural-entry-no-business-replay=True
+memory-1.same-original-call-sites-and-RSP=True
+memory-1.target-had-no-saved-business-data-before-restore=True
+memory-1.only-declared-relocations-or-explicit-omission-in-raw-state=True
+memory-1.rebuilt-chain-still-valid-after-raw-restore=True
+memory-1.actual-computation-consumes-restored-memory-locals-register=True
+memory-1.omission-not-masked-by-CET-or-early-fault=True
+memory-1.failed-case-never-published=True
+memory-1.cleanup-owned-processes-and-desktops=True
+source.CET-and-CFG-enabled: pass (read actual process policies; no mitigation policy is modified)
+source.native-unwind-sees-three-CPP-frames: pass (Windows unwind metadata independently walks leaf/middle/outer from captured raw stack; no guessed pointer scan)
+source.initialization-once: pass (controller independently observes original init and safe checkpoint exactly once)
+source.business-prefixes-once: pass (separate debugger-owned evidence for outer/middle/leaf computations)
+source.normal-return-chain: pass (source executes the same ordinary C++ returns before changing further)
+source.terminated-before-restore: pass (WaitForDebugEvent EXIT and signaled source process handle precede creation of new carrier)
+restored.CET-and-CFG-enabled: pass (read actual process policies; no mitigation policy is modified)
+new-PID: pass (different native process, source is dead)
+restored.raw-memory-restored: pass (entire data page read back equals S0 except declared HWND relocation)
+restored.raw-stack-restored: pass (entire managed stack read back equals S0 except explicitly registered live HWND references)
+restored.CPU-context-readback: pass (stopped target RIP/RSP/register and floating point control read back after SetThreadContext)
+negative.separate-failure: pass (each fault has its own case; chain mismatch rejected, state omissions finish all RETs, cookie omission triggers real /GS)
+cookie-1.verdict-and-exit=True
+cookie-1.independent-business-events-source-only=True
+cookie-1.actual-CET-CFG-policies-enabled=True
+cookie-1.source-dead-before-new-PID=True
+cookie-1.source-receipt-recomputed-from-raw-bytes=True
+cookie-1.normal-returns-match-kernel-observed-shadow-returns=True
+cookie-1.source-return-slot-0=True
+cookie-1.source-return-slot-1=True
+cookie-1.source-return-slot-2=True
+cookie-1.source-return-slot-3=True
+cookie-1.source-return-slot-4=True
+cookie-1.structural-entry-no-business-replay=True
+cookie-1.same-original-call-sites-and-RSP=True
+cookie-1.target-had-no-saved-business-data-before-restore=True
+cookie-1.only-declared-relocations-or-explicit-omission-in-raw-state=True
+cookie-1.rebuilt-chain-still-valid-after-raw-restore=True
+cookie-1.GS-really-rejects-foreign-cookie=True
+cookie-1.failed-case-never-published=True
+cookie-1.cleanup-owned-processes-and-desktops=True
+source.CET-and-CFG-enabled: pass (read actual process policies; no mitigation policy is modified)
+source.input-clean-close: pass (unmodified R304 lifecycle releases state and restores both imports before checkpoint/exit)
+source-S0.actual-GDI: pass (unchanged PrintWindow helper checks actual target paint and counter pixels)
+source.native-unwind-sees-three-CPP-frames: pass (Windows unwind metadata independently walks leaf/middle/outer from captured raw stack; no guessed pointer scan)
+source.initialization-once: pass (controller independently observes original init and safe checkpoint exactly once)
+source.business-prefixes-once: pass (separate debugger-owned evidence for outer/middle/leaf computations)
+source.normal-return-chain: pass (source executes the same ordinary C++ returns before changing further)
+source-CHANGED.actual-GDI: pass (unchanged PrintWindow helper checks actual target paint and counter pixels)
+source.terminated-before-restore: pass (WaitForDebugEvent EXIT and signaled source process handle precede creation of new carrier)
+restored.CET-and-CFG-enabled: pass (read actual process policies; no mitigation policy is modified)
+new-PID: pass (different native process, source is dead)
+restored.raw-memory-restored: pass (entire data page read back equals S0 except declared HWND relocation)
+restored.raw-stack-restored: pass (entire managed stack read back equals S0 except explicitly registered live HWND references)
+restored.CPU-context-readback: pass (stopped target RIP/RSP/register and floating point control read back after SetThreadContext)
+restored.ordinary-CPP-return-chain: pass (actual leaf/middle/outer CALL/RET chain completed with restored register and volatile stack locals; structural checkpoint only, no business prefixes)
+restored.original-S0-state: pass (counter and unsaved text match S0 at continuation before next GUI iteration)
+restored-S0.actual-GDI: pass (unchanged PrintWindow helper checks actual target paint and counter pixels)
+restored.real-GUI-input: pass (same supported character/left-button transport reaches restored native window and application procedures)
+restored.input-clean-close: pass (unmodified R304 lifecycle releases state and restores both imports before checkpoint/exit)
+restored-after-input.actual-GDI: pass (unchanged PrintWindow helper checks actual target paint and counter pixels)
+gui-1.verdict-and-exit=True
+gui-1.independent-business-events-source-only=True
+gui-1.actual-CET-CFG-policies-enabled=True
+gui-1.source-dead-before-new-PID=True
+gui-1.source-receipt-recomputed-from-raw-bytes=True
+gui-1.normal-returns-match-kernel-observed-shadow-returns=True
+gui-1.source-return-slot-0=True
+gui-1.source-return-slot-1=True
+gui-1.source-return-slot-2=True
+gui-1.source-return-slot-3=True
+gui-1.source-return-slot-4=True
+gui-1.structural-entry-no-business-replay=True
+gui-1.same-original-call-sites-and-RSP=True
+gui-1.target-had-no-saved-business-data-before-restore=True
+gui-1.HWND-preimage-1859720839208=True
+gui-1.HWND-preimage-1859723001296=True
+gui-1.HWND-preimage-1859723001184=True
+gui-1.only-declared-relocations-or-explicit-omission-in-raw-state=True
+gui-1.rebuilt-chain-still-valid-after-raw-restore=True
+gui-1.actual-computation-consumes-restored-memory-locals-register=True
+gui-1.real-source-execution-restored=True
+gui-1.source-S0-real-GDI-and-PNG=True
+gui-1.source-CHANGED-real-GDI-and-PNG=True
+gui-1.restored-S0-real-GDI-and-PNG=True
+gui-1.restored-after-input-real-GDI-and-PNG=True
+gui-1.restored-native-window-input-and-rendering=True
+gui-1.cleanup-owned-processes-and-desktops=True
+source.CET-and-CFG-enabled: pass (read actual process policies; no mitigation policy is modified)
+source.native-unwind-sees-three-CPP-frames: pass (Windows unwind metadata independently walks leaf/middle/outer from captured raw stack; no guessed pointer scan)
+source.initialization-once: pass (controller independently observes original init and safe checkpoint exactly once)
+source.business-prefixes-once: pass (separate debugger-owned evidence for outer/middle/leaf computations)
+source.normal-return-chain: pass (source executes the same ordinary C++ returns before changing further)
+source.terminated-before-restore: pass (WaitForDebugEvent EXIT and signaled source process handle precede creation of new carrier)
+restored.CET-and-CFG-enabled: pass (read actual process policies; no mitigation policy is modified)
+new-PID: pass (different native process, source is dead)
+restored.raw-memory-restored: pass (entire data page read back equals S0 except declared HWND relocation)
+restored.raw-stack-restored: pass (entire managed stack read back equals S0 except explicitly registered live HWND references)
+restored.CPU-context-readback: pass (stopped target RIP/RSP/register and floating point control read back after SetThreadContext)
+restored.ordinary-CPP-return-chain: pass (actual leaf/middle/outer CALL/RET chain completed with restored register and volatile stack locals; structural checkpoint only, no business prefixes)
+restored.original-S0-state: pass (counter and unsaved text match S0 at continuation before next GUI iteration)
+core-2.verdict-and-exit=True
+core-2.independent-business-events-source-only=True
+core-2.actual-CET-CFG-policies-enabled=True
+core-2.source-dead-before-new-PID=True
+core-2.source-receipt-recomputed-from-raw-bytes=True
+core-2.normal-returns-match-kernel-observed-shadow-returns=True
+core-2.source-return-slot-0=True
+core-2.source-return-slot-1=True
+core-2.source-return-slot-2=True
+core-2.source-return-slot-3=True
+core-2.source-return-slot-4=True
+core-2.structural-entry-no-business-replay=True
+core-2.same-original-call-sites-and-RSP=True
+core-2.target-had-no-saved-business-data-before-restore=True
+core-2.only-declared-relocations-or-explicit-omission-in-raw-state=True
+core-2.rebuilt-chain-still-valid-after-raw-restore=True
+core-2.actual-computation-consumes-restored-memory-locals-register=True
+core-2.real-source-execution-restored=True
+core-2.minimal-run-no-windows-input-or-capture=True
+core-2.cleanup-owned-processes-and-desktops=True
+source.CET-and-CFG-enabled: pass (read actual process policies; no mitigation policy is modified)
+source.native-unwind-sees-three-CPP-frames: pass (Windows unwind metadata independently walks leaf/middle/outer from captured raw stack; no guessed pointer scan)
+source.initialization-once: pass (controller independently observes original init and safe checkpoint exactly once)
+source.business-prefixes-once: pass (separate debugger-owned evidence for outer/middle/leaf computations)
+source.normal-return-chain: pass (source executes the same ordinary C++ returns before changing further)
+source.terminated-before-restore: pass (WaitForDebugEvent EXIT and signaled source process handle precede creation of new carrier)
+restored.CET-and-CFG-enabled: pass (read actual process policies; no mitigation policy is modified)
+new-PID: pass (different native process, source is dead)
+negative.separate-failure: pass (each fault has its own case; chain mismatch rejected, state omissions finish all RETs, cookie omission triggers real /GS)
+return-mismatch-2.verdict-and-exit=True
+return-mismatch-2.independent-business-events-source-only=True
+return-mismatch-2.actual-CET-CFG-policies-enabled=True
+return-mismatch-2.source-dead-before-new-PID=True
+return-mismatch-2.source-receipt-recomputed-from-raw-bytes=True
+return-mismatch-2.normal-returns-match-kernel-observed-shadow-returns=True
+return-mismatch-2.source-return-slot-0=True
+return-mismatch-2.source-return-slot-1=True
+return-mismatch-2.source-return-slot-2=True
+return-mismatch-2.source-return-slot-3=True
+return-mismatch-2.source-return-slot-4=True
+return-mismatch-2.structural-entry-no-business-replay=True
+return-mismatch-2.actual-alternate-callsite-rejected-before-state-write=True
+return-mismatch-2.failed-case-never-published=True
+return-mismatch-2.cleanup-owned-processes-and-desktops=True
+source.CET-and-CFG-enabled: pass (read actual process policies; no mitigation policy is modified)
+source.native-unwind-sees-three-CPP-frames: pass (Windows unwind metadata independently walks leaf/middle/outer from captured raw stack; no guessed pointer scan)
+source.initialization-once: pass (controller independently observes original init and safe checkpoint exactly once)
+source.business-prefixes-once: pass (separate debugger-owned evidence for outer/middle/leaf computations)
+source.normal-return-chain: pass (source executes the same ordinary C++ returns before changing further)
+source.terminated-before-restore: pass (WaitForDebugEvent EXIT and signaled source process handle precede creation of new carrier)
+restored.CET-and-CFG-enabled: pass (read actual process policies; no mitigation policy is modified)
+new-PID: pass (different native process, source is dead)
+restored.raw-memory-restored: pass (entire data page read back equals S0 except declared HWND relocation)
+restored.raw-stack-restored: pass (entire managed stack read back equals S0 except explicitly registered live HWND references)
+restored.CPU-context-readback: pass (stopped target RIP/RSP/register and floating point control read back after SetThreadContext)
+negative.separate-failure: pass (each fault has its own case; chain mismatch rejected, state omissions finish all RETs, cookie omission triggers real /GS)
+stack-2.verdict-and-exit=True
+stack-2.independent-business-events-source-only=True
+stack-2.actual-CET-CFG-policies-enabled=True
+stack-2.source-dead-before-new-PID=True
+stack-2.source-receipt-recomputed-from-raw-bytes=True
+stack-2.normal-returns-match-kernel-observed-shadow-returns=True
+stack-2.source-return-slot-0=True
+stack-2.source-return-slot-1=True
+stack-2.source-return-slot-2=True
+stack-2.source-return-slot-3=True
+stack-2.source-return-slot-4=True
+stack-2.structural-entry-no-business-replay=True
+stack-2.same-original-call-sites-and-RSP=True
+stack-2.target-had-no-saved-business-data-before-restore=True
+stack-2.only-declared-relocations-or-explicit-omission-in-raw-state=True
+stack-2.rebuilt-chain-still-valid-after-raw-restore=True
+stack-2.actual-computation-consumes-restored-memory-locals-register=True
+stack-2.omission-not-masked-by-CET-or-early-fault=True
+stack-2.failed-case-never-published=True
+stack-2.cleanup-owned-processes-and-desktops=True
+source.CET-and-CFG-enabled: pass (read actual process policies; no mitigation policy is modified)
+source.native-unwind-sees-three-CPP-frames: pass (Windows unwind metadata independently walks leaf/middle/outer from captured raw stack; no guessed pointer scan)
+source.initialization-once: pass (controller independently observes original init and safe checkpoint exactly once)
+source.business-prefixes-once: pass (separate debugger-owned evidence for outer/middle/leaf computations)
+source.normal-return-chain: pass (source executes the same ordinary C++ returns before changing further)
+source.terminated-before-restore: pass (WaitForDebugEvent EXIT and signaled source process handle precede creation of new carrier)
+restored.CET-and-CFG-enabled: pass (read actual process policies; no mitigation policy is modified)
+new-PID: pass (different native process, source is dead)
+restored.raw-memory-restored: pass (entire data page read back equals S0 except declared HWND relocation)
+restored.raw-stack-restored: pass (entire managed stack read back equals S0 except explicitly registered live HWND references)
+restored.CPU-context-readback: pass (stopped target RIP/RSP/register and floating point control read back after SetThreadContext)
+negative.separate-failure: pass (each fault has its own case; chain mismatch rejected, state omissions finish all RETs, cookie omission triggers real /GS)
+register-2.verdict-and-exit=True
+register-2.independent-business-events-source-only=True
+register-2.actual-CET-CFG-policies-enabled=True
+register-2.source-dead-before-new-PID=True
+register-2.source-receipt-recomputed-from-raw-bytes=True
+register-2.normal-returns-match-kernel-observed-shadow-returns=True
+register-2.source-return-slot-0=True
+register-2.source-return-slot-1=True
+register-2.source-return-slot-2=True
+register-2.source-return-slot-3=True
+register-2.source-return-slot-4=True
+register-2.structural-entry-no-business-replay=True
+register-2.same-original-call-sites-and-RSP=True
+register-2.target-had-no-saved-business-data-before-restore=True
+register-2.only-declared-relocations-or-explicit-omission-in-raw-state=True
+register-2.rebuilt-chain-still-valid-after-raw-restore=True
+register-2.actual-computation-consumes-restored-memory-locals-register=True
+register-2.omission-not-masked-by-CET-or-early-fault=True
+register-2.failed-case-never-published=True
+register-2.cleanup-owned-processes-and-desktops=True
+source.CET-and-CFG-enabled: pass (read actual process policies; no mitigation policy is modified)
+source.native-unwind-sees-three-CPP-frames: pass (Windows unwind metadata independently walks leaf/middle/outer from captured raw stack; no guessed pointer scan)
+source.initialization-once: pass (controller independently observes original init and safe checkpoint exactly once)
+source.business-prefixes-once: pass (separate debugger-owned evidence for outer/middle/leaf computations)
+source.normal-return-chain: pass (source executes the same ordinary C++ returns before changing further)
+source.terminated-before-restore: pass (WaitForDebugEvent EXIT and signaled source process handle precede creation of new carrier)
+restored.CET-and-CFG-enabled: pass (read actual process policies; no mitigation policy is modified)
+new-PID: pass (different native process, source is dead)
+restored.raw-memory-restored: pass (entire data page read back equals S0 except declared HWND relocation)
+restored.raw-stack-restored: pass (entire managed stack read back equals S0 except explicitly registered live HWND references)
+restored.CPU-context-readback: pass (stopped target RIP/RSP/register and floating point control read back after SetThreadContext)
+negative.separate-failure: pass (each fault has its own case; chain mismatch rejected, state omissions finish all RETs, cookie omission triggers real /GS)
+memory-2.verdict-and-exit=True
+memory-2.independent-business-events-source-only=True
+memory-2.actual-CET-CFG-policies-enabled=True
+memory-2.source-dead-before-new-PID=True
+memory-2.source-receipt-recomputed-from-raw-bytes=True
+memory-2.normal-returns-match-kernel-observed-shadow-returns=True
+memory-2.source-return-slot-0=True
+memory-2.source-return-slot-1=True
+memory-2.source-return-slot-2=True
+memory-2.source-return-slot-3=True
+memory-2.source-return-slot-4=True
+memory-2.structural-entry-no-business-replay=True
+memory-2.same-original-call-sites-and-RSP=True
+memory-2.target-had-no-saved-business-data-before-restore=True
+memory-2.only-declared-relocations-or-explicit-omission-in-raw-state=True
+memory-2.rebuilt-chain-still-valid-after-raw-restore=True
+memory-2.actual-computation-consumes-restored-memory-locals-register=True
+memory-2.omission-not-masked-by-CET-or-early-fault=True
+memory-2.failed-case-never-published=True
+memory-2.cleanup-owned-processes-and-desktops=True
+source.CET-and-CFG-enabled: pass (read actual process policies; no mitigation policy is modified)
+source.native-unwind-sees-three-CPP-frames: pass (Windows unwind metadata independently walks leaf/middle/outer from captured raw stack; no guessed pointer scan)
+source.initialization-once: pass (controller independently observes original init and safe checkpoint exactly once)
+source.business-prefixes-once: pass (separate debugger-owned evidence for outer/middle/leaf computations)
+source.normal-return-chain: pass (source executes the same ordinary C++ returns before changing further)
+source.terminated-before-restore: pass (WaitForDebugEvent EXIT and signaled source process handle precede creation of new carrier)
+restored.CET-and-CFG-enabled: pass (read actual process policies; no mitigation policy is modified)
+new-PID: pass (different native process, source is dead)
+restored.raw-memory-restored: pass (entire data page read back equals S0 except declared HWND relocation)
+restored.raw-stack-restored: pass (entire managed stack read back equals S0 except explicitly registered live HWND references)
+restored.CPU-context-readback: pass (stopped target RIP/RSP/register and floating point control read back after SetThreadContext)
+negative.separate-failure: pass (each fault has its own case; chain mismatch rejected, state omissions finish all RETs, cookie omission triggers real /GS)
+cookie-2.verdict-and-exit=True
+cookie-2.independent-business-events-source-only=True
+cookie-2.actual-CET-CFG-policies-enabled=True
+cookie-2.source-dead-before-new-PID=True
+cookie-2.source-receipt-recomputed-from-raw-bytes=True
+cookie-2.normal-returns-match-kernel-observed-shadow-returns=True
+cookie-2.source-return-slot-0=True
+cookie-2.source-return-slot-1=True
+cookie-2.source-return-slot-2=True
+cookie-2.source-return-slot-3=True
+cookie-2.source-return-slot-4=True
+cookie-2.structural-entry-no-business-replay=True
+cookie-2.same-original-call-sites-and-RSP=True
+cookie-2.target-had-no-saved-business-data-before-restore=True
+cookie-2.only-declared-relocations-or-explicit-omission-in-raw-state=True
+cookie-2.rebuilt-chain-still-valid-after-raw-restore=True
+cookie-2.GS-really-rejects-foreign-cookie=True
+cookie-2.failed-case-never-published=True
+cookie-2.cleanup-owned-processes-and-desktops=True
+source.CET-and-CFG-enabled: pass (read actual process policies; no mitigation policy is modified)
+source.input-clean-close: pass (unmodified R304 lifecycle releases state and restores both imports before checkpoint/exit)
+source-S0.actual-GDI: pass (unchanged PrintWindow helper checks actual target paint and counter pixels)
+source.native-unwind-sees-three-CPP-frames: pass (Windows unwind metadata independently walks leaf/middle/outer from captured raw stack; no guessed pointer scan)
+source.initialization-once: pass (controller independently observes original init and safe checkpoint exactly once)
+source.business-prefixes-once: pass (separate debugger-owned evidence for outer/middle/leaf computations)
+source.normal-return-chain: pass (source executes the same ordinary C++ returns before changing further)
+source-CHANGED.actual-GDI: pass (unchanged PrintWindow helper checks actual target paint and counter pixels)
+source.terminated-before-restore: pass (WaitForDebugEvent EXIT and signaled source process handle precede creation of new carrier)
+restored.CET-and-CFG-enabled: pass (read actual process policies; no mitigation policy is modified)
+new-PID: pass (different native process, source is dead)
+restored.raw-memory-restored: pass (entire data page read back equals S0 except declared HWND relocation)
+restored.raw-stack-restored: pass (entire managed stack read back equals S0 except explicitly registered live HWND references)
+restored.CPU-context-readback: pass (stopped target RIP/RSP/register and floating point control read back after SetThreadContext)
+restored.ordinary-CPP-return-chain: pass (actual leaf/middle/outer CALL/RET chain completed with restored register and volatile stack locals; structural checkpoint only, no business prefixes)
+restored.original-S0-state: pass (counter and unsaved text match S0 at continuation before next GUI iteration)
+restored-S0.actual-GDI: pass (unchanged PrintWindow helper checks actual target paint and counter pixels)
+restored.real-GUI-input: pass (same supported character/left-button transport reaches restored native window and application procedures)
+restored.input-clean-close: pass (unmodified R304 lifecycle releases state and restores both imports before checkpoint/exit)
+restored-after-input.actual-GDI: pass (unchanged PrintWindow helper checks actual target paint and counter pixels)
+gui-2.verdict-and-exit=True
+gui-2.independent-business-events-source-only=True
+gui-2.actual-CET-CFG-policies-enabled=True
+gui-2.source-dead-before-new-PID=True
+gui-2.source-receipt-recomputed-from-raw-bytes=True
+gui-2.normal-returns-match-kernel-observed-shadow-returns=True
+gui-2.source-return-slot-0=True
+gui-2.source-return-slot-1=True
+gui-2.source-return-slot-2=True
+gui-2.source-return-slot-3=True
+gui-2.source-return-slot-4=True
+gui-2.structural-entry-no-business-replay=True
+gui-2.same-original-call-sites-and-RSP=True
+gui-2.target-had-no-saved-business-data-before-restore=True
+gui-2.HWND-preimage-1859720839208=True
+gui-2.HWND-preimage-1859723001296=True
+gui-2.HWND-preimage-1859723001184=True
+gui-2.only-declared-relocations-or-explicit-omission-in-raw-state=True
+gui-2.rebuilt-chain-still-valid-after-raw-restore=True
+gui-2.actual-computation-consumes-restored-memory-locals-register=True
+gui-2.real-source-execution-restored=True
+gui-2.source-S0-real-GDI-and-PNG=True
+gui-2.source-CHANGED-real-GDI-and-PNG=True
+gui-2.restored-S0-real-GDI-and-PNG=True
+gui-2.restored-after-input-real-GDI-and-PNG=True
+gui-2.restored-native-window-input-and-rendering=True
+gui-2.cleanup-owned-processes-and-desktops=True
+old-experiments-and-evidence-unchanged=True
+CET002_COOPERATIVE_CONTINUATION_PASSED_WITH_DECLARED_COMPILE_TIME_SUPPORT
+CET002-full-regression=True
+warning: in the working copy of 'experiments/r3-005a-cet-002/build.ps1', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'experiments/r3-005a-cet-002/controller.cpp', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'experiments/r3-005a-cet-002/test.ps1', LF will be replaced by CRLF the next time Git touches it
+historical-evidence-and-unapproved-implementations-unchanged=True
+R3_005B_001_DECLARED_NATIVE_EDIT_RESOURCE_AND_EXECUTION_INTEGRATION_PASSED
+b001-and-CET002-full-regressions=True
+warning: in the working copy of 'experiments/r3-005a-cet-002/build.ps1', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'experiments/r3-005a-cet-002/controller.cpp', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'experiments/r3-005a-cet-002/test.ps1', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'experiments/r3-005b-001/build.ps1', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'experiments/r3-005b-001/controller.cpp', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'experiments/r3-005b-001/test.ps1', LF will be replaced by CRLF the next time Git touches it
+historical-evidence-and-unapproved-implementations-unchanged=True
+R3_005C_001_DECLARED_CONCURRENT_GUI_VIEWS_PASSED

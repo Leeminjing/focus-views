@@ -1,0 +1,567 @@
+{
+  "allEvidenceChecksPassed": false,
+  "declaredEDITResourceReconstructionPassed": false,
+  "controlledExecutionContinuationPassed": false,
+  "declaredGUIIntegrationPassed": false,
+  "generalGUIRestore": false,
+  "R3Complete": false,
+  "R4Started": false,
+  "checks": [
+    {
+      "name": "adapter-does-not-empty-source-undo-buffer",
+      "passed": true
+    },
+    {
+      "name": "adapter-is-independent-of-business-text",
+      "passed": true
+    },
+    {
+      "name": "positive-1.actual-verdict-and-error-status",
+      "passed": false
+    },
+    {
+      "name": "positive-1.evidence-processing-completed",
+      "passed": false
+    },
+    {
+      "name": "positive-1.owned-process-and-desktop-cleanup",
+      "passed": true
+    },
+    {
+      "name": "undo-1.actual-verdict-and-error-status",
+      "passed": true
+    },
+    {
+      "name": "undo-1.S0-owner-GUI-thread-query",
+      "passed": true
+    },
+    {
+      "name": "undo-1.source-after-rejection-owner-GUI-thread-query",
+      "passed": true
+    },
+    {
+      "name": "undo-1.CET-CFG-stay-enabled",
+      "passed": true
+    },
+    {
+      "name": "undo-1.snapshot-not-published",
+      "passed": true
+    },
+    {
+      "name": "undo-1.source-resource-state-not-changed-to-force-success",
+      "passed": true
+    },
+    {
+      "name": "undo-1.real-undo-history-refused-and-preserved",
+      "passed": true
+    },
+    {
+      "name": "undo-1.failed-case-not-published",
+      "passed": true
+    },
+    {
+      "name": "undo-1.owned-process-and-desktop-cleanup",
+      "passed": true
+    },
+    {
+      "name": "unknown-child-1.actual-verdict-and-error-status",
+      "passed": true
+    },
+    {
+      "name": "unknown-child-1.S0-owner-GUI-thread-query",
+      "passed": true
+    },
+    {
+      "name": "unknown-child-1.source-after-rejection-owner-GUI-thread-query",
+      "passed": true
+    },
+    {
+      "name": "unknown-child-1.CET-CFG-stay-enabled",
+      "passed": true
+    },
+    {
+      "name": "unknown-child-1.snapshot-not-published",
+      "passed": true
+    },
+    {
+      "name": "unknown-child-1.source-resource-state-not-changed-to-force-success",
+      "passed": true
+    },
+    {
+      "name": "unknown-child-1.actual-unknown-descendant-refused",
+      "passed": true
+    },
+    {
+      "name": "unknown-child-1.failed-case-not-published",
+      "passed": true
+    },
+    {
+      "name": "unknown-child-1.owned-process-and-desktop-cleanup",
+      "passed": true
+    },
+    {
+      "name": "bad-parent-1.actual-verdict-and-error-status",
+      "passed": true
+    },
+    {
+      "name": "bad-parent-1.S0-owner-GUI-thread-query",
+      "passed": true
+    },
+    {
+      "name": "bad-parent-1.source-changed-owner-GUI-thread-query",
+      "passed": true
+    },
+    {
+      "name": "bad-parent-1.target-prepared-owner-GUI-thread-query",
+      "passed": true
+    },
+    {
+      "name": "bad-parent-1.CET-CFG-stay-enabled",
+      "passed": true
+    },
+    {
+      "name": "bad-parent-1.native-source-state-supported-with-empty-undo",
+      "passed": true
+    },
+    {
+      "name": "bad-parent-1.resource-capture-before-debug-freeze",
+      "passed": true
+    },
+    {
+      "name": "bad-parent-1.source-real-edit-changes-after-S0",
+      "passed": true
+    },
+    {
+      "name": "bad-parent-1.source-exited-before-new-PID-TID",
+      "passed": true
+    },
+    {
+      "name": "bad-parent-1.actual-native-parent-mismatch-rejected",
+      "passed": true
+    },
+    {
+      "name": "bad-parent-1.failed-case-not-published",
+      "passed": true
+    },
+    {
+      "name": "bad-parent-1.owned-process-and-desktop-cleanup",
+      "passed": true
+    },
+    {
+      "name": "unregistered-ref-1.actual-verdict-and-error-status",
+      "passed": true
+    },
+    {
+      "name": "unregistered-ref-1.S0-owner-GUI-thread-query",
+      "passed": true
+    },
+    {
+      "name": "unregistered-ref-1.source-changed-owner-GUI-thread-query",
+      "passed": true
+    },
+    {
+      "name": "unregistered-ref-1.target-prepared-owner-GUI-thread-query",
+      "passed": true
+    },
+    {
+      "name": "unregistered-ref-1.CET-CFG-stay-enabled",
+      "passed": true
+    },
+    {
+      "name": "unregistered-ref-1.native-source-state-supported-with-empty-undo",
+      "passed": true
+    },
+    {
+      "name": "unregistered-ref-1.resource-capture-before-debug-freeze",
+      "passed": true
+    },
+    {
+      "name": "unregistered-ref-1.source-real-edit-changes-after-S0",
+      "passed": true
+    },
+    {
+      "name": "unregistered-ref-1.source-exited-before-new-PID-TID",
+      "passed": true
+    },
+    {
+      "name": "unregistered-ref-1.native-resource-preparation-matches-S0",
+      "passed": true
+    },
+    {
+      "name": "unregistered-ref-1.window-1-identity-geometry-class",
+      "passed": true
+    },
+    {
+      "name": "unregistered-ref-1.window-2-identity-geometry-class",
+      "passed": true
+    },
+    {
+      "name": "unregistered-ref-1.window-3-identity-geometry-class",
+      "passed": true
+    },
+    {
+      "name": "unregistered-ref-1.native-preparation-precedes-CET-chain-checkpoint",
+      "passed": true
+    },
+    {
+      "name": "unregistered-ref-1.declared-live-reference-omission-refused",
+      "passed": true
+    },
+    {
+      "name": "unregistered-ref-1.failed-case-not-published",
+      "passed": true
+    },
+    {
+      "name": "unregistered-ref-1.owned-process-and-desktop-cleanup",
+      "passed": true
+    },
+    {
+      "name": "omit-text-1.actual-verdict-and-error-status",
+      "passed": true
+    },
+    {
+      "name": "omit-text-1.S0-owner-GUI-thread-query",
+      "passed": true
+    },
+    {
+      "name": "omit-text-1.source-changed-owner-GUI-thread-query",
+      "passed": true
+    },
+    {
+      "name": "omit-text-1.target-prepared-owner-GUI-thread-query",
+      "passed": true
+    },
+    {
+      "name": "omit-text-1.CET-CFG-stay-enabled",
+      "passed": true
+    },
+    {
+      "name": "omit-text-1.native-source-state-supported-with-empty-undo",
+      "passed": true
+    },
+    {
+      "name": "omit-text-1.resource-capture-before-debug-freeze",
+      "passed": true
+    },
+    {
+      "name": "omit-text-1.source-real-edit-changes-after-S0",
+      "passed": true
+    },
+    {
+      "name": "omit-text-1.source-exited-before-new-PID-TID",
+      "passed": true
+    },
+    {
+      "name": "omit-text-1.omission-refused-before-execution",
+      "passed": true
+    },
+    {
+      "name": "omit-text-1.actual-native-field-mismatch-recorded",
+      "passed": true
+    },
+    {
+      "name": "omit-text-1.failed-case-not-published",
+      "passed": true
+    },
+    {
+      "name": "omit-text-1.owned-process-and-desktop-cleanup",
+      "passed": true
+    },
+    {
+      "name": "omit-selection-1.actual-verdict-and-error-status",
+      "passed": true
+    },
+    {
+      "name": "omit-selection-1.S0-owner-GUI-thread-query",
+      "passed": true
+    },
+    {
+      "name": "omit-selection-1.source-changed-owner-GUI-thread-query",
+      "passed": true
+    },
+    {
+      "name": "omit-selection-1.target-prepared-owner-GUI-thread-query",
+      "passed": true
+    },
+    {
+      "name": "omit-selection-1.CET-CFG-stay-enabled",
+      "passed": true
+    },
+    {
+      "name": "omit-selection-1.native-source-state-supported-with-empty-undo",
+      "passed": true
+    },
+    {
+      "name": "omit-selection-1.resource-capture-before-debug-freeze",
+      "passed": true
+    },
+    {
+      "name": "omit-selection-1.source-real-edit-changes-after-S0",
+      "passed": true
+    },
+    {
+      "name": "omit-selection-1.source-exited-before-new-PID-TID",
+      "passed": true
+    },
+    {
+      "name": "omit-selection-1.omission-refused-before-execution",
+      "passed": true
+    },
+    {
+      "name": "omit-selection-1.actual-native-field-mismatch-recorded",
+      "passed": true
+    },
+    {
+      "name": "omit-selection-1.failed-case-not-published",
+      "passed": true
+    },
+    {
+      "name": "omit-selection-1.owned-process-and-desktop-cleanup",
+      "passed": true
+    },
+    {
+      "name": "omit-modify-1.actual-verdict-and-error-status",
+      "passed": true
+    },
+    {
+      "name": "omit-modify-1.S0-owner-GUI-thread-query",
+      "passed": true
+    },
+    {
+      "name": "omit-modify-1.source-changed-owner-GUI-thread-query",
+      "passed": true
+    },
+    {
+      "name": "omit-modify-1.target-prepared-owner-GUI-thread-query",
+      "passed": true
+    },
+    {
+      "name": "omit-modify-1.CET-CFG-stay-enabled",
+      "passed": true
+    },
+    {
+      "name": "omit-modify-1.native-source-state-supported-with-empty-undo",
+      "passed": true
+    },
+    {
+      "name": "omit-modify-1.resource-capture-before-debug-freeze",
+      "passed": true
+    },
+    {
+      "name": "omit-modify-1.source-real-edit-changes-after-S0",
+      "passed": true
+    },
+    {
+      "name": "omit-modify-1.source-exited-before-new-PID-TID",
+      "passed": true
+    },
+    {
+      "name": "omit-modify-1.omission-refused-before-execution",
+      "passed": true
+    },
+    {
+      "name": "omit-modify-1.actual-native-field-mismatch-recorded",
+      "passed": true
+    },
+    {
+      "name": "omit-modify-1.failed-case-not-published",
+      "passed": true
+    },
+    {
+      "name": "omit-modify-1.owned-process-and-desktop-cleanup",
+      "passed": true
+    },
+    {
+      "name": "omit-focus-1.actual-verdict-and-error-status",
+      "passed": true
+    },
+    {
+      "name": "omit-focus-1.S0-owner-GUI-thread-query",
+      "passed": true
+    },
+    {
+      "name": "omit-focus-1.source-changed-owner-GUI-thread-query",
+      "passed": true
+    },
+    {
+      "name": "omit-focus-1.target-prepared-owner-GUI-thread-query",
+      "passed": true
+    },
+    {
+      "name": "omit-focus-1.CET-CFG-stay-enabled",
+      "passed": true
+    },
+    {
+      "name": "omit-focus-1.native-source-state-supported-with-empty-undo",
+      "passed": true
+    },
+    {
+      "name": "omit-focus-1.resource-capture-before-debug-freeze",
+      "passed": true
+    },
+    {
+      "name": "omit-focus-1.source-real-edit-changes-after-S0",
+      "passed": true
+    },
+    {
+      "name": "omit-focus-1.source-exited-before-new-PID-TID",
+      "passed": true
+    },
+    {
+      "name": "omit-focus-1.omission-refused-before-execution",
+      "passed": true
+    },
+    {
+      "name": "omit-focus-1.actual-native-field-mismatch-recorded",
+      "passed": true
+    },
+    {
+      "name": "omit-focus-1.failed-case-not-published",
+      "passed": true
+    },
+    {
+      "name": "omit-focus-1.owned-process-and-desktop-cleanup",
+      "passed": true
+    },
+    {
+      "name": "historical-evidence-and-unapproved-implementations-unchanged",
+      "passed": true
+    }
+  ],
+  "cases": [
+    {
+      "scenario": "positive",
+      "repeat": 1,
+      "processExit": 2,
+      "evidenceError": "Controller verdict failed; preserve primary failure before dependent S0 checks.",
+      "expectedFailure": false
+    },
+    {
+      "scenario": "undo",
+      "repeat": 1,
+      "processExit": 2,
+      "controlResourcesPassed": false,
+      "executionPassed": false,
+      "declaredEDITIntegrationPassed": false,
+      "expectedFailure": true
+    },
+    {
+      "scenario": "unknown-child",
+      "repeat": 1,
+      "processExit": 2,
+      "controlResourcesPassed": false,
+      "executionPassed": false,
+      "declaredEDITIntegrationPassed": false,
+      "expectedFailure": true
+    },
+    {
+      "scenario": "bad-parent",
+      "repeat": 1,
+      "processExit": 2,
+      "controlResourcesPassed": false,
+      "executionPassed": false,
+      "declaredEDITIntegrationPassed": false,
+      "expectedFailure": true
+    },
+    {
+      "scenario": "unregistered-ref",
+      "repeat": 1,
+      "processExit": 2,
+      "controlResourcesPassed": true,
+      "executionPassed": false,
+      "declaredEDITIntegrationPassed": false,
+      "expectedFailure": true
+    },
+    {
+      "scenario": "omit-text",
+      "repeat": 1,
+      "processExit": 2,
+      "controlResourcesPassed": false,
+      "executionPassed": false,
+      "declaredEDITIntegrationPassed": false,
+      "expectedFailure": true
+    },
+    {
+      "scenario": "omit-selection",
+      "repeat": 1,
+      "processExit": 2,
+      "controlResourcesPassed": false,
+      "executionPassed": false,
+      "declaredEDITIntegrationPassed": false,
+      "expectedFailure": true
+    },
+    {
+      "scenario": "omit-modify",
+      "repeat": 1,
+      "processExit": 2,
+      "controlResourcesPassed": false,
+      "executionPassed": false,
+      "declaredEDITIntegrationPassed": false,
+      "expectedFailure": true
+    },
+    {
+      "scenario": "omit-focus",
+      "repeat": 1,
+      "processExit": 2,
+      "controlResourcesPassed": false,
+      "executionPassed": false,
+      "declaredEDITIntegrationPassed": false,
+      "expectedFailure": true
+    }
+  ],
+  "caseProcessingErrors": [
+    {
+      "case": "positive-1",
+      "error": "Controller verdict failed; preserve primary failure before dependent S0 checks.",
+      "controllerLog": "D:\\focus-views\\experiments\\r4-001-gate-001\\results\\20261025-gate001-confirmation\\denied-launch\\positive-1\\controller.jsonl",
+      "primaryFailures": [
+        {
+          "type": "process_launch_failed",
+          "tickMs": 12838640,
+          "name": "source",
+          "api": "CreateProcessW",
+          "error": 5,
+          "exe": "D:\\focus-views\\experiments\\r3-005b-001\\out",
+          "command": "\"D:\\focus-views\\experiments\\r3-005b-001\\out\\r305a.exe\" \"--role\" \"fixture\" \"--mode\" \"source\" \"--state\" \"Local\\fv_r305_4200_12838625_source\" \"--log\" \"D:\\focus-views\\experiments\\r4-001-gate-001\\results\\20261025-gate001-confirmation\\denied-launch\\positive-1\\source-events.jsonl\" \"--gui\" \"1\" \"--wrong-chain\" \"0\" \"--omit-ref\" \"0\" \"--unknown-child\" \"0\" \"--bad-parent\" \"0\"",
+          "workingDirectory": "D:\\focus-views\\experiments\\r3-005b-001",
+          "desktop": "WinSta0\\fv_r305_4200_12838625_source",
+          "creationFlags": 134217730,
+          "inheritHandles": false,
+          "utcFileTime": 134373876939151245,
+          "callerPid": 4200,
+          "callerTid": 41384,
+          "callerSid": "S-1-5-21-2703919260-1801774295-1865065416-1004",
+          "tokenError": 0,
+          "elevated": 0,
+          "integrityRid": 8192,
+          "handleCount": 177,
+          "gdiObjects": 0,
+          "userObjects": 1,
+          "desktopOpenError": 0,
+          "desktopDacl": "D:(A;;CCDCLCSWRPWPDTLOCRSDRCWDWO;;;S-1-5-5-0-265899)(A;;CCDCLCSWRPWPDTLOCRSDRCWDWO;;;S-1-5-101-0-1)(A;;CCDCLCSWRPWPDTLOCRSDRCWDWO;;;RC)(A;;CCDCLCDTLOCRRC;;;BA)(A;;CCDCLCSWRPWPDTLOCRSDRCWDWO;;;SY)(A;;CCDTCRRC;;;S-1-15-2-2)(A;;CCDTCRRC;;;AC)",
+          "desktopDaclError": 0,
+          "exeReadError": 5,
+          "exeExecuteError": 5,
+          "childProcessPolicy": 0,
+          "childPolicyError": 0,
+          "inJob": 1,
+          "jobQueryError": 0,
+          "jobLimitFlags": 10240,
+          "jobProcessLimit": 0,
+          "jobActiveProcesses": 5,
+          "jobUiRestrictions": 0,
+          "availablePhysicalBytes": 2231672832
+        },
+        {
+          "type": "experiment_failure",
+          "tickMs": 12838640,
+          "api": "CreateProcessW",
+          "error": 5,
+          "usableViewPublished": false
+        }
+      ]
+    }
+  ],
+  "CET002Regression": "not_run",
+  "manualHostTest": "not_executed"
+}

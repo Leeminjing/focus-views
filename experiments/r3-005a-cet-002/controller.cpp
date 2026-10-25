@@ -1,6 +1,8 @@
 #include "protocol.hpp"
 #include "../common/native.hpp"
 #include <functional>
+#include "../r4-001-gate-001/launch-diagnostics.hpp"
+#include "../r4-001-gate-001/courier.hpp"
 namespace r305 {
 namespace {
 struct Log {
@@ -26,7 +28,10 @@ struct Process {
 Process launch(const std::filesystem::path& exe,const std::wstring& desktop,const std::vector<std::wstring>& args,DWORD flags,Log& log,const std::string& name) {
     std::wstring command=quote(exe.wstring());for(const auto& a:args)command+=L" "+quote(a);
     STARTUPINFOW startup{sizeof(startup)}; auto desk=desktop;startup.lpDesktop=desk.data(); PROCESS_INFORMATION info{};
-    check(CreateProcessW(exe.c_str(),command.data(),nullptr,nullptr,FALSE,flags|CREATE_NO_WINDOW,nullptr,exe.parent_path().c_str(),&startup,&info),"CreateProcessW");
+    log.emit("process_launch_attempt","\"name\":"+json(name)+","+gate001::launch_state(exe,desktop,command,flags|CREATE_NO_WINDOW));
+    if(!CreateProcessW(exe.c_str(),command.data(),nullptr,nullptr,FALSE,flags|CREATE_NO_WINDOW,nullptr,exe.parent_path().c_str(),&startup,&info)){
+        const auto error=GetLastError();log.emit("process_launch_failed","\"name\":"+json(name)+",\"api\":\"CreateProcessW\",\"error\":"+std::to_string(error)+","+gate001::launch_state(exe,desktop,command,flags|CREATE_NO_WINDOW));throw Error("CreateProcessW",error);
+    }
     Process p;p.process.value=info.hProcess;p.thread.value=info.hThread;p.pid=info.dwProcessId;p.tid=info.dwThreadId;
     log.emit("process_created","\"name\":"+json(name)+",\"pid\":"+std::to_string(p.pid)+",\"tid\":"+std::to_string(p.tid)+",\"debugged\":"+((flags&DEBUG_ONLY_THIS_PROCESS)?"true":"false"));return p;
 }
@@ -34,7 +39,8 @@ class Child {
     Log& log_; DWORD metadata_rva_; bool stopping_=false,startup_=false;
     std::uint64_t ntdll_=0,ntdll_end_=0;
 public:
-    Process p;
+    Process p,courier;
+    std::unique_ptr<Mapping> control;LONG control_sequence=0;
     std::unique_ptr<Desktop> desktop;
     std::unique_ptr<Mapping> shared;
     std::wstring shared_name;
@@ -56,8 +62,9 @@ public:
         demand(event.dwProcessId==p.pid,"serialized debug pump PID ownership");pending=true;
         log_.emit("debug_event","\"view\":"+json(name)+",\"pid\":"+std::to_string(p.pid)+",\"tid\":"+std::to_string(event.dwThreadId)+",\"code\":"+std::to_string(event.dwDebugEventCode));
         if(event.dwDebugEventCode==CREATE_PROCESS_DEBUG_EVENT){image=reinterpret_cast<std::uint64_t>(event.u.CreateProcessInfo.lpBaseOfImage);if(event.u.CreateProcessInfo.hFile)CloseHandle(event.u.CreateProcessInfo.hFile);
-            if(event.u.CreateProcessInfo.hProcess!=p.process.value)CloseHandle(event.u.CreateProcessInfo.hProcess);if(event.u.CreateProcessInfo.hThread!=p.thread.value)CloseHandle(event.u.CreateProcessInfo.hThread);}
-        else if(event.dwDebugEventCode==CREATE_THREAD_DEBUG_EVENT){if(event.u.CreateThread.hThread!=p.thread.value)CloseHandle(event.u.CreateThread.hThread);}
+            // Windows closes debug-event process/thread handles on EXIT continuation.
+        }
+        else if(event.dwDebugEventCode==CREATE_THREAD_DEBUG_EVENT){}
         else if(event.dwDebugEventCode==LOAD_DLL_DEBUG_EVENT){
             Handle file(event.u.LoadDll.hFile);if(file.value){wchar_t path[32768]{};if(GetFinalPathNameByHandleW(file.value,path,32768,FILE_NAME_NORMALIZED)){
                 auto base=reinterpret_cast<std::uint64_t>(event.u.LoadDll.lpBaseOfDll);
@@ -93,7 +100,16 @@ public:
         continue_event();
     }
     void wait(const char* expected){const auto deadline=GetTickCount64()+8000;while(!pending && GetTickCount64()<deadline)poll();demand(pending && halt==expected,(std::string("expected debug halt ")+expected+", got "+halt).c_str());}
-    void stop(){if(!p.process.value||p.exited)return;stopping_=true;check(TerminateProcess(p.process.value,0xE3050001),"TerminateProcess.owned_GUI");if(pending)continue_event();const auto deadline=GetTickCount64()+5000;while(!p.exited&&GetTickCount64()<deadline)poll();demand(p.exited,"GUI exit confirmed");}
+    void stop(){
+        if(courier.process.value && !courier.exited){
+            InterlockedExchange(&static_cast<gate001::Courier*>(control->view)->stop,1);
+            const auto end=GetTickCount64()+5000;
+            while(WaitForSingleObject(courier.process.value,0)==WAIT_TIMEOUT && GetTickCount64()<end)poll();
+            if(WaitForSingleObject(courier.process.value,0)!=WAIT_OBJECT_0){TerminateProcess(courier.process.value,ERROR_TIMEOUT);WaitForSingleObject(courier.process.value,1000);throw Error("courier.stop_timeout",ERROR_TIMEOUT);}
+            DWORD code=0;check(GetExitCodeProcess(courier.process.value,&code),"GetExitCodeProcess.courier");courier.exited=true;
+            log_.emit("process_exited","\"name\":"+json(name+"-courier")+",\"pid\":"+std::to_string(courier.pid)+",\"exitCode\":"+std::to_string(code));
+        }
+if(!p.process.value||p.exited)return;stopping_=true;check(TerminateProcess(p.process.value,0xE3050001),"TerminateProcess.owned_GUI");if(pending)continue_event();const auto deadline=GetTickCount64()+5000;while(!p.exited&&GetTickCount64()<deadline)poll();demand(p.exited,"GUI exit confirmed");}
     Work state(){return native::read_value<Work>(p.process.value,data_address);}
 };
 struct Snapshot {
@@ -111,15 +127,39 @@ struct Input {
 class Experiment {
     std::filesystem::path exe_,out_;Log log_;Handle job_;DWORD metadata_rva_;std::wstring prefix_;
     unsigned failed_=0,serial_=0; bool primary_passed_=false; std::array<std::uint8_t,32> executable_;
-    std::vector<Process> helpers_;
+
     bool gui_=false;
     void verify(const std::string& name,bool okay,const std::string& detail){if(!okay)++failed_;log_.emit("assertion","\"name\":"+json(name)+",\"passed\":"+(okay?"true":"false")+",\"detail\":"+json(detail));std::cout<<name<<": "<<(okay?"pass":"FAIL")<<" ("<<detail<<")\n";}
     void assign(Process& p){check(AssignProcessToJobObject(job_.value,p.process.value),"AssignProcessToJobObject");}
-    Process& helper(Child& v,std::vector<std::wstring> args,const std::string& name){helpers_.push_back(launch(exe_,v.desktop->full,args,0,log_,name));auto& p=helpers_.back();assign(p);return p;}
     void confirm(Process& p,Child& v,DWORD timeout=5000){const auto end=GetTickCount64()+timeout;while(WaitForSingleObject(p.process.value,0)==WAIT_TIMEOUT && GetTickCount64()<end)v.poll();if(WaitForSingleObject(p.process.value,0)!=WAIT_OBJECT_0){TerminateProcess(p.process.value,ERROR_TIMEOUT);throw Error("helper_timeout",ERROR_TIMEOUT);}if(!p.exited){DWORD code=0;check(GetExitCodeProcess(p.process.value,&code),"GetExitCodeProcess.helper");p.exited=true;log_.emit("process_exited","\"name\":\"helper\",\"pid\":"+std::to_string(p.pid)+",\"exitCode\":"+std::to_string(code));}}
+    void ensure_courier(Child& v){
+        if(v.courier.process.value)return;
+        const auto name=v.shared_name+L"_courier";
+        v.control=std::make_unique<Mapping>(name,sizeof(gate001::Courier),true);new(v.control->view)gate001::Courier{};
+        v.courier=launch(exe_,v.desktop->full,{L"--role",L"courier",L"--courier",name,L"--state",v.shared_name,L"--pid",std::to_wstring(v.p.pid)},0,log_,v.name+"-courier");assign(v.courier);
+        const auto deadline=GetTickCount64()+5000;auto& c=*static_cast<gate001::Courier*>(v.control->view);
+        while(!c.ready&&GetTickCount64()<deadline){if(WaitForSingleObject(v.courier.process.value,0)!=WAIT_TIMEOUT)throw Error("courier.start_exit",ERROR_BROKEN_PIPE);v.poll();}
+        if(!c.ready)throw Error("courier.start_timeout",ERROR_TIMEOUT);
+        log_.emit("courier_ready","\"view\":"+json(v.name)+",\"pid\":"+std::to_string(v.courier.pid));
+    }
+    void courier_command(Child& v,const std::wstring& reply,bool capture,UINT message=0,WPARAM wp=0,const std::filesystem::path& path={}){
+        ensure_courier(v);auto& c=*static_cast<gate001::Courier*>(v.control->view);
+        demand(c.done==v.control_sequence&&!c.stop,"one outstanding courier command");
+        c.capture=capture?1:0;c.message=message;c.wp=wp;c.error=0;
+        wcscpy_s(c.reply,reply.c_str());wcscpy_s(c.path,path.c_str());
+        const auto sequence=++v.control_sequence;MemoryBarrier();InterlockedExchange(&c.request,sequence);
+        const auto deadline=GetTickCount64()+5000;
+        while(c.done!=sequence&&GetTickCount64()<deadline){
+            if(WaitForSingleObject(v.courier.process.value,0)!=WAIT_TIMEOUT)throw Error("courier.command_exit",ERROR_BROKEN_PIPE);
+            v.poll(); // another View's events, or this post's checkpoint, remain owned
+        }
+        if(c.done!=sequence)throw Error("courier.command_timeout",ERROR_TIMEOUT);
+        MemoryBarrier();log_.emit("courier_command","\"view\":"+json(v.name)+",\"sequence\":"+std::to_string(sequence)+",\"capture\":"+(capture?"true":"false")+",\"workerPid\":"+std::to_string(v.courier.pid)+",\"result\":"+std::to_string(c.error));
+    }
+
     void post(Child& v,UINT message,WPARAM wp=0){
         const auto name=L"Local\\"+prefix_+L"_reply_"+std::to_wstring(++serial_);Mapping reply(name,sizeof(Reply),true);new(reply.view)Reply{};
-        auto& p=helper(v,{L"--role",L"bridge",L"--state",v.shared_name,L"--reply",name,L"--op",L"post",L"--target",L"top",L"--message",std::to_wstring(message),L"--wparam",std::to_wstring(wp)},"post");confirm(p,v);
+        courier_command(v,name,false,message,wp);
         auto& r=*static_cast<Reply*>(reply.view);check(r.done && !r.error,"bridge.post");
     }
     void run_until(Child& v,const std::function<bool()>& done,const char* api){const auto end=GetTickCount64()+7000;while(!done()&&GetTickCount64()<end){v.poll();if(v.pending)throw Error(api,ERROR_INVALID_STATE,"unexpected debug halt "+v.halt);}if(!done())throw Error(api,ERROR_TIMEOUT);}
@@ -196,7 +236,6 @@ public:
     Experiment(const std::filesystem::path& exe,const std::filesystem::path& out):exe_(exe),out_(out),log_(out/"controller.jsonl"),metadata_rva_(native::metadata_rva(native::read_file(exe),"R305Metadata")),prefix_(L"fv_r305_"+std::to_wstring(GetCurrentProcessId())+L"_"+std::to_wstring(GetTickCount64())),executable_(native::digest(native::read_file(exe))){
         job_.value=CreateJobObjectW(nullptr,nullptr);check(job_.value!=nullptr,"CreateJobObjectW");JOBOBJECT_EXTENDED_LIMIT_INFORMATION info{};info.BasicLimitInformation.LimitFlags=JOB_OBJECT_LIMIT_KILL_ON_JOB_CLOSE;check(SetInformationJobObject(job_.value,JobObjectExtendedLimitInformation,&info,sizeof(info)),"SetInformationJobObject");
     }
-    ~Experiment(){for(auto& p:helpers_)if(!p.exited){TerminateProcess(p.process.value,0xE3050002);WaitForSingleObject(p.process.value,3000);}}
     std::unique_ptr<Child> start(const std::string& name,bool source=false,bool wrong_chain=false){
         auto v=std::make_unique<Child>(log_,metadata_rva_);v->name=name;auto wide=std::wstring(name.begin(),name.end());v->desktop=std::make_unique<Desktop>(prefix_+L"_"+wide,log_);
         v->shared_name=L"Local\\"+prefix_+L"_"+wide;v->shared=std::make_unique<Mapping>(v->shared_name,sizeof(Shared),true);new(v->shared->view)Shared{};
@@ -224,7 +263,7 @@ public:
     void close_input(Child& v,Input& in){r304::Packet p{};p.kind=r304::release;submit(v,in,{p},true);verify(v.name+".input-clean-close",in.c().health==0 && in.c().restored && !in.c().pinned && !in.c().iat_installed,"unmodified R304 lifecycle releases state and restores both imports before checkpoint/exit");}
     void freeze(Child& v){post(v,freeze_message);run_until(v,[&]{return v.metadata().frozen==1;},"runtime.freeze");}
     void capture(Child& v,const std::string& label){const auto reply_name=L"Local\\"+prefix_+L"_png_"+std::to_wstring(++serial_);Mapping reply(reply_name,sizeof(Reply),true);auto* r=new(reply.view)Reply{};auto wide=std::wstring(label.begin(),label.end());
-        auto& p=helper(v,{L"--role",L"bridge",L"--state",v.shared_name,L"--reply",reply_name,L"--op",L"capture",L"--target",L"top",L"--path",(out_/(label+".png")).wstring()},label+"-capture");confirm(p,v,5000);
+        courier_command(v,reply_name,true,0,0,out_/(label+".png"));
         log_.emit("capture","\"name\":"+json(label)+",\"view\":"+json(v.name)+",\"error\":"+std::to_string(r->error)+",\"counter\":"+std::to_string(r->print_update)+",\"beforeDraws\":"+std::to_string(r->before_draws)+",\"afterDraws\":"+std::to_string(r->after_draws)+",\"apiBeginMs\":"+std::to_string(r->api_begin_ms)+",\"apiEndMs\":"+std::to_string(r->api_end_ms)+",\"clientDx\":"+std::to_string(r->client_dx)+",\"clientDy\":"+std::to_string(r->client_dy));
         verify(label+".actual-GDI",r->done && !r->error && r->after_draws>r->before_draws,"unchanged PrintWindow helper checks actual target paint and counter pixels");
     }
@@ -348,6 +387,6 @@ public:
 };
 }
 }
-int wmain(int argc,wchar_t** argv){std::cout<<std::unitbuf;try{const r3::Args args(argc,argv);const auto role=args.get(L"--role",L"controller");if(role==L"fixture")return r305::fixture_main(args);if(role==L"bridge")return r3::bridge_main(args);if(role==L"input")return r304::input_main(args);
+int wmain(int argc,wchar_t** argv){std::cout<<std::unitbuf;try{const r3::Args args(argc,argv);const auto role=args.get(L"--role",L"controller");if(role==L"fixture")return r305::fixture_main(args);if(role==L"bridge")return r3::bridge_main(args);if(role==L"input")return r304::input_main(args);if(role==L"courier")return gate001::courier_main(args);
     r3::demand(role==L"controller","unknown role");const auto output=std::filesystem::absolute(args.get(L"--output"));r3::demand(!args.get(L"--output").empty() && !std::filesystem::exists(output),"new output directory required");std::filesystem::create_directories(output);wchar_t path[32768]{};r3::check(GetModuleFileNameW(nullptr,path,32768)!=0,"GetModuleFileNameW");r305::Experiment experiment(path,output);const auto scenario=args.get(L"--scenario",L"core");r3::demand(scenario==L"core" || scenario==L"gui" || scenario==L"return-mismatch" || scenario==L"stack" || scenario==L"register" || scenario==L"memory" || scenario==L"cookie","unknown scenario");return experiment.run(scenario);
 }catch(const std::exception& e){std::cout<<"R305A_FAILURE "<<e.what()<<'\n';return 1;}}

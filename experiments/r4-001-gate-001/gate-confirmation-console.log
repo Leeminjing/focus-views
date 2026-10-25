@@ -1,0 +1,20 @@
+LIFETIME_CHECKS_PASSED=10
+ordered-lifetimes-positive-and-negative-controls=True
+handle-ownership-early-close-control=True
+handle-ownership-correct-owner-control=True
+denied-launch exit=1
+real-CreateProcess-denial-keeps-failed-summary-and-other-cases=True
+b001-standalone exit=1
+b001-standalone-complete-script-passed=False
+b001-standalone-CET002-executed-and-passed=True
+c001-full exit=0
+c001-full-complete-script-passed=True
+c001-full-nested-b001-and-CET002-passed=True
+r4-full exit=0
+r4-full-complete-script-passed=True
+r4-full-nested-c001-b001-and-CET002-passed=True
+Exception: D:\focus-views\experiments\r4-001-gate-001\test.ps1:45
+Line |
+  45 |  … -not $okay){throw 'R4-001-GATE-001 failed; preserve all stage evidenc …
+     |                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     | R4-001-GATE-001 failed; preserve all stage evidence

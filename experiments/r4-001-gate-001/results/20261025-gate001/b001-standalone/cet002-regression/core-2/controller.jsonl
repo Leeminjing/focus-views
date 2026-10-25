@@ -1,0 +1,145 @@
+{"type":"case","tickMs":11691015,"scenario":"core","gui":false,"negative":false}
+{"type":"desktop_created","tickMs":11691015,"name":"WinSta0\\fv_r305_49296_11691015_source"}
+{"type":"process_created","tickMs":11691015,"name":"source","pid":34508,"tid":6184,"debugged":true}
+{"type":"debug_event","tickMs":11691015,"view":"source","pid":34508,"tid":6184,"code":3}
+{"type":"debug_event","tickMs":11691015,"view":"source","pid":34508,"tid":6184,"code":6}
+{"type":"debug_event","tickMs":11691015,"view":"source","pid":34508,"tid":6184,"code":6}
+{"type":"debug_event","tickMs":11691015,"view":"source","pid":34508,"tid":6184,"code":6}
+{"type":"debug_event","tickMs":11691031,"view":"source","pid":34508,"tid":6184,"code":6}
+{"type":"debug_event","tickMs":11691031,"view":"source","pid":34508,"tid":6184,"code":6}
+{"type":"debug_event","tickMs":11691031,"view":"source","pid":34508,"tid":16752,"code":2}
+{"type":"debug_event","tickMs":11691031,"view":"source","pid":34508,"tid":6184,"code":6}
+{"type":"debug_event","tickMs":11691031,"view":"source","pid":34508,"tid":6184,"code":6}
+{"type":"debug_event","tickMs":11691031,"view":"source","pid":34508,"tid":6184,"code":6}
+{"type":"debug_event","tickMs":11691031,"view":"source","pid":34508,"tid":6184,"code":6}
+{"type":"debug_event","tickMs":11691031,"view":"source","pid":34508,"tid":41760,"code":2}
+{"type":"debug_event","tickMs":11691031,"view":"source","pid":34508,"tid":6184,"code":6}
+{"type":"debug_event","tickMs":11691031,"view":"source","pid":34508,"tid":21096,"code":2}
+{"type":"debug_event","tickMs":11691031,"view":"source","pid":34508,"tid":6184,"code":6}
+{"type":"debug_event","tickMs":11691031,"view":"source","pid":34508,"tid":6184,"code":6}
+{"type":"debug_event","tickMs":11691031,"view":"source","pid":34508,"tid":41760,"code":6}
+{"type":"debug_event","tickMs":11691031,"view":"source","pid":34508,"tid":41760,"code":6}
+{"type":"debug_event","tickMs":11691031,"view":"source","pid":34508,"tid":6184,"code":1}
+{"type":"exception","tickMs":11691031,"view":"source","pid":34508,"code":2147483651,"address":140718998431433,"firstChance":1}
+{"type":"debug_event","tickMs":11691031,"view":"source","pid":34508,"tid":6184,"code":6}
+{"type":"debug_event","tickMs":11691031,"view":"source","pid":34508,"tid":6184,"code":1}
+{"type":"exception","tickMs":11691031,"view":"source","pid":34508,"code":2147483651,"address":140699896320599,"firstChance":1}
+{"type":"halt","tickMs":11691031,"view":"source","phase":"ready","pid":34508,"initializations":0,"checkpoints":0,"published":0,"shadowPolicy":261,"error":0}
+{"type":"assertion","tickMs":11691031,"name":"source.CET-and-CFG-enabled","passed":true,"detail":"read actual process policies; no mitigation policy is modified"}
+{"type":"security_policy","tickMs":11691031,"view":"source","shadowPolicy":261,"cfgPolicy":1}
+{"type":"runtime_prepared","tickMs":11691031,"view":"source","pid":34508,"image":140699896315904,"window":0,"shadowPolicy":261,"originalStackLow":546589114368,"originalStackHigh":546590162944,"managedStackLow":1859720908800,"managedStackHigh":1859723001856,"reportedStackLow":546589114368,"reportedStackHigh":1859723001856}
+{"type":"debug_event","tickMs":11691031,"view":"source","pid":34508,"tid":6184,"code":1}
+{"type":"exception","tickMs":11691031,"view":"source","pid":34508,"code":2147483651,"address":140699896320601,"firstChance":1}
+{"type":"business_effect","tickMs":11691031,"view":"source","pid":34508,"address":140699896320601,"initializations":1,"outer":0,"middle":0,"leaf":0}
+{"type":"halt","tickMs":11691031,"view":"source","phase":"init","pid":34508,"initializations":1,"checkpoints":0,"published":0,"shadowPolicy":261,"error":0}
+{"type":"debug_event","tickMs":11691031,"view":"source","pid":34508,"tid":6184,"code":6}
+{"type":"debug_event","tickMs":11691031,"view":"source","pid":34508,"tid":6184,"code":1}
+{"type":"exception","tickMs":11691031,"view":"source","pid":34508,"code":2147483651,"address":140699896320670,"firstChance":1}
+{"type":"business_effect","tickMs":11691031,"view":"source","pid":34508,"address":140699896320670,"initializations":1,"outer":1,"middle":0,"leaf":0}
+{"type":"halt","tickMs":11691031,"view":"source","phase":"business","pid":34508,"initializations":1,"checkpoints":0,"published":1,"shadowPolicy":261,"error":0}
+{"type":"debug_event","tickMs":11691031,"view":"source","pid":34508,"tid":6184,"code":1}
+{"type":"exception","tickMs":11691031,"view":"source","pid":34508,"code":2147483651,"address":140699896320672,"firstChance":1}
+{"type":"business_effect","tickMs":11691031,"view":"source","pid":34508,"address":140699896320672,"initializations":1,"outer":1,"middle":1,"leaf":0}
+{"type":"halt","tickMs":11691031,"view":"source","phase":"business","pid":34508,"initializations":1,"checkpoints":0,"published":1,"shadowPolicy":261,"error":0}
+{"type":"debug_event","tickMs":11691031,"view":"source","pid":34508,"tid":6184,"code":1}
+{"type":"exception","tickMs":11691031,"view":"source","pid":34508,"code":2147483651,"address":140699896320674,"firstChance":1}
+{"type":"business_effect","tickMs":11691031,"view":"source","pid":34508,"address":140699896320674,"initializations":1,"outer":1,"middle":1,"leaf":1}
+{"type":"halt","tickMs":11691031,"view":"source","phase":"business","pid":34508,"initializations":1,"checkpoints":0,"published":1,"shadowPolicy":261,"error":0}
+{"type":"debug_event","tickMs":11691031,"view":"source","pid":34508,"tid":6184,"code":1}
+{"type":"exception","tickMs":11691031,"view":"source","pid":34508,"code":2147483651,"address":140699896320645,"firstChance":1}
+{"type":"halt","tickMs":11691031,"view":"source","phase":"checkpoint","pid":34508,"initializations":1,"checkpoints":1,"published":1,"shadowPolicy":261,"error":0}
+{"type":"snapshot","tickMs":11691031,"work":{"seed":3074081462174663256,"counter":73,"receipt":0,"returned":0,"clicks":0,"window":0,"text":"BASE-2aa954cd7b88c258","length":21,"pointX":0,"pointY":0},"rip":140699896320646,"rsp":1859723001144,"registerR10":28318437938229,"leaf":3074081462174663185,"middle":11991920626324559251,"outer":3074250003990558059,"expectedReceipt":11901602933154221329,"refs":0,"localAddresses":[1859723001208,1859723001312,1859723001416]}
+{"type":"raw_layout","tickMs":11691031,"dataAddress":1859720839168,"windowOffset":40,"ripOffset":248,"rspOffset":152,"r10Offset":200,"xmmOffset":416}
+{"type":"xstate_read","tickMs":11691031,"view":"source","phase":"source-checkpoint","enabledMask":2055,"returnedMask":2051,"cetPresent":true,"cetControl":1,"ssp":546591207328}
+{"type":"call_chain","tickMs":11691031,"view":"source","phase":"source-checkpoint","index":0,"frameRsp":1859723001144,"returnSlot":1859723001144,"normalReturn":140699896571109,"shadowAddress":546591207328,"shadowReturn":140699896571109}
+{"type":"call_chain","tickMs":11691031,"view":"source","phase":"source-checkpoint","index":1,"frameRsp":1859723001152,"returnSlot":1859723001256,"normalReturn":140699896571612,"shadowAddress":546591207336,"shadowReturn":140699896571612}
+{"type":"call_chain","tickMs":11691031,"view":"source","phase":"source-checkpoint","index":2,"frameRsp":1859723001264,"returnSlot":1859723001368,"normalReturn":140699896573415,"shadowAddress":546591207344,"shadowReturn":140699896573415}
+{"type":"call_chain","tickMs":11691031,"view":"source","phase":"source-checkpoint","index":3,"frameRsp":1859723001376,"returnSlot":1859723001464,"normalReturn":140699896566200,"shadowAddress":546591207352,"shadowReturn":140699896566200}
+{"type":"call_chain","tickMs":11691031,"view":"source","phase":"source-checkpoint","index":4,"frameRsp":1859723001472,"returnSlot":1859723001704,"normalReturn":140699896571356,"shadowAddress":546591207360,"shadowReturn":140699896571356}
+{"type":"native_unwind_frame","tickMs":11691046,"index":0,"rip":140699896320646,"rsp":1859723001144,"functionRva":0}
+{"type":"native_unwind_frame","tickMs":11691046,"index":1,"rip":140699896571109,"rsp":1859723001152,"functionRva":254928}
+{"type":"native_unwind_frame","tickMs":11691046,"index":2,"rip":140699896571612,"rsp":1859723001264,"functionRva":255472}
+{"type":"native_unwind_frame","tickMs":11691046,"index":3,"rip":140699896573415,"rsp":1859723001376,"functionRva":257328}
+{"type":"assertion","tickMs":11691046,"name":"source.native-unwind-sees-three-CPP-frames","passed":true,"detail":"Windows unwind metadata independently walks leaf/middle/outer from captured raw stack; no guessed pointer scan"}
+{"type":"assertion","tickMs":11691046,"name":"source.initialization-once","passed":true,"detail":"controller independently observes original init and safe checkpoint exactly once"}
+{"type":"assertion","tickMs":11691046,"name":"source.business-prefixes-once","passed":true,"detail":"separate debugger-owned evidence for outer/middle/leaf computations"}
+{"type":"debug_event","tickMs":11691046,"view":"source","pid":34508,"tid":6184,"code":1}
+{"type":"exception","tickMs":11691046,"view":"source","pid":34508,"code":2147483651,"address":140699896320678,"firstChance":1}
+{"type":"halt","tickMs":11691046,"view":"source","phase":"continued","pid":34508,"initializations":1,"checkpoints":1,"published":1,"shadowPolicy":261,"error":0}
+{"type":"assertion","tickMs":11691046,"name":"source.normal-return-chain","passed":true,"detail":"source executes the same ordinary C++ returns before changing further"}
+{"type":"debug_event","tickMs":11691046,"view":"source","pid":34508,"tid":6184,"code":1}
+{"type":"exception","tickMs":11691046,"view":"source","pid":34508,"code":2147483651,"address":140699896320676,"firstChance":1}
+{"type":"halt","tickMs":11691046,"view":"source","phase":"changed","pid":34508,"initializations":1,"checkpoints":1,"published":1,"shadowPolicy":261,"error":0}
+{"type":"source_changed","tickMs":11691046,"work":{"seed":3074081462174663256,"counter":74,"receipt":11901602933154221329,"returned":7,"clicks":0,"window":0,"text":"BASE-2aa954cd7b88c258!","length":22,"pointX":0,"pointY":0}}
+{"type":"debug_event","tickMs":11691046,"view":"source","pid":34508,"tid":21096,"code":4}
+{"type":"debug_event","tickMs":11691046,"view":"source","pid":34508,"tid":16752,"code":4}
+{"type":"debug_event","tickMs":11691046,"view":"source","pid":34508,"tid":41760,"code":4}
+{"type":"debug_event","tickMs":11691046,"view":"source","pid":34508,"tid":6184,"code":5}
+{"type":"process_exited","tickMs":11691046,"name":"source","pid":34508,"exitCode":3808755713}
+{"type":"assertion","tickMs":11691046,"name":"source.terminated-before-restore","passed":true,"detail":"WaitForDebugEvent EXIT and signaled source process handle precede creation of new carrier"}
+{"type":"desktop_created","tickMs":11691046,"name":"WinSta0\\fv_r305_49296_11691015_restored"}
+{"type":"process_created","tickMs":11691046,"name":"restored","pid":45552,"tid":15160,"debugged":true}
+{"type":"debug_event","tickMs":11691046,"view":"restored","pid":45552,"tid":15160,"code":3}
+{"type":"debug_event","tickMs":11691046,"view":"restored","pid":45552,"tid":15160,"code":6}
+{"type":"debug_event","tickMs":11691046,"view":"restored","pid":45552,"tid":15160,"code":6}
+{"type":"debug_event","tickMs":11691046,"view":"restored","pid":45552,"tid":15160,"code":6}
+{"type":"debug_event","tickMs":11691062,"view":"restored","pid":45552,"tid":15160,"code":6}
+{"type":"debug_event","tickMs":11691062,"view":"restored","pid":45552,"tid":15160,"code":6}
+{"type":"debug_event","tickMs":11691062,"view":"restored","pid":45552,"tid":15160,"code":6}
+{"type":"debug_event","tickMs":11691062,"view":"restored","pid":45552,"tid":49696,"code":2}
+{"type":"debug_event","tickMs":11691062,"view":"restored","pid":45552,"tid":15160,"code":6}
+{"type":"debug_event","tickMs":11691062,"view":"restored","pid":45552,"tid":15160,"code":6}
+{"type":"debug_event","tickMs":11691062,"view":"restored","pid":45552,"tid":15160,"code":6}
+{"type":"debug_event","tickMs":11691062,"view":"restored","pid":45552,"tid":43772,"code":2}
+{"type":"debug_event","tickMs":11691062,"view":"restored","pid":45552,"tid":15160,"code":6}
+{"type":"debug_event","tickMs":11691062,"view":"restored","pid":45552,"tid":45960,"code":2}
+{"type":"debug_event","tickMs":11691062,"view":"restored","pid":45552,"tid":15160,"code":6}
+{"type":"debug_event","tickMs":11691062,"view":"restored","pid":45552,"tid":15160,"code":6}
+{"type":"debug_event","tickMs":11691062,"view":"restored","pid":45552,"tid":45960,"code":6}
+{"type":"debug_event","tickMs":11691062,"view":"restored","pid":45552,"tid":45960,"code":6}
+{"type":"debug_event","tickMs":11691062,"view":"restored","pid":45552,"tid":15160,"code":1}
+{"type":"exception","tickMs":11691062,"view":"restored","pid":45552,"code":2147483651,"address":140718998431433,"firstChance":1}
+{"type":"debug_event","tickMs":11691062,"view":"restored","pid":45552,"tid":15160,"code":6}
+{"type":"debug_event","tickMs":11691062,"view":"restored","pid":45552,"tid":15160,"code":1}
+{"type":"exception","tickMs":11691062,"view":"restored","pid":45552,"code":2147483651,"address":140699896320599,"firstChance":1}
+{"type":"halt","tickMs":11691062,"view":"restored","phase":"ready","pid":45552,"initializations":0,"checkpoints":0,"published":0,"shadowPolicy":261,"error":0}
+{"type":"assertion","tickMs":11691062,"name":"restored.CET-and-CFG-enabled","passed":true,"detail":"read actual process policies; no mitigation policy is modified"}
+{"type":"security_policy","tickMs":11691062,"view":"restored","shadowPolicy":261,"cfgPolicy":1}
+{"type":"runtime_prepared","tickMs":11691062,"view":"restored","pid":45552,"image":140699896315904,"window":0,"shadowPolicy":261,"originalStackLow":963834281984,"originalStackHigh":963835330560,"managedStackLow":1859720908800,"managedStackHigh":1859723001856,"reportedStackLow":963834281984,"reportedStackHigh":1859723001856}
+{"type":"assertion","tickMs":11691062,"name":"new-PID","passed":true,"detail":"different native process, source is dead"}
+{"type":"debug_event","tickMs":11691062,"view":"restored","pid":45552,"tid":15160,"code":1}
+{"type":"exception","tickMs":11691062,"view":"restored","pid":45552,"code":2147483651,"address":140699896320645,"firstChance":1}
+{"type":"halt","tickMs":11691062,"view":"restored","phase":"checkpoint","pid":45552,"initializations":0,"checkpoints":1,"published":0,"shadowPolicy":261,"error":0}
+{"type":"xstate_read","tickMs":11691062,"view":"restored","phase":"target-before-restore","enabledMask":2055,"returnedMask":2051,"cetPresent":true,"cetControl":1,"ssp":963836374944}
+{"type":"call_chain","tickMs":11691062,"view":"restored","phase":"target-before-restore","index":0,"frameRsp":1859723001144,"returnSlot":1859723001144,"normalReturn":140699896571109,"shadowAddress":963836374944,"shadowReturn":140699896571109}
+{"type":"call_chain","tickMs":11691062,"view":"restored","phase":"target-before-restore","index":1,"frameRsp":1859723001152,"returnSlot":1859723001256,"normalReturn":140699896571612,"shadowAddress":963836374952,"shadowReturn":140699896571612}
+{"type":"call_chain","tickMs":11691062,"view":"restored","phase":"target-before-restore","index":2,"frameRsp":1859723001264,"returnSlot":1859723001368,"normalReturn":140699896573415,"shadowAddress":963836374960,"shadowReturn":140699896573415}
+{"type":"call_chain","tickMs":11691062,"view":"restored","phase":"target-before-restore","index":3,"frameRsp":1859723001376,"returnSlot":1859723001464,"normalReturn":140699896566200,"shadowAddress":963836374968,"shadowReturn":140699896566200}
+{"type":"call_chain","tickMs":11691062,"view":"restored","phase":"target-before-restore","index":4,"frameRsp":1859723001472,"returnSlot":1859723001704,"normalReturn":140699896571356,"shadowAddress":963836374976,"shadowReturn":140699896571356}
+{"type":"chain_match","tickMs":11691062,"matched":true,"sourceSsp":546591207328,"targetSsp":963836374944,"sourceRsp":1859723001144,"targetRsp":1859723001144,"initializations":0,"businessPrefixes":0}
+{"type":"assertion","tickMs":11691062,"name":"restored.raw-memory-restored","passed":true,"detail":"entire data page read back equals S0 except declared HWND relocation"}
+{"type":"assertion","tickMs":11691062,"name":"restored.raw-stack-restored","passed":true,"detail":"entire managed stack read back equals S0 except explicitly registered live HWND references"}
+{"type":"xstate_read","tickMs":11691062,"view":"restored","phase":"after-ordinary-context-restore","enabledMask":2055,"returnedMask":2051,"cetPresent":true,"cetControl":1,"ssp":963836374944}
+{"type":"call_chain","tickMs":11691062,"view":"restored","phase":"after-ordinary-context-restore","index":0,"frameRsp":1859723001144,"returnSlot":1859723001144,"normalReturn":140699896571109,"shadowAddress":963836374944,"shadowReturn":140699896571109}
+{"type":"call_chain","tickMs":11691062,"view":"restored","phase":"after-ordinary-context-restore","index":1,"frameRsp":1859723001152,"returnSlot":1859723001256,"normalReturn":140699896571612,"shadowAddress":963836374952,"shadowReturn":140699896571612}
+{"type":"call_chain","tickMs":11691062,"view":"restored","phase":"after-ordinary-context-restore","index":2,"frameRsp":1859723001264,"returnSlot":1859723001368,"normalReturn":140699896573415,"shadowAddress":963836374960,"shadowReturn":140699896573415}
+{"type":"call_chain","tickMs":11691062,"view":"restored","phase":"after-ordinary-context-restore","index":3,"frameRsp":1859723001376,"returnSlot":1859723001464,"normalReturn":140699896566200,"shadowAddress":963836374968,"shadowReturn":140699896566200}
+{"type":"call_chain","tickMs":11691062,"view":"restored","phase":"after-ordinary-context-restore","index":4,"frameRsp":1859723001472,"returnSlot":1859723001704,"normalReturn":140699896571356,"shadowAddress":963836374976,"shadowReturn":140699896571356}
+{"type":"assertion","tickMs":11691062,"name":"restored.CPU-context-readback","passed":true,"detail":"stopped target RIP/RSP/register and floating point control read back after SetThreadContext"}
+{"type":"restored_context","tickMs":11691062,"view":"restored","rip":140699896320646,"rsp":1859723001144,"r10":28318437938229,"published":false}
+{"type":"debug_event","tickMs":11691062,"view":"restored","pid":45552,"tid":15160,"code":1}
+{"type":"exception","tickMs":11691062,"view":"restored","pid":45552,"code":2147483651,"address":140699896320678,"firstChance":1}
+{"type":"halt","tickMs":11691062,"view":"restored","phase":"continued","pid":45552,"initializations":0,"checkpoints":1,"published":0,"shadowPolicy":261,"error":0}
+{"type":"xstate_read","tickMs":11691062,"view":"restored","phase":"after-CPP-returns","enabledMask":2055,"returnedMask":2051,"cetPresent":true,"cetControl":1,"ssp":963836374968}
+{"type":"execution_result","tickMs":11691062,"work":{"seed":3074081462174663256,"counter":73,"receipt":11901602933154221329,"returned":7,"clicks":0,"window":0,"text":"BASE-2aa954cd7b88c258","length":21,"pointX":0,"pointY":0},"expectedReceipt":11901602933154221329,"restoredR10":28318437938229,"fault":""}
+{"type":"assertion","tickMs":11691062,"name":"restored.ordinary-CPP-return-chain","passed":true,"detail":"actual leaf/middle/outer CALL/RET chain completed with restored register and volatile stack locals; structural checkpoint only, no business prefixes"}
+{"type":"assertion","tickMs":11691062,"name":"restored.original-S0-state","passed":true,"detail":"counter and unsaved text match S0 at continuation before next GUI iteration"}
+{"type":"continuation","tickMs":11691062,"view":"restored","work":{"seed":3074081462174663256,"counter":73,"receipt":11901602933154221329,"returned":7,"clicks":0,"window":0,"text":"BASE-2aa954cd7b88c258","length":21,"pointX":0,"pointY":0},"expectedReceipt":11901602933154221329,"initializations":0}
+{"type":"debug_event","tickMs":11691062,"view":"restored","pid":45552,"tid":45960,"code":4}
+{"type":"debug_event","tickMs":11691062,"view":"restored","pid":45552,"tid":43772,"code":4}
+{"type":"debug_event","tickMs":11691062,"view":"restored","pid":45552,"tid":49696,"code":4}
+{"type":"debug_event","tickMs":11691062,"view":"restored","pid":45552,"tid":15160,"code":5}
+{"type":"process_exited","tickMs":11691078,"name":"restored","pid":45552,"exitCode":3808755713}
+{"type":"experiment_complete","tickMs":11691078,"failedAssertions":0,"primaryRestorePassed":true,"R3Complete":false,"generalGUIRestore":false,"manualHostTest":"not_executed"}
+{"type":"desktop_closed","tickMs":11691078,"name":"WinSta0\\fv_r305_49296_11691015_restored","closed":true,"error":0}
+{"type":"desktop_closed","tickMs":11691078,"name":"WinSta0\\fv_r305_49296_11691015_source","closed":true,"error":0}

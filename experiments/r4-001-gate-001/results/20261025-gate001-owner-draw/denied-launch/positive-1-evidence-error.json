@@ -1,0 +1,51 @@
+{
+  "case": "positive-1",
+  "error": "Controller verdict failed; preserve primary failure before dependent S0 checks.",
+  "controllerLog": "D:\\focus-views\\experiments\\r4-001-gate-001\\results\\20261025-gate001-owner-draw\\denied-launch\\positive-1\\controller.jsonl",
+  "primaryFailures": [
+    {
+      "type": "process_launch_failed",
+      "tickMs": 13114875,
+      "name": "source",
+      "api": "CreateProcessW",
+      "error": 5,
+      "exe": "D:\\focus-views\\experiments\\r3-005b-001\\out",
+      "command": "\"D:\\focus-views\\experiments\\r3-005b-001\\out\\r305a.exe\" \"--role\" \"fixture\" \"--mode\" \"source\" \"--state\" \"Local\\fv_r305_18848_13114859_source\" \"--log\" \"D:\\focus-views\\experiments\\r4-001-gate-001\\results\\20261025-gate001-owner-draw\\denied-launch\\positive-1\\source-events.jsonl\" \"--gui\" \"1\" \"--wrong-chain\" \"0\" \"--omit-ref\" \"0\" \"--unknown-child\" \"0\" \"--bad-parent\" \"0\"",
+      "workingDirectory": "D:\\focus-views\\experiments\\r3-005b-001",
+      "desktop": "WinSta0\\fv_r305_18848_13114859_source",
+      "creationFlags": 134217730,
+      "inheritHandles": false,
+      "utcFileTime": 134373879701494596,
+      "callerPid": 18848,
+      "callerTid": 44112,
+      "callerSid": "S-1-5-21-2703919260-1801774295-1865065416-1004",
+      "tokenError": 0,
+      "elevated": 0,
+      "integrityRid": 8192,
+      "handleCount": 177,
+      "gdiObjects": 0,
+      "userObjects": 1,
+      "desktopOpenError": 0,
+      "desktopDacl": "D:(A;;CCDCLCSWRPWPDTLOCRSDRCWDWO;;;S-1-5-5-0-265899)(A;;CCDCLCSWRPWPDTLOCRSDRCWDWO;;;S-1-5-101-0-1)(A;;CCDCLCSWRPWPDTLOCRSDRCWDWO;;;RC)(A;;CCDCLCDTLOCRRC;;;BA)(A;;CCDCLCSWRPWPDTLOCRSDRCWDWO;;;SY)(A;;CCDTCRRC;;;S-1-15-2-2)(A;;CCDTCRRC;;;AC)",
+      "desktopDaclError": 0,
+      "exeReadError": 5,
+      "exeExecuteError": 5,
+      "childProcessPolicy": 0,
+      "childPolicyError": 0,
+      "inJob": 1,
+      "jobQueryError": 0,
+      "jobLimitFlags": 10240,
+      "jobProcessLimit": 0,
+      "jobActiveProcesses": 5,
+      "jobUiRestrictions": 0,
+      "availablePhysicalBytes": 1347252224
+    },
+    {
+      "type": "experiment_failure",
+      "tickMs": 13114875,
+      "api": "CreateProcessW",
+      "error": 5,
+      "usableViewPublished": false
+    }
+  ]
+}

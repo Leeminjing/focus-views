@@ -11,6 +11,16 @@ constexpr DWORD cpu_flags = CONTEXT_CONTROL|CONTEXT_INTEGER|CONTEXT_FLOATING_POI
 constexpr UINT freeze_message = WM_APP+110, checkpoint_message = WM_APP+111;
 constexpr UINT prepare_stop_message = WM_APP+112;
 constexpr UINT resource_message = WM_APP+113;
+constexpr UINT capture_message = WM_APP+114;
+constexpr unsigned frame_limit=2048;
+struct NativeFrame {
+    DWORD pid=0,tid=0;std::uint64_t token=0;
+    volatile LONG done=0;DWORD error=0;char api[96]{};
+    int width=0,height=0,client_dx=0,client_dy=0;
+    std::uint64_t begin_ms=0,end_ms=0;
+    BYTE pixels[frame_limit*frame_limit*4]{};
+};
+inline std::wstring frame_name(DWORD pid,DWORD tid){return L"Local\\fv_r3005b_frame_"+std::to_wstring(pid)+L"_"+std::to_wstring(tid);}
 struct WindowNode {
     std::uint64_t hwnd=0;
     unsigned logical=0,parent=0;
@@ -85,6 +95,7 @@ inline std::string work_json(const Work& w) {
       << ",\"length\":" << w.length << ",\"pointX\":" << w.point_x << ",\"pointY\":" << w.point_y << '}'; return s.str();
 }
 int fixture_main(const Args& args);
+void capture_owned_window(Metadata& metadata,HWND top);
 void resource_service(Metadata& metadata,HWND top,HWND edit,HWND button);
 std::string resources_json(const Resources& resources);
 }

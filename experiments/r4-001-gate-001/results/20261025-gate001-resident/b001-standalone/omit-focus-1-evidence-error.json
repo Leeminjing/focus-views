@@ -1,0 +1,40 @@
+{
+  "case": "omit-focus-1",
+  "error": "Controller verdict failed; preserve primary failure before dependent S0 checks.",
+  "controllerLog": "D:\\focus-views\\experiments\\r4-001-gate-001\\results\\20261025-gate001-resident\\b001-standalone\\omit-focus-1\\controller.jsonl",
+  "primaryFailures": [
+    {
+      "type": "process_launch_failed",
+      "tickMs": 12154500,
+      "name": "restored",
+      "api": "CreateProcessW",
+      "error": 5,
+      "exe": "D:\\focus-views\\experiments\\r3-005b-001\\out\\r305a.exe",
+      "command": "\"D:\\focus-views\\experiments\\r3-005b-001\\out\\r305a.exe\" \"--role\" \"fixture\" \"--mode\" \"restore\" \"--state\" \"Local\\fv_r305_50124_12153968_restored\" \"--log\" \"D:\\focus-views\\experiments\\r4-001-gate-001\\results\\20261025-gate001-resident\\b001-standalone\\omit-focus-1\\restored-events.jsonl\" \"--gui\" \"1\" \"--wrong-chain\" \"0\" \"--omit-ref\" \"0\" \"--unknown-child\" \"0\" \"--bad-parent\" \"0\"",
+      "desktop": "WinSta0\\fv_r305_50124_12153968_restored",
+      "creationFlags": 134217730,
+      "inheritHandles": false,
+      "utcFileTime": 134373870097863971,
+      "callerPid": 50124,
+      "callerTid": 31600,
+      "callerSid": "S-1-5-21-2703919260-1801774295-1865065416-1004",
+      "tokenError": 0,
+      "elevated": 0,
+      "integrityRid": 8192,
+      "handleCount": 179,
+      "gdiObjects": 0,
+      "userObjects": 1,
+      "desktopOpenError": 0,
+      "desktopDacl": "D:(A;;CCDCLCSWRPWPDTLOCRSDRCWDWO;;;S-1-5-5-0-265899)(A;;CCDCLCSWRPWPDTLOCRSDRCWDWO;;;S-1-5-101-0-1)(A;;CCDCLCSWRPWPDTLOCRSDRCWDWO;;;RC)(A;;CCDCLCDTLOCRRC;;;BA)(A;;CCDCLCSWRPWPDTLOCRSDRCWDWO;;;SY)(A;;CCDTCRRC;;;S-1-15-2-2)(A;;CCDTCRRC;;;AC)",
+      "desktopDaclError": 0,
+      "exeReadError": 0
+    },
+    {
+      "type": "experiment_failure",
+      "tickMs": 12154500,
+      "api": "CreateProcessW",
+      "error": 5,
+      "usableViewPublished": false
+    }
+  ]
+}

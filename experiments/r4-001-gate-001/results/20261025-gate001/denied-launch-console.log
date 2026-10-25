@@ -1,0 +1,202 @@
+adapter-does-not-empty-source-undo-buffer=True
+adapter-is-independent-of-business-text=True
+positive-1.actual-verdict-and-error-status=False
+positive-1.evidence-processing-completed=False
+positive-1.owned-process-and-desktop-cleanup=True
+source.CET-and-CFG-enabled: pass (read actual process policies; no mitigation policy is modified)
+source.input-clean-close: pass (unmodified R304 lifecycle releases state and restores both imports before checkpoint/exit)
+negative.explicit-rejection: pass (resource.EDIT.undo_history error=50; unsupported state or failed reconstruction not published)
+negative.source-still-alive: pass (failed snapshot does not terminate source until owned cleanup)
+undo-1.actual-verdict-and-error-status=True
+undo-1.S0-owner-GUI-thread-query=True
+undo-1.source-after-rejection-owner-GUI-thread-query=True
+undo-1.CET-CFG-stay-enabled=True
+undo-1.snapshot-not-published=True
+undo-1.source-resource-state-not-changed-to-force-success=True
+undo-1.real-undo-history-refused-and-preserved=True
+undo-1.failed-case-not-published=True
+undo-1.owned-process-and-desktop-cleanup=True
+source.CET-and-CFG-enabled: pass (read actual process policies; no mitigation policy is modified)
+source.input-clean-close: pass (unmodified R304 lifecycle releases state and restores both imports before checkpoint/exit)
+negative.explicit-rejection: pass (resource.unknown_descendant error=50; unsupported state or failed reconstruction not published)
+negative.source-still-alive: pass (failed snapshot does not terminate source until owned cleanup)
+unknown-child-1.actual-verdict-and-error-status=True
+unknown-child-1.S0-owner-GUI-thread-query=True
+unknown-child-1.source-after-rejection-owner-GUI-thread-query=True
+unknown-child-1.CET-CFG-stay-enabled=True
+unknown-child-1.snapshot-not-published=True
+unknown-child-1.source-resource-state-not-changed-to-force-success=True
+unknown-child-1.actual-unknown-descendant-refused=True
+unknown-child-1.failed-case-not-published=True
+unknown-child-1.owned-process-and-desktop-cleanup=True
+source.CET-and-CFG-enabled: pass (read actual process policies; no mitigation policy is modified)
+source.input-clean-close: pass (unmodified R304 lifecycle releases state and restores both imports before checkpoint/exit)
+source.native-EDIT-preconditions: pass (random native EDIT initialized by source business only; Home/Shift+End select text; capture does not clear undo)
+source-S0.actual-GDI: pass (unchanged PrintWindow helper checks actual target paint and counter pixels)
+source.native-unwind-sees-three-CPP-frames: pass (Windows unwind metadata independently walks leaf/middle/outer from captured raw stack; no guessed pointer scan)
+source.initialization-and-prefixes-once: pass (debugger evidence is separate from restored memory)
+source.normal-return-chain: pass (source ordinary call chain and captured receipt)
+source.input-clean-close: pass (unmodified R304 lifecycle releases state and restores both imports before checkpoint/exit)
+source-CHANGED.actual-GDI: pass (unchanged PrintWindow helper checks actual target paint and counter pixels)
+source.actual-EDIT-changed: pass (real WM_CHAR changed native EDIT and generated undo after S0)
+source.terminated-before-restore: pass (confirmed process exit before new carrier)
+restored.CET-and-CFG-enabled: pass (read actual process policies; no mitigation policy is modified)
+new-PID-TID: pass (new native GUI thread and process)
+negative.explicit-rejection: pass (resource.restore.parent_relation error=13; unsupported state or failed reconstruction not published)
+bad-parent-1.actual-verdict-and-error-status=True
+bad-parent-1.S0-owner-GUI-thread-query=True
+bad-parent-1.source-changed-owner-GUI-thread-query=True
+bad-parent-1.target-prepared-owner-GUI-thread-query=True
+bad-parent-1.CET-CFG-stay-enabled=True
+bad-parent-1.native-source-state-supported-with-empty-undo=True
+bad-parent-1.resource-capture-before-debug-freeze=True
+bad-parent-1.source-real-edit-changes-after-S0=True
+bad-parent-1.source-exited-before-new-PID-TID=True
+bad-parent-1.actual-native-parent-mismatch-rejected=True
+bad-parent-1.failed-case-not-published=True
+bad-parent-1.owned-process-and-desktop-cleanup=True
+source.CET-and-CFG-enabled: pass (read actual process policies; no mitigation policy is modified)
+source.input-clean-close: pass (unmodified R304 lifecycle releases state and restores both imports before checkpoint/exit)
+source.native-EDIT-preconditions: pass (random native EDIT initialized by source business only; Home/Shift+End select text; capture does not clear undo)
+source-S0.actual-GDI: pass (unchanged PrintWindow helper checks actual target paint and counter pixels)
+source.native-unwind-sees-three-CPP-frames: pass (Windows unwind metadata independently walks leaf/middle/outer from captured raw stack; no guessed pointer scan)
+source.initialization-and-prefixes-once: pass (debugger evidence is separate from restored memory)
+source.normal-return-chain: pass (source ordinary call chain and captured receipt)
+source.input-clean-close: pass (unmodified R304 lifecycle releases state and restores both imports before checkpoint/exit)
+source-CHANGED.actual-GDI: pass (unchanged PrintWindow helper checks actual target paint and counter pixels)
+source.actual-EDIT-changed: pass (real WM_CHAR changed native EDIT and generated undo after S0)
+source.terminated-before-restore: pass (confirmed process exit before new carrier)
+restored.CET-and-CFG-enabled: pass (read actual process policies; no mitigation policy is modified)
+new-PID-TID: pass (new native GUI thread and process)
+negative.explicit-rejection: pass (restore.unregistered_live_HWND error=13; unsupported state or failed reconstruction not published)
+unregistered-ref-1.actual-verdict-and-error-status=True
+unregistered-ref-1.S0-owner-GUI-thread-query=True
+unregistered-ref-1.source-changed-owner-GUI-thread-query=True
+unregistered-ref-1.target-prepared-owner-GUI-thread-query=True
+unregistered-ref-1.CET-CFG-stay-enabled=True
+unregistered-ref-1.native-source-state-supported-with-empty-undo=True
+unregistered-ref-1.resource-capture-before-debug-freeze=True
+unregistered-ref-1.source-real-edit-changes-after-S0=True
+unregistered-ref-1.source-exited-before-new-PID-TID=True
+unregistered-ref-1.native-resource-preparation-matches-S0=True
+unregistered-ref-1.window-1-identity-geometry-class=True
+unregistered-ref-1.window-2-identity-geometry-class=True
+unregistered-ref-1.window-3-identity-geometry-class=True
+unregistered-ref-1.native-preparation-precedes-CET-chain-checkpoint=True
+unregistered-ref-1.declared-live-reference-omission-refused=True
+unregistered-ref-1.failed-case-not-published=True
+unregistered-ref-1.owned-process-and-desktop-cleanup=True
+source.CET-and-CFG-enabled: pass (read actual process policies; no mitigation policy is modified)
+source.input-clean-close: pass (unmodified R304 lifecycle releases state and restores both imports before checkpoint/exit)
+source.native-EDIT-preconditions: pass (random native EDIT initialized by source business only; Home/Shift+End select text; capture does not clear undo)
+source-S0.actual-GDI: pass (unchanged PrintWindow helper checks actual target paint and counter pixels)
+source.native-unwind-sees-three-CPP-frames: pass (Windows unwind metadata independently walks leaf/middle/outer from captured raw stack; no guessed pointer scan)
+source.initialization-and-prefixes-once: pass (debugger evidence is separate from restored memory)
+source.normal-return-chain: pass (source ordinary call chain and captured receipt)
+source.input-clean-close: pass (unmodified R304 lifecycle releases state and restores both imports before checkpoint/exit)
+source-CHANGED.actual-GDI: pass (unchanged PrintWindow helper checks actual target paint and counter pixels)
+source.actual-EDIT-changed: pass (real WM_CHAR changed native EDIT and generated undo after S0)
+source.terminated-before-restore: pass (confirmed process exit before new carrier)
+restored.CET-and-CFG-enabled: pass (read actual process policies; no mitigation policy is modified)
+new-PID-TID: pass (new native GUI thread and process)
+negative.explicit-rejection: pass (resource.restore.readback error=23; unsupported state or failed reconstruction not published)
+omit-text-1.actual-verdict-and-error-status=True
+omit-text-1.S0-owner-GUI-thread-query=True
+omit-text-1.source-changed-owner-GUI-thread-query=True
+omit-text-1.target-prepared-owner-GUI-thread-query=True
+omit-text-1.CET-CFG-stay-enabled=True
+omit-text-1.native-source-state-supported-with-empty-undo=True
+omit-text-1.resource-capture-before-debug-freeze=True
+omit-text-1.source-real-edit-changes-after-S0=True
+omit-text-1.source-exited-before-new-PID-TID=True
+omit-text-1.omission-refused-before-execution=True
+omit-text-1.actual-native-field-mismatch-recorded=True
+omit-text-1.failed-case-not-published=True
+omit-text-1.owned-process-and-desktop-cleanup=True
+source.CET-and-CFG-enabled: pass (read actual process policies; no mitigation policy is modified)
+source.input-clean-close: pass (unmodified R304 lifecycle releases state and restores both imports before checkpoint/exit)
+source.native-EDIT-preconditions: pass (random native EDIT initialized by source business only; Home/Shift+End select text; capture does not clear undo)
+source-S0.actual-GDI: pass (unchanged PrintWindow helper checks actual target paint and counter pixels)
+source.native-unwind-sees-three-CPP-frames: pass (Windows unwind metadata independently walks leaf/middle/outer from captured raw stack; no guessed pointer scan)
+source.initialization-and-prefixes-once: pass (debugger evidence is separate from restored memory)
+source.normal-return-chain: pass (source ordinary call chain and captured receipt)
+source.input-clean-close: pass (unmodified R304 lifecycle releases state and restores both imports before checkpoint/exit)
+source-CHANGED.actual-GDI: pass (unchanged PrintWindow helper checks actual target paint and counter pixels)
+source.actual-EDIT-changed: pass (real WM_CHAR changed native EDIT and generated undo after S0)
+source.terminated-before-restore: pass (confirmed process exit before new carrier)
+restored.CET-and-CFG-enabled: pass (read actual process policies; no mitigation policy is modified)
+new-PID-TID: pass (new native GUI thread and process)
+negative.explicit-rejection: pass (resource.restore.readback error=23; unsupported state or failed reconstruction not published)
+omit-selection-1.actual-verdict-and-error-status=True
+omit-selection-1.S0-owner-GUI-thread-query=True
+omit-selection-1.source-changed-owner-GUI-thread-query=True
+omit-selection-1.target-prepared-owner-GUI-thread-query=True
+omit-selection-1.CET-CFG-stay-enabled=True
+omit-selection-1.native-source-state-supported-with-empty-undo=True
+omit-selection-1.resource-capture-before-debug-freeze=True
+omit-selection-1.source-real-edit-changes-after-S0=True
+omit-selection-1.source-exited-before-new-PID-TID=True
+omit-selection-1.omission-refused-before-execution=True
+omit-selection-1.actual-native-field-mismatch-recorded=True
+omit-selection-1.failed-case-not-published=True
+omit-selection-1.owned-process-and-desktop-cleanup=True
+source.CET-and-CFG-enabled: pass (read actual process policies; no mitigation policy is modified)
+source.input-clean-close: pass (unmodified R304 lifecycle releases state and restores both imports before checkpoint/exit)
+source.native-EDIT-preconditions: pass (random native EDIT initialized by source business only; Home/Shift+End select text; capture does not clear undo)
+source-S0.actual-GDI: pass (unchanged PrintWindow helper checks actual target paint and counter pixels)
+source.native-unwind-sees-three-CPP-frames: pass (Windows unwind metadata independently walks leaf/middle/outer from captured raw stack; no guessed pointer scan)
+source.initialization-and-prefixes-once: pass (debugger evidence is separate from restored memory)
+source.normal-return-chain: pass (source ordinary call chain and captured receipt)
+source.input-clean-close: pass (unmodified R304 lifecycle releases state and restores both imports before checkpoint/exit)
+source-CHANGED.actual-GDI: pass (unchanged PrintWindow helper checks actual target paint and counter pixels)
+source.actual-EDIT-changed: pass (real WM_CHAR changed native EDIT and generated undo after S0)
+source.terminated-before-restore: pass (confirmed process exit before new carrier)
+restored.CET-and-CFG-enabled: pass (read actual process policies; no mitigation policy is modified)
+new-PID-TID: pass (new native GUI thread and process)
+negative.explicit-rejection: pass (resource.restore.readback error=23; unsupported state or failed reconstruction not published)
+omit-modify-1.actual-verdict-and-error-status=True
+omit-modify-1.S0-owner-GUI-thread-query=True
+omit-modify-1.source-changed-owner-GUI-thread-query=True
+omit-modify-1.target-prepared-owner-GUI-thread-query=True
+omit-modify-1.CET-CFG-stay-enabled=True
+omit-modify-1.native-source-state-supported-with-empty-undo=True
+omit-modify-1.resource-capture-before-debug-freeze=True
+omit-modify-1.source-real-edit-changes-after-S0=True
+omit-modify-1.source-exited-before-new-PID-TID=True
+omit-modify-1.omission-refused-before-execution=True
+omit-modify-1.actual-native-field-mismatch-recorded=True
+omit-modify-1.failed-case-not-published=True
+omit-modify-1.owned-process-and-desktop-cleanup=True
+source.CET-and-CFG-enabled: pass (read actual process policies; no mitigation policy is modified)
+source.input-clean-close: pass (unmodified R304 lifecycle releases state and restores both imports before checkpoint/exit)
+source.native-EDIT-preconditions: pass (random native EDIT initialized by source business only; Home/Shift+End select text; capture does not clear undo)
+source-S0.actual-GDI: pass (unchanged PrintWindow helper checks actual target paint and counter pixels)
+source.native-unwind-sees-three-CPP-frames: pass (Windows unwind metadata independently walks leaf/middle/outer from captured raw stack; no guessed pointer scan)
+source.initialization-and-prefixes-once: pass (debugger evidence is separate from restored memory)
+source.normal-return-chain: pass (source ordinary call chain and captured receipt)
+source.input-clean-close: pass (unmodified R304 lifecycle releases state and restores both imports before checkpoint/exit)
+source-CHANGED.actual-GDI: pass (unchanged PrintWindow helper checks actual target paint and counter pixels)
+source.actual-EDIT-changed: pass (real WM_CHAR changed native EDIT and generated undo after S0)
+source.terminated-before-restore: pass (confirmed process exit before new carrier)
+restored.CET-and-CFG-enabled: pass (read actual process policies; no mitigation policy is modified)
+new-PID-TID: pass (new native GUI thread and process)
+negative.explicit-rejection: pass (resource.restore.readback error=23; unsupported state or failed reconstruction not published)
+omit-focus-1.actual-verdict-and-error-status=True
+omit-focus-1.S0-owner-GUI-thread-query=True
+omit-focus-1.source-changed-owner-GUI-thread-query=True
+omit-focus-1.target-prepared-owner-GUI-thread-query=True
+omit-focus-1.CET-CFG-stay-enabled=True
+omit-focus-1.native-source-state-supported-with-empty-undo=True
+omit-focus-1.resource-capture-before-debug-freeze=True
+omit-focus-1.source-real-edit-changes-after-S0=True
+omit-focus-1.source-exited-before-new-PID-TID=True
+omit-focus-1.omission-refused-before-execution=True
+omit-focus-1.actual-native-field-mismatch-recorded=True
+omit-focus-1.failed-case-not-published=True
+omit-focus-1.owned-process-and-desktop-cleanup=True
+old-experiments-and-original-evidence-unchanged=True
+Exception: D:\focus-views\experiments\r3-005b-001\test.ps1:120
+Line |
+ 120 |  … -not $okay){throw 'R3-005b-001 evidence mismatch; preserve raw logs a …
+     |                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     | R3-005b-001 evidence mismatch; preserve raw logs and images.

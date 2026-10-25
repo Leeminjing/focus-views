@@ -1,0 +1,621 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "name": "sequential-PID-reuse",
+      "expected": true,
+      "passed": true,
+      "audit": {
+        "passed": true,
+        "issues": [],
+        "instances": [
+          {
+            "instance": 1,
+            "pid": 7,
+            "createTick": 1,
+            "exitTick": 2
+          },
+          {
+            "instance": 2,
+            "pid": 7,
+            "createTick": 3,
+            "exitTick": 4
+          }
+        ],
+        "closedDesktops": 0
+      }
+    },
+    {
+      "name": "overlap-rejected",
+      "expected": false,
+      "passed": true,
+      "audit": {
+        "passed": false,
+        "issues": [
+          "overlapping PID 7"
+        ],
+        "instances": [
+          {
+            "instance": 1,
+            "pid": 7,
+            "createTick": 1,
+            "exitTick": 2
+          }
+        ],
+        "closedDesktops": 0
+      }
+    },
+    {
+      "name": "missing-exit-rejected",
+      "expected": false,
+      "passed": true,
+      "audit": {
+        "passed": false,
+        "issues": [
+          "missing exit PID 7"
+        ],
+        "instances": [
+          {
+            "instance": 1,
+            "pid": 7,
+            "createTick": 1,
+            "exitTick": null
+          }
+        ],
+        "closedDesktops": 0
+      }
+    },
+    {
+      "name": "duplicate-exit-rejected",
+      "expected": false,
+      "passed": true,
+      "audit": {
+        "passed": false,
+        "issues": [
+          "unmatched/duplicate exit PID 7"
+        ],
+        "instances": [
+          {
+            "instance": 1,
+            "pid": 7,
+            "createTick": 1,
+            "exitTick": 2
+          }
+        ],
+        "closedDesktops": 0
+      }
+    },
+    {
+      "name": "time-reversed-rejected",
+      "expected": false,
+      "passed": true,
+      "audit": {
+        "passed": false,
+        "issues": [
+          "reversed time PID 7"
+        ],
+        "instances": [
+          {
+            "instance": 1,
+            "pid": 7,
+            "createTick": 1,
+            "exitTick": 0
+          }
+        ],
+        "closedDesktops": 0
+      }
+    },
+    {
+      "name": "Desktop-leak-rejected",
+      "expected": false,
+      "passed": true,
+      "audit": {
+        "passed": false,
+        "issues": [
+          "unclosed Desktop owned"
+        ],
+        "instances": [],
+        "closedDesktops": 0
+      }
+    },
+    {
+      "name": "wrong-Desktop-close-rejected",
+      "expected": false,
+      "passed": true,
+      "audit": {
+        "passed": false,
+        "issues": [
+          "unmatched Desktop close other",
+          "unclosed Desktop owned"
+        ],
+        "instances": [],
+        "closedDesktops": 0
+      }
+    },
+    {
+      "name": "Desktop-failed-close-rejected",
+      "expected": false,
+      "passed": true,
+      "audit": {
+        "passed": false,
+        "issues": [
+          "Desktop close failed owned"
+        ],
+        "instances": [],
+        "closedDesktops": 1
+      }
+    },
+    {
+      "name": "historical-legacy-assertion-reproduced-red",
+      "passed": true
+    },
+    {
+      "name": "historical-76-instances-cleaned-in-order",
+      "expected": true,
+      "passed": true,
+      "audit": {
+        "passed": true,
+        "issues": [],
+        "instances": [
+          {
+            "instance": 1,
+            "pid": 30056,
+            "createTick": 9204265,
+            "exitTick": 9204765
+          },
+          {
+            "instance": 2,
+            "pid": 32644,
+            "createTick": 9204296,
+            "exitTick": 9204375
+          },
+          {
+            "instance": 3,
+            "pid": 33452,
+            "createTick": 9204375,
+            "exitTick": 9204390
+          },
+          {
+            "instance": 4,
+            "pid": 16076,
+            "createTick": 9204390,
+            "exitTick": 9204406
+          },
+          {
+            "instance": 5,
+            "pid": 7776,
+            "createTick": 9204406,
+            "exitTick": 9204453
+          },
+          {
+            "instance": 6,
+            "pid": 28488,
+            "createTick": 9204453,
+            "exitTick": 9204484
+          },
+          {
+            "instance": 7,
+            "pid": 43800,
+            "createTick": 9204500,
+            "exitTick": 9204609
+          },
+          {
+            "instance": 8,
+            "pid": 11312,
+            "createTick": 9204609,
+            "exitTick": 9204640
+          },
+          {
+            "instance": 9,
+            "pid": 40356,
+            "createTick": 9204640,
+            "exitTick": 9204671
+          },
+          {
+            "instance": 10,
+            "pid": 39604,
+            "createTick": 9204671,
+            "exitTick": 9204703
+          },
+          {
+            "instance": 11,
+            "pid": 13792,
+            "createTick": 9204703,
+            "exitTick": 9204750
+          },
+          {
+            "instance": 12,
+            "pid": 5340,
+            "createTick": 9204765,
+            "exitTick": 9207468
+          },
+          {
+            "instance": 13,
+            "pid": 33688,
+            "createTick": 9204796,
+            "exitTick": 9204812
+          },
+          {
+            "instance": 14,
+            "pid": 5756,
+            "createTick": 9204812,
+            "exitTick": 9204843
+          },
+          {
+            "instance": 15,
+            "pid": 40272,
+            "createTick": 9204859,
+            "exitTick": 9204875
+          },
+          {
+            "instance": 16,
+            "pid": 13676,
+            "createTick": 9204875,
+            "exitTick": 9204937
+          },
+          {
+            "instance": 17,
+            "pid": 12600,
+            "createTick": 9204937,
+            "exitTick": 9207468
+          },
+          {
+            "instance": 18,
+            "pid": 24224,
+            "createTick": 9204984,
+            "exitTick": 9207406
+          },
+          {
+            "instance": 19,
+            "pid": 28800,
+            "createTick": 9205015,
+            "exitTick": 9205031
+          },
+          {
+            "instance": 20,
+            "pid": 31364,
+            "createTick": 9205046,
+            "exitTick": 9205062
+          },
+          {
+            "instance": 21,
+            "pid": 7608,
+            "createTick": 9205078,
+            "exitTick": 9205093
+          },
+          {
+            "instance": 22,
+            "pid": 34088,
+            "createTick": 9205093,
+            "exitTick": 9205140
+          },
+          {
+            "instance": 23,
+            "pid": 18000,
+            "createTick": 9205140,
+            "exitTick": 9207406
+          },
+          {
+            "instance": 24,
+            "pid": 43784,
+            "createTick": 9205156,
+            "exitTick": 9205203
+          },
+          {
+            "instance": 25,
+            "pid": 31536,
+            "createTick": 9205250,
+            "exitTick": 9205281
+          },
+          {
+            "instance": 26,
+            "pid": 36188,
+            "createTick": 9205281,
+            "exitTick": 9205312
+          },
+          {
+            "instance": 27,
+            "pid": 18224,
+            "createTick": 9205312,
+            "exitTick": 9205359
+          },
+          {
+            "instance": 28,
+            "pid": 16536,
+            "createTick": 9205359,
+            "exitTick": 9205390
+          },
+          {
+            "instance": 29,
+            "pid": 30828,
+            "createTick": 9205390,
+            "exitTick": 9205421
+          },
+          {
+            "instance": 30,
+            "pid": 42492,
+            "createTick": 9205468,
+            "exitTick": 9205500
+          },
+          {
+            "instance": 31,
+            "pid": 35080,
+            "createTick": 9205500,
+            "exitTick": 9205531
+          },
+          {
+            "instance": 32,
+            "pid": 30128,
+            "createTick": 9205531,
+            "exitTick": 9205578
+          },
+          {
+            "instance": 33,
+            "pid": 16916,
+            "createTick": 9205578,
+            "exitTick": 9205609
+          },
+          {
+            "instance": 34,
+            "pid": 42536,
+            "createTick": 9205609,
+            "exitTick": 9205640
+          },
+          {
+            "instance": 35,
+            "pid": 43792,
+            "createTick": 9205687,
+            "exitTick": 9205718
+          },
+          {
+            "instance": 36,
+            "pid": 33352,
+            "createTick": 9205718,
+            "exitTick": 9205750
+          },
+          {
+            "instance": 37,
+            "pid": 41264,
+            "createTick": 9205750,
+            "exitTick": 9205796
+          },
+          {
+            "instance": 38,
+            "pid": 41452,
+            "createTick": 9205796,
+            "exitTick": 9205828
+          },
+          {
+            "instance": 39,
+            "pid": 28616,
+            "createTick": 9205828,
+            "exitTick": 9205859
+          },
+          {
+            "instance": 40,
+            "pid": 6488,
+            "createTick": 9205906,
+            "exitTick": 9205921
+          },
+          {
+            "instance": 41,
+            "pid": 34136,
+            "createTick": 9205937,
+            "exitTick": 9205953
+          },
+          {
+            "instance": 42,
+            "pid": 35272,
+            "createTick": 9205968,
+            "exitTick": 9206000
+          },
+          {
+            "instance": 43,
+            "pid": 22060,
+            "createTick": 9206015,
+            "exitTick": 9206031
+          },
+          {
+            "instance": 44,
+            "pid": 38100,
+            "createTick": 9206046,
+            "exitTick": 9206062
+          },
+          {
+            "instance": 45,
+            "pid": 2600,
+            "createTick": 9206078,
+            "exitTick": 9206093
+          },
+          {
+            "instance": 46,
+            "pid": 12924,
+            "createTick": 9206109,
+            "exitTick": 9207359
+          },
+          {
+            "instance": 47,
+            "pid": 14660,
+            "createTick": 9206140,
+            "exitTick": 9206156
+          },
+          {
+            "instance": 48,
+            "pid": 43160,
+            "createTick": 9206171,
+            "exitTick": 9206187
+          },
+          {
+            "instance": 49,
+            "pid": 19948,
+            "createTick": 9206203,
+            "exitTick": 9206218
+          },
+          {
+            "instance": 50,
+            "pid": 31884,
+            "createTick": 9206234,
+            "exitTick": 9206265
+          },
+          {
+            "instance": 51,
+            "pid": 6184,
+            "createTick": 9206265,
+            "exitTick": 9207359
+          },
+          {
+            "instance": 52,
+            "pid": 22944,
+            "createTick": 9206296,
+            "exitTick": 9206328
+          },
+          {
+            "instance": 53,
+            "pid": 40636,
+            "createTick": 9206343,
+            "exitTick": 9206359
+          },
+          {
+            "instance": 54,
+            "pid": 6124,
+            "createTick": 9206375,
+            "exitTick": 9206390
+          },
+          {
+            "instance": 55,
+            "pid": 9492,
+            "createTick": 9206437,
+            "exitTick": 9206468
+          },
+          {
+            "instance": 56,
+            "pid": 37648,
+            "createTick": 9206468,
+            "exitTick": 9206500
+          },
+          {
+            "instance": 57,
+            "pid": 31588,
+            "createTick": 9206500,
+            "exitTick": 9206546
+          },
+          {
+            "instance": 58,
+            "pid": 16048,
+            "createTick": 9206546,
+            "exitTick": 9206578
+          },
+          {
+            "instance": 59,
+            "pid": 3680,
+            "createTick": 9206578,
+            "exitTick": 9206609
+          },
+          {
+            "instance": 60,
+            "pid": 32644,
+            "createTick": 9206656,
+            "exitTick": 9206687
+          },
+          {
+            "instance": 61,
+            "pid": 43356,
+            "createTick": 9206687,
+            "exitTick": 9206718
+          },
+          {
+            "instance": 62,
+            "pid": 39268,
+            "createTick": 9206718,
+            "exitTick": 9206765
+          },
+          {
+            "instance": 63,
+            "pid": 34076,
+            "createTick": 9206765,
+            "exitTick": 9206796
+          },
+          {
+            "instance": 64,
+            "pid": 36840,
+            "createTick": 9206796,
+            "exitTick": 9206828
+          },
+          {
+            "instance": 65,
+            "pid": 24344,
+            "createTick": 9206828,
+            "exitTick": 9206859
+          },
+          {
+            "instance": 66,
+            "pid": 29648,
+            "createTick": 9206906,
+            "exitTick": 9206937
+          },
+          {
+            "instance": 67,
+            "pid": 21968,
+            "createTick": 9206937,
+            "exitTick": 9206968
+          },
+          {
+            "instance": 68,
+            "pid": 2104,
+            "createTick": 9206968,
+            "exitTick": 9207015
+          },
+          {
+            "instance": 69,
+            "pid": 18072,
+            "createTick": 9207015,
+            "exitTick": 9207046
+          },
+          {
+            "instance": 70,
+            "pid": 37756,
+            "createTick": 9207046,
+            "exitTick": 9207078
+          },
+          {
+            "instance": 71,
+            "pid": 36036,
+            "createTick": 9207078,
+            "exitTick": 9207109
+          },
+          {
+            "instance": 72,
+            "pid": 43708,
+            "createTick": 9207109,
+            "exitTick": 9207156
+          },
+          {
+            "instance": 73,
+            "pid": 37752,
+            "createTick": 9207156,
+            "exitTick": 9207187
+          },
+          {
+            "instance": 74,
+            "pid": 43472,
+            "createTick": 9207187,
+            "exitTick": 9207234
+          },
+          {
+            "instance": 75,
+            "pid": 18996,
+            "createTick": 9207234,
+            "exitTick": 9207265
+          },
+          {
+            "instance": 76,
+            "pid": 33000,
+            "createTick": 9207265,
+            "exitTick": 9207312
+          }
+        ],
+        "closedDesktops": 4
+      }
+    }
+  ]
+}

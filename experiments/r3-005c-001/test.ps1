@@ -6,11 +6,13 @@ param(
 )
 $ErrorActionPreference='Stop'
 Set-StrictMode -Version Latest
+. (Join-Path $PSScriptRoot '../r4-001-gate-001/lifetimes.ps1')
 Add-Type -AssemblyName System.Drawing
 Add-Type -TypeDefinition 'public static class R305cReceipt { public static ulong Compute(ulong r,ulong l,ulong m,ulong o,ulong seed) { unchecked { ulong v=(r^l)+m; return ((v<<13)|(v>>51))^o^seed; } } }'
 $ResultsDir=[IO.Path]::GetFullPath($ResultsDir)
 if(Test-Path -LiteralPath $ResultsDir){throw 'Use a new ResultsDir; preserve earlier evidence.'}
 New-Item -ItemType Directory -Path $ResultsDir|Out-Null
+$caseErrors=[Collections.Generic.List[object]]::new()
 $checks=[Collections.Generic.List[object]]::new()
 $cases=[Collections.Generic.List[object]]::new()
 function Check([string]$Name,[bool]$Okay){$checks.Add([pscustomobject]@{name=$Name;passed=$Okay});Write-Output "$Name=$Okay"}
@@ -23,13 +25,15 @@ function Stable($A,$B){
  $x.nodes[1].text -eq $y.nodes[1].text -and $x.selectionStart -eq $y.selectionStart -and $x.selectionEnd -eq $y.selectionEnd -and $x.modified -eq $y.modified -and $x.canUndo -eq $y.canUndo -and $x.focus -eq $y.focus -and $x.nodes[1].hwnd -eq $y.nodes[1].hwnd -and $A.work.text -eq $B.work.text -and $A.work.seed -eq $B.work.seed -and $A.work.receipt -eq $B.work.receipt -and $A.work.clicks -eq $B.work.clicks -and $B.work.counter -ge $A.work.counter -and $A.frozen -eq 0 -and $B.frozen -eq 0 -and -not $A.pending -and -not $B.pending
 }
 $exe=Join-Path $OutDir 'r305a.exe'
-$inputs=@('controller.cpp','fixture.cpp','resources.cpp','capture.cpp','bridge.cpp','protocol.hpp','traps.asm','build.ps1','test.ps1','../r3-004/runtime.cpp','../r3-004/channel.hpp','../r3-004/iat.hpp','../r3-004/input.cpp','../r3-004/observer.cpp','../r3/protocol.hpp','../common/native.hpp','../r1/snapshot.hpp')
+$inputs=@('controller.cpp','fixture.cpp','resources.cpp','capture.cpp','bridge.cpp','protocol.hpp','traps.asm','build.ps1','test.ps1','../r3-004/runtime.cpp','../r3-004/channel.hpp','../r3-004/iat.hpp','../r3-004/input.cpp','../r3-004/observer.cpp','../r3/protocol.hpp','../common/native.hpp','../r1/snapshot.hpp','../r4-001-gate-001/launch-diagnostics.hpp','../r4-001-gate-001/courier.hpp','../r4-001-gate-001/lifetimes.ps1')
 $sources=@($inputs|ForEach-Object{[ordered]@{file=$_;sha256=(Get-FileHash -LiteralPath (Join-Path $PSScriptRoot $_)).Hash.ToLowerInvariant()}})
 $principal=[Security.Principal.WindowsPrincipal]::new([Security.Principal.WindowsIdentity]::GetCurrent())
 [ordered]@{time=(Get-Date -Format o);baseCommit=(& git -C $PSScriptRoot rev-parse HEAD);os=[Environment]::OSVersion.VersionString;architecture=$env:PROCESSOR_ARCHITECTURE;elevated=$principal.IsInRole([Security.Principal.WindowsBuiltInRole]::Administrator);sources=$sources;exeSha256=(Get-FileHash $exe).Hash.ToLowerInvariant();runtimeSha256=(Get-FileHash (Join-Path $OutDir 'runtime304.dll')).Hash.ToLowerInvariant();systemSettingsChanged=$false;manualHostTest='not_executed'}|ConvertTo-Json -Depth 6|Set-Content (Join-Path $ResultsDir 'identity.json') -Encoding utf8
 foreach($file in @('build.json','build.log','loadconfig.txt')){Copy-Item -LiteralPath (Join-Path $OutDir $file) -Destination (Join-Path $ResultsDir $file)}
 foreach($repeat in 1..$Repeats){foreach($scenario in @('AB','ABC','fail-B')){
  $label="$scenario-$repeat";$dir=Join-Path $ResultsDir $label
+ $rows=@()
+ try{
  & $exe --output $dir --scenario $scenario 2>&1|Tee-Object -FilePath (Join-Path $ResultsDir ($label+'-console.log'))
  $exit=$LASTEXITCODE;$rows=Lines (Join-Path $dir 'controller.jsonl')
  $done=@($rows|Where-Object type -eq 'experiment_complete')
@@ -140,9 +144,18 @@ foreach($repeat in 1..$Repeats){foreach($scenario in @('AB','ABC','fail-B')){
   Check "$label.$view-real-initial-EDIT-pixels-match-S0" ($total -gt 0 -and $same/[double]$total -gt 0.995 -and $ink -gt 100)
  }
  $opened=@($rows|Where-Object type -eq 'desktop_created');$closed=@($rows|Where-Object type -eq 'desktop_closed')
- Check "$label.owned-processes-and-desktops-cleaned" ($created.Count -eq $exited.Count -and @($created|Where-Object{$p=$_;@($exited|Where-Object pid -eq $p.pid).Count -ne 1}).Count -eq 0 -and $opened.Count -eq $closed.Count -and @($closed|Where-Object{-not $_.closed}).Count -eq 0 -and @($rows|Where-Object type -eq 'cleanup_error').Count -eq 0)
  Check "$label.no-SA-SB-or-R4-claim" (-not $done[0].SA_SB_restore -and -not $done[0].R3Complete -and -not $done[0].R4Started)
  $cases.Add([pscustomobject]@{scenario=$scenario;repeat=$repeat;processExit=$exit;multiViewRestorePassed=$done[0].multiViewRestorePassed;BFailureIsolated=$done[0].BFailureIsolated;publishedViews=$views;processes=$created.Count;closedDesktops=$closed.Count})
+ }catch{
+  $record=[pscustomobject]@{case=$label;error=$_.ToString();controllerLog=(Join-Path $dir 'controller.jsonl');primaryFailures=@($rows|Where-Object type -in @('experiment_failure','process_launch_failed'))}
+  $caseErrors.Add($record);$record|ConvertTo-Json -Depth 8|Set-Content (Join-Path $ResultsDir ($label+'-evidence-error.json')) -Encoding utf8
+  Check "$label.evidence-processing-completed" $false
+  $cases.Add([pscustomobject]@{scenario=$scenario;repeat=$repeat;processExit=$exit;evidenceError=$_.ToString();expectedFailure=$false})
+ }finally{
+  $audit=Test-OwnedLifetimes $rows
+  $audit|ConvertTo-Json -Depth 7|Set-Content (Join-Path $dir 'lifetime-audit.json') -Encoding utf8
+  Check "$label.owned-processes-and-desktops-cleaned" ($rows.Count -gt 0 -and $audit.passed)
+ }
 }}
 $regression='not_run'
 if(-not $SkipRegression){
@@ -151,11 +164,12 @@ if(-not $SkipRegression){
   $r=Get-Content (Join-Path $ResultsDir 'b001-regression/summary.json') -Raw|ConvertFrom-Json
   $regression=if($r.allEvidenceChecksPassed -and $r.CET002Regression -eq 'passed'){'passed'}else{'failed'}
  }catch{$regression='failed';$_|Out-String|Set-Content (Join-Path $ResultsDir 'b001-regression-error.txt')}
- Check 'unchanged-b001-and-CET002-full-regressions' ($regression -eq 'passed')
+ Check 'b001-and-CET002-full-regressions' ($regression -eq 'passed')
 }
-$old=@(& git -C $PSScriptRoot diff b156519 -- '../r1' '../r2' '../r3' '../r3-002' '../r3-003' '../r3-004' '../r3-005a' '../r3-005a-cet-001' '../r3-005a-cet-002' '../r3-005b-001' '../common')
-Check 'old-experiments-and-original-evidence-unchanged' ($old.Count -eq 0)
+$baseline=Test-GateBaseline $PSScriptRoot b156519 @('../r1','../r2','../r3','../r3-002','../r3-003','../r3-004','../r3-005a','../r3-005a-cet-001','../r3-005a-cet-002','../r3-005b-001','../common') (Get-GateAllowedSources)
+$baseline|ConvertTo-Json -Depth 5|Set-Content (Join-Path $ResultsDir 'baseline-changes.json') -Encoding utf8
+Check 'historical-evidence-and-unapproved-implementations-unchanged' $baseline.passed
 $okay=$cases.Count -eq 3*$Repeats -and @($checks|Where-Object{-not $_.passed}).Count -eq 0
-[ordered]@{allEvidenceChecksPassed=$okay;declaredConcurrentGUIViewsPassed=$okay;generalGUIRestore=$false;SA_SB_restore=$false;R3Complete=$false;R4Started=$false;checks=$checks;cases=$cases;B001AndCET002Regression=$regression;manualHostTest='not_executed'}|ConvertTo-Json -Depth 7|Set-Content (Join-Path $ResultsDir 'summary.json') -Encoding utf8
+[ordered]@{allEvidenceChecksPassed=$okay;declaredConcurrentGUIViewsPassed=$okay;generalGUIRestore=$false;SA_SB_restore=$false;R3Complete=$false;R4Started=$false;checks=$checks;cases=$cases;caseProcessingErrors=$caseErrors;B001AndCET002Regression=$regression;manualHostTest='not_executed'}|ConvertTo-Json -Depth 7|Set-Content (Join-Path $ResultsDir 'summary.json') -Encoding utf8
 if(-not $okay){throw 'R3-005c-001 evidence mismatch; preserve raw logs and images.'}
 Write-Output 'R3_005C_001_DECLARED_CONCURRENT_GUI_VIEWS_PASSED'

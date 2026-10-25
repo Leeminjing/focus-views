@@ -23,7 +23,7 @@ function Stable($A,$B){
  $x.nodes[1].text -eq $y.nodes[1].text -and $x.selectionStart -eq $y.selectionStart -and $x.selectionEnd -eq $y.selectionEnd -and $x.modified -eq $y.modified -and $x.canUndo -eq $y.canUndo -and $x.focus -eq $y.focus -and $x.nodes[1].hwnd -eq $y.nodes[1].hwnd -and $A.work.text -eq $B.work.text -and $A.work.seed -eq $B.work.seed -and $A.work.receipt -eq $B.work.receipt -and $A.work.clicks -eq $B.work.clicks -and $B.work.counter -ge $A.work.counter -and $A.frozen -eq 0 -and $B.frozen -eq 0 -and -not $A.pending -and -not $B.pending
 }
 $exe=Join-Path $OutDir 'r305a.exe'
-$inputs=@('controller.cpp','application.cpp','actions.hpp','artifacts.hpp','fixture.cpp','resources.cpp','capture.cpp','bridge.cpp','protocol.hpp','traps.asm','build.ps1','test.ps1','runtime.cpp','../r3-004/channel.hpp','../r3-004/iat.hpp','input.cpp','../r3-004/observer.cpp','../r3/protocol.hpp','../common/native.hpp','../r1/snapshot.hpp')
+$inputs=@('controller.cpp','application.cpp','actions.hpp','artifacts.hpp','fixture.cpp','resources.cpp','capture.cpp','bridge.cpp','protocol.hpp','traps.asm','build.ps1','test.ps1','runtime.cpp','../r3-004/channel.hpp','../r3-004/iat.hpp','input.cpp','../r3-004/observer.cpp','../r3/protocol.hpp','../common/native.hpp','../r1/snapshot.hpp','../r4-001-gate-001/lifetimes.ps1')
 $sources=@($inputs|ForEach-Object{[ordered]@{file=$_;sha256=(Get-FileHash -LiteralPath (Join-Path $PSScriptRoot $_)).Hash.ToLowerInvariant()}})
 $principal=[Security.Principal.WindowsPrincipal]::new([Security.Principal.WindowsIdentity]::GetCurrent())
 [ordered]@{time=(Get-Date -Format o);baseCommit=(& git -C $PSScriptRoot rev-parse HEAD);os=[Environment]::OSVersion.VersionString;architecture=$env:PROCESSOR_ARCHITECTURE;elevated=$principal.IsInRole([Security.Principal.WindowsBuiltInRole]::Administrator);sources=$sources;exeSha256=(Get-FileHash $exe).Hash.ToLowerInvariant();runtimeSha256=(Get-FileHash (Join-Path $OutDir 'runtime304.dll')).Hash.ToLowerInvariant();systemSettingsChanged=$false;manualHostTest='not_executed'}|ConvertTo-Json -Depth 6|Set-Content (Join-Path $ResultsDir 'identity.json') -Encoding utf8
@@ -216,10 +216,12 @@ if(-not $SkipRegression){
   $r=Get-Content (Join-Path $ResultsDir 'c001-regression/summary.json') -Raw|ConvertFrom-Json
   $regression=if($r.allEvidenceChecksPassed -and $r.B001AndCET002Regression -eq 'passed'){'passed'}else{'failed'}
  }catch{$regression='failed';$_|Out-String|Set-Content (Join-Path $ResultsDir 'c001-regression-error.txt')}
- Check 'unchanged-c001-full-regression-including-b001-and-CET002' ($regression -eq 'passed')
+ Check 'c001-full-regression-including-b001-and-CET002' ($regression -eq 'passed')
 }
-$old=@(& git -C $PSScriptRoot diff ac9e485 -- '../r1' '../r2' '../r3' '../r3-002' '../r3-003' '../r3-004' '../r3-005a' '../r3-005a-cet-001' '../r3-005a-cet-002' '../r3-005b-001' '../r3-005c-001' '../common')
-Check 'old-experiments-and-original-evidence-unchanged' ($old.Count -eq 0)
+. (Join-Path $PSScriptRoot '../r4-001-gate-001/lifetimes.ps1')
+$baseline=Test-GateBaseline $PSScriptRoot ac9e485 @('../r1','../r2','../r3','../r3-002','../r3-003','../r3-004','../r3-005a','../r3-005a-cet-001','../r3-005a-cet-002','../r3-005b-001','../r3-005c-001','../common') (Get-GateAllowedSources)
+$baseline|ConvertTo-Json -Depth 5|Set-Content (Join-Path $ResultsDir 'baseline-changes.json') -Encoding utf8
+Check 'historical-evidence-and-unapproved-implementations-unchanged' $baseline.passed
 $okay=$cases.Count -eq 4*$Repeats -and @($checks|Where-Object{-not $_.passed}).Count -eq 0
 [ordered]@{allEvidenceChecksPassed=$okay;declaredArtifactFlowPassed=$okay;generalGUIRestore=$false;SA_SB_restore=$false;R3Complete=$false;R4Complete=$false;checks=$checks;cases=$cases;C001Regression=$regression;manualHostTest='not_executed'}|ConvertTo-Json -Depth 7|Set-Content (Join-Path $ResultsDir 'summary.json') -Encoding utf8
 if(-not $okay){throw 'R4-001 evidence mismatch; preserve raw logs and images.'}

@@ -1,0 +1,7 @@
+source.CET-and-CFG-enabled: pass (read actual process policies; no mitigation policy is modified)
+source.native-unwind-sees-three-CPP-frames: pass (Windows unwind metadata independently walks leaf/middle/outer from captured raw stack; no guessed pointer scan)
+source.initialization-once: pass (controller independently observes original init and safe checkpoint exactly once)
+source.business-prefixes-once: pass (separate debugger-owned evidence for outer/middle/leaf computations)
+source.normal-return-chain: pass (source executes the same ordinary C++ returns before changing further)
+source.terminated-before-restore: pass (WaitForDebugEvent EXIT and signaled source process handle precede creation of new carrier)
+R305A_FAILURE CreateProcessW code=5 

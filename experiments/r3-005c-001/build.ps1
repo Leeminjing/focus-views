@@ -20,7 +20,7 @@ $SdkRoot = (Resolve-Path -LiteralPath $SdkRoot).Path
 $OutDir = [IO.Path]::GetFullPath($OutDir)
 New-Item -ItemType Directory -Path $OutDir -Force | Out-Null
 $taskCompiler = Join-Path $MsvcRoot 'bin\Hostx64\x64\cl.exe'
-$taskCompileInputs=@('controller.cpp','fixture.cpp','resources.cpp','capture.cpp','bridge.cpp','protocol.hpp','traps.asm','build.ps1','../r3-004/runtime.cpp','../r3-004/iat.hpp','../r3-004/channel.hpp','../r3-004/input.cpp','../r3-004/observer.cpp','../r3/protocol.hpp','../common/native.hpp','../r1/snapshot.hpp')
+$taskCompileInputs=@('controller.cpp','fixture.cpp','resources.cpp','capture.cpp','bridge.cpp','protocol.hpp','traps.asm','build.ps1','../r3-004/runtime.cpp','../r3-004/iat.hpp','../r3-004/channel.hpp','../r3-004/input.cpp','../r3-004/observer.cpp','../r3/protocol.hpp','../common/native.hpp','../r1/snapshot.hpp','../r4-001-gate-001/launch-diagnostics.hpp','../r4-001-gate-001/courier.hpp')
 $taskHashMaterial=@($taskCompileInputs | ForEach-Object { (Get-FileHash -LiteralPath (Join-Path $PSScriptRoot $_)).Hash }) -join ''
 $taskSha=[Security.Cryptography.SHA256]::Create()
 try { $taskBuildId=[BitConverter]::ToString($taskSha.ComputeHash([Text.Encoding]::UTF8.GetBytes($taskHashMaterial))).Replace('-','').ToLowerInvariant() } finally { $taskSha.Dispose() }
@@ -47,7 +47,7 @@ try {
         if ($LASTEXITCODE -ne 0) { throw "Compile failed: $taskUnit" }
         $taskObjects += $taskObject
     }
-    & $taskCompiler /nologo @taskObjects "/Fe$(Join-Path $OutDir 'r305a.exe')" user32.lib gdi32.lib ole32.lib windowscodecs.lib bcrypt.lib imm32.lib /link /INCREMENTAL:NO /DYNAMICBASE /NXCOMPAT /CETCOMPAT /guard:cf /DEBUG:FULL /MAP
+    & $taskCompiler /nologo @taskObjects "/Fe$(Join-Path $OutDir 'r305a.exe')" user32.lib gdi32.lib ole32.lib windowscodecs.lib bcrypt.lib imm32.lib advapi32.lib /link /INCREMENTAL:NO /DYNAMICBASE /NXCOMPAT /CETCOMPAT /guard:cf /DEBUG:FULL /MAP
     if ($LASTEXITCODE -ne 0) { throw 'Link failed' }
     [ordered]@{ time=(Get-Date -Format o); architecture='x64'; compilerVersion=(Get-Item $taskCompiler).VersionInfo.FileVersion
         msvc=$MsvcRoot; sdk=$SdkRoot; sdkVersion=$SdkVersion; runtime='static /MT'; systemSettingsChanged=$false; buildId=$taskBuildId; fixtureOptimization='/Od /Ob0'; security='/GS /guard:cf /CETCOMPAT'

@@ -1,0 +1,300 @@
+compiler-emits-normal-CALL-RET-and-GS-checks=True
+PE-contains-CFG-instrumentation-and-function-table=True
+source.CET-and-CFG-enabled: pass (read actual process policies; no mitigation policy is modified)
+source.native-unwind-sees-three-CPP-frames: pass (Windows unwind metadata independently walks leaf/middle/outer from captured raw stack; no guessed pointer scan)
+source.initialization-once: pass (controller independently observes original init and safe checkpoint exactly once)
+source.business-prefixes-once: pass (separate debugger-owned evidence for outer/middle/leaf computations)
+source.normal-return-chain: pass (source executes the same ordinary C++ returns before changing further)
+source.terminated-before-restore: pass (WaitForDebugEvent EXIT and signaled source process handle precede creation of new carrier)
+restored.CET-and-CFG-enabled: pass (read actual process policies; no mitigation policy is modified)
+new-PID: pass (different native process, source is dead)
+restored.raw-memory-restored: pass (entire data page read back equals S0 except declared HWND relocation)
+restored.raw-stack-restored: pass (entire managed stack read back equals S0 except explicitly registered live HWND references)
+restored.CPU-context-readback: pass (stopped target RIP/RSP/register and floating point control read back after SetThreadContext)
+restored.ordinary-CPP-return-chain: pass (actual leaf/middle/outer CALL/RET chain completed with restored register and volatile stack locals; structural checkpoint only, no business prefixes)
+restored.original-S0-state: pass (counter and unsaved text match S0 at continuation before next GUI iteration)
+core-1.verdict-and-exit=True
+core-1.independent-business-events-source-only=True
+core-1.actual-CET-CFG-policies-enabled=True
+core-1.source-dead-before-new-PID=True
+core-1.source-receipt-recomputed-from-raw-bytes=True
+core-1.normal-returns-match-kernel-observed-shadow-returns=True
+core-1.source-return-slot-0=True
+core-1.source-return-slot-1=True
+core-1.source-return-slot-2=True
+core-1.source-return-slot-3=True
+core-1.source-return-slot-4=True
+core-1.structural-entry-no-business-replay=True
+core-1.same-original-call-sites-and-RSP=True
+core-1.target-had-no-saved-business-data-before-restore=True
+core-1.only-declared-relocations-or-explicit-omission-in-raw-state=True
+core-1.rebuilt-chain-still-valid-after-raw-restore=True
+core-1.actual-computation-consumes-restored-memory-locals-register=True
+core-1.real-source-execution-restored=True
+core-1.minimal-run-no-windows-input-or-capture=True
+core-1.cleanup-owned-processes-and-desktops=True
+source.CET-and-CFG-enabled: pass (read actual process policies; no mitigation policy is modified)
+source.native-unwind-sees-three-CPP-frames: pass (Windows unwind metadata independently walks leaf/middle/outer from captured raw stack; no guessed pointer scan)
+source.initialization-once: pass (controller independently observes original init and safe checkpoint exactly once)
+source.business-prefixes-once: pass (separate debugger-owned evidence for outer/middle/leaf computations)
+source.normal-return-chain: pass (source executes the same ordinary C++ returns before changing further)
+source.terminated-before-restore: pass (WaitForDebugEvent EXIT and signaled source process handle precede creation of new carrier)
+restored.CET-and-CFG-enabled: pass (read actual process policies; no mitigation policy is modified)
+new-PID: pass (different native process, source is dead)
+negative.separate-failure: pass (each fault has its own case; chain mismatch rejected, state omissions finish all RETs, cookie omission triggers real /GS)
+return-mismatch-1.verdict-and-exit=True
+return-mismatch-1.independent-business-events-source-only=True
+return-mismatch-1.actual-CET-CFG-policies-enabled=True
+return-mismatch-1.source-dead-before-new-PID=True
+return-mismatch-1.source-receipt-recomputed-from-raw-bytes=True
+return-mismatch-1.normal-returns-match-kernel-observed-shadow-returns=True
+return-mismatch-1.source-return-slot-0=True
+return-mismatch-1.source-return-slot-1=True
+return-mismatch-1.source-return-slot-2=True
+return-mismatch-1.source-return-slot-3=True
+return-mismatch-1.source-return-slot-4=True
+return-mismatch-1.structural-entry-no-business-replay=True
+return-mismatch-1.actual-alternate-callsite-rejected-before-state-write=True
+return-mismatch-1.failed-case-never-published=True
+return-mismatch-1.cleanup-owned-processes-and-desktops=True
+source.CET-and-CFG-enabled: pass (read actual process policies; no mitigation policy is modified)
+source.native-unwind-sees-three-CPP-frames: pass (Windows unwind metadata independently walks leaf/middle/outer from captured raw stack; no guessed pointer scan)
+source.initialization-once: pass (controller independently observes original init and safe checkpoint exactly once)
+source.business-prefixes-once: pass (separate debugger-owned evidence for outer/middle/leaf computations)
+source.normal-return-chain: pass (source executes the same ordinary C++ returns before changing further)
+source.terminated-before-restore: pass (WaitForDebugEvent EXIT and signaled source process handle precede creation of new carrier)
+restored.CET-and-CFG-enabled: pass (read actual process policies; no mitigation policy is modified)
+new-PID: pass (different native process, source is dead)
+restored.raw-memory-restored: pass (entire data page read back equals S0 except declared HWND relocation)
+restored.raw-stack-restored: pass (entire managed stack read back equals S0 except explicitly registered live HWND references)
+restored.CPU-context-readback: pass (stopped target RIP/RSP/register and floating point control read back after SetThreadContext)
+negative.separate-failure: pass (each fault has its own case; chain mismatch rejected, state omissions finish all RETs, cookie omission triggers real /GS)
+stack-1.verdict-and-exit=True
+stack-1.independent-business-events-source-only=True
+stack-1.actual-CET-CFG-policies-enabled=True
+stack-1.source-dead-before-new-PID=True
+stack-1.source-receipt-recomputed-from-raw-bytes=True
+stack-1.normal-returns-match-kernel-observed-shadow-returns=True
+stack-1.source-return-slot-0=True
+stack-1.source-return-slot-1=True
+stack-1.source-return-slot-2=True
+stack-1.source-return-slot-3=True
+stack-1.source-return-slot-4=True
+stack-1.structural-entry-no-business-replay=True
+stack-1.same-original-call-sites-and-RSP=True
+stack-1.target-had-no-saved-business-data-before-restore=True
+stack-1.only-declared-relocations-or-explicit-omission-in-raw-state=True
+stack-1.rebuilt-chain-still-valid-after-raw-restore=True
+stack-1.actual-computation-consumes-restored-memory-locals-register=True
+stack-1.omission-not-masked-by-CET-or-early-fault=True
+stack-1.failed-case-never-published=True
+stack-1.cleanup-owned-processes-and-desktops=True
+source.CET-and-CFG-enabled: pass (read actual process policies; no mitigation policy is modified)
+source.native-unwind-sees-three-CPP-frames: pass (Windows unwind metadata independently walks leaf/middle/outer from captured raw stack; no guessed pointer scan)
+source.initialization-once: pass (controller independently observes original init and safe checkpoint exactly once)
+source.business-prefixes-once: pass (separate debugger-owned evidence for outer/middle/leaf computations)
+source.normal-return-chain: pass (source executes the same ordinary C++ returns before changing further)
+source.terminated-before-restore: pass (WaitForDebugEvent EXIT and signaled source process handle precede creation of new carrier)
+restored.CET-and-CFG-enabled: pass (read actual process policies; no mitigation policy is modified)
+new-PID: pass (different native process, source is dead)
+restored.raw-memory-restored: pass (entire data page read back equals S0 except declared HWND relocation)
+restored.raw-stack-restored: pass (entire managed stack read back equals S0 except explicitly registered live HWND references)
+restored.CPU-context-readback: pass (stopped target RIP/RSP/register and floating point control read back after SetThreadContext)
+negative.separate-failure: pass (each fault has its own case; chain mismatch rejected, state omissions finish all RETs, cookie omission triggers real /GS)
+register-1.verdict-and-exit=True
+register-1.independent-business-events-source-only=True
+register-1.actual-CET-CFG-policies-enabled=True
+register-1.source-dead-before-new-PID=True
+register-1.source-receipt-recomputed-from-raw-bytes=True
+register-1.normal-returns-match-kernel-observed-shadow-returns=True
+register-1.source-return-slot-0=True
+register-1.source-return-slot-1=True
+register-1.source-return-slot-2=True
+register-1.source-return-slot-3=True
+register-1.source-return-slot-4=True
+register-1.structural-entry-no-business-replay=True
+register-1.same-original-call-sites-and-RSP=True
+register-1.target-had-no-saved-business-data-before-restore=True
+register-1.only-declared-relocations-or-explicit-omission-in-raw-state=True
+register-1.rebuilt-chain-still-valid-after-raw-restore=True
+register-1.actual-computation-consumes-restored-memory-locals-register=True
+register-1.omission-not-masked-by-CET-or-early-fault=True
+register-1.failed-case-never-published=True
+register-1.cleanup-owned-processes-and-desktops=True
+source.CET-and-CFG-enabled: pass (read actual process policies; no mitigation policy is modified)
+source.native-unwind-sees-three-CPP-frames: pass (Windows unwind metadata independently walks leaf/middle/outer from captured raw stack; no guessed pointer scan)
+source.initialization-once: pass (controller independently observes original init and safe checkpoint exactly once)
+source.business-prefixes-once: pass (separate debugger-owned evidence for outer/middle/leaf computations)
+source.normal-return-chain: pass (source executes the same ordinary C++ returns before changing further)
+source.terminated-before-restore: pass (WaitForDebugEvent EXIT and signaled source process handle precede creation of new carrier)
+restored.CET-and-CFG-enabled: pass (read actual process policies; no mitigation policy is modified)
+new-PID: pass (different native process, source is dead)
+restored.raw-memory-restored: pass (entire data page read back equals S0 except declared HWND relocation)
+restored.raw-stack-restored: pass (entire managed stack read back equals S0 except explicitly registered live HWND references)
+restored.CPU-context-readback: pass (stopped target RIP/RSP/register and floating point control read back after SetThreadContext)
+negative.separate-failure: pass (each fault has its own case; chain mismatch rejected, state omissions finish all RETs, cookie omission triggers real /GS)
+memory-1.verdict-and-exit=True
+memory-1.independent-business-events-source-only=True
+memory-1.actual-CET-CFG-policies-enabled=True
+memory-1.source-dead-before-new-PID=True
+memory-1.source-receipt-recomputed-from-raw-bytes=True
+memory-1.normal-returns-match-kernel-observed-shadow-returns=True
+memory-1.source-return-slot-0=True
+memory-1.source-return-slot-1=True
+memory-1.source-return-slot-2=True
+memory-1.source-return-slot-3=True
+memory-1.source-return-slot-4=True
+memory-1.structural-entry-no-business-replay=True
+memory-1.same-original-call-sites-and-RSP=True
+memory-1.target-had-no-saved-business-data-before-restore=True
+memory-1.only-declared-relocations-or-explicit-omission-in-raw-state=True
+memory-1.rebuilt-chain-still-valid-after-raw-restore=True
+memory-1.actual-computation-consumes-restored-memory-locals-register=True
+memory-1.omission-not-masked-by-CET-or-early-fault=True
+memory-1.failed-case-never-published=True
+memory-1.cleanup-owned-processes-and-desktops=True
+source.CET-and-CFG-enabled: pass (read actual process policies; no mitigation policy is modified)
+source.native-unwind-sees-three-CPP-frames: pass (Windows unwind metadata independently walks leaf/middle/outer from captured raw stack; no guessed pointer scan)
+source.initialization-once: pass (controller independently observes original init and safe checkpoint exactly once)
+source.business-prefixes-once: pass (separate debugger-owned evidence for outer/middle/leaf computations)
+source.normal-return-chain: pass (source executes the same ordinary C++ returns before changing further)
+source.terminated-before-restore: pass (WaitForDebugEvent EXIT and signaled source process handle precede creation of new carrier)
+restored.CET-and-CFG-enabled: pass (read actual process policies; no mitigation policy is modified)
+new-PID: pass (different native process, source is dead)
+restored.raw-memory-restored: pass (entire data page read back equals S0 except declared HWND relocation)
+restored.raw-stack-restored: pass (entire managed stack read back equals S0 except explicitly registered live HWND references)
+restored.CPU-context-readback: pass (stopped target RIP/RSP/register and floating point control read back after SetThreadContext)
+negative.separate-failure: pass (each fault has its own case; chain mismatch rejected, state omissions finish all RETs, cookie omission triggers real /GS)
+cookie-1.verdict-and-exit=True
+cookie-1.independent-business-events-source-only=True
+cookie-1.actual-CET-CFG-policies-enabled=True
+cookie-1.source-dead-before-new-PID=True
+cookie-1.source-receipt-recomputed-from-raw-bytes=True
+cookie-1.normal-returns-match-kernel-observed-shadow-returns=True
+cookie-1.source-return-slot-0=True
+cookie-1.source-return-slot-1=True
+cookie-1.source-return-slot-2=True
+cookie-1.source-return-slot-3=True
+cookie-1.source-return-slot-4=True
+cookie-1.structural-entry-no-business-replay=True
+cookie-1.same-original-call-sites-and-RSP=True
+cookie-1.target-had-no-saved-business-data-before-restore=True
+cookie-1.only-declared-relocations-or-explicit-omission-in-raw-state=True
+cookie-1.rebuilt-chain-still-valid-after-raw-restore=True
+cookie-1.GS-really-rejects-foreign-cookie=True
+cookie-1.failed-case-never-published=True
+cookie-1.cleanup-owned-processes-and-desktops=True
+source.CET-and-CFG-enabled: pass (read actual process policies; no mitigation policy is modified)
+source.input-clean-close: pass (unmodified R304 lifecycle releases state and restores both imports before checkpoint/exit)
+source-S0.actual-GDI: pass (unchanged PrintWindow helper checks actual target paint and counter pixels)
+source.native-unwind-sees-three-CPP-frames: pass (Windows unwind metadata independently walks leaf/middle/outer from captured raw stack; no guessed pointer scan)
+source.initialization-once: pass (controller independently observes original init and safe checkpoint exactly once)
+source.business-prefixes-once: pass (separate debugger-owned evidence for outer/middle/leaf computations)
+source.normal-return-chain: pass (source executes the same ordinary C++ returns before changing further)
+source-CHANGED.actual-GDI: pass (unchanged PrintWindow helper checks actual target paint and counter pixels)
+source.terminated-before-restore: pass (WaitForDebugEvent EXIT and signaled source process handle precede creation of new carrier)
+restored.CET-and-CFG-enabled: pass (read actual process policies; no mitigation policy is modified)
+new-PID: pass (different native process, source is dead)
+restored.raw-memory-restored: pass (entire data page read back equals S0 except declared HWND relocation)
+restored.raw-stack-restored: pass (entire managed stack read back equals S0 except explicitly registered live HWND references)
+restored.CPU-context-readback: pass (stopped target RIP/RSP/register and floating point control read back after SetThreadContext)
+restored.ordinary-CPP-return-chain: pass (actual leaf/middle/outer CALL/RET chain completed with restored register and volatile stack locals; structural checkpoint only, no business prefixes)
+restored.original-S0-state: pass (counter and unsaved text match S0 at continuation before next GUI iteration)
+restored-S0.actual-GDI: pass (unchanged PrintWindow helper checks actual target paint and counter pixels)
+restored.real-GUI-input: pass (same supported character/left-button transport reaches restored native window and application procedures)
+restored.input-clean-close: pass (unmodified R304 lifecycle releases state and restores both imports before checkpoint/exit)
+restored-after-input.actual-GDI: pass (unchanged PrintWindow helper checks actual target paint and counter pixels)
+gui-1.verdict-and-exit=True
+gui-1.independent-business-events-source-only=True
+gui-1.actual-CET-CFG-policies-enabled=True
+gui-1.source-dead-before-new-PID=True
+gui-1.source-receipt-recomputed-from-raw-bytes=True
+gui-1.normal-returns-match-kernel-observed-shadow-returns=True
+gui-1.source-return-slot-0=True
+gui-1.source-return-slot-1=True
+gui-1.source-return-slot-2=True
+gui-1.source-return-slot-3=True
+gui-1.source-return-slot-4=True
+gui-1.structural-entry-no-business-replay=True
+gui-1.same-original-call-sites-and-RSP=True
+gui-1.target-had-no-saved-business-data-before-restore=True
+gui-1.HWND-preimage-1859720839208=True
+gui-1.HWND-preimage-1859723001296=True
+gui-1.HWND-preimage-1859723001184=True
+gui-1.only-declared-relocations-or-explicit-omission-in-raw-state=True
+gui-1.rebuilt-chain-still-valid-after-raw-restore=True
+gui-1.actual-computation-consumes-restored-memory-locals-register=True
+gui-1.real-source-execution-restored=True
+gui-1.source-S0-real-GDI-and-PNG=True
+gui-1.source-CHANGED-real-GDI-and-PNG=True
+gui-1.restored-S0-real-GDI-and-PNG=True
+gui-1.restored-after-input-real-GDI-and-PNG=True
+gui-1.restored-native-window-input-and-rendering=True
+gui-1.cleanup-owned-processes-and-desktops=True
+source.CET-and-CFG-enabled: pass (read actual process policies; no mitigation policy is modified)
+source.native-unwind-sees-three-CPP-frames: pass (Windows unwind metadata independently walks leaf/middle/outer from captured raw stack; no guessed pointer scan)
+source.initialization-once: pass (controller independently observes original init and safe checkpoint exactly once)
+source.business-prefixes-once: pass (separate debugger-owned evidence for outer/middle/leaf computations)
+source.normal-return-chain: pass (source executes the same ordinary C++ returns before changing further)
+source.terminated-before-restore: pass (WaitForDebugEvent EXIT and signaled source process handle precede creation of new carrier)
+restored.CET-and-CFG-enabled: pass (read actual process policies; no mitigation policy is modified)
+new-PID: pass (different native process, source is dead)
+restored.raw-memory-restored: pass (entire data page read back equals S0 except declared HWND relocation)
+restored.raw-stack-restored: pass (entire managed stack read back equals S0 except explicitly registered live HWND references)
+restored.CPU-context-readback: pass (stopped target RIP/RSP/register and floating point control read back after SetThreadContext)
+restored.ordinary-CPP-return-chain: pass (actual leaf/middle/outer CALL/RET chain completed with restored register and volatile stack locals; structural checkpoint only, no business prefixes)
+restored.original-S0-state: pass (counter and unsaved text match S0 at continuation before next GUI iteration)
+core-2.verdict-and-exit=True
+core-2.independent-business-events-source-only=True
+core-2.actual-CET-CFG-policies-enabled=True
+core-2.source-dead-before-new-PID=True
+core-2.source-receipt-recomputed-from-raw-bytes=True
+core-2.normal-returns-match-kernel-observed-shadow-returns=True
+core-2.source-return-slot-0=True
+core-2.source-return-slot-1=True
+core-2.source-return-slot-2=True
+core-2.source-return-slot-3=True
+core-2.source-return-slot-4=True
+core-2.structural-entry-no-business-replay=True
+core-2.same-original-call-sites-and-RSP=True
+core-2.target-had-no-saved-business-data-before-restore=True
+core-2.only-declared-relocations-or-explicit-omission-in-raw-state=True
+core-2.rebuilt-chain-still-valid-after-raw-restore=True
+core-2.actual-computation-consumes-restored-memory-locals-register=True
+core-2.real-source-execution-restored=True
+core-2.minimal-run-no-windows-input-or-capture=True
+core-2.cleanup-owned-processes-and-desktops=True
+source.CET-and-CFG-enabled: pass (read actual process policies; no mitigation policy is modified)
+source.native-unwind-sees-three-CPP-frames: pass (Windows unwind metadata independently walks leaf/middle/outer from captured raw stack; no guessed pointer scan)
+source.initialization-once: pass (controller independently observes original init and safe checkpoint exactly once)
+source.business-prefixes-once: pass (separate debugger-owned evidence for outer/middle/leaf computations)
+source.normal-return-chain: pass (source executes the same ordinary C++ returns before changing further)
+source.terminated-before-restore: pass (WaitForDebugEvent EXIT and signaled source process handle precede creation of new carrier)
+restored.CET-and-CFG-enabled: pass (read actual process policies; no mitigation policy is modified)
+new-PID: pass (different native process, source is dead)
+negative.separate-failure: pass (each fault has its own case; chain mismatch rejected, state omissions finish all RETs, cookie omission triggers real /GS)
+return-mismatch-2.verdict-and-exit=True
+return-mismatch-2.independent-business-events-source-only=True
+return-mismatch-2.actual-CET-CFG-policies-enabled=True
+return-mismatch-2.source-dead-before-new-PID=True
+return-mismatch-2.source-receipt-recomputed-from-raw-bytes=True
+return-mismatch-2.normal-returns-match-kernel-observed-shadow-returns=True
+return-mismatch-2.source-return-slot-0=True
+return-mismatch-2.source-return-slot-1=True
+return-mismatch-2.source-return-slot-2=True
+return-mismatch-2.source-return-slot-3=True
+return-mismatch-2.source-return-slot-4=True
+return-mismatch-2.structural-entry-no-business-replay=True
+return-mismatch-2.actual-alternate-callsite-rejected-before-state-write=True
+return-mismatch-2.failed-case-never-published=True
+return-mismatch-2.cleanup-owned-processes-and-desktops=True
+source.CET-and-CFG-enabled: pass (read actual process policies; no mitigation policy is modified)
+source.native-unwind-sees-three-CPP-frames: pass (Windows unwind metadata independently walks leaf/middle/outer from captured raw stack; no guessed pointer scan)
+source.initialization-once: pass (controller independently observes original init and safe checkpoint exactly once)
+source.business-prefixes-once: pass (separate debugger-owned evidence for outer/middle/leaf computations)
+source.normal-return-chain: pass (source executes the same ordinary C++ returns before changing further)
+source.terminated-before-restore: pass (WaitForDebugEvent EXIT and signaled source process handle precede creation of new carrier)
+R305A_FAILURE CreateProcessW code=5 
+stack-2.verdict-and-exit=False
+stack-2.independent-business-events-source-only=True
+stack-2.actual-CET-CFG-policies-enabled=False

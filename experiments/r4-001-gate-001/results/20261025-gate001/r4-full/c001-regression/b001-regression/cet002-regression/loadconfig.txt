@@ -1,0 +1,917 @@
+Microsoft (R) COFF/PE Dumper Version 14.44.35229.0
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+
+Dump of file D:\focus-views\experiments\r3-005a-cet-002\out\r305a.exe
+
+File Type: EXECUTABLE IMAGE
+
+  Section contains the following load config:
+
+            00000140 size
+                   0 time date stamp
+                0.00 Version
+                   0 GlobalFlags Clear
+                   0 GlobalFlags Set
+                   0 Critical Section Default Timeout
+                   0 Decommit Free Block Threshold
+                   0 Decommit Total Free Threshold
+    0000000000000000 Lock Prefix Table
+                   0 Maximum Allocation Size
+                   0 Virtual Memory Threshold
+                   0 Process Affinity Mask
+                   0 Process Heap Flags
+                   0 CSD Version
+                0000 Dependent Load Flag
+    0000000000000000 Edit List
+    00000001401287C0 Security Cookie
+    00000001400F6678 Guard CF address of check-function pointer
+    00000001400F6688 Guard CF address of dispatch-function pointer
+    00000001400F67A8 Guard CF function table
+                 1FD Guard CF function count
+            10017500 Guard Flags
+                       CF instrumented
+                       FID table present
+                       Protect delayload IAT
+                       Delayload IAT in its own section
+                       Export suppression info present
+                       Long jump target table present
+                0000 Code Integrity Flags
+                0000 Code Integrity Catalog
+            00000000 Code Integrity Catalog Offset
+            00000000 Code Integrity Reserved
+    00000001400F719C Guard CF address taken IAT entry table
+                   1 Guard CF address taken IAT entry count
+    0000000000000000 Guard CF long jump target table
+                   0 Guard CF long jump target count
+    0000000000000000 Dynamic value relocation table
+    0000000000000000 Hybrid metadata pointer
+    0000000000000000 Guard RF address of failure-function
+    0000000000000000 Guard RF address of failure-function pointer
+            00000000 Dynamic value relocation table offset
+                0000 Dynamic value relocation table section
+                0000 Reserved2
+    0000000000000000 Guard RF address of stack pointer verification function pointer
+            00000000 Hot patching table offset
+                0000 Reserved3
+    0000000000000000 Enclave configuration pointer
+    0000000140110CB4 Volatile metadata pointer
+    0000000000000000 Guard EH continuation table
+                   0 Guard EH continuation count
+    00000001400F6680 Guard XFG address of check-function pointer
+    00000001400F6690 Guard XFG address of dispatch-function pointer
+    00000001400F6698 Guard XFG address of dispatch-table-function pointer
+    00000001400F66A0 CastGuard OS determined failure mode
+    00000001400F66A8 Guard memcpy function pointer
+
+    Guard CF Function Table
+
+          Address
+          --------
+           0000000140001000
+           0000000140001070
+           0000000140001090
+           00000001400010C0
+           00000001400010E0
+           0000000140001100
+           0000000140001110
+           0000000140001120
+           0000000140001150
+           00000001400011A0
+           00000001400011F0
+           0000000140001210
+           0000000140001220
+           0000000140001259  InitTrap
+           000000014000129E  OuterWorkTrap
+           00000001400012A0  MiddleWorkTrap
+           00000001400012A2  LeafWorkTrap
+           00000001400012A4  ChangedTrap
+           00000001400012A6  ContinuationTrap
+           00000001400012A8  RejectTrap
+           0000000140010CC0  ??1?$basic_string@_WU?$char_traits@_W@std@@V?$allocator@_W@2@@std@@QEAA@XZ (public: __cdecl std::basic_string<wchar_t,struct std::char_traits<wchar_t>,class std::allocator<wchar_t> >::~basic_string<wchar_t,struct std::char_traits<wchar_t>,class std::allocator<wchar_t> >(void))
+           0000000140013DE0  ??_E?$basic_ifstream@DU?$char_traits@D@std@@@std@@$4PPPPPPPM@A@EAAPEAXI@Z ([thunk]:public: virtual void * __cdecl std::basic_ifstream<char,struct std::char_traits<char> >::`vector deleting destructor'`vtordisp{4294967292,0}' (unsigned int))
+           0000000140013DF0  ??_E?$basic_istream@DU?$char_traits@D@std@@@std@@$4PPPPPPPM@A@EAAPEAXI@Z ([thunk]:public: virtual void * __cdecl std::basic_istream<char,struct std::char_traits<char> >::`vector deleting destructor'`vtordisp{4294967292,0}' (unsigned int))
+           0000000140013E00  ??_E?$basic_ofstream@DU?$char_traits@D@std@@@std@@$4PPPPPPPM@A@EAAPEAXI@Z ([thunk]:public: virtual void * __cdecl std::basic_ofstream<char,struct std::char_traits<char> >::`vector deleting destructor'`vtordisp{4294967292,0}' (unsigned int))
+           0000000140013E10  ??_E?$basic_ostream@DU?$char_traits@D@std@@@std@@$4PPPPPPPM@A@EAAPEAXI@Z ([thunk]:public: virtual void * __cdecl std::basic_ostream<char,struct std::char_traits<char> >::`vector deleting destructor'`vtordisp{4294967292,0}' (unsigned int))
+           0000000140013E20  ??_E?$basic_ostringstream@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@$4PPPPPPPM@A@EAAPEAXI@Z ([thunk]:public: virtual void * __cdecl std::basic_ostringstream<char,struct std::char_traits<char>,class std::allocator<char> >::`vector deleting destructor'`vtordisp{4294967292,0}' (unsigned int))
+           0000000140013E30  ??_E?$basic_filebuf@DU?$char_traits@D@std@@@std@@UEAAPEAXI@Z (public: virtual void * __cdecl std::basic_filebuf<char,struct std::char_traits<char> >::`vector deleting destructor'(unsigned int))
+           0000000140013EB0  ??_E?$basic_ios@DU?$char_traits@D@std@@@std@@UEAAPEAXI@Z (public: virtual void * __cdecl std::basic_ios<char,struct std::char_traits<char> >::`vector deleting destructor'(unsigned int))
+           0000000140014050  ??_E?$basic_streambuf@DU?$char_traits@D@std@@@std@@UEAAPEAXI@Z (public: virtual void * __cdecl std::basic_streambuf<char,struct std::char_traits<char> >::`vector deleting destructor'(unsigned int))
+           00000001400140D0  ??_E?$basic_stringbuf@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@UEAAPEAXI@Z (public: virtual void * __cdecl std::basic_stringbuf<char,struct std::char_traits<char>,class std::allocator<char> >::`vector deleting destructor'(unsigned int))
+           0000000140014120  ??_E?$codecvt@DDU_Mbstatet@@@std@@MEAAPEAXI@Z (protected: virtual void * __cdecl std::codecvt<char,char,struct _Mbstatet>::`vector deleting destructor'(unsigned int))
+           0000000140014150  ??_E?$ctype@D@std@@MEAAPEAXI@Z (protected: virtual void * __cdecl std::ctype<char>::`vector deleting destructor'(unsigned int))
+           00000001400141C0  ??_E?$num_put@DV?$ostreambuf_iterator@DU?$char_traits@D@std@@@std@@@std@@MEAAPEAXI@Z (protected: virtual void * __cdecl std::num_put<char,class std::ostreambuf_iterator<char,struct std::char_traits<char> > >::`vector deleting destructor'(unsigned int))
+           00000001400141F0  ??_E?$numpunct@D@std@@MEAAPEAXI@Z (protected: virtual void * __cdecl std::numpunct<char>::`vector deleting destructor'(unsigned int))
+           0000000140014310  ??_EError@r3@@UEAAPEAXI@Z (public: virtual void * __cdecl r3::Error::`vector deleting destructor'(unsigned int))
+           0000000140014360  ??_EFailure@native@@UEAAPEAXI@Z (public: virtual void * __cdecl native::Failure::`vector deleting destructor'(unsigned int))
+           00000001400144E0  ??_E_Facet_base@std@@UEAAPEAXI@Z (public: virtual void * __cdecl std::_Facet_base::`vector deleting destructor'(unsigned int))
+           0000000140014510  ??_E_Generic_error_category@std@@UEAAPEAXI@Z (public: virtual void * __cdecl std::_Generic_error_category::`vector deleting destructor'(unsigned int))
+           0000000140014540  ??_E_Iostream_error_category2@std@@UEAAPEAXI@Z (public: virtual void * __cdecl std::_Iostream_error_category2::`vector deleting destructor'(unsigned int))
+           0000000140014570  ??_E_System_error@std@@UEAAPEAXI@Z (public: virtual void * __cdecl std::_System_error::`vector deleting destructor'(unsigned int))
+           00000001400145C0  ??_E_System_error_category@std@@UEAAPEAXI@Z (public: virtual void * __cdecl std::_System_error_category::`vector deleting destructor'(unsigned int))
+           00000001400145F0  ??_Ebad_alloc@std@@UEAAPEAXI@Z (public: virtual void * __cdecl std::bad_alloc::`vector deleting destructor'(unsigned int))
+           0000000140014640  ??_Ebad_array_new_length@std@@UEAAPEAXI@Z (public: virtual void * __cdecl std::bad_array_new_length::`vector deleting destructor'(unsigned int))
+           0000000140014690  ??_Ebad_cast@std@@UEAAPEAXI@Z (public: virtual void * __cdecl std::bad_cast::`vector deleting destructor'(unsigned int))
+           00000001400146E0  ??_Ecodecvt_base@std@@UEAAPEAXI@Z (public: virtual void * __cdecl std::codecvt_base::`vector deleting destructor'(unsigned int))
+           0000000140014710  ??_Ectype_base@std@@UEAAPEAXI@Z (public: virtual void * __cdecl std::ctype_base::`vector deleting destructor'(unsigned int))
+           0000000140014740  ??_Eexception@std@@UEAAPEAXI@Z (public: virtual void * __cdecl std::exception::`vector deleting destructor'(unsigned int))
+           0000000140014790  ??_Efacet@locale@std@@MEAAPEAXI@Z (protected: virtual void * __cdecl std::locale::facet::`vector deleting destructor'(unsigned int))
+           00000001400147C0  ??_Efailure@ios_base@std@@UEAAPEAXI@Z (public: virtual void * __cdecl std::ios_base::failure::`vector deleting destructor'(unsigned int))
+           0000000140014810  ??_Efilesystem_error@filesystem@std@@UEAAPEAXI@Z (public: virtual void * __cdecl std::filesystem::filesystem_error::`vector deleting destructor'(unsigned int))
+           0000000140014870  ??_Eios_base@std@@UEAAPEAXI@Z (public: virtual void * __cdecl std::ios_base::`vector deleting destructor'(unsigned int))
+           0000000140014920  ??_Eruntime_error@std@@UEAAPEAXI@Z (public: virtual void * __cdecl std::runtime_error::`vector deleting destructor'(unsigned int))
+           0000000140014970  ??_Esystem_error@std@@UEAAPEAXI@Z (public: virtual void * __cdecl std::system_error::`vector deleting destructor'(unsigned int))
+           00000001400152C0
+           00000001400152E0
+           0000000140015300
+           0000000140015320
+           0000000140015340
+           0000000140015360
+           0000000140015440  ?_Decref@facet@locale@std@@UEAAPEAV_Facet_base@3@XZ (public: virtual class std::_Facet_base * __cdecl std::locale::facet::_Decref(void))
+           0000000140015450
+           0000000140015460
+           0000000140015470
+           0000000140015480
+           0000000140015490
+           00000001400154A0
+           00000001400154B0
+           00000001400154E0
+           00000001400154F0
+           0000000140015520
+           0000000140015550
+           00000001400155D0
+           0000000140015B60
+           0000000140015B70
+           0000000140015B80
+           0000000140015B90
+           0000000140015BA0
+           0000000140015BB0
+           00000001400169B0  ?_Incref@facet@locale@std@@UEAAXXZ (public: virtual void __cdecl std::locale::facet::_Incref(void))
+           0000000140017A90  ?_Lock@?$basic_filebuf@DU?$char_traits@D@std@@@std@@UEAAXXZ (public: virtual void __cdecl std::basic_filebuf<char,struct std::char_traits<char> >::_Lock(void))
+           0000000140017AB0  ?_Lock@?$basic_streambuf@DU?$char_traits@D@std@@@std@@UEAAXXZ (public: virtual void __cdecl std::basic_streambuf<char,struct std::char_traits<char> >::_Lock(void))
+           0000000140017CB0
+           0000000140017CD0
+           0000000140017CF0
+           0000000140017D10
+           0000000140017D30
+           0000000140017D50
+           00000001400188B0
+           00000001400188C0
+           00000001400188D0
+           00000001400188E0
+           00000001400188F0
+           0000000140018900
+           00000001400190E0  ?_Unlock@?$basic_filebuf@DU?$char_traits@D@std@@@std@@UEAAXXZ (public: virtual void __cdecl std::basic_filebuf<char,struct std::char_traits<char> >::_Unlock(void))
+           0000000140019100  ?_Unlock@?$basic_streambuf@DU?$char_traits@D@std@@@std@@UEAAXXZ (public: virtual void __cdecl std::basic_streambuf<char,struct std::char_traits<char> >::_Unlock(void))
+           000000014001E3D0  ?default_error_condition@_System_error_category@std@@UEBA?AVerror_condition@2@H@Z (public: virtual class std::error_condition __cdecl std::_System_error_category::default_error_condition(int)const )
+           000000014001E450  ?default_error_condition@error_category@std@@UEBA?AVerror_condition@2@H@Z (public: virtual class std::error_condition __cdecl std::error_category::default_error_condition(int)const )
+           000000014001E780  ?do_always_noconv@?$codecvt@DDU_Mbstatet@@@std@@MEBA_NXZ (protected: virtual bool __cdecl std::codecvt<char,char,struct _Mbstatet>::do_always_noconv(void)const )
+           000000014001E790  ?do_always_noconv@codecvt_base@std@@MEBA_NXZ (protected: virtual bool __cdecl std::codecvt_base::do_always_noconv(void)const )
+           000000014001E7A0  ?do_decimal_point@?$numpunct@D@std@@MEBADXZ (protected: virtual char __cdecl std::numpunct<char>::do_decimal_point(void)const )
+           000000014001E7B0  ?do_encoding@codecvt_base@std@@MEBAHXZ (protected: virtual int __cdecl std::codecvt_base::do_encoding(void)const )
+           000000014001E7C0  ?do_falsename@?$numpunct@D@std@@MEBA?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@2@XZ (protected: virtual class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > __cdecl std::numpunct<char>::do_falsename(void)const )
+           000000014001E810  ?do_grouping@?$numpunct@D@std@@MEBA?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@2@XZ (protected: virtual class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > __cdecl std::numpunct<char>::do_grouping(void)const )
+           000000014001E860  ?do_in@?$codecvt@DDU_Mbstatet@@@std@@MEBAHAEAU_Mbstatet@@PEBD1AEAPEBDPEAD3AEAPEAD@Z (protected: virtual int __cdecl std::codecvt<char,char,struct _Mbstatet>::do_in(struct _Mbstatet &,char const *,char const *,char const * &,char *,char *,char * &)const )
+           000000014001E880  ?do_length@?$codecvt@DDU_Mbstatet@@@std@@MEBAHAEAU_Mbstatet@@PEBD1_K@Z (protected: virtual int __cdecl std::codecvt<char,char,struct _Mbstatet>::do_length(struct _Mbstatet &,char const *,char const *,unsigned __int64)const )
+           000000014001E8A0  ?do_max_length@codecvt_base@std@@MEBAHXZ (protected: virtual int __cdecl std::codecvt_base::do_max_length(void)const )
+           000000014001E8B0  ?do_narrow@?$ctype@D@std@@MEBADDD@Z (protected: virtual char __cdecl std::ctype<char>::do_narrow(char,char)const )
+           000000014001E8C0  ?do_narrow@?$ctype@D@std@@MEBAPEBDPEBD0DPEAD@Z (protected: virtual char const * __cdecl std::ctype<char>::do_narrow(char const *,char const *,char,char *)const )
+           000000014001E8E0  ?do_out@?$codecvt@DDU_Mbstatet@@@std@@MEBAHAEAU_Mbstatet@@PEBD1AEAPEBDPEAD3AEAPEAD@Z (protected: virtual int __cdecl std::codecvt<char,char,struct _Mbstatet>::do_out(struct _Mbstatet &,char const *,char const *,char const * &,char *,char *,char * &)const )
+           000000014001E900  ?do_put@?$num_put@DV?$ostreambuf_iterator@DU?$char_traits@D@std@@@std@@@std@@MEBA?AV?$ostreambuf_iterator@DU?$char_traits@D@std@@@2@V32@AEAVios_base@2@DJ@Z (protected: virtual class std::ostreambuf_iterator<char,struct std::char_traits<char> > __cdecl std::num_put<char,class std::ostreambuf_iterator<char,struct std::char_traits<char> > >::do_put(class std::ostreambuf_iterator<char,struct std::char_traits<char> >,class std::ios_base &,char,long)const )
+           000000014001EA00  ?do_put@?$num_put@DV?$ostreambuf_iterator@DU?$char_traits@D@std@@@std@@@std@@MEBA?AV?$ostreambuf_iterator@DU?$char_traits@D@std@@@2@V32@AEAVios_base@2@DK@Z (protected: virtual class std::ostreambuf_iterator<char,struct std::char_traits<char> > __cdecl std::num_put<char,class std::ostreambuf_iterator<char,struct std::char_traits<char> > >::do_put(class std::ostreambuf_iterator<char,struct std::char_traits<char> >,class std::ios_base &,char,unsigned long)const )
+           000000014001EB00  ?do_put@?$num_put@DV?$ostreambuf_iterator@DU?$char_traits@D@std@@@std@@@std@@MEBA?AV?$ostreambuf_iterator@DU?$char_traits@D@std@@@2@V32@AEAVios_base@2@DN@Z (protected: virtual class std::ostreambuf_iterator<char,struct std::char_traits<char> > __cdecl std::num_put<char,class std::ostreambuf_iterator<char,struct std::char_traits<char> > >::do_put(class std::ostreambuf_iterator<char,struct std::char_traits<char> >,class std::ios_base &,char,double)const )
+           000000014001EE10  ?do_put@?$num_put@DV?$ostreambuf_iterator@DU?$char_traits@D@std@@@std@@@std@@MEBA?AV?$ostreambuf_iterator@DU?$char_traits@D@std@@@2@V32@AEAVios_base@2@DO@Z (protected: virtual class std::ostreambuf_iterator<char,struct std::char_traits<char> > __cdecl std::num_put<char,class std::ostreambuf_iterator<char,struct std::char_traits<char> > >::do_put(class std::ostreambuf_iterator<char,struct std::char_traits<char> >,class std::ios_base &,char,long double)const )
+           000000014001F120  ?do_put@?$num_put@DV?$ostreambuf_iterator@DU?$char_traits@D@std@@@std@@@std@@MEBA?AV?$ostreambuf_iterator@DU?$char_traits@D@std@@@2@V32@AEAVios_base@2@DPEBX@Z (protected: virtual class std::ostreambuf_iterator<char,struct std::char_traits<char> > __cdecl std::num_put<char,class std::ostreambuf_iterator<char,struct std::char_traits<char> > >::do_put(class std::ostreambuf_iterator<char,struct std::char_traits<char> >,class std::ios_base &,char,void const *)const )
+           000000014001F1C0  ?do_put@?$num_put@DV?$ostreambuf_iterator@DU?$char_traits@D@std@@@std@@@std@@MEBA?AV?$ostreambuf_iterator@DU?$char_traits@D@std@@@2@V32@AEAVios_base@2@D_J@Z (protected: virtual class std::ostreambuf_iterator<char,struct std::char_traits<char> > __cdecl std::num_put<char,class std::ostreambuf_iterator<char,struct std::char_traits<char> > >::do_put(class std::ostreambuf_iterator<char,struct std::char_traits<char> >,class std::ios_base &,char,__int64)const )
+           000000014001F2D0  ?do_put@?$num_put@DV?$ostreambuf_iterator@DU?$char_traits@D@std@@@std@@@std@@MEBA?AV?$ostreambuf_iterator@DU?$char_traits@D@std@@@2@V32@AEAVios_base@2@D_K@Z (protected: virtual class std::ostreambuf_iterator<char,struct std::char_traits<char> > __cdecl std::num_put<char,class std::ostreambuf_iterator<char,struct std::char_traits<char> > >::do_put(class std::ostreambuf_iterator<char,struct std::char_traits<char> >,class std::ios_base &,char,unsigned __int64)const )
+           000000014001F3E0  ?do_put@?$num_put@DV?$ostreambuf_iterator@DU?$char_traits@D@std@@@std@@@std@@MEBA?AV?$ostreambuf_iterator@DU?$char_traits@D@std@@@2@V32@AEAVios_base@2@D_N@Z (protected: virtual class std::ostreambuf_iterator<char,struct std::char_traits<char> > __cdecl std::num_put<char,class std::ostreambuf_iterator<char,struct std::char_traits<char> > >::do_put(class std::ostreambuf_iterator<char,struct std::char_traits<char> >,class std::ios_base &,char,bool)const )
+           000000014001F6E0  ?do_thousands_sep@?$numpunct@D@std@@MEBADXZ (protected: virtual char __cdecl std::numpunct<char>::do_thousands_sep(void)const )
+           000000014001F6F0  ?do_tolower@?$ctype@D@std@@MEBADD@Z (protected: virtual char __cdecl std::ctype<char>::do_tolower(char)const )
+           000000014001F700  ?do_tolower@?$ctype@D@std@@MEBAPEBDPEADPEBD@Z (protected: virtual char const * __cdecl std::ctype<char>::do_tolower(char *,char const *)const )
+           000000014001F750  ?do_toupper@?$ctype@D@std@@MEBADD@Z (protected: virtual char __cdecl std::ctype<char>::do_toupper(char)const )
+           000000014001F760  ?do_toupper@?$ctype@D@std@@MEBAPEBDPEADPEBD@Z (protected: virtual char const * __cdecl std::ctype<char>::do_toupper(char *,char const *)const )
+           000000014001F7B0  ?do_truename@?$numpunct@D@std@@MEBA?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@2@XZ (protected: virtual class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > __cdecl std::numpunct<char>::do_truename(void)const )
+           000000014001F800  ?do_unshift@?$codecvt@DDU_Mbstatet@@@std@@MEBAHAEAU_Mbstatet@@PEAD1AEAPEAD@Z (protected: virtual int __cdecl std::codecvt<char,char,struct _Mbstatet>::do_unshift(struct _Mbstatet &,char *,char *,char * &)const )
+           000000014001F810  ?do_widen@?$ctype@D@std@@MEBADD@Z (protected: virtual char __cdecl std::ctype<char>::do_widen(char)const )
+           000000014001F820  ?do_widen@?$ctype@D@std@@MEBAPEBDPEBD0PEAD@Z (protected: virtual char const * __cdecl std::ctype<char>::do_widen(char const *,char const *,char *)const )
+           000000014001FB10  ?equivalent@error_category@std@@UEBA_NAEBVerror_code@2@H@Z (public: virtual bool __cdecl std::error_category::equivalent(class std::error_code const &,int)const )
+           000000014001FB30  ?equivalent@error_category@std@@UEBA_NHAEBVerror_condition@2@@Z (public: virtual bool __cdecl std::error_category::equivalent(int,class std::error_condition const &)const )
+           0000000140020690  ?hex@std@@YAAEAVios_base@1@AEAV21@@Z (class std::ios_base & __cdecl std::hex(class std::ios_base &))
+           00000001400206B0  ?imbue@?$basic_filebuf@DU?$char_traits@D@std@@@std@@MEAAXAEBVlocale@2@@Z (protected: virtual void __cdecl std::basic_filebuf<char,struct std::char_traits<char> >::imbue(class std::locale const &))
+           00000001400206E0  ?imbue@?$basic_streambuf@DU?$char_traits@D@std@@@std@@MEAAXAEBVlocale@2@@Z (protected: virtual void __cdecl std::basic_streambuf<char,struct std::char_traits<char> >::imbue(class std::locale const &))
+           0000000140023950  ?message@_Generic_error_category@std@@UEBA?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@2@H@Z (public: virtual class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > __cdecl std::_Generic_error_category::message(int)const )
+           00000001400239B0  ?message@_Iostream_error_category2@std@@UEBA?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@2@H@Z (public: virtual class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > __cdecl std::_Iostream_error_category2::message(int)const )
+           0000000140023A70  ?message@_System_error_category@std@@UEBA?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@2@H@Z (public: virtual class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > __cdecl std::_System_error_category::message(int)const )
+           0000000140024570  ?name@_Generic_error_category@std@@UEBAPEBDXZ (public: virtual char const * __cdecl std::_Generic_error_category::name(void)const )
+           0000000140024580  ?name@_Iostream_error_category2@std@@UEBAPEBDXZ (public: virtual char const * __cdecl std::_Iostream_error_category2::name(void)const )
+           0000000140024590  ?name@_System_error_category@std@@UEBAPEBDXZ (public: virtual char const * __cdecl std::_System_error_category::name(void)const )
+           00000001400246E0  ?overflow@?$basic_filebuf@DU?$char_traits@D@std@@@std@@MEAAHH@Z (protected: virtual int __cdecl std::basic_filebuf<char,struct std::char_traits<char> >::overflow(int))
+           0000000140024890  ?overflow@?$basic_streambuf@DU?$char_traits@D@std@@@std@@MEAAHH@Z (protected: virtual int __cdecl std::basic_streambuf<char,struct std::char_traits<char> >::overflow(int))
+           00000001400248A0  ?overflow@?$basic_stringbuf@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@MEAAHH@Z (protected: virtual int __cdecl std::basic_stringbuf<char,struct std::char_traits<char>,class std::allocator<char> >::overflow(int))
+           0000000140024B30  ?pbackfail@?$basic_filebuf@DU?$char_traits@D@std@@@std@@MEAAHH@Z (protected: virtual int __cdecl std::basic_filebuf<char,struct std::char_traits<char> >::pbackfail(int))
+           0000000140024C20  ?pbackfail@?$basic_streambuf@DU?$char_traits@D@std@@@std@@MEAAHH@Z (protected: virtual int __cdecl std::basic_streambuf<char,struct std::char_traits<char> >::pbackfail(int))
+           0000000140024C30  ?pbackfail@?$basic_stringbuf@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@MEAAHH@Z (protected: virtual int __cdecl std::basic_stringbuf<char,struct std::char_traits<char>,class std::allocator<char> >::pbackfail(int))
+           000000014002FD40  ?seekoff@?$basic_filebuf@DU?$char_traits@D@std@@@std@@MEAA?AV?$fpos@U_Mbstatet@@@2@_JHH@Z (protected: virtual class std::fpos<struct _Mbstatet> __cdecl std::basic_filebuf<char,struct std::char_traits<char> >::seekoff(__int64,int,int))
+           000000014002FE20  ?seekoff@?$basic_streambuf@DU?$char_traits@D@std@@@std@@MEAA?AV?$fpos@U_Mbstatet@@@2@_JHH@Z (protected: virtual class std::fpos<struct _Mbstatet> __cdecl std::basic_streambuf<char,struct std::char_traits<char> >::seekoff(__int64,int,int))
+           000000014002FE40  ?seekoff@?$basic_stringbuf@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@MEAA?AV?$fpos@U_Mbstatet@@@2@_JHH@Z (protected: virtual class std::fpos<struct _Mbstatet> __cdecl std::basic_stringbuf<char,struct std::char_traits<char>,class std::allocator<char> >::seekoff(__int64,int,int))
+           000000014002FFD0  ?seekpos@?$basic_filebuf@DU?$char_traits@D@std@@@std@@MEAA?AV?$fpos@U_Mbstatet@@@2@V32@H@Z (protected: virtual class std::fpos<struct _Mbstatet> __cdecl std::basic_filebuf<char,struct std::char_traits<char> >::seekpos(class std::fpos<struct _Mbstatet>,int))
+           00000001400300B0  ?seekpos@?$basic_streambuf@DU?$char_traits@D@std@@@std@@MEAA?AV?$fpos@U_Mbstatet@@@2@V32@H@Z (protected: virtual class std::fpos<struct _Mbstatet> __cdecl std::basic_streambuf<char,struct std::char_traits<char> >::seekpos(class std::fpos<struct _Mbstatet>,int))
+           00000001400300D0  ?seekpos@?$basic_stringbuf@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@MEAA?AV?$fpos@U_Mbstatet@@@2@V32@H@Z (protected: virtual class std::fpos<struct _Mbstatet> __cdecl std::basic_stringbuf<char,struct std::char_traits<char>,class std::allocator<char> >::seekpos(class std::fpos<struct _Mbstatet>,int))
+           0000000140030220  ?setbuf@?$basic_filebuf@DU?$char_traits@D@std@@@std@@MEAAPEAV?$basic_streambuf@DU?$char_traits@D@std@@@2@PEAD_J@Z (protected: virtual class std::basic_streambuf<char,struct std::char_traits<char> > * __cdecl std::basic_filebuf<char,struct std::char_traits<char> >::setbuf(char *,__int64))
+           0000000140030280  ?setbuf@?$basic_streambuf@DU?$char_traits@D@std@@@std@@MEAAPEAV12@PEAD_J@Z (protected: virtual class std::basic_streambuf<char,struct std::char_traits<char> > * __cdecl std::basic_streambuf<char,struct std::char_traits<char> >::setbuf(char *,__int64))
+           0000000140030380  ?showmanyc@?$basic_streambuf@DU?$char_traits@D@std@@@std@@MEAA_JXZ (protected: virtual __int64 __cdecl std::basic_streambuf<char,struct std::char_traits<char> >::showmanyc(void))
+           0000000140033000  ?sync@?$basic_filebuf@DU?$char_traits@D@std@@@std@@MEAAHXZ (protected: virtual int __cdecl std::basic_filebuf<char,struct std::char_traits<char> >::sync(void))
+           0000000140033050  ?sync@?$basic_streambuf@DU?$char_traits@D@std@@@std@@MEAAHXZ (protected: virtual int __cdecl std::basic_streambuf<char,struct std::char_traits<char> >::sync(void))
+           00000001400337D0  ?uflow@?$basic_filebuf@DU?$char_traits@D@std@@@std@@MEAAHXZ (protected: virtual int __cdecl std::basic_filebuf<char,struct std::char_traits<char> >::uflow(void))
+           0000000140033B90  ?uflow@?$basic_streambuf@DU?$char_traits@D@std@@@std@@MEAAHXZ (protected: virtual int __cdecl std::basic_streambuf<char,struct std::char_traits<char> >::uflow(void))
+           0000000140033BD0  ?underflow@?$basic_filebuf@DU?$char_traits@D@std@@@std@@MEAAHXZ (protected: virtual int __cdecl std::basic_filebuf<char,struct std::char_traits<char> >::underflow(void))
+           0000000140033C50  ?underflow@?$basic_streambuf@DU?$char_traits@D@std@@@std@@MEAAHXZ (protected: virtual int __cdecl std::basic_streambuf<char,struct std::char_traits<char> >::underflow(void))
+           0000000140033C60  ?underflow@?$basic_stringbuf@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@MEAAHXZ (protected: virtual int __cdecl std::basic_stringbuf<char,struct std::char_traits<char>,class std::allocator<char> >::underflow(void))
+           0000000140035CA0  ?what@exception@std@@UEBAPEBDXZ (public: virtual char const * __cdecl std::exception::what(void)const )
+           0000000140035CC0  ?what@filesystem_error@filesystem@std@@UEBAPEBDXZ (public: virtual char const * __cdecl std::filesystem::filesystem_error::what(void)const )
+           0000000140036480  ?xsgetn@?$basic_filebuf@DU?$char_traits@D@std@@@std@@MEAA_JPEAD_J@Z (protected: virtual __int64 __cdecl std::basic_filebuf<char,struct std::char_traits<char> >::xsgetn(char *,__int64))
+           0000000140036640  ?xsgetn@?$basic_streambuf@DU?$char_traits@D@std@@@std@@MEAA_JPEAD_J@Z (protected: virtual __int64 __cdecl std::basic_streambuf<char,struct std::char_traits<char> >::xsgetn(char *,__int64))
+           0000000140036700  ?xsputn@?$basic_filebuf@DU?$char_traits@D@std@@@std@@MEAA_JPEBD_J@Z (protected: virtual __int64 __cdecl std::basic_filebuf<char,struct std::char_traits<char> >::xsputn(char const *,__int64))
+           0000000140036840  ?xsputn@?$basic_streambuf@DU?$char_traits@D@std@@@std@@MEAA_JPEBD_J@Z (protected: virtual __int64 __cdecl std::basic_streambuf<char,struct std::char_traits<char> >::xsputn(char const *,__int64))
+       E   000000014003CB80  R304ReadOnlyProbe
+           000000014003E3D0
+           000000014003E5F0
+           000000014003ED30
+           000000014003FA30
+           000000014003FEF0  R305ManagedEntry
+           00000001400433E0  ??_Ebad_function_call@std@@UEAAPEAXI@Z (public: virtual void * __cdecl std::bad_function_call::`vector deleting destructor'(unsigned int))
+           0000000140043430  ??_Einvalid_argument@std@@UEAAPEAXI@Z (public: virtual void * __cdecl std::invalid_argument::`vector deleting destructor'(unsigned int))
+           0000000140043480  ??_Elength_error@std@@UEAAPEAXI@Z (public: virtual void * __cdecl std::length_error::`vector deleting destructor'(unsigned int))
+           00000001400434D0  ??_Elogic_error@std@@UEAAPEAXI@Z (public: virtual void * __cdecl std::logic_error::`vector deleting destructor'(unsigned int))
+           0000000140043520  ??_Eout_of_range@std@@UEAAPEAXI@Z (public: virtual void * __cdecl std::out_of_range::`vector deleting destructor'(unsigned int))
+           0000000140043570  ??_Eoverflow_error@std@@UEAAPEAXI@Z (public: virtual void * __cdecl std::overflow_error::`vector deleting destructor'(unsigned int))
+           00000001400435C0  ??_Eregex_error@std@@UEAAPEAXI@Z (public: virtual void * __cdecl std::regex_error::`vector deleting destructor'(unsigned int))
+           00000001400437F0  ?what@bad_function_call@std@@UEBAPEBDXZ (public: virtual char const * __cdecl std::bad_function_call::what(void)const )
+           00000001400456A0  ??_E_Locimp@locale@std@@MEAAPEAXI@Z (protected: virtual void * __cdecl std::locale::_Locimp::`vector deleting destructor'(unsigned int))
+           0000000140045A70
+           0000000140046110
+           0000000140046120
+           00000001400461B0
+           00000001400461D0
+           00000001400461E0
+           0000000140048B30  ??_E?$num_get@DV?$istreambuf_iterator@DU?$char_traits@D@std@@@std@@@std@@MEAAPEAXI@Z (protected: virtual void * __cdecl std::num_get<char,class std::istreambuf_iterator<char,struct std::char_traits<char> > >::`vector deleting destructor'(unsigned int))
+           00000001400495B0  ?do_get@?$num_get@DV?$istreambuf_iterator@DU?$char_traits@D@std@@@std@@@std@@MEBA?AV?$istreambuf_iterator@DU?$char_traits@D@std@@@2@V32@0AEAVios_base@2@AEAHAEAG@Z (protected: virtual class std::istreambuf_iterator<char,struct std::char_traits<char> > __cdecl std::num_get<char,class std::istreambuf_iterator<char,struct std::char_traits<char> > >::do_get(class std::istreambuf_iterator<char,struct std::char_traits<char> >,class std::istreambuf_iterator<char,struct std::char_traits<char> >,class std::ios_base &,int &,unsigned short &)const )
+           0000000140049720  ?do_get@?$num_get@DV?$istreambuf_iterator@DU?$char_traits@D@std@@@std@@@std@@MEBA?AV?$istreambuf_iterator@DU?$char_traits@D@std@@@2@V32@0AEAVios_base@2@AEAHAEAI@Z (protected: virtual class std::istreambuf_iterator<char,struct std::char_traits<char> > __cdecl std::num_get<char,class std::istreambuf_iterator<char,struct std::char_traits<char> > >::do_get(class std::istreambuf_iterator<char,struct std::char_traits<char> >,class std::istreambuf_iterator<char,struct std::char_traits<char> >,class std::ios_base &,int &,unsigned int &)const )
+           00000001400497A0  ?do_get@?$num_get@DV?$istreambuf_iterator@DU?$char_traits@D@std@@@std@@@std@@MEBA?AV?$istreambuf_iterator@DU?$char_traits@D@std@@@2@V32@0AEAVios_base@2@AEAHAEAJ@Z (protected: virtual class std::istreambuf_iterator<char,struct std::char_traits<char> > __cdecl std::num_get<char,class std::istreambuf_iterator<char,struct std::char_traits<char> > >::do_get(class std::istreambuf_iterator<char,struct std::char_traits<char> >,class std::istreambuf_iterator<char,struct std::char_traits<char> >,class std::ios_base &,int &,long &)const )
+           00000001400498C0  ?do_get@?$num_get@DV?$istreambuf_iterator@DU?$char_traits@D@std@@@std@@@std@@MEBA?AV?$istreambuf_iterator@DU?$char_traits@D@std@@@2@V32@0AEAVios_base@2@AEAHAEAK@Z (protected: virtual class std::istreambuf_iterator<char,struct std::char_traits<char> > __cdecl std::num_get<char,class std::istreambuf_iterator<char,struct std::char_traits<char> > >::do_get(class std::istreambuf_iterator<char,struct std::char_traits<char> >,class std::istreambuf_iterator<char,struct std::char_traits<char> >,class std::ios_base &,int &,unsigned long &)const )
+           00000001400499E0  ?do_get@?$num_get@DV?$istreambuf_iterator@DU?$char_traits@D@std@@@std@@@std@@MEBA?AV?$istreambuf_iterator@DU?$char_traits@D@std@@@2@V32@0AEAVios_base@2@AEAHAEAM@Z (protected: virtual class std::istreambuf_iterator<char,struct std::char_traits<char> > __cdecl std::num_get<char,class std::istreambuf_iterator<char,struct std::char_traits<char> > >::do_get(class std::istreambuf_iterator<char,struct std::char_traits<char> >,class std::istreambuf_iterator<char,struct std::char_traits<char> >,class std::ios_base &,int &,float &)const )
+           0000000140049B30  ?do_get@?$num_get@DV?$istreambuf_iterator@DU?$char_traits@D@std@@@std@@@std@@MEBA?AV?$istreambuf_iterator@DU?$char_traits@D@std@@@2@V32@0AEAVios_base@2@AEAHAEAN@Z (protected: virtual class std::istreambuf_iterator<char,struct std::char_traits<char> > __cdecl std::num_get<char,class std::istreambuf_iterator<char,struct std::char_traits<char> > >::do_get(class std::istreambuf_iterator<char,struct std::char_traits<char> >,class std::istreambuf_iterator<char,struct std::char_traits<char> >,class std::ios_base &,int &,double &)const )
+           0000000140049C80  ?do_get@?$num_get@DV?$istreambuf_iterator@DU?$char_traits@D@std@@@std@@@std@@MEBA?AV?$istreambuf_iterator@DU?$char_traits@D@std@@@2@V32@0AEAVios_base@2@AEAHAEAO@Z (protected: virtual class std::istreambuf_iterator<char,struct std::char_traits<char> > __cdecl std::num_get<char,class std::istreambuf_iterator<char,struct std::char_traits<char> > >::do_get(class std::istreambuf_iterator<char,struct std::char_traits<char> >,class std::istreambuf_iterator<char,struct std::char_traits<char> >,class std::ios_base &,int &,long double &)const )
+           0000000140049D10  ?do_get@?$num_get@DV?$istreambuf_iterator@DU?$char_traits@D@std@@@std@@@std@@MEBA?AV?$istreambuf_iterator@DU?$char_traits@D@std@@@2@V32@0AEAVios_base@2@AEAHAEAPEAX@Z (protected: virtual class std::istreambuf_iterator<char,struct std::char_traits<char> > __cdecl std::num_get<char,class std::istreambuf_iterator<char,struct std::char_traits<char> > >::do_get(class std::istreambuf_iterator<char,struct std::char_traits<char> >,class std::istreambuf_iterator<char,struct std::char_traits<char> >,class std::ios_base &,int &,void * &)const )
+           0000000140049E60  ?do_get@?$num_get@DV?$istreambuf_iterator@DU?$char_traits@D@std@@@std@@@std@@MEBA?AV?$istreambuf_iterator@DU?$char_traits@D@std@@@2@V32@0AEAVios_base@2@AEAHAEA_J@Z (protected: virtual class std::istreambuf_iterator<char,struct std::char_traits<char> > __cdecl std::num_get<char,class std::istreambuf_iterator<char,struct std::char_traits<char> > >::do_get(class std::istreambuf_iterator<char,struct std::char_traits<char> >,class std::istreambuf_iterator<char,struct std::char_traits<char> >,class std::ios_base &,int &,__int64 &)const )
+           0000000140049F80  ?do_get@?$num_get@DV?$istreambuf_iterator@DU?$char_traits@D@std@@@std@@@std@@MEBA?AV?$istreambuf_iterator@DU?$char_traits@D@std@@@2@V32@0AEAVios_base@2@AEAHAEA_K@Z (protected: virtual class std::istreambuf_iterator<char,struct std::char_traits<char> > __cdecl std::num_get<char,class std::istreambuf_iterator<char,struct std::char_traits<char> > >::do_get(class std::istreambuf_iterator<char,struct std::char_traits<char> >,class std::istreambuf_iterator<char,struct std::char_traits<char> >,class std::ios_base &,int &,unsigned __int64 &)const )
+           000000014004A0A0  ?do_get@?$num_get@DV?$istreambuf_iterator@DU?$char_traits@D@std@@@std@@@std@@MEBA?AV?$istreambuf_iterator@DU?$char_traits@D@std@@@2@V32@0AEAVios_base@2@AEAHAEA_N@Z (protected: virtual class std::istreambuf_iterator<char,struct std::char_traits<char> > __cdecl std::num_get<char,class std::istreambuf_iterator<char,struct std::char_traits<char> > >::do_get(class std::istreambuf_iterator<char,struct std::char_traits<char> >,class std::istreambuf_iterator<char,struct std::char_traits<char> >,class std::ios_base &,int &,bool &)const )
+           0000000140073E80  ??_E?$_Mpunct@G@std@@MEAAPEAXI@Z (protected: virtual void * __cdecl std::_Mpunct<unsigned short>::`vector deleting destructor'(unsigned int))
+           0000000140073EF0  ??_E?$_Mpunct@_W@std@@MEAAPEAXI@Z (protected: virtual void * __cdecl std::_Mpunct<wchar_t>::`vector deleting destructor'(unsigned int))
+           0000000140073F60  ??_E?$codecvt@GDU_Mbstatet@@@std@@MEAAPEAXI@Z (protected: virtual void * __cdecl std::codecvt<unsigned short,char,struct _Mbstatet>::`vector deleting destructor'(unsigned int))
+           0000000140073F90  ??_E?$codecvt@_WDU_Mbstatet@@@std@@MEAAPEAXI@Z (protected: virtual void * __cdecl std::codecvt<wchar_t,char,struct _Mbstatet>::`vector deleting destructor'(unsigned int))
+           0000000140073FC0  ??_E?$collate@G@std@@MEAAPEAXI@Z (protected: virtual void * __cdecl std::collate<unsigned short>::`vector deleting destructor'(unsigned int))
+           0000000140074010  ??_E?$collate@_W@std@@MEAAPEAXI@Z (protected: virtual void * __cdecl std::collate<wchar_t>::`vector deleting destructor'(unsigned int))
+           0000000140074060  ??_E?$ctype@G@std@@MEAAPEAXI@Z (protected: virtual void * __cdecl std::ctype<unsigned short>::`vector deleting destructor'(unsigned int))
+           00000001400740C0  ??_E?$ctype@_W@std@@MEAAPEAXI@Z (protected: virtual void * __cdecl std::ctype<wchar_t>::`vector deleting destructor'(unsigned int))
+           0000000140074120  ??_E?$messages@G@std@@MEAAPEAXI@Z (protected: virtual void * __cdecl std::messages<unsigned short>::`vector deleting destructor'(unsigned int))
+           0000000140074150  ??_E?$messages@_W@std@@MEAAPEAXI@Z (protected: virtual void * __cdecl std::messages<wchar_t>::`vector deleting destructor'(unsigned int))
+           0000000140074180  ??_E?$money_get@GV?$istreambuf_iterator@GU?$char_traits@G@std@@@std@@@std@@MEAAPEAXI@Z (protected: virtual void * __cdecl std::money_get<unsigned short,class std::istreambuf_iterator<unsigned short,struct std::char_traits<unsigned short> > >::`vector deleting destructor'(unsigned int))
+           00000001400741B0  ??_E?$money_get@_WV?$istreambuf_iterator@_WU?$char_traits@_W@std@@@std@@@std@@MEAAPEAXI@Z (protected: virtual void * __cdecl std::money_get<wchar_t,class std::istreambuf_iterator<wchar_t,struct std::char_traits<wchar_t> > >::`vector deleting destructor'(unsigned int))
+           00000001400741E0  ??_E?$money_put@GV?$ostreambuf_iterator@GU?$char_traits@G@std@@@std@@@std@@MEAAPEAXI@Z (protected: virtual void * __cdecl std::money_put<unsigned short,class std::ostreambuf_iterator<unsigned short,struct std::char_traits<unsigned short> > >::`vector deleting destructor'(unsigned int))
+           0000000140074210  ??_E?$money_put@_WV?$ostreambuf_iterator@_WU?$char_traits@_W@std@@@std@@@std@@MEAAPEAXI@Z (protected: virtual void * __cdecl std::money_put<wchar_t,class std::ostreambuf_iterator<wchar_t,struct std::char_traits<wchar_t> > >::`vector deleting destructor'(unsigned int))
+           0000000140074240  ??_E?$moneypunct@G$00@std@@MEAAPEAXI@Z (protected: virtual void * __cdecl std::moneypunct<unsigned short,1>::`vector deleting destructor'(unsigned int))
+           00000001400742B0  ??_E?$moneypunct@G$0A@@std@@MEAAPEAXI@Z (protected: virtual void * __cdecl std::moneypunct<unsigned short,0>::`vector deleting destructor'(unsigned int))
+           0000000140074320  ??_E?$moneypunct@_W$00@std@@MEAAPEAXI@Z (protected: virtual void * __cdecl std::moneypunct<wchar_t,1>::`vector deleting destructor'(unsigned int))
+           0000000140074390  ??_E?$moneypunct@_W$0A@@std@@MEAAPEAXI@Z (protected: virtual void * __cdecl std::moneypunct<wchar_t,0>::`vector deleting destructor'(unsigned int))
+           0000000140074400  ??_E?$num_get@GV?$istreambuf_iterator@GU?$char_traits@G@std@@@std@@@std@@MEAAPEAXI@Z (protected: virtual void * __cdecl std::num_get<unsigned short,class std::istreambuf_iterator<unsigned short,struct std::char_traits<unsigned short> > >::`vector deleting destructor'(unsigned int))
+           0000000140074430  ??_E?$num_get@_WV?$istreambuf_iterator@_WU?$char_traits@_W@std@@@std@@@std@@MEAAPEAXI@Z (protected: virtual void * __cdecl std::num_get<wchar_t,class std::istreambuf_iterator<wchar_t,struct std::char_traits<wchar_t> > >::`vector deleting destructor'(unsigned int))
+           0000000140074460  ??_E?$num_put@GV?$ostreambuf_iterator@GU?$char_traits@G@std@@@std@@@std@@MEAAPEAXI@Z (protected: virtual void * __cdecl std::num_put<unsigned short,class std::ostreambuf_iterator<unsigned short,struct std::char_traits<unsigned short> > >::`vector deleting destructor'(unsigned int))
+           0000000140074490  ??_E?$num_put@_WV?$ostreambuf_iterator@_WU?$char_traits@_W@std@@@std@@@std@@MEAAPEAXI@Z (protected: virtual void * __cdecl std::num_put<wchar_t,class std::ostreambuf_iterator<wchar_t,struct std::char_traits<wchar_t> > >::`vector deleting destructor'(unsigned int))
+           00000001400744C0  ??_E?$numpunct@G@std@@MEAAPEAXI@Z (protected: virtual void * __cdecl std::numpunct<unsigned short>::`vector deleting destructor'(unsigned int))
+           0000000140074520  ??_E?$numpunct@_W@std@@MEAAPEAXI@Z (protected: virtual void * __cdecl std::numpunct<wchar_t>::`vector deleting destructor'(unsigned int))
+           0000000140074580  ??_E?$time_get@GV?$istreambuf_iterator@GU?$char_traits@G@std@@@std@@@std@@MEAAPEAXI@Z (protected: virtual void * __cdecl std::time_get<unsigned short,class std::istreambuf_iterator<unsigned short,struct std::char_traits<unsigned short> > >::`vector deleting destructor'(unsigned int))
+           00000001400745E0  ??_E?$time_get@_WV?$istreambuf_iterator@_WU?$char_traits@_W@std@@@std@@@std@@MEAAPEAXI@Z (protected: virtual void * __cdecl std::time_get<wchar_t,class std::istreambuf_iterator<wchar_t,struct std::char_traits<wchar_t> > >::`vector deleting destructor'(unsigned int))
+           0000000140074640  ??_E?$time_put@GV?$ostreambuf_iterator@GU?$char_traits@G@std@@@std@@@std@@MEAAPEAXI@Z (protected: virtual void * __cdecl std::time_put<unsigned short,class std::ostreambuf_iterator<unsigned short,struct std::char_traits<unsigned short> > >::`vector deleting destructor'(unsigned int))
+           0000000140074690  ??_E?$time_put@_WV?$ostreambuf_iterator@_WU?$char_traits@_W@std@@@std@@@std@@MEAAPEAXI@Z (protected: virtual void * __cdecl std::time_put<wchar_t,class std::ostreambuf_iterator<wchar_t,struct std::char_traits<wchar_t> > >::`vector deleting destructor'(unsigned int))
+           00000001400746E0  ??_Emessages_base@std@@UEAAPEAXI@Z (public: virtual void * __cdecl std::messages_base::`vector deleting destructor'(unsigned int))
+           0000000140074710  ??_Emoney_base@std@@UEAAPEAXI@Z (public: virtual void * __cdecl std::money_base::`vector deleting destructor'(unsigned int))
+           0000000140074740  ??_Etime_base@std@@UEAAPEAXI@Z (public: virtual void * __cdecl std::time_base::`vector deleting destructor'(unsigned int))
+           000000014007CBF0  ?do_always_noconv@?$codecvt@GDU_Mbstatet@@@std@@MEBA_NXZ (protected: virtual bool __cdecl std::codecvt<unsigned short,char,struct _Mbstatet>::do_always_noconv(void)const )
+           000000014007CC00  ?do_always_noconv@?$codecvt@_WDU_Mbstatet@@@std@@MEBA_NXZ (protected: virtual bool __cdecl std::codecvt<wchar_t,char,struct _Mbstatet>::do_always_noconv(void)const )
+           000000014007CC10  ?do_close@?$messages@G@std@@MEBAXH@Z (protected: virtual void __cdecl std::messages<unsigned short>::do_close(int)const )
+           000000014007CC20  ?do_close@?$messages@_W@std@@MEBAXH@Z (protected: virtual void __cdecl std::messages<wchar_t>::do_close(int)const )
+           000000014007CC30  ?do_compare@?$collate@G@std@@MEBAHPEBG000@Z (protected: virtual int __cdecl std::collate<unsigned short>::do_compare(unsigned short const *,unsigned short const *,unsigned short const *,unsigned short const *)const )
+           000000014007CC80  ?do_compare@?$collate@_W@std@@MEBAHPEB_W000@Z (protected: virtual int __cdecl std::collate<wchar_t>::do_compare(wchar_t const *,wchar_t const *,wchar_t const *,wchar_t const *)const )
+           000000014007CCD0  ?do_curr_symbol@?$_Mpunct@G@std@@MEBA?AV?$basic_string@GU?$char_traits@G@std@@V?$allocator@G@2@@2@XZ (protected: virtual class std::basic_string<unsigned short,struct std::char_traits<unsigned short>,class std::allocator<unsigned short> > __cdecl std::_Mpunct<unsigned short>::do_curr_symbol(void)const )
+           000000014007CD20  ?do_curr_symbol@?$_Mpunct@_W@std@@MEBA?AV?$basic_string@_WU?$char_traits@_W@std@@V?$allocator@_W@2@@2@XZ (protected: virtual class std::basic_string<wchar_t,struct std::char_traits<wchar_t>,class std::allocator<wchar_t> > __cdecl std::_Mpunct<wchar_t>::do_curr_symbol(void)const )
+           000000014007CD70  ?do_date_order@?$time_get@GV?$istreambuf_iterator@GU?$char_traits@G@std@@@std@@@std@@MEBA?AW4dateorder@time_base@2@XZ (protected: virtual enum std::time_base::dateorder __cdecl std::time_get<unsigned short,class std::istreambuf_iterator<unsigned short,struct std::char_traits<unsigned short> > >::do_date_order(void)const )
+           000000014007CD80  ?do_date_order@?$time_get@_WV?$istreambuf_iterator@_WU?$char_traits@_W@std@@@std@@@std@@MEBA?AW4dateorder@time_base@2@XZ (protected: virtual enum std::time_base::dateorder __cdecl std::time_get<wchar_t,class std::istreambuf_iterator<wchar_t,struct std::char_traits<wchar_t> > >::do_date_order(void)const )
+           000000014007CD90  ?do_decimal_point@?$_Mpunct@G@std@@MEBAGXZ (protected: virtual unsigned short __cdecl std::_Mpunct<unsigned short>::do_decimal_point(void)const )
+           000000014007CDA0  ?do_decimal_point@?$_Mpunct@_W@std@@MEBA_WXZ (protected: virtual wchar_t __cdecl std::_Mpunct<wchar_t>::do_decimal_point(void)const )
+           000000014007CDB0  ?do_decimal_point@?$numpunct@G@std@@MEBAGXZ (protected: virtual unsigned short __cdecl std::numpunct<unsigned short>::do_decimal_point(void)const )
+           000000014007CDC0  ?do_decimal_point@?$numpunct@_W@std@@MEBA_WXZ (protected: virtual wchar_t __cdecl std::numpunct<wchar_t>::do_decimal_point(void)const )
+           000000014007CDD0  ?do_encoding@?$codecvt@GDU_Mbstatet@@@std@@MEBAHXZ (protected: virtual int __cdecl std::codecvt<unsigned short,char,struct _Mbstatet>::do_encoding(void)const )
+           000000014007CDE0  ?do_encoding@?$codecvt@_WDU_Mbstatet@@@std@@MEBAHXZ (protected: virtual int __cdecl std::codecvt<wchar_t,char,struct _Mbstatet>::do_encoding(void)const )
+           000000014007CDF0  ?do_falsename@?$numpunct@G@std@@MEBA?AV?$basic_string@GU?$char_traits@G@std@@V?$allocator@G@2@@2@XZ (protected: virtual class std::basic_string<unsigned short,struct std::char_traits<unsigned short>,class std::allocator<unsigned short> > __cdecl std::numpunct<unsigned short>::do_falsename(void)const )
+           000000014007CE40  ?do_falsename@?$numpunct@_W@std@@MEBA?AV?$basic_string@_WU?$char_traits@_W@std@@V?$allocator@_W@2@@2@XZ (protected: virtual class std::basic_string<wchar_t,struct std::char_traits<wchar_t>,class std::allocator<wchar_t> > __cdecl std::numpunct<wchar_t>::do_falsename(void)const )
+           000000014007CE90  ?do_frac_digits@?$_Mpunct@G@std@@MEBAHXZ (protected: virtual int __cdecl std::_Mpunct<unsigned short>::do_frac_digits(void)const )
+           000000014007CEA0  ?do_frac_digits@?$_Mpunct@_W@std@@MEBAHXZ (protected: virtual int __cdecl std::_Mpunct<wchar_t>::do_frac_digits(void)const )
+           000000014007CEB0  ?do_get@?$messages@G@std@@MEBA?AV?$basic_string@GU?$char_traits@G@std@@V?$allocator@G@2@@2@HHHAEBV32@@Z (protected: virtual class std::basic_string<unsigned short,struct std::char_traits<unsigned short>,class std::allocator<unsigned short> > __cdecl std::messages<unsigned short>::do_get(int,int,int,class std::basic_string<unsigned short,struct std::char_traits<unsigned short>,class std::allocator<unsigned short> > const &)const )
+           000000014007CEF0  ?do_get@?$messages@_W@std@@MEBA?AV?$basic_string@_WU?$char_traits@_W@std@@V?$allocator@_W@2@@2@HHHAEBV32@@Z (protected: virtual class std::basic_string<wchar_t,struct std::char_traits<wchar_t>,class std::allocator<wchar_t> > __cdecl std::messages<wchar_t>::do_get(int,int,int,class std::basic_string<wchar_t,struct std::char_traits<wchar_t>,class std::allocator<wchar_t> > const &)const )
+           000000014007CF30  ?do_get@?$money_get@GV?$istreambuf_iterator@GU?$char_traits@G@std@@@std@@@std@@MEBA?AV?$istreambuf_iterator@GU?$char_traits@G@std@@@2@V32@0_NAEAVios_base@2@AEAHAEAO@Z (protected: virtual class std::istreambuf_iterator<unsigned short,struct std::char_traits<unsigned short> > __cdecl std::money_get<unsigned short,class std::istreambuf_iterator<unsigned short,struct std::char_traits<unsigned short> > >::do_get(class std::istreambuf_iterator<unsigned short,struct std::char_traits<unsigned short> >,class std::istreambuf_iterator<unsigned short,struct std::char_traits<unsigned short> >,bool,class std::ios_base &,int &,long double &)const )
+           000000014007D040  ?do_get@?$money_get@GV?$istreambuf_iterator@GU?$char_traits@G@std@@@std@@@std@@MEBA?AV?$istreambuf_iterator@GU?$char_traits@G@std@@@2@V32@0_NAEAVios_base@2@AEAHAEAV?$basic_string@GU?$char_traits@G@std@@V?$allocator@G@2@@2@@Z (protected: virtual class std::istreambuf_iterator<unsigned short,struct std::char_traits<unsigned short> > __cdecl std::money_get<unsigned short,class std::istreambuf_iterator<unsigned short,struct std::char_traits<unsigned short> > >::do_get(class std::istreambuf_iterator<unsigned short,struct std::char_traits<unsigned short> >,class std::istreambuf_iterator<unsigned short,struct std::char_traits<unsigned short> >,bool,class std::ios_base &,int &,class std::basic_string<unsigned short,struct std::char_traits<unsigned short>,class std::allocator<unsigned short> > &)const )
+           000000014007D170  ?do_get@?$money_get@_WV?$istreambuf_iterator@_WU?$char_traits@_W@std@@@std@@@std@@MEBA?AV?$istreambuf_iterator@_WU?$char_traits@_W@std@@@2@V32@0_NAEAVios_base@2@AEAHAEAO@Z (protected: virtual class std::istreambuf_iterator<wchar_t,struct std::char_traits<wchar_t> > __cdecl std::money_get<wchar_t,class std::istreambuf_iterator<wchar_t,struct std::char_traits<wchar_t> > >::do_get(class std::istreambuf_iterator<wchar_t,struct std::char_traits<wchar_t> >,class std::istreambuf_iterator<wchar_t,struct std::char_traits<wchar_t> >,bool,class std::ios_base &,int &,long double &)const )
+           000000014007D280  ?do_get@?$money_get@_WV?$istreambuf_iterator@_WU?$char_traits@_W@std@@@std@@@std@@MEBA?AV?$istreambuf_iterator@_WU?$char_traits@_W@std@@@2@V32@0_NAEAVios_base@2@AEAHAEAV?$basic_string@_WU?$char_traits@_W@std@@V?$allocator@_W@2@@2@@Z (protected: virtual class std::istreambuf_iterator<wchar_t,struct std::char_traits<wchar_t> > __cdecl std::money_get<wchar_t,class std::istreambuf_iterator<wchar_t,struct std::char_traits<wchar_t> > >::do_get(class std::istreambuf_iterator<wchar_t,struct std::char_traits<wchar_t> >,class std::istreambuf_iterator<wchar_t,struct std::char_traits<wchar_t> >,bool,class std::ios_base &,int &,class std::basic_string<wchar_t,struct std::char_traits<wchar_t>,class std::allocator<wchar_t> > &)const )
+           000000014007D3B0  ?do_get@?$num_get@GV?$istreambuf_iterator@GU?$char_traits@G@std@@@std@@@std@@MEBA?AV?$istreambuf_iterator@GU?$char_traits@G@std@@@2@V32@0AEAVios_base@2@AEAHAEAG@Z (protected: virtual class std::istreambuf_iterator<unsigned short,struct std::char_traits<unsigned short> > __cdecl std::num_get<unsigned short,class std::istreambuf_iterator<unsigned short,struct std::char_traits<unsigned short> > >::do_get(class std::istreambuf_iterator<unsigned short,struct std::char_traits<unsigned short> >,class std::istreambuf_iterator<unsigned short,struct std::char_traits<unsigned short> >,class std::ios_base &,int &,unsigned short &)const )
+           000000014007D520  ?do_get@?$num_get@GV?$istreambuf_iterator@GU?$char_traits@G@std@@@std@@@std@@MEBA?AV?$istreambuf_iterator@GU?$char_traits@G@std@@@2@V32@0AEAVios_base@2@AEAHAEAI@Z (protected: virtual class std::istreambuf_iterator<unsigned short,struct std::char_traits<unsigned short> > __cdecl std::num_get<unsigned short,class std::istreambuf_iterator<unsigned short,struct std::char_traits<unsigned short> > >::do_get(class std::istreambuf_iterator<unsigned short,struct std::char_traits<unsigned short> >,class std::istreambuf_iterator<unsigned short,struct std::char_traits<unsigned short> >,class std::ios_base &,int &,unsigned int &)const )
+           000000014007D5A0  ?do_get@?$num_get@GV?$istreambuf_iterator@GU?$char_traits@G@std@@@std@@@std@@MEBA?AV?$istreambuf_iterator@GU?$char_traits@G@std@@@2@V32@0AEAVios_base@2@AEAHAEAJ@Z (protected: virtual class std::istreambuf_iterator<unsigned short,struct std::char_traits<unsigned short> > __cdecl std::num_get<unsigned short,class std::istreambuf_iterator<unsigned short,struct std::char_traits<unsigned short> > >::do_get(class std::istreambuf_iterator<unsigned short,struct std::char_traits<unsigned short> >,class std::istreambuf_iterator<unsigned short,struct std::char_traits<unsigned short> >,class std::ios_base &,int &,long &)const )
+           000000014007D6C0  ?do_get@?$num_get@GV?$istreambuf_iterator@GU?$char_traits@G@std@@@std@@@std@@MEBA?AV?$istreambuf_iterator@GU?$char_traits@G@std@@@2@V32@0AEAVios_base@2@AEAHAEAK@Z (protected: virtual class std::istreambuf_iterator<unsigned short,struct std::char_traits<unsigned short> > __cdecl std::num_get<unsigned short,class std::istreambuf_iterator<unsigned short,struct std::char_traits<unsigned short> > >::do_get(class std::istreambuf_iterator<unsigned short,struct std::char_traits<unsigned short> >,class std::istreambuf_iterator<unsigned short,struct std::char_traits<unsigned short> >,class std::ios_base &,int &,unsigned long &)const )
+           000000014007D7E0  ?do_get@?$num_get@GV?$istreambuf_iterator@GU?$char_traits@G@std@@@std@@@std@@MEBA?AV?$istreambuf_iterator@GU?$char_traits@G@std@@@2@V32@0AEAVios_base@2@AEAHAEAM@Z (protected: virtual class std::istreambuf_iterator<unsigned short,struct std::char_traits<unsigned short> > __cdecl std::num_get<unsigned short,class std::istreambuf_iterator<unsigned short,struct std::char_traits<unsigned short> > >::do_get(class std::istreambuf_iterator<unsigned short,struct std::char_traits<unsigned short> >,class std::istreambuf_iterator<unsigned short,struct std::char_traits<unsigned short> >,class std::ios_base &,int &,float &)const )
+           000000014007D930  ?do_get@?$num_get@GV?$istreambuf_iterator@GU?$char_traits@G@std@@@std@@@std@@MEBA?AV?$istreambuf_iterator@GU?$char_traits@G@std@@@2@V32@0AEAVios_base@2@AEAHAEAN@Z (protected: virtual class std::istreambuf_iterator<unsigned short,struct std::char_traits<unsigned short> > __cdecl std::num_get<unsigned short,class std::istreambuf_iterator<unsigned short,struct std::char_traits<unsigned short> > >::do_get(class std::istreambuf_iterator<unsigned short,struct std::char_traits<unsigned short> >,class std::istreambuf_iterator<unsigned short,struct std::char_traits<unsigned short> >,class std::ios_base &,int &,double &)const )
+           000000014007DA80  ?do_get@?$num_get@GV?$istreambuf_iterator@GU?$char_traits@G@std@@@std@@@std@@MEBA?AV?$istreambuf_iterator@GU?$char_traits@G@std@@@2@V32@0AEAVios_base@2@AEAHAEAO@Z (protected: virtual class std::istreambuf_iterator<unsigned short,struct std::char_traits<unsigned short> > __cdecl std::num_get<unsigned short,class std::istreambuf_iterator<unsigned short,struct std::char_traits<unsigned short> > >::do_get(class std::istreambuf_iterator<unsigned short,struct std::char_traits<unsigned short> >,class std::istreambuf_iterator<unsigned short,struct std::char_traits<unsigned short> >,class std::ios_base &,int &,long double &)const )
+           000000014007DB10  ?do_get@?$num_get@GV?$istreambuf_iterator@GU?$char_traits@G@std@@@std@@@std@@MEBA?AV?$istreambuf_iterator@GU?$char_traits@G@std@@@2@V32@0AEAVios_base@2@AEAHAEAPEAX@Z (protected: virtual class std::istreambuf_iterator<unsigned short,struct std::char_traits<unsigned short> > __cdecl std::num_get<unsigned short,class std::istreambuf_iterator<unsigned short,struct std::char_traits<unsigned short> > >::do_get(class std::istreambuf_iterator<unsigned short,struct std::char_traits<unsigned short> >,class std::istreambuf_iterator<unsigned short,struct std::char_traits<unsigned short> >,class std::ios_base &,int &,void * &)const )
+           000000014007DC60  ?do_get@?$num_get@GV?$istreambuf_iterator@GU?$char_traits@G@std@@@std@@@std@@MEBA?AV?$istreambuf_iterator@GU?$char_traits@G@std@@@2@V32@0AEAVios_base@2@AEAHAEA_J@Z (protected: virtual class std::istreambuf_iterator<unsigned short,struct std::char_traits<unsigned short> > __cdecl std::num_get<unsigned short,class std::istreambuf_iterator<unsigned short,struct std::char_traits<unsigned short> > >::do_get(class std::istreambuf_iterator<unsigned short,struct std::char_traits<unsigned short> >,class std::istreambuf_iterator<unsigned short,struct std::char_traits<unsigned short> >,class std::ios_base &,int &,__int64 &)const )
+           000000014007DD80  ?do_get@?$num_get@GV?$istreambuf_iterator@GU?$char_traits@G@std@@@std@@@std@@MEBA?AV?$istreambuf_iterator@GU?$char_traits@G@std@@@2@V32@0AEAVios_base@2@AEAHAEA_K@Z (protected: virtual class std::istreambuf_iterator<unsigned short,struct std::char_traits<unsigned short> > __cdecl std::num_get<unsigned short,class std::istreambuf_iterator<unsigned short,struct std::char_traits<unsigned short> > >::do_get(class std::istreambuf_iterator<unsigned short,struct std::char_traits<unsigned short> >,class std::istreambuf_iterator<unsigned short,struct std::char_traits<unsigned short> >,class std::ios_base &,int &,unsigned __int64 &)const )
+           000000014007DEA0  ?do_get@?$num_get@GV?$istreambuf_iterator@GU?$char_traits@G@std@@@std@@@std@@MEBA?AV?$istreambuf_iterator@GU?$char_traits@G@std@@@2@V32@0AEAVios_base@2@AEAHAEA_N@Z (protected: virtual class std::istreambuf_iterator<unsigned short,struct std::char_traits<unsigned short> > __cdecl std::num_get<unsigned short,class std::istreambuf_iterator<unsigned short,struct std::char_traits<unsigned short> > >::do_get(class std::istreambuf_iterator<unsigned short,struct std::char_traits<unsigned short> >,class std::istreambuf_iterator<unsigned short,struct std::char_traits<unsigned short> >,class std::ios_base &,int &,bool &)const )
+           000000014007E1D0  ?do_get@?$num_get@_WV?$istreambuf_iterator@_WU?$char_traits@_W@std@@@std@@@std@@MEBA?AV?$istreambuf_iterator@_WU?$char_traits@_W@std@@@2@V32@0AEAVios_base@2@AEAHAEAG@Z (protected: virtual class std::istreambuf_iterator<wchar_t,struct std::char_traits<wchar_t> > __cdecl std::num_get<wchar_t,class std::istreambuf_iterator<wchar_t,struct std::char_traits<wchar_t> > >::do_get(class std::istreambuf_iterator<wchar_t,struct std::char_traits<wchar_t> >,class std::istreambuf_iterator<wchar_t,struct std::char_traits<wchar_t> >,class std::ios_base &,int &,unsigned short &)const )
+           000000014007E340  ?do_get@?$num_get@_WV?$istreambuf_iterator@_WU?$char_traits@_W@std@@@std@@@std@@MEBA?AV?$istreambuf_iterator@_WU?$char_traits@_W@std@@@2@V32@0AEAVios_base@2@AEAHAEAI@Z (protected: virtual class std::istreambuf_iterator<wchar_t,struct std::char_traits<wchar_t> > __cdecl std::num_get<wchar_t,class std::istreambuf_iterator<wchar_t,struct std::char_traits<wchar_t> > >::do_get(class std::istreambuf_iterator<wchar_t,struct std::char_traits<wchar_t> >,class std::istreambuf_iterator<wchar_t,struct std::char_traits<wchar_t> >,class std::ios_base &,int &,unsigned int &)const )
+           000000014007E3C0  ?do_get@?$num_get@_WV?$istreambuf_iterator@_WU?$char_traits@_W@std@@@std@@@std@@MEBA?AV?$istreambuf_iterator@_WU?$char_traits@_W@std@@@2@V32@0AEAVios_base@2@AEAHAEAJ@Z (protected: virtual class std::istreambuf_iterator<wchar_t,struct std::char_traits<wchar_t> > __cdecl std::num_get<wchar_t,class std::istreambuf_iterator<wchar_t,struct std::char_traits<wchar_t> > >::do_get(class std::istreambuf_iterator<wchar_t,struct std::char_traits<wchar_t> >,class std::istreambuf_iterator<wchar_t,struct std::char_traits<wchar_t> >,class std::ios_base &,int &,long &)const )
+           000000014007E4E0  ?do_get@?$num_get@_WV?$istreambuf_iterator@_WU?$char_traits@_W@std@@@std@@@std@@MEBA?AV?$istreambuf_iterator@_WU?$char_traits@_W@std@@@2@V32@0AEAVios_base@2@AEAHAEAK@Z (protected: virtual class std::istreambuf_iterator<wchar_t,struct std::char_traits<wchar_t> > __cdecl std::num_get<wchar_t,class std::istreambuf_iterator<wchar_t,struct std::char_traits<wchar_t> > >::do_get(class std::istreambuf_iterator<wchar_t,struct std::char_traits<wchar_t> >,class std::istreambuf_iterator<wchar_t,struct std::char_traits<wchar_t> >,class std::ios_base &,int &,unsigned long &)const )
+           000000014007E600  ?do_get@?$num_get@_WV?$istreambuf_iterator@_WU?$char_traits@_W@std@@@std@@@std@@MEBA?AV?$istreambuf_iterator@_WU?$char_traits@_W@std@@@2@V32@0AEAVios_base@2@AEAHAEAM@Z (protected: virtual class std::istreambuf_iterator<wchar_t,struct std::char_traits<wchar_t> > __cdecl std::num_get<wchar_t,class std::istreambuf_iterator<wchar_t,struct std::char_traits<wchar_t> > >::do_get(class std::istreambuf_iterator<wchar_t,struct std::char_traits<wchar_t> >,class std::istreambuf_iterator<wchar_t,struct std::char_traits<wchar_t> >,class std::ios_base &,int &,float &)const )
+           000000014007E750  ?do_get@?$num_get@_WV?$istreambuf_iterator@_WU?$char_traits@_W@std@@@std@@@std@@MEBA?AV?$istreambuf_iterator@_WU?$char_traits@_W@std@@@2@V32@0AEAVios_base@2@AEAHAEAN@Z (protected: virtual class std::istreambuf_iterator<wchar_t,struct std::char_traits<wchar_t> > __cdecl std::num_get<wchar_t,class std::istreambuf_iterator<wchar_t,struct std::char_traits<wchar_t> > >::do_get(class std::istreambuf_iterator<wchar_t,struct std::char_traits<wchar_t> >,class std::istreambuf_iterator<wchar_t,struct std::char_traits<wchar_t> >,class std::ios_base &,int &,double &)const )
+           000000014007E8A0  ?do_get@?$num_get@_WV?$istreambuf_iterator@_WU?$char_traits@_W@std@@@std@@@std@@MEBA?AV?$istreambuf_iterator@_WU?$char_traits@_W@std@@@2@V32@0AEAVios_base@2@AEAHAEAO@Z (protected: virtual class std::istreambuf_iterator<wchar_t,struct std::char_traits<wchar_t> > __cdecl std::num_get<wchar_t,class std::istreambuf_iterator<wchar_t,struct std::char_traits<wchar_t> > >::do_get(class std::istreambuf_iterator<wchar_t,struct std::char_traits<wchar_t> >,class std::istreambuf_iterator<wchar_t,struct std::char_traits<wchar_t> >,class std::ios_base &,int &,long double &)const )
+           000000014007E930  ?do_get@?$num_get@_WV?$istreambuf_iterator@_WU?$char_traits@_W@std@@@std@@@std@@MEBA?AV?$istreambuf_iterator@_WU?$char_traits@_W@std@@@2@V32@0AEAVios_base@2@AEAHAEAPEAX@Z (protected: virtual class std::istreambuf_iterator<wchar_t,struct std::char_traits<wchar_t> > __cdecl std::num_get<wchar_t,class std::istreambuf_iterator<wchar_t,struct std::char_traits<wchar_t> > >::do_get(class std::istreambuf_iterator<wchar_t,struct std::char_traits<wchar_t> >,class std::istreambuf_iterator<wchar_t,struct std::char_traits<wchar_t> >,class std::ios_base &,int &,void * &)const )
+           000000014007EA80  ?do_get@?$num_get@_WV?$istreambuf_iterator@_WU?$char_traits@_W@std@@@std@@@std@@MEBA?AV?$istreambuf_iterator@_WU?$char_traits@_W@std@@@2@V32@0AEAVios_base@2@AEAHAEA_J@Z (protected: virtual class std::istreambuf_iterator<wchar_t,struct std::char_traits<wchar_t> > __cdecl std::num_get<wchar_t,class std::istreambuf_iterator<wchar_t,struct std::char_traits<wchar_t> > >::do_get(class std::istreambuf_iterator<wchar_t,struct std::char_traits<wchar_t> >,class std::istreambuf_iterator<wchar_t,struct std::char_traits<wchar_t> >,class std::ios_base &,int &,__int64 &)const )
+           000000014007EBA0  ?do_get@?$num_get@_WV?$istreambuf_iterator@_WU?$char_traits@_W@std@@@std@@@std@@MEBA?AV?$istreambuf_iterator@_WU?$char_traits@_W@std@@@2@V32@0AEAVios_base@2@AEAHAEA_K@Z (protected: virtual class std::istreambuf_iterator<wchar_t,struct std::char_traits<wchar_t> > __cdecl std::num_get<wchar_t,class std::istreambuf_iterator<wchar_t,struct std::char_traits<wchar_t> > >::do_get(class std::istreambuf_iterator<wchar_t,struct std::char_traits<wchar_t> >,class std::istreambuf_iterator<wchar_t,struct std::char_traits<wchar_t> >,class std::ios_base &,int &,unsigned __int64 &)const )
+           000000014007ECC0  ?do_get@?$num_get@_WV?$istreambuf_iterator@_WU?$char_traits@_W@std@@@std@@@std@@MEBA?AV?$istreambuf_iterator@_WU?$char_traits@_W@std@@@2@V32@0AEAVios_base@2@AEAHAEA_N@Z (protected: virtual class std::istreambuf_iterator<wchar_t,struct std::char_traits<wchar_t> > __cdecl std::num_get<wchar_t,class std::istreambuf_iterator<wchar_t,struct std::char_traits<wchar_t> > >::do_get(class std::istreambuf_iterator<wchar_t,struct std::char_traits<wchar_t> >,class std::istreambuf_iterator<wchar_t,struct std::char_traits<wchar_t> >,class std::ios_base &,int &,bool &)const )
+           000000014007EFF0  ?do_get@?$time_get@GV?$istreambuf_iterator@GU?$char_traits@G@std@@@std@@@std@@MEBA?AV?$istreambuf_iterator@GU?$char_traits@G@std@@@2@V32@0AEAVios_base@2@AEAHPEAUtm@@DD@Z (protected: virtual class std::istreambuf_iterator<unsigned short,struct std::char_traits<unsigned short> > __cdecl std::time_get<unsigned short,class std::istreambuf_iterator<unsigned short,struct std::char_traits<unsigned short> > >::do_get(class std::istreambuf_iterator<unsigned short,struct std::char_traits<unsigned short> >,class std::istreambuf_iterator<unsigned short,struct std::char_traits<unsigned short> >,class std::ios_base &,int &,struct tm *,char,char)const )
+           000000014007F570  ?do_get@?$time_get@_WV?$istreambuf_iterator@_WU?$char_traits@_W@std@@@std@@@std@@MEBA?AV?$istreambuf_iterator@_WU?$char_traits@_W@std@@@2@V32@0AEAVios_base@2@AEAHPEAUtm@@DD@Z (protected: virtual class std::istreambuf_iterator<wchar_t,struct std::char_traits<wchar_t> > __cdecl std::time_get<wchar_t,class std::istreambuf_iterator<wchar_t,struct std::char_traits<wchar_t> > >::do_get(class std::istreambuf_iterator<wchar_t,struct std::char_traits<wchar_t> >,class std::istreambuf_iterator<wchar_t,struct std::char_traits<wchar_t> >,class std::ios_base &,int &,struct tm *,char,char)const )
+           000000014007FAF0  ?do_get_date@?$time_get@GV?$istreambuf_iterator@GU?$char_traits@G@std@@@std@@@std@@MEBA?AV?$istreambuf_iterator@GU?$char_traits@G@std@@@2@V32@0AEAVios_base@2@AEAHPEAUtm@@@Z (protected: virtual class std::istreambuf_iterator<unsigned short,struct std::char_traits<unsigned short> > __cdecl std::time_get<unsigned short,class std::istreambuf_iterator<unsigned short,struct std::char_traits<unsigned short> > >::do_get_date(class std::istreambuf_iterator<unsigned short,struct std::char_traits<unsigned short> >,class std::istreambuf_iterator<unsigned short,struct std::char_traits<unsigned short> >,class std::ios_base &,int &,struct tm *)const )
+           00000001400800A0  ?do_get_date@?$time_get@_WV?$istreambuf_iterator@_WU?$char_traits@_W@std@@@std@@@std@@MEBA?AV?$istreambuf_iterator@_WU?$char_traits@_W@std@@@2@V32@0AEAVios_base@2@AEAHPEAUtm@@@Z (protected: virtual class std::istreambuf_iterator<wchar_t,struct std::char_traits<wchar_t> > __cdecl std::time_get<wchar_t,class std::istreambuf_iterator<wchar_t,struct std::char_traits<wchar_t> > >::do_get_date(class std::istreambuf_iterator<wchar_t,struct std::char_traits<wchar_t> >,class std::istreambuf_iterator<wchar_t,struct std::char_traits<wchar_t> >,class std::ios_base &,int &,struct tm *)const )
+           0000000140080650  ?do_get_monthname@?$time_get@GV?$istreambuf_iterator@GU?$char_traits@G@std@@@std@@@std@@MEBA?AV?$istreambuf_iterator@GU?$char_traits@G@std@@@2@V32@0AEAVios_base@2@AEAHPEAUtm@@@Z (protected: virtual class std::istreambuf_iterator<unsigned short,struct std::char_traits<unsigned short> > __cdecl std::time_get<unsigned short,class std::istreambuf_iterator<unsigned short,struct std::char_traits<unsigned short> > >::do_get_monthname(class std::istreambuf_iterator<unsigned short,struct std::char_traits<unsigned short> >,class std::istreambuf_iterator<unsigned short,struct std::char_traits<unsigned short> >,class std::ios_base &,int &,struct tm *)const )
+           00000001400806B0  ?do_get_monthname@?$time_get@_WV?$istreambuf_iterator@_WU?$char_traits@_W@std@@@std@@@std@@MEBA?AV?$istreambuf_iterator@_WU?$char_traits@_W@std@@@2@V32@0AEAVios_base@2@AEAHPEAUtm@@@Z (protected: virtual class std::istreambuf_iterator<wchar_t,struct std::char_traits<wchar_t> > __cdecl std::time_get<wchar_t,class std::istreambuf_iterator<wchar_t,struct std::char_traits<wchar_t> > >::do_get_monthname(class std::istreambuf_iterator<wchar_t,struct std::char_traits<wchar_t> >,class std::istreambuf_iterator<wchar_t,struct std::char_traits<wchar_t> >,class std::ios_base &,int &,struct tm *)const )
+           0000000140080710  ?do_get_time@?$time_get@GV?$istreambuf_iterator@GU?$char_traits@G@std@@@std@@@std@@MEBA?AV?$istreambuf_iterator@GU?$char_traits@G@std@@@2@V32@0AEAVios_base@2@AEAHPEAUtm@@@Z (protected: virtual class std::istreambuf_iterator<unsigned short,struct std::char_traits<unsigned short> > __cdecl std::time_get<unsigned short,class std::istreambuf_iterator<unsigned short,struct std::char_traits<unsigned short> > >::do_get_time(class std::istreambuf_iterator<unsigned short,struct std::char_traits<unsigned short> >,class std::istreambuf_iterator<unsigned short,struct std::char_traits<unsigned short> >,class std::ios_base &,int &,struct tm *)const )
+           00000001400808D0  ?do_get_time@?$time_get@_WV?$istreambuf_iterator@_WU?$char_traits@_W@std@@@std@@@std@@MEBA?AV?$istreambuf_iterator@_WU?$char_traits@_W@std@@@2@V32@0AEAVios_base@2@AEAHPEAUtm@@@Z (protected: virtual class std::istreambuf_iterator<wchar_t,struct std::char_traits<wchar_t> > __cdecl std::time_get<wchar_t,class std::istreambuf_iterator<wchar_t,struct std::char_traits<wchar_t> > >::do_get_time(class std::istreambuf_iterator<wchar_t,struct std::char_traits<wchar_t> >,class std::istreambuf_iterator<wchar_t,struct std::char_traits<wchar_t> >,class std::ios_base &,int &,struct tm *)const )
+           0000000140080A90  ?do_get_weekday@?$time_get@GV?$istreambuf_iterator@GU?$char_traits@G@std@@@std@@@std@@MEBA?AV?$istreambuf_iterator@GU?$char_traits@G@std@@@2@V32@0AEAVios_base@2@AEAHPEAUtm@@@Z (protected: virtual class std::istreambuf_iterator<unsigned short,struct std::char_traits<unsigned short> > __cdecl std::time_get<unsigned short,class std::istreambuf_iterator<unsigned short,struct std::char_traits<unsigned short> > >::do_get_weekday(class std::istreambuf_iterator<unsigned short,struct std::char_traits<unsigned short> >,class std::istreambuf_iterator<unsigned short,struct std::char_traits<unsigned short> >,class std::ios_base &,int &,struct tm *)const )
+           0000000140080AF0  ?do_get_weekday@?$time_get@_WV?$istreambuf_iterator@_WU?$char_traits@_W@std@@@std@@@std@@MEBA?AV?$istreambuf_iterator@_WU?$char_traits@_W@std@@@2@V32@0AEAVios_base@2@AEAHPEAUtm@@@Z (protected: virtual class std::istreambuf_iterator<wchar_t,struct std::char_traits<wchar_t> > __cdecl std::time_get<wchar_t,class std::istreambuf_iterator<wchar_t,struct std::char_traits<wchar_t> > >::do_get_weekday(class std::istreambuf_iterator<wchar_t,struct std::char_traits<wchar_t> >,class std::istreambuf_iterator<wchar_t,struct std::char_traits<wchar_t> >,class std::ios_base &,int &,struct tm *)const )
+           0000000140080B50  ?do_get_year@?$time_get@GV?$istreambuf_iterator@GU?$char_traits@G@std@@@std@@@std@@MEBA?AV?$istreambuf_iterator@GU?$char_traits@G@std@@@2@V32@0AEAVios_base@2@AEAHPEAUtm@@@Z (protected: virtual class std::istreambuf_iterator<unsigned short,struct std::char_traits<unsigned short> > __cdecl std::time_get<unsigned short,class std::istreambuf_iterator<unsigned short,struct std::char_traits<unsigned short> > >::do_get_year(class std::istreambuf_iterator<unsigned short,struct std::char_traits<unsigned short> >,class std::istreambuf_iterator<unsigned short,struct std::char_traits<unsigned short> >,class std::ios_base &,int &,struct tm *)const )
+           0000000140080C70  ?do_get_year@?$time_get@_WV?$istreambuf_iterator@_WU?$char_traits@_W@std@@@std@@@std@@MEBA?AV?$istreambuf_iterator@_WU?$char_traits@_W@std@@@2@V32@0AEAVios_base@2@AEAHPEAUtm@@@Z (protected: virtual class std::istreambuf_iterator<wchar_t,struct std::char_traits<wchar_t> > __cdecl std::time_get<wchar_t,class std::istreambuf_iterator<wchar_t,struct std::char_traits<wchar_t> > >::do_get_year(class std::istreambuf_iterator<wchar_t,struct std::char_traits<wchar_t> >,class std::istreambuf_iterator<wchar_t,struct std::char_traits<wchar_t> >,class std::ios_base &,int &,struct tm *)const )
+           0000000140080D90  ?do_grouping@?$_Mpunct@G@std@@MEBA?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@2@XZ (protected: virtual class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > __cdecl std::_Mpunct<unsigned short>::do_grouping(void)const )
+           0000000140080DE0  ?do_grouping@?$_Mpunct@_W@std@@MEBA?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@2@XZ (protected: virtual class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > __cdecl std::_Mpunct<wchar_t>::do_grouping(void)const )
+           0000000140080E30  ?do_grouping@?$numpunct@G@std@@MEBA?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@2@XZ (protected: virtual class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > __cdecl std::numpunct<unsigned short>::do_grouping(void)const )
+           0000000140080E80  ?do_grouping@?$numpunct@_W@std@@MEBA?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@2@XZ (protected: virtual class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > __cdecl std::numpunct<wchar_t>::do_grouping(void)const )
+           0000000140080ED0  ?do_hash@?$collate@G@std@@MEBAJPEBG0@Z (protected: virtual long __cdecl std::collate<unsigned short>::do_hash(unsigned short const *,unsigned short const *)const )
+           0000000140080EF0  ?do_hash@?$collate@_W@std@@MEBAJPEB_W0@Z (protected: virtual long __cdecl std::collate<wchar_t>::do_hash(wchar_t const *,wchar_t const *)const )
+           0000000140080F10  ?do_in@?$codecvt@GDU_Mbstatet@@@std@@MEBAHAEAU_Mbstatet@@PEBD1AEAPEBDPEAG3AEAPEAG@Z (protected: virtual int __cdecl std::codecvt<unsigned short,char,struct _Mbstatet>::do_in(struct _Mbstatet &,char const *,char const *,char const * &,unsigned short *,unsigned short *,unsigned short * &)const )
+           0000000140080FC0  ?do_in@?$codecvt@_WDU_Mbstatet@@@std@@MEBAHAEAU_Mbstatet@@PEBD1AEAPEBDPEA_W3AEAPEA_W@Z (protected: virtual int __cdecl std::codecvt<wchar_t,char,struct _Mbstatet>::do_in(struct _Mbstatet &,char const *,char const *,char const * &,wchar_t *,wchar_t *,wchar_t * &)const )
+           0000000140081070  ?do_is@?$ctype@G@std@@MEBAPEBGPEBG0PEAF@Z (protected: virtual unsigned short const * __cdecl std::ctype<unsigned short>::do_is(unsigned short const *,unsigned short const *,short *)const )
+           0000000140081090  ?do_is@?$ctype@G@std@@MEBA_NFG@Z (protected: virtual bool __cdecl std::ctype<unsigned short>::do_is(short,unsigned short)const )
+           00000001400810C0  ?do_is@?$ctype@_W@std@@MEBAPEB_WPEB_W0PEAF@Z (protected: virtual wchar_t const * __cdecl std::ctype<wchar_t>::do_is(wchar_t const *,wchar_t const *,short *)const )
+           00000001400810E0  ?do_is@?$ctype@_W@std@@MEBA_NF_W@Z (protected: virtual bool __cdecl std::ctype<wchar_t>::do_is(short,wchar_t)const )
+           0000000140081110  ?do_length@?$codecvt@GDU_Mbstatet@@@std@@MEBAHAEAU_Mbstatet@@PEBD1_K@Z (protected: virtual int __cdecl std::codecvt<unsigned short,char,struct _Mbstatet>::do_length(struct _Mbstatet &,char const *,char const *,unsigned __int64)const )
+           00000001400811B0  ?do_length@?$codecvt@_WDU_Mbstatet@@@std@@MEBAHAEAU_Mbstatet@@PEBD1_K@Z (protected: virtual int __cdecl std::codecvt<wchar_t,char,struct _Mbstatet>::do_length(struct _Mbstatet &,char const *,char const *,unsigned __int64)const )
+           0000000140081250  ?do_max_length@?$codecvt@GDU_Mbstatet@@@std@@MEBAHXZ (protected: virtual int __cdecl std::codecvt<unsigned short,char,struct _Mbstatet>::do_max_length(void)const )
+           0000000140081260  ?do_max_length@?$codecvt@_WDU_Mbstatet@@@std@@MEBAHXZ (protected: virtual int __cdecl std::codecvt<wchar_t,char,struct _Mbstatet>::do_max_length(void)const )
+           0000000140081270  ?do_narrow@?$ctype@G@std@@MEBADGD@Z (protected: virtual char __cdecl std::ctype<unsigned short>::do_narrow(unsigned short,char)const )
+           00000001400812D0  ?do_narrow@?$ctype@G@std@@MEBAPEBGPEBG0DPEAD@Z (protected: virtual unsigned short const * __cdecl std::ctype<unsigned short>::do_narrow(unsigned short const *,unsigned short const *,char,char *)const )
+           0000000140081370  ?do_narrow@?$ctype@_W@std@@MEBAD_WD@Z (protected: virtual char __cdecl std::ctype<wchar_t>::do_narrow(wchar_t,char)const )
+           00000001400813D0  ?do_narrow@?$ctype@_W@std@@MEBAPEB_WPEB_W0DPEAD@Z (protected: virtual wchar_t const * __cdecl std::ctype<wchar_t>::do_narrow(wchar_t const *,wchar_t const *,char,char *)const )
+           0000000140081470  ?do_neg_format@?$_Mpunct@G@std@@MEBA?AUpattern@money_base@2@XZ (protected: virtual struct std::money_base::pattern __cdecl std::_Mpunct<unsigned short>::do_neg_format(void)const )
+           0000000140081480  ?do_neg_format@?$_Mpunct@_W@std@@MEBA?AUpattern@money_base@2@XZ (protected: virtual struct std::money_base::pattern __cdecl std::_Mpunct<wchar_t>::do_neg_format(void)const )
+           0000000140081490  ?do_negative_sign@?$_Mpunct@G@std@@MEBA?AV?$basic_string@GU?$char_traits@G@std@@V?$allocator@G@2@@2@XZ (protected: virtual class std::basic_string<unsigned short,struct std::char_traits<unsigned short>,class std::allocator<unsigned short> > __cdecl std::_Mpunct<unsigned short>::do_negative_sign(void)const )
+           00000001400814E0  ?do_negative_sign@?$_Mpunct@_W@std@@MEBA?AV?$basic_string@_WU?$char_traits@_W@std@@V?$allocator@_W@2@@2@XZ (protected: virtual class std::basic_string<wchar_t,struct std::char_traits<wchar_t>,class std::allocator<wchar_t> > __cdecl std::_Mpunct<wchar_t>::do_negative_sign(void)const )
+           0000000140081530  ?do_open@?$messages@G@std@@MEBAHAEBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@2@AEBVlocale@2@@Z (protected: virtual int __cdecl std::messages<unsigned short>::do_open(class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > const &,class std::locale const &)const )
+           0000000140081540  ?do_open@?$messages@_W@std@@MEBAHAEBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@2@AEBVlocale@2@@Z (protected: virtual int __cdecl std::messages<wchar_t>::do_open(class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > const &,class std::locale const &)const )
+           0000000140081550  ?do_out@?$codecvt@GDU_Mbstatet@@@std@@MEBAHAEAU_Mbstatet@@PEBG1AEAPEBGPEAD3AEAPEAD@Z (protected: virtual int __cdecl std::codecvt<unsigned short,char,struct _Mbstatet>::do_out(struct _Mbstatet &,unsigned short const *,unsigned short const *,unsigned short const * &,char *,char *,char * &)const )
+           0000000140081690  ?do_out@?$codecvt@_WDU_Mbstatet@@@std@@MEBAHAEAU_Mbstatet@@PEB_W1AEAPEB_WPEAD3AEAPEAD@Z (protected: virtual int __cdecl std::codecvt<wchar_t,char,struct _Mbstatet>::do_out(struct _Mbstatet &,wchar_t const *,wchar_t const *,wchar_t const * &,char *,char *,char * &)const )
+           00000001400817D0  ?do_pos_format@?$_Mpunct@G@std@@MEBA?AUpattern@money_base@2@XZ (protected: virtual struct std::money_base::pattern __cdecl std::_Mpunct<unsigned short>::do_pos_format(void)const )
+           00000001400817E0  ?do_pos_format@?$_Mpunct@_W@std@@MEBA?AUpattern@money_base@2@XZ (protected: virtual struct std::money_base::pattern __cdecl std::_Mpunct<wchar_t>::do_pos_format(void)const )
+           00000001400817F0  ?do_positive_sign@?$_Mpunct@G@std@@MEBA?AV?$basic_string@GU?$char_traits@G@std@@V?$allocator@G@2@@2@XZ (protected: virtual class std::basic_string<unsigned short,struct std::char_traits<unsigned short>,class std::allocator<unsigned short> > __cdecl std::_Mpunct<unsigned short>::do_positive_sign(void)const )
+           0000000140081840  ?do_positive_sign@?$_Mpunct@_W@std@@MEBA?AV?$basic_string@_WU?$char_traits@_W@std@@V?$allocator@_W@2@@2@XZ (protected: virtual class std::basic_string<wchar_t,struct std::char_traits<wchar_t>,class std::allocator<wchar_t> > __cdecl std::_Mpunct<wchar_t>::do_positive_sign(void)const )
+           0000000140081890  ?do_put@?$money_put@GV?$ostreambuf_iterator@GU?$char_traits@G@std@@@std@@@std@@MEBA?AV?$ostreambuf_iterator@GU?$char_traits@G@std@@@2@V32@_NAEAVios_base@2@GAEBV?$basic_string@GU?$char_traits@G@std@@V?$allocator@G@2@@2@@Z (protected: virtual class std::ostreambuf_iterator<unsigned short,struct std::char_traits<unsigned short> > __cdecl std::money_put<unsigned short,class std::ostreambuf_iterator<unsigned short,struct std::char_traits<unsigned short> > >::do_put(class std::ostreambuf_iterator<unsigned short,struct std::char_traits<unsigned short> >,bool,class std::ios_base &,unsigned short,class std::basic_string<unsigned short,struct std::char_traits<unsigned short>,class std::allocator<unsigned short> > const &)const )
+           0000000140081C60  ?do_put@?$money_put@GV?$ostreambuf_iterator@GU?$char_traits@G@std@@@std@@@std@@MEBA?AV?$ostreambuf_iterator@GU?$char_traits@G@std@@@2@V32@_NAEAVios_base@2@GO@Z (protected: virtual class std::ostreambuf_iterator<unsigned short,struct std::char_traits<unsigned short> > __cdecl std::money_put<unsigned short,class std::ostreambuf_iterator<unsigned short,struct std::char_traits<unsigned short> > >::do_put(class std::ostreambuf_iterator<unsigned short,struct std::char_traits<unsigned short> >,bool,class std::ios_base &,unsigned short,long double)const )
+           0000000140082050  ?do_put@?$money_put@_WV?$ostreambuf_iterator@_WU?$char_traits@_W@std@@@std@@@std@@MEBA?AV?$ostreambuf_iterator@_WU?$char_traits@_W@std@@@2@V32@_NAEAVios_base@2@_WAEBV?$basic_string@_WU?$char_traits@_W@std@@V?$allocator@_W@2@@2@@Z (protected: virtual class std::ostreambuf_iterator<wchar_t,struct std::char_traits<wchar_t> > __cdecl std::money_put<wchar_t,class std::ostreambuf_iterator<wchar_t,struct std::char_traits<wchar_t> > >::do_put(class std::ostreambuf_iterator<wchar_t,struct std::char_traits<wchar_t> >,bool,class std::ios_base &,wchar_t,class std::basic_string<wchar_t,struct std::char_traits<wchar_t>,class std::allocator<wchar_t> > const &)const )
+           0000000140082420  ?do_put@?$money_put@_WV?$ostreambuf_iterator@_WU?$char_traits@_W@std@@@std@@@std@@MEBA?AV?$ostreambuf_iterator@_WU?$char_traits@_W@std@@@2@V32@_NAEAVios_base@2@_WO@Z (protected: virtual class std::ostreambuf_iterator<wchar_t,struct std::char_traits<wchar_t> > __cdecl std::money_put<wchar_t,class std::ostreambuf_iterator<wchar_t,struct std::char_traits<wchar_t> > >::do_put(class std::ostreambuf_iterator<wchar_t,struct std::char_traits<wchar_t> >,bool,class std::ios_base &,wchar_t,long double)const )
+           0000000140082810  ?do_put@?$num_put@GV?$ostreambuf_iterator@GU?$char_traits@G@std@@@std@@@std@@MEBA?AV?$ostreambuf_iterator@GU?$char_traits@G@std@@@2@V32@AEAVios_base@2@GJ@Z (protected: virtual class std::ostreambuf_iterator<unsigned short,struct std::char_traits<unsigned short> > __cdecl std::num_put<unsigned short,class std::ostreambuf_iterator<unsigned short,struct std::char_traits<unsigned short> > >::do_put(class std::ostreambuf_iterator<unsigned short,struct std::char_traits<unsigned short> >,class std::ios_base &,unsigned short,long)const )
+           0000000140082910  ?do_put@?$num_put@GV?$ostreambuf_iterator@GU?$char_traits@G@std@@@std@@@std@@MEBA?AV?$ostreambuf_iterator@GU?$char_traits@G@std@@@2@V32@AEAVios_base@2@GK@Z (protected: virtual class std::ostreambuf_iterator<unsigned short,struct std::char_traits<unsigned short> > __cdecl std::num_put<unsigned short,class std::ostreambuf_iterator<unsigned short,struct std::char_traits<unsigned short> > >::do_put(class std::ostreambuf_iterator<unsigned short,struct std::char_traits<unsigned short> >,class std::ios_base &,unsigned short,unsigned long)const )
+           0000000140082A10  ?do_put@?$num_put@GV?$ostreambuf_iterator@GU?$char_traits@G@std@@@std@@@std@@MEBA?AV?$ostreambuf_iterator@GU?$char_traits@G@std@@@2@V32@AEAVios_base@2@GN@Z (protected: virtual class std::ostreambuf_iterator<unsigned short,struct std::char_traits<unsigned short> > __cdecl std::num_put<unsigned short,class std::ostreambuf_iterator<unsigned short,struct std::char_traits<unsigned short> > >::do_put(class std::ostreambuf_iterator<unsigned short,struct std::char_traits<unsigned short> >,class std::ios_base &,unsigned short,double)const )
+           0000000140082CE0  ?do_put@?$num_put@GV?$ostreambuf_iterator@GU?$char_traits@G@std@@@std@@@std@@MEBA?AV?$ostreambuf_iterator@GU?$char_traits@G@std@@@2@V32@AEAVios_base@2@GO@Z (protected: virtual class std::ostreambuf_iterator<unsigned short,struct std::char_traits<unsigned short> > __cdecl std::num_put<unsigned short,class std::ostreambuf_iterator<unsigned short,struct std::char_traits<unsigned short> > >::do_put(class std::ostreambuf_iterator<unsigned short,struct std::char_traits<unsigned short> >,class std::ios_base &,unsigned short,long double)const )
+           0000000140082FB0  ?do_put@?$num_put@GV?$ostreambuf_iterator@GU?$char_traits@G@std@@@std@@@std@@MEBA?AV?$ostreambuf_iterator@GU?$char_traits@G@std@@@2@V32@AEAVios_base@2@GPEBX@Z (protected: virtual class std::ostreambuf_iterator<unsigned short,struct std::char_traits<unsigned short> > __cdecl std::num_put<unsigned short,class std::ostreambuf_iterator<unsigned short,struct std::char_traits<unsigned short> > >::do_put(class std::ostreambuf_iterator<unsigned short,struct std::char_traits<unsigned short> >,class std::ios_base &,unsigned short,void const *)const )
+           0000000140083050  ?do_put@?$num_put@GV?$ostreambuf_iterator@GU?$char_traits@G@std@@@std@@@std@@MEBA?AV?$ostreambuf_iterator@GU?$char_traits@G@std@@@2@V32@AEAVios_base@2@G_J@Z (protected: virtual class std::ostreambuf_iterator<unsigned short,struct std::char_traits<unsigned short> > __cdecl std::num_put<unsigned short,class std::ostreambuf_iterator<unsigned short,struct std::char_traits<unsigned short> > >::do_put(class std::ostreambuf_iterator<unsigned short,struct std::char_traits<unsigned short> >,class std::ios_base &,unsigned short,__int64)const )
+           0000000140083160  ?do_put@?$num_put@GV?$ostreambuf_iterator@GU?$char_traits@G@std@@@std@@@std@@MEBA?AV?$ostreambuf_iterator@GU?$char_traits@G@std@@@2@V32@AEAVios_base@2@G_K@Z (protected: virtual class std::ostreambuf_iterator<unsigned short,struct std::char_traits<unsigned short> > __cdecl std::num_put<unsigned short,class std::ostreambuf_iterator<unsigned short,struct std::char_traits<unsigned short> > >::do_put(class std::ostreambuf_iterator<unsigned short,struct std::char_traits<unsigned short> >,class std::ios_base &,unsigned short,unsigned __int64)const )
+           0000000140083270  ?do_put@?$num_put@GV?$ostreambuf_iterator@GU?$char_traits@G@std@@@std@@@std@@MEBA?AV?$ostreambuf_iterator@GU?$char_traits@G@std@@@2@V32@AEAVios_base@2@G_N@Z (protected: virtual class std::ostreambuf_iterator<unsigned short,struct std::char_traits<unsigned short> > __cdecl std::num_put<unsigned short,class std::ostreambuf_iterator<unsigned short,struct std::char_traits<unsigned short> > >::do_put(class std::ostreambuf_iterator<unsigned short,struct std::char_traits<unsigned short> >,class std::ios_base &,unsigned short,bool)const )
+           0000000140083500  ?do_put@?$num_put@_WV?$ostreambuf_iterator@_WU?$char_traits@_W@std@@@std@@@std@@MEBA?AV?$ostreambuf_iterator@_WU?$char_traits@_W@std@@@2@V32@AEAVios_base@2@_WJ@Z (protected: virtual class std::ostreambuf_iterator<wchar_t,struct std::char_traits<wchar_t> > __cdecl std::num_put<wchar_t,class std::ostreambuf_iterator<wchar_t,struct std::char_traits<wchar_t> > >::do_put(class std::ostreambuf_iterator<wchar_t,struct std::char_traits<wchar_t> >,class std::ios_base &,wchar_t,long)const )
+           0000000140083600  ?do_put@?$num_put@_WV?$ostreambuf_iterator@_WU?$char_traits@_W@std@@@std@@@std@@MEBA?AV?$ostreambuf_iterator@_WU?$char_traits@_W@std@@@2@V32@AEAVios_base@2@_WK@Z (protected: virtual class std::ostreambuf_iterator<wchar_t,struct std::char_traits<wchar_t> > __cdecl std::num_put<wchar_t,class std::ostreambuf_iterator<wchar_t,struct std::char_traits<wchar_t> > >::do_put(class std::ostreambuf_iterator<wchar_t,struct std::char_traits<wchar_t> >,class std::ios_base &,wchar_t,unsigned long)const )
+           0000000140083700  ?do_put@?$num_put@_WV?$ostreambuf_iterator@_WU?$char_traits@_W@std@@@std@@@std@@MEBA?AV?$ostreambuf_iterator@_WU?$char_traits@_W@std@@@2@V32@AEAVios_base@2@_WN@Z (protected: virtual class std::ostreambuf_iterator<wchar_t,struct std::char_traits<wchar_t> > __cdecl std::num_put<wchar_t,class std::ostreambuf_iterator<wchar_t,struct std::char_traits<wchar_t> > >::do_put(class std::ostreambuf_iterator<wchar_t,struct std::char_traits<wchar_t> >,class std::ios_base &,wchar_t,double)const )
+           00000001400839D0  ?do_put@?$num_put@_WV?$ostreambuf_iterator@_WU?$char_traits@_W@std@@@std@@@std@@MEBA?AV?$ostreambuf_iterator@_WU?$char_traits@_W@std@@@2@V32@AEAVios_base@2@_WO@Z (protected: virtual class std::ostreambuf_iterator<wchar_t,struct std::char_traits<wchar_t> > __cdecl std::num_put<wchar_t,class std::ostreambuf_iterator<wchar_t,struct std::char_traits<wchar_t> > >::do_put(class std::ostreambuf_iterator<wchar_t,struct std::char_traits<wchar_t> >,class std::ios_base &,wchar_t,long double)const )
+           0000000140083CA0  ?do_put@?$num_put@_WV?$ostreambuf_iterator@_WU?$char_traits@_W@std@@@std@@@std@@MEBA?AV?$ostreambuf_iterator@_WU?$char_traits@_W@std@@@2@V32@AEAVios_base@2@_WPEBX@Z (protected: virtual class std::ostreambuf_iterator<wchar_t,struct std::char_traits<wchar_t> > __cdecl std::num_put<wchar_t,class std::ostreambuf_iterator<wchar_t,struct std::char_traits<wchar_t> > >::do_put(class std::ostreambuf_iterator<wchar_t,struct std::char_traits<wchar_t> >,class std::ios_base &,wchar_t,void const *)const )
+           0000000140083D40  ?do_put@?$num_put@_WV?$ostreambuf_iterator@_WU?$char_traits@_W@std@@@std@@@std@@MEBA?AV?$ostreambuf_iterator@_WU?$char_traits@_W@std@@@2@V32@AEAVios_base@2@_W_J@Z (protected: virtual class std::ostreambuf_iterator<wchar_t,struct std::char_traits<wchar_t> > __cdecl std::num_put<wchar_t,class std::ostreambuf_iterator<wchar_t,struct std::char_traits<wchar_t> > >::do_put(class std::ostreambuf_iterator<wchar_t,struct std::char_traits<wchar_t> >,class std::ios_base &,wchar_t,__int64)const )
+           0000000140083E50  ?do_put@?$num_put@_WV?$ostreambuf_iterator@_WU?$char_traits@_W@std@@@std@@@std@@MEBA?AV?$ostreambuf_iterator@_WU?$char_traits@_W@std@@@2@V32@AEAVios_base@2@_W_K@Z (protected: virtual class std::ostreambuf_iterator<wchar_t,struct std::char_traits<wchar_t> > __cdecl std::num_put<wchar_t,class std::ostreambuf_iterator<wchar_t,struct std::char_traits<wchar_t> > >::do_put(class std::ostreambuf_iterator<wchar_t,struct std::char_traits<wchar_t> >,class std::ios_base &,wchar_t,unsigned __int64)const )
+           0000000140083F60  ?do_put@?$num_put@_WV?$ostreambuf_iterator@_WU?$char_traits@_W@std@@@std@@@std@@MEBA?AV?$ostreambuf_iterator@_WU?$char_traits@_W@std@@@2@V32@AEAVios_base@2@_W_N@Z (protected: virtual class std::ostreambuf_iterator<wchar_t,struct std::char_traits<wchar_t> > __cdecl std::num_put<wchar_t,class std::ostreambuf_iterator<wchar_t,struct std::char_traits<wchar_t> > >::do_put(class std::ostreambuf_iterator<wchar_t,struct std::char_traits<wchar_t> >,class std::ios_base &,wchar_t,bool)const )
+           00000001400841F0  ?do_put@?$time_put@GV?$ostreambuf_iterator@GU?$char_traits@G@std@@@std@@@std@@MEBA?AV?$ostreambuf_iterator@GU?$char_traits@G@std@@@2@V32@AEAVios_base@2@GPEBUtm@@DD@Z (protected: virtual class std::ostreambuf_iterator<unsigned short,struct std::char_traits<unsigned short> > __cdecl std::time_put<unsigned short,class std::ostreambuf_iterator<unsigned short,struct std::char_traits<unsigned short> > >::do_put(class std::ostreambuf_iterator<unsigned short,struct std::char_traits<unsigned short> >,class std::ios_base &,unsigned short,struct tm const *,char,char)const )
+           00000001400843F0  ?do_put@?$time_put@_WV?$ostreambuf_iterator@_WU?$char_traits@_W@std@@@std@@@std@@MEBA?AV?$ostreambuf_iterator@_WU?$char_traits@_W@std@@@2@V32@AEAVios_base@2@_WPEBUtm@@DD@Z (protected: virtual class std::ostreambuf_iterator<wchar_t,struct std::char_traits<wchar_t> > __cdecl std::time_put<wchar_t,class std::ostreambuf_iterator<wchar_t,struct std::char_traits<wchar_t> > >::do_put(class std::ostreambuf_iterator<wchar_t,struct std::char_traits<wchar_t> >,class std::ios_base &,wchar_t,struct tm const *,char,char)const )
+           00000001400845F0  ?do_scan_is@?$ctype@G@std@@MEBAPEBGFPEBG0@Z (protected: virtual unsigned short const * __cdecl std::ctype<unsigned short>::do_scan_is(short,unsigned short const *,unsigned short const *)const )
+           0000000140084660  ?do_scan_is@?$ctype@_W@std@@MEBAPEB_WFPEB_W0@Z (protected: virtual wchar_t const * __cdecl std::ctype<wchar_t>::do_scan_is(short,wchar_t const *,wchar_t const *)const )
+           00000001400846D0  ?do_scan_not@?$ctype@G@std@@MEBAPEBGFPEBG0@Z (protected: virtual unsigned short const * __cdecl std::ctype<unsigned short>::do_scan_not(short,unsigned short const *,unsigned short const *)const )
+           0000000140084740  ?do_scan_not@?$ctype@_W@std@@MEBAPEB_WFPEB_W0@Z (protected: virtual wchar_t const * __cdecl std::ctype<wchar_t>::do_scan_not(short,wchar_t const *,wchar_t const *)const )
+           00000001400847B0  ?do_thousands_sep@?$_Mpunct@G@std@@MEBAGXZ (protected: virtual unsigned short __cdecl std::_Mpunct<unsigned short>::do_thousands_sep(void)const )
+           00000001400847C0  ?do_thousands_sep@?$_Mpunct@_W@std@@MEBA_WXZ (protected: virtual wchar_t __cdecl std::_Mpunct<wchar_t>::do_thousands_sep(void)const )
+           00000001400847D0  ?do_thousands_sep@?$numpunct@G@std@@MEBAGXZ (protected: virtual unsigned short __cdecl std::numpunct<unsigned short>::do_thousands_sep(void)const )
+           00000001400847E0  ?do_thousands_sep@?$numpunct@_W@std@@MEBA_WXZ (protected: virtual wchar_t __cdecl std::numpunct<wchar_t>::do_thousands_sep(void)const )
+           00000001400847F0  ?do_tolower@?$ctype@G@std@@MEBAGG@Z (protected: virtual unsigned short __cdecl std::ctype<unsigned short>::do_tolower(unsigned short)const )
+           0000000140084800  ?do_tolower@?$ctype@G@std@@MEBAPEBGPEAGPEBG@Z (protected: virtual unsigned short const * __cdecl std::ctype<unsigned short>::do_tolower(unsigned short *,unsigned short const *)const )
+           0000000140084850  ?do_tolower@?$ctype@_W@std@@MEBAPEB_WPEA_WPEB_W@Z (protected: virtual wchar_t const * __cdecl std::ctype<wchar_t>::do_tolower(wchar_t *,wchar_t const *)const )
+           00000001400848A0  ?do_tolower@?$ctype@_W@std@@MEBA_W_W@Z (protected: virtual wchar_t __cdecl std::ctype<wchar_t>::do_tolower(wchar_t)const )
+           00000001400848B0  ?do_toupper@?$ctype@G@std@@MEBAGG@Z (protected: virtual unsigned short __cdecl std::ctype<unsigned short>::do_toupper(unsigned short)const )
+           00000001400848C0  ?do_toupper@?$ctype@G@std@@MEBAPEBGPEAGPEBG@Z (protected: virtual unsigned short const * __cdecl std::ctype<unsigned short>::do_toupper(unsigned short *,unsigned short const *)const )
+           0000000140084910  ?do_toupper@?$ctype@_W@std@@MEBAPEB_WPEA_WPEB_W@Z (protected: virtual wchar_t const * __cdecl std::ctype<wchar_t>::do_toupper(wchar_t *,wchar_t const *)const )
+           0000000140084960  ?do_toupper@?$ctype@_W@std@@MEBA_W_W@Z (protected: virtual wchar_t __cdecl std::ctype<wchar_t>::do_toupper(wchar_t)const )
+           0000000140084970  ?do_transform@?$collate@G@std@@MEBA?AV?$basic_string@GU?$char_traits@G@std@@V?$allocator@G@2@@2@PEBG0@Z (protected: virtual class std::basic_string<unsigned short,struct std::char_traits<unsigned short>,class std::allocator<unsigned short> > __cdecl std::collate<unsigned short>::do_transform(unsigned short const *,unsigned short const *)const )
+           0000000140084B40  ?do_transform@?$collate@_W@std@@MEBA?AV?$basic_string@_WU?$char_traits@_W@std@@V?$allocator@_W@2@@2@PEB_W0@Z (protected: virtual class std::basic_string<wchar_t,struct std::char_traits<wchar_t>,class std::allocator<wchar_t> > __cdecl std::collate<wchar_t>::do_transform(wchar_t const *,wchar_t const *)const )
+           0000000140084D10  ?do_truename@?$numpunct@G@std@@MEBA?AV?$basic_string@GU?$char_traits@G@std@@V?$allocator@G@2@@2@XZ (protected: virtual class std::basic_string<unsigned short,struct std::char_traits<unsigned short>,class std::allocator<unsigned short> > __cdecl std::numpunct<unsigned short>::do_truename(void)const )
+           0000000140084D60  ?do_truename@?$numpunct@_W@std@@MEBA?AV?$basic_string@_WU?$char_traits@_W@std@@V?$allocator@_W@2@@2@XZ (protected: virtual class std::basic_string<wchar_t,struct std::char_traits<wchar_t>,class std::allocator<wchar_t> > __cdecl std::numpunct<wchar_t>::do_truename(void)const )
+           0000000140084DB0  ?do_unshift@?$codecvt@GDU_Mbstatet@@@std@@MEBAHAEAU_Mbstatet@@PEAD1AEAPEAD@Z (protected: virtual int __cdecl std::codecvt<unsigned short,char,struct _Mbstatet>::do_unshift(struct _Mbstatet &,char *,char *,char * &)const )
+           0000000140084E60  ?do_unshift@?$codecvt@_WDU_Mbstatet@@@std@@MEBAHAEAU_Mbstatet@@PEAD1AEAPEAD@Z (protected: virtual int __cdecl std::codecvt<wchar_t,char,struct _Mbstatet>::do_unshift(struct _Mbstatet &,char *,char *,char * &)const )
+           0000000140084F10  ?do_widen@?$ctype@G@std@@MEBAGD@Z (protected: virtual unsigned short __cdecl std::ctype<unsigned short>::do_widen(char)const )
+           0000000140084F60  ?do_widen@?$ctype@G@std@@MEBAPEBDPEBD0PEAG@Z (protected: virtual char const * __cdecl std::ctype<unsigned short>::do_widen(char const *,char const *,unsigned short *)const )
+           0000000140084FE0  ?do_widen@?$ctype@_W@std@@MEBAPEBDPEBD0PEA_W@Z (protected: virtual char const * __cdecl std::ctype<wchar_t>::do_widen(char const *,char const *,wchar_t *)const )
+           0000000140085060  ?do_widen@?$ctype@_W@std@@MEBA_WD@Z (protected: virtual wchar_t __cdecl std::ctype<wchar_t>::do_widen(char)const )
+           00000001400873B0  ??_E?$_Mpunct@D@std@@MEAAPEAXI@Z (protected: virtual void * __cdecl std::_Mpunct<char>::`vector deleting destructor'(unsigned int))
+           0000000140087420  ??_E?$collate@D@std@@MEAAPEAXI@Z (protected: virtual void * __cdecl std::collate<char>::`vector deleting destructor'(unsigned int))
+           0000000140087470  ??_E?$messages@D@std@@MEAAPEAXI@Z (protected: virtual void * __cdecl std::messages<char>::`vector deleting destructor'(unsigned int))
+           00000001400874A0  ??_E?$money_get@DV?$istreambuf_iterator@DU?$char_traits@D@std@@@std@@@std@@MEAAPEAXI@Z (protected: virtual void * __cdecl std::money_get<char,class std::istreambuf_iterator<char,struct std::char_traits<char> > >::`vector deleting destructor'(unsigned int))
+           00000001400874D0  ??_E?$money_put@DV?$ostreambuf_iterator@DU?$char_traits@D@std@@@std@@@std@@MEAAPEAXI@Z (protected: virtual void * __cdecl std::money_put<char,class std::ostreambuf_iterator<char,struct std::char_traits<char> > >::`vector deleting destructor'(unsigned int))
+           0000000140087500  ??_E?$moneypunct@D$00@std@@MEAAPEAXI@Z (protected: virtual void * __cdecl std::moneypunct<char,1>::`vector deleting destructor'(unsigned int))
+           0000000140087570  ??_E?$moneypunct@D$0A@@std@@MEAAPEAXI@Z (protected: virtual void * __cdecl std::moneypunct<char,0>::`vector deleting destructor'(unsigned int))
+           00000001400875E0  ??_E?$time_get@DV?$istreambuf_iterator@DU?$char_traits@D@std@@@std@@@std@@MEAAPEAXI@Z (protected: virtual void * __cdecl std::time_get<char,class std::istreambuf_iterator<char,struct std::char_traits<char> > >::`vector deleting destructor'(unsigned int))
+           0000000140087640  ??_E?$time_put@DV?$ostreambuf_iterator@DU?$char_traits@D@std@@@std@@@std@@MEAAPEAXI@Z (protected: virtual void * __cdecl std::time_put<char,class std::ostreambuf_iterator<char,struct std::char_traits<char> > >::`vector deleting destructor'(unsigned int))
+           000000014008A520  ?do_close@?$messages@D@std@@MEBAXH@Z (protected: virtual void __cdecl std::messages<char>::do_close(int)const )
+           000000014008A530  ?do_compare@?$collate@D@std@@MEBAHPEBD000@Z (protected: virtual int __cdecl std::collate<char>::do_compare(char const *,char const *,char const *,char const *)const )
+           000000014008A580  ?do_curr_symbol@?$_Mpunct@D@std@@MEBA?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@2@XZ (protected: virtual class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > __cdecl std::_Mpunct<char>::do_curr_symbol(void)const )
+           000000014008A5D0  ?do_date_order@?$time_get@DV?$istreambuf_iterator@DU?$char_traits@D@std@@@std@@@std@@MEBA?AW4dateorder@time_base@2@XZ (protected: virtual enum std::time_base::dateorder __cdecl std::time_get<char,class std::istreambuf_iterator<char,struct std::char_traits<char> > >::do_date_order(void)const )
+           000000014008A5E0  ?do_decimal_point@?$_Mpunct@D@std@@MEBADXZ (protected: virtual char __cdecl std::_Mpunct<char>::do_decimal_point(void)const )
+           000000014008A5F0  ?do_frac_digits@?$_Mpunct@D@std@@MEBAHXZ (protected: virtual int __cdecl std::_Mpunct<char>::do_frac_digits(void)const )
+           000000014008A600  ?do_get@?$messages@D@std@@MEBA?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@2@HHHAEBV32@@Z (protected: virtual class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > __cdecl std::messages<char>::do_get(int,int,int,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > const &)const )
+           000000014008A640  ?do_get@?$money_get@DV?$istreambuf_iterator@DU?$char_traits@D@std@@@std@@@std@@MEBA?AV?$istreambuf_iterator@DU?$char_traits@D@std@@@2@V32@0_NAEAVios_base@2@AEAHAEAO@Z (protected: virtual class std::istreambuf_iterator<char,struct std::char_traits<char> > __cdecl std::money_get<char,class std::istreambuf_iterator<char,struct std::char_traits<char> > >::do_get(class std::istreambuf_iterator<char,struct std::char_traits<char> >,class std::istreambuf_iterator<char,struct std::char_traits<char> >,bool,class std::ios_base &,int &,long double &)const )
+           000000014008A740  ?do_get@?$money_get@DV?$istreambuf_iterator@DU?$char_traits@D@std@@@std@@@std@@MEBA?AV?$istreambuf_iterator@DU?$char_traits@D@std@@@2@V32@0_NAEAVios_base@2@AEAHAEAV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@2@@Z (protected: virtual class std::istreambuf_iterator<char,struct std::char_traits<char> > __cdecl std::money_get<char,class std::istreambuf_iterator<char,struct std::char_traits<char> > >::do_get(class std::istreambuf_iterator<char,struct std::char_traits<char> >,class std::istreambuf_iterator<char,struct std::char_traits<char> >,bool,class std::ios_base &,int &,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > &)const )
+           000000014008A870  ?do_get@?$time_get@DV?$istreambuf_iterator@DU?$char_traits@D@std@@@std@@@std@@MEBA?AV?$istreambuf_iterator@DU?$char_traits@D@std@@@2@V32@0AEAVios_base@2@AEAHPEAUtm@@DD@Z (protected: virtual class std::istreambuf_iterator<char,struct std::char_traits<char> > __cdecl std::time_get<char,class std::istreambuf_iterator<char,struct std::char_traits<char> > >::do_get(class std::istreambuf_iterator<char,struct std::char_traits<char> >,class std::istreambuf_iterator<char,struct std::char_traits<char> >,class std::ios_base &,int &,struct tm *,char,char)const )
+           000000014008ADF0  ?do_get_date@?$time_get@DV?$istreambuf_iterator@DU?$char_traits@D@std@@@std@@@std@@MEBA?AV?$istreambuf_iterator@DU?$char_traits@D@std@@@2@V32@0AEAVios_base@2@AEAHPEAUtm@@@Z (protected: virtual class std::istreambuf_iterator<char,struct std::char_traits<char> > __cdecl std::time_get<char,class std::istreambuf_iterator<char,struct std::char_traits<char> > >::do_get_date(class std::istreambuf_iterator<char,struct std::char_traits<char> >,class std::istreambuf_iterator<char,struct std::char_traits<char> >,class std::ios_base &,int &,struct tm *)const )
+           000000014008B7C0  ?do_get_monthname@?$time_get@DV?$istreambuf_iterator@DU?$char_traits@D@std@@@std@@@std@@MEBA?AV?$istreambuf_iterator@DU?$char_traits@D@std@@@2@V32@0AEAVios_base@2@AEAHPEAUtm@@@Z (protected: virtual class std::istreambuf_iterator<char,struct std::char_traits<char> > __cdecl std::time_get<char,class std::istreambuf_iterator<char,struct std::char_traits<char> > >::do_get_monthname(class std::istreambuf_iterator<char,struct std::char_traits<char> >,class std::istreambuf_iterator<char,struct std::char_traits<char> >,class std::ios_base &,int &,struct tm *)const )
+           000000014008B820  ?do_get_time@?$time_get@DV?$istreambuf_iterator@DU?$char_traits@D@std@@@std@@@std@@MEBA?AV?$istreambuf_iterator@DU?$char_traits@D@std@@@2@V32@0AEAVios_base@2@AEAHPEAUtm@@@Z (protected: virtual class std::istreambuf_iterator<char,struct std::char_traits<char> > __cdecl std::time_get<char,class std::istreambuf_iterator<char,struct std::char_traits<char> > >::do_get_time(class std::istreambuf_iterator<char,struct std::char_traits<char> >,class std::istreambuf_iterator<char,struct std::char_traits<char> >,class std::ios_base &,int &,struct tm *)const )
+           000000014008BAE0  ?do_get_weekday@?$time_get@DV?$istreambuf_iterator@DU?$char_traits@D@std@@@std@@@std@@MEBA?AV?$istreambuf_iterator@DU?$char_traits@D@std@@@2@V32@0AEAVios_base@2@AEAHPEAUtm@@@Z (protected: virtual class std::istreambuf_iterator<char,struct std::char_traits<char> > __cdecl std::time_get<char,class std::istreambuf_iterator<char,struct std::char_traits<char> > >::do_get_weekday(class std::istreambuf_iterator<char,struct std::char_traits<char> >,class std::istreambuf_iterator<char,struct std::char_traits<char> >,class std::ios_base &,int &,struct tm *)const )
+           000000014008BB40  ?do_get_year@?$time_get@DV?$istreambuf_iterator@DU?$char_traits@D@std@@@std@@@std@@MEBA?AV?$istreambuf_iterator@DU?$char_traits@D@std@@@2@V32@0AEAVios_base@2@AEAHPEAUtm@@@Z (protected: virtual class std::istreambuf_iterator<char,struct std::char_traits<char> > __cdecl std::time_get<char,class std::istreambuf_iterator<char,struct std::char_traits<char> > >::do_get_year(class std::istreambuf_iterator<char,struct std::char_traits<char> >,class std::istreambuf_iterator<char,struct std::char_traits<char> >,class std::ios_base &,int &,struct tm *)const )
+           000000014008BC60  ?do_grouping@?$_Mpunct@D@std@@MEBA?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@2@XZ (protected: virtual class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > __cdecl std::_Mpunct<char>::do_grouping(void)const )
+           000000014008BCB0  ?do_hash@?$collate@D@std@@MEBAJPEBD0@Z (protected: virtual long __cdecl std::collate<char>::do_hash(char const *,char const *)const )
+           000000014008BCC0  ?do_neg_format@?$_Mpunct@D@std@@MEBA?AUpattern@money_base@2@XZ (protected: virtual struct std::money_base::pattern __cdecl std::_Mpunct<char>::do_neg_format(void)const )
+           000000014008BCD0  ?do_negative_sign@?$_Mpunct@D@std@@MEBA?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@2@XZ (protected: virtual class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > __cdecl std::_Mpunct<char>::do_negative_sign(void)const )
+           000000014008BD20  ?do_open@?$messages@D@std@@MEBAHAEBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@2@AEBVlocale@2@@Z (protected: virtual int __cdecl std::messages<char>::do_open(class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > const &,class std::locale const &)const )
+           000000014008BD30  ?do_pos_format@?$_Mpunct@D@std@@MEBA?AUpattern@money_base@2@XZ (protected: virtual struct std::money_base::pattern __cdecl std::_Mpunct<char>::do_pos_format(void)const )
+           000000014008BD40  ?do_positive_sign@?$_Mpunct@D@std@@MEBA?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@2@XZ (protected: virtual class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > __cdecl std::_Mpunct<char>::do_positive_sign(void)const )
+           000000014008BD90  ?do_put@?$money_put@DV?$ostreambuf_iterator@DU?$char_traits@D@std@@@std@@@std@@MEBA?AV?$ostreambuf_iterator@DU?$char_traits@D@std@@@2@V32@_NAEAVios_base@2@DAEBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@2@@Z (protected: virtual class std::ostreambuf_iterator<char,struct std::char_traits<char> > __cdecl std::money_put<char,class std::ostreambuf_iterator<char,struct std::char_traits<char> > >::do_put(class std::ostreambuf_iterator<char,struct std::char_traits<char> >,bool,class std::ios_base &,char,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > const &)const )
+           000000014008C120  ?do_put@?$money_put@DV?$ostreambuf_iterator@DU?$char_traits@D@std@@@std@@@std@@MEBA?AV?$ostreambuf_iterator@DU?$char_traits@D@std@@@2@V32@_NAEAVios_base@2@DO@Z (protected: virtual class std::ostreambuf_iterator<char,struct std::char_traits<char> > __cdecl std::money_put<char,class std::ostreambuf_iterator<char,struct std::char_traits<char> > >::do_put(class std::ostreambuf_iterator<char,struct std::char_traits<char> >,bool,class std::ios_base &,char,long double)const )
+           000000014008C4D0  ?do_put@?$time_put@DV?$ostreambuf_iterator@DU?$char_traits@D@std@@@std@@@std@@MEBA?AV?$ostreambuf_iterator@DU?$char_traits@D@std@@@2@V32@AEAVios_base@2@DPEBUtm@@DD@Z (protected: virtual class std::ostreambuf_iterator<char,struct std::char_traits<char> > __cdecl std::time_put<char,class std::ostreambuf_iterator<char,struct std::char_traits<char> > >::do_put(class std::ostreambuf_iterator<char,struct std::char_traits<char> >,class std::ios_base &,char,struct tm const *,char,char)const )
+           000000014008C750  ?do_thousands_sep@?$_Mpunct@D@std@@MEBADXZ (protected: virtual char __cdecl std::_Mpunct<char>::do_thousands_sep(void)const )
+           000000014008C760  ?do_transform@?$collate@D@std@@MEBA?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@2@PEBD0@Z (protected: virtual class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > __cdecl std::collate<char>::do_transform(char const *,char const *)const )
+           000000014008E4F0  ??_Etype_info@@UEAAPEAXI@Z (public: virtual void * __cdecl type_info::`vector deleting destructor'(unsigned int))
+           000000014008E520  _guard_check_icall_nop
+           000000014008E790
+           000000014008E850
+           000000014008E860
+           000000014008EAA0  wmainCRTStartup
+           000000014008EFB0  __scrt_unhandled_exception_filter
+           000000014008F050  __report_gsfailure
+           000000014008F4F0  _matherr
+           000000014008F5B0  _RTC_Terminate
+           000000014008F840  _purecall
+           000000014008F870  __DestructExceptionObject
+           00000001400910C0
+           00000001400910D0
+           0000000140091420  __vcrt_freefls
+           0000000140093AE0  ??_Ebad_exception@std@@UEAAPEAXI@Z (public: virtual void * __cdecl std::bad_exception::`vector deleting destructor'(unsigned int))
+           0000000140093B50  ?CxxCallCatchBlock@__FrameHandler3@@SAPEAXPEAU_EXCEPTION_RECORD@@@Z (public: static void * __cdecl __FrameHandler3::CxxCallCatchBlock(struct _EXCEPTION_RECORD *))
+           0000000140093D40  ?CxxCallCatchBlock@__FrameHandler4@@SAPEAXPEAU_EXCEPTION_RECORD@@@Z (public: static void * __cdecl __FrameHandler4::CxxCallCatchBlock(struct _EXCEPTION_RECORD *))
+           0000000140094DC0  _NLG_Notify
+           0000000140094DE0  __NLG_Dispatch2
+           0000000140094DF0  __NLG_Return2
+           000000014009A960  ?getLastChar@DNameStatusNode@@UEBADXZ (public: virtual char __cdecl DNameStatusNode::getLastChar(void)const )
+           000000014009A970  ?getLastChar@charNode@@UEBADXZ (public: virtual char __cdecl charNode::getLastChar(void)const )
+           000000014009A980  ?getLastChar@pDNameNode@@UEBADXZ (public: virtual char __cdecl pDNameNode::getLastChar(void)const )
+           000000014009A9B0  ?getLastChar@pairNode@@UEBADXZ (public: virtual char __cdecl pairNode::getLastChar(void)const )
+           000000014009A9F0  ?getLastChar@pcharNode@@UEBADXZ (public: virtual char __cdecl pcharNode::getLastChar(void)const )
+           000000014009CA90  ?getString@DNameStatusNode@@UEBAPEADPEAD0@Z (public: virtual char * __cdecl DNameStatusNode::getString(char *,char *)const )
+           000000014009CB20  ?getString@charNode@@UEBAPEADPEAD0@Z (public: virtual char * __cdecl charNode::getString(char *,char *)const )
+           000000014009CB40  ?getString@pDNameNode@@UEBAPEADPEAD0@Z (public: virtual char * __cdecl pDNameNode::getString(char *,char *)const )
+           000000014009CB70  ?getString@pairNode@@UEBAPEADPEAD0@Z (public: virtual char * __cdecl pairNode::getString(char *,char *)const )
+           000000014009CBC0  ?getString@pcharNode@@UEBAPEADPEAD0@Z (public: virtual char * __cdecl pcharNode::getString(char *,char *)const )
+           000000014009E9C0  ?length@DNameStatusNode@@UEBAHXZ (public: virtual int __cdecl DNameStatusNode::length(void)const )
+           000000014009E9D0  ?length@charNode@@UEBAHXZ (public: virtual int __cdecl charNode::length(void)const )
+           000000014009E9E0  ?length@pDNameNode@@UEBAHXZ (public: virtual int __cdecl pDNameNode::length(void)const )
+           000000014009EA10  ?length@pairNode@@UEBAHXZ (public: virtual int __cdecl pairNode::length(void)const )
+           000000014009EA70  ?length@pcharNode@@UEBAHXZ (public: virtual int __cdecl pcharNode::length(void)const )
+           000000014009EBD0  ?raw_length@DNameStatusNode@@UEBAHXZ (public: virtual int __cdecl DNameStatusNode::raw_length(void)const )
+           000000014009EBE0  ?raw_length@charNode@@UEBAHXZ (public: virtual int __cdecl charNode::raw_length(void)const )
+           000000014009EBF0  ?raw_length@pDNameNode@@UEBAHXZ (public: virtual int __cdecl pDNameNode::raw_length(void)const )
+           000000014009EC00  ?raw_length@pairNode@@UEBAHXZ (public: virtual int __cdecl pairNode::raw_length(void)const )
+           000000014009EC10  ?raw_length@pcharNode@@UEBAHXZ (public: virtual int __cdecl pcharNode::raw_length(void)const )
+           00000001400A0480  __acrt_initialize_stdio
+           00000001400A05C0  __acrt_uninitialize_stdio
+           00000001400BDD80  __acrt_initialize_locks
+           00000001400BDDF0  __acrt_uninitialize_locks
+           00000001400BDFF0  __acrt_locale_initialize_ctype
+           00000001400BE670  abort
+           00000001400CBA70
+           00000001400CBA90
+           00000001400CBAC0
+           00000001400CBAD0
+           00000001400CBAE0
+           00000001400CBAF0
+           00000001400CBB00
+           00000001400CBB10
+           00000001400CBB50
+           00000001400CBB60
+           00000001400CBBA0
+           00000001400CBC00
+           00000001400CC3C0  __acrt_initialize_command_line
+           00000001400CC3F0  __acrt_uninitialize_command_line
+           00000001400CC4A0
+           00000001400CCE40  __acrt_uninitialize_locale
+           00000001400CF1B0
+           00000001400CF870  __acrt_initialize_ptd
+           00000001400CF8B0  __acrt_uninitialize_ptd
+           00000001400D07A0
+           00000001400D2240  __acrt_initialize_winapi_thunks
+           00000001400D2340  __acrt_uninitialize_winapi_thunks
+           00000001400D26A0  __acrt_initialize_lowio
+           00000001400D26E0  __acrt_uninitialize_lowio
+           00000001400D8940
+           00000001400DA420  __acrt_initialize_timeset
+           00000001400DB6A0
+           00000001400DB6C0
+           00000001400DDE00  __acrt_initialize_multibyte
+           00000001400DF2C0  __acrt_initialize_heap
+           00000001400DF2E0  __acrt_uninitialize_heap
+           00000001400DFFE0  __acrt_locale_initialize_monetary
+           00000001400E05C0  __acrt_locale_initialize_numeric
+           00000001400E0EA0  __acrt_locale_initialize_time
+           00000001400E17F0
+           00000001400E1AE0
+           00000001400E2080
+           00000001400E2380
+           00000001400E25D0
+           00000001400E8F90
+           00000001400EA140  __dcrt_terminate_console_output
+           00000001400EBCA0  __acrt_initialize_fma3
+           00000001400EBD30  _log10_special
+           00000001400EC5A0  memcpy_repmovs
+           00000001400EC5B0  memcpy
+           00000001400ECC40  memset_repstos
+           00000001400F5BA0
+           00000001400F5C20
+           00000001400F5C40
+           00000001400F5C60
+           00000001400F5C70
+           00000001400F5CD0
+           00000001400F5D10
+           00000001400F5D70
+           00000001400F5D80
+           00000001400F5D90
+           00000001400F5DD0
+
+    Guard CF Address Taken IAT Entry Table
+
+          Address
+          --------
+           00000001400F63F0  __imp_GetTempPathW
+
+    Volatile Metadata
+
+                      18 size
+                       3 min version (8003)
+                       3 max version (8003)
+        0000000000110CCC volatile access RVA table
+                     494 volatile access RVA table size
+        0000000000111160 volatile range info table
+                      58 volatile range info table size
+
+    Volatile Access RVA Table
+
+          Address
+          --------
+           0000000140009E73
+           0000000140009E8B
+           0000000140009E96
+           0000000140013093
+           000000014001343B
+           0000000140013446
+           0000000140015440  ?_Decref@facet@locale@std@@UEAAPEAV_Facet_base@3@XZ (public: virtual class std::_Facet_base * __cdecl std::locale::facet::_Decref(void))
+           00000001400154E4
+           00000001400154FC
+           0000000140015508
+           00000001400169B0  ?_Incref@facet@locale@std@@UEAAXXZ (public: virtual void __cdecl std::locale::facet::_Incref(void))
+           000000014001A1D5
+           000000014001B1AC
+           000000014001D051
+           000000014001D068
+           000000014001D079
+           0000000140020A7F
+           0000000140020A83
+           0000000140020A87
+           0000000140020A8B
+           0000000140020A8F
+           0000000140020A93
+           0000000140020A97
+           0000000140020ACA
+           0000000140020AD1
+           0000000140020AD8
+           0000000140020ADF
+           0000000140020AE6
+           0000000140020AED
+           0000000140020B6E
+           0000000140020B75
+           0000000140021B03
+           0000000140021B0B
+           00000001400272AE
+           0000000140027681
+           0000000140030BAF
+           0000000140032459
+           0000000140032547
+           0000000140032556
+           00000001400325C3
+           00000001400325CF
+           0000000140032EEC
+           000000014003951B
+           0000000140039539
+           000000014003959F
+           00000001400395C0
+           0000000140039669
+           00000001400396F1
+           00000001400398E2
+           0000000140039C66
+           0000000140039C69
+           0000000140039FFC
+           000000014003A003
+           000000014003A40A
+           000000014003A448
+           000000014003A552
+           000000014003A566
+           000000014003A5E8
+           000000014003A5EF
+           000000014003A76E
+           000000014003A775
+           000000014003A7F8
+           000000014003A800
+           000000014003ACC6
+           000000014003ACEA
+           000000014003ACED
+           000000014003B4E3
+           000000014003B4F5
+           000000014003B4FC
+           000000014003B520
+           000000014003B5DB
+           000000014003B5F1
+           000000014003B60A
+           000000014003B648
+           000000014003B6CA
+           000000014003B904
+           000000014003B944
+           000000014003B9A0
+           000000014003B9B0
+           000000014003BA56
+           000000014003BA63
+           000000014003BB10
+           000000014003BB52
+           000000014003BBD8
+           000000014003BC9C
+           000000014003BCBE
+           000000014003BCC4
+           000000014003BD00
+           000000014003BD22
+           000000014003BD28
+           000000014003BD64
+           000000014003BD86
+           000000014003BD8A
+           000000014003BDA5
+           000000014003BDB1
+           000000014003BDB5
+           000000014003BDCE
+           000000014003BDE2
+           000000014003BDE6
+           000000014003C260
+           000000014003C5DA
+           000000014003C9E2
+           000000014003C9F6
+           000000014003CA78
+           000000014003CA7E
+           000000014003D487
+           000000014003DAF5
+           000000014003DB27
+           000000014003E3B1
+           000000014003E3E0
+           000000014003E3F6
+           000000014003E42D
+           000000014003E44B
+           000000014003E459
+           000000014003E47A
+           000000014003E48A
+           000000014003E4FD
+           000000014003E50F
+           000000014003E523
+           000000014003E565
+           000000014003E575
+           000000014003E600
+           000000014003E616
+           000000014003E650
+           000000014003E65E
+           000000014003E670
+           000000014003E682
+           000000014003E696
+           000000014003E6E1
+           000000014003E721
+           000000014003E73E
+           000000014003E780
+           000000014003E80F
+           000000014003E84C
+           000000014003E9F2
+           000000014003E9F5
+           000000014003EA16
+           000000014003EA22
+           000000014003EC5A
+           000000014003ED40
+           000000014003ED7F
+           000000014003ED8D
+           000000014003ED9F
+           000000014003EDB1
+           000000014003EE0F
+           000000014003EE1F
+           000000014003EFCB
+           000000014003FA0B
+           000000014003FA55
+           000000014003FEC7
+           000000014003FEE0  NtCurrentTeb
+           0000000140040F7A
+           0000000140041321
+           0000000140041326
+           0000000140042811
+           000000014004282A
+           0000000140042988
+           000000014004298C
+           0000000140042D29
+           0000000140042DC5
+           0000000140042E32
+           0000000140042E69
+           00000001400457C3
+           00000001400459E8
+           000000014008DFC9
+           000000014008DFDF
+           000000014008E29F
+           000000014008E524  ReadNoFence64
+           000000014008E528  ReadPointerNoFence
+           000000014008E590
+           000000014008E5A8
+           000000014008E5DC
+           000000014008E5F8
+           000000014008E630  __castguard_set_user_handler
+           000000014008E6E9
+           000000014008E735
+           000000014008E768  _guard_icall_checks_enforced
+           000000014008EC0B
+           000000014008EC1A
+           000000014008EC7C
+           000000014008ECCC
+           000000014008ED1D
+           000000014008EE59
+           000000014008EE8B
+           000000014008F07B
+           000000014008F0F7
+           000000014008F10C
+           000000014008F163
+           000000014008F20C
+           000000014008F81C  ??$__crt_interlocked_exchange_pointer@$$A6AXXZP6AXXZ@@YAP6AXXZPEDS6AXXZQ6AXXZ@Z (void (__cdecl*__cdecl __crt_interlocked_exchange_pointer<void __cdecl(void),void (__cdecl*)(void)>(void (__cdecl*const volatile *)(void),void (__cdecl*const)(void)))(void))
+           000000014008F824  ??$__crt_interlocked_read_pointer@$$A6AXXZ@@YAP6AXXZPEDS6AXXZ@Z (void (__cdecl*__cdecl __crt_interlocked_read_pointer<void __cdecl(void)>(void (__cdecl*const volatile *)(void)))(void))
+           000000014008F82C  ?__crt_interlocked_read_64@@YA_JPED_J@Z (__int64 __cdecl __crt_interlocked_read_64(__int64 const volatile *))
+           000000014008F834  _get_purecall_handler
+           000000014008F85C  _set_purecall_handler
+           000000014008FF10
+           000000014008FF64
+           00000001400910EB
+           00000001400910F4  ??$__crt_interlocked_read_pointer@$$CBD@@YAPEBDPEDSEBD@Z (char const * __cdecl __crt_interlocked_read_pointer<char const >(char const * const volatile *))
+           0000000140091268
+           0000000140091304
+           0000000140093C4F
+           0000000140093E7A
+           0000000140094DFC  __except_validate_context_record
+           0000000140094E0F
+           0000000140094E34  __except_validate_jump_buffer
+           0000000140094E4A
+           0000000140094E7E
+           0000000140094E94
+           000000014009EF80  ??$__crt_interlocked_exchange_pointer@UHINSTANCE__@@PEAU1@@@YAPEAUHINSTANCE__@@PEDSEAU0@QEAU0@@Z (struct HINSTANCE__ * __cdecl __crt_interlocked_exchange_pointer<struct HINSTANCE__,struct HINSTANCE__ *>(struct HINSTANCE__ * const volatile *,struct HINSTANCE__ * const))
+           000000014009EF88  ??$__crt_interlocked_exchange_pointer@UHINSTANCE__@@PEAX@@YAPEAUHINSTANCE__@@PEDSEAU0@QEAX@Z (struct HINSTANCE__ * __cdecl __crt_interlocked_exchange_pointer<struct HINSTANCE__,void *>(struct HINSTANCE__ * const volatile *,void * const))
+           000000014009EF90  ??$__crt_interlocked_exchange_pointer@XPEAX@@YAPEAXPEDSEAXQEAX@Z (void * __cdecl __crt_interlocked_exchange_pointer<void,void *>(void * const volatile *,void * const))
+           000000014009EF98  ??$__crt_interlocked_read_pointer@UHINSTANCE__@@@@YAPEAUHINSTANCE__@@PEDSEAU0@@Z (struct HINSTANCE__ * __cdecl __crt_interlocked_read_pointer<struct HINSTANCE__>(struct HINSTANCE__ * const volatile *))
+           000000014009EFA0  ??$__crt_interlocked_read_pointer@X@@YAPEAXPEDSEAX@Z (void * __cdecl __crt_interlocked_read_pointer<void>(void * const volatile *))
+           000000014009F07C
+           000000014009F0F3
+           000000014009F126
+           000000014009F176
+           000000014009F19D
+           000000014009F219
+           000000014009F22E
+           000000014009F25F
+           000000014009F289
+           000000014009F2B8
+           000000014009F332
+           000000014009F351
+           000000014009F3B0
+           000000014009F427
+           000000014009F460
+           00000001400ED1A0
+           00000001400ED220
+           00000001400ED400
+           00000001400EDDF0
+           00000001400EDEF0
+           00000001400EDF80
+           00000001400EE010
+           00000001400EE430
+           00000001400EE4F0
+           00000001400EEDD0
+           00000001400EFBD0
+           00000001400F0B60
+           00000001400F1180
+           00000001400F1840
+           00000001400F1B80
+           00000001400F1EC0
+           00000001400F21A0
+           00000001400F2230
+           00000001400F22C0
+           00000001400F2350
+           00000001400F23E0
+           00000001400F2910
+           00000001400F2967
+           00000001400F2971
+           00000001400F297B
+           00000001400F2996
+           00000001400F29E0
+           00000001400F29F9
+           00000001400F2A21
+           00000001400F2A29
+           00000001400F30F0
+           00000001400F3142
+           00000001400F314C
+           00000001400F4DD6
+           00000001400F4DDA
+           00000001400F4DE1
+           00000001400F4DE5
+           00000001400F4DF1
+           00000001400F4DF8
+           00000001400F4E02
+           00000001400F4E09
+           00000001400F4E67
+           00000001400F4E71
+           00000001400F4E78
+           00000001400F4E7C
+           00000001400F4E88
+           00000001400F4E92
+           00000001400F4E9F
+           00000001400F4EAC
+           00000001400F4EBE
+           00000001400F4EC6
+           00000001400F4EDD
+           00000001400F4EE4
+           00000001400F4EFA
+           00000001400F4F1F
+           00000001400F4F33
+           00000001400F4F7C
+           00000001400F4F83
+           00000001400F4F8A
+           00000001400F4FA1
+           00000001400F4FC6
+           00000001400F4FE8
+           00000001400F5031
+           00000001400F5038
+           00000001400F503F
+
+    Volatile Info Range Table
+
+          Ranges
+          -------
+          0000000140001000 - 0000000140001240
+          00000001400012B0 - 0000000140042BC4
+          0000000140042D1C - 000000014008E450
+          000000014008E4E0 - 000000014008F5EC
+          000000014008F81C - 0000000140094D90
+          0000000140094DF4 - 000000014009F670
+          00000001400EBEF0 - 00000001400EC0C3
+          00000001400EC1F8 - 00000001400EC450
+          00000001400EC458 - 00000001400EC460
+          00000001400ED080 - 00000001400F525B
+          00000001400F5B80 - 00000001400F5DDC
+
+  Summary
+
+        6000 .data
+        C000 .pdata
+       32000 .rdata
+        1000 .reloc
+       F5000 .text
