@@ -1,0 +1,75 @@
+{
+  "allEvidenceChecksPassed": false,
+  "crossApplicationPassed": false,
+  "oldRegressions": "passed",
+  "kernelModified": false,
+  "managerSha256": "f889aef60d439c6dfa7e8337bc178737a3b34ac86fc19e1979793a122b22fd64",
+  "generalGUIRestore": false,
+  "projectComplete": false,
+  "gateClosed": false,
+  "manualHostTest": "not_executed",
+  "checks": [
+    {
+      "name": "fixture-full-matrix",
+      "passed": true
+    },
+    {
+      "name": "fixture-exact-same-manager",
+      "passed": true
+    },
+    {
+      "name": "recorder-full-matrix",
+      "passed": false
+    },
+    {
+      "name": "recorder-exact-same-manager",
+      "passed": true
+    },
+    {
+      "name": "unchanged-kernel.lib",
+      "passed": true
+    },
+    {
+      "name": "unchanged-target.lib",
+      "passed": true
+    },
+    {
+      "name": "unchanged-helper.exe",
+      "passed": true
+    },
+    {
+      "name": "unchanged-runtime304.dll",
+      "passed": true
+    },
+    {
+      "name": "unchanged-fixture.exe",
+      "passed": true
+    },
+    {
+      "name": "old-runtime-and-experiments-unchanged",
+      "passed": true
+    },
+    {
+      "name": "thin-manager-links-no-app-implementation",
+      "passed": true
+    },
+    {
+      "name": "second-app-has-independent-schema",
+      "passed": true
+    },
+    {
+      "name": "wrong-client-refused-before-target-launch",
+      "passed": true
+    },
+    {
+      "name": "R5-001a-and-nested-R4-003-full-regression",
+      "passed": true
+    }
+  ],
+  "errors": [
+    {
+      "stage": "recorder",
+      "error": "R5-001b application evidence mismatch; preserve raw errors and results."
+    }
+  ]
+}

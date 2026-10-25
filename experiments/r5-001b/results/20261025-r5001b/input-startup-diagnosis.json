@@ -1,0 +1,48 @@
+{
+  "failedCase": "recorder/unknown-resource-1",
+  "firstTargetHook": {
+    "stage": "hook",
+    "sequence": 2,
+    "tickMs": 30334015,
+    "pid": 19844,
+    "tid": 28116,
+    "removed": 0,
+    "applied": 0,
+    "kind": 4,
+    "vk": 0,
+    "down": 0,
+    "error": 0,
+    "ctrl": 0,
+    "shift": -128,
+    "asyncCtrl": 0,
+    "keyboardCtrl": 0,
+    "keyboardShift": 128,
+    "leftCtrl": 0,
+    "rightCtrl": 0,
+    "leftShift": 128,
+    "rightShift": 0,
+    "action": 0,
+    "target": 0,
+    "capture": 0,
+    "focus": 4982418,
+    "captured": 0,
+    "depth": 0,
+    "x": 0,
+    "y": 0,
+    "clientX": 0,
+    "clientY": 0,
+    "queueLeft": 1,
+    "keyboardLeft": 1
+  },
+  "failedAssertions": [
+    {
+      "type": "assertion",
+      "tickMs": 30334718,
+      "name": "C.final-edit",
+      "passed": false,
+      "detail": "real native EDIT receives WM_CHAR and root application independently updates managed text through its original input handler"
+    }
+  ],
+  "oldRuntimeUnchanged": true,
+  "interpretation": "Native modifier bits were non-neutral before managed keyboard ownership; origin of those bits not directly established. Shared caller now acquires supported modifiers via explicit key-up/release; no kernel or input DLL modification."
+}
