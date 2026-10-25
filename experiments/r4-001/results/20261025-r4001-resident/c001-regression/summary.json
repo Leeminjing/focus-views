@@ -1,0 +1,2774 @@
+{
+  "allEvidenceChecksPassed": false,
+  "declaredConcurrentGUIViewsPassed": false,
+  "generalGUIRestore": false,
+  "SA_SB_restore": false,
+  "R3Complete": false,
+  "R4Started": false,
+  "checks": [
+    {
+      "name": "AB-1.actual-run-completed",
+      "passed": true
+    },
+    {
+      "name": "AB-1.all-controller-assertions",
+      "passed": true
+    },
+    {
+      "name": "AB-1.raw-S0-calculation",
+      "passed": true
+    },
+    {
+      "name": "AB-1.only-one-S0-naturally-empty-undo",
+      "passed": true
+    },
+    {
+      "name": "AB-1.all-S0-fingerprints-unchanged",
+      "passed": true
+    },
+    {
+      "name": "AB-1.fingerprint-memory-matches-original-bytes",
+      "passed": true
+    },
+    {
+      "name": "AB-1.fingerprint-stack-matches-original-bytes",
+      "passed": true
+    },
+    {
+      "name": "AB-1.fingerprint-context-matches-original-bytes",
+      "passed": true
+    },
+    {
+      "name": "AB-1.fingerprint-resources-matches-original-bytes",
+      "passed": true
+    },
+    {
+      "name": "AB-1.fingerprint-metadata-matches-original-bytes",
+      "passed": true
+    },
+    {
+      "name": "AB-1.fingerprint-returns-matches-original-bytes",
+      "passed": true
+    },
+    {
+      "name": "AB-1.fingerprint-abi-matches-original-bytes",
+      "passed": true
+    },
+    {
+      "name": "AB-1.fingerprint-executable-matches-original-bytes",
+      "passed": true
+    },
+    {
+      "name": "AB-1.whole-S0-fingerprint-independently-recomputed",
+      "passed": true
+    },
+    {
+      "name": "AB-1.source-exit-before-new-A",
+      "passed": true
+    },
+    {
+      "name": "AB-1.no-target-initialization-or-business-replay",
+      "passed": true
+    },
+    {
+      "name": "AB-1.central-pump-exact-PID-routing",
+      "passed": true
+    },
+    {
+      "name": "AB-1.real-B-or-C-event-not-consumed-by-A",
+      "passed": true
+    },
+    {
+      "name": "AB-1.only-verified-Views-published",
+      "passed": true
+    },
+    {
+      "name": "AB-1.actual-CET-CFG-enabled",
+      "passed": true
+    },
+    {
+      "name": "AB-1.source-S0-native-owner-thread",
+      "passed": true
+    },
+    {
+      "name": "AB-1.source-changed-native-owner-thread",
+      "passed": true
+    },
+    {
+      "name": "AB-1.A-prepared-native-owner-thread",
+      "passed": true
+    },
+    {
+      "name": "AB-1.A-initial-native-owner-thread",
+      "passed": true
+    },
+    {
+      "name": "AB-1.B-prepared-native-owner-thread",
+      "passed": true
+    },
+    {
+      "name": "AB-1.B-initial-native-owner-thread",
+      "passed": true
+    },
+    {
+      "name": "AB-1.B-before-A-native-owner-thread",
+      "passed": true
+    },
+    {
+      "name": "AB-1.A-first-edit-native-owner-thread",
+      "passed": true
+    },
+    {
+      "name": "AB-1.B-after-A-native-owner-thread",
+      "passed": true
+    },
+    {
+      "name": "AB-1.A-before-B-native-owner-thread",
+      "passed": true
+    },
+    {
+      "name": "AB-1.B-first-edit-native-owner-thread",
+      "passed": true
+    },
+    {
+      "name": "AB-1.A-after-B-native-owner-thread",
+      "passed": true
+    },
+    {
+      "name": "AB-1.B-before-A-again-native-owner-thread",
+      "passed": true
+    },
+    {
+      "name": "AB-1.A-second-edit-native-owner-thread",
+      "passed": true
+    },
+    {
+      "name": "AB-1.B-after-A-again-native-owner-thread",
+      "passed": true
+    },
+    {
+      "name": "AB-1.A-before-B-again-native-owner-thread",
+      "passed": true
+    },
+    {
+      "name": "AB-1.B-second-edit-native-owner-thread",
+      "passed": true
+    },
+    {
+      "name": "AB-1.A-after-B-again-native-owner-thread",
+      "passed": true
+    },
+    {
+      "name": "AB-1.A-final-native-owner-thread",
+      "passed": true
+    },
+    {
+      "name": "AB-1.B-final-native-owner-thread",
+      "passed": true
+    },
+    {
+      "name": "AB-1.A-restored-native-control-state",
+      "passed": true
+    },
+    {
+      "name": "AB-1.A-window-0-native-identity",
+      "passed": true
+    },
+    {
+      "name": "AB-1.A-window-1-native-identity",
+      "passed": true
+    },
+    {
+      "name": "AB-1.A-window-2-native-identity",
+      "passed": true
+    },
+    {
+      "name": "AB-1.A-target-own-CET-chain-before-and-after",
+      "passed": true
+    },
+    {
+      "name": "AB-1.A-normal-CALL-not-source-SSP",
+      "passed": true
+    },
+    {
+      "name": "AB-1.A-real-restored-computation",
+      "passed": true
+    },
+    {
+      "name": "AB-1.A-ref-1859720839208-old-value",
+      "passed": true
+    },
+    {
+      "name": "AB-1.A-ref-1859720839488-old-value",
+      "passed": true
+    },
+    {
+      "name": "AB-1.A-ref-1859720839496-old-value",
+      "passed": true
+    },
+    {
+      "name": "AB-1.A-ref-1859723001272-old-value",
+      "passed": true
+    },
+    {
+      "name": "AB-1.A-ref-1859723001264-old-value",
+      "passed": true
+    },
+    {
+      "name": "AB-1.A-ref-1859723001136-old-value",
+      "passed": true
+    },
+    {
+      "name": "AB-1.A-ref-1859723001144-old-value",
+      "passed": true
+    },
+    {
+      "name": "AB-1.A-only-seven-declared-HWND-relocations",
+      "passed": true
+    },
+    {
+      "name": "AB-1.A-original-EDIT-actually-processes-input",
+      "passed": true
+    },
+    {
+      "name": "AB-1.A-final-native-edit-and-new-undo",
+      "passed": true
+    },
+    {
+      "name": "AB-1.B-restored-native-control-state",
+      "passed": true
+    },
+    {
+      "name": "AB-1.B-window-0-native-identity",
+      "passed": true
+    },
+    {
+      "name": "AB-1.B-window-1-native-identity",
+      "passed": true
+    },
+    {
+      "name": "AB-1.B-window-2-native-identity",
+      "passed": true
+    },
+    {
+      "name": "AB-1.B-target-own-CET-chain-before-and-after",
+      "passed": true
+    },
+    {
+      "name": "AB-1.B-normal-CALL-not-source-SSP",
+      "passed": true
+    },
+    {
+      "name": "AB-1.B-real-restored-computation",
+      "passed": true
+    },
+    {
+      "name": "AB-1.B-ref-1859720839208-old-value",
+      "passed": true
+    },
+    {
+      "name": "AB-1.B-ref-1859720839488-old-value",
+      "passed": true
+    },
+    {
+      "name": "AB-1.B-ref-1859720839496-old-value",
+      "passed": true
+    },
+    {
+      "name": "AB-1.B-ref-1859723001272-old-value",
+      "passed": true
+    },
+    {
+      "name": "AB-1.B-ref-1859723001264-old-value",
+      "passed": true
+    },
+    {
+      "name": "AB-1.B-ref-1859723001136-old-value",
+      "passed": true
+    },
+    {
+      "name": "AB-1.B-ref-1859723001144-old-value",
+      "passed": true
+    },
+    {
+      "name": "AB-1.B-only-seven-declared-HWND-relocations",
+      "passed": true
+    },
+    {
+      "name": "AB-1.B-original-EDIT-actually-processes-input",
+      "passed": true
+    },
+    {
+      "name": "AB-1.B-final-native-edit-and-new-undo",
+      "passed": true
+    },
+    {
+      "name": "AB-1.B-before-A-to-after-A-isolated",
+      "passed": true
+    },
+    {
+      "name": "AB-1.A-before-B-to-after-B-isolated",
+      "passed": true
+    },
+    {
+      "name": "AB-1.B-before-A-again-to-after-A-again-isolated",
+      "passed": true
+    },
+    {
+      "name": "AB-1.A-before-B-again-to-after-B-again-isolated",
+      "passed": true
+    },
+    {
+      "name": "AB-1.AB-before-edits-distinct-PID-TID-Desktop",
+      "passed": true
+    },
+    {
+      "name": "AB-1.AB-after-edits-distinct-PID-TID-Desktop",
+      "passed": true
+    },
+    {
+      "name": "AB-1.source-S0-real-owned-frame",
+      "passed": true
+    },
+    {
+      "name": "AB-1.source-changed-real-owned-frame",
+      "passed": true
+    },
+    {
+      "name": "AB-1.A-initial-real-owned-frame",
+      "passed": true
+    },
+    {
+      "name": "AB-1.B-initial-real-owned-frame",
+      "passed": true
+    },
+    {
+      "name": "AB-1.A-first-edit-real-owned-frame",
+      "passed": true
+    },
+    {
+      "name": "AB-1.B-first-edit-real-owned-frame",
+      "passed": true
+    },
+    {
+      "name": "AB-1.A-second-edit-real-owned-frame",
+      "passed": true
+    },
+    {
+      "name": "AB-1.B-second-edit-real-owned-frame",
+      "passed": true
+    },
+    {
+      "name": "AB-1.A-final-real-owned-frame",
+      "passed": true
+    },
+    {
+      "name": "AB-1.B-final-real-owned-frame",
+      "passed": true
+    },
+    {
+      "name": "AB-1.A-real-initial-EDIT-pixels-match-S0",
+      "passed": true
+    },
+    {
+      "name": "AB-1.B-real-initial-EDIT-pixels-match-S0",
+      "passed": true
+    },
+    {
+      "name": "AB-1.owned-processes-and-desktops-cleaned",
+      "passed": true
+    },
+    {
+      "name": "AB-1.no-SA-SB-or-R4-claim",
+      "passed": true
+    },
+    {
+      "name": "ABC-1.actual-run-completed",
+      "passed": true
+    },
+    {
+      "name": "ABC-1.all-controller-assertions",
+      "passed": true
+    },
+    {
+      "name": "ABC-1.raw-S0-calculation",
+      "passed": true
+    },
+    {
+      "name": "ABC-1.only-one-S0-naturally-empty-undo",
+      "passed": true
+    },
+    {
+      "name": "ABC-1.all-S0-fingerprints-unchanged",
+      "passed": true
+    },
+    {
+      "name": "ABC-1.fingerprint-memory-matches-original-bytes",
+      "passed": true
+    },
+    {
+      "name": "ABC-1.fingerprint-stack-matches-original-bytes",
+      "passed": true
+    },
+    {
+      "name": "ABC-1.fingerprint-context-matches-original-bytes",
+      "passed": true
+    },
+    {
+      "name": "ABC-1.fingerprint-resources-matches-original-bytes",
+      "passed": true
+    },
+    {
+      "name": "ABC-1.fingerprint-metadata-matches-original-bytes",
+      "passed": true
+    },
+    {
+      "name": "ABC-1.fingerprint-returns-matches-original-bytes",
+      "passed": true
+    },
+    {
+      "name": "ABC-1.fingerprint-abi-matches-original-bytes",
+      "passed": true
+    },
+    {
+      "name": "ABC-1.fingerprint-executable-matches-original-bytes",
+      "passed": true
+    },
+    {
+      "name": "ABC-1.whole-S0-fingerprint-independently-recomputed",
+      "passed": true
+    },
+    {
+      "name": "ABC-1.source-exit-before-new-A",
+      "passed": true
+    },
+    {
+      "name": "ABC-1.no-target-initialization-or-business-replay",
+      "passed": true
+    },
+    {
+      "name": "ABC-1.central-pump-exact-PID-routing",
+      "passed": true
+    },
+    {
+      "name": "ABC-1.real-B-or-C-event-not-consumed-by-A",
+      "passed": true
+    },
+    {
+      "name": "ABC-1.only-verified-Views-published",
+      "passed": true
+    },
+    {
+      "name": "ABC-1.actual-CET-CFG-enabled",
+      "passed": true
+    },
+    {
+      "name": "ABC-1.source-S0-native-owner-thread",
+      "passed": true
+    },
+    {
+      "name": "ABC-1.source-changed-native-owner-thread",
+      "passed": true
+    },
+    {
+      "name": "ABC-1.A-prepared-native-owner-thread",
+      "passed": true
+    },
+    {
+      "name": "ABC-1.A-initial-native-owner-thread",
+      "passed": true
+    },
+    {
+      "name": "ABC-1.B-prepared-native-owner-thread",
+      "passed": true
+    },
+    {
+      "name": "ABC-1.B-initial-native-owner-thread",
+      "passed": true
+    },
+    {
+      "name": "ABC-1.B-before-A-native-owner-thread",
+      "passed": true
+    },
+    {
+      "name": "ABC-1.A-first-edit-native-owner-thread",
+      "passed": true
+    },
+    {
+      "name": "ABC-1.B-after-A-native-owner-thread",
+      "passed": true
+    },
+    {
+      "name": "ABC-1.A-before-B-native-owner-thread",
+      "passed": true
+    },
+    {
+      "name": "ABC-1.B-first-edit-native-owner-thread",
+      "passed": true
+    },
+    {
+      "name": "ABC-1.A-after-B-native-owner-thread",
+      "passed": true
+    },
+    {
+      "name": "ABC-1.B-before-A-again-native-owner-thread",
+      "passed": true
+    },
+    {
+      "name": "ABC-1.A-second-edit-native-owner-thread",
+      "passed": true
+    },
+    {
+      "name": "ABC-1.B-after-A-again-native-owner-thread",
+      "passed": true
+    },
+    {
+      "name": "ABC-1.A-before-B-again-native-owner-thread",
+      "passed": true
+    },
+    {
+      "name": "ABC-1.B-second-edit-native-owner-thread",
+      "passed": true
+    },
+    {
+      "name": "ABC-1.A-after-B-again-native-owner-thread",
+      "passed": true
+    },
+    {
+      "name": "ABC-1.A-before-C-native-owner-thread",
+      "passed": true
+    },
+    {
+      "name": "ABC-1.B-before-C-native-owner-thread",
+      "passed": true
+    },
+    {
+      "name": "ABC-1.C-prepared-native-owner-thread",
+      "passed": true
+    },
+    {
+      "name": "ABC-1.C-initial-native-owner-thread",
+      "passed": true
+    },
+    {
+      "name": "ABC-1.A-after-C-native-owner-thread",
+      "passed": true
+    },
+    {
+      "name": "ABC-1.B-after-C-native-owner-thread",
+      "passed": true
+    },
+    {
+      "name": "ABC-1.C-before-final-A-native-owner-thread",
+      "passed": true
+    },
+    {
+      "name": "ABC-1.A-final-edit-native-owner-thread",
+      "passed": true
+    },
+    {
+      "name": "ABC-1.C-after-final-A-native-owner-thread",
+      "passed": true
+    },
+    {
+      "name": "ABC-1.A-before-final-B-native-owner-thread",
+      "passed": true
+    },
+    {
+      "name": "ABC-1.B-final-edit-native-owner-thread",
+      "passed": true
+    },
+    {
+      "name": "ABC-1.A-after-final-B-native-owner-thread",
+      "passed": true
+    },
+    {
+      "name": "ABC-1.A-before-C-edit-native-owner-thread",
+      "passed": true
+    },
+    {
+      "name": "ABC-1.B-before-C-edit-native-owner-thread",
+      "passed": true
+    },
+    {
+      "name": "ABC-1.C-first-edit-native-owner-thread",
+      "passed": true
+    },
+    {
+      "name": "ABC-1.A-after-C-edit-native-owner-thread",
+      "passed": true
+    },
+    {
+      "name": "ABC-1.B-after-C-edit-native-owner-thread",
+      "passed": true
+    },
+    {
+      "name": "ABC-1.A-final-native-owner-thread",
+      "passed": true
+    },
+    {
+      "name": "ABC-1.B-final-native-owner-thread",
+      "passed": true
+    },
+    {
+      "name": "ABC-1.C-final-native-owner-thread",
+      "passed": true
+    },
+    {
+      "name": "ABC-1.A-restored-native-control-state",
+      "passed": true
+    },
+    {
+      "name": "ABC-1.A-window-0-native-identity",
+      "passed": true
+    },
+    {
+      "name": "ABC-1.A-window-1-native-identity",
+      "passed": true
+    },
+    {
+      "name": "ABC-1.A-window-2-native-identity",
+      "passed": true
+    },
+    {
+      "name": "ABC-1.A-target-own-CET-chain-before-and-after",
+      "passed": true
+    },
+    {
+      "name": "ABC-1.A-normal-CALL-not-source-SSP",
+      "passed": true
+    },
+    {
+      "name": "ABC-1.A-real-restored-computation",
+      "passed": true
+    },
+    {
+      "name": "ABC-1.A-ref-1859720839208-old-value",
+      "passed": true
+    },
+    {
+      "name": "ABC-1.A-ref-1859720839488-old-value",
+      "passed": true
+    },
+    {
+      "name": "ABC-1.A-ref-1859720839496-old-value",
+      "passed": true
+    },
+    {
+      "name": "ABC-1.A-ref-1859723001272-old-value",
+      "passed": true
+    },
+    {
+      "name": "ABC-1.A-ref-1859723001264-old-value",
+      "passed": true
+    },
+    {
+      "name": "ABC-1.A-ref-1859723001136-old-value",
+      "passed": true
+    },
+    {
+      "name": "ABC-1.A-ref-1859723001144-old-value",
+      "passed": true
+    },
+    {
+      "name": "ABC-1.A-only-seven-declared-HWND-relocations",
+      "passed": true
+    },
+    {
+      "name": "ABC-1.A-original-EDIT-actually-processes-input",
+      "passed": true
+    },
+    {
+      "name": "ABC-1.A-final-native-edit-and-new-undo",
+      "passed": true
+    },
+    {
+      "name": "ABC-1.B-restored-native-control-state",
+      "passed": true
+    },
+    {
+      "name": "ABC-1.B-window-0-native-identity",
+      "passed": true
+    },
+    {
+      "name": "ABC-1.B-window-1-native-identity",
+      "passed": true
+    },
+    {
+      "name": "ABC-1.B-window-2-native-identity",
+      "passed": true
+    },
+    {
+      "name": "ABC-1.B-target-own-CET-chain-before-and-after",
+      "passed": true
+    },
+    {
+      "name": "ABC-1.B-normal-CALL-not-source-SSP",
+      "passed": true
+    },
+    {
+      "name": "ABC-1.B-real-restored-computation",
+      "passed": true
+    },
+    {
+      "name": "ABC-1.B-ref-1859720839208-old-value",
+      "passed": true
+    },
+    {
+      "name": "ABC-1.B-ref-1859720839488-old-value",
+      "passed": true
+    },
+    {
+      "name": "ABC-1.B-ref-1859720839496-old-value",
+      "passed": true
+    },
+    {
+      "name": "ABC-1.B-ref-1859723001272-old-value",
+      "passed": true
+    },
+    {
+      "name": "ABC-1.B-ref-1859723001264-old-value",
+      "passed": true
+    },
+    {
+      "name": "ABC-1.B-ref-1859723001136-old-value",
+      "passed": true
+    },
+    {
+      "name": "ABC-1.B-ref-1859723001144-old-value",
+      "passed": true
+    },
+    {
+      "name": "ABC-1.B-only-seven-declared-HWND-relocations",
+      "passed": true
+    },
+    {
+      "name": "ABC-1.B-original-EDIT-actually-processes-input",
+      "passed": true
+    },
+    {
+      "name": "ABC-1.B-final-native-edit-and-new-undo",
+      "passed": true
+    },
+    {
+      "name": "ABC-1.C-restored-native-control-state",
+      "passed": true
+    },
+    {
+      "name": "ABC-1.C-window-0-native-identity",
+      "passed": true
+    },
+    {
+      "name": "ABC-1.C-window-1-native-identity",
+      "passed": true
+    },
+    {
+      "name": "ABC-1.C-window-2-native-identity",
+      "passed": true
+    },
+    {
+      "name": "ABC-1.C-target-own-CET-chain-before-and-after",
+      "passed": true
+    },
+    {
+      "name": "ABC-1.C-normal-CALL-not-source-SSP",
+      "passed": true
+    },
+    {
+      "name": "ABC-1.C-real-restored-computation",
+      "passed": true
+    },
+    {
+      "name": "ABC-1.C-ref-1859720839208-old-value",
+      "passed": true
+    },
+    {
+      "name": "ABC-1.C-ref-1859720839488-old-value",
+      "passed": true
+    },
+    {
+      "name": "ABC-1.C-ref-1859720839496-old-value",
+      "passed": true
+    },
+    {
+      "name": "ABC-1.C-ref-1859723001272-old-value",
+      "passed": true
+    },
+    {
+      "name": "ABC-1.C-ref-1859723001264-old-value",
+      "passed": true
+    },
+    {
+      "name": "ABC-1.C-ref-1859723001136-old-value",
+      "passed": true
+    },
+    {
+      "name": "ABC-1.C-ref-1859723001144-old-value",
+      "passed": true
+    },
+    {
+      "name": "ABC-1.C-only-seven-declared-HWND-relocations",
+      "passed": true
+    },
+    {
+      "name": "ABC-1.C-original-EDIT-actually-processes-input",
+      "passed": true
+    },
+    {
+      "name": "ABC-1.C-final-native-edit-and-new-undo",
+      "passed": true
+    },
+    {
+      "name": "ABC-1.B-before-A-to-after-A-isolated",
+      "passed": true
+    },
+    {
+      "name": "ABC-1.A-before-B-to-after-B-isolated",
+      "passed": true
+    },
+    {
+      "name": "ABC-1.B-before-A-again-to-after-A-again-isolated",
+      "passed": true
+    },
+    {
+      "name": "ABC-1.A-before-B-again-to-after-B-again-isolated",
+      "passed": true
+    },
+    {
+      "name": "ABC-1.A-before-C-to-after-C-isolated",
+      "passed": true
+    },
+    {
+      "name": "ABC-1.C-before-final-A-to-after-final-A-isolated",
+      "passed": true
+    },
+    {
+      "name": "ABC-1.A-before-C-edit-to-after-C-edit-isolated",
+      "passed": true
+    },
+    {
+      "name": "ABC-1.B-before-C-to-after-C-isolated",
+      "passed": true
+    },
+    {
+      "name": "ABC-1.A-before-final-B-to-after-final-B-isolated",
+      "passed": true
+    },
+    {
+      "name": "ABC-1.B-before-C-edit-to-after-C-edit-isolated",
+      "passed": true
+    },
+    {
+      "name": "ABC-1.AB-before-edits-distinct-PID-TID-Desktop",
+      "passed": true
+    },
+    {
+      "name": "ABC-1.AB-after-edits-distinct-PID-TID-Desktop",
+      "passed": true
+    },
+    {
+      "name": "ABC-1.final-concurrent-distinct-PID-TID-Desktop",
+      "passed": true
+    },
+    {
+      "name": "ABC-1.A-not-paused-during-C-creation",
+      "passed": true
+    },
+    {
+      "name": "ABC-1.B-not-paused-during-C-creation",
+      "passed": true
+    },
+    {
+      "name": "ABC-1.source-S0-real-owned-frame",
+      "passed": true
+    },
+    {
+      "name": "ABC-1.source-changed-real-owned-frame",
+      "passed": true
+    },
+    {
+      "name": "ABC-1.A-initial-real-owned-frame",
+      "passed": true
+    },
+    {
+      "name": "ABC-1.B-initial-real-owned-frame",
+      "passed": true
+    },
+    {
+      "name": "ABC-1.A-first-edit-real-owned-frame",
+      "passed": true
+    },
+    {
+      "name": "ABC-1.B-first-edit-real-owned-frame",
+      "passed": true
+    },
+    {
+      "name": "ABC-1.A-second-edit-real-owned-frame",
+      "passed": true
+    },
+    {
+      "name": "ABC-1.B-second-edit-real-owned-frame",
+      "passed": true
+    },
+    {
+      "name": "ABC-1.C-initial-real-owned-frame",
+      "passed": true
+    },
+    {
+      "name": "ABC-1.A-final-edit-real-owned-frame",
+      "passed": true
+    },
+    {
+      "name": "ABC-1.B-final-edit-real-owned-frame",
+      "passed": true
+    },
+    {
+      "name": "ABC-1.C-first-edit-real-owned-frame",
+      "passed": true
+    },
+    {
+      "name": "ABC-1.A-final-real-owned-frame",
+      "passed": true
+    },
+    {
+      "name": "ABC-1.B-final-real-owned-frame",
+      "passed": true
+    },
+    {
+      "name": "ABC-1.C-final-real-owned-frame",
+      "passed": true
+    },
+    {
+      "name": "ABC-1.A-real-initial-EDIT-pixels-match-S0",
+      "passed": true
+    },
+    {
+      "name": "ABC-1.B-real-initial-EDIT-pixels-match-S0",
+      "passed": true
+    },
+    {
+      "name": "ABC-1.C-real-initial-EDIT-pixels-match-S0",
+      "passed": true
+    },
+    {
+      "name": "ABC-1.owned-processes-and-desktops-cleaned",
+      "passed": false
+    },
+    {
+      "name": "ABC-1.no-SA-SB-or-R4-claim",
+      "passed": true
+    },
+    {
+      "name": "fail-B-1.actual-run-completed",
+      "passed": true
+    },
+    {
+      "name": "fail-B-1.all-controller-assertions",
+      "passed": true
+    },
+    {
+      "name": "fail-B-1.raw-S0-calculation",
+      "passed": true
+    },
+    {
+      "name": "fail-B-1.only-one-S0-naturally-empty-undo",
+      "passed": true
+    },
+    {
+      "name": "fail-B-1.all-S0-fingerprints-unchanged",
+      "passed": true
+    },
+    {
+      "name": "fail-B-1.fingerprint-memory-matches-original-bytes",
+      "passed": true
+    },
+    {
+      "name": "fail-B-1.fingerprint-stack-matches-original-bytes",
+      "passed": true
+    },
+    {
+      "name": "fail-B-1.fingerprint-context-matches-original-bytes",
+      "passed": true
+    },
+    {
+      "name": "fail-B-1.fingerprint-resources-matches-original-bytes",
+      "passed": true
+    },
+    {
+      "name": "fail-B-1.fingerprint-metadata-matches-original-bytes",
+      "passed": true
+    },
+    {
+      "name": "fail-B-1.fingerprint-returns-matches-original-bytes",
+      "passed": true
+    },
+    {
+      "name": "fail-B-1.fingerprint-abi-matches-original-bytes",
+      "passed": true
+    },
+    {
+      "name": "fail-B-1.fingerprint-executable-matches-original-bytes",
+      "passed": true
+    },
+    {
+      "name": "fail-B-1.whole-S0-fingerprint-independently-recomputed",
+      "passed": true
+    },
+    {
+      "name": "fail-B-1.source-exit-before-new-A",
+      "passed": true
+    },
+    {
+      "name": "fail-B-1.no-target-initialization-or-business-replay",
+      "passed": true
+    },
+    {
+      "name": "fail-B-1.central-pump-exact-PID-routing",
+      "passed": true
+    },
+    {
+      "name": "fail-B-1.real-B-or-C-event-not-consumed-by-A",
+      "passed": true
+    },
+    {
+      "name": "fail-B-1.only-verified-Views-published",
+      "passed": true
+    },
+    {
+      "name": "fail-B-1.actual-CET-CFG-enabled",
+      "passed": true
+    },
+    {
+      "name": "fail-B-1.source-S0-native-owner-thread",
+      "passed": true
+    },
+    {
+      "name": "fail-B-1.source-changed-native-owner-thread",
+      "passed": true
+    },
+    {
+      "name": "fail-B-1.A-prepared-native-owner-thread",
+      "passed": true
+    },
+    {
+      "name": "fail-B-1.A-initial-native-owner-thread",
+      "passed": true
+    },
+    {
+      "name": "fail-B-1.A-before-B-failure-native-owner-thread",
+      "passed": true
+    },
+    {
+      "name": "fail-B-1.B-prepared-native-owner-thread",
+      "passed": true
+    },
+    {
+      "name": "fail-B-1.A-after-B-failure-preserved-native-owner-thread",
+      "passed": true
+    },
+    {
+      "name": "fail-B-1.A-after-B-failure-native-owner-thread",
+      "passed": true
+    },
+    {
+      "name": "fail-B-1.A-before-C-native-owner-thread",
+      "passed": true
+    },
+    {
+      "name": "fail-B-1.C-prepared-native-owner-thread",
+      "passed": true
+    },
+    {
+      "name": "fail-B-1.C-initial-native-owner-thread",
+      "passed": true
+    },
+    {
+      "name": "fail-B-1.A-after-C-native-owner-thread",
+      "passed": true
+    },
+    {
+      "name": "fail-B-1.C-before-final-A-native-owner-thread",
+      "passed": true
+    },
+    {
+      "name": "fail-B-1.A-final-edit-native-owner-thread",
+      "passed": true
+    },
+    {
+      "name": "fail-B-1.C-after-final-A-native-owner-thread",
+      "passed": true
+    },
+    {
+      "name": "fail-B-1.A-before-C-edit-native-owner-thread",
+      "passed": true
+    },
+    {
+      "name": "fail-B-1.C-first-edit-native-owner-thread",
+      "passed": true
+    },
+    {
+      "name": "fail-B-1.A-after-C-edit-native-owner-thread",
+      "passed": true
+    },
+    {
+      "name": "fail-B-1.A-final-native-owner-thread",
+      "passed": true
+    },
+    {
+      "name": "fail-B-1.C-final-native-owner-thread",
+      "passed": true
+    },
+    {
+      "name": "fail-B-1.A-restored-native-control-state",
+      "passed": true
+    },
+    {
+      "name": "fail-B-1.A-window-0-native-identity",
+      "passed": true
+    },
+    {
+      "name": "fail-B-1.A-window-1-native-identity",
+      "passed": true
+    },
+    {
+      "name": "fail-B-1.A-window-2-native-identity",
+      "passed": true
+    },
+    {
+      "name": "fail-B-1.A-target-own-CET-chain-before-and-after",
+      "passed": true
+    },
+    {
+      "name": "fail-B-1.A-normal-CALL-not-source-SSP",
+      "passed": true
+    },
+    {
+      "name": "fail-B-1.A-real-restored-computation",
+      "passed": true
+    },
+    {
+      "name": "fail-B-1.A-ref-1859720839208-old-value",
+      "passed": true
+    },
+    {
+      "name": "fail-B-1.A-ref-1859720839488-old-value",
+      "passed": true
+    },
+    {
+      "name": "fail-B-1.A-ref-1859720839496-old-value",
+      "passed": true
+    },
+    {
+      "name": "fail-B-1.A-ref-1859723001272-old-value",
+      "passed": true
+    },
+    {
+      "name": "fail-B-1.A-ref-1859723001264-old-value",
+      "passed": true
+    },
+    {
+      "name": "fail-B-1.A-ref-1859723001136-old-value",
+      "passed": true
+    },
+    {
+      "name": "fail-B-1.A-ref-1859723001144-old-value",
+      "passed": true
+    },
+    {
+      "name": "fail-B-1.A-only-seven-declared-HWND-relocations",
+      "passed": true
+    },
+    {
+      "name": "fail-B-1.A-original-EDIT-actually-processes-input",
+      "passed": true
+    },
+    {
+      "name": "fail-B-1.A-final-native-edit-and-new-undo",
+      "passed": true
+    },
+    {
+      "name": "fail-B-1.C-restored-native-control-state",
+      "passed": true
+    },
+    {
+      "name": "fail-B-1.C-window-0-native-identity",
+      "passed": true
+    },
+    {
+      "name": "fail-B-1.C-window-1-native-identity",
+      "passed": true
+    },
+    {
+      "name": "fail-B-1.C-window-2-native-identity",
+      "passed": true
+    },
+    {
+      "name": "fail-B-1.C-target-own-CET-chain-before-and-after",
+      "passed": true
+    },
+    {
+      "name": "fail-B-1.C-normal-CALL-not-source-SSP",
+      "passed": true
+    },
+    {
+      "name": "fail-B-1.C-real-restored-computation",
+      "passed": true
+    },
+    {
+      "name": "fail-B-1.C-ref-1859720839208-old-value",
+      "passed": true
+    },
+    {
+      "name": "fail-B-1.C-ref-1859720839488-old-value",
+      "passed": true
+    },
+    {
+      "name": "fail-B-1.C-ref-1859720839496-old-value",
+      "passed": true
+    },
+    {
+      "name": "fail-B-1.C-ref-1859723001272-old-value",
+      "passed": true
+    },
+    {
+      "name": "fail-B-1.C-ref-1859723001264-old-value",
+      "passed": true
+    },
+    {
+      "name": "fail-B-1.C-ref-1859723001136-old-value",
+      "passed": true
+    },
+    {
+      "name": "fail-B-1.C-ref-1859723001144-old-value",
+      "passed": true
+    },
+    {
+      "name": "fail-B-1.C-only-seven-declared-HWND-relocations",
+      "passed": true
+    },
+    {
+      "name": "fail-B-1.C-original-EDIT-actually-processes-input",
+      "passed": true
+    },
+    {
+      "name": "fail-B-1.C-final-native-edit-and-new-undo",
+      "passed": true
+    },
+    {
+      "name": "fail-B-1.A-before-B-failure-to-after-B-failure-preserved-isolated",
+      "passed": true
+    },
+    {
+      "name": "fail-B-1.A-before-C-to-after-C-isolated",
+      "passed": true
+    },
+    {
+      "name": "fail-B-1.C-before-final-A-to-after-final-A-isolated",
+      "passed": true
+    },
+    {
+      "name": "fail-B-1.A-before-C-edit-to-after-C-edit-isolated",
+      "passed": true
+    },
+    {
+      "name": "fail-B-1.A-survives-B-distinct-PID-TID-Desktop",
+      "passed": true
+    },
+    {
+      "name": "fail-B-1.final-concurrent-distinct-PID-TID-Desktop",
+      "passed": true
+    },
+    {
+      "name": "fail-B-1.A-not-paused-during-C-creation",
+      "passed": true
+    },
+    {
+      "name": "fail-B-1.B-actual-resource-failure-not-published",
+      "passed": true
+    },
+    {
+      "name": "fail-B-1.B-cleaned-before-C-and-A-keeps-working",
+      "passed": true
+    },
+    {
+      "name": "fail-B-1.source-S0-real-owned-frame",
+      "passed": true
+    },
+    {
+      "name": "fail-B-1.source-changed-real-owned-frame",
+      "passed": true
+    },
+    {
+      "name": "fail-B-1.A-initial-real-owned-frame",
+      "passed": true
+    },
+    {
+      "name": "fail-B-1.A-after-B-failure-real-owned-frame",
+      "passed": true
+    },
+    {
+      "name": "fail-B-1.C-initial-real-owned-frame",
+      "passed": true
+    },
+    {
+      "name": "fail-B-1.A-final-edit-real-owned-frame",
+      "passed": true
+    },
+    {
+      "name": "fail-B-1.C-first-edit-real-owned-frame",
+      "passed": true
+    },
+    {
+      "name": "fail-B-1.A-final-real-owned-frame",
+      "passed": true
+    },
+    {
+      "name": "fail-B-1.C-final-real-owned-frame",
+      "passed": true
+    },
+    {
+      "name": "fail-B-1.A-real-initial-EDIT-pixels-match-S0",
+      "passed": true
+    },
+    {
+      "name": "fail-B-1.C-real-initial-EDIT-pixels-match-S0",
+      "passed": true
+    },
+    {
+      "name": "fail-B-1.owned-processes-and-desktops-cleaned",
+      "passed": true
+    },
+    {
+      "name": "fail-B-1.no-SA-SB-or-R4-claim",
+      "passed": true
+    },
+    {
+      "name": "AB-2.actual-run-completed",
+      "passed": true
+    },
+    {
+      "name": "AB-2.all-controller-assertions",
+      "passed": true
+    },
+    {
+      "name": "AB-2.raw-S0-calculation",
+      "passed": true
+    },
+    {
+      "name": "AB-2.only-one-S0-naturally-empty-undo",
+      "passed": true
+    },
+    {
+      "name": "AB-2.all-S0-fingerprints-unchanged",
+      "passed": true
+    },
+    {
+      "name": "AB-2.fingerprint-memory-matches-original-bytes",
+      "passed": true
+    },
+    {
+      "name": "AB-2.fingerprint-stack-matches-original-bytes",
+      "passed": true
+    },
+    {
+      "name": "AB-2.fingerprint-context-matches-original-bytes",
+      "passed": true
+    },
+    {
+      "name": "AB-2.fingerprint-resources-matches-original-bytes",
+      "passed": true
+    },
+    {
+      "name": "AB-2.fingerprint-metadata-matches-original-bytes",
+      "passed": true
+    },
+    {
+      "name": "AB-2.fingerprint-returns-matches-original-bytes",
+      "passed": true
+    },
+    {
+      "name": "AB-2.fingerprint-abi-matches-original-bytes",
+      "passed": true
+    },
+    {
+      "name": "AB-2.fingerprint-executable-matches-original-bytes",
+      "passed": true
+    },
+    {
+      "name": "AB-2.whole-S0-fingerprint-independently-recomputed",
+      "passed": true
+    },
+    {
+      "name": "AB-2.source-exit-before-new-A",
+      "passed": true
+    },
+    {
+      "name": "AB-2.no-target-initialization-or-business-replay",
+      "passed": true
+    },
+    {
+      "name": "AB-2.central-pump-exact-PID-routing",
+      "passed": true
+    },
+    {
+      "name": "AB-2.real-B-or-C-event-not-consumed-by-A",
+      "passed": true
+    },
+    {
+      "name": "AB-2.only-verified-Views-published",
+      "passed": true
+    },
+    {
+      "name": "AB-2.actual-CET-CFG-enabled",
+      "passed": true
+    },
+    {
+      "name": "AB-2.source-S0-native-owner-thread",
+      "passed": true
+    },
+    {
+      "name": "AB-2.source-changed-native-owner-thread",
+      "passed": true
+    },
+    {
+      "name": "AB-2.A-prepared-native-owner-thread",
+      "passed": true
+    },
+    {
+      "name": "AB-2.A-initial-native-owner-thread",
+      "passed": true
+    },
+    {
+      "name": "AB-2.B-prepared-native-owner-thread",
+      "passed": true
+    },
+    {
+      "name": "AB-2.B-initial-native-owner-thread",
+      "passed": true
+    },
+    {
+      "name": "AB-2.B-before-A-native-owner-thread",
+      "passed": true
+    },
+    {
+      "name": "AB-2.A-first-edit-native-owner-thread",
+      "passed": true
+    },
+    {
+      "name": "AB-2.B-after-A-native-owner-thread",
+      "passed": true
+    },
+    {
+      "name": "AB-2.A-before-B-native-owner-thread",
+      "passed": true
+    },
+    {
+      "name": "AB-2.B-first-edit-native-owner-thread",
+      "passed": true
+    },
+    {
+      "name": "AB-2.A-after-B-native-owner-thread",
+      "passed": true
+    },
+    {
+      "name": "AB-2.B-before-A-again-native-owner-thread",
+      "passed": true
+    },
+    {
+      "name": "AB-2.A-second-edit-native-owner-thread",
+      "passed": true
+    },
+    {
+      "name": "AB-2.B-after-A-again-native-owner-thread",
+      "passed": true
+    },
+    {
+      "name": "AB-2.A-before-B-again-native-owner-thread",
+      "passed": true
+    },
+    {
+      "name": "AB-2.B-second-edit-native-owner-thread",
+      "passed": true
+    },
+    {
+      "name": "AB-2.A-after-B-again-native-owner-thread",
+      "passed": true
+    },
+    {
+      "name": "AB-2.A-final-native-owner-thread",
+      "passed": true
+    },
+    {
+      "name": "AB-2.B-final-native-owner-thread",
+      "passed": true
+    },
+    {
+      "name": "AB-2.A-restored-native-control-state",
+      "passed": true
+    },
+    {
+      "name": "AB-2.A-window-0-native-identity",
+      "passed": true
+    },
+    {
+      "name": "AB-2.A-window-1-native-identity",
+      "passed": true
+    },
+    {
+      "name": "AB-2.A-window-2-native-identity",
+      "passed": true
+    },
+    {
+      "name": "AB-2.A-target-own-CET-chain-before-and-after",
+      "passed": true
+    },
+    {
+      "name": "AB-2.A-normal-CALL-not-source-SSP",
+      "passed": true
+    },
+    {
+      "name": "AB-2.A-real-restored-computation",
+      "passed": true
+    },
+    {
+      "name": "AB-2.A-ref-1859720839208-old-value",
+      "passed": true
+    },
+    {
+      "name": "AB-2.A-ref-1859720839488-old-value",
+      "passed": true
+    },
+    {
+      "name": "AB-2.A-ref-1859720839496-old-value",
+      "passed": true
+    },
+    {
+      "name": "AB-2.A-ref-1859723001272-old-value",
+      "passed": true
+    },
+    {
+      "name": "AB-2.A-ref-1859723001264-old-value",
+      "passed": true
+    },
+    {
+      "name": "AB-2.A-ref-1859723001136-old-value",
+      "passed": true
+    },
+    {
+      "name": "AB-2.A-ref-1859723001144-old-value",
+      "passed": true
+    },
+    {
+      "name": "AB-2.A-only-seven-declared-HWND-relocations",
+      "passed": true
+    },
+    {
+      "name": "AB-2.A-original-EDIT-actually-processes-input",
+      "passed": true
+    },
+    {
+      "name": "AB-2.A-final-native-edit-and-new-undo",
+      "passed": true
+    },
+    {
+      "name": "AB-2.B-restored-native-control-state",
+      "passed": true
+    },
+    {
+      "name": "AB-2.B-window-0-native-identity",
+      "passed": true
+    },
+    {
+      "name": "AB-2.B-window-1-native-identity",
+      "passed": true
+    },
+    {
+      "name": "AB-2.B-window-2-native-identity",
+      "passed": true
+    },
+    {
+      "name": "AB-2.B-target-own-CET-chain-before-and-after",
+      "passed": true
+    },
+    {
+      "name": "AB-2.B-normal-CALL-not-source-SSP",
+      "passed": true
+    },
+    {
+      "name": "AB-2.B-real-restored-computation",
+      "passed": true
+    },
+    {
+      "name": "AB-2.B-ref-1859720839208-old-value",
+      "passed": true
+    },
+    {
+      "name": "AB-2.B-ref-1859720839488-old-value",
+      "passed": true
+    },
+    {
+      "name": "AB-2.B-ref-1859720839496-old-value",
+      "passed": true
+    },
+    {
+      "name": "AB-2.B-ref-1859723001272-old-value",
+      "passed": true
+    },
+    {
+      "name": "AB-2.B-ref-1859723001264-old-value",
+      "passed": true
+    },
+    {
+      "name": "AB-2.B-ref-1859723001136-old-value",
+      "passed": true
+    },
+    {
+      "name": "AB-2.B-ref-1859723001144-old-value",
+      "passed": true
+    },
+    {
+      "name": "AB-2.B-only-seven-declared-HWND-relocations",
+      "passed": true
+    },
+    {
+      "name": "AB-2.B-original-EDIT-actually-processes-input",
+      "passed": true
+    },
+    {
+      "name": "AB-2.B-final-native-edit-and-new-undo",
+      "passed": true
+    },
+    {
+      "name": "AB-2.B-before-A-to-after-A-isolated",
+      "passed": true
+    },
+    {
+      "name": "AB-2.A-before-B-to-after-B-isolated",
+      "passed": true
+    },
+    {
+      "name": "AB-2.B-before-A-again-to-after-A-again-isolated",
+      "passed": true
+    },
+    {
+      "name": "AB-2.A-before-B-again-to-after-B-again-isolated",
+      "passed": true
+    },
+    {
+      "name": "AB-2.AB-before-edits-distinct-PID-TID-Desktop",
+      "passed": true
+    },
+    {
+      "name": "AB-2.AB-after-edits-distinct-PID-TID-Desktop",
+      "passed": true
+    },
+    {
+      "name": "AB-2.source-S0-real-owned-frame",
+      "passed": true
+    },
+    {
+      "name": "AB-2.source-changed-real-owned-frame",
+      "passed": true
+    },
+    {
+      "name": "AB-2.A-initial-real-owned-frame",
+      "passed": true
+    },
+    {
+      "name": "AB-2.B-initial-real-owned-frame",
+      "passed": true
+    },
+    {
+      "name": "AB-2.A-first-edit-real-owned-frame",
+      "passed": true
+    },
+    {
+      "name": "AB-2.B-first-edit-real-owned-frame",
+      "passed": true
+    },
+    {
+      "name": "AB-2.A-second-edit-real-owned-frame",
+      "passed": true
+    },
+    {
+      "name": "AB-2.B-second-edit-real-owned-frame",
+      "passed": true
+    },
+    {
+      "name": "AB-2.A-final-real-owned-frame",
+      "passed": true
+    },
+    {
+      "name": "AB-2.B-final-real-owned-frame",
+      "passed": true
+    },
+    {
+      "name": "AB-2.A-real-initial-EDIT-pixels-match-S0",
+      "passed": true
+    },
+    {
+      "name": "AB-2.B-real-initial-EDIT-pixels-match-S0",
+      "passed": true
+    },
+    {
+      "name": "AB-2.owned-processes-and-desktops-cleaned",
+      "passed": true
+    },
+    {
+      "name": "AB-2.no-SA-SB-or-R4-claim",
+      "passed": true
+    },
+    {
+      "name": "ABC-2.actual-run-completed",
+      "passed": true
+    },
+    {
+      "name": "ABC-2.all-controller-assertions",
+      "passed": true
+    },
+    {
+      "name": "ABC-2.raw-S0-calculation",
+      "passed": true
+    },
+    {
+      "name": "ABC-2.only-one-S0-naturally-empty-undo",
+      "passed": true
+    },
+    {
+      "name": "ABC-2.all-S0-fingerprints-unchanged",
+      "passed": true
+    },
+    {
+      "name": "ABC-2.fingerprint-memory-matches-original-bytes",
+      "passed": true
+    },
+    {
+      "name": "ABC-2.fingerprint-stack-matches-original-bytes",
+      "passed": true
+    },
+    {
+      "name": "ABC-2.fingerprint-context-matches-original-bytes",
+      "passed": true
+    },
+    {
+      "name": "ABC-2.fingerprint-resources-matches-original-bytes",
+      "passed": true
+    },
+    {
+      "name": "ABC-2.fingerprint-metadata-matches-original-bytes",
+      "passed": true
+    },
+    {
+      "name": "ABC-2.fingerprint-returns-matches-original-bytes",
+      "passed": true
+    },
+    {
+      "name": "ABC-2.fingerprint-abi-matches-original-bytes",
+      "passed": true
+    },
+    {
+      "name": "ABC-2.fingerprint-executable-matches-original-bytes",
+      "passed": true
+    },
+    {
+      "name": "ABC-2.whole-S0-fingerprint-independently-recomputed",
+      "passed": true
+    },
+    {
+      "name": "ABC-2.source-exit-before-new-A",
+      "passed": true
+    },
+    {
+      "name": "ABC-2.no-target-initialization-or-business-replay",
+      "passed": true
+    },
+    {
+      "name": "ABC-2.central-pump-exact-PID-routing",
+      "passed": true
+    },
+    {
+      "name": "ABC-2.real-B-or-C-event-not-consumed-by-A",
+      "passed": true
+    },
+    {
+      "name": "ABC-2.only-verified-Views-published",
+      "passed": true
+    },
+    {
+      "name": "ABC-2.actual-CET-CFG-enabled",
+      "passed": true
+    },
+    {
+      "name": "ABC-2.source-S0-native-owner-thread",
+      "passed": true
+    },
+    {
+      "name": "ABC-2.source-changed-native-owner-thread",
+      "passed": true
+    },
+    {
+      "name": "ABC-2.A-prepared-native-owner-thread",
+      "passed": true
+    },
+    {
+      "name": "ABC-2.A-initial-native-owner-thread",
+      "passed": true
+    },
+    {
+      "name": "ABC-2.B-prepared-native-owner-thread",
+      "passed": true
+    },
+    {
+      "name": "ABC-2.B-initial-native-owner-thread",
+      "passed": true
+    },
+    {
+      "name": "ABC-2.B-before-A-native-owner-thread",
+      "passed": true
+    },
+    {
+      "name": "ABC-2.A-first-edit-native-owner-thread",
+      "passed": true
+    },
+    {
+      "name": "ABC-2.B-after-A-native-owner-thread",
+      "passed": true
+    },
+    {
+      "name": "ABC-2.A-before-B-native-owner-thread",
+      "passed": true
+    },
+    {
+      "name": "ABC-2.B-first-edit-native-owner-thread",
+      "passed": true
+    },
+    {
+      "name": "ABC-2.A-after-B-native-owner-thread",
+      "passed": true
+    },
+    {
+      "name": "ABC-2.B-before-A-again-native-owner-thread",
+      "passed": true
+    },
+    {
+      "name": "ABC-2.A-second-edit-native-owner-thread",
+      "passed": true
+    },
+    {
+      "name": "ABC-2.B-after-A-again-native-owner-thread",
+      "passed": true
+    },
+    {
+      "name": "ABC-2.A-before-B-again-native-owner-thread",
+      "passed": true
+    },
+    {
+      "name": "ABC-2.B-second-edit-native-owner-thread",
+      "passed": true
+    },
+    {
+      "name": "ABC-2.A-after-B-again-native-owner-thread",
+      "passed": true
+    },
+    {
+      "name": "ABC-2.A-before-C-native-owner-thread",
+      "passed": true
+    },
+    {
+      "name": "ABC-2.B-before-C-native-owner-thread",
+      "passed": true
+    },
+    {
+      "name": "ABC-2.C-prepared-native-owner-thread",
+      "passed": true
+    },
+    {
+      "name": "ABC-2.C-initial-native-owner-thread",
+      "passed": true
+    },
+    {
+      "name": "ABC-2.A-after-C-native-owner-thread",
+      "passed": true
+    },
+    {
+      "name": "ABC-2.B-after-C-native-owner-thread",
+      "passed": true
+    },
+    {
+      "name": "ABC-2.C-before-final-A-native-owner-thread",
+      "passed": true
+    },
+    {
+      "name": "ABC-2.A-final-edit-native-owner-thread",
+      "passed": true
+    },
+    {
+      "name": "ABC-2.C-after-final-A-native-owner-thread",
+      "passed": true
+    },
+    {
+      "name": "ABC-2.A-before-final-B-native-owner-thread",
+      "passed": true
+    },
+    {
+      "name": "ABC-2.B-final-edit-native-owner-thread",
+      "passed": true
+    },
+    {
+      "name": "ABC-2.A-after-final-B-native-owner-thread",
+      "passed": true
+    },
+    {
+      "name": "ABC-2.A-before-C-edit-native-owner-thread",
+      "passed": true
+    },
+    {
+      "name": "ABC-2.B-before-C-edit-native-owner-thread",
+      "passed": true
+    },
+    {
+      "name": "ABC-2.C-first-edit-native-owner-thread",
+      "passed": true
+    },
+    {
+      "name": "ABC-2.A-after-C-edit-native-owner-thread",
+      "passed": true
+    },
+    {
+      "name": "ABC-2.B-after-C-edit-native-owner-thread",
+      "passed": true
+    },
+    {
+      "name": "ABC-2.A-final-native-owner-thread",
+      "passed": true
+    },
+    {
+      "name": "ABC-2.B-final-native-owner-thread",
+      "passed": true
+    },
+    {
+      "name": "ABC-2.C-final-native-owner-thread",
+      "passed": true
+    },
+    {
+      "name": "ABC-2.A-restored-native-control-state",
+      "passed": true
+    },
+    {
+      "name": "ABC-2.A-window-0-native-identity",
+      "passed": true
+    },
+    {
+      "name": "ABC-2.A-window-1-native-identity",
+      "passed": true
+    },
+    {
+      "name": "ABC-2.A-window-2-native-identity",
+      "passed": true
+    },
+    {
+      "name": "ABC-2.A-target-own-CET-chain-before-and-after",
+      "passed": true
+    },
+    {
+      "name": "ABC-2.A-normal-CALL-not-source-SSP",
+      "passed": true
+    },
+    {
+      "name": "ABC-2.A-real-restored-computation",
+      "passed": true
+    },
+    {
+      "name": "ABC-2.A-ref-1859720839208-old-value",
+      "passed": true
+    },
+    {
+      "name": "ABC-2.A-ref-1859720839488-old-value",
+      "passed": true
+    },
+    {
+      "name": "ABC-2.A-ref-1859720839496-old-value",
+      "passed": true
+    },
+    {
+      "name": "ABC-2.A-ref-1859723001272-old-value",
+      "passed": true
+    },
+    {
+      "name": "ABC-2.A-ref-1859723001264-old-value",
+      "passed": true
+    },
+    {
+      "name": "ABC-2.A-ref-1859723001136-old-value",
+      "passed": true
+    },
+    {
+      "name": "ABC-2.A-ref-1859723001144-old-value",
+      "passed": true
+    },
+    {
+      "name": "ABC-2.A-only-seven-declared-HWND-relocations",
+      "passed": true
+    },
+    {
+      "name": "ABC-2.A-original-EDIT-actually-processes-input",
+      "passed": true
+    },
+    {
+      "name": "ABC-2.A-final-native-edit-and-new-undo",
+      "passed": true
+    },
+    {
+      "name": "ABC-2.B-restored-native-control-state",
+      "passed": true
+    },
+    {
+      "name": "ABC-2.B-window-0-native-identity",
+      "passed": true
+    },
+    {
+      "name": "ABC-2.B-window-1-native-identity",
+      "passed": true
+    },
+    {
+      "name": "ABC-2.B-window-2-native-identity",
+      "passed": true
+    },
+    {
+      "name": "ABC-2.B-target-own-CET-chain-before-and-after",
+      "passed": true
+    },
+    {
+      "name": "ABC-2.B-normal-CALL-not-source-SSP",
+      "passed": true
+    },
+    {
+      "name": "ABC-2.B-real-restored-computation",
+      "passed": true
+    },
+    {
+      "name": "ABC-2.B-ref-1859720839208-old-value",
+      "passed": true
+    },
+    {
+      "name": "ABC-2.B-ref-1859720839488-old-value",
+      "passed": true
+    },
+    {
+      "name": "ABC-2.B-ref-1859720839496-old-value",
+      "passed": true
+    },
+    {
+      "name": "ABC-2.B-ref-1859723001272-old-value",
+      "passed": true
+    },
+    {
+      "name": "ABC-2.B-ref-1859723001264-old-value",
+      "passed": true
+    },
+    {
+      "name": "ABC-2.B-ref-1859723001136-old-value",
+      "passed": true
+    },
+    {
+      "name": "ABC-2.B-ref-1859723001144-old-value",
+      "passed": true
+    },
+    {
+      "name": "ABC-2.B-only-seven-declared-HWND-relocations",
+      "passed": true
+    },
+    {
+      "name": "ABC-2.B-original-EDIT-actually-processes-input",
+      "passed": true
+    },
+    {
+      "name": "ABC-2.B-final-native-edit-and-new-undo",
+      "passed": true
+    },
+    {
+      "name": "ABC-2.C-restored-native-control-state",
+      "passed": true
+    },
+    {
+      "name": "ABC-2.C-window-0-native-identity",
+      "passed": true
+    },
+    {
+      "name": "ABC-2.C-window-1-native-identity",
+      "passed": true
+    },
+    {
+      "name": "ABC-2.C-window-2-native-identity",
+      "passed": true
+    },
+    {
+      "name": "ABC-2.C-target-own-CET-chain-before-and-after",
+      "passed": true
+    },
+    {
+      "name": "ABC-2.C-normal-CALL-not-source-SSP",
+      "passed": true
+    },
+    {
+      "name": "ABC-2.C-real-restored-computation",
+      "passed": true
+    },
+    {
+      "name": "ABC-2.C-ref-1859720839208-old-value",
+      "passed": true
+    },
+    {
+      "name": "ABC-2.C-ref-1859720839488-old-value",
+      "passed": true
+    },
+    {
+      "name": "ABC-2.C-ref-1859720839496-old-value",
+      "passed": true
+    },
+    {
+      "name": "ABC-2.C-ref-1859723001272-old-value",
+      "passed": true
+    },
+    {
+      "name": "ABC-2.C-ref-1859723001264-old-value",
+      "passed": true
+    },
+    {
+      "name": "ABC-2.C-ref-1859723001136-old-value",
+      "passed": true
+    },
+    {
+      "name": "ABC-2.C-ref-1859723001144-old-value",
+      "passed": true
+    },
+    {
+      "name": "ABC-2.C-only-seven-declared-HWND-relocations",
+      "passed": true
+    },
+    {
+      "name": "ABC-2.C-original-EDIT-actually-processes-input",
+      "passed": true
+    },
+    {
+      "name": "ABC-2.C-final-native-edit-and-new-undo",
+      "passed": true
+    },
+    {
+      "name": "ABC-2.B-before-A-to-after-A-isolated",
+      "passed": true
+    },
+    {
+      "name": "ABC-2.A-before-B-to-after-B-isolated",
+      "passed": true
+    },
+    {
+      "name": "ABC-2.B-before-A-again-to-after-A-again-isolated",
+      "passed": true
+    },
+    {
+      "name": "ABC-2.A-before-B-again-to-after-B-again-isolated",
+      "passed": true
+    },
+    {
+      "name": "ABC-2.A-before-C-to-after-C-isolated",
+      "passed": true
+    },
+    {
+      "name": "ABC-2.C-before-final-A-to-after-final-A-isolated",
+      "passed": true
+    },
+    {
+      "name": "ABC-2.A-before-C-edit-to-after-C-edit-isolated",
+      "passed": true
+    },
+    {
+      "name": "ABC-2.B-before-C-to-after-C-isolated",
+      "passed": true
+    },
+    {
+      "name": "ABC-2.A-before-final-B-to-after-final-B-isolated",
+      "passed": true
+    },
+    {
+      "name": "ABC-2.B-before-C-edit-to-after-C-edit-isolated",
+      "passed": true
+    },
+    {
+      "name": "ABC-2.AB-before-edits-distinct-PID-TID-Desktop",
+      "passed": true
+    },
+    {
+      "name": "ABC-2.AB-after-edits-distinct-PID-TID-Desktop",
+      "passed": true
+    },
+    {
+      "name": "ABC-2.final-concurrent-distinct-PID-TID-Desktop",
+      "passed": true
+    },
+    {
+      "name": "ABC-2.A-not-paused-during-C-creation",
+      "passed": true
+    },
+    {
+      "name": "ABC-2.B-not-paused-during-C-creation",
+      "passed": true
+    },
+    {
+      "name": "ABC-2.source-S0-real-owned-frame",
+      "passed": true
+    },
+    {
+      "name": "ABC-2.source-changed-real-owned-frame",
+      "passed": true
+    },
+    {
+      "name": "ABC-2.A-initial-real-owned-frame",
+      "passed": true
+    },
+    {
+      "name": "ABC-2.B-initial-real-owned-frame",
+      "passed": true
+    },
+    {
+      "name": "ABC-2.A-first-edit-real-owned-frame",
+      "passed": true
+    },
+    {
+      "name": "ABC-2.B-first-edit-real-owned-frame",
+      "passed": true
+    },
+    {
+      "name": "ABC-2.A-second-edit-real-owned-frame",
+      "passed": true
+    },
+    {
+      "name": "ABC-2.B-second-edit-real-owned-frame",
+      "passed": true
+    },
+    {
+      "name": "ABC-2.C-initial-real-owned-frame",
+      "passed": true
+    },
+    {
+      "name": "ABC-2.A-final-edit-real-owned-frame",
+      "passed": true
+    },
+    {
+      "name": "ABC-2.B-final-edit-real-owned-frame",
+      "passed": true
+    },
+    {
+      "name": "ABC-2.C-first-edit-real-owned-frame",
+      "passed": true
+    },
+    {
+      "name": "ABC-2.A-final-real-owned-frame",
+      "passed": true
+    },
+    {
+      "name": "ABC-2.B-final-real-owned-frame",
+      "passed": true
+    },
+    {
+      "name": "ABC-2.C-final-real-owned-frame",
+      "passed": true
+    },
+    {
+      "name": "ABC-2.A-real-initial-EDIT-pixels-match-S0",
+      "passed": true
+    },
+    {
+      "name": "ABC-2.B-real-initial-EDIT-pixels-match-S0",
+      "passed": true
+    },
+    {
+      "name": "ABC-2.C-real-initial-EDIT-pixels-match-S0",
+      "passed": true
+    },
+    {
+      "name": "ABC-2.owned-processes-and-desktops-cleaned",
+      "passed": true
+    },
+    {
+      "name": "ABC-2.no-SA-SB-or-R4-claim",
+      "passed": true
+    },
+    {
+      "name": "fail-B-2.actual-run-completed",
+      "passed": true
+    },
+    {
+      "name": "fail-B-2.all-controller-assertions",
+      "passed": true
+    },
+    {
+      "name": "fail-B-2.raw-S0-calculation",
+      "passed": true
+    },
+    {
+      "name": "fail-B-2.only-one-S0-naturally-empty-undo",
+      "passed": true
+    },
+    {
+      "name": "fail-B-2.all-S0-fingerprints-unchanged",
+      "passed": true
+    },
+    {
+      "name": "fail-B-2.fingerprint-memory-matches-original-bytes",
+      "passed": true
+    },
+    {
+      "name": "fail-B-2.fingerprint-stack-matches-original-bytes",
+      "passed": true
+    },
+    {
+      "name": "fail-B-2.fingerprint-context-matches-original-bytes",
+      "passed": true
+    },
+    {
+      "name": "fail-B-2.fingerprint-resources-matches-original-bytes",
+      "passed": true
+    },
+    {
+      "name": "fail-B-2.fingerprint-metadata-matches-original-bytes",
+      "passed": true
+    },
+    {
+      "name": "fail-B-2.fingerprint-returns-matches-original-bytes",
+      "passed": true
+    },
+    {
+      "name": "fail-B-2.fingerprint-abi-matches-original-bytes",
+      "passed": true
+    },
+    {
+      "name": "fail-B-2.fingerprint-executable-matches-original-bytes",
+      "passed": true
+    },
+    {
+      "name": "fail-B-2.whole-S0-fingerprint-independently-recomputed",
+      "passed": true
+    },
+    {
+      "name": "fail-B-2.source-exit-before-new-A",
+      "passed": true
+    },
+    {
+      "name": "fail-B-2.no-target-initialization-or-business-replay",
+      "passed": true
+    },
+    {
+      "name": "fail-B-2.central-pump-exact-PID-routing",
+      "passed": true
+    },
+    {
+      "name": "fail-B-2.real-B-or-C-event-not-consumed-by-A",
+      "passed": true
+    },
+    {
+      "name": "fail-B-2.only-verified-Views-published",
+      "passed": true
+    },
+    {
+      "name": "fail-B-2.actual-CET-CFG-enabled",
+      "passed": true
+    },
+    {
+      "name": "fail-B-2.source-S0-native-owner-thread",
+      "passed": true
+    },
+    {
+      "name": "fail-B-2.source-changed-native-owner-thread",
+      "passed": true
+    },
+    {
+      "name": "fail-B-2.A-prepared-native-owner-thread",
+      "passed": true
+    },
+    {
+      "name": "fail-B-2.A-initial-native-owner-thread",
+      "passed": true
+    },
+    {
+      "name": "fail-B-2.A-before-B-failure-native-owner-thread",
+      "passed": true
+    },
+    {
+      "name": "fail-B-2.B-prepared-native-owner-thread",
+      "passed": true
+    },
+    {
+      "name": "fail-B-2.A-after-B-failure-preserved-native-owner-thread",
+      "passed": true
+    },
+    {
+      "name": "fail-B-2.A-after-B-failure-native-owner-thread",
+      "passed": true
+    },
+    {
+      "name": "fail-B-2.A-before-C-native-owner-thread",
+      "passed": true
+    },
+    {
+      "name": "fail-B-2.C-prepared-native-owner-thread",
+      "passed": true
+    },
+    {
+      "name": "fail-B-2.C-initial-native-owner-thread",
+      "passed": true
+    },
+    {
+      "name": "fail-B-2.A-after-C-native-owner-thread",
+      "passed": true
+    },
+    {
+      "name": "fail-B-2.C-before-final-A-native-owner-thread",
+      "passed": true
+    },
+    {
+      "name": "fail-B-2.A-final-edit-native-owner-thread",
+      "passed": true
+    },
+    {
+      "name": "fail-B-2.C-after-final-A-native-owner-thread",
+      "passed": true
+    },
+    {
+      "name": "fail-B-2.A-before-C-edit-native-owner-thread",
+      "passed": true
+    },
+    {
+      "name": "fail-B-2.C-first-edit-native-owner-thread",
+      "passed": true
+    },
+    {
+      "name": "fail-B-2.A-after-C-edit-native-owner-thread",
+      "passed": true
+    },
+    {
+      "name": "fail-B-2.A-final-native-owner-thread",
+      "passed": true
+    },
+    {
+      "name": "fail-B-2.C-final-native-owner-thread",
+      "passed": true
+    },
+    {
+      "name": "fail-B-2.A-restored-native-control-state",
+      "passed": true
+    },
+    {
+      "name": "fail-B-2.A-window-0-native-identity",
+      "passed": true
+    },
+    {
+      "name": "fail-B-2.A-window-1-native-identity",
+      "passed": true
+    },
+    {
+      "name": "fail-B-2.A-window-2-native-identity",
+      "passed": true
+    },
+    {
+      "name": "fail-B-2.A-target-own-CET-chain-before-and-after",
+      "passed": true
+    },
+    {
+      "name": "fail-B-2.A-normal-CALL-not-source-SSP",
+      "passed": true
+    },
+    {
+      "name": "fail-B-2.A-real-restored-computation",
+      "passed": true
+    },
+    {
+      "name": "fail-B-2.A-ref-1859720839208-old-value",
+      "passed": true
+    },
+    {
+      "name": "fail-B-2.A-ref-1859720839488-old-value",
+      "passed": true
+    },
+    {
+      "name": "fail-B-2.A-ref-1859720839496-old-value",
+      "passed": true
+    },
+    {
+      "name": "fail-B-2.A-ref-1859723001272-old-value",
+      "passed": true
+    },
+    {
+      "name": "fail-B-2.A-ref-1859723001264-old-value",
+      "passed": true
+    },
+    {
+      "name": "fail-B-2.A-ref-1859723001136-old-value",
+      "passed": true
+    },
+    {
+      "name": "fail-B-2.A-ref-1859723001144-old-value",
+      "passed": true
+    },
+    {
+      "name": "fail-B-2.A-only-seven-declared-HWND-relocations",
+      "passed": true
+    },
+    {
+      "name": "fail-B-2.A-original-EDIT-actually-processes-input",
+      "passed": true
+    },
+    {
+      "name": "fail-B-2.A-final-native-edit-and-new-undo",
+      "passed": true
+    },
+    {
+      "name": "fail-B-2.C-restored-native-control-state",
+      "passed": true
+    },
+    {
+      "name": "fail-B-2.C-window-0-native-identity",
+      "passed": true
+    },
+    {
+      "name": "fail-B-2.C-window-1-native-identity",
+      "passed": true
+    },
+    {
+      "name": "fail-B-2.C-window-2-native-identity",
+      "passed": true
+    },
+    {
+      "name": "fail-B-2.C-target-own-CET-chain-before-and-after",
+      "passed": true
+    },
+    {
+      "name": "fail-B-2.C-normal-CALL-not-source-SSP",
+      "passed": true
+    },
+    {
+      "name": "fail-B-2.C-real-restored-computation",
+      "passed": true
+    },
+    {
+      "name": "fail-B-2.C-ref-1859720839208-old-value",
+      "passed": true
+    },
+    {
+      "name": "fail-B-2.C-ref-1859720839488-old-value",
+      "passed": true
+    },
+    {
+      "name": "fail-B-2.C-ref-1859720839496-old-value",
+      "passed": true
+    },
+    {
+      "name": "fail-B-2.C-ref-1859723001272-old-value",
+      "passed": true
+    },
+    {
+      "name": "fail-B-2.C-ref-1859723001264-old-value",
+      "passed": true
+    },
+    {
+      "name": "fail-B-2.C-ref-1859723001136-old-value",
+      "passed": true
+    },
+    {
+      "name": "fail-B-2.C-ref-1859723001144-old-value",
+      "passed": true
+    },
+    {
+      "name": "fail-B-2.C-only-seven-declared-HWND-relocations",
+      "passed": true
+    },
+    {
+      "name": "fail-B-2.C-original-EDIT-actually-processes-input",
+      "passed": true
+    },
+    {
+      "name": "fail-B-2.C-final-native-edit-and-new-undo",
+      "passed": true
+    },
+    {
+      "name": "fail-B-2.A-before-B-failure-to-after-B-failure-preserved-isolated",
+      "passed": true
+    },
+    {
+      "name": "fail-B-2.A-before-C-to-after-C-isolated",
+      "passed": true
+    },
+    {
+      "name": "fail-B-2.C-before-final-A-to-after-final-A-isolated",
+      "passed": true
+    },
+    {
+      "name": "fail-B-2.A-before-C-edit-to-after-C-edit-isolated",
+      "passed": true
+    },
+    {
+      "name": "fail-B-2.A-survives-B-distinct-PID-TID-Desktop",
+      "passed": true
+    },
+    {
+      "name": "fail-B-2.final-concurrent-distinct-PID-TID-Desktop",
+      "passed": true
+    },
+    {
+      "name": "fail-B-2.A-not-paused-during-C-creation",
+      "passed": true
+    },
+    {
+      "name": "fail-B-2.B-actual-resource-failure-not-published",
+      "passed": true
+    },
+    {
+      "name": "fail-B-2.B-cleaned-before-C-and-A-keeps-working",
+      "passed": true
+    },
+    {
+      "name": "fail-B-2.source-S0-real-owned-frame",
+      "passed": true
+    },
+    {
+      "name": "fail-B-2.source-changed-real-owned-frame",
+      "passed": true
+    },
+    {
+      "name": "fail-B-2.A-initial-real-owned-frame",
+      "passed": true
+    },
+    {
+      "name": "fail-B-2.A-after-B-failure-real-owned-frame",
+      "passed": true
+    },
+    {
+      "name": "fail-B-2.C-initial-real-owned-frame",
+      "passed": true
+    },
+    {
+      "name": "fail-B-2.A-final-edit-real-owned-frame",
+      "passed": true
+    },
+    {
+      "name": "fail-B-2.C-first-edit-real-owned-frame",
+      "passed": true
+    },
+    {
+      "name": "fail-B-2.A-final-real-owned-frame",
+      "passed": true
+    },
+    {
+      "name": "fail-B-2.C-final-real-owned-frame",
+      "passed": true
+    },
+    {
+      "name": "fail-B-2.A-real-initial-EDIT-pixels-match-S0",
+      "passed": true
+    },
+    {
+      "name": "fail-B-2.C-real-initial-EDIT-pixels-match-S0",
+      "passed": true
+    },
+    {
+      "name": "fail-B-2.owned-processes-and-desktops-cleaned",
+      "passed": true
+    },
+    {
+      "name": "fail-B-2.no-SA-SB-or-R4-claim",
+      "passed": true
+    },
+    {
+      "name": "unchanged-b001-and-CET002-full-regressions",
+      "passed": false
+    },
+    {
+      "name": "old-experiments-and-original-evidence-unchanged",
+      "passed": true
+    }
+  ],
+  "cases": [
+    {
+      "scenario": "AB",
+      "repeat": 1,
+      "processExit": 0,
+      "multiViewRestorePassed": true,
+      "BFailureIsolated": false,
+      "publishedViews": [
+        "A",
+        "B"
+      ],
+      "processes": 47,
+      "closedDesktops": 3
+    },
+    {
+      "scenario": "ABC",
+      "repeat": 1,
+      "processExit": 0,
+      "multiViewRestorePassed": true,
+      "BFailureIsolated": false,
+      "publishedViews": [
+        "A",
+        "B",
+        "C"
+      ],
+      "processes": 76,
+      "closedDesktops": 4
+    },
+    {
+      "scenario": "fail-B",
+      "repeat": 1,
+      "processExit": 0,
+      "multiViewRestorePassed": true,
+      "BFailureIsolated": true,
+      "publishedViews": [
+        "A",
+        "C"
+      ],
+      "processes": 46,
+      "closedDesktops": 4
+    },
+    {
+      "scenario": "AB",
+      "repeat": 2,
+      "processExit": 0,
+      "multiViewRestorePassed": true,
+      "BFailureIsolated": false,
+      "publishedViews": [
+        "A",
+        "B"
+      ],
+      "processes": 47,
+      "closedDesktops": 3
+    },
+    {
+      "scenario": "ABC",
+      "repeat": 2,
+      "processExit": 0,
+      "multiViewRestorePassed": true,
+      "BFailureIsolated": false,
+      "publishedViews": [
+        "A",
+        "B",
+        "C"
+      ],
+      "processes": 76,
+      "closedDesktops": 4
+    },
+    {
+      "scenario": "fail-B",
+      "repeat": 2,
+      "processExit": 0,
+      "multiViewRestorePassed": true,
+      "BFailureIsolated": true,
+      "publishedViews": [
+        "A",
+        "C"
+      ],
+      "processes": 46,
+      "closedDesktops": 4
+    }
+  ],
+  "B001AndCET002Regression": "failed",
+  "manualHostTest": "not_executed"
+}

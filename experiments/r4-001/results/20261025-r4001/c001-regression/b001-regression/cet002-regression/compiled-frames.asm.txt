@@ -1,0 +1,724 @@
+?managed_entry@?A0x35a61139@r305@@YAXXZ PROC		; r305::`anonymous namespace'::managed_entry, COMDAT
+
+; 162  : void managed_entry() {
+
+	sub	rsp, 56					; 00000038H
+
+; 163  :     GetCurrentThreadStackLimits(&R305Metadata.reported_stack_low,&R305Metadata.reported_stack_high);
+
+	lea	rdx, OFFSET FLAT:R305Metadata+216
+	lea	rcx, OFFSET FLAT:R305Metadata+208
+	call	QWORD PTR __imp_GetCurrentThreadStackLimits
+
+; 164  :     const auto tib=reinterpret_cast<NT_TIB*>(NtCurrentTeb());
+
+	call	NtCurrentTeb
+	mov	QWORD PTR tib$[rsp], rax
+
+; 165  :     R305Metadata.active_stack_low=reinterpret_cast<std::uint64_t>(tib->StackLimit);
+
+	mov	rax, QWORD PTR tib$[rsp]
+	mov	rax, QWORD PTR [rax+16]
+	mov	QWORD PTR R305Metadata+192, rax
+
+; 166  :     R305Metadata.active_stack_high=reinterpret_cast<std::uint64_t>(tib->StackBase);
+
+	mov	rax, QWORD PTR tib$[rsp]
+	mov	rax, QWORD PTR [rax+8]
+	mov	QWORD PTR R305Metadata+200, rax
+
+; 167  :     ReadyTrap();
+
+	call	ReadyTrap
+
+; 168  :     // Same application/outer/middle/leaf CALL sites in both processes.
+; 169  :     // Rebuild mode only enters structural frames and skips business prefixes.
+; 170  :     application();
+
+	call	?application@?A0x35a61139@r305@@YAXXZ	; r305::`anonymous namespace'::application
+	npad	1
+
+; 171  : }
+
+	add	rsp, 56					; 00000038H
+	ret	0
+?managed_entry@?A0x35a61139@r305@@YAXXZ ENDP		; r305::`anonymous namespace'::managed_entry
+?application@?A0x35a61139@r305@@YAXXZ PROC		; r305::`anonymous namespace'::application, COMDAT
+
+; 131  : __declspec(noinline) void application() {
+
+	push	rsi
+	push	rdi
+	sub	rsp, 216				; 000000d8H
+
+; 132  :     if(!R305Rebuild) {
+
+	cmp	DWORD PTR R305Rebuild, 0
+	jne	$LN7@applicatio
+
+; 133  :     InitTrap(); // controller counts this independently, target must never reach it
+
+	call	InitTrap
+
+; 134  :     const auto status=BCryptGenRandom(nullptr,reinterpret_cast<PUCHAR>(&work->seed),sizeof(work->seed),BCRYPT_USE_SYSTEM_PREFERRED_RNG);
+
+	mov	rax, QWORD PTR ?work@?A0x35a61139@r305@@3QEAUWork@2@EA
+	mov	r9d, 2
+	mov	r8d, 8
+	mov	rdx, rax
+	xor	ecx, ecx
+	call	BCryptGenRandom
+	mov	DWORD PTR status$2[rsp], eax
+
+; 135  :     if (status < 0) reject(static_cast<DWORD>(status));
+
+	cmp	DWORD PTR status$2[rsp], 0
+	jge	SHORT $LN8@applicatio
+	mov	ecx, DWORD PTR status$2[rsp]
+	call	?reject@?A0x35a61139@r305@@YAXK@Z	; r305::`anonymous namespace'::reject
+	npad	1
+$LN8@applicatio:
+
+; 136  :     swprintf_s(work->text,L"BASE-%016llx",static_cast<unsigned long long>(work->seed)); work->length=static_cast<unsigned>(wcslen(work->text));
+
+	mov	rax, QWORD PTR ?work@?A0x35a61139@r305@@3QEAUWork@2@EA
+	add	rax, 48					; 00000030H
+	mov	rcx, QWORD PTR ?work@?A0x35a61139@r305@@3QEAUWork@2@EA
+	mov	r8, QWORD PTR [rcx]
+	lea	rdx, OFFSET FLAT:$SG165391
+	mov	rcx, rax
+	call	??$swprintf_s@$0IA@@@YAHAEAY0IA@_WPEB_WZZ ; swprintf_s<128>
+	mov	rax, QWORD PTR ?work@?A0x35a61139@r305@@3QEAUWork@2@EA
+	add	rax, 48					; 00000030H
+	mov	rcx, rax
+	call	wcslen
+	mov	DWORD PTR tv84[rsp], eax
+	mov	rax, QWORD PTR ?work@?A0x35a61139@r305@@3QEAUWork@2@EA
+	mov	ecx, DWORD PTR tv84[rsp]
+	mov	DWORD PTR [rax+304], ecx
+
+; 137  :     work->counter=17+(work->seed%100); R305Metadata.published=1;
+
+	xor	edx, edx
+	mov	rax, QWORD PTR ?work@?A0x35a61139@r305@@3QEAUWork@2@EA
+	mov	rax, QWORD PTR [rax]
+	mov	ecx, 100				; 00000064H
+	div	rcx
+	mov	rax, rdx
+	add	rax, 17
+	mov	rcx, QWORD PTR ?work@?A0x35a61139@r305@@3QEAUWork@2@EA
+	mov	QWORD PTR [rcx+8], rax
+	mov	DWORD PTR R305Metadata+412, 1
+
+; 138  :     observe("business_initialized"); if(R305Metadata.gui)InvalidateRect(work->window,nullptr,FALSE);
+
+	xor	edx, edx
+	lea	rcx, OFFSET FLAT:$SG165392
+	call	?observe@?A0x35a61139@r305@@YAXPEBDI@Z	; r305::`anonymous namespace'::observe
+	npad	1
+	cmp	DWORD PTR R305Metadata+620, 0
+	je	SHORT $LN9@applicatio
+	xor	r8d, r8d
+	xor	edx, edx
+	mov	rax, QWORD PTR ?work@?A0x35a61139@r305@@3QEAUWork@2@EA
+	mov	rcx, QWORD PTR [rax+40]
+	call	QWORD PTR __imp_InvalidateRect
+	npad	1
+$LN9@applicatio:
+$LN7@applicatio:
+
+; 139  :     }
+; 140  :     if(!R305Metadata.gui || R305Rebuild){R305Metadata.frozen=1;R305Metadata.checkpoint_requested=1;}
+
+	cmp	DWORD PTR R305Metadata+620, 0
+	je	SHORT $LN11@applicatio
+	cmp	DWORD PTR R305Rebuild, 0
+	je	SHORT $LN10@applicatio
+$LN11@applicatio:
+	mov	DWORD PTR R305Metadata+404, 1
+	mov	DWORD PTR R305Metadata+408, 1
+$LN10@applicatio:
+$LN2@applicatio:
+
+; 141  :     for (;;) {
+; 142  :         MSG message{};
+
+	lea	rax, QWORD PTR message$4[rsp]
+	mov	rdi, rax
+	xor	eax, eax
+	mov	ecx, 48					; 00000030H
+	rep stosb
+$LN5@applicatio:
+
+; 143  :         while (R305Metadata.gui && !R305Rebuild && PeekMessageW(&message,nullptr,0,0,PM_REMOVE)) {
+
+	cmp	DWORD PTR R305Metadata+620, 0
+	je	SHORT $LN6@applicatio
+	cmp	DWORD PTR R305Rebuild, 0
+	jne	SHORT $LN6@applicatio
+	mov	DWORD PTR [rsp+32], 1
+	xor	r9d, r9d
+	xor	r8d, r8d
+	xor	edx, edx
+	lea	rcx, QWORD PTR message$4[rsp]
+	call	QWORD PTR __imp_PeekMessageW
+	test	eax, eax
+	je	SHORT $LN6@applicatio
+
+; 144  :             ++R305Metadata.in_dispatch; TranslateMessage(&message); DispatchMessageW(&message); --R305Metadata.in_dispatch;
+
+	mov	eax, DWORD PTR R305Metadata+420
+	inc	eax
+	mov	DWORD PTR R305Metadata+420, eax
+	lea	rcx, QWORD PTR message$4[rsp]
+	call	QWORD PTR __imp_TranslateMessage
+	lea	rcx, QWORD PTR message$4[rsp]
+	call	QWORD PTR __imp_DispatchMessageW
+	mov	eax, DWORD PTR R305Metadata+420
+	dec	eax
+	mov	DWORD PTR R305Metadata+420, eax
+
+; 145  :         }
+
+	jmp	SHORT $LN5@applicatio
+$LN6@applicatio:
+
+; 146  :         if (R305Metadata.checkpoint_requested) {
+
+	cmp	DWORD PTR R305Metadata+408, 0
+	je	$LN12@applicatio
+
+; 147  :             if(R305Metadata.gui && !R305Rebuild)UpdateWindow(work->window);
+
+	cmp	DWORD PTR R305Metadata+620, 0
+	je	SHORT $LN13@applicatio
+	cmp	DWORD PTR R305Rebuild, 0
+	jne	SHORT $LN13@applicatio
+	mov	rax, QWORD PTR ?work@?A0x35a61139@r305@@3QEAUWork@2@EA
+	mov	rcx, QWORD PTR [rax+40]
+	call	QWORD PTR __imp_UpdateWindow
+	npad	1
+$LN13@applicatio:
+
+; 148  :             MSG pending{};
+
+	lea	rax, QWORD PTR pending$5[rsp]
+	mov	rdi, rax
+	xor	eax, eax
+	mov	ecx, 48					; 00000030H
+	rep stosb
+
+; 149  :             if (!R305Metadata.frozen || R305Metadata.in_dispatch || R305Metadata.paint_depth || (!R305Rebuild && R305Metadata.gui && (GetCapture() || PeekMessageW(&pending,nullptr,0,0,PM_NOREMOVE)))) reject(ERROR_BUSY);
+
+	cmp	DWORD PTR R305Metadata+404, 0
+	je	SHORT $LN15@applicatio
+	cmp	DWORD PTR R305Metadata+420, 0
+	jne	SHORT $LN15@applicatio
+	cmp	DWORD PTR R305Metadata+424, 0
+	jne	SHORT $LN15@applicatio
+	cmp	DWORD PTR R305Rebuild, 0
+	jne	SHORT $LN14@applicatio
+	cmp	DWORD PTR R305Metadata+620, 0
+	je	SHORT $LN14@applicatio
+	call	QWORD PTR __imp_GetCapture
+	test	rax, rax
+	jne	SHORT $LN16@applicatio
+	mov	DWORD PTR [rsp+32], 0
+	xor	r9d, r9d
+	xor	r8d, r8d
+	xor	edx, edx
+	lea	rcx, QWORD PTR pending$5[rsp]
+	call	QWORD PTR __imp_PeekMessageW
+	test	eax, eax
+	je	SHORT $LN14@applicatio
+$LN16@applicatio:
+$LN15@applicatio:
+	mov	ecx, 170				; 000000aaH
+	call	?reject@?A0x35a61139@r305@@YAXK@Z	; r305::`anonymous namespace'::reject
+	npad	1
+$LN14@applicatio:
+
+; 150  :             if(R305Metadata.gui)describe_window();
+
+	cmp	DWORD PTR R305Metadata+620, 0
+	je	SHORT $LN17@applicatio
+	call	?describe_window@?A0x35a61139@r305@@YAXXZ ; r305::`anonymous namespace'::describe_window
+	npad	1
+$LN17@applicatio:
+
+; 151  :             auto& m=R305Metadata;m.ref_count=0;if(m.gui){m.refs[0]={data_address+offsetof(Work,window),1};m.ref_count=1;}
+
+	lea	rax, OFFSET FLAT:R305Metadata
+	mov	QWORD PTR m$1[rsp], rax
+	mov	rax, QWORD PTR m$1[rsp]
+	mov	DWORD PTR [rax+400], 0
+	mov	rax, QWORD PTR m$1[rsp]
+	cmp	DWORD PTR [rax+620], 0
+	je	SHORT $LN18@applicatio
+	mov	rax, 1859720839208			; 000001b100000028H
+	mov	QWORD PTR $T3[rsp], rax
+	mov	QWORD PTR $T3[rsp+8], 1
+	mov	eax, 16
+	imul	rax, rax, 0
+	mov	rcx, QWORD PTR m$1[rsp]
+	lea	rdx, QWORD PTR $T3[rsp]
+	lea	rdi, QWORD PTR [rcx+rax+272]
+	mov	rsi, rdx
+	mov	ecx, 16
+	rep movsb
+	mov	rax, QWORD PTR m$1[rsp]
+	mov	DWORD PTR [rax+400], 1
+$LN18@applicatio:
+
+; 152  :             work->receipt=outer()^work->seed;
+
+	call	?outer@?A0x35a61139@r305@@YA_KXZ	; r305::`anonymous namespace'::outer
+	mov	QWORD PTR tv185[rsp], rax
+	mov	rax, QWORD PTR ?work@?A0x35a61139@r305@@3QEAUWork@2@EA
+	mov	rax, QWORD PTR [rax]
+	mov	QWORD PTR tv183[rsp], rax
+	mov	rax, QWORD PTR tv183[rsp]
+	mov	rcx, QWORD PTR tv185[rsp]
+	xor	rcx, rax
+	mov	rax, rcx
+	mov	QWORD PTR tv188[rsp], rax
+	mov	rax, QWORD PTR ?work@?A0x35a61139@r305@@3QEAUWork@2@EA
+	mov	rcx, QWORD PTR tv188[rsp]
+	mov	QWORD PTR [rax+16], rcx
+
+; 153  :             ContinuationTrap(); // reached only after several actual C++ returns
+
+	call	ContinuationTrap
+
+; 154  :             m.checkpoint_requested=0; m.frozen=m.freeze_after_resume;
+
+	mov	rax, QWORD PTR m$1[rsp]
+	mov	DWORD PTR [rax+408], 0
+	mov	rax, QWORD PTR m$1[rsp]
+	mov	rcx, QWORD PTR m$1[rsp]
+	mov	ecx, DWORD PTR [rcx+428]
+	mov	DWORD PTR [rax+404], ecx
+
+; 155  :             observe("application_continued"); if(m.gui)InvalidateRect(work->window,nullptr,FALSE);
+
+	xor	edx, edx
+	lea	rcx, OFFSET FLAT:$SG165403
+	call	?observe@?A0x35a61139@r305@@YAXPEBDI@Z	; r305::`anonymous namespace'::observe
+	npad	1
+	mov	rax, QWORD PTR m$1[rsp]
+	cmp	DWORD PTR [rax+620], 0
+	je	SHORT $LN19@applicatio
+	xor	r8d, r8d
+	xor	edx, edx
+	mov	rax, QWORD PTR ?work@?A0x35a61139@r305@@3QEAUWork@2@EA
+	mov	rcx, QWORD PTR [rax+40]
+	call	QWORD PTR __imp_InvalidateRect
+	npad	1
+$LN19@applicatio:
+
+; 156  :             if(!m.gui) {work->text[work->length++]=L'!';work->text[work->length]=0;++work->counter;ChangedTrap();Sleep(INFINITE);}
+
+	mov	rax, QWORD PTR m$1[rsp]
+	cmp	DWORD PTR [rax+620], 0
+	jne	SHORT $LN20@applicatio
+	mov	rax, QWORD PTR ?work@?A0x35a61139@r305@@3QEAUWork@2@EA
+	mov	eax, DWORD PTR [rax+304]
+	mov	ecx, 33					; 00000021H
+	mov	rdx, QWORD PTR ?work@?A0x35a61139@r305@@3QEAUWork@2@EA
+	mov	WORD PTR [rdx+rax*2+48], cx
+	mov	rax, QWORD PTR ?work@?A0x35a61139@r305@@3QEAUWork@2@EA
+	mov	eax, DWORD PTR [rax+304]
+	inc	eax
+	mov	rcx, QWORD PTR ?work@?A0x35a61139@r305@@3QEAUWork@2@EA
+	mov	DWORD PTR [rcx+304], eax
+	mov	rax, QWORD PTR ?work@?A0x35a61139@r305@@3QEAUWork@2@EA
+	mov	eax, DWORD PTR [rax+304]
+	xor	ecx, ecx
+	mov	rdx, QWORD PTR ?work@?A0x35a61139@r305@@3QEAUWork@2@EA
+	mov	WORD PTR [rdx+rax*2+48], cx
+	mov	rax, QWORD PTR ?work@?A0x35a61139@r305@@3QEAUWork@2@EA
+	mov	rax, QWORD PTR [rax+8]
+	inc	rax
+	mov	rcx, QWORD PTR ?work@?A0x35a61139@r305@@3QEAUWork@2@EA
+	mov	QWORD PTR [rcx+8], rax
+	call	ChangedTrap
+	mov	ecx, -1					; ffffffffH
+	call	QWORD PTR __imp_Sleep
+	npad	1
+$LN20@applicatio:
+$LN12@applicatio:
+
+; 157  :         }
+; 158  :         if (!R305Metadata.frozen) { ++work->counter; InvalidateRect(work->window,nullptr,FALSE); }
+
+	cmp	DWORD PTR R305Metadata+404, 0
+	jne	SHORT $LN21@applicatio
+	mov	rax, QWORD PTR ?work@?A0x35a61139@r305@@3QEAUWork@2@EA
+	mov	rax, QWORD PTR [rax+8]
+	inc	rax
+	mov	rcx, QWORD PTR ?work@?A0x35a61139@r305@@3QEAUWork@2@EA
+	mov	QWORD PTR [rcx+8], rax
+	xor	r8d, r8d
+	xor	edx, edx
+	mov	rax, QWORD PTR ?work@?A0x35a61139@r305@@3QEAUWork@2@EA
+	mov	rcx, QWORD PTR [rax+40]
+	call	QWORD PTR __imp_InvalidateRect
+	npad	1
+$LN21@applicatio:
+
+; 159  :         MsgWaitForMultipleObjectsEx(0,nullptr,50,QS_ALLINPUT,MWMO_INPUTAVAILABLE);
+
+	mov	DWORD PTR [rsp+32], 4
+	mov	r9d, 7423				; 00001cffH
+	mov	r8d, 50					; 00000032H
+	xor	edx, edx
+	xor	ecx, ecx
+	call	QWORD PTR __imp_MsgWaitForMultipleObjectsEx
+	npad	1
+
+; 160  :     }
+
+	jmp	$LN2@applicatio
+$LN22@applicatio:
+
+; 161  : }
+
+	add	rsp, 216				; 000000d8H
+	pop	rdi
+	pop	rsi
+	ret	0
+?application@?A0x35a61139@r305@@YAXXZ ENDP		; r305::`anonymous namespace'::application
+?outer@?A0x35a61139@r305@@YA_KXZ PROC			; r305::`anonymous namespace'::outer, COMDAT
+
+; 125  : __declspec(noinline) std::uint64_t outer() {
+
+	push	rdi
+	sub	rsp, 80					; 00000050H
+	mov	rax, QWORD PTR __security_cookie
+	xor	rax, rsp
+	mov	QWORD PTR __$ArrayPad$[rsp], rax
+
+; 126  :     volatile std::uint64_t values[4]{};
+
+	lea	rax, QWORD PTR values$[rsp]
+	mov	rdi, rax
+	xor	eax, eax
+	mov	ecx, 32					; 00000020H
+	rep stosb
+
+; 127  :     if(!R305Rebuild) {values[0]=work->seed^0xBADA55117733ULL;values[1]=21;values[2]=22;values[3]=23;OuterWorkTrap();}
+
+	cmp	DWORD PTR R305Rebuild, 0
+	jne	SHORT $LN2@outer
+	mov	rax, QWORD PTR ?work@?A0x35a61139@r305@@3QEAUWork@2@EA
+	mov	rcx, 205446892844851			; 0000bada55117733H
+	mov	rax, QWORD PTR [rax]
+	xor	rax, rcx
+	mov	ecx, 8
+	imul	rcx, rcx, 0
+	mov	QWORD PTR values$[rsp+rcx], rax
+	mov	eax, 8
+	imul	rax, rax, 1
+	mov	QWORD PTR values$[rsp+rax], 21
+	mov	eax, 8
+	imul	rax, rax, 2
+	mov	QWORD PTR values$[rsp+rax], 22
+	mov	eax, 8
+	imul	rax, rax, 3
+	mov	QWORD PTR values$[rsp+rax], 23
+	call	OuterWorkTrap
+	npad	1
+$LN2@outer:
+
+; 128  :     R305Metadata.local[2]=reinterpret_cast<std::uint64_t>(&values[0]);
+
+	mov	eax, 8
+	imul	rax, rax, 0
+	lea	rax, QWORD PTR values$[rsp+rax]
+	mov	ecx, 8
+	imul	rcx, rcx, 2
+	lea	rdx, OFFSET FLAT:R305Metadata+224
+	mov	QWORD PTR [rdx+rcx], rax
+
+; 129  :     const auto result=middle(); work->returned|=4; return result^values[0];
+
+	call	?middle@?A0x35a61139@r305@@YA_KXZ	; r305::`anonymous namespace'::middle
+	mov	QWORD PTR result$[rsp], rax
+	mov	rax, QWORD PTR ?work@?A0x35a61139@r305@@3QEAUWork@2@EA
+	mov	rax, QWORD PTR [rax+24]
+	or	rax, 4
+	mov	rcx, QWORD PTR ?work@?A0x35a61139@r305@@3QEAUWork@2@EA
+	mov	QWORD PTR [rcx+24], rax
+	mov	eax, 8
+	imul	rax, rax, 0
+	mov	rax, QWORD PTR values$[rsp+rax]
+	mov	rcx, QWORD PTR result$[rsp]
+	xor	rcx, rax
+	mov	rax, rcx
+
+; 130  : }
+
+	mov	rcx, QWORD PTR __$ArrayPad$[rsp]
+	xor	rcx, rsp
+	call	__security_check_cookie
+	add	rsp, 80					; 00000050H
+	pop	rdi
+	ret	0
+?outer@?A0x35a61139@r305@@YA_KXZ ENDP			; r305::`anonymous namespace'::outer
+?middle@?A0x35a61139@r305@@YA_KXZ PROC			; r305::`anonymous namespace'::middle, COMDAT
+
+; 114  : __declspec(noinline) std::uint64_t middle() {
+
+	push	rdi
+	sub	rsp, 96					; 00000060H
+	mov	rax, QWORD PTR __security_cookie
+	xor	rax, rsp
+	mov	QWORD PTR __$ArrayPad$[rsp], rax
+
+; 115  :     volatile std::uint64_t values[4]{};
+
+	lea	rax, QWORD PTR values$[rsp]
+	mov	rdi, rax
+	xor	eax, eax
+	mov	ecx, 32					; 00000020H
+	rep stosb
+
+; 116  :     volatile HWND window=nullptr;
+
+	mov	QWORD PTR window$[rsp], 0
+
+; 117  :     if(!R305Rebuild) {
+
+	cmp	DWORD PTR R305Rebuild, 0
+	jne	SHORT $LN2@middle
+
+; 118  :         values[0]=std::rotl(work->seed,19)+work->counter;values[1]=11;values[2]=12;values[3]=13;
+
+	mov	edx, 19
+	mov	rax, QWORD PTR ?work@?A0x35a61139@r305@@3QEAUWork@2@EA
+	mov	rcx, QWORD PTR [rax]
+	call	??$rotl@_K@std@@YA_K_KH@Z		; std::rotl<unsigned __int64>
+	mov	rcx, QWORD PTR ?work@?A0x35a61139@r305@@3QEAUWork@2@EA
+	add	rax, QWORD PTR [rcx+8]
+	mov	ecx, 8
+	imul	rcx, rcx, 0
+	mov	QWORD PTR values$[rsp+rcx], rax
+	mov	eax, 8
+	imul	rax, rax, 1
+	mov	QWORD PTR values$[rsp+rax], 11
+	mov	eax, 8
+	imul	rax, rax, 2
+	mov	QWORD PTR values$[rsp+rax], 12
+	mov	eax, 8
+	imul	rax, rax, 3
+	mov	QWORD PTR values$[rsp+rax], 13
+
+; 119  :         window=work->window;MiddleWorkTrap();
+
+	mov	rax, QWORD PTR ?work@?A0x35a61139@r305@@3QEAUWork@2@EA
+	mov	rax, QWORD PTR [rax+40]
+	mov	QWORD PTR window$[rsp], rax
+	call	MiddleWorkTrap
+	npad	1
+$LN2@middle:
+
+; 120  :     }
+; 121  :     if(R305Metadata.gui)reference(&window); R305Metadata.local[1]=reinterpret_cast<std::uint64_t>(&values[0]);
+
+	cmp	DWORD PTR R305Metadata+620, 0
+	je	SHORT $LN3@middle
+	lea	rcx, QWORD PTR window$[rsp]
+	call	?reference@?A0x35a61139@r305@@YAXPECREAUHWND__@@@Z ; r305::`anonymous namespace'::reference
+	npad	1
+$LN3@middle:
+	mov	eax, 8
+	imul	rax, rax, 0
+	lea	rax, QWORD PTR values$[rsp+rax]
+	mov	ecx, 8
+	imul	rcx, rcx, 1
+	lea	rdx, OFFSET FLAT:R305Metadata+224
+	mov	QWORD PTR [rdx+rcx], rax
+
+; 122  :     const auto result=leaf(); if (window != work->window) reject(ERROR_INVALID_WINDOW_HANDLE);
+
+	call	?leaf@?A0x35a61139@r305@@YA_KXZ		; r305::`anonymous namespace'::leaf
+	mov	QWORD PTR result$[rsp], rax
+	mov	rax, QWORD PTR window$[rsp]
+	mov	rcx, QWORD PTR ?work@?A0x35a61139@r305@@3QEAUWork@2@EA
+	cmp	rax, QWORD PTR [rcx+40]
+	je	SHORT $LN4@middle
+	mov	ecx, 1400				; 00000578H
+	call	?reject@?A0x35a61139@r305@@YAXK@Z	; r305::`anonymous namespace'::reject
+	npad	1
+$LN4@middle:
+
+; 123  :     work->returned|=2; return std::rotl(result+values[0],13);
+
+	mov	rax, QWORD PTR ?work@?A0x35a61139@r305@@3QEAUWork@2@EA
+	mov	rax, QWORD PTR [rax+24]
+	or	rax, 2
+	mov	rcx, QWORD PTR ?work@?A0x35a61139@r305@@3QEAUWork@2@EA
+	mov	QWORD PTR [rcx+24], rax
+	mov	eax, 8
+	imul	rax, rax, 0
+	mov	rax, QWORD PTR values$[rsp+rax]
+	mov	rcx, QWORD PTR result$[rsp]
+	add	rcx, rax
+	mov	rax, rcx
+	mov	edx, 13
+	mov	rcx, rax
+	call	??$rotl@_K@std@@YA_K_KH@Z		; std::rotl<unsigned __int64>
+$LN5@middle:
+
+; 124  : }
+
+	mov	rcx, QWORD PTR __$ArrayPad$[rsp]
+	xor	rcx, rsp
+	call	__security_check_cookie
+	add	rsp, 96					; 00000060H
+	pop	rdi
+	ret	0
+?middle@?A0x35a61139@r305@@YA_KXZ ENDP			; r305::`anonymous namespace'::middle
+?leaf@?A0x35a61139@r305@@YA_KXZ PROC			; r305::`anonymous namespace'::leaf, COMDAT
+
+; 101  : __declspec(noinline) std::uint64_t leaf() {
+
+	push	rdi
+	sub	rsp, 96					; 00000060H
+	mov	rax, QWORD PTR __security_cookie
+	xor	rax, rsp
+	mov	QWORD PTR __$ArrayPad$[rsp], rax
+
+; 102  :     volatile std::uint64_t values[4]{};
+
+	lea	rax, QWORD PTR values$[rsp]
+	mov	rdi, rax
+	xor	eax, eax
+	mov	ecx, 32					; 00000020H
+	rep stosb
+
+; 103  :     volatile HWND window=nullptr;
+
+	mov	QWORD PTR window$[rsp], 0
+
+; 104  :     if(!R305Rebuild) {
+
+	cmp	DWORD PTR R305Rebuild, 0
+	jne	$LN2@leaf
+
+; 105  :         values[0]=work->seed^work->counter;values[1]=work->seed+0x11731;values[2]=0x1234;values[3]=work->counter+17;
+
+	mov	rax, QWORD PTR ?work@?A0x35a61139@r305@@3QEAUWork@2@EA
+	mov	rcx, QWORD PTR ?work@?A0x35a61139@r305@@3QEAUWork@2@EA
+	mov	rcx, QWORD PTR [rcx+8]
+	mov	rax, QWORD PTR [rax]
+	xor	rax, rcx
+	mov	ecx, 8
+	imul	rcx, rcx, 0
+	mov	QWORD PTR values$[rsp+rcx], rax
+	mov	rax, QWORD PTR ?work@?A0x35a61139@r305@@3QEAUWork@2@EA
+	mov	rax, QWORD PTR [rax]
+	add	rax, 71473				; 00011731H
+	mov	ecx, 8
+	imul	rcx, rcx, 1
+	mov	QWORD PTR values$[rsp+rcx], rax
+	mov	eax, 8
+	imul	rax, rax, 2
+	mov	QWORD PTR values$[rsp+rax], 4660	; 00001234H
+	mov	rax, QWORD PTR ?work@?A0x35a61139@r305@@3QEAUWork@2@EA
+	mov	rax, QWORD PTR [rax+8]
+	add	rax, 17
+	mov	ecx, 8
+	imul	rcx, rcx, 3
+	mov	QWORD PTR values$[rsp+rcx], rax
+
+; 106  :         window=work->window;LeafWorkTrap();
+
+	mov	rax, QWORD PTR ?work@?A0x35a61139@r305@@3QEAUWork@2@EA
+	mov	rax, QWORD PTR [rax+40]
+	mov	QWORD PTR window$[rsp], rax
+	call	LeafWorkTrap
+	npad	1
+$LN2@leaf:
+
+; 107  :     }
+; 108  :     if(R305Metadata.gui)reference(&window);
+
+	cmp	DWORD PTR R305Metadata+620, 0
+	je	SHORT $LN3@leaf
+	lea	rcx, QWORD PTR window$[rsp]
+	call	?reference@?A0x35a61139@r305@@YAXPECREAUHWND__@@@Z ; r305::`anonymous namespace'::reference
+	npad	1
+$LN3@leaf:
+
+; 109  :     R305Metadata.local[0]=reinterpret_cast<std::uint64_t>(&values[0]);
+
+	mov	eax, 8
+	imul	rax, rax, 0
+	lea	rax, QWORD PTR values$[rsp+rax]
+	mov	ecx, 8
+	imul	rcx, rcx, 0
+	lea	rdx, OFFSET FLAT:R305Metadata+224
+	mov	QWORD PTR [rdx+rcx], rax
+
+; 110  :     const auto reg=R305Metadata.wrong_chain ? AlternateCheckpointTrap() : CheckpointTrap();
+
+	cmp	DWORD PTR R305Metadata+624, 0
+	je	SHORT $LN7@leaf
+	call	AlternateCheckpointTrap
+	mov	QWORD PTR tv94[rsp], rax
+	jmp	SHORT $LN8@leaf
+$LN7@leaf:
+	call	CheckpointTrap
+	mov	QWORD PTR tv94[rsp], rax
+$LN8@leaf:
+	mov	rax, QWORD PTR tv94[rsp]
+	mov	QWORD PTR reg$[rsp], rax
+
+; 111  :     if (R305Metadata.gui && (window != work->window || !IsWindow(window) || GetWindowLongPtrW(window,GWLP_USERDATA) != reinterpret_cast<LONG_PTR>(work))) reject(ERROR_INVALID_WINDOW_HANDLE);
+
+	cmp	DWORD PTR R305Metadata+620, 0
+	je	SHORT $LN4@leaf
+	mov	rax, QWORD PTR window$[rsp]
+	mov	rcx, QWORD PTR ?work@?A0x35a61139@r305@@3QEAUWork@2@EA
+	cmp	rax, QWORD PTR [rcx+40]
+	jne	SHORT $LN5@leaf
+	mov	rcx, QWORD PTR window$[rsp]
+	call	QWORD PTR __imp_IsWindow
+	test	eax, eax
+	je	SHORT $LN5@leaf
+	mov	edx, -21
+	mov	rcx, QWORD PTR window$[rsp]
+	call	QWORD PTR __imp_GetWindowLongPtrW
+	cmp	rax, QWORD PTR ?work@?A0x35a61139@r305@@3QEAUWork@2@EA
+	je	SHORT $LN4@leaf
+$LN5@leaf:
+	mov	ecx, 1400				; 00000578H
+	call	?reject@?A0x35a61139@r305@@YAXK@Z	; r305::`anonymous namespace'::reject
+	npad	1
+$LN4@leaf:
+
+; 112  :     work->returned|=1; return reg^values[0];
+
+	mov	rax, QWORD PTR ?work@?A0x35a61139@r305@@3QEAUWork@2@EA
+	mov	rax, QWORD PTR [rax+24]
+	or	rax, 1
+	mov	rcx, QWORD PTR ?work@?A0x35a61139@r305@@3QEAUWork@2@EA
+	mov	QWORD PTR [rcx+24], rax
+	mov	eax, 8
+	imul	rax, rax, 0
+	mov	rax, QWORD PTR values$[rsp+rax]
+	mov	rcx, QWORD PTR reg$[rsp]
+	xor	rcx, rax
+	mov	rax, rcx
+$LN6@leaf:
+
+; 113  : }
+
+	mov	rcx, QWORD PTR __$ArrayPad$[rsp]
+	xor	rcx, rsp
+	call	__security_check_cookie
+	add	rsp, 96					; 00000060H
+	pop	rdi
+	ret	0
+?leaf@?A0x35a61139@r305@@YA_KXZ ENDP			; r305::`anonymous namespace'::leaf
