@@ -1,0 +1,577 @@
+name: Microsoft-Windows-Kernel-Process
+guid: 22fb2cd6-0e7b-422b-a0c7-2fad1fd0e716
+helpLink: 
+resourceFileName: %SystemRoot%\system32\Microsoft-Windows-System-Events.dll
+messageFileName: %SystemRoot%\system32\Microsoft-Windows-System-Events.dll
+message: Microsoft-Windows-Kernel-Process
+channels:
+  channel:
+    name: Microsoft-Windows-Kernel-Process/Analytic
+    id: 16
+    flags: 0
+    message: 
+levels:
+  level:
+    name: win:Informational
+    value: 4
+    message: Information
+opcodes:
+  opcode:
+    name: win:Info
+    value: 0
+      task: 0
+      opcode: 0
+    message: Info
+  opcode:
+    name: win:Start
+    value: 65536
+      task: 0
+      opcode: 1
+    message: Start
+  opcode:
+    name: win:Stop
+    value: 131072
+      task: 0
+      opcode: 2
+    message: Stop
+tasks:
+  task:
+    name: ProcessStart
+    value: 1
+    eventGUID: 00000000-0000-0000-0000-000000000000
+    message: 
+  task:
+    name: ProcessStop
+    value: 2
+    eventGUID: 00000000-0000-0000-0000-000000000000
+    message: 
+  task:
+    name: ThreadStart
+    value: 3
+    eventGUID: 00000000-0000-0000-0000-000000000000
+    message: 
+  task:
+    name: ThreadStop
+    value: 4
+    eventGUID: 00000000-0000-0000-0000-000000000000
+    message: 
+  task:
+    name: ImageLoad
+    value: 5
+    eventGUID: 00000000-0000-0000-0000-000000000000
+    message: 
+  task:
+    name: ImageUnload
+    value: 6
+    eventGUID: 00000000-0000-0000-0000-000000000000
+    message: 
+  task:
+    name: CpuBasePriorityChange
+    value: 7
+    eventGUID: 00000000-0000-0000-0000-000000000000
+    message: 
+  task:
+    name: CpuPriorityChange
+    value: 8
+    eventGUID: 00000000-0000-0000-0000-000000000000
+    message: 
+  task:
+    name: PagePriorityChange
+    value: 9
+    eventGUID: 00000000-0000-0000-0000-000000000000
+    message: 
+  task:
+    name: IoPriorityChange
+    value: 10
+    eventGUID: 00000000-0000-0000-0000-000000000000
+    message: 
+  task:
+    name: ProcessFreeze
+    value: 11
+    eventGUID: 00000000-0000-0000-0000-000000000000
+    message: 
+  task:
+    name: JobStart
+    value: 13
+    eventGUID: 00000000-0000-0000-0000-000000000000
+    message: 
+  task:
+    name: JobTerminate
+    value: 14
+    eventGUID: 00000000-0000-0000-0000-000000000000
+    message: 
+  task:
+    name: ProcessRundown
+    value: 15
+    eventGUID: 00000000-0000-0000-0000-000000000000
+    message: 
+  task:
+    name: PsDiskIoAttribution
+    value: 16
+    eventGUID: 00000000-0000-0000-0000-000000000000
+    message: 
+  task:
+    name: PsIoRateControl
+    value: 17
+    eventGUID: 00000000-0000-0000-0000-000000000000
+    message: 
+  task:
+    name: ThreadWorkOnBehalfUpdate
+    value: 18
+    eventGUID: 00000000-0000-0000-0000-000000000000
+    message: 
+  task:
+    name: JobServerSiloStateChange
+    value: 19
+    eventGUID: 00000000-0000-0000-0000-000000000000
+    message: 
+  task:
+    name: ProcessInPrivateSet
+    value: 20
+    eventGUID: 00000000-0000-0000-0000-000000000000
+    message: 
+  task:
+    name: ServerSiloCreateCallback
+    value: 21
+    eventGUID: 00000000-0000-0000-0000-000000000000
+    message: 
+  task:
+    name: ServerSiloTerminateCallback
+    value: 22
+    eventGUID: 00000000-0000-0000-0000-000000000000
+    message: 
+keywords:
+  keyword:
+    name: WINEVENT_KEYWORD_PROCESS
+    mask: 10
+    message: 
+  keyword:
+    name: WINEVENT_KEYWORD_THREAD
+    mask: 20
+    message: 
+  keyword:
+    name: WINEVENT_KEYWORD_IMAGE
+    mask: 40
+    message: 
+  keyword:
+    name: WINEVENT_KEYWORD_CPU_PRIORITY
+    mask: 80
+    message: 
+  keyword:
+    name: WINEVENT_KEYWORD_OTHER_PRIORITY
+    mask: 100
+    message: 
+  keyword:
+    name: WINEVENT_KEYWORD_PROCESS_FREEZE
+    mask: 200
+    message: 
+  keyword:
+    name: WINEVENT_KEYWORD_JOB
+    mask: 400
+    message: 
+  keyword:
+    name: WINEVENT_KEYWORD_ENABLE_PROCESS_TRACING_CALLBACKS
+    mask: 800
+    message: 
+  keyword:
+    name: WINEVENT_KEYWORD_JOB_IO
+    mask: 1000
+    message: 
+  keyword:
+    name: WINEVENT_KEYWORD_WORK_ON_BEHALF
+    mask: 2000
+    message: 
+  keyword:
+    name: WINEVENT_KEYWORD_JOB_SILO
+    mask: 4000
+    message: 
+events:
+  event:
+    value: 1
+    version: 0
+    opcode: 1
+    channel: 16
+    level: 4
+    task: 1
+    keywords: 0x8000000000000010
+    message: Process %1 started at time %2 by parent %3 running in session %4 with name %5.
+  event:
+    value: 1
+    version: 1
+    opcode: 1
+    channel: 16
+    level: 4
+    task: 1
+    keywords: 0x8000000000000010
+    message: Process %1 started at time %2 by parent %3 running in session %4 with name %6.
+  event:
+    value: 1
+    version: 2
+    opcode: 1
+    channel: 16
+    level: 4
+    task: 1
+    keywords: 0x8000000000000010
+    message: Process %1 started at time %2 by parent %3 running in session %4 with name %6.
+  event:
+    value: 1
+    version: 3
+    opcode: 1
+    channel: 16
+    level: 4
+    task: 1
+    keywords: 0x8000000000000010
+    message: Process %1 started at time %3 by parent %4 running in session %6 with name %11.
+  event:
+    value: 1
+    version: 4
+    opcode: 1
+    channel: 16
+    level: 4
+    task: 1
+    keywords: 0x8000000000000010
+    message: Process %1 started at time %3 by parent %4 running in session %6 with name %11.
+Enabled security mitigations: %16.
+  event:
+    value: 2
+    version: 0
+    opcode: 2
+    channel: 16
+    level: 4
+    task: 2
+    keywords: 0x8000000000000010
+    message: Process %1 (which started at time %3) stopped at time %4 with exit code %5.
+  event:
+    value: 2
+    version: 1
+    opcode: 2
+    channel: 16
+    level: 4
+    task: 2
+    keywords: 0x8000000000000010
+    message: Process %1 (which started at time %2) stopped at time %3 with exit code %4.
+  event:
+    value: 2
+    version: 2
+    opcode: 2
+    channel: 16
+    level: 4
+    task: 2
+    keywords: 0x8000000000000010
+    message: Process %1 (which started at time %3) stopped at time %4 with exit code %5.
+  event:
+    value: 3
+    version: 0
+    opcode: 1
+    channel: 16
+    level: 4
+    task: 3
+    keywords: 0x8000000000000020
+    message: Thread %2 (in Process %1) started.
+  event:
+    value: 3
+    version: 1
+    opcode: 1
+    channel: 16
+    level: 4
+    task: 3
+    keywords: 0x8000000000000020
+    message: Thread %2 (in Process %1) started.
+  event:
+    value: 4
+    version: 0
+    opcode: 2
+    channel: 16
+    level: 4
+    task: 4
+    keywords: 0x8000000000000020
+    message: Thread %2 (in Process %1) stopped.
+  event:
+    value: 4
+    version: 1
+    opcode: 2
+    channel: 16
+    level: 4
+    task: 4
+    keywords: 0x8000000000000020
+    message: Thread %2 (in Process %1) stopped.
+  event:
+    value: 5
+    version: 0
+    opcode: 0
+    channel: 16
+    level: 4
+    task: 5
+    keywords: 0x8000000000000040
+    message: Process %3 had an image loaded with name %7.
+  event:
+    value: 6
+    version: 0
+    opcode: 0
+    channel: 16
+    level: 4
+    task: 6
+    keywords: 0x8000000000000040
+    message: Process %3 had an image unloaded with name %7.
+  event:
+    value: 7
+    version: 0
+    opcode: 0
+    channel: 16
+    level: 4
+    task: 7
+    keywords: 0x8000000000000080
+    message: Base CPU priority of thread %2 in process %1 was changed from %3 to %4.
+  event:
+    value: 8
+    version: 0
+    opcode: 0
+    channel: 16
+    level: 4
+    task: 8
+    keywords: 0x8000000000000080
+    message: CPU priority of thread %2 in process %1 was changed from %3 to %4.
+  event:
+    value: 9
+    version: 0
+    opcode: 0
+    channel: 16
+    level: 4
+    task: 9
+    keywords: 0x8000000000000100
+    message: Page priority of thread %2 in process %1 was changed from %3 to %4.
+  event:
+    value: 10
+    version: 0
+    opcode: 0
+    channel: 16
+    level: 4
+    task: 10
+    keywords: 0x8000000000000100
+    message: I/O priority of thread %2 in process %1 was changed from %3 to %4.
+  event:
+    value: 11
+    version: 0
+    opcode: 1
+    channel: 16
+    level: 4
+    task: 11
+    keywords: 0x8000000000000200
+    message: Execution of the process %1 has been suspended.
+  event:
+    value: 11
+    version: 1
+    opcode: 1
+    channel: 16
+    level: 4
+    task: 11
+    keywords: 0x8000000000000200
+    message: Execution of the process %1 has been suspended.
+  event:
+    value: 12
+    version: 0
+    opcode: 2
+    channel: 16
+    level: 4
+    task: 11
+    keywords: 0x8000000000000200
+    message: Execution of the process %1 has been resumed.
+  event:
+    value: 12
+    version: 1
+    opcode: 2
+    channel: 16
+    level: 4
+    task: 11
+    keywords: 0x8000000000000200
+    message: Execution of the process %1 has been resumed.
+  event:
+    value: 13
+    version: 0
+    opcode: 1
+    channel: 16
+    level: 4
+    task: 13
+    keywords: 0x8000000000000400
+    message: Job %1 started with status code %2.
+  event:
+    value: 14
+    version: 0
+    opcode: 2
+    channel: 16
+    level: 4
+    task: 14
+    keywords: 0x8000000000000400
+    message: Job %1 terminated with status code %2.
+  event:
+    value: 15
+    version: 0
+    opcode: 0
+    channel: 16
+    level: 4
+    task: 15
+    keywords: 0x8000000000000010
+    message: Enumerated process %1 had started at time %2 by parent %3 running in session %4 with name %6.
+  event:
+    value: 15
+    version: 1
+    opcode: 0
+    channel: 16
+    level: 4
+    task: 15
+    keywords: 0x8000000000000010
+    message: Enumerated process %1 had started at time %3 by parent %4 running in session %6 with name %11.
+  event:
+    value: 15
+    version: 2
+    opcode: 0
+    channel: 16
+    level: 4
+    task: 15
+    keywords: 0x8000000000000010
+    message: Enumerated process %1 had started at time %3 by parent %4 running in session %6 with name %11.
+Enabled security mitigations: %16.
+  event:
+    value: 16
+    version: 0
+    opcode: 0
+    channel: 0
+    level: 4
+    task: 0
+    keywords: 0x800
+    message: 
+  event:
+    value: 17
+    version: 0
+    opcode: 1
+    channel: 16
+    level: 4
+    task: 16
+    keywords: 0x8000000000001000
+    message: 
+  event:
+    value: 18
+    version: 0
+    opcode: 2
+    channel: 16
+    level: 4
+    task: 16
+    keywords: 0x8000000000001000
+    message: 
+  event:
+    value: 19
+    version: 0
+    opcode: 1
+    channel: 16
+    level: 4
+    task: 17
+    keywords: 0x8000000000001000
+    message: 
+  event:
+    value: 19
+    version: 1
+    opcode: 1
+    channel: 16
+    level: 4
+    task: 17
+    keywords: 0x8000000000001000
+    message: 
+  event:
+    value: 19
+    version: 2
+    opcode: 1
+    channel: 16
+    level: 4
+    task: 17
+    keywords: 0x8000000000001000
+    message: 
+  event:
+    value: 20
+    version: 0
+    opcode: 2
+    channel: 16
+    level: 4
+    task: 17
+    keywords: 0x8000000000001000
+    message: 
+  event:
+    value: 20
+    version: 1
+    opcode: 2
+    channel: 16
+    level: 4
+    task: 17
+    keywords: 0x8000000000001000
+    message: 
+  event:
+    value: 20
+    version: 2
+    opcode: 2
+    channel: 16
+    level: 4
+    task: 17
+    keywords: 0x8000000000001000
+    message: 
+  event:
+    value: 21
+    version: 0
+    opcode: 0
+    channel: 16
+    level: 4
+    task: 18
+    keywords: 0x8000000000002000
+    message: 
+  event:
+    value: 22
+    version: 0
+    opcode: 0
+    channel: 16
+    level: 4
+    task: 19
+    keywords: 0x8000000000004000
+    message: 
+  event:
+    value: 23
+    version: 0
+    opcode: 1
+    channel: 16
+    level: 4
+    task: 21
+    keywords: 0x8000000000004000
+    message: 
+  event:
+    value: 24
+    version: 0
+    opcode: 2
+    channel: 16
+    level: 4
+    task: 21
+    keywords: 0x8000000000004000
+    message: 
+  event:
+    value: 25
+    version: 0
+    opcode: 1
+    channel: 16
+    level: 4
+    task: 22
+    keywords: 0x8000000000004000
+    message: 
+  event:
+    value: 26
+    version: 0
+    opcode: 2
+    channel: 16
+    level: 4
+    task: 22
+    keywords: 0x8000000000004000
+    message: 
+  event:
+    value: 27
+    version: 0
+    opcode: 0
+    channel: 16
+    level: 4
+    task: 20
+    keywords: 0x8000000000000010
+    message: 

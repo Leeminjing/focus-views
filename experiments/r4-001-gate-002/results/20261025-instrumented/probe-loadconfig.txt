@@ -1,0 +1,320 @@
+Microsoft (R) COFF/PE Dumper Version 14.44.35229.0
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+
+Dump of file D:\focus-views\experiments\r4-001-gate-002\out\probe.exe
+
+File Type: EXECUTABLE IMAGE
+
+  Section contains the following load config:
+
+            00000140 size
+                   0 time date stamp
+                0.00 Version
+                   0 GlobalFlags Clear
+                   0 GlobalFlags Set
+                   0 Critical Section Default Timeout
+                   0 Decommit Free Block Threshold
+                   0 Decommit Total Free Threshold
+    0000000000000000 Lock Prefix Table
+                   0 Maximum Allocation Size
+                   0 Virtual Memory Threshold
+                   0 Process Affinity Mask
+                   0 Process Heap Flags
+                   0 CSD Version
+                0000 Dependent Load Flag
+    0000000000000000 Edit List
+    00000001400510C0 Security Cookie
+    000000014003B3E0 Guard CF address of check-function pointer
+    000000014003B3F0 Guard CF address of dispatch-function pointer
+    000000014003B4F0 Guard CF function table
+                  98 Guard CF function count
+            10017500 Guard Flags
+                       CF instrumented
+                       FID table present
+                       Protect delayload IAT
+                       Delayload IAT in its own section
+                       Export suppression info present
+                       Long jump target table present
+                0000 Code Integrity Flags
+                0000 Code Integrity Catalog
+            00000000 Code Integrity Catalog Offset
+            00000000 Code Integrity Reserved
+    0000000000000000 Guard CF address taken IAT entry table
+                   0 Guard CF address taken IAT entry count
+    0000000000000000 Guard CF long jump target table
+                   0 Guard CF long jump target count
+    0000000000000000 Dynamic value relocation table
+    0000000000000000 Hybrid metadata pointer
+    0000000000000000 Guard RF address of failure-function
+    0000000000000000 Guard RF address of failure-function pointer
+            00000000 Dynamic value relocation table offset
+                0000 Dynamic value relocation table section
+                0000 Reserved2
+    0000000000000000 Guard RF address of stack pointer verification function pointer
+            00000000 Hot patching table offset
+                0000 Reserved3
+    0000000000000000 Enclave configuration pointer
+    000000014004B044 Volatile metadata pointer
+    0000000000000000 Guard EH continuation table
+                   0 Guard EH continuation count
+    000000014003B3E8 Guard XFG address of check-function pointer
+    000000014003B3F8 Guard XFG address of dispatch-function pointer
+    000000014003B400 Guard XFG address of dispatch-table-function pointer
+    000000014003B408 CastGuard OS determined failure mode
+    000000014003B410 Guard memcpy function pointer
+
+    Guard CF Function Table
+
+          Address
+          --------
+           0000000140001000
+           0000000140001020
+           0000000140001030
+           0000000140001040
+           0000000140001070
+           00000001400010C0
+           0000000140001100
+           0000000140001120
+           0000000140001130
+           0000000140007E40
+           0000000140007E50
+           0000000140007E60
+           0000000140007EA0
+           0000000140007F90
+           0000000140007FD0
+           0000000140008000
+           0000000140008070
+           00000001400080D0
+           0000000140008120
+           0000000140008150
+           0000000140008180
+           00000001400081D0
+           0000000140008220
+           0000000140008280
+           0000000140008380
+           00000001400091C0
+           0000000140009CA0
+           0000000140009CC0
+           000000014000A610
+           000000014000D460
+           000000014000D4E0
+           000000014000D560
+           000000014000D570
+           000000014000D580
+           000000014000D590
+           000000014000D5E0
+           000000014000D630
+           000000014000D650
+           000000014000D670
+           000000014000D680
+           000000014000D6A0
+           000000014000D7A0
+           000000014000D8A0
+           000000014000DBB0
+           000000014000DEC0
+           000000014000DF60
+           000000014000E070
+           000000014000E180
+           000000014000E480
+           000000014000E490
+           000000014000E4A0
+           000000014000E4F0
+           000000014000E500
+           000000014000E550
+           000000014000E5A0
+           000000014000E5B0
+           000000014000E830
+           000000014000E850
+           000000014000FA40
+           0000000140012440
+           00000001400124A0
+           0000000140012560
+           0000000140012620
+           0000000140012630
+           0000000140012640
+           00000001400127F0
+           00000001400129A0
+           0000000140012AA0
+           0000000140016D00
+           0000000140016DE0
+           0000000140016E00
+           0000000140016EE0
+           0000000140016F40
+           0000000140016F50
+           0000000140016F60
+           00000001400170D0
+           0000000140017490
+           00000001400174D0
+           00000001400176E0
+           0000000140017700
+           0000000140017CD0
+           0000000140017E90
+           0000000140017F50
+           0000000140018090
+           0000000140019130
+           0000000140019460
+           0000000140019FF0
+           000000014001A020
+           000000014001A0E0
+           000000014001A0F0
+           000000014001A290
+           000000014001A7C0
+           000000014001AD00
+           000000014001ADA0
+           000000014001AE00
+           000000014001AE20
+           000000014001C080
+           000000014001E460
+           000000014001E650
+           000000014001F3F0
+           000000014001F410
+           000000014001F420
+           0000000140021470
+           00000001400215B0
+           0000000140024380
+           00000001400243F0
+           0000000140024510
+           0000000140026510
+           00000001400268C0
+           00000001400282B0
+           00000001400282D0
+           0000000140028300
+           0000000140028310
+           0000000140028350
+           0000000140028360
+           00000001400283A0
+           00000001400287C0
+           0000000140028B90
+           0000000140028BD0
+           00000001400298E0
+           000000014002A320
+           000000014002A360
+           000000014002A6A0
+           000000014002A6E0
+           000000014002F8D0
+           000000014002FAD0
+           0000000140030770
+           00000001400315D0
+           0000000140031B70
+           0000000140032300
+           0000000140032B30
+           0000000140032E20
+           0000000140033340
+           0000000140033590
+           00000001400337E0
+           0000000140033E30
+           0000000140033E50
+           0000000140036CF0
+           0000000140037220
+           0000000140038060
+           00000001400380D0
+           00000001400385A0
+           00000001400385B0
+           0000000140038C40
+           000000014003AC80
+           000000014003AC90
+           000000014003ACF0
+           000000014003AD30
+           000000014003AD90
+           000000014003ADA0
+           000000014003ADB0
+           000000014003ADF0
+
+    Volatile Metadata
+
+                      18 size
+                       3 min version (8003)
+                       3 max version (8003)
+        000000000004B05C volatile access RVA table
+                      F8 volatile access RVA table size
+        000000000004B154 volatile range info table
+                      40 volatile range info table size
+
+    Volatile Access RVA Table
+
+          Address
+          --------
+           0000000140008380
+           00000001400091C0
+           0000000140018265
+           00000001400182E1
+           000000014001923B
+           000000014001A2B1
+           000000014001A2C7
+           000000014001A457
+           000000014001A63B
+           000000014001A64A
+           000000014001A6AC
+           000000014001A6FC
+           000000014001A74D
+           000000014001A7EB
+           000000014001A867
+           000000014001A87C
+           000000014001A8D3
+           000000014001ABF1
+           000000014001AC23
+           000000014001ADF0
+           000000014001B118
+           000000014001B16C
+           000000014001E55F
+           000000014001E78A
+           000000014001F424
+           000000014001F437
+           000000014001F50E
+           000000014001F535
+           000000014001F5B1
+           000000014001F5C6
+           000000014001F5F7
+           000000014001F621
+           00000001400390F0
+           00000001400394B0
+           0000000140039660
+           0000000140039A10
+           000000014003A3A0
+           000000014003A530
+           000000014003A5C5
+           000000014003A5CF
+           000000014003A5D6
+           000000014003A5DA
+           000000014003A5E6
+           000000014003A5F0
+           000000014003A5FD
+           000000014003A60A
+           000000014003A61C
+           000000014003A624
+           000000014003A63B
+           000000014003A642
+           000000014003A658
+           000000014003A67D
+           000000014003A691
+           000000014003A6DA
+           000000014003A6E1
+           000000014003A6E8
+           000000014003A6FF
+           000000014003A724
+           000000014003A746
+           000000014003A78F
+           000000014003A796
+           000000014003A79D
+
+    Volatile Info Range Table
+
+          Ranges
+          -------
+          0000000140001000 - 0000000140018249
+          0000000140018258 - 0000000140019F60
+          0000000140019FF0 - 000000014001ADE8
+          000000014001ADF0 - 000000014001F3C0
+          000000014001F424 - 000000014001F7C0
+          0000000140038190 - 0000000140038540
+          00000001400390D0 - 000000014003A997
+          000000014003AC60 - 000000014003ADFC
+
+  Summary
+
+        3000 .data
+        3000 .pdata
+       16000 .rdata
+        1000 .reloc
+       3A000 .text

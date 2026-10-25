@@ -1,0 +1,235 @@
+{
+  "diagnosticEvidenceChecksPassed": true,
+  "functionalRegression": "historical_pass_at_c55efb0_not_rerun",
+  "creationRefusalReproduced": false,
+  "allCreateAttemptsSucceeded": true,
+  "processProviderAvailable": false,
+  "collectorExit": 2,
+  "decodeExit": 0,
+  "rootCauseConfirmed": false,
+  "issueResolved": false,
+  "gateClosed": false,
+  "checks": [
+    {
+      "name": "collector-reported-permission-result",
+      "passed": true
+    },
+    {
+      "name": "own.actual-case-identity",
+      "passed": true
+    },
+    {
+      "name": "own.completed-or-explicit-first-refusal",
+      "passed": true
+    },
+    {
+      "name": "own.all-successfully-created-children-exited-and-handles-closed",
+      "passed": true
+    },
+    {
+      "name": "own.no-retry-after-failed-create",
+      "passed": true
+    },
+    {
+      "name": "own.failed-API-output-ownership-not-assumed",
+      "passed": true
+    },
+    {
+      "name": "fixture.actual-case-identity",
+      "passed": true
+    },
+    {
+      "name": "fixture.completed-or-explicit-first-refusal",
+      "passed": true
+    },
+    {
+      "name": "fixture.all-successfully-created-children-exited-and-handles-closed",
+      "passed": true
+    },
+    {
+      "name": "fixture.no-retry-after-failed-create",
+      "passed": true
+    },
+    {
+      "name": "fixture.failed-API-output-ownership-not-assumed",
+      "passed": true
+    },
+    {
+      "name": "own-debug.actual-case-identity",
+      "passed": true
+    },
+    {
+      "name": "own-debug.completed-or-explicit-first-refusal",
+      "passed": true
+    },
+    {
+      "name": "own-debug.all-successfully-created-children-exited-and-handles-closed",
+      "passed": true
+    },
+    {
+      "name": "own-debug.no-retry-after-failed-create",
+      "passed": true
+    },
+    {
+      "name": "own-debug.failed-API-output-ownership-not-assumed",
+      "passed": true
+    },
+    {
+      "name": "fixture-debug.actual-case-identity",
+      "passed": true
+    },
+    {
+      "name": "fixture-debug.completed-or-explicit-first-refusal",
+      "passed": true
+    },
+    {
+      "name": "fixture-debug.all-successfully-created-children-exited-and-handles-closed",
+      "passed": true
+    },
+    {
+      "name": "fixture-debug.no-retry-after-failed-create",
+      "passed": true
+    },
+    {
+      "name": "fixture-debug.failed-API-output-ownership-not-assumed",
+      "passed": true
+    },
+    {
+      "name": "owned-ETL-decoded",
+      "passed": true
+    },
+    {
+      "name": "ETW-marker-correlation-pipeline-observed",
+      "passed": true
+    },
+    {
+      "name": "owned-trace-session-confirmed-absent",
+      "passed": true
+    }
+  ],
+  "cases": [
+    {
+      "mode": "own",
+      "pid": 33916,
+      "exitCode": 0,
+      "planned": 256,
+      "created": 256,
+      "exited": 256,
+      "completed": [
+        {
+          "type": "case_complete",
+          "utc": 134373904153129559,
+          "qpc": 155600606911,
+          "mode": "own",
+          "completed": 256,
+          "creationRefused": false,
+          "resources": {
+            "handleCount": 122,
+            "handleQueryError": 0,
+            "privateBytes": 1388544,
+            "workingSet": 7221248,
+            "vmQueryError": 0,
+            "availablePhysical": 2280923136,
+            "availableCommit": 3216461824,
+            "memoryQueryError": 0
+          }
+        }
+      ],
+      "refusals": [],
+      "caseErrors": []
+    },
+    {
+      "mode": "fixture",
+      "pid": 19040,
+      "exitCode": 0,
+      "planned": 256,
+      "created": 256,
+      "exited": 256,
+      "completed": [
+        {
+          "type": "case_complete",
+          "utc": 134373904207518976,
+          "qpc": 155654996328,
+          "mode": "fixture",
+          "completed": 256,
+          "creationRefused": false,
+          "resources": {
+            "handleCount": 122,
+            "handleQueryError": 0,
+            "privateBytes": 1323008,
+            "workingSet": 7147520,
+            "vmQueryError": 0,
+            "availablePhysical": 2921353216,
+            "availableCommit": 4035035136,
+            "memoryQueryError": 0
+          }
+        }
+      ],
+      "refusals": [],
+      "caseErrors": []
+    },
+    {
+      "mode": "own-debug",
+      "pid": 46028,
+      "exitCode": 0,
+      "planned": 256,
+      "created": 256,
+      "exited": 256,
+      "completed": [
+        {
+          "type": "case_complete",
+          "utc": 134373904264351716,
+          "qpc": 155711829068,
+          "mode": "own-debug",
+          "completed": 256,
+          "creationRefused": false,
+          "resources": {
+            "handleCount": 123,
+            "handleQueryError": 0,
+            "privateBytes": 1347584,
+            "workingSet": 7208960,
+            "vmQueryError": 0,
+            "availablePhysical": 2977832960,
+            "availableCommit": 4094152704,
+            "memoryQueryError": 0
+          }
+        }
+      ],
+      "refusals": [],
+      "caseErrors": []
+    },
+    {
+      "mode": "fixture-debug",
+      "pid": 45776,
+      "exitCode": 0,
+      "planned": 256,
+      "created": 256,
+      "exited": 256,
+      "completed": [
+        {
+          "type": "case_complete",
+          "utc": 134373904329489098,
+          "qpc": 155776966450,
+          "mode": "fixture-debug",
+          "completed": 256,
+          "creationRefused": false,
+          "resources": {
+            "handleCount": 123,
+            "handleQueryError": 0,
+            "privateBytes": 1400832,
+            "workingSet": 7270400,
+            "vmQueryError": 0,
+            "availablePhysical": 2917638144,
+            "availableCommit": 4039176192,
+            "memoryQueryError": 0
+          }
+        }
+      ],
+      "refusals": [],
+      "caseErrors": []
+    }
+  ],
+  "error": null,
+  "SA_SB_restore": false,
+  "R4Complete": false
+}

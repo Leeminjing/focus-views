@@ -1,0 +1,54 @@
+{
+  "time": "2026-10-25T16:38:59.4552603+08:00",
+  "baseCommit": "c55efb0ce95867a17636ac78dac7bcd5976e6c6d",
+  "os": "Microsoft Windows NT 10.0.26200.0",
+  "callerSid": "S-1-5-21-2703919260-1801774295-1865065416-1004",
+  "elevated": false,
+  "performanceLogUserTokenMember": true,
+  "fixture": "D:\\focus-views\\experiments\\r3-005b-001\\out\\r305a.exe",
+  "fixtureSha256": "a830f36770c3591aaa0bac1a257f3bc31475509c054dda107d712af490ffe8f0",
+  "fixtureSddl": "O:S-1-5-21-2703919260-1801774295-1865065416-1004G:S-1-5-21-2703919260-1801774295-1865065416-513D:(A;ID;FA;;;BA)(A;ID;FA;;;SY)(A;ID;0x1301bf;;;AU)(A;ID;0x1200a9;;;BU)",
+  "commands": [
+    {
+      "tool": "logman",
+      "arguments": [
+        "query",
+        "providers",
+        "Microsoft-Windows-Kernel-Process"
+      ],
+      "exitCode": 0,
+      "available": true
+    },
+    {
+      "tool": "logman",
+      "arguments": [
+        "query",
+        "providers",
+        "Microsoft-Windows-Kernel-Memory"
+      ],
+      "exitCode": 0,
+      "available": true
+    },
+    {
+      "tool": "logman",
+      "arguments": [
+        "query",
+        "providers",
+        "Microsoft-Windows-Kernel-Object"
+      ],
+      "exitCode": -2147023728,
+      "available": false
+    },
+    {
+      "tool": "wevtutil",
+      "arguments": [
+        "gp",
+        "Microsoft-Windows-Kernel-Process",
+        "/ge:true",
+        "/gm:true"
+      ],
+      "exitCode": 0
+    }
+  ],
+  "systemSettingsChanged": false
+}
