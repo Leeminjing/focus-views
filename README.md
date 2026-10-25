@@ -69,3 +69,5 @@ focus-views 是一个 Windows 原生隔离与恢复运行时研发项目，完�
 [最后一次管理员 ETW 取证](experiments/r4-001-gate-002/results/20261025-admin-final/report.md) 已完成：仅 collector 提升，普通探针 64 次调试创建成功；Kernel-Process 可采集，但历史拒绝未复现、根因未确认。系统诊断停止追加次数，可靠性 gateClosed=false 与恢复机制研究分别判定。
 
 [R4-003-001](experiments/r4-003-001/README.md) 将可恢复 SA/SB 与固定成果流整合到同一条运行链：A/B 一次真实 EDIT 编辑并经 BUTTON 生成文件，发布 A-v1/B-v1，保存包含私有工作文件版本的 SA/SB；原 A/B 退出后恢复 RA/RB，C 从原 S0 恢复并实际读取/处理两个固定成果。正式 14 次集成场景、2,519 项证据检查以及 R4-001/R4-002a 各自全量嵌套回归通过；原始执行、Undo、文件对象隔离、Action 与真实 GDI 分别核对，见 [正式报告](experiments/r4-003-001/results/20261025-r4003001/report.md)。只声明本实验资源范围内的 R4 整合，不代表通用 Windows 应用支持；创建可靠性门禁仍未关闭。
+
+[R5-001a](experiments/r5-001a/README.md) 已将 manager、fixture 和 helper 物理拆成独立 EXE，恢复内核与业务验收客户端分开。独立管理器使用目标 PE 的只读诊断副本及目标函数表完成 unwind/CET 核对，实际重跑原 R4 链路。20 次新场景、3,710 项证据检查及旧 R4-003 全部嵌套回归通过，见 [报告](experiments/r5-001a/results/20261025-r5001a/report.md) 与研究构建包。只验证一个显式协作应用，不是任意程序兼容、稳定 SDK 或管理器重启恢复；可靠性门禁仍未关闭。

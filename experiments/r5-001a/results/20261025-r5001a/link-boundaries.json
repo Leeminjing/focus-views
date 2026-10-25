@@ -1,0 +1,28 @@
+{
+  "kernel": [
+    "runtime/native.cpp",
+    "runtime/codec.cpp",
+    "runtime/execution.cpp"
+  ],
+  "target": [
+    "runtime/codec.cpp",
+    "runtime/undo.cpp",
+    "runtime/resources.cpp",
+    "runtime/capture.cpp"
+  ],
+  "app": [
+    "app/fixture.cpp",
+    "app/application.cpp",
+    "app/fixture_main.cpp"
+  ],
+  "manager": [
+    "manager_main.cpp",
+    "scenario/scenario.cpp"
+  ],
+  "helper": [
+    "helper_main.cpp",
+    "runtime/bridge.cpp",
+    "../r4-001/input.cpp",
+    "../r3-004/observer.cpp"
+  ]
+}

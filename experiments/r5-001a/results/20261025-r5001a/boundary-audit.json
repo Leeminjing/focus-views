@@ -1,0 +1,41 @@
+{
+  "managerMapSha256": "96bb6c4597bc1864f712e417e5d55375ae73ba20d51fbc5f15eecc2205b33655",
+  "forbiddenAppImplementationSymbols": {
+    "R305ManagedEntry": 0,
+    "application_files": 0,
+    "?leaf@": 0,
+    "?middle@": 0,
+    "?outer@": 0
+  },
+  "noAppImplementationSymbols": true,
+  "compileAndLinkGroups": {
+    "kernel": [
+      "runtime/native.cpp",
+      "runtime/codec.cpp",
+      "runtime/execution.cpp"
+    ],
+    "target": [
+      "runtime/codec.cpp",
+      "runtime/undo.cpp",
+      "runtime/resources.cpp",
+      "runtime/capture.cpp"
+    ],
+    "app": [
+      "app/fixture.cpp",
+      "app/application.cpp",
+      "app/fixture_main.cpp"
+    ],
+    "manager": [
+      "manager_main.cpp",
+      "scenario/scenario.cpp"
+    ],
+    "helper": [
+      "helper_main.cpp",
+      "runtime/bridge.cpp",
+      "../r4-001/input.cpp",
+      "../r3-004/observer.cpp"
+    ]
+  },
+  "coreIncludesBusinessContract": false,
+  "scope": "manager executable includes a fixture-specific test client/oracle; kernel.lib does not compile that client or application implementation"
+}
