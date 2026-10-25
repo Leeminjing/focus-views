@@ -67,3 +67,5 @@ focus-views 是一个 Windows 原生隔离与恢复运行时研发项目，完�
 [R4-002a](experiments/r4-002a/README.md) 已实测通过单次标准 EDIT Undo 与修改后 SA/SB 的受限恢复：原 A/B 退出后，新 PID 恢复各自原始内存、栈、R10 和原生控件撤销语义，正常 CET CALL/RET、两次 Undo 及继续输入/绘制。20 个集成场景、2 次最小原生对照、1,674 项证据检查及 c001/b001/CET-002 完整回归通过，详见 [正式报告](experiments/r4-002a/results/20261025-r4002a/report.md)。仅全选后一次 ASCII 字符替换、固定窗口树与编译协作；完整 R4 尚未验收。
 
 [最后一次管理员 ETW 取证](experiments/r4-001-gate-002/results/20261025-admin-final/report.md) 已完成：仅 collector 提升，普通探针 64 次调试创建成功；Kernel-Process 可采集，但历史拒绝未复现、根因未确认。系统诊断停止追加次数，可靠性 gateClosed=false 与恢复机制研究分别判定。
+
+[R4-003-001](experiments/r4-003-001/README.md) 将可恢复 SA/SB 与固定成果流整合到同一条运行链：A/B 一次真实 EDIT 编辑并经 BUTTON 生成文件，发布 A-v1/B-v1，保存包含私有工作文件版本的 SA/SB；原 A/B 退出后恢复 RA/RB，C 从原 S0 恢复并实际读取/处理两个固定成果。正式 14 次集成场景、2,519 项证据检查以及 R4-001/R4-002a 各自全量嵌套回归通过；原始执行、Undo、文件对象隔离、Action 与真实 GDI 分别核对，见 [正式报告](experiments/r4-003-001/results/20261025-r4003001/report.md)。只声明本实验资源范围内的 R4 整合，不代表通用 Windows 应用支持；创建可靠性门禁仍未关闭。
