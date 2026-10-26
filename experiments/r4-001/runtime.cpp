@@ -1,6 +1,9 @@
 #include "../r3-004/channel.hpp"
 #include "../r3-004/iat.hpp"
 #include <intrin.h>
+#ifdef FOCUS_VIEWS_QUERY_STREAM
+#include "../r5-003/runtime/query-stream.hpp"
+#endif
 
 namespace {
 using namespace r304;
@@ -14,6 +17,19 @@ Handle bridge_liveness;
 UINT_PTR watchdog = 0;
 HWND remembered_capture = nullptr;
 POINT event_cursor{};
+bool record_query(const Query& q,const char* api){
+#ifdef FOCUS_VIEWS_QUERY_STREAM
+    (void)api;
+    static std::unique_ptr<r5003query::Producer> producer;
+    static std::uint64_t token=0;
+    try{if(!producer||token!=channel->token){producer=std::make_unique<r5003query::Producer>(*channel);token=channel->token;}producer->write(*channel,q);return true;}
+    catch(const Error& e){fault(*channel,e.code,e.api.c_str());return false;}
+#else
+    const auto index=channel->query_count;
+    if(index>=static_cast<LONG>(query_capacity)){fault(*channel,ERROR_BUFFER_OVERFLOW,api);return false;}
+    channel->queries[index]=q;MemoryBarrier();InterlockedIncrement(&channel->query_count);return true;
+#endif
+}
 bool belongs(HWND w) {
     DWORD pid = 0;
     const auto top = reinterpret_cast<HWND>(channel->top);
@@ -107,13 +123,11 @@ extern "C" __declspec(dllexport) SHORT WINAPI ViewGetAsyncKeyState(int vk) {
         if (valid) { state = read_async(*channel); if (supported_key && state.down[vk]) result = static_cast<SHORT>(0x8000); }
     } catch (const Error& e) { valid = false; fault(*channel,e.code,e.api.c_str()); }
     if (channel) {
-        const auto index = channel->query_count;
-        if (index >= static_cast<LONG>(query_capacity)) { fault(*channel,ERROR_BUFFER_OVERFLOW,"async.query_log_capacity"); return 0; }
         Query q{}; q.tick = GetTickCount64(); q.caller = caller;
         q.module = caller >= channel->image && caller-channel->image < channel->image_size ? channel->image : 0;
         q.pid = GetCurrentProcessId(); q.tid = GetCurrentThreadId(); q.sequence = state.input_sequence; q.version = state.version;
         q.probe = channel->probe.id; q.vk = vk; q.result = result; q.supported = supported_key; q.valid = valid;
-        channel->queries[index] = q; MemoryBarrier(); InterlockedIncrement(&channel->query_count);
+        if(!record_query(q,"async.query_log_capacity"))return 0;
     }
     return result; // high bit only; unsupported keys return zero, never host passthrough
 }
@@ -126,13 +140,11 @@ extern "C" __declspec(dllexport) BOOL WINAPI ViewGetCursorPos(LPPOINT point) {
     catch (const Error& e) { valid = false; fault(*channel,e.code,e.api.c_str()); }
     if (valid) *point = state.cursor;
     if (channel) {
-        const auto index = channel->query_count;
-        if (index >= static_cast<LONG>(query_capacity)) { fault(*channel,ERROR_BUFFER_OVERFLOW,"cursor.query_log_capacity"); return FALSE; }
         Query q{}; q.api = 1; q.tick = GetTickCount64(); q.caller = caller;
         q.module = caller >= channel->image && caller-channel->image < channel->image_size ? channel->image : 0;
         q.pid = GetCurrentProcessId(); q.tid = GetCurrentThreadId(); q.sequence = state.input_sequence; q.version = state.version;
         q.probe = channel->probe.id; q.result = valid ? 1 : 0; q.valid = valid; q.supported = 1; q.cursor = state.cursor;
-        channel->queries[index] = q; MemoryBarrier(); InterlockedIncrement(&channel->query_count);
+        if(!record_query(q,"cursor.query_log_capacity"))return FALSE;
     }
     if (!valid) SetLastError(ERROR_INVALID_STATE);
     return valid ? TRUE : FALSE;

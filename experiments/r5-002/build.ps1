@@ -20,7 +20,7 @@ $SdkRoot = (Resolve-Path -LiteralPath $SdkRoot).Path
 $OutDir = [IO.Path]::GetFullPath($OutDir)
 New-Item -ItemType Directory -Path $OutDir -Force | Out-Null
 $taskCompiler = Join-Path $MsvcRoot 'bin\Hostx64\x64\cl.exe'
-$taskCompileInputs=@('manager_main.cpp','clients/command.hpp','clients/fixture_client.cpp','clients/host.hpp','clients/observation.hpp','clients/recorder_client.cpp','recorder/contract.hpp','recorder/io.cpp','recorder/main.cpp','build.ps1','recorder/traps.asm','clients/legacy_client.cpp','runtime/abi.hpp','runtime/processes.hpp','runtime/execution.hpp','runtime/execution.cpp','runtime/image.hpp','runtime/native.hpp','runtime/files.hpp','../r5-001a/runtime/abi.hpp','../r5-001a/runtime/native.cpp','../r5-001a/runtime/native.hpp','../r5-001a/runtime/codec.cpp')
+$taskCompileInputs=@('manager_main.cpp','clients/command.hpp','clients/fixture_client.cpp','clients/fixture_model.hpp','clients/recorder_model.hpp','clients/host.hpp','clients/observation.hpp','clients/recorder_client.cpp','recorder/contract.hpp','recorder/io.cpp','recorder/main.cpp','build.ps1','recorder/traps.asm','clients/legacy_client.cpp','runtime/abi.hpp','runtime/processes.hpp','runtime/execution.hpp','runtime/execution.cpp','runtime/image.hpp','runtime/native.hpp','runtime/files.hpp','../r5-001a/runtime/abi.hpp','../r5-001a/runtime/native.cpp','../r5-001a/runtime/native.hpp','../r5-001a/runtime/codec.cpp')
 $taskHashMaterial=@($taskCompileInputs | ForEach-Object { (Get-FileHash -LiteralPath (Join-Path $PSScriptRoot $_)).Hash }) -join ''
 $taskSha=[Security.Cryptography.SHA256]::Create()
 try { $taskBuildId=[BitConverter]::ToString($taskSha.ComputeHash([Text.Encoding]::UTF8.GetBytes($taskHashMaterial))).Replace('-','').ToLowerInvariant() } finally { $taskSha.Dispose() }
