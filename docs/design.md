@@ -156,3 +156,13 @@ R5-002 保留 ABI v1 Metadata 的原始字节布局，在 v2 完整前缀后添�
 目标 PE unwind 按实际顺序逐帧核对函数、局部量边界和 v2 调用者边界；CET 普通/影子返回关系须与保存现场一致，才能恢复原始字节/CPU并正常 RET。新 record→emit→fold→sample 真实执行四层，不通过重放业务构造结果。两款旧 EXE 逐字节复用；业务 oracle 仍留在只读实验客户端。
 
 GUI 安全点只在有期限的排空阶段正常处理已登记窗口 WM_PAINT，并再次要求队列空/输入关闭/资源就绪；未知消息与 WM_QUIT 拒绝，实际 PM_REMOVE 后再次验证消息与 HWND。源 S0 的历史 ERROR_BUSY 触发消息未记录，不能因确定性绘制对照通过就认定历史原因。报告：[R5-002 正式报告](../experiments/r5-002/results/20261026-r5002-verified/report.md).
+
+## R5-003：脱离管理器生命周期的实验磁盘对象
+
+既有恢复内核和两种有限执行 ABI 不变，新增 snapshot-store.lib 明确编码版本、架构、原生记录尺寸、长度及 SHA256，按元素重建 vector/string，不读回 C++ 容器内部指针。Metadata、ExecutionLayout、原始 memory/stack/CONTEXT、实际返回关系、GUI/Undo 资源、关闭文件版本及目标诊断映像共同固定。旧 PID/HWND/文件对象编号仅为来源/引用前像，进程、Desktop、窗口、输入通道和合法 CET 链由新管理器重新建立。
+
+私有 CREATE_NEW staging 完整写入/flush/关闭/读回校验后，以同卷不替换 rename 发布；Session 最后发布并引用全部 Snapshot/Artifact 哈希与旧实例 PID+创建时间。Manager 2 必须确认旧实例退出且全部必要磁盘对象有效，再创建 View。当前仅可信本地目录、同 Windows 会话/系统 DLL 身份、同构建与匹配基址，SHA256 不等于认证。没有崩溃、突然断电、宿主重启或长期格式保证。
+
+长时间恢复使旧查询诊断总配额暴露：新 helper/DLL 明确启用单 GUI 生产者/桥消费者的 8192 槽确认流，成功写出并 flush 才 ACK，不覆盖未确认数据；满环/日志错误拒绝，输入与查询语义不变。新通道不进入 Snapshot。旧默认构建保留原有限路径；回归的三个独立管理器显式配置新诊断依赖，管理器/应用/内核不因此变化。旧 CET 证据写入器长路径不支持，入口在任何应用启动前拒绝不满足完整嵌套路径边界的目录。
+
+实际跨 PID 退出证据、原始字节、CET RET、Undo/文件/Frame 和全部旧回归见 [R5-003 正式报告](../experiments/r5-003/results/r5003/report.md)。前两轮 false summary、ASLR 基址变化后的拒绝及独立 CreateProcessW/5 门禁保留。
