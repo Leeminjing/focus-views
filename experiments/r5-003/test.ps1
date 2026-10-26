@@ -6,6 +6,10 @@ if(-not ('RestartReceipt' -as [type])){Add-Type -TypeDefinition 'public static c
 $OutDir=[IO.Path]::GetFullPath($OutDir);$ResultsDir=[IO.Path]::GetFullPath($ResultsDir)
 if(Test-Path -LiteralPath $ResultsDir){throw 'New ResultsDir required; preserve prior runs'}
 New-Item -ItemType Directory -Path $ResultsDir|Out-Null
+if(-not $SkipRegression){
+ $legacyEvidence=Join-Path $ResultsDir 'r5-002-regression/r5-001b-regression/r5-001a-regression/r4-003-001-regression/r4-002a-regression/c001-regression/b001-regression/cet002-regression/register-1/target-active-stack-before-continue.bin'
+ if($legacyEvidence.Length -ge 260){[ordered]@{allEvidenceChecksPassed=$false;normalExitCrossManagerRestorePassed=$false;stage='legacy-evidence-path-preflight';path=$legacyEvidence;length=$legacyEvidence.Length;limit=259;applicationsStarted=$false}|ConvertTo-Json|Set-Content (Join-Path $ResultsDir 'summary.json') -Encoding utf8;throw 'Use a shorter ResultsDir: legacy native evidence writer requires paths below MAX_PATH.'}
+}
 $checks=[Collections.Generic.List[object]]::new();$cases=[Collections.Generic.List[object]]::new();$errors=[Collections.Generic.List[object]]::new();$managers=[Collections.Generic.List[object]]::new()
 $testSourceSha=(Get-FileHash -LiteralPath $PSCommandPath).Hash.ToLowerInvariant()
 [ordered]@{time=(Get-Date -Format o);sourceHead=(& git -C $PSScriptRoot rev-parse HEAD);testSha256=$testSourceSha;repeats=$Repeats;skipRegression=[bool]$SkipRegression;os=[Environment]::OSVersion.VersionString;architecture=$env:PROCESSOR_ARCHITECTURE;manualHostTest='not_executed';sourceInputs=@(Get-ChildItem -LiteralPath $PSScriptRoot -File|Where-Object Extension -in @('.ps1','.cpp','.md')|ForEach-Object{[ordered]@{file=$_.Name;sha256=(Get-FileHash $_.FullName).Hash.ToLowerInvariant()}})}|ConvertTo-Json -Depth 5|Set-Content (Join-Path $ResultsDir 'test-identity.json') -Encoding utf8
