@@ -5,6 +5,7 @@ struct Input {std::unique_ptr<Mapping> mapping;Process bridge;std::uint64_t sequ
 struct CaseSnapshot : Snapshot {Observation work{};std::uint64_t expected=0;};
 void write_bytes(const std::filesystem::path& p,const void* data,size_t n){std::ofstream out(p,std::ios::binary);demand(out.good(),"evidence file");out.write(static_cast<const char*>(data),static_cast<std::streamsize>(n));demand(out.good(),"evidence bytes");}
 template<class Client> class Experiment {
+protected:
     std::filesystem::path exe_,app_,helper_,out_;DWORD mailbox_rva_=0,contract_rva_=0;Log log_;Execution execution_;Actions actions_;DebugPump pump_;Handle job_;DWORD metadata_rva_;std::wstring prefix_;
     unsigned failed_=0,serial_=0; bool primary_passed_=false; std::array<std::uint8_t,32> executable_;
 
@@ -215,7 +216,7 @@ public:
         try{
             result.child=start(name,false,name=="RB"&&scenario_==L"branch-failure");auto& v=*result.child;
             if(other)routing_guard(*other,v);
-            v.resume();resource(v,2,"prepared",&s.resources);
+            auto resources=s.resources;if(name=="RB"&&scenario_==L"resource-failure"){resources.nodes[2].parent=0;log_.emit("resource_rebuild_fault","\"view\":\"RB\",\"field\":\"BUTTON.parent\",\"privatePayloadOnly\":true");}v.resume();resource(v,2,"prepared",&resources);
             Files::restore(s.file,workspace,name=="RB"&&scenario_==L"file-version"?"version":name=="RB"&&scenario_==L"file-write"?"write":"");workspace_owned=true;
             const auto id=s.file.present?Files::identity(workspace/Client::file_name()):Files::Identity{};
             log_.emit("workspace_restored","\"view\":"+json(name)+",\"file\":"+s.file.describe()+",\"targetVolume\":"+std::to_string(id.volume)+",\"targetObject\":"+std::to_string(id.object)+",\"directory\":"+json(workspace.wstring().c_str()));

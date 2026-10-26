@@ -1,9 +1,15 @@
 #include "../r3-004/channel.hpp"
+#ifdef FOCUS_VIEWS_QUERY_STREAM
+#include "../r5-003/runtime/query-stream.hpp"
+#endif
 
 namespace r304 {
 int input_main(const Args& args) {
     Mapping mapping(args.get(L"--channel"), sizeof(Channel), false);
     auto& c = *static_cast<Channel*>(mapping.view);
+#ifdef FOCUS_VIEWS_QUERY_STREAM
+    r5003query::Consumer query_stream(c);
+#endif
     std::ofstream log(std::filesystem::path(args.get(L"--log")), std::ios::binary);
     HMODULE module = nullptr; HHOOK hook = nullptr, controls = nullptr;
     unsigned written = 0, queried = 0;
@@ -38,15 +44,28 @@ int input_main(const Args& args) {
                 << ",\"x\":" << t.x << ",\"y\":" << t.y << ",\"clientX\":" << t.client_x << ",\"clientY\":" << t.client_y
                 << ",\"queueLeft\":" << t.left << ",\"keyboardLeft\":" << unsigned(t.keyboard_left) << "}\n";
         }
+#ifdef FOCUS_VIEWS_QUERY_STREAM
+        const auto count_queries=query_stream.count();
+#else
         const auto count_queries = static_cast<unsigned>(c.query_count); MemoryBarrier();
-        while (queried < count_queries && queried < query_capacity) {
+#endif
+        while (queried < count_queries) {
+#ifdef FOCUS_VIEWS_QUERY_STREAM
+            const auto q=query_stream.at(queried++);
+#else
+            if(queried>=query_capacity)break;
             const auto& q = c.queries[queried++];
+#endif
             log << "{\"stage\":\"virtual_query\",\"index\":" << queried << ",\"tickMs\":" << q.tick << ",\"pid\":" << q.pid << ",\"tid\":" << q.tid
                 << ",\"api\":" << json(q.api ? "GetCursorPos" : "GetAsyncKeyState") << ",\"cursorX\":" << q.cursor.x << ",\"cursorY\":" << q.cursor.y << ",\"caller\":" << q.caller << ",\"module\":" << q.module << ",\"sequence\":" << q.sequence
                 << ",\"version\":" << q.version << ",\"probe\":" << q.probe << ",\"vk\":" << q.vk << ",\"result\":" << q.result
                 << ",\"supported\":" << q.supported << ",\"valid\":" << q.valid << "}\n";
         }
         log.flush();
+#ifdef FOCUS_VIEWS_QUERY_STREAM
+        if(!log.good())throw Error("query_stream.log_write",ERROR_WRITE_FAULT);
+        query_stream.acknowledge(queried);
+#endif
     };
     auto control = [&](Control operation) {
         DWORD_PTR result = 0;
@@ -106,7 +125,12 @@ int input_main(const Args& args) {
             MSG message{};
             while (PeekMessageW(&message, nullptr, 0, 0, PM_REMOVE)) { TranslateMessage(&message); DispatchMessageW(&message); }
             const auto request = c.request;
-            if (request == last) { Sleep(2); continue; }
+            if (request == last) {
+#ifdef FOCUS_VIEWS_QUERY_STREAM
+                flush(); // autonomous API queries do not require an input Action
+#endif
+                Sleep(2); continue;
+            }
             MemoryBarrier(); last = request;
             demand(c.count <= capacity && c.health == 1 && c.command >= 1 && c.command <= 6, "input request/channel health");
             if (c.command == 6) { control(destroy_capture); flush(); InterlockedExchange(&c.command_done,last); continue; }
@@ -141,6 +165,9 @@ int input_main(const Args& args) {
             while (static_cast<std::uint64_t>(c.consumed) < end && c.health == 1 && GetTickCount64() < deadline) {
                 if (WaitForSingleObject(target.value,0) == WAIT_OBJECT_0) throw Error("owned_target.exit",ERROR_PROCESS_ABORTED);
                 while (PeekMessageW(&message, nullptr, 0, 0, PM_REMOVE)) { TranslateMessage(&message); DispatchMessageW(&message); }
+#ifdef FOCUS_VIEWS_QUERY_STREAM
+                flush();
+#endif
                 Sleep(2);
             }
             flush();
@@ -175,7 +202,11 @@ int input_main(const Args& args) {
             emit(okay && c.restored ? "invalid_channel_cleanup_confirmed" : "invalid_channel_cleanup_unconfirmed",okay ? 0 : GetLastError());
         }
     }
+#ifdef FOCUS_VIEWS_QUERY_STREAM
+    try{flush();}catch(const Error& e){if(c.health!=-1)fault(c,e.code,e.api.c_str());emit("query_stream.final_flush_failed",e.code);}
+#else
     flush();
+#endif
     if (controls && !UnhookWindowsHookEx(controls)) {
         const auto error = GetLastError(); fault(c,error,"UnhookWindowsHookEx.control"); emit("UnhookWindowsHookEx.control.failed",error);
     }
