@@ -1,0 +1,99 @@
+{
+  "allEvidenceChecksPassed": false,
+  "crossApplicationPassed": false,
+  "oldRegressions": "passed",
+  "kernelModified": true,
+  "managerSha256": "c8aadc50739158b07ce14bc33d8cfdf0f479cadee91fe1915e88af0adc640562",
+  "kernelSha256": "aaccfd7ba06d9fd4bc0d7362b41abf0a9a35c35b9f1dd081b36233f99def1c53",
+  "legacyFixedChainCompatible": false,
+  "fourFrameRestorePassed": false,
+  "arbitraryDepthSupported": false,
+  "generalGUIRestore": false,
+  "projectComplete": false,
+  "gateClosed": false,
+  "manualHostTest": "not_executed",
+  "checks": [
+    {
+      "name": "fixture-full-matrix",
+      "passed": true
+    },
+    {
+      "name": "fixture-exact-same-kernel",
+      "passed": true
+    },
+    {
+      "name": "fixture-exact-same-manager",
+      "passed": true
+    },
+    {
+      "name": "legacy-full-matrix",
+      "passed": true
+    },
+    {
+      "name": "legacy-exact-same-kernel",
+      "passed": true
+    },
+    {
+      "name": "legacy-exact-same-manager",
+      "passed": true
+    },
+    {
+      "name": "recorder-full-matrix",
+      "passed": false
+    },
+    {
+      "name": "recorder-exact-same-kernel",
+      "passed": true
+    },
+    {
+      "name": "recorder-exact-same-manager",
+      "passed": true
+    },
+    {
+      "name": "unchanged-target.lib",
+      "passed": true
+    },
+    {
+      "name": "unchanged-helper.exe",
+      "passed": true
+    },
+    {
+      "name": "unchanged-runtime304.dll",
+      "passed": true
+    },
+    {
+      "name": "unchanged-fixture.exe",
+      "passed": true
+    },
+    {
+      "name": "unchanged-legacy.exe",
+      "passed": true
+    },
+    {
+      "name": "old-runtime-and-experiments-unchanged",
+      "passed": true
+    },
+    {
+      "name": "thin-manager-links-no-app-implementation",
+      "passed": true
+    },
+    {
+      "name": "second-app-has-independent-schema",
+      "passed": true
+    },
+    {
+      "name": "wrong-client-refused-before-target-launch",
+      "passed": true
+    },
+    {
+      "name": "R5-001b-R5-001a-and-nested-R4-003-full-regression",
+      "passed": true
+    }
+  ],
+  "errors": [
+    {
+      "stage": "recorder",
+      "error": "R5-002 application evidence mismatch; preserve raw errors and results."
+    }
+  ]
+}

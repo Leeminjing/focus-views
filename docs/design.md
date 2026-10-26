@@ -148,3 +148,11 @@ Artifact 的固定版本与可变工作文件保持不同对象；C 的导入另
 [最终实测](../experiments/r5-001b/results/20261025-r5001b-neutral/report.md) 将验收客户端从 manager 静态链接移到显式选择的两个实验 DLL，共用一份编排。两款应用使用同一个新 manager；kernel.lib、target.lib、helper、输入 DLL 和旧 fixture 均逐字节复用 R5-001a 原件。记录器的 State/采样数组、数学公式、窗口内容和 CSV 与原 Work 不同；业务解码/断言只在各自客户端，Observation 是只读报告 DTO，从不写回目标。
 
 复用只覆盖既有三协作帧/五返回位置、七个声明 HWND、单 GUI 线程及既有 EDIT/BUTTON/Undo/关闭文件资源。声明不兼容由客户端契约核对拒绝，未知必要资源由既有运行时 ABI 拒绝，没有泛化执行 ABI。首轮暴露的未接管修饰键位由共享调用方先经现有入口发送 key-up/release、核对目标原生查询后再接收业务输入；原内核和输入组件不改，源快照仍要求没有持有按键。稳定 SDK、未改造应用和管理器重启恢复继续未验证。
+
+## R5-002：版本化有限执行描述
+
+R5-002 保留 ABI v1 Metadata 的原始字节布局，在 v2 完整前缀后添加 ExecutionLayout。管理端将 v1 规范化为三帧描述；v2 显式给出帧/返回数、入口、局部量、业务停点和调用者边界，当前仅接受三/四帧。Snapshot 同时固定执行描述与实际返回向量，不使用 vector 对象本身的 sizeof 代替元素字节。
+
+目标 PE unwind 按实际顺序逐帧核对函数、局部量边界和 v2 调用者边界；CET 普通/影子返回关系须与保存现场一致，才能恢复原始字节/CPU并正常 RET。新 record→emit→fold→sample 真实执行四层，不通过重放业务构造结果。两款旧 EXE 逐字节复用；业务 oracle 仍留在只读实验客户端。
+
+GUI 安全点只在有期限的排空阶段正常处理已登记窗口 WM_PAINT，并再次要求队列空/输入关闭/资源就绪；未知消息与 WM_QUIT 拒绝，实际 PM_REMOVE 后再次验证消息与 HWND。源 S0 的历史 ERROR_BUSY 触发消息未记录，不能因确定性绘制对照通过就认定历史原因。报告：[R5-002 正式报告](../experiments/r5-002/results/20261026-r5002-verified/report.md).

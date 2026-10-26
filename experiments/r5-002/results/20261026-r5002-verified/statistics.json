@@ -1,0 +1,62 @@
+{
+  "applications": [
+    {
+      "application": "fixture",
+      "passed": true,
+      "scenarios": 20,
+      "evidenceChecks": 3934,
+      "positiveWorkflows": 2,
+      "expectedRejections": 18,
+      "processes": 332,
+      "desktops": 116,
+      "frames": 308,
+      "assertions": 2340,
+      "inputSessions": 108,
+      "returnedViews": 84
+    },
+    {
+      "application": "legacy",
+      "passed": true,
+      "scenarios": 20,
+      "evidenceChecks": 4030,
+      "positiveWorkflows": 2,
+      "expectedRejections": 18,
+      "processes": 332,
+      "desktops": 116,
+      "frames": 308,
+      "assertions": 2340,
+      "inputSessions": 108,
+      "returnedViews": 84
+    },
+    {
+      "application": "recorder",
+      "passed": true,
+      "scenarios": 30,
+      "evidenceChecks": 6160,
+      "positiveWorkflows": 2,
+      "expectedRejections": 28,
+      "processes": 500,
+      "desktops": 176,
+      "frames": 458,
+      "assertions": 3514,
+      "inputSessions": 158,
+      "returnedViews": 124
+    }
+  ],
+  "scenarios": 70,
+  "evidenceChecks": 14124,
+  "positiveWorkflows": 6,
+  "expectedRejections": 64,
+  "guardScenarios": 3,
+  "guardChecks": 10,
+  "guardPassed": true,
+  "totals": {
+    "processes": 1164,
+    "desktops": 408,
+    "frames": 1074,
+    "assertions": 8194,
+    "inputSessions": 374,
+    "returnedViews": 292
+  },
+  "note": "Core scopes only. Guard and historical regressions separate; no diagnostic refusal is a restore success."
+}
