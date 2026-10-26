@@ -1,0 +1,578 @@
+[
+  {
+    "phase": "save",
+    "managerPid": 42580,
+    "application": "fixture",
+    "label": "S0",
+    "sha256": "a7f10fddd13c0c0a8afa3a9a119949affd870d81f795eb4b7dc27bf254635fa8",
+    "sourcePid": 38884,
+    "output": "fixture-positive-1/manager1-offline"
+  },
+  {
+    "phase": "save",
+    "managerPid": 42580,
+    "application": "fixture",
+    "label": "SA",
+    "sha256": "3a17c64200afe62acfe4bf0da633a36adb709e27b4fed92957258d2acccb43be",
+    "sourcePid": 39508,
+    "output": "fixture-positive-1/manager1-offline"
+  },
+  {
+    "phase": "save",
+    "managerPid": 42580,
+    "application": "fixture",
+    "label": "SB",
+    "sha256": "f13a458ca52fffe8f0535d91d89d920c022586ff4b6ec6175255ce4d86686370",
+    "sourcePid": 33472,
+    "output": "fixture-positive-1/manager1-offline"
+  },
+  {
+    "phase": "restore",
+    "managerPid": 42956,
+    "application": "fixture",
+    "label": "S0",
+    "sha256": "a7f10fddd13c0c0a8afa3a9a119949affd870d81f795eb4b7dc27bf254635fa8",
+    "sourcePid": 38884,
+    "output": "fixture-positive-1/manager2"
+  },
+  {
+    "phase": "restore",
+    "managerPid": 42956,
+    "application": "fixture",
+    "label": "SA",
+    "sha256": "3a17c64200afe62acfe4bf0da633a36adb709e27b4fed92957258d2acccb43be",
+    "sourcePid": 39508,
+    "output": "fixture-positive-1/manager2"
+  },
+  {
+    "phase": "restore",
+    "managerPid": 42956,
+    "application": "fixture",
+    "label": "SB",
+    "sha256": "f13a458ca52fffe8f0535d91d89d920c022586ff4b6ec6175255ce4d86686370",
+    "sourcePid": 33472,
+    "output": "fixture-positive-1/manager2"
+  },
+  {
+    "phase": "save",
+    "managerPid": 16612,
+    "application": "fixture",
+    "label": "S0",
+    "sha256": "44bf826308874a839aaed00380f7e00a1293a8f4983f367762f5a20508cab555",
+    "sourcePid": 36816,
+    "output": "fixture-positive-2/manager1-offline"
+  },
+  {
+    "phase": "save",
+    "managerPid": 16612,
+    "application": "fixture",
+    "label": "SA",
+    "sha256": "a8b22246d76b407a7400751f59832694f0468f96cb3989d43626d6e29f944797",
+    "sourcePid": 42464,
+    "output": "fixture-positive-2/manager1-offline"
+  },
+  {
+    "phase": "save",
+    "managerPid": 16612,
+    "application": "fixture",
+    "label": "SB",
+    "sha256": "16f1e80b763385e9b08783bc80b50645d80093fe272e1f427a8ce009c67fac85",
+    "sourcePid": 41788,
+    "output": "fixture-positive-2/manager1-offline"
+  },
+  {
+    "phase": "restore",
+    "managerPid": 40012,
+    "application": "fixture",
+    "label": "S0",
+    "sha256": "44bf826308874a839aaed00380f7e00a1293a8f4983f367762f5a20508cab555",
+    "sourcePid": 36816,
+    "output": "fixture-positive-2/manager2"
+  },
+  {
+    "phase": "restore",
+    "managerPid": 40012,
+    "application": "fixture",
+    "label": "SA",
+    "sha256": "a8b22246d76b407a7400751f59832694f0468f96cb3989d43626d6e29f944797",
+    "sourcePid": 42464,
+    "output": "fixture-positive-2/manager2"
+  },
+  {
+    "phase": "restore",
+    "managerPid": 40012,
+    "application": "fixture",
+    "label": "SB",
+    "sha256": "16f1e80b763385e9b08783bc80b50645d80093fe272e1f427a8ce009c67fac85",
+    "sourcePid": 41788,
+    "output": "fixture-positive-2/manager2"
+  },
+  {
+    "phase": "restore",
+    "managerPid": 2100,
+    "application": "fixture",
+    "label": "S0",
+    "sha256": "a7f10fddd13c0c0a8afa3a9a119949affd870d81f795eb4b7dc27bf254635fa8",
+    "sourcePid": 38884,
+    "output": "fixture-missing/manager2"
+  },
+  {
+    "phase": "restore",
+    "managerPid": 40004,
+    "application": "fixture",
+    "label": "S0",
+    "sha256": "a7f10fddd13c0c0a8afa3a9a119949affd870d81f795eb4b7dc27bf254635fa8",
+    "sourcePid": 38884,
+    "output": "fixture-tamper/manager2"
+  },
+  {
+    "phase": "restore",
+    "managerPid": 14376,
+    "application": "fixture",
+    "label": "S0",
+    "sha256": "a7f10fddd13c0c0a8afa3a9a119949affd870d81f795eb4b7dc27bf254635fa8",
+    "sourcePid": 38884,
+    "output": "fixture-partial/manager2"
+  },
+  {
+    "phase": "restore",
+    "managerPid": 39376,
+    "application": "fixture",
+    "label": "S0",
+    "sha256": "a7f10fddd13c0c0a8afa3a9a119949affd870d81f795eb4b7dc27bf254635fa8",
+    "sourcePid": 38884,
+    "output": "fixture-format/manager2"
+  },
+  {
+    "phase": "restore",
+    "managerPid": 5240,
+    "application": "fixture",
+    "label": "S0",
+    "sha256": "a7f10fddd13c0c0a8afa3a9a119949affd870d81f795eb4b7dc27bf254635fa8",
+    "sourcePid": 38884,
+    "output": "fixture-abi/manager2"
+  },
+  {
+    "phase": "restore",
+    "managerPid": 27616,
+    "application": "fixture",
+    "label": "S0",
+    "sha256": "a7f10fddd13c0c0a8afa3a9a119949affd870d81f795eb4b7dc27bf254635fa8",
+    "sourcePid": 38884,
+    "output": "fixture-artifact-hash/manager2"
+  },
+  {
+    "phase": "restore",
+    "managerPid": 27616,
+    "application": "fixture",
+    "label": "SA",
+    "sha256": "3a17c64200afe62acfe4bf0da633a36adb709e27b4fed92957258d2acccb43be",
+    "sourcePid": 39508,
+    "output": "fixture-artifact-hash/manager2"
+  },
+  {
+    "phase": "restore",
+    "managerPid": 27616,
+    "application": "fixture",
+    "label": "SB",
+    "sha256": "f13a458ca52fffe8f0535d91d89d920c022586ff4b6ec6175255ce4d86686370",
+    "sourcePid": 33472,
+    "output": "fixture-artifact-hash/manager2"
+  },
+  {
+    "phase": "save",
+    "managerPid": 30768,
+    "application": "fixture",
+    "label": "S0",
+    "sha256": "3d37259449389f22bca75ce28efd5dd887fdd699b32dfc06ca2bfb695c3c5813",
+    "sourcePid": 34288,
+    "output": "fixture-resource-failure/manager1-offline"
+  },
+  {
+    "phase": "save",
+    "managerPid": 30768,
+    "application": "fixture",
+    "label": "SA",
+    "sha256": "85adfcd5b4028a3981f26af7aa9a0c4d392519359e57a2fcbea0fea9c2bd23b6",
+    "sourcePid": 42672,
+    "output": "fixture-resource-failure/manager1-offline"
+  },
+  {
+    "phase": "save",
+    "managerPid": 30768,
+    "application": "fixture",
+    "label": "SB",
+    "sha256": "8298af241c255fe4940b2ef0abbc95c8104385e16094703d21082fd74f0ddd56",
+    "sourcePid": 32948,
+    "output": "fixture-resource-failure/manager1-offline"
+  },
+  {
+    "phase": "restore",
+    "managerPid": 38872,
+    "application": "fixture",
+    "label": "S0",
+    "sha256": "3d37259449389f22bca75ce28efd5dd887fdd699b32dfc06ca2bfb695c3c5813",
+    "sourcePid": 34288,
+    "output": "fixture-resource-failure/manager2"
+  },
+  {
+    "phase": "restore",
+    "managerPid": 38872,
+    "application": "fixture",
+    "label": "SA",
+    "sha256": "85adfcd5b4028a3981f26af7aa9a0c4d392519359e57a2fcbea0fea9c2bd23b6",
+    "sourcePid": 42672,
+    "output": "fixture-resource-failure/manager2"
+  },
+  {
+    "phase": "restore",
+    "managerPid": 38872,
+    "application": "fixture",
+    "label": "SB",
+    "sha256": "8298af241c255fe4940b2ef0abbc95c8104385e16094703d21082fd74f0ddd56",
+    "sourcePid": 32948,
+    "output": "fixture-resource-failure/manager2"
+  },
+  {
+    "phase": "save",
+    "managerPid": 38044,
+    "application": "fixture",
+    "label": "S0",
+    "sha256": "5d197a7d3f1b2cdf063e7e0d1fe085d2471dc0047a359be384f1822680d86f81",
+    "sourcePid": 42180,
+    "output": "fixture-query-capacity/manager1-offline"
+  },
+  {
+    "phase": "save",
+    "managerPid": 38044,
+    "application": "fixture",
+    "label": "SA",
+    "sha256": "845105ce3d965ded17f323d0f68adb2d18ae93b40381dbb77cbfad263c219280",
+    "sourcePid": 14540,
+    "output": "fixture-query-capacity/manager1-offline"
+  },
+  {
+    "phase": "save",
+    "managerPid": 38044,
+    "application": "fixture",
+    "label": "SB",
+    "sha256": "33aa63566e90b110e7b079b89eee002ff5d450e21370da11f769b8d706fee4b1",
+    "sourcePid": 39464,
+    "output": "fixture-query-capacity/manager1-offline"
+  },
+  {
+    "phase": "restore",
+    "managerPid": 40776,
+    "application": "fixture",
+    "label": "S0",
+    "sha256": "5d197a7d3f1b2cdf063e7e0d1fe085d2471dc0047a359be384f1822680d86f81",
+    "sourcePid": 42180,
+    "output": "fixture-query-capacity/manager2"
+  },
+  {
+    "phase": "restore",
+    "managerPid": 40776,
+    "application": "fixture",
+    "label": "SA",
+    "sha256": "845105ce3d965ded17f323d0f68adb2d18ae93b40381dbb77cbfad263c219280",
+    "sourcePid": 14540,
+    "output": "fixture-query-capacity/manager2"
+  },
+  {
+    "phase": "restore",
+    "managerPid": 40776,
+    "application": "fixture",
+    "label": "SB",
+    "sha256": "33aa63566e90b110e7b079b89eee002ff5d450e21370da11f769b8d706fee4b1",
+    "sourcePid": 39464,
+    "output": "fixture-query-capacity/manager2"
+  },
+  {
+    "phase": "save",
+    "managerPid": 41352,
+    "application": "recorder",
+    "label": "S0",
+    "sha256": "ed837d9027ced50e792e13d9061b94b3e9b0c54acdf33588de3d77d73e705b40",
+    "sourcePid": 31368,
+    "output": "recorder-positive-1/manager1-offline"
+  },
+  {
+    "phase": "save",
+    "managerPid": 41352,
+    "application": "recorder",
+    "label": "SA",
+    "sha256": "132bd999f5ec771789667ebc120a64349139af467e14a44abec8c8784293e916",
+    "sourcePid": 41332,
+    "output": "recorder-positive-1/manager1-offline"
+  },
+  {
+    "phase": "save",
+    "managerPid": 41352,
+    "application": "recorder",
+    "label": "SB",
+    "sha256": "ad173bdfe934614ed46d56ce5cde5f2e9d275f141ba2ed927e9f4ad94287a9c7",
+    "sourcePid": 31232,
+    "output": "recorder-positive-1/manager1-offline"
+  },
+  {
+    "phase": "restore",
+    "managerPid": 39588,
+    "application": "recorder",
+    "label": "S0",
+    "sha256": "ed837d9027ced50e792e13d9061b94b3e9b0c54acdf33588de3d77d73e705b40",
+    "sourcePid": 31368,
+    "output": "recorder-positive-1/manager2"
+  },
+  {
+    "phase": "restore",
+    "managerPid": 39588,
+    "application": "recorder",
+    "label": "SA",
+    "sha256": "132bd999f5ec771789667ebc120a64349139af467e14a44abec8c8784293e916",
+    "sourcePid": 41332,
+    "output": "recorder-positive-1/manager2"
+  },
+  {
+    "phase": "restore",
+    "managerPid": 39588,
+    "application": "recorder",
+    "label": "SB",
+    "sha256": "ad173bdfe934614ed46d56ce5cde5f2e9d275f141ba2ed927e9f4ad94287a9c7",
+    "sourcePid": 31232,
+    "output": "recorder-positive-1/manager2"
+  },
+  {
+    "phase": "save",
+    "managerPid": 35672,
+    "application": "recorder",
+    "label": "S0",
+    "sha256": "54bd303a62fb906e3edb611190958b373507c5688d9d53bb04855fb28cf64d15",
+    "sourcePid": 29268,
+    "output": "recorder-positive-2/manager1-offline"
+  },
+  {
+    "phase": "save",
+    "managerPid": 35672,
+    "application": "recorder",
+    "label": "SA",
+    "sha256": "b9ba4a192772d5668c0bc8964922c47be706eff7a01f619e66d0e78c0e485b61",
+    "sourcePid": 33920,
+    "output": "recorder-positive-2/manager1-offline"
+  },
+  {
+    "phase": "save",
+    "managerPid": 35672,
+    "application": "recorder",
+    "label": "SB",
+    "sha256": "049188d0cd7892fd3e17165298f10eabece25e134c4c3fdd45d49d6fb749c58a",
+    "sourcePid": 32908,
+    "output": "recorder-positive-2/manager1-offline"
+  },
+  {
+    "phase": "restore",
+    "managerPid": 16464,
+    "application": "recorder",
+    "label": "S0",
+    "sha256": "54bd303a62fb906e3edb611190958b373507c5688d9d53bb04855fb28cf64d15",
+    "sourcePid": 29268,
+    "output": "recorder-positive-2/manager2"
+  },
+  {
+    "phase": "restore",
+    "managerPid": 16464,
+    "application": "recorder",
+    "label": "SA",
+    "sha256": "b9ba4a192772d5668c0bc8964922c47be706eff7a01f619e66d0e78c0e485b61",
+    "sourcePid": 33920,
+    "output": "recorder-positive-2/manager2"
+  },
+  {
+    "phase": "restore",
+    "managerPid": 16464,
+    "application": "recorder",
+    "label": "SB",
+    "sha256": "049188d0cd7892fd3e17165298f10eabece25e134c4c3fdd45d49d6fb749c58a",
+    "sourcePid": 32908,
+    "output": "recorder-positive-2/manager2"
+  },
+  {
+    "phase": "restore",
+    "managerPid": 40712,
+    "application": "recorder",
+    "label": "S0",
+    "sha256": "ed837d9027ced50e792e13d9061b94b3e9b0c54acdf33588de3d77d73e705b40",
+    "sourcePid": 31368,
+    "output": "recorder-missing/manager2"
+  },
+  {
+    "phase": "restore",
+    "managerPid": 32244,
+    "application": "recorder",
+    "label": "S0",
+    "sha256": "ed837d9027ced50e792e13d9061b94b3e9b0c54acdf33588de3d77d73e705b40",
+    "sourcePid": 31368,
+    "output": "recorder-tamper/manager2"
+  },
+  {
+    "phase": "restore",
+    "managerPid": 31868,
+    "application": "recorder",
+    "label": "S0",
+    "sha256": "ed837d9027ced50e792e13d9061b94b3e9b0c54acdf33588de3d77d73e705b40",
+    "sourcePid": 31368,
+    "output": "recorder-partial/manager2"
+  },
+  {
+    "phase": "restore",
+    "managerPid": 41128,
+    "application": "recorder",
+    "label": "S0",
+    "sha256": "ed837d9027ced50e792e13d9061b94b3e9b0c54acdf33588de3d77d73e705b40",
+    "sourcePid": 31368,
+    "output": "recorder-format/manager2"
+  },
+  {
+    "phase": "restore",
+    "managerPid": 42928,
+    "application": "recorder",
+    "label": "S0",
+    "sha256": "ed837d9027ced50e792e13d9061b94b3e9b0c54acdf33588de3d77d73e705b40",
+    "sourcePid": 31368,
+    "output": "recorder-abi/manager2"
+  },
+  {
+    "phase": "restore",
+    "managerPid": 29316,
+    "application": "recorder",
+    "label": "S0",
+    "sha256": "ed837d9027ced50e792e13d9061b94b3e9b0c54acdf33588de3d77d73e705b40",
+    "sourcePid": 31368,
+    "output": "recorder-artifact-hash/manager2"
+  },
+  {
+    "phase": "restore",
+    "managerPid": 29316,
+    "application": "recorder",
+    "label": "SA",
+    "sha256": "132bd999f5ec771789667ebc120a64349139af467e14a44abec8c8784293e916",
+    "sourcePid": 41332,
+    "output": "recorder-artifact-hash/manager2"
+  },
+  {
+    "phase": "restore",
+    "managerPid": 29316,
+    "application": "recorder",
+    "label": "SB",
+    "sha256": "ad173bdfe934614ed46d56ce5cde5f2e9d275f141ba2ed927e9f4ad94287a9c7",
+    "sourcePid": 31232,
+    "output": "recorder-artifact-hash/manager2"
+  },
+  {
+    "phase": "save",
+    "managerPid": 23328,
+    "application": "recorder",
+    "label": "S0",
+    "sha256": "51b94020b878b638e22ad501df9eeb0138f4d4317c755b66771167689a08d759",
+    "sourcePid": 35180,
+    "output": "recorder-resource-failure/manager1-offline"
+  },
+  {
+    "phase": "save",
+    "managerPid": 23328,
+    "application": "recorder",
+    "label": "SA",
+    "sha256": "9e02484cdd6c850457e7c6cfee6c17f21df804ad5b9dac6b6430f12a50ae3582",
+    "sourcePid": 30736,
+    "output": "recorder-resource-failure/manager1-offline"
+  },
+  {
+    "phase": "save",
+    "managerPid": 23328,
+    "application": "recorder",
+    "label": "SB",
+    "sha256": "73ce408779e13f079a5e8264c94138a72996fff97d338a6ada6f7ca05b79c6ab",
+    "sourcePid": 41988,
+    "output": "recorder-resource-failure/manager1-offline"
+  },
+  {
+    "phase": "restore",
+    "managerPid": 27256,
+    "application": "recorder",
+    "label": "S0",
+    "sha256": "51b94020b878b638e22ad501df9eeb0138f4d4317c755b66771167689a08d759",
+    "sourcePid": 35180,
+    "output": "recorder-resource-failure/manager2"
+  },
+  {
+    "phase": "restore",
+    "managerPid": 27256,
+    "application": "recorder",
+    "label": "SA",
+    "sha256": "9e02484cdd6c850457e7c6cfee6c17f21df804ad5b9dac6b6430f12a50ae3582",
+    "sourcePid": 30736,
+    "output": "recorder-resource-failure/manager2"
+  },
+  {
+    "phase": "restore",
+    "managerPid": 27256,
+    "application": "recorder",
+    "label": "SB",
+    "sha256": "73ce408779e13f079a5e8264c94138a72996fff97d338a6ada6f7ca05b79c6ab",
+    "sourcePid": 41988,
+    "output": "recorder-resource-failure/manager2"
+  },
+  {
+    "phase": "save",
+    "managerPid": 31616,
+    "application": "recorder",
+    "label": "S0",
+    "sha256": "c1d1f6d43f9b7f9fb0bef76a6ed294204f4570b1579066672b1690728cbb2172",
+    "sourcePid": 38028,
+    "output": "recorder-query-capacity/manager1-offline"
+  },
+  {
+    "phase": "save",
+    "managerPid": 31616,
+    "application": "recorder",
+    "label": "SA",
+    "sha256": "16b76660bae1e5d12ff9bf8d43cfc7ef3265c6ee9b5547bdb093b31e7c43543c",
+    "sourcePid": 37008,
+    "output": "recorder-query-capacity/manager1-offline"
+  },
+  {
+    "phase": "save",
+    "managerPid": 31616,
+    "application": "recorder",
+    "label": "SB",
+    "sha256": "6ad64e29d0c65275e13322960a5cbc25c9e204a5141990c56d64407304a30118",
+    "sourcePid": 8496,
+    "output": "recorder-query-capacity/manager1-offline"
+  },
+  {
+    "phase": "restore",
+    "managerPid": 34784,
+    "application": "recorder",
+    "label": "S0",
+    "sha256": "c1d1f6d43f9b7f9fb0bef76a6ed294204f4570b1579066672b1690728cbb2172",
+    "sourcePid": 38028,
+    "output": "recorder-query-capacity/manager2"
+  },
+  {
+    "phase": "restore",
+    "managerPid": 34784,
+    "application": "recorder",
+    "label": "SA",
+    "sha256": "16b76660bae1e5d12ff9bf8d43cfc7ef3265c6ee9b5547bdb093b31e7c43543c",
+    "sourcePid": 37008,
+    "output": "recorder-query-capacity/manager2"
+  },
+  {
+    "phase": "restore",
+    "managerPid": 34784,
+    "application": "recorder",
+    "label": "SB",
+    "sha256": "6ad64e29d0c65275e13322960a5cbc25c9e204a5141990c56d64407304a30118",
+    "sourcePid": 8496,
+    "output": "recorder-query-capacity/manager2"
+  }
+]

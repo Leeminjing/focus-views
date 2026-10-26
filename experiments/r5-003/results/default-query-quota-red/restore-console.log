@@ -1,0 +1,8 @@
+RA.CET-and-CFG-enabled: pass (read actual process policies; no mitigation policy is modified)
+RA.ordinary-CPP-return-chain: pass (independent fixture oracle confirms real C++ returns and original computation)
+RA.original-S0-state: pass (test-client business state matches raw capture)
+RA.native-initial-snapshot: pass (native control and original Undo match selected Snapshot after actual C++ returns)
+RA.private-file-version: pass (private workspace bytes match captured completed file version)
+initial.actual-GDI: pass (private native PrintWindow/WM_PRINT helper records actual target paint; script checks counter/control pixels)
+RA.input-session-neutral: pass (target GUI-thread native queries after acknowledged key-up/release handshake, before application input)
+RA.input-processed-before-publication: pass (owner GUI thread processed managed mouse move/barrier and native control readback without changing Snapshot state)

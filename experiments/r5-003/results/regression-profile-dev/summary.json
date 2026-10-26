@@ -1,0 +1,57 @@
+{
+  "profile": "acknowledged-ring",
+  "sourceHead": "0f5886e80760a8c0ee457497fb8da2cf7823093a",
+  "affectedExperiment": "R5-002",
+  "oldNestedDependenciesModified": false,
+  "controllerAssertionsModified": false,
+  "channelAbiChanged": false,
+  "inputApiExpanded": false,
+  "dependencyChanges": [
+    {
+      "file": "helper.exe",
+      "before": "a61581bea676c33d59c802733b15942c133f9fa35a931f3ae65bb34416b03006",
+      "after": "33944ff375680530933ff0db85fc4399a58c257d04165c618d7d6944c118bc79",
+      "source": "D:\\focus-views\\experiments\\r5-003\\out\\helper.exe",
+      "backup": "D:\\focus-views\\experiments\\r5-003\\results\\regression-profile-dev\\helper.exe"
+    },
+    {
+      "file": "runtime304.dll",
+      "before": "60996ca1c7ff27905b4dfd99e69ff2bac05cffadafa26d25259874222317e31f",
+      "after": "32ecdf71dc04fafc431d96f50c66773eee8e3ea841284b35016a7c50ecb41e2d",
+      "source": "D:\\focus-views\\experiments\\r5-003\\out\\runtime304.dll",
+      "backup": "D:\\focus-views\\experiments\\r5-003\\results\\regression-profile-dev\\runtime304.dll"
+    }
+  ],
+  "recoveryAndApplicationBinaries": [
+    {
+      "file": "manager.exe",
+      "sha256": "4eb93353984488fc07101fb1315fc5e7bc20187fd40cf4d8aab3441ef48ed48e",
+      "unchanged": true
+    },
+    {
+      "file": "fixture.exe",
+      "sha256": "4ce0f892aafd9f062e4c5677c9fd50e8d75fdddd545340fd8fc9e25d89f30024",
+      "unchanged": true
+    },
+    {
+      "file": "legacy.exe",
+      "sha256": "7bcf8518f5894420679dc3e41ab568e5c6ce613c26c7f0652387ae408bd9172f",
+      "unchanged": true
+    },
+    {
+      "file": "second.exe",
+      "sha256": "c05ab848709e00f709b12b047c02177520558e163b99047be7aa6fc0bd81eb62",
+      "unchanged": true
+    },
+    {
+      "file": "kernel.lib",
+      "sha256": "d9d0a53c5d50f1cfc8d52a2a5280a0acdb24ebc8fdfb832bacb8a139752bc181",
+      "unchanged": true
+    },
+    {
+      "file": "target.lib",
+      "sha256": "e3ef4898200f8cd74e3c462a0a8b8e9c692db20ea92ef388e1b816a7ffda029b",
+      "unchanged": true
+    }
+  ]
+}
