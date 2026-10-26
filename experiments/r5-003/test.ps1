@@ -181,6 +181,7 @@ Check 'test-source-unchanged-during-run' ((Sha $PSCommandPath) -eq $testSourceSh
 $bodyPassed=$errors.Count -eq 0 -and @($checks|Where-Object{-not $_.passed}).Count -eq 0
 $regression='not_run'
 if(-not $SkipRegression){try{
+ & (Join-Path $PSScriptRoot 'prepare-regression-input.ps1') -OutDir $OutDir -EvidenceDir (Join-Path $ResultsDir 'regression-input-profile') | Tee-Object -FilePath (Join-Path $ResultsDir 'regression-input-profile-console.log')
  & (Join-Path $PSScriptRoot '../r5-002/test.ps1') -ResultsDir (Join-Path $ResultsDir 'r5-002-regression') | Tee-Object -FilePath (Join-Path $ResultsDir 'regression-console.log')
  $old=Get-Content -Raw (Join-Path $ResultsDir 'r5-002-regression/summary.json')|ConvertFrom-Json
  Check 'R5-002-and-all-nested-regressions' ($old.allEvidenceChecksPassed -and $old.oldRegressions -eq 'passed');$regression=if($old.allEvidenceChecksPassed -and $old.oldRegressions -eq 'passed'){'passed'}else{'failed'}
