@@ -42,6 +42,7 @@ template<class Client>class Restart : public Experiment<Client> {
         try{v.child->stop();}catch(...){if(!failure)failure=std::current_exception();}v.child.reset();if(failure)std::rethrow_exception(failure);
     }
     void record_snapshot(const CaseSnapshot& s,const char* label,Session& session,unsigned slot){
+        if(failed_)throw Error("snapshot.failed_evidence",ERROR_INVALID_DATA);
         const auto path=store_/(std::string(label)+".fvs");r5003::save(path,s);session.packets[slot]=hash(read(path));session.fingerprints[slot]=this->fingerprint(s,std::string(label)+"-disk-published");
         log_.emit("snapshot_disk_published","\"label\":"+json(label)+",\"file\":"+json(path.wstring().c_str())+",\"sha256\":"+json(session.packets[slot])+",\"fingerprint\":"+json(session.fingerprints[slot])+",\"sourcePid\":"+std::to_string(s.meta.pid)+",\"managerPid\":"+std::to_string(GetCurrentProcessId()));
     }
@@ -78,8 +79,9 @@ public:
             run_until(*source,[&]{return source->metadata().published==1;},"source.business_initialization");
             auto in=this->input(*source);this->select_prefix(*source,*in);this->close_input(*source,*in);in.reset();this->freeze(*source);
             const auto resources=this->resource(*source,1,"S0");this->capture(*source,"S0");this->post(*source,checkpoint_message);this->until_checkpoint(*source);
-            auto s=this->save(*source);s.resources=resources;this->persist(s,"S0");record_snapshot(s,"S0",session,0);
+            auto s=this->save(*source);s.resources=resources;this->persist(s,"S0");
             verify("source.initialization-once",source->initialized==1&&source->prefixes_once(),"external debug events confirm source work once");
+            record_snapshot(s,"S0",session,0);
             source->resume();source->wait("continued");source->resume();this->running(*source);this->post(*source,WM_CHAR,L'!');
             verify("source.changed-after-S0",this->state(*source).length>s.work.length,"source evolves after immutable S0");source->stop();source.reset();
             this->build_view(a,"A",s);this->build_view(b,"B",s,a.child.get());session.a=instance(a.child->p);session.b=instance(b.child->p);this->alive({a.child.get(),b.child.get()},"save-AB");
