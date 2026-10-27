@@ -26,6 +26,8 @@
 
 ## 当前状态
 
-已编译并实际运行最小 staging 拒绝和提交后恢复；首轮 34 个、后续 42 个开发场景均保留原始 false summary：两款应用的 RB 资源失败场景均未通过 Desktop 消失核对。进程退出、观测句柄/Job 释放顺序调整、枚举替代打开及独立监督阶段的有界对照均未解决该红项，未保留无效绕行作为成功路径。首轮正式矩阵 63 个场景、2,895 项检查中仍有上述两项红项；完整旧回归通过。随后在已响应且未发布的窗口失败路径增加目标 GUI 线程原生 WM_CLOSE 与 HWND 失效核对，最小 fixture 实验通过；新双轮矩阵和完整回归尚待完成，不提前宣布 R5-004 通过。历史 CreateProcessW/5 门禁独立保留，人工宿主交互未执行。
+[正式报告](results/r5004/report.md)：R5-004 尚未通过。最新 g 的 63 个场景、1,982 项证据检查中有 17 项失败；8 个提交后崩溃完整恢复正例和 32 个提交前安全拒绝通过，但恢复中再次崩溃后的新操作遇到映像基址变化，执行恢复拒绝且停止点上的失败 Desktop 清理未确认。后续所有权门禁拒绝继续使用未完成尝试。120 个已发布固定版本的内容仍与最初哈希一致。
+
+v/f 两次正式运行的完整旧回归均实际通过，原始 false summary 不改写；g 没有重复运行未改变输入的旧套件。发布前只读错误守卫验证不计作新原生实验。历史 CreateProcessW/5 门禁独立保留，人工宿主交互未执行。
 
 原生依据：[TerminateProcess 与等待退出](https://learn.microsoft.com/en-us/windows/win32/api/processthreadsapi/nf-processthreadsapi-terminateprocess)、[嵌套 Job 的归属和终止](https://learn.microsoft.com/en-us/windows/win32/procthread/nested-jobs)、[进程结束与对象引用生命周期](https://learn.microsoft.com/en-us/windows/win32/procthread/terminating-a-process)。文档依据与本机观测分别报告，不从 Job 标志本身推导恢复或清理成功。

@@ -1,0 +1,94 @@
+[
+  {
+    "application": "fixture",
+    "sourceA": {
+      "type": "runtime_prepared",
+      "tickMs": 21715328,
+      "view": "A",
+      "pid": 26068,
+      "image": 140700915924992,
+      "window": 1642162,
+      "shadowPolicy": 261,
+      "originalStackLow": 607895158784,
+      "originalStackHigh": 607896207360,
+      "managedStackLow": 1859720908800,
+      "managedStackHigh": 1859723001856,
+      "reportedStackLow": 607895158784,
+      "reportedStackHigh": 1859723001856
+    },
+    "targetRA": {
+      "type": "runtime_prepared",
+      "tickMs": 21767437,
+      "view": "RA",
+      "pid": 8752,
+      "image": 140700006023168,
+      "window": 82838640,
+      "shadowPolicy": 261,
+      "originalStackLow": 498664996864,
+      "originalStackHigh": 498666045440,
+      "managedStackLow": 1859720908800,
+      "managedStackHigh": 1859723001856,
+      "reportedStackLow": 498664996864,
+      "reportedStackHigh": 1859723001856
+    },
+    "sourceImageBaseHex": "0x7ff77c1d0000",
+    "targetImageBaseHex": "0x7ff745e10000",
+    "sameImageBase": false,
+    "targetGuard": {
+      "type": "view_restore_rejected",
+      "tickMs": 21767609,
+      "view": "RA",
+      "api": "restore.build_or_image_identity",
+      "error": 1306,
+      "published": false,
+      "workspaceExists": false
+    },
+    "inference": "Image bases demonstrably differ. The reason Windows chose a different base is not established."
+  },
+  {
+    "application": "recorder",
+    "sourceA": {
+      "type": "runtime_prepared",
+      "tickMs": 21812187,
+      "view": "A",
+      "pid": 45508,
+      "image": 140699967029248,
+      "window": 44957952,
+      "shadowPolicy": 261,
+      "originalStackLow": 523004674048,
+      "originalStackHigh": 523005722624,
+      "managedStackLow": 1868310908928,
+      "managedStackHigh": 1868313001984,
+      "reportedStackLow": 523004674048,
+      "reportedStackHigh": 1868313001984
+    },
+    "targetRA": {
+      "type": "runtime_prepared",
+      "tickMs": 21864093,
+      "view": "RA",
+      "pid": 12004,
+      "image": 140699363966976,
+      "window": 85396008,
+      "shadowPolicy": 261,
+      "originalStackLow": 709185503232,
+      "originalStackHigh": 709186551808,
+      "managedStackLow": 1868310908928,
+      "managedStackHigh": 1868313001984,
+      "reportedStackLow": 709185503232,
+      "reportedStackHigh": 1868313001984
+    },
+    "sourceImageBaseHex": "0x7ff7438e0000",
+    "targetImageBaseHex": "0x7ff71f9c0000",
+    "sameImageBase": false,
+    "targetGuard": {
+      "type": "view_restore_rejected",
+      "tickMs": 21864218,
+      "view": "RA",
+      "api": "restore.build_or_image_identity",
+      "error": 1306,
+      "published": false,
+      "workspaceExists": false
+    },
+    "inference": "Image bases demonstrably differ. The reason Windows chose a different base is not established."
+  }
+]

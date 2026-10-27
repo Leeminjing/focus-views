@@ -1,0 +1,21 @@
+{
+  "allRequiredEvidencePassed": false,
+  "matrix": "g/summary.json",
+  "oldRegression": "f/reg3/summary.json",
+  "matrixOldRegressionRerun": false,
+  "reason": "g failed when target image bases changed. Restore was refused and unconfirmed desktop cleanup blocked later attempts. f old regressions really passed with unchanged dependencies; neither that result nor the post-run diagnostic guard makes g recovery pass.",
+  "checks": {
+    "latestCrashMatrixPassed": false,
+    "realCompleteOldRegressionPassed": true,
+    "oldRegressionBuildUnchanged": true,
+    "oldRegressionInputsUnchanged": true,
+    "latestNativeInputsMatchBuild": true,
+    "archivedTestAndOracleMatchActualRun": true
+  },
+  "firstFormalRun": "v/summary.json remains false: two desktop cleanups",
+  "secondFormalRun": "f/summary.json remains false: one image-query observation failure; nested regression passed",
+  "currentDriverMatchesG": false,
+  "postRunReadOnlyGuardVerified": true,
+  "gateClosed": false,
+  "hostRebootRecoveryVerified": false
+}
