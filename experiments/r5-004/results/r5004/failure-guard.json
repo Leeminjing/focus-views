@@ -1,0 +1,50 @@
+{
+  "diagnosticGuardVerified": true,
+  "sourceFailure": "g/fixture-fault-resource-failure/restore/manager/recovery.jsonl",
+  "nativeApplicationsStarted": false,
+  "nativeMatrixRerun": false,
+  "actualError": "Restore failed before dependent evidence: {\"type\":\"recovery_failure\",\"tickMs\":21782515,\"api\":\"recovery.owner_cleanup_unconfirmed\",\"error\":170,\"message\":\"recovery.owner_cleanup_unconfirmed code=170 \"}",
+  "underlyingRecoveryPassed": false,
+  "observedChecks": [
+    {
+      "name": "primary-refusal.owner.explicit-standard-handle-inheritance",
+      "passed": true
+    },
+    {
+      "name": "primary-refusal.owner.supervisor-protocol",
+      "passed": true
+    },
+    {
+      "name": "primary-refusal.owner.physical-cleanup",
+      "passed": true
+    },
+    {
+      "name": "primary-refusal.owner.all-pinned-instance-identities-exited",
+      "passed": true
+    },
+    {
+      "name": "primary-refusal.owner.job-empty-before-release",
+      "passed": true
+    },
+    {
+      "name": "primary-refusal.owner.every-created-desktop-absent",
+      "passed": true
+    },
+    {
+      "name": "primary-refusal.owner.owned-handle-closes",
+      "passed": true
+    },
+    {
+      "name": "primary-refusal.owner.no-failed-native-assertions",
+      "passed": true
+    },
+    {
+      "name": "primary-refusal.owner.not-forced",
+      "passed": true
+    },
+    {
+      "name": "primary-refusal.manager-normal-return",
+      "passed": false
+    }
+  ]
+}

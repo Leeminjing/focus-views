@@ -1,0 +1,33 @@
+{"type":"manager_launch_attempt","tickMs":21767015,"exe":"D:\\focus-views\\experiments\\r5-004\\out\\manager.exe","command":"\"D:\\focus-views\\experiments\\r5-004\\out\\manager.exe\" \"--client\" \"D:\\focus-views\\experiments\\r5-004\\out\\fixture-client.dll\" \"--fixture\" \"D:\\focus-views\\experiments\\r5-004\\out\\fixture.exe\" \"--output\" \"D:\\focus-views\\experiments\\r5-004\\results\\g\\fixture-recrash-view-resources-RA\\explicit-new-operation\\manager\" \"--store\" \"D:\\focus-views\\experiments\\r5-004\\results\\g\\fixture-committed-logged-1\\store\" \"--mode\" \"restore\" \"--scenario\" \"positive\" \"--gate\" \"Local\\fv_r5004_5736_134375577692792717\" \"--previous\" \"D:\\focus-views\\experiments\\r5-004\\results\\g\\fixture-recrash-view-resources-RA\\interrupted\\supervisor\\owner.fvc\"","workingDirectory":"D:\\focus-views\\experiments\\r5-004\\out","desktop":"","creationFlags":134742020,"inheritHandles":true,"utcFileTime":134375577693018933,"callerPid":5736,"callerTid":49416,"callerSid":"S-1-5-21-2703919260-1801774295-1865065416-1004","tokenError":0,"elevated":0,"integrityRid":8192,"handleCount":112,"gdiObjects":0,"userObjects":1,"desktopOpenError":6,"desktopDacl":"unavailable","desktopDaclError":0,"exeReadError":0,"exeExecuteError":0,"childProcessPolicy":0,"childPolicyError":0,"inJob":1,"jobQueryError":0,"jobLimitFlags":10240,"jobProcessLimit":0,"jobActiveProcesses":4,"jobUiRestrictions":0,"availablePhysicalBytes":366309376,"explicitInheritedHandleCount":3}
+{"type":"job_instance_pinned","tickMs":21767062,"pid":51164,"created":134375577693037235,"inJob":true,"image":"D:\\focus-views\\experiments\\r5-004\\out\\manager.exe","imageQueryError":0,"exitConfirmedDuringImageQuery":false}
+{"type":"manager_contained_before_resume","tickMs":21767062,"pid":51164,"created":134375577693037235,"killPoint":""}
+{"type":"owned_handle_closed","tickMs":21767062,"name":"manager-thread","closed":true}
+{"type":"job_instance_pinned","tickMs":21767093,"pid":35756,"created":134375577693491663,"inJob":true,"image":"C:\\Windows\\System32\\conhost.exe","imageQueryError":0,"exitConfirmedDuringImageQuery":false}
+{"type":"job_instance_pinned","tickMs":21767343,"pid":8752,"created":134375577696192578,"inJob":true,"image":"D:\\focus-views\\experiments\\r5-004\\out\\fixture.exe","imageQueryError":0,"exitConfirmedDuringImageQuery":false}
+{"type":"job_instance_pinned","tickMs":21767406,"pid":47992,"created":134375577696519186,"inJob":true,"image":"C:\\Windows\\System32\\conhost.exe","imageQueryError":0,"exitConfirmedDuringImageQuery":false}
+{"type":"job_instance_pinned","tickMs":21767468,"pid":8632,"created":134375577697180044,"inJob":true,"image":"D:\\focus-views\\experiments\\r5-004\\out\\helper.exe","imageQueryError":0,"exitConfirmedDuringImageQuery":false}
+{"type":"job_instance_pinned","tickMs":21767468,"pid":3868,"created":134375577697306802,"inJob":true,"image":"C:\\Windows\\System32\\conhost.exe","imageQueryError":0,"exitConfirmedDuringImageQuery":false}
+{"type":"manager_handles_after_exit","tickMs":21767625,"nativeResult":1,"error":0,"count":0}
+{"type":"job_after_manager_exit","tickMs":21767625,"remaining":0,"automaticCleanup":true}
+{"type":"instance_exit_confirmed","tickMs":21767625,"pid":3868,"created":134375577697306802,"exit":0}
+{"type":"instance_exit_confirmed","tickMs":21767625,"pid":8632,"created":134375577697180044,"exit":0}
+{"type":"instance_exit_confirmed","tickMs":21767625,"pid":8752,"created":134375577696192578,"exit":3808755713}
+{"type":"instance_exit_confirmed","tickMs":21767625,"pid":35756,"created":134375577693491663,"exit":0}
+{"type":"instance_exit_confirmed","tickMs":21767625,"pid":47992,"created":134375577696519186,"exit":0}
+{"type":"instance_exit_confirmed","tickMs":21767625,"pid":51164,"created":134375577693037235,"exit":2}
+{"type":"owned_handle_closed","tickMs":21767625,"name":"pinned-instance","closed":true}
+{"type":"owned_handle_closed","tickMs":21767625,"name":"pinned-instance","closed":true}
+{"type":"owned_handle_closed","tickMs":21767625,"name":"pinned-instance","closed":true}
+{"type":"owned_handle_closed","tickMs":21767625,"name":"pinned-instance","closed":true}
+{"type":"owned_handle_closed","tickMs":21767625,"name":"pinned-instance","closed":true}
+{"type":"owned_handle_closed","tickMs":21767625,"name":"pinned-instance","closed":true}
+{"type":"owned_handle_closed","tickMs":21767625,"name":"manager-process","closed":true}
+{"type":"owned_handle_closed","tickMs":21767625,"name":"supervisor-job","closed":true}
+{"type":"owned_handle_closed","tickMs":21767625,"name":"ready-event","closed":true}
+{"type":"owned_handle_closed","tickMs":21767625,"name":"release-event","closed":true}
+{"type":"owned_handle_closed","tickMs":21767625,"name":"gate-mapping","closed":true}
+{"type":"owned_handle_closed","tickMs":21767625,"name":"manager-stdout","closed":true}
+{"type":"owned_handle_closed","tickMs":21767625,"name":"manager-stderr","closed":true}
+{"type":"owned_handle_closed","tickMs":21767625,"name":"manager-stdin","closed":true}
+{"type":"supervisor_failure","tickMs":21772625,"api":"crash.desktop_retained","error":170,"message":"crash.desktop_retained code=170 "}
+{"type":"failure_process_cleanup_confirmed","tickMs":21772625,"ownedProcessesExited":true,"ownedHandlesClosed":true}
