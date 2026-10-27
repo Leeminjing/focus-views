@@ -15,6 +15,7 @@ function Optional-Rows([string]$Path){if(Test-Path -LiteralPath $Path){Rows $Pat
 function Crash-Audit([string]$Manager,[string]$Supervisor,[string]$Label,[bool]$Killed){
  $s=Get-Content -Raw -LiteralPath (Join-Path $Supervisor 'summary.json')|ConvertFrom-Json
  $events=Rows (Join-Path $Supervisor 'supervisor.jsonl');$m=@(Optional-Rows (Join-Path $Manager 'controller.jsonl'))
+ $launch=@($events|Where-Object type -eq 'manager_launch_attempt');Check "$Label.explicit-standard-handle-inheritance" ($launch.Count -eq 1 -and $launch[0].inheritHandles -and $launch[0].explicitInheritedHandleCount -eq 3)
  Check "$Label.supervisor-protocol" $s.protocolPassed;Check "$Label.physical-cleanup" $s.cleanupVerified
  $pins=@($events|Where-Object type -eq 'job_instance_pinned');$exits=@($events|Where-Object type -eq 'instance_exit_confirmed')
  Check "$Label.all-pinned-instance-identities-exited" ($pins.Count -eq $exits.Count -and @($pins|Where-Object{$pin=$_;@($exits|Where-Object{$_.pid -eq $pin.pid -and $_.created -eq $pin.created}).Count -ne 1}).Count -eq 0)
