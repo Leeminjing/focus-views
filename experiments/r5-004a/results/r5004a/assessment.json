@@ -1,0 +1,548 @@
+{
+  "finalMatrix": {
+    "allEvidenceChecksPassed": true,
+    "checks": 1538,
+    "failedChecks": [],
+    "cases": 12,
+    "regressions": "not_run",
+    "errors": []
+  },
+  "history": {
+    "a": {
+      "allEvidenceChecksPassed": true,
+      "checks": 521,
+      "failedChecks": [],
+      "cases": 4,
+      "regressions": "not_run",
+      "errors": []
+    },
+    "b": {
+      "allEvidenceChecksPassed": false,
+      "checks": 412,
+      "failedChecks": [
+        "recorder-1.evidence-complete",
+        "R5-003-and-complete-nested-regressions"
+      ],
+      "cases": 4,
+      "regressions": "failed",
+      "errors": [
+        {
+          "case": "recorder-1",
+          "error": "Supervisor protocol/cleanup failed; preserve summary D:\\focus-views\\experiments\\r5-004a\\results\\b\\recorder-1\\reject\\supervisor",
+          "scriptStack": "at Run-Supervised, <No file>: line 8\r\nat <ScriptBlock>, D:\\focus-views\\experiments\\r5-004a\\test.ps1: line 21\r\nat Safe-Case, <No file>: line 1\r\nat <ScriptBlock>, D:\\focus-views\\experiments\\r5-004a\\test.ps1: line 18\r\nat <ScriptBlock>, <No file>: line 10"
+        },
+        {
+          "case": "regression",
+          "error": "MSVC x64 not found; pass -MsvcRoot."
+        }
+      ]
+    },
+    "c": {
+      "allEvidenceChecksPassed": true,
+      "checks": 530,
+      "failedChecks": [],
+      "cases": 4,
+      "regressions": "passed",
+      "errors": []
+    },
+    "d": {
+      "allEvidenceChecksPassed": false,
+      "checks": 1184,
+      "failedChecks": [
+        "fixture-abort-wrong-thread.no-usable-View",
+        "fixture-abort-wrong-thread.unconfirmed-cleanup-no-certificate"
+      ],
+      "cases": 10,
+      "regressions": "not_run",
+      "errors": []
+    },
+    "e": {
+      "allEvidenceChecksPassed": true,
+      "checks": 1538,
+      "failedChecks": [],
+      "cases": 12,
+      "regressions": "not_run",
+      "errors": []
+    },
+    "f": {
+      "allEvidenceChecksPassed": true,
+      "checks": 1538,
+      "failedChecks": [],
+      "cases": 12,
+      "regressions": "not_run",
+      "errors": []
+    }
+  },
+  "nativeTotals": {
+    "nativeWindowAborts": 6,
+    "survivingViewFrames": 2,
+    "desktopsAbsent": 86,
+    "instancesExited": 666,
+    "deferredImageErrors": 1,
+    "sourceWriteAbortViolations": 0,
+    "fullFreshRestores": 12
+  },
+  "operations": [
+    {
+      "root": "results/f/fixture-1/save",
+      "managerPid": 13080,
+      "created": 134375680622409380,
+      "exit": 3842244609,
+      "cleanupVerified": true,
+      "instances": 20,
+      "desktops": 3
+    },
+    {
+      "root": "results/f/fixture-1/reject",
+      "managerPid": 38860,
+      "created": 134375680661414614,
+      "exit": 2,
+      "cleanupVerified": true,
+      "instances": 8,
+      "desktops": 1
+    },
+    {
+      "root": "results/f/fixture-1/fresh",
+      "managerPid": 8892,
+      "created": 134375680677265938,
+      "exit": 0,
+      "cleanupVerified": true,
+      "instances": 26,
+      "desktops": 3
+    },
+    {
+      "root": "results/f/fixture-2/save",
+      "managerPid": 48344,
+      "created": 134375680736178731,
+      "exit": 3842244609,
+      "cleanupVerified": true,
+      "instances": 20,
+      "desktops": 3
+    },
+    {
+      "root": "results/f/fixture-2/reject",
+      "managerPid": 36244,
+      "created": 134375680764119735,
+      "exit": 2,
+      "cleanupVerified": true,
+      "instances": 8,
+      "desktops": 1
+    },
+    {
+      "root": "results/f/fixture-2/fresh",
+      "managerPid": 45048,
+      "created": 134375680771837810,
+      "exit": 0,
+      "cleanupVerified": true,
+      "instances": 26,
+      "desktops": 3
+    },
+    {
+      "root": "results/f/recorder-1/save",
+      "managerPid": 42068,
+      "created": 134375680827903129,
+      "exit": 3842244609,
+      "cleanupVerified": true,
+      "instances": 20,
+      "desktops": 3
+    },
+    {
+      "root": "results/f/recorder-1/reject",
+      "managerPid": 25828,
+      "created": 134375680855981256,
+      "exit": 2,
+      "cleanupVerified": true,
+      "instances": 8,
+      "desktops": 1
+    },
+    {
+      "root": "results/f/recorder-1/fresh",
+      "managerPid": 42540,
+      "created": 134375680861532929,
+      "exit": 0,
+      "cleanupVerified": true,
+      "instances": 26,
+      "desktops": 3
+    },
+    {
+      "root": "results/f/recorder-2/save",
+      "managerPid": 39668,
+      "created": 134375680921435055,
+      "exit": 3842244609,
+      "cleanupVerified": true,
+      "instances": 20,
+      "desktops": 3
+    },
+    {
+      "root": "results/f/recorder-2/reject",
+      "managerPid": 10952,
+      "created": 134375680946907447,
+      "exit": 2,
+      "cleanupVerified": true,
+      "instances": 8,
+      "desktops": 1
+    },
+    {
+      "root": "results/f/recorder-2/fresh",
+      "managerPid": 40428,
+      "created": 134375680952542252,
+      "exit": 0,
+      "cleanupVerified": true,
+      "instances": 26,
+      "desktops": 3
+    },
+    {
+      "root": "results/f/fixture-RB/save",
+      "managerPid": 40584,
+      "created": 134375681002597872,
+      "exit": 3842244609,
+      "cleanupVerified": true,
+      "instances": 20,
+      "desktops": 3
+    },
+    {
+      "root": "results/f/fixture-RB/reject",
+      "managerPid": 46048,
+      "created": 134375681024645789,
+      "exit": 2,
+      "cleanupVerified": true,
+      "instances": 16,
+      "desktops": 2
+    },
+    {
+      "root": "results/f/fixture-RB/fresh",
+      "managerPid": 25708,
+      "created": 134375681038590648,
+      "exit": 0,
+      "cleanupVerified": true,
+      "instances": 26,
+      "desktops": 3
+    },
+    {
+      "root": "results/f/recorder-RB/save",
+      "managerPid": 15468,
+      "created": 134375681087535659,
+      "exit": 3842244609,
+      "cleanupVerified": true,
+      "instances": 20,
+      "desktops": 3
+    },
+    {
+      "root": "results/f/recorder-RB/reject",
+      "managerPid": 31108,
+      "created": 134375681111091743,
+      "exit": 2,
+      "cleanupVerified": true,
+      "instances": 16,
+      "desktops": 2
+    },
+    {
+      "root": "results/f/recorder-RB/fresh",
+      "managerPid": 8088,
+      "created": 134375681127363339,
+      "exit": 0,
+      "cleanupVerified": true,
+      "instances": 26,
+      "desktops": 3
+    },
+    {
+      "root": "results/f/fixture-abort-wrong-thread/save",
+      "managerPid": 43684,
+      "created": 134375681203731482,
+      "exit": 3842244609,
+      "cleanupVerified": true,
+      "instances": 20,
+      "desktops": 3
+    },
+    {
+      "root": "results/f/fixture-abort-wrong-thread/reject",
+      "managerPid": 50212,
+      "created": 134375681230613492,
+      "exit": 2,
+      "cleanupVerified": true,
+      "instances": 10,
+      "desktops": 1
+    },
+    {
+      "root": "results/f/fixture-abort-wrong-thread/fresh",
+      "managerPid": 47656,
+      "created": 134375681235403835,
+      "exit": 0,
+      "cleanupVerified": true,
+      "instances": 26,
+      "desktops": 3
+    },
+    {
+      "root": "results/f/fixture-abort-mapping-missing/save",
+      "managerPid": 37460,
+      "created": 134375681315110322,
+      "exit": 3842244609,
+      "cleanupVerified": true,
+      "instances": 20,
+      "desktops": 3
+    },
+    {
+      "root": "results/f/fixture-abort-mapping-missing/reject",
+      "managerPid": 6176,
+      "created": 134375681344023675,
+      "exit": 2,
+      "cleanupVerified": true,
+      "instances": 8,
+      "desktops": 1
+    },
+    {
+      "root": "results/f/fixture-abort-mapping-missing/fresh",
+      "managerPid": 49576,
+      "created": 134375681348459768,
+      "exit": 0,
+      "cleanupVerified": true,
+      "instances": 26,
+      "desktops": 3
+    },
+    {
+      "root": "results/f/fixture-checkpoint-postwrite-reject/save",
+      "managerPid": 48640,
+      "created": 134375681416933849,
+      "exit": 3842244609,
+      "cleanupVerified": true,
+      "instances": 20,
+      "desktops": 3
+    },
+    {
+      "root": "results/f/fixture-checkpoint-postwrite-reject/reject",
+      "managerPid": 48708,
+      "created": 134375681445007663,
+      "exit": 2,
+      "cleanupVerified": true,
+      "instances": 8,
+      "desktops": 1
+    },
+    {
+      "root": "results/f/fixture-checkpoint-postwrite-reject/fresh",
+      "managerPid": 42124,
+      "created": 134375681449698492,
+      "exit": 0,
+      "cleanupVerified": true,
+      "instances": 26,
+      "desktops": 3
+    },
+    {
+      "root": "results/f/recorder-abort-wrong-thread/save",
+      "managerPid": 440,
+      "created": 134375681526066933,
+      "exit": 3842244609,
+      "cleanupVerified": true,
+      "instances": 20,
+      "desktops": 3
+    },
+    {
+      "root": "results/f/recorder-abort-wrong-thread/reject",
+      "managerPid": 38320,
+      "created": 134375681552537140,
+      "exit": 2,
+      "cleanupVerified": true,
+      "instances": 8,
+      "desktops": 1
+    },
+    {
+      "root": "results/f/recorder-abort-wrong-thread/fresh",
+      "managerPid": 2632,
+      "created": 134375681557648750,
+      "exit": 0,
+      "cleanupVerified": true,
+      "instances": 26,
+      "desktops": 3
+    },
+    {
+      "root": "results/f/recorder-abort-mapping-missing/save",
+      "managerPid": 28152,
+      "created": 134375681632958200,
+      "exit": 3842244609,
+      "cleanupVerified": true,
+      "instances": 20,
+      "desktops": 3
+    },
+    {
+      "root": "results/f/recorder-abort-mapping-missing/reject",
+      "managerPid": 5044,
+      "created": 134375681658451080,
+      "exit": 2,
+      "cleanupVerified": true,
+      "instances": 8,
+      "desktops": 1
+    },
+    {
+      "root": "results/f/recorder-abort-mapping-missing/fresh",
+      "managerPid": 12960,
+      "created": 134375681663573242,
+      "exit": 0,
+      "cleanupVerified": true,
+      "instances": 26,
+      "desktops": 3
+    },
+    {
+      "root": "results/f/recorder-checkpoint-postwrite-reject/save",
+      "managerPid": 10732,
+      "created": 134375681739920875,
+      "exit": 3842244609,
+      "cleanupVerified": true,
+      "instances": 20,
+      "desktops": 3
+    },
+    {
+      "root": "results/f/recorder-checkpoint-postwrite-reject/reject",
+      "managerPid": 20648,
+      "created": 134375681768182747,
+      "exit": 2,
+      "cleanupVerified": true,
+      "instances": 8,
+      "desktops": 1
+    },
+    {
+      "root": "results/f/recorder-checkpoint-postwrite-reject/fresh",
+      "managerPid": 39152,
+      "created": 134375681773645306,
+      "exit": 0,
+      "cleanupVerified": true,
+      "instances": 26,
+      "desktops": 3
+    }
+  ],
+  "allFinalOperationsCleanupVerified": true,
+  "sourceInputs": [
+    {
+      "file": "experiments/r5-004/manager_main.cpp",
+      "sha256": "f6c8df30f30a71a24192545299a5b45b616425cbf524255adc808713044f2894",
+      "matchesBuildInput": true
+    },
+    {
+      "file": "experiments/r5-004/controller.cpp",
+      "sha256": "72d2415e83aff19330d7f893983f1720355be4986234c923194a43204a599647",
+      "matchesBuildInput": true
+    },
+    {
+      "file": "experiments/r5-004/crash.hpp",
+      "sha256": "c90528bd36a239f8d2e4ab7ea67ae45724b817b3763cd35a1f02befb0833725a",
+      "matchesBuildInput": true
+    },
+    {
+      "file": "experiments/r5-004a/clients/run.hpp",
+      "sha256": "80b4e8fcde11621467ce59a77807ba18b1f8236a055fd2a8908e1ab2bdcdfdd1",
+      "matchesBuildInput": true
+    },
+    {
+      "file": "experiments/r5-004a/clients/fixture_client.cpp",
+      "sha256": "d08181a10efcaa1700f2d379855d862af77c2fe4a8b21794e83c7640ae57b554",
+      "matchesBuildInput": true
+    },
+    {
+      "file": "experiments/r5-004a/clients/recorder_client.cpp",
+      "sha256": "4787c18709a32816fc08589a1f5d012e8169ac38adedf00707ae8c7379ee3e64",
+      "matchesBuildInput": true
+    },
+    {
+      "file": "experiments/r5-004a/build.ps1",
+      "sha256": "f5fe5d85c3c41676a97098b1b3adb2008cd7a0886a74bb13f7a59980efe08a9c",
+      "matchesBuildInput": true
+    },
+    {
+      "file": "experiments/r5-003/clients/restart.hpp",
+      "sha256": "06e563549e260994169427d6e8d25cff73c220c1b045f911bebc4ec8a34798b9",
+      "matchesBuildInput": true
+    },
+    {
+      "file": "experiments/r5-003/runtime/store.cpp",
+      "sha256": "0fe09556701171f38e99f6a96a4209140a85d2dfef98cff74797b8327abab6ea",
+      "matchesBuildInput": true
+    },
+    {
+      "file": "experiments/r5-003/runtime/store.hpp",
+      "sha256": "bf6c39312c61c65dec725185b43f62e503832e72cc16855e72940883a364f242",
+      "matchesBuildInput": true
+    },
+    {
+      "file": "experiments/r5-002/clients/host.hpp",
+      "sha256": "c5c312f6b9bb8d382ce3c4f0ca58a95c83d1567a5f7330145a9287d6d84af979",
+      "matchesBuildInput": true
+    },
+    {
+      "file": "experiments/r5-002/runtime/experiment-points.hpp",
+      "sha256": "4d3ac41410795cd34f143745a8de0dbf1d858acfddf0612fa63ba4f4e713b5ae",
+      "matchesBuildInput": true
+    },
+    {
+      "file": "experiments/r5-002/runtime/processes.hpp",
+      "sha256": "0704d6e27ca4e11d170e64f7aa7e55419a1c7cc80122fee9f2dcfd64a875207e",
+      "matchesBuildInput": true
+    },
+    {
+      "file": "experiments/r5-002/runtime/execution.cpp",
+      "sha256": "5d39339982d8e1714c0d6593da466d74c43e1afd52308150aedfb75c2cf2780a",
+      "matchesBuildInput": true
+    },
+    {
+      "file": "experiments/r5-002/runtime/execution.hpp",
+      "sha256": "1aedf10aab2b27e4d5d8eb17da402aae4fe28a73cb3cefdd15dd9884ca385be0",
+      "matchesBuildInput": true
+    },
+    {
+      "file": "experiments/r5-001a/runtime/native.cpp",
+      "sha256": "21c85ade220a9e5e4232b4cd765cb722017ccaf5994611f05abf431fb9aeb0df",
+      "matchesBuildInput": true
+    },
+    {
+      "file": "experiments/r5-001a/runtime/codec.cpp",
+      "sha256": "521bc6a3147a4e6c088f250e070dd1786be476505356bd71014e3cb76a428b13",
+      "matchesBuildInput": true
+    },
+    {
+      "file": "experiments/r5-004a/stopped-cleanup.hpp",
+      "sha256": "667f5c8510eb6ac1cf7c7f2b23d7638ac8e81b6613473c736661b194db073668",
+      "matchesBuildInput": true
+    },
+    {
+      "file": "experiments/r5-004a/abort-host.hpp",
+      "sha256": "96b9411cb364a511187c2bc0b5dffc941eb8f29faf1c2a68379eaf71e17eff1f",
+      "matchesBuildInput": true
+    },
+    {
+      "file": "experiments/r5-004a/abort-channel.hpp",
+      "sha256": "1654558b08f05f67cd3696f59099d73288245f61616b464e6a99a7523f2cb7b9",
+      "matchesBuildInput": true
+    },
+    {
+      "file": "experiments/r5-004a/abort-helper.cpp",
+      "sha256": "dffdf78c08bd8fcb972bd859e365b4aa5ca9dc9bf8237aae84ea8fa5e7c535d6",
+      "matchesBuildInput": true
+    },
+    {
+      "file": "experiments/r5-004a/abort-runtime.cpp",
+      "sha256": "c493eb2f2d7f7106ea126c2c4ff22d2e9e79daef57c0f43fe83df1e1073a81f6",
+      "matchesBuildInput": true
+    },
+    {
+      "file": "experiments/r5-004a/test.ps1",
+      "sha256": "8ebcca1317b7812067306964ed40217f732866a289cdb5ee5c1870ad30b0b0b5",
+      "matchesBuildInput": true
+    },
+    {
+      "file": "experiments/r5-002/clients/fixture_model.hpp",
+      "sha256": "75bc9f60cd20213f470717a612822f7cef456e6884da7605a2e1b56355488fda",
+      "matchesBuildInput": true
+    },
+    {
+      "file": "experiments/r5-002/clients/recorder_model.hpp",
+      "sha256": "787e726040c7d0c5ffbce7dcd6e1ac8202ff383d01863822fcab13f9ded8876e",
+      "matchesBuildInput": true
+    }
+  ],
+  "oldFullRegressions": {
+    "sourceMatrix": "c",
+    "passed": true,
+    "rerunInFinalF": false
+  },
+  "aslrRelocationVerified": false,
+  "fullR5004Passed": false,
+  "gateClosed": false,
+  "internalWindowsRetentionRootCauseProven": false
+}

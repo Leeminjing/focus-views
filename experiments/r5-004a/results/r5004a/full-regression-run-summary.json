@@ -1,0 +1,2312 @@
+{
+  "allEvidenceChecksPassed": true,
+  "stoppedFailureCleanupVerified": true,
+  "regressions": "passed",
+  "aslrRelocationVerified": false,
+  "fullR5004Passed": false,
+  "gateClosed": false,
+  "manualHostTest": "not_executed",
+  "checks": [
+    {
+      "name": "fixture-1.source.explicit-standard-handle-inheritance",
+      "passed": true
+    },
+    {
+      "name": "fixture-1.source.supervisor-protocol",
+      "passed": true
+    },
+    {
+      "name": "fixture-1.source.physical-cleanup",
+      "passed": true
+    },
+    {
+      "name": "fixture-1.source.all-pinned-instance-identities-exited",
+      "passed": true
+    },
+    {
+      "name": "fixture-1.source.job-empty-before-release",
+      "passed": true
+    },
+    {
+      "name": "fixture-1.source.every-created-desktop-absent",
+      "passed": true
+    },
+    {
+      "name": "fixture-1.source.owned-handle-closes",
+      "passed": true
+    },
+    {
+      "name": "fixture-1.source.no-failed-native-assertions",
+      "passed": true
+    },
+    {
+      "name": "fixture-1.source.GUI-owner-log-required",
+      "passed": true
+    },
+    {
+      "name": "fixture-1.source.native-TerminateProcess-not-exception",
+      "passed": true
+    },
+    {
+      "name": "fixture-1.source.deterministic-native-point",
+      "passed": true
+    },
+    {
+      "name": "fixture-1.source.manager-did-not-run-cleanup-tail",
+      "passed": true
+    },
+    {
+      "name": "fixture-1.source.live-at-death-covered-by-job-proof",
+      "passed": true
+    },
+    {
+      "name": "fixture-1.rejected.explicit-standard-handle-inheritance",
+      "passed": true
+    },
+    {
+      "name": "fixture-1.rejected.supervisor-protocol",
+      "passed": true
+    },
+    {
+      "name": "fixture-1.rejected.physical-cleanup",
+      "passed": true
+    },
+    {
+      "name": "fixture-1.rejected.all-pinned-instance-identities-exited",
+      "passed": true
+    },
+    {
+      "name": "fixture-1.rejected.job-empty-before-release",
+      "passed": true
+    },
+    {
+      "name": "fixture-1.rejected.every-created-desktop-absent",
+      "passed": true
+    },
+    {
+      "name": "fixture-1.rejected.owned-handle-closes",
+      "passed": true
+    },
+    {
+      "name": "fixture-1.rejected.no-failed-native-assertions",
+      "passed": true
+    },
+    {
+      "name": "fixture-1.rejected.not-forced",
+      "passed": true
+    },
+    {
+      "name": "fixture-1.actual-checkpoint-before-source-CPU",
+      "passed": true
+    },
+    {
+      "name": "fixture-1.exact-refusal-no-View-or-source-state-write",
+      "passed": true
+    },
+    {
+      "name": "fixture-1.owner-thread-native-DestroyWindow-and-exit",
+      "passed": true
+    },
+    {
+      "name": "fixture-1.original-exception-dispatched-no-context-write",
+      "passed": true
+    },
+    {
+      "name": "fixture-1.no-swallowed-cleanup-exceptions",
+      "passed": true
+    },
+    {
+      "name": "fixture-1.no-native-cleanup-error",
+      "passed": true
+    },
+    {
+      "name": "fixture-1.system-debug-handles-released-by-Windows",
+      "passed": true
+    },
+    {
+      "name": "fixture-1.own-process-and-thread-handles-closed-before-desktop",
+      "passed": true
+    },
+    {
+      "name": "fixture-1.hook-helper-release-after-pinned-target-exit",
+      "passed": true
+    },
+    {
+      "name": "fixture-1.fixed-Snapshots-and-Artifacts-survive-rejection",
+      "passed": true
+    },
+    {
+      "name": "fixture-1.fresh.owner.explicit-standard-handle-inheritance",
+      "passed": true
+    },
+    {
+      "name": "fixture-1.fresh.owner.supervisor-protocol",
+      "passed": true
+    },
+    {
+      "name": "fixture-1.fresh.owner.physical-cleanup",
+      "passed": true
+    },
+    {
+      "name": "fixture-1.fresh.owner.all-pinned-instance-identities-exited",
+      "passed": true
+    },
+    {
+      "name": "fixture-1.fresh.owner.job-empty-before-release",
+      "passed": true
+    },
+    {
+      "name": "fixture-1.fresh.owner.every-created-desktop-absent",
+      "passed": true
+    },
+    {
+      "name": "fixture-1.fresh.owner.owned-handle-closes",
+      "passed": true
+    },
+    {
+      "name": "fixture-1.fresh.owner.no-failed-native-assertions",
+      "passed": true
+    },
+    {
+      "name": "fixture-1.fresh.owner.not-forced",
+      "passed": true
+    },
+    {
+      "name": "fixture-1.fresh.native.owned-processes-and-desktops-cleaned",
+      "passed": true
+    },
+    {
+      "name": "fixture-1.fresh.native.all-native-assertions",
+      "passed": true
+    },
+    {
+      "name": "fixture-1.fresh.native.RA-initial-real-frame",
+      "passed": true
+    },
+    {
+      "name": "fixture-1.fresh.native.RB-initial-real-frame",
+      "passed": true
+    },
+    {
+      "name": "fixture-1.fresh.native.C-initial-real-frame",
+      "passed": true
+    },
+    {
+      "name": "fixture-1.fresh.native.RA-undo1-real-frame",
+      "passed": true
+    },
+    {
+      "name": "fixture-1.fresh.native.RA-undo2-real-frame",
+      "passed": true
+    },
+    {
+      "name": "fixture-1.fresh.native.RA-continued-input-real-frame",
+      "passed": true
+    },
+    {
+      "name": "fixture-1.fresh.native.RB-undo1-real-frame",
+      "passed": true
+    },
+    {
+      "name": "fixture-1.fresh.native.RB-undo2-real-frame",
+      "passed": true
+    },
+    {
+      "name": "fixture-1.fresh.native.RB-continued-input-real-frame",
+      "passed": true
+    },
+    {
+      "name": "fixture-1.fresh.native.C-final-edit-real-frame",
+      "passed": true
+    },
+    {
+      "name": "fixture-1.fresh.native.RA-final-real-frame",
+      "passed": true
+    },
+    {
+      "name": "fixture-1.fresh.native.RB-final-real-frame",
+      "passed": true
+    },
+    {
+      "name": "fixture-1.fresh.native.C-final-real-frame",
+      "passed": true
+    },
+    {
+      "name": "fixture-1.fresh.native.C-1-Action",
+      "passed": true
+    },
+    {
+      "name": "fixture-1.fresh.native.C-2-Action",
+      "passed": true
+    },
+    {
+      "name": "fixture-1.fresh.native.C-3-Action",
+      "passed": true
+    },
+    {
+      "name": "fixture-1.fresh.native.C-4-Action",
+      "passed": true
+    },
+    {
+      "name": "fixture-1.fresh.native.RA-1-Action",
+      "passed": true
+    },
+    {
+      "name": "fixture-1.fresh.native.RA-2-Action",
+      "passed": true
+    },
+    {
+      "name": "fixture-1.fresh.native.RB-1-Action",
+      "passed": true
+    },
+    {
+      "name": "fixture-1.fresh.native.RB-2-Action",
+      "passed": true
+    },
+    {
+      "name": "fixture-1.fresh.native.C-input-1.jsonl-queries-no-loss-or-duplicate",
+      "passed": true
+    },
+    {
+      "name": "fixture-1.fresh.native.RA-input-1.jsonl-queries-no-loss-or-duplicate",
+      "passed": true
+    },
+    {
+      "name": "fixture-1.fresh.native.RB-input-1.jsonl-queries-no-loss-or-duplicate",
+      "passed": true
+    },
+    {
+      "name": "fixture-1.fresh.manager-normal-return",
+      "passed": true
+    },
+    {
+      "name": "fixture-1.fresh.old-owner-independently-rechecked",
+      "passed": true
+    },
+    {
+      "name": "fixture-1.fresh.exact-restored-Views",
+      "passed": true
+    },
+    {
+      "name": "fixture-1.fresh.no-business-initialization-replay",
+      "passed": true
+    },
+    {
+      "name": "fixture-1.fresh.S0.raw-CPU-stack-memory-computation",
+      "passed": true
+    },
+    {
+      "name": "fixture-1.fresh.S0.loaded-data.bin",
+      "passed": true
+    },
+    {
+      "name": "fixture-1.fresh.S0.loaded-context.bin",
+      "passed": true
+    },
+    {
+      "name": "fixture-1.fresh.S0.loaded-metadata.bin",
+      "passed": true
+    },
+    {
+      "name": "fixture-1.fresh.S0.loaded-execution-layout.bin",
+      "passed": true
+    },
+    {
+      "name": "fixture-1.fresh.S0.loaded-full-stack.bin",
+      "passed": true
+    },
+    {
+      "name": "fixture-1.fresh.S0.loaded-resources.bin",
+      "passed": true
+    },
+    {
+      "name": "fixture-1.fresh.S0.loaded-abi.bin",
+      "passed": true
+    },
+    {
+      "name": "fixture-1.fresh.S0.loaded-returns.bin",
+      "passed": true
+    },
+    {
+      "name": "fixture-1.fresh.S0.loaded-executable.bin",
+      "passed": true
+    },
+    {
+      "name": "fixture-1.fresh.S0.loaded-target-image.bin",
+      "passed": true
+    },
+    {
+      "name": "fixture-1.fresh.S0.loaded-file.json",
+      "passed": true
+    },
+    {
+      "name": "fixture-1.fresh.S0.loaded-file.bin",
+      "passed": true
+    },
+    {
+      "name": "fixture-1.fresh.C.real-RET-and-original-state",
+      "passed": true
+    },
+    {
+      "name": "fixture-1.fresh.C.own-CET-chain",
+      "passed": true
+    },
+    {
+      "name": "fixture-1.fresh.C.seven-explicit-HWND-rebindings",
+      "passed": true
+    },
+    {
+      "name": "fixture-1.fresh.S0.actual-ABI",
+      "passed": true
+    },
+    {
+      "name": "fixture-1.fresh.SA.raw-CPU-stack-memory-computation",
+      "passed": true
+    },
+    {
+      "name": "fixture-1.fresh.SA.loaded-data.bin",
+      "passed": true
+    },
+    {
+      "name": "fixture-1.fresh.SA.loaded-context.bin",
+      "passed": true
+    },
+    {
+      "name": "fixture-1.fresh.SA.loaded-metadata.bin",
+      "passed": true
+    },
+    {
+      "name": "fixture-1.fresh.SA.loaded-execution-layout.bin",
+      "passed": true
+    },
+    {
+      "name": "fixture-1.fresh.SA.loaded-full-stack.bin",
+      "passed": true
+    },
+    {
+      "name": "fixture-1.fresh.SA.loaded-resources.bin",
+      "passed": true
+    },
+    {
+      "name": "fixture-1.fresh.SA.loaded-abi.bin",
+      "passed": true
+    },
+    {
+      "name": "fixture-1.fresh.SA.loaded-returns.bin",
+      "passed": true
+    },
+    {
+      "name": "fixture-1.fresh.SA.loaded-executable.bin",
+      "passed": true
+    },
+    {
+      "name": "fixture-1.fresh.SA.loaded-target-image.bin",
+      "passed": true
+    },
+    {
+      "name": "fixture-1.fresh.SA.loaded-file.json",
+      "passed": true
+    },
+    {
+      "name": "fixture-1.fresh.SA.loaded-file.bin",
+      "passed": true
+    },
+    {
+      "name": "fixture-1.fresh.RA.real-RET-and-original-state",
+      "passed": true
+    },
+    {
+      "name": "fixture-1.fresh.RA.own-CET-chain",
+      "passed": true
+    },
+    {
+      "name": "fixture-1.fresh.RA.seven-explicit-HWND-rebindings",
+      "passed": true
+    },
+    {
+      "name": "fixture-1.fresh.SA.actual-ABI",
+      "passed": true
+    },
+    {
+      "name": "fixture-1.fresh.SB.raw-CPU-stack-memory-computation",
+      "passed": true
+    },
+    {
+      "name": "fixture-1.fresh.SB.loaded-data.bin",
+      "passed": true
+    },
+    {
+      "name": "fixture-1.fresh.SB.loaded-context.bin",
+      "passed": true
+    },
+    {
+      "name": "fixture-1.fresh.SB.loaded-metadata.bin",
+      "passed": true
+    },
+    {
+      "name": "fixture-1.fresh.SB.loaded-execution-layout.bin",
+      "passed": true
+    },
+    {
+      "name": "fixture-1.fresh.SB.loaded-full-stack.bin",
+      "passed": true
+    },
+    {
+      "name": "fixture-1.fresh.SB.loaded-resources.bin",
+      "passed": true
+    },
+    {
+      "name": "fixture-1.fresh.SB.loaded-abi.bin",
+      "passed": true
+    },
+    {
+      "name": "fixture-1.fresh.SB.loaded-returns.bin",
+      "passed": true
+    },
+    {
+      "name": "fixture-1.fresh.SB.loaded-executable.bin",
+      "passed": true
+    },
+    {
+      "name": "fixture-1.fresh.SB.loaded-target-image.bin",
+      "passed": true
+    },
+    {
+      "name": "fixture-1.fresh.SB.loaded-file.json",
+      "passed": true
+    },
+    {
+      "name": "fixture-1.fresh.SB.loaded-file.bin",
+      "passed": true
+    },
+    {
+      "name": "fixture-1.fresh.RB.real-RET-and-original-state",
+      "passed": true
+    },
+    {
+      "name": "fixture-1.fresh.RB.own-CET-chain",
+      "passed": true
+    },
+    {
+      "name": "fixture-1.fresh.RB.seven-explicit-HWND-rebindings",
+      "passed": true
+    },
+    {
+      "name": "fixture-1.fresh.SB.actual-ABI",
+      "passed": true
+    },
+    {
+      "name": "fixture-1.fresh.RA.Undo-and-selection",
+      "passed": true
+    },
+    {
+      "name": "fixture-1.fresh.RA.actual-restored-EDIT-pixels",
+      "passed": true
+    },
+    {
+      "name": "fixture-1.fresh.RB.Undo-and-selection",
+      "passed": true
+    },
+    {
+      "name": "fixture-1.fresh.RB.actual-restored-EDIT-pixels",
+      "passed": true
+    },
+    {
+      "name": "fixture-1.fresh.C-native-file-processing",
+      "passed": true
+    },
+    {
+      "name": "fixture-1.fresh.RA.different-application-PID",
+      "passed": true
+    },
+    {
+      "name": "fixture-1.fresh.RB.different-application-PID",
+      "passed": true
+    },
+    {
+      "name": "fixture-1.fresh.C.different-application-PID",
+      "passed": true
+    },
+    {
+      "name": "fixture-1.new-independent-manager",
+      "passed": true
+    },
+    {
+      "name": "fixture-1.fixed-Snapshots-and-Artifacts-survive-recovery",
+      "passed": true
+    },
+    {
+      "name": "fixture-2.source.explicit-standard-handle-inheritance",
+      "passed": true
+    },
+    {
+      "name": "fixture-2.source.supervisor-protocol",
+      "passed": true
+    },
+    {
+      "name": "fixture-2.source.physical-cleanup",
+      "passed": true
+    },
+    {
+      "name": "fixture-2.source.all-pinned-instance-identities-exited",
+      "passed": true
+    },
+    {
+      "name": "fixture-2.source.job-empty-before-release",
+      "passed": true
+    },
+    {
+      "name": "fixture-2.source.every-created-desktop-absent",
+      "passed": true
+    },
+    {
+      "name": "fixture-2.source.owned-handle-closes",
+      "passed": true
+    },
+    {
+      "name": "fixture-2.source.no-failed-native-assertions",
+      "passed": true
+    },
+    {
+      "name": "fixture-2.source.GUI-owner-log-required",
+      "passed": true
+    },
+    {
+      "name": "fixture-2.source.native-TerminateProcess-not-exception",
+      "passed": true
+    },
+    {
+      "name": "fixture-2.source.deterministic-native-point",
+      "passed": true
+    },
+    {
+      "name": "fixture-2.source.manager-did-not-run-cleanup-tail",
+      "passed": true
+    },
+    {
+      "name": "fixture-2.source.live-at-death-covered-by-job-proof",
+      "passed": true
+    },
+    {
+      "name": "fixture-2.rejected.explicit-standard-handle-inheritance",
+      "passed": true
+    },
+    {
+      "name": "fixture-2.rejected.supervisor-protocol",
+      "passed": true
+    },
+    {
+      "name": "fixture-2.rejected.physical-cleanup",
+      "passed": true
+    },
+    {
+      "name": "fixture-2.rejected.all-pinned-instance-identities-exited",
+      "passed": true
+    },
+    {
+      "name": "fixture-2.rejected.job-empty-before-release",
+      "passed": true
+    },
+    {
+      "name": "fixture-2.rejected.every-created-desktop-absent",
+      "passed": true
+    },
+    {
+      "name": "fixture-2.rejected.owned-handle-closes",
+      "passed": true
+    },
+    {
+      "name": "fixture-2.rejected.no-failed-native-assertions",
+      "passed": true
+    },
+    {
+      "name": "fixture-2.rejected.not-forced",
+      "passed": true
+    },
+    {
+      "name": "fixture-2.actual-checkpoint-before-source-CPU",
+      "passed": true
+    },
+    {
+      "name": "fixture-2.exact-refusal-no-View-or-source-state-write",
+      "passed": true
+    },
+    {
+      "name": "fixture-2.owner-thread-native-DestroyWindow-and-exit",
+      "passed": true
+    },
+    {
+      "name": "fixture-2.original-exception-dispatched-no-context-write",
+      "passed": true
+    },
+    {
+      "name": "fixture-2.no-swallowed-cleanup-exceptions",
+      "passed": true
+    },
+    {
+      "name": "fixture-2.no-native-cleanup-error",
+      "passed": true
+    },
+    {
+      "name": "fixture-2.system-debug-handles-released-by-Windows",
+      "passed": true
+    },
+    {
+      "name": "fixture-2.own-process-and-thread-handles-closed-before-desktop",
+      "passed": true
+    },
+    {
+      "name": "fixture-2.hook-helper-release-after-pinned-target-exit",
+      "passed": true
+    },
+    {
+      "name": "fixture-2.fixed-Snapshots-and-Artifacts-survive-rejection",
+      "passed": true
+    },
+    {
+      "name": "fixture-2.fresh.owner.explicit-standard-handle-inheritance",
+      "passed": true
+    },
+    {
+      "name": "fixture-2.fresh.owner.supervisor-protocol",
+      "passed": true
+    },
+    {
+      "name": "fixture-2.fresh.owner.physical-cleanup",
+      "passed": true
+    },
+    {
+      "name": "fixture-2.fresh.owner.all-pinned-instance-identities-exited",
+      "passed": true
+    },
+    {
+      "name": "fixture-2.fresh.owner.job-empty-before-release",
+      "passed": true
+    },
+    {
+      "name": "fixture-2.fresh.owner.every-created-desktop-absent",
+      "passed": true
+    },
+    {
+      "name": "fixture-2.fresh.owner.owned-handle-closes",
+      "passed": true
+    },
+    {
+      "name": "fixture-2.fresh.owner.no-failed-native-assertions",
+      "passed": true
+    },
+    {
+      "name": "fixture-2.fresh.owner.not-forced",
+      "passed": true
+    },
+    {
+      "name": "fixture-2.fresh.native.owned-processes-and-desktops-cleaned",
+      "passed": true
+    },
+    {
+      "name": "fixture-2.fresh.native.all-native-assertions",
+      "passed": true
+    },
+    {
+      "name": "fixture-2.fresh.native.RA-initial-real-frame",
+      "passed": true
+    },
+    {
+      "name": "fixture-2.fresh.native.RB-initial-real-frame",
+      "passed": true
+    },
+    {
+      "name": "fixture-2.fresh.native.C-initial-real-frame",
+      "passed": true
+    },
+    {
+      "name": "fixture-2.fresh.native.RA-undo1-real-frame",
+      "passed": true
+    },
+    {
+      "name": "fixture-2.fresh.native.RA-undo2-real-frame",
+      "passed": true
+    },
+    {
+      "name": "fixture-2.fresh.native.RA-continued-input-real-frame",
+      "passed": true
+    },
+    {
+      "name": "fixture-2.fresh.native.RB-undo1-real-frame",
+      "passed": true
+    },
+    {
+      "name": "fixture-2.fresh.native.RB-undo2-real-frame",
+      "passed": true
+    },
+    {
+      "name": "fixture-2.fresh.native.RB-continued-input-real-frame",
+      "passed": true
+    },
+    {
+      "name": "fixture-2.fresh.native.C-final-edit-real-frame",
+      "passed": true
+    },
+    {
+      "name": "fixture-2.fresh.native.RA-final-real-frame",
+      "passed": true
+    },
+    {
+      "name": "fixture-2.fresh.native.RB-final-real-frame",
+      "passed": true
+    },
+    {
+      "name": "fixture-2.fresh.native.C-final-real-frame",
+      "passed": true
+    },
+    {
+      "name": "fixture-2.fresh.native.C-1-Action",
+      "passed": true
+    },
+    {
+      "name": "fixture-2.fresh.native.C-2-Action",
+      "passed": true
+    },
+    {
+      "name": "fixture-2.fresh.native.C-3-Action",
+      "passed": true
+    },
+    {
+      "name": "fixture-2.fresh.native.C-4-Action",
+      "passed": true
+    },
+    {
+      "name": "fixture-2.fresh.native.RA-1-Action",
+      "passed": true
+    },
+    {
+      "name": "fixture-2.fresh.native.RA-2-Action",
+      "passed": true
+    },
+    {
+      "name": "fixture-2.fresh.native.RB-1-Action",
+      "passed": true
+    },
+    {
+      "name": "fixture-2.fresh.native.RB-2-Action",
+      "passed": true
+    },
+    {
+      "name": "fixture-2.fresh.native.C-input-1.jsonl-queries-no-loss-or-duplicate",
+      "passed": true
+    },
+    {
+      "name": "fixture-2.fresh.native.RA-input-1.jsonl-queries-no-loss-or-duplicate",
+      "passed": true
+    },
+    {
+      "name": "fixture-2.fresh.native.RB-input-1.jsonl-queries-no-loss-or-duplicate",
+      "passed": true
+    },
+    {
+      "name": "fixture-2.fresh.manager-normal-return",
+      "passed": true
+    },
+    {
+      "name": "fixture-2.fresh.old-owner-independently-rechecked",
+      "passed": true
+    },
+    {
+      "name": "fixture-2.fresh.exact-restored-Views",
+      "passed": true
+    },
+    {
+      "name": "fixture-2.fresh.no-business-initialization-replay",
+      "passed": true
+    },
+    {
+      "name": "fixture-2.fresh.S0.raw-CPU-stack-memory-computation",
+      "passed": true
+    },
+    {
+      "name": "fixture-2.fresh.S0.loaded-data.bin",
+      "passed": true
+    },
+    {
+      "name": "fixture-2.fresh.S0.loaded-context.bin",
+      "passed": true
+    },
+    {
+      "name": "fixture-2.fresh.S0.loaded-metadata.bin",
+      "passed": true
+    },
+    {
+      "name": "fixture-2.fresh.S0.loaded-execution-layout.bin",
+      "passed": true
+    },
+    {
+      "name": "fixture-2.fresh.S0.loaded-full-stack.bin",
+      "passed": true
+    },
+    {
+      "name": "fixture-2.fresh.S0.loaded-resources.bin",
+      "passed": true
+    },
+    {
+      "name": "fixture-2.fresh.S0.loaded-abi.bin",
+      "passed": true
+    },
+    {
+      "name": "fixture-2.fresh.S0.loaded-returns.bin",
+      "passed": true
+    },
+    {
+      "name": "fixture-2.fresh.S0.loaded-executable.bin",
+      "passed": true
+    },
+    {
+      "name": "fixture-2.fresh.S0.loaded-target-image.bin",
+      "passed": true
+    },
+    {
+      "name": "fixture-2.fresh.S0.loaded-file.json",
+      "passed": true
+    },
+    {
+      "name": "fixture-2.fresh.S0.loaded-file.bin",
+      "passed": true
+    },
+    {
+      "name": "fixture-2.fresh.C.real-RET-and-original-state",
+      "passed": true
+    },
+    {
+      "name": "fixture-2.fresh.C.own-CET-chain",
+      "passed": true
+    },
+    {
+      "name": "fixture-2.fresh.C.seven-explicit-HWND-rebindings",
+      "passed": true
+    },
+    {
+      "name": "fixture-2.fresh.S0.actual-ABI",
+      "passed": true
+    },
+    {
+      "name": "fixture-2.fresh.SA.raw-CPU-stack-memory-computation",
+      "passed": true
+    },
+    {
+      "name": "fixture-2.fresh.SA.loaded-data.bin",
+      "passed": true
+    },
+    {
+      "name": "fixture-2.fresh.SA.loaded-context.bin",
+      "passed": true
+    },
+    {
+      "name": "fixture-2.fresh.SA.loaded-metadata.bin",
+      "passed": true
+    },
+    {
+      "name": "fixture-2.fresh.SA.loaded-execution-layout.bin",
+      "passed": true
+    },
+    {
+      "name": "fixture-2.fresh.SA.loaded-full-stack.bin",
+      "passed": true
+    },
+    {
+      "name": "fixture-2.fresh.SA.loaded-resources.bin",
+      "passed": true
+    },
+    {
+      "name": "fixture-2.fresh.SA.loaded-abi.bin",
+      "passed": true
+    },
+    {
+      "name": "fixture-2.fresh.SA.loaded-returns.bin",
+      "passed": true
+    },
+    {
+      "name": "fixture-2.fresh.SA.loaded-executable.bin",
+      "passed": true
+    },
+    {
+      "name": "fixture-2.fresh.SA.loaded-target-image.bin",
+      "passed": true
+    },
+    {
+      "name": "fixture-2.fresh.SA.loaded-file.json",
+      "passed": true
+    },
+    {
+      "name": "fixture-2.fresh.SA.loaded-file.bin",
+      "passed": true
+    },
+    {
+      "name": "fixture-2.fresh.RA.real-RET-and-original-state",
+      "passed": true
+    },
+    {
+      "name": "fixture-2.fresh.RA.own-CET-chain",
+      "passed": true
+    },
+    {
+      "name": "fixture-2.fresh.RA.seven-explicit-HWND-rebindings",
+      "passed": true
+    },
+    {
+      "name": "fixture-2.fresh.SA.actual-ABI",
+      "passed": true
+    },
+    {
+      "name": "fixture-2.fresh.SB.raw-CPU-stack-memory-computation",
+      "passed": true
+    },
+    {
+      "name": "fixture-2.fresh.SB.loaded-data.bin",
+      "passed": true
+    },
+    {
+      "name": "fixture-2.fresh.SB.loaded-context.bin",
+      "passed": true
+    },
+    {
+      "name": "fixture-2.fresh.SB.loaded-metadata.bin",
+      "passed": true
+    },
+    {
+      "name": "fixture-2.fresh.SB.loaded-execution-layout.bin",
+      "passed": true
+    },
+    {
+      "name": "fixture-2.fresh.SB.loaded-full-stack.bin",
+      "passed": true
+    },
+    {
+      "name": "fixture-2.fresh.SB.loaded-resources.bin",
+      "passed": true
+    },
+    {
+      "name": "fixture-2.fresh.SB.loaded-abi.bin",
+      "passed": true
+    },
+    {
+      "name": "fixture-2.fresh.SB.loaded-returns.bin",
+      "passed": true
+    },
+    {
+      "name": "fixture-2.fresh.SB.loaded-executable.bin",
+      "passed": true
+    },
+    {
+      "name": "fixture-2.fresh.SB.loaded-target-image.bin",
+      "passed": true
+    },
+    {
+      "name": "fixture-2.fresh.SB.loaded-file.json",
+      "passed": true
+    },
+    {
+      "name": "fixture-2.fresh.SB.loaded-file.bin",
+      "passed": true
+    },
+    {
+      "name": "fixture-2.fresh.RB.real-RET-and-original-state",
+      "passed": true
+    },
+    {
+      "name": "fixture-2.fresh.RB.own-CET-chain",
+      "passed": true
+    },
+    {
+      "name": "fixture-2.fresh.RB.seven-explicit-HWND-rebindings",
+      "passed": true
+    },
+    {
+      "name": "fixture-2.fresh.SB.actual-ABI",
+      "passed": true
+    },
+    {
+      "name": "fixture-2.fresh.RA.Undo-and-selection",
+      "passed": true
+    },
+    {
+      "name": "fixture-2.fresh.RA.actual-restored-EDIT-pixels",
+      "passed": true
+    },
+    {
+      "name": "fixture-2.fresh.RB.Undo-and-selection",
+      "passed": true
+    },
+    {
+      "name": "fixture-2.fresh.RB.actual-restored-EDIT-pixels",
+      "passed": true
+    },
+    {
+      "name": "fixture-2.fresh.C-native-file-processing",
+      "passed": true
+    },
+    {
+      "name": "fixture-2.fresh.RA.different-application-PID",
+      "passed": true
+    },
+    {
+      "name": "fixture-2.fresh.RB.different-application-PID",
+      "passed": true
+    },
+    {
+      "name": "fixture-2.fresh.C.different-application-PID",
+      "passed": true
+    },
+    {
+      "name": "fixture-2.new-independent-manager",
+      "passed": true
+    },
+    {
+      "name": "fixture-2.fixed-Snapshots-and-Artifacts-survive-recovery",
+      "passed": true
+    },
+    {
+      "name": "recorder-1.source.explicit-standard-handle-inheritance",
+      "passed": true
+    },
+    {
+      "name": "recorder-1.source.supervisor-protocol",
+      "passed": true
+    },
+    {
+      "name": "recorder-1.source.physical-cleanup",
+      "passed": true
+    },
+    {
+      "name": "recorder-1.source.all-pinned-instance-identities-exited",
+      "passed": true
+    },
+    {
+      "name": "recorder-1.source.job-empty-before-release",
+      "passed": true
+    },
+    {
+      "name": "recorder-1.source.every-created-desktop-absent",
+      "passed": true
+    },
+    {
+      "name": "recorder-1.source.owned-handle-closes",
+      "passed": true
+    },
+    {
+      "name": "recorder-1.source.no-failed-native-assertions",
+      "passed": true
+    },
+    {
+      "name": "recorder-1.source.GUI-owner-log-required",
+      "passed": true
+    },
+    {
+      "name": "recorder-1.source.native-TerminateProcess-not-exception",
+      "passed": true
+    },
+    {
+      "name": "recorder-1.source.deterministic-native-point",
+      "passed": true
+    },
+    {
+      "name": "recorder-1.source.manager-did-not-run-cleanup-tail",
+      "passed": true
+    },
+    {
+      "name": "recorder-1.source.live-at-death-covered-by-job-proof",
+      "passed": true
+    },
+    {
+      "name": "recorder-1.rejected.explicit-standard-handle-inheritance",
+      "passed": true
+    },
+    {
+      "name": "recorder-1.rejected.supervisor-protocol",
+      "passed": true
+    },
+    {
+      "name": "recorder-1.rejected.physical-cleanup",
+      "passed": true
+    },
+    {
+      "name": "recorder-1.rejected.all-pinned-instance-identities-exited",
+      "passed": true
+    },
+    {
+      "name": "recorder-1.rejected.job-empty-before-release",
+      "passed": true
+    },
+    {
+      "name": "recorder-1.rejected.every-created-desktop-absent",
+      "passed": true
+    },
+    {
+      "name": "recorder-1.rejected.owned-handle-closes",
+      "passed": true
+    },
+    {
+      "name": "recorder-1.rejected.no-failed-native-assertions",
+      "passed": true
+    },
+    {
+      "name": "recorder-1.rejected.not-forced",
+      "passed": true
+    },
+    {
+      "name": "recorder-1.actual-checkpoint-before-source-CPU",
+      "passed": true
+    },
+    {
+      "name": "recorder-1.exact-refusal-no-View-or-source-state-write",
+      "passed": true
+    },
+    {
+      "name": "recorder-1.owner-thread-native-DestroyWindow-and-exit",
+      "passed": true
+    },
+    {
+      "name": "recorder-1.original-exception-dispatched-no-context-write",
+      "passed": true
+    },
+    {
+      "name": "recorder-1.no-swallowed-cleanup-exceptions",
+      "passed": true
+    },
+    {
+      "name": "recorder-1.no-native-cleanup-error",
+      "passed": true
+    },
+    {
+      "name": "recorder-1.system-debug-handles-released-by-Windows",
+      "passed": true
+    },
+    {
+      "name": "recorder-1.own-process-and-thread-handles-closed-before-desktop",
+      "passed": true
+    },
+    {
+      "name": "recorder-1.hook-helper-release-after-pinned-target-exit",
+      "passed": true
+    },
+    {
+      "name": "recorder-1.fixed-Snapshots-and-Artifacts-survive-rejection",
+      "passed": true
+    },
+    {
+      "name": "recorder-1.fresh.owner.explicit-standard-handle-inheritance",
+      "passed": true
+    },
+    {
+      "name": "recorder-1.fresh.owner.supervisor-protocol",
+      "passed": true
+    },
+    {
+      "name": "recorder-1.fresh.owner.physical-cleanup",
+      "passed": true
+    },
+    {
+      "name": "recorder-1.fresh.owner.all-pinned-instance-identities-exited",
+      "passed": true
+    },
+    {
+      "name": "recorder-1.fresh.owner.job-empty-before-release",
+      "passed": true
+    },
+    {
+      "name": "recorder-1.fresh.owner.every-created-desktop-absent",
+      "passed": true
+    },
+    {
+      "name": "recorder-1.fresh.owner.owned-handle-closes",
+      "passed": true
+    },
+    {
+      "name": "recorder-1.fresh.owner.no-failed-native-assertions",
+      "passed": true
+    },
+    {
+      "name": "recorder-1.fresh.owner.not-forced",
+      "passed": true
+    },
+    {
+      "name": "recorder-1.fresh.native.owned-processes-and-desktops-cleaned",
+      "passed": true
+    },
+    {
+      "name": "recorder-1.fresh.native.all-native-assertions",
+      "passed": true
+    },
+    {
+      "name": "recorder-1.fresh.native.RA-initial-real-frame",
+      "passed": true
+    },
+    {
+      "name": "recorder-1.fresh.native.RB-initial-real-frame",
+      "passed": true
+    },
+    {
+      "name": "recorder-1.fresh.native.C-initial-real-frame",
+      "passed": true
+    },
+    {
+      "name": "recorder-1.fresh.native.RA-undo1-real-frame",
+      "passed": true
+    },
+    {
+      "name": "recorder-1.fresh.native.RA-undo2-real-frame",
+      "passed": true
+    },
+    {
+      "name": "recorder-1.fresh.native.RA-continued-input-real-frame",
+      "passed": true
+    },
+    {
+      "name": "recorder-1.fresh.native.RB-undo1-real-frame",
+      "passed": true
+    },
+    {
+      "name": "recorder-1.fresh.native.RB-undo2-real-frame",
+      "passed": true
+    },
+    {
+      "name": "recorder-1.fresh.native.RB-continued-input-real-frame",
+      "passed": true
+    },
+    {
+      "name": "recorder-1.fresh.native.C-final-edit-real-frame",
+      "passed": true
+    },
+    {
+      "name": "recorder-1.fresh.native.RA-final-real-frame",
+      "passed": true
+    },
+    {
+      "name": "recorder-1.fresh.native.RB-final-real-frame",
+      "passed": true
+    },
+    {
+      "name": "recorder-1.fresh.native.C-final-real-frame",
+      "passed": true
+    },
+    {
+      "name": "recorder-1.fresh.native.C-1-Action",
+      "passed": true
+    },
+    {
+      "name": "recorder-1.fresh.native.C-2-Action",
+      "passed": true
+    },
+    {
+      "name": "recorder-1.fresh.native.C-3-Action",
+      "passed": true
+    },
+    {
+      "name": "recorder-1.fresh.native.C-4-Action",
+      "passed": true
+    },
+    {
+      "name": "recorder-1.fresh.native.RA-1-Action",
+      "passed": true
+    },
+    {
+      "name": "recorder-1.fresh.native.RA-2-Action",
+      "passed": true
+    },
+    {
+      "name": "recorder-1.fresh.native.RB-1-Action",
+      "passed": true
+    },
+    {
+      "name": "recorder-1.fresh.native.RB-2-Action",
+      "passed": true
+    },
+    {
+      "name": "recorder-1.fresh.native.C-input-1.jsonl-queries-no-loss-or-duplicate",
+      "passed": true
+    },
+    {
+      "name": "recorder-1.fresh.native.RA-input-1.jsonl-queries-no-loss-or-duplicate",
+      "passed": true
+    },
+    {
+      "name": "recorder-1.fresh.native.RB-input-1.jsonl-queries-no-loss-or-duplicate",
+      "passed": true
+    },
+    {
+      "name": "recorder-1.fresh.manager-normal-return",
+      "passed": true
+    },
+    {
+      "name": "recorder-1.fresh.old-owner-independently-rechecked",
+      "passed": true
+    },
+    {
+      "name": "recorder-1.fresh.exact-restored-Views",
+      "passed": true
+    },
+    {
+      "name": "recorder-1.fresh.no-business-initialization-replay",
+      "passed": true
+    },
+    {
+      "name": "recorder-1.fresh.S0.raw-CPU-stack-memory-computation",
+      "passed": true
+    },
+    {
+      "name": "recorder-1.fresh.S0.loaded-data.bin",
+      "passed": true
+    },
+    {
+      "name": "recorder-1.fresh.S0.loaded-context.bin",
+      "passed": true
+    },
+    {
+      "name": "recorder-1.fresh.S0.loaded-metadata.bin",
+      "passed": true
+    },
+    {
+      "name": "recorder-1.fresh.S0.loaded-execution-layout.bin",
+      "passed": true
+    },
+    {
+      "name": "recorder-1.fresh.S0.loaded-full-stack.bin",
+      "passed": true
+    },
+    {
+      "name": "recorder-1.fresh.S0.loaded-resources.bin",
+      "passed": true
+    },
+    {
+      "name": "recorder-1.fresh.S0.loaded-abi.bin",
+      "passed": true
+    },
+    {
+      "name": "recorder-1.fresh.S0.loaded-returns.bin",
+      "passed": true
+    },
+    {
+      "name": "recorder-1.fresh.S0.loaded-executable.bin",
+      "passed": true
+    },
+    {
+      "name": "recorder-1.fresh.S0.loaded-target-image.bin",
+      "passed": true
+    },
+    {
+      "name": "recorder-1.fresh.S0.loaded-file.json",
+      "passed": true
+    },
+    {
+      "name": "recorder-1.fresh.S0.loaded-file.bin",
+      "passed": true
+    },
+    {
+      "name": "recorder-1.fresh.C.real-RET-and-original-state",
+      "passed": true
+    },
+    {
+      "name": "recorder-1.fresh.C.own-CET-chain",
+      "passed": true
+    },
+    {
+      "name": "recorder-1.fresh.C.seven-explicit-HWND-rebindings",
+      "passed": true
+    },
+    {
+      "name": "recorder-1.fresh.S0.actual-ABI",
+      "passed": true
+    },
+    {
+      "name": "recorder-1.fresh.SA.raw-CPU-stack-memory-computation",
+      "passed": true
+    },
+    {
+      "name": "recorder-1.fresh.SA.loaded-data.bin",
+      "passed": true
+    },
+    {
+      "name": "recorder-1.fresh.SA.loaded-context.bin",
+      "passed": true
+    },
+    {
+      "name": "recorder-1.fresh.SA.loaded-metadata.bin",
+      "passed": true
+    },
+    {
+      "name": "recorder-1.fresh.SA.loaded-execution-layout.bin",
+      "passed": true
+    },
+    {
+      "name": "recorder-1.fresh.SA.loaded-full-stack.bin",
+      "passed": true
+    },
+    {
+      "name": "recorder-1.fresh.SA.loaded-resources.bin",
+      "passed": true
+    },
+    {
+      "name": "recorder-1.fresh.SA.loaded-abi.bin",
+      "passed": true
+    },
+    {
+      "name": "recorder-1.fresh.SA.loaded-returns.bin",
+      "passed": true
+    },
+    {
+      "name": "recorder-1.fresh.SA.loaded-executable.bin",
+      "passed": true
+    },
+    {
+      "name": "recorder-1.fresh.SA.loaded-target-image.bin",
+      "passed": true
+    },
+    {
+      "name": "recorder-1.fresh.SA.loaded-file.json",
+      "passed": true
+    },
+    {
+      "name": "recorder-1.fresh.SA.loaded-file.bin",
+      "passed": true
+    },
+    {
+      "name": "recorder-1.fresh.RA.real-RET-and-original-state",
+      "passed": true
+    },
+    {
+      "name": "recorder-1.fresh.RA.own-CET-chain",
+      "passed": true
+    },
+    {
+      "name": "recorder-1.fresh.RA.seven-explicit-HWND-rebindings",
+      "passed": true
+    },
+    {
+      "name": "recorder-1.fresh.SA.actual-ABI",
+      "passed": true
+    },
+    {
+      "name": "recorder-1.fresh.SB.raw-CPU-stack-memory-computation",
+      "passed": true
+    },
+    {
+      "name": "recorder-1.fresh.SB.loaded-data.bin",
+      "passed": true
+    },
+    {
+      "name": "recorder-1.fresh.SB.loaded-context.bin",
+      "passed": true
+    },
+    {
+      "name": "recorder-1.fresh.SB.loaded-metadata.bin",
+      "passed": true
+    },
+    {
+      "name": "recorder-1.fresh.SB.loaded-execution-layout.bin",
+      "passed": true
+    },
+    {
+      "name": "recorder-1.fresh.SB.loaded-full-stack.bin",
+      "passed": true
+    },
+    {
+      "name": "recorder-1.fresh.SB.loaded-resources.bin",
+      "passed": true
+    },
+    {
+      "name": "recorder-1.fresh.SB.loaded-abi.bin",
+      "passed": true
+    },
+    {
+      "name": "recorder-1.fresh.SB.loaded-returns.bin",
+      "passed": true
+    },
+    {
+      "name": "recorder-1.fresh.SB.loaded-executable.bin",
+      "passed": true
+    },
+    {
+      "name": "recorder-1.fresh.SB.loaded-target-image.bin",
+      "passed": true
+    },
+    {
+      "name": "recorder-1.fresh.SB.loaded-file.json",
+      "passed": true
+    },
+    {
+      "name": "recorder-1.fresh.SB.loaded-file.bin",
+      "passed": true
+    },
+    {
+      "name": "recorder-1.fresh.RB.real-RET-and-original-state",
+      "passed": true
+    },
+    {
+      "name": "recorder-1.fresh.RB.own-CET-chain",
+      "passed": true
+    },
+    {
+      "name": "recorder-1.fresh.RB.seven-explicit-HWND-rebindings",
+      "passed": true
+    },
+    {
+      "name": "recorder-1.fresh.SB.actual-ABI",
+      "passed": true
+    },
+    {
+      "name": "recorder-1.fresh.RA.Undo-and-selection",
+      "passed": true
+    },
+    {
+      "name": "recorder-1.fresh.RA.actual-restored-EDIT-pixels",
+      "passed": true
+    },
+    {
+      "name": "recorder-1.fresh.RB.Undo-and-selection",
+      "passed": true
+    },
+    {
+      "name": "recorder-1.fresh.RB.actual-restored-EDIT-pixels",
+      "passed": true
+    },
+    {
+      "name": "recorder-1.fresh.C-native-file-processing",
+      "passed": true
+    },
+    {
+      "name": "recorder-1.fresh.RA.different-application-PID",
+      "passed": true
+    },
+    {
+      "name": "recorder-1.fresh.RB.different-application-PID",
+      "passed": true
+    },
+    {
+      "name": "recorder-1.fresh.C.different-application-PID",
+      "passed": true
+    },
+    {
+      "name": "recorder-1.new-independent-manager",
+      "passed": true
+    },
+    {
+      "name": "recorder-1.fixed-Snapshots-and-Artifacts-survive-recovery",
+      "passed": true
+    },
+    {
+      "name": "recorder-2.source.explicit-standard-handle-inheritance",
+      "passed": true
+    },
+    {
+      "name": "recorder-2.source.supervisor-protocol",
+      "passed": true
+    },
+    {
+      "name": "recorder-2.source.physical-cleanup",
+      "passed": true
+    },
+    {
+      "name": "recorder-2.source.all-pinned-instance-identities-exited",
+      "passed": true
+    },
+    {
+      "name": "recorder-2.source.job-empty-before-release",
+      "passed": true
+    },
+    {
+      "name": "recorder-2.source.every-created-desktop-absent",
+      "passed": true
+    },
+    {
+      "name": "recorder-2.source.owned-handle-closes",
+      "passed": true
+    },
+    {
+      "name": "recorder-2.source.no-failed-native-assertions",
+      "passed": true
+    },
+    {
+      "name": "recorder-2.source.GUI-owner-log-required",
+      "passed": true
+    },
+    {
+      "name": "recorder-2.source.native-TerminateProcess-not-exception",
+      "passed": true
+    },
+    {
+      "name": "recorder-2.source.deterministic-native-point",
+      "passed": true
+    },
+    {
+      "name": "recorder-2.source.manager-did-not-run-cleanup-tail",
+      "passed": true
+    },
+    {
+      "name": "recorder-2.source.live-at-death-covered-by-job-proof",
+      "passed": true
+    },
+    {
+      "name": "recorder-2.rejected.explicit-standard-handle-inheritance",
+      "passed": true
+    },
+    {
+      "name": "recorder-2.rejected.supervisor-protocol",
+      "passed": true
+    },
+    {
+      "name": "recorder-2.rejected.physical-cleanup",
+      "passed": true
+    },
+    {
+      "name": "recorder-2.rejected.all-pinned-instance-identities-exited",
+      "passed": true
+    },
+    {
+      "name": "recorder-2.rejected.job-empty-before-release",
+      "passed": true
+    },
+    {
+      "name": "recorder-2.rejected.every-created-desktop-absent",
+      "passed": true
+    },
+    {
+      "name": "recorder-2.rejected.owned-handle-closes",
+      "passed": true
+    },
+    {
+      "name": "recorder-2.rejected.no-failed-native-assertions",
+      "passed": true
+    },
+    {
+      "name": "recorder-2.rejected.not-forced",
+      "passed": true
+    },
+    {
+      "name": "recorder-2.actual-checkpoint-before-source-CPU",
+      "passed": true
+    },
+    {
+      "name": "recorder-2.exact-refusal-no-View-or-source-state-write",
+      "passed": true
+    },
+    {
+      "name": "recorder-2.owner-thread-native-DestroyWindow-and-exit",
+      "passed": true
+    },
+    {
+      "name": "recorder-2.original-exception-dispatched-no-context-write",
+      "passed": true
+    },
+    {
+      "name": "recorder-2.no-swallowed-cleanup-exceptions",
+      "passed": true
+    },
+    {
+      "name": "recorder-2.no-native-cleanup-error",
+      "passed": true
+    },
+    {
+      "name": "recorder-2.system-debug-handles-released-by-Windows",
+      "passed": true
+    },
+    {
+      "name": "recorder-2.own-process-and-thread-handles-closed-before-desktop",
+      "passed": true
+    },
+    {
+      "name": "recorder-2.hook-helper-release-after-pinned-target-exit",
+      "passed": true
+    },
+    {
+      "name": "recorder-2.fixed-Snapshots-and-Artifacts-survive-rejection",
+      "passed": true
+    },
+    {
+      "name": "recorder-2.fresh.owner.explicit-standard-handle-inheritance",
+      "passed": true
+    },
+    {
+      "name": "recorder-2.fresh.owner.supervisor-protocol",
+      "passed": true
+    },
+    {
+      "name": "recorder-2.fresh.owner.physical-cleanup",
+      "passed": true
+    },
+    {
+      "name": "recorder-2.fresh.owner.all-pinned-instance-identities-exited",
+      "passed": true
+    },
+    {
+      "name": "recorder-2.fresh.owner.job-empty-before-release",
+      "passed": true
+    },
+    {
+      "name": "recorder-2.fresh.owner.every-created-desktop-absent",
+      "passed": true
+    },
+    {
+      "name": "recorder-2.fresh.owner.owned-handle-closes",
+      "passed": true
+    },
+    {
+      "name": "recorder-2.fresh.owner.no-failed-native-assertions",
+      "passed": true
+    },
+    {
+      "name": "recorder-2.fresh.owner.not-forced",
+      "passed": true
+    },
+    {
+      "name": "recorder-2.fresh.native.owned-processes-and-desktops-cleaned",
+      "passed": true
+    },
+    {
+      "name": "recorder-2.fresh.native.all-native-assertions",
+      "passed": true
+    },
+    {
+      "name": "recorder-2.fresh.native.RA-initial-real-frame",
+      "passed": true
+    },
+    {
+      "name": "recorder-2.fresh.native.RB-initial-real-frame",
+      "passed": true
+    },
+    {
+      "name": "recorder-2.fresh.native.C-initial-real-frame",
+      "passed": true
+    },
+    {
+      "name": "recorder-2.fresh.native.RA-undo1-real-frame",
+      "passed": true
+    },
+    {
+      "name": "recorder-2.fresh.native.RA-undo2-real-frame",
+      "passed": true
+    },
+    {
+      "name": "recorder-2.fresh.native.RA-continued-input-real-frame",
+      "passed": true
+    },
+    {
+      "name": "recorder-2.fresh.native.RB-undo1-real-frame",
+      "passed": true
+    },
+    {
+      "name": "recorder-2.fresh.native.RB-undo2-real-frame",
+      "passed": true
+    },
+    {
+      "name": "recorder-2.fresh.native.RB-continued-input-real-frame",
+      "passed": true
+    },
+    {
+      "name": "recorder-2.fresh.native.C-final-edit-real-frame",
+      "passed": true
+    },
+    {
+      "name": "recorder-2.fresh.native.RA-final-real-frame",
+      "passed": true
+    },
+    {
+      "name": "recorder-2.fresh.native.RB-final-real-frame",
+      "passed": true
+    },
+    {
+      "name": "recorder-2.fresh.native.C-final-real-frame",
+      "passed": true
+    },
+    {
+      "name": "recorder-2.fresh.native.C-1-Action",
+      "passed": true
+    },
+    {
+      "name": "recorder-2.fresh.native.C-2-Action",
+      "passed": true
+    },
+    {
+      "name": "recorder-2.fresh.native.C-3-Action",
+      "passed": true
+    },
+    {
+      "name": "recorder-2.fresh.native.C-4-Action",
+      "passed": true
+    },
+    {
+      "name": "recorder-2.fresh.native.RA-1-Action",
+      "passed": true
+    },
+    {
+      "name": "recorder-2.fresh.native.RA-2-Action",
+      "passed": true
+    },
+    {
+      "name": "recorder-2.fresh.native.RB-1-Action",
+      "passed": true
+    },
+    {
+      "name": "recorder-2.fresh.native.RB-2-Action",
+      "passed": true
+    },
+    {
+      "name": "recorder-2.fresh.native.C-input-1.jsonl-queries-no-loss-or-duplicate",
+      "passed": true
+    },
+    {
+      "name": "recorder-2.fresh.native.RA-input-1.jsonl-queries-no-loss-or-duplicate",
+      "passed": true
+    },
+    {
+      "name": "recorder-2.fresh.native.RB-input-1.jsonl-queries-no-loss-or-duplicate",
+      "passed": true
+    },
+    {
+      "name": "recorder-2.fresh.manager-normal-return",
+      "passed": true
+    },
+    {
+      "name": "recorder-2.fresh.old-owner-independently-rechecked",
+      "passed": true
+    },
+    {
+      "name": "recorder-2.fresh.exact-restored-Views",
+      "passed": true
+    },
+    {
+      "name": "recorder-2.fresh.no-business-initialization-replay",
+      "passed": true
+    },
+    {
+      "name": "recorder-2.fresh.S0.raw-CPU-stack-memory-computation",
+      "passed": true
+    },
+    {
+      "name": "recorder-2.fresh.S0.loaded-data.bin",
+      "passed": true
+    },
+    {
+      "name": "recorder-2.fresh.S0.loaded-context.bin",
+      "passed": true
+    },
+    {
+      "name": "recorder-2.fresh.S0.loaded-metadata.bin",
+      "passed": true
+    },
+    {
+      "name": "recorder-2.fresh.S0.loaded-execution-layout.bin",
+      "passed": true
+    },
+    {
+      "name": "recorder-2.fresh.S0.loaded-full-stack.bin",
+      "passed": true
+    },
+    {
+      "name": "recorder-2.fresh.S0.loaded-resources.bin",
+      "passed": true
+    },
+    {
+      "name": "recorder-2.fresh.S0.loaded-abi.bin",
+      "passed": true
+    },
+    {
+      "name": "recorder-2.fresh.S0.loaded-returns.bin",
+      "passed": true
+    },
+    {
+      "name": "recorder-2.fresh.S0.loaded-executable.bin",
+      "passed": true
+    },
+    {
+      "name": "recorder-2.fresh.S0.loaded-target-image.bin",
+      "passed": true
+    },
+    {
+      "name": "recorder-2.fresh.S0.loaded-file.json",
+      "passed": true
+    },
+    {
+      "name": "recorder-2.fresh.S0.loaded-file.bin",
+      "passed": true
+    },
+    {
+      "name": "recorder-2.fresh.C.real-RET-and-original-state",
+      "passed": true
+    },
+    {
+      "name": "recorder-2.fresh.C.own-CET-chain",
+      "passed": true
+    },
+    {
+      "name": "recorder-2.fresh.C.seven-explicit-HWND-rebindings",
+      "passed": true
+    },
+    {
+      "name": "recorder-2.fresh.S0.actual-ABI",
+      "passed": true
+    },
+    {
+      "name": "recorder-2.fresh.SA.raw-CPU-stack-memory-computation",
+      "passed": true
+    },
+    {
+      "name": "recorder-2.fresh.SA.loaded-data.bin",
+      "passed": true
+    },
+    {
+      "name": "recorder-2.fresh.SA.loaded-context.bin",
+      "passed": true
+    },
+    {
+      "name": "recorder-2.fresh.SA.loaded-metadata.bin",
+      "passed": true
+    },
+    {
+      "name": "recorder-2.fresh.SA.loaded-execution-layout.bin",
+      "passed": true
+    },
+    {
+      "name": "recorder-2.fresh.SA.loaded-full-stack.bin",
+      "passed": true
+    },
+    {
+      "name": "recorder-2.fresh.SA.loaded-resources.bin",
+      "passed": true
+    },
+    {
+      "name": "recorder-2.fresh.SA.loaded-abi.bin",
+      "passed": true
+    },
+    {
+      "name": "recorder-2.fresh.SA.loaded-returns.bin",
+      "passed": true
+    },
+    {
+      "name": "recorder-2.fresh.SA.loaded-executable.bin",
+      "passed": true
+    },
+    {
+      "name": "recorder-2.fresh.SA.loaded-target-image.bin",
+      "passed": true
+    },
+    {
+      "name": "recorder-2.fresh.SA.loaded-file.json",
+      "passed": true
+    },
+    {
+      "name": "recorder-2.fresh.SA.loaded-file.bin",
+      "passed": true
+    },
+    {
+      "name": "recorder-2.fresh.RA.real-RET-and-original-state",
+      "passed": true
+    },
+    {
+      "name": "recorder-2.fresh.RA.own-CET-chain",
+      "passed": true
+    },
+    {
+      "name": "recorder-2.fresh.RA.seven-explicit-HWND-rebindings",
+      "passed": true
+    },
+    {
+      "name": "recorder-2.fresh.SA.actual-ABI",
+      "passed": true
+    },
+    {
+      "name": "recorder-2.fresh.SB.raw-CPU-stack-memory-computation",
+      "passed": true
+    },
+    {
+      "name": "recorder-2.fresh.SB.loaded-data.bin",
+      "passed": true
+    },
+    {
+      "name": "recorder-2.fresh.SB.loaded-context.bin",
+      "passed": true
+    },
+    {
+      "name": "recorder-2.fresh.SB.loaded-metadata.bin",
+      "passed": true
+    },
+    {
+      "name": "recorder-2.fresh.SB.loaded-execution-layout.bin",
+      "passed": true
+    },
+    {
+      "name": "recorder-2.fresh.SB.loaded-full-stack.bin",
+      "passed": true
+    },
+    {
+      "name": "recorder-2.fresh.SB.loaded-resources.bin",
+      "passed": true
+    },
+    {
+      "name": "recorder-2.fresh.SB.loaded-abi.bin",
+      "passed": true
+    },
+    {
+      "name": "recorder-2.fresh.SB.loaded-returns.bin",
+      "passed": true
+    },
+    {
+      "name": "recorder-2.fresh.SB.loaded-executable.bin",
+      "passed": true
+    },
+    {
+      "name": "recorder-2.fresh.SB.loaded-target-image.bin",
+      "passed": true
+    },
+    {
+      "name": "recorder-2.fresh.SB.loaded-file.json",
+      "passed": true
+    },
+    {
+      "name": "recorder-2.fresh.SB.loaded-file.bin",
+      "passed": true
+    },
+    {
+      "name": "recorder-2.fresh.RB.real-RET-and-original-state",
+      "passed": true
+    },
+    {
+      "name": "recorder-2.fresh.RB.own-CET-chain",
+      "passed": true
+    },
+    {
+      "name": "recorder-2.fresh.RB.seven-explicit-HWND-rebindings",
+      "passed": true
+    },
+    {
+      "name": "recorder-2.fresh.SB.actual-ABI",
+      "passed": true
+    },
+    {
+      "name": "recorder-2.fresh.RA.Undo-and-selection",
+      "passed": true
+    },
+    {
+      "name": "recorder-2.fresh.RA.actual-restored-EDIT-pixels",
+      "passed": true
+    },
+    {
+      "name": "recorder-2.fresh.RB.Undo-and-selection",
+      "passed": true
+    },
+    {
+      "name": "recorder-2.fresh.RB.actual-restored-EDIT-pixels",
+      "passed": true
+    },
+    {
+      "name": "recorder-2.fresh.C-native-file-processing",
+      "passed": true
+    },
+    {
+      "name": "recorder-2.fresh.RA.different-application-PID",
+      "passed": true
+    },
+    {
+      "name": "recorder-2.fresh.RB.different-application-PID",
+      "passed": true
+    },
+    {
+      "name": "recorder-2.fresh.C.different-application-PID",
+      "passed": true
+    },
+    {
+      "name": "recorder-2.new-independent-manager",
+      "passed": true
+    },
+    {
+      "name": "recorder-2.fixed-Snapshots-and-Artifacts-survive-recovery",
+      "passed": true
+    },
+    {
+      "name": "test-source-unchanged",
+      "passed": true
+    },
+    {
+      "name": "R5-003-and-complete-nested-regressions",
+      "passed": true
+    }
+  ],
+  "cases": [
+    {
+      "case": "fixture-1",
+      "kind": "pending-rejection-cleanup-then-independent-recovery",
+      "passed": true
+    },
+    {
+      "case": "fixture-2",
+      "kind": "pending-rejection-cleanup-then-independent-recovery",
+      "passed": true
+    },
+    {
+      "case": "recorder-1",
+      "kind": "pending-rejection-cleanup-then-independent-recovery",
+      "passed": true
+    },
+    {
+      "case": "recorder-2",
+      "kind": "pending-rejection-cleanup-then-independent-recovery",
+      "passed": true
+    }
+  ],
+  "operations": [
+    {
+      "app": "fixture",
+      "mode": "save",
+      "point": "session-committed",
+      "root": "D:\\focus-views\\experiments\\r5-004a\\results\\c\\fixture-1\\save",
+      "manager": "D:\\focus-views\\experiments\\r5-004a\\results\\c\\fixture-1\\save\\manager",
+      "supervisor": "D:\\focus-views\\experiments\\r5-004a\\results\\c\\fixture-1\\save\\supervisor",
+      "certificate": "D:\\focus-views\\experiments\\r5-004a\\results\\c\\fixture-1\\save\\supervisor\\owner.fvc",
+      "managerPid": 41800,
+      "managerCreated": 134375645647888960,
+      "managerExit": 3842244609,
+      "controllerExit": 0
+    },
+    {
+      "app": "fixture",
+      "mode": "restore",
+      "point": "",
+      "root": "D:\\focus-views\\experiments\\r5-004a\\results\\c\\fixture-1\\reject",
+      "manager": "D:\\focus-views\\experiments\\r5-004a\\results\\c\\fixture-1\\reject\\manager",
+      "supervisor": "D:\\focus-views\\experiments\\r5-004a\\results\\c\\fixture-1\\reject\\supervisor",
+      "certificate": "D:\\focus-views\\experiments\\r5-004a\\results\\c\\fixture-1\\reject\\supervisor\\owner.fvc",
+      "managerPid": 37324,
+      "managerCreated": 134375645674982989,
+      "managerExit": 2,
+      "controllerExit": 0
+    },
+    {
+      "app": "fixture",
+      "mode": "restore",
+      "point": "",
+      "root": "D:\\focus-views\\experiments\\r5-004a\\results\\c\\fixture-1\\fresh",
+      "manager": "D:\\focus-views\\experiments\\r5-004a\\results\\c\\fixture-1\\fresh\\manager",
+      "supervisor": "D:\\focus-views\\experiments\\r5-004a\\results\\c\\fixture-1\\fresh\\supervisor",
+      "certificate": "D:\\focus-views\\experiments\\r5-004a\\results\\c\\fixture-1\\fresh\\supervisor\\owner.fvc",
+      "managerPid": 49028,
+      "managerCreated": 134375645682452903,
+      "managerExit": 0,
+      "controllerExit": 0
+    },
+    {
+      "app": "fixture",
+      "mode": "save",
+      "point": "session-committed",
+      "root": "D:\\focus-views\\experiments\\r5-004a\\results\\c\\fixture-2\\save",
+      "manager": "D:\\focus-views\\experiments\\r5-004a\\results\\c\\fixture-2\\save\\manager",
+      "supervisor": "D:\\focus-views\\experiments\\r5-004a\\results\\c\\fixture-2\\save\\supervisor",
+      "certificate": "D:\\focus-views\\experiments\\r5-004a\\results\\c\\fixture-2\\save\\supervisor\\owner.fvc",
+      "managerPid": 37480,
+      "managerCreated": 134375645744793534,
+      "managerExit": 3842244609,
+      "controllerExit": 0
+    },
+    {
+      "app": "fixture",
+      "mode": "restore",
+      "point": "",
+      "root": "D:\\focus-views\\experiments\\r5-004a\\results\\c\\fixture-2\\reject",
+      "manager": "D:\\focus-views\\experiments\\r5-004a\\results\\c\\fixture-2\\reject\\manager",
+      "supervisor": "D:\\focus-views\\experiments\\r5-004a\\results\\c\\fixture-2\\reject\\supervisor",
+      "certificate": "D:\\focus-views\\experiments\\r5-004a\\results\\c\\fixture-2\\reject\\supervisor\\owner.fvc",
+      "managerPid": 46312,
+      "managerCreated": 134375645767283719,
+      "managerExit": 2,
+      "controllerExit": 0
+    },
+    {
+      "app": "fixture",
+      "mode": "restore",
+      "point": "",
+      "root": "D:\\focus-views\\experiments\\r5-004a\\results\\c\\fixture-2\\fresh",
+      "manager": "D:\\focus-views\\experiments\\r5-004a\\results\\c\\fixture-2\\fresh\\manager",
+      "supervisor": "D:\\focus-views\\experiments\\r5-004a\\results\\c\\fixture-2\\fresh\\supervisor",
+      "certificate": "D:\\focus-views\\experiments\\r5-004a\\results\\c\\fixture-2\\fresh\\supervisor\\owner.fvc",
+      "managerPid": 50676,
+      "managerCreated": 134375645772606970,
+      "managerExit": 0,
+      "controllerExit": 0
+    },
+    {
+      "app": "recorder",
+      "mode": "save",
+      "point": "session-committed",
+      "root": "D:\\focus-views\\experiments\\r5-004a\\results\\c\\recorder-1\\save",
+      "manager": "D:\\focus-views\\experiments\\r5-004a\\results\\c\\recorder-1\\save\\manager",
+      "supervisor": "D:\\focus-views\\experiments\\r5-004a\\results\\c\\recorder-1\\save\\supervisor",
+      "certificate": "D:\\focus-views\\experiments\\r5-004a\\results\\c\\recorder-1\\save\\supervisor\\owner.fvc",
+      "managerPid": 36604,
+      "managerCreated": 134375645826872467,
+      "managerExit": 3842244609,
+      "controllerExit": 0
+    },
+    {
+      "app": "recorder",
+      "mode": "restore",
+      "point": "",
+      "root": "D:\\focus-views\\experiments\\r5-004a\\results\\c\\recorder-1\\reject",
+      "manager": "D:\\focus-views\\experiments\\r5-004a\\results\\c\\recorder-1\\reject\\manager",
+      "supervisor": "D:\\focus-views\\experiments\\r5-004a\\results\\c\\recorder-1\\reject\\supervisor",
+      "certificate": "D:\\focus-views\\experiments\\r5-004a\\results\\c\\recorder-1\\reject\\supervisor\\owner.fvc",
+      "managerPid": 48728,
+      "managerCreated": 134375645851575018,
+      "managerExit": 2,
+      "controllerExit": 0
+    },
+    {
+      "app": "recorder",
+      "mode": "restore",
+      "point": "",
+      "root": "D:\\focus-views\\experiments\\r5-004a\\results\\c\\recorder-1\\fresh",
+      "manager": "D:\\focus-views\\experiments\\r5-004a\\results\\c\\recorder-1\\fresh\\manager",
+      "supervisor": "D:\\focus-views\\experiments\\r5-004a\\results\\c\\recorder-1\\fresh\\supervisor",
+      "certificate": "D:\\focus-views\\experiments\\r5-004a\\results\\c\\recorder-1\\fresh\\supervisor\\owner.fvc",
+      "managerPid": 22068,
+      "managerCreated": 134375645856706427,
+      "managerExit": 0,
+      "controllerExit": 0
+    },
+    {
+      "app": "recorder",
+      "mode": "save",
+      "point": "session-committed",
+      "root": "D:\\focus-views\\experiments\\r5-004a\\results\\c\\recorder-2\\save",
+      "manager": "D:\\focus-views\\experiments\\r5-004a\\results\\c\\recorder-2\\save\\manager",
+      "supervisor": "D:\\focus-views\\experiments\\r5-004a\\results\\c\\recorder-2\\save\\supervisor",
+      "certificate": "D:\\focus-views\\experiments\\r5-004a\\results\\c\\recorder-2\\save\\supervisor\\owner.fvc",
+      "managerPid": 22176,
+      "managerCreated": 134375645912275279,
+      "managerExit": 3842244609,
+      "controllerExit": 0
+    },
+    {
+      "app": "recorder",
+      "mode": "restore",
+      "point": "",
+      "root": "D:\\focus-views\\experiments\\r5-004a\\results\\c\\recorder-2\\reject",
+      "manager": "D:\\focus-views\\experiments\\r5-004a\\results\\c\\recorder-2\\reject\\manager",
+      "supervisor": "D:\\focus-views\\experiments\\r5-004a\\results\\c\\recorder-2\\reject\\supervisor",
+      "certificate": "D:\\focus-views\\experiments\\r5-004a\\results\\c\\recorder-2\\reject\\supervisor\\owner.fvc",
+      "managerPid": 6264,
+      "managerCreated": 134375645936147330,
+      "managerExit": 2,
+      "controllerExit": 0
+    },
+    {
+      "app": "recorder",
+      "mode": "restore",
+      "point": "",
+      "root": "D:\\focus-views\\experiments\\r5-004a\\results\\c\\recorder-2\\fresh",
+      "manager": "D:\\focus-views\\experiments\\r5-004a\\results\\c\\recorder-2\\fresh\\manager",
+      "supervisor": "D:\\focus-views\\experiments\\r5-004a\\results\\c\\recorder-2\\fresh\\supervisor",
+      "certificate": "D:\\focus-views\\experiments\\r5-004a\\results\\c\\recorder-2\\fresh\\supervisor\\owner.fvc",
+      "managerPid": 38696,
+      "managerCreated": 134375645942102937,
+      "managerExit": 0,
+      "controllerExit": 0
+    }
+  ],
+  "errors": []
+}
