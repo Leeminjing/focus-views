@@ -24,6 +24,7 @@ function Crash-Audit([string]$Manager,[string]$Supervisor,[string]$Label,[bool]$
  Check "$Label.owned-handle-closes" (@($events|Where-Object type -eq 'owned_handle_closed').Count -eq $pins.Count+9)
  Check "$Label.no-failed-native-assertions" (@($m|Where-Object{$_.type -eq 'assertion' -and -not $_.passed}).Count -eq 0)
  if($Killed){
+  Check "$Label.GUI-owner-log-required" ((Test-Path -LiteralPath (Join-Path $Manager 'controller.jsonl')) -and $created.Count -gt 0)
   Check "$Label.native-TerminateProcess-not-exception" ($s.forcedTermination -and $s.managerExit -eq [Convert]::ToUInt32('E5040001',16) -and @($events|Where-Object{$_.type -eq 'terminate_manager' -and $_.api -eq 'TerminateProcess' -and $_.pid -eq $s.managerPid -and $_.created -eq $s.managerCreated}).Count -eq 1)
   $point=@(Rows (Join-Path $Manager 'fault-points.jsonl')|Where-Object type -eq 'synchronous_crash_point');Check "$Label.deterministic-native-point" ($point.Count -eq 1 -and $point[0].point -eq $s.point -and $point[0].pid -eq $s.managerPid)
   Check "$Label.manager-did-not-run-cleanup-tail" (@($m|Where-Object type -eq 'restart_complete').Count -eq 0)

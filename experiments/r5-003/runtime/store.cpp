@@ -50,7 +50,11 @@ Bytes unpack(Kind kind,const Bytes& b){
 }
 void publish(const std::filesystem::path& path,Kind kind,const Bytes& b,bool interrupt){
     if(std::filesystem::exists(path))throw Error("snapshot.version_exists",ERROR_ALREADY_EXISTS);
-    const auto staging=path.parent_path()/(L".snapshot-"+std::to_wstring(GetCurrentProcessId())+L"-"+std::to_wstring(GetTickCount64())+L".partial");
+    std::wstring generation;
+#ifdef FOCUS_VIEWS_CRASH_EXPERIMENT
+    generation=experimental::generation.empty()?L"":experimental::generation+L"-";
+#endif
+    const auto staging=path.parent_path()/(L".snapshot-"+std::to_wstring(GetCurrentProcessId())+L"-"+generation+std::to_wstring(GetTickCount64())+L".partial");
     require(!std::filesystem::exists(staging),"snapshot.staging_exists");bool owned=false;
     try{const auto packed=envelope(kind,b);Bytes written=packed;if(interrupt)written.resize(written.size()/2);
         write_file(staging,written,owned,path);
