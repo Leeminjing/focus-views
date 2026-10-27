@@ -89,14 +89,25 @@ public:
             const auto a_before=this->observe(*a.child,"before-B");this->edit(b,L'B',L"B","single-edit");this->stable(a_before,this->observe(*a.child,"after-B"),"A.independent");
             const auto made_a=this->file_action(a,client_save,out_/"workspace/A"/Client::file_name()),made_b=this->file_action(b,client_save,out_/"workspace/B"/Client::file_name());
             const auto& artifact_a=artifacts.publish("A",a.child->p.pid,1,made_a.ticket,made_a.receipt,out_/"workspace/A"/Client::file_name());
+#ifdef FOCUS_VIEWS_CRASH_EXPERIMENT
+            experimental::point("artifact-published","A-v1");
+#endif
             const auto& artifact_b=artifacts.publish("B",b.child->p.pid,1,made_b.ticket,made_b.receipt,out_/"workspace/B"/Client::file_name());
             unsigned i=0;for(const auto* p:{&artifact_a,&artifact_b})session.artifacts[i++]={p->id,p->view,p->action,p->sha256,hash(Artifacts::bytes(p->directory/"manifest.json")),p->version,p->pid,p->bytes};
             const auto sa=this->terminal(a,"SA"),sb=this->terminal(b,"SB");record_snapshot(sa,"SA",session,1);record_snapshot(sb,"SB",session,2);
+            auto commit=[&]{
+                if(failed_)throw Error("snapshot.failed_evidence",ERROR_INVALID_DATA);
+                publish(store_/"session.fvs",Kind::session,encode_session(session));completed=true;
+                log_.emit("session_published","\"managerPid\":"+std::to_string(session.manager.pid)+",\"managerCreated\":"+std::to_string(session.manager.created)+",\"sourcePid\":"+std::to_string(session.source.pid)+",\"aPid\":"+std::to_string(session.a.pid)+",\"bPid\":"+std::to_string(session.b.pid)+",\"sha256\":"+json(hash(read(store_/"session.fvs"))));
+            };
+#ifdef FOCUS_VIEWS_CRASH_EXPERIMENT
+            // This explicit experiment commits completed data while A/B are
+            // still frozen/live, so forced death exercises resource cleanup.
+            if(experimental::observer){commit();experimental::point("session-committed");}
+#endif
             dispose(a);dispose(b);artifacts.verify_all("manager1-final");
             verify("all-source-instances-exited",gone(session.source)&&gone(session.a)&&gone(session.b),"PID and creation-time identities confirm source/A/B terminated");
-            if(failed_)throw Error("snapshot.failed_evidence",ERROR_INVALID_DATA);
-            publish(store_/"session.fvs",Kind::session,encode_session(session));completed=true;
-            log_.emit("session_published","\"managerPid\":"+std::to_string(session.manager.pid)+",\"managerCreated\":"+std::to_string(session.manager.created)+",\"sourcePid\":"+std::to_string(session.source.pid)+",\"aPid\":"+std::to_string(session.a.pid)+",\"bPid\":"+std::to_string(session.b.pid)+",\"sha256\":"+json(hash(read(store_/"session.fvs"))));
+            if(!completed)commit();
         }catch(const Error& e){log_.emit("experiment_failure","\"api\":"+json(e.api)+",\"error\":"+std::to_string(e.code)+",\"message\":"+json(e.what()));}
         for(auto* v:{&b,&a})try{dispose(*v);}catch(const std::exception& e){++failed_;log_.emit("cleanup_error","\"message\":"+json(e.what()));}if(source){source->stop();source.reset();}
         log_.emit("restart_complete","\"phase\":\"save\",\"passed\":"+std::string(completed&&!failed_?"true":"false")+",\"managerPid\":"+std::to_string(GetCurrentProcessId()));return completed&&!failed_?0:2;

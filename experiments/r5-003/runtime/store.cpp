@@ -1,4 +1,7 @@
 #include "store.hpp"
+#ifdef FOCUS_VIEWS_CRASH_EXPERIMENT
+#include "../../r5-002/runtime/experiment-points.hpp"
+#endif
 namespace r5003 {
 namespace {
 constexpr std::uint64_t disk_magic=0x3150414e535646;
@@ -8,9 +11,22 @@ template<class T>T block(Reader& r,unsigned tag){if(r.pod<unsigned>()!=tag||r.po
 bool terminated(const char* x,size_t n){return memchr(x,0,n)!=nullptr;}
 template<size_t N>bool terminated(const wchar_t(&x)[N]){return std::find(std::begin(x),std::end(x),L'\0')!=std::end(x);}
 void require(bool okay,const char* api){if(!okay)throw Error(api,ERROR_INVALID_DATA);}
-void write_file(const std::filesystem::path& p,const Bytes& bytes,bool& owned){
+void write_file(const std::filesystem::path& p,const Bytes& bytes,bool& owned,const std::filesystem::path& final){
     Handle file(CreateFileW(p.c_str(),GENERIC_WRITE,0,nullptr,CREATE_NEW,FILE_ATTRIBUTE_NORMAL,nullptr));check(file.value!=INVALID_HANDLE_VALUE,"CreateFileW.snapshot_staging");
-    owned=true;DWORD done=0;check(WriteFile(file.value,bytes.data(),static_cast<DWORD>(bytes.size()),&done,nullptr),"WriteFile.snapshot_staging");require(done==bytes.size(),"snapshot.short_write");check(FlushFileBuffers(file.value),"FlushFileBuffers.snapshot_staging");check(CloseHandle(file.value),"CloseHandle.snapshot_staging");file.value=nullptr;
+    owned=true;DWORD done=0;
+#ifdef FOCUS_VIEWS_CRASH_EXPERIMENT
+    if(experimental::observer){
+        const auto half=static_cast<DWORD>(bytes.size()/2);
+        check(WriteFile(file.value,bytes.data(),half,&done,nullptr),"WriteFile.snapshot_staging_half");require(done==half,"snapshot.short_write");
+        check(FlushFileBuffers(file.value),"FlushFileBuffers.snapshot_staging_half");experimental::point("staging-half",final);
+        const auto remaining=static_cast<DWORD>(bytes.size())-half;
+        check(WriteFile(file.value,bytes.data()+half,remaining,&done,nullptr),"WriteFile.snapshot_staging_rest");require(done==remaining,"snapshot.short_write");
+    }else
+#else
+    (void)final;
+#endif
+    {check(WriteFile(file.value,bytes.data(),static_cast<DWORD>(bytes.size()),&done,nullptr),"WriteFile.snapshot_staging");require(done==bytes.size(),"snapshot.short_write");}
+    check(FlushFileBuffers(file.value),"FlushFileBuffers.snapshot_staging");check(CloseHandle(file.value),"CloseHandle.snapshot_staging");file.value=nullptr;
 }
 }
 Environment environment(){Environment x{};check(ProcessIdToSessionId(GetCurrentProcessId(),&x.session),"ProcessIdToSessionId.snapshot");
@@ -37,10 +53,16 @@ void publish(const std::filesystem::path& path,Kind kind,const Bytes& b,bool int
     const auto staging=path.parent_path()/(L".snapshot-"+std::to_wstring(GetCurrentProcessId())+L"-"+std::to_wstring(GetTickCount64())+L".partial");
     require(!std::filesystem::exists(staging),"snapshot.staging_exists");bool owned=false;
     try{const auto packed=envelope(kind,b);Bytes written=packed;if(interrupt)written.resize(written.size()/2);
-        write_file(staging,written,owned);
+        write_file(staging,written,owned,path);
         if(interrupt)throw Error("snapshot.interrupted",ERROR_OPERATION_ABORTED);
         const auto check_bytes=read(staging);if(check_bytes!=packed||unpack(kind,check_bytes)!=b)throw Error("snapshot.write_verification",ERROR_CRC);
+#ifdef FOCUS_VIEWS_CRASH_EXPERIMENT
+        experimental::point("staging-verified",path);
+#endif
         check(MoveFileExW(staging.c_str(),path.c_str(),MOVEFILE_WRITE_THROUGH),"MoveFileExW.snapshot_publish");owned=false;
+#ifdef FOCUS_VIEWS_CRASH_EXPERIMENT
+        experimental::point("published",path);
+#endif
     }catch(...){if(owned&&!DeleteFileW(staging.c_str()))std::cerr<<"DeleteFileW.owned_snapshot_staging error="<<GetLastError()<<'\n';throw;}
 }
 Bytes payload(const std::filesystem::path& path,Kind kind){return unpack(kind,read(path));}
