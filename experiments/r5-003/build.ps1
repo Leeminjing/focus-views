@@ -28,8 +28,9 @@ try {
  $reuse=@()
  foreach($name in @('kernel.lib','fixture.exe','second.exe')){
   $source=Join-Path $PSScriptRoot "../r5-002/out/$name";$target=Join-Path $OutDir $name
+  $sha=(Get-FileHash $source).Hash.ToLowerInvariant()
   if(-not(Test-Path -LiteralPath $target) -or $sha -ne (Get-FileHash $target).Hash.ToLowerInvariant()){Copy-Item -LiteralPath $source -Destination $target -Force}
-  $sha=(Get-FileHash $source).Hash.ToLowerInvariant();if($sha -ne (Get-FileHash $target).Hash.ToLowerInvariant()){throw 'Immutable dependency mismatch'}
+  if($sha -ne (Get-FileHash $target).Hash.ToLowerInvariant()){throw 'Immutable dependency mismatch'}
   $reuse+=[ordered]@{file=$name;sha256=$sha;source=$source;identical=$true}
  }
  $reuse|ConvertTo-Json|Set-Content (Join-Path $OutDir 'reuse.json') -Encoding utf8
