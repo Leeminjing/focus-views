@@ -241,12 +241,18 @@ public:
             experimental::point("view-published",name);
 #endif
         }catch(const Error& e){
-            if(result.child){if(result.input){close_input(*result.child,*result.input);result.input.reset();}
 #ifdef FOCUS_VIEWS_CRASH_EXPERIMENT
-                try{close_unpublished_window(*result.child);}catch(const Error& cleanup){log_.emit("discard_window_cleanup_error","\"view\":"+json(name)+",\"api\":"+json(cleanup.api)+",\"error\":"+std::to_string(cleanup.code)+",\"primaryApi\":"+json(e.api));}
-#endif
-                result.child->stop();}
+            auto cleanup=[&](const char* stage,auto operation){try{operation();}catch(const Error& failure){++failed_;log_.emit("rejected_view_cleanup_error","\"view\":"+json(name)+",\"stage\":"+json(stage)+",\"api\":"+json(failure.api)+",\"error\":"+std::to_string(failure.code)+",\"primaryApi\":"+json(e.api));}catch(const std::exception& failure){++failed_;log_.emit("rejected_view_cleanup_error","\"view\":"+json(name)+",\"stage\":"+json(stage)+",\"message\":"+json(failure.what())+",\"primaryApi\":"+json(e.api));}};
+            if(result.child){
+                if(result.input){cleanup("input-close",[&]{close_input(*result.child,*result.input);});result.input.reset();}
+                cleanup("native-window-close",[&]{close_unpublished_window(*result.child);});
+                cleanup("process-stop",[&]{result.child->stop();});
+            }
+            if(workspace_owned)cleanup("private-workspace",[&]{std::filesystem::remove_all(workspace);});
+#else
+            if(result.child){if(result.input){close_input(*result.child,*result.input);result.input.reset();}result.child->stop();}
             if(workspace_owned)std::filesystem::remove_all(workspace);
+#endif
             actions_.fail(ticket,e);log_.emit("view_restore_rejected","\"view\":"+json(name)+",\"api\":"+json(e.api)+",\"error\":"+std::to_string(e.code)+",\"published\":false,\"workspaceExists\":"+(std::filesystem::exists(workspace)?"true":"false"));throw;
         }
     }
