@@ -6,7 +6,7 @@
 
 独立 `controller.exe` 在 ResumeThread 前将 manager 纳入外层 Kill-on-close Job，子进程按原生嵌套 Job 归属继承，防止创建/加入内层 Job 之间的归属空隙。达到匹配事件后直接调用 TerminateProcess，不抛异常模拟。控制器按 PID+创建时间固定实例、查询实际 Job 成员和退出、关闭观测句柄，再验证 Desktop 对象消失。若内层自动清理不完整，只终止此控制器拥有的 Job，并单独标记显式接管；不将其冒充自动清理。
 
-退出证明使用实验内部有界、SHA256 校验的 `owner.fvc`。后续 manager 再检查旧实例退出和 Desktop 缺失，随后只读取原 Session/快照。证明文件不是应用状态，不携带可复用进程/线程/窗口句柄。仅可信本地目录，完整性校验不是认证。
+退出证明使用实验内部有界、SHA256 校验的 `owner.fvc`，绑定 Session 哈希。`<store>.owners/` 在可变所有权侧目录中追加 PID＋创建时间的 `.owner` 及实际清理后的 `.done`；它不属于不可变 Snapshot/Artifact。新操作持独占锁，登记当前实例后才允许 manager 执行；后续 manager 检查全部前驱清理、最新凭证和旧 Desktop 缺失，随后只读取原 Session/快照。任何未确认清理的尝试都会阻止该存储的继续恢复，不以旧的有效凭证跳过失败尝试。证明文件不是应用状态，不携带可复用进程/线程/窗口句柄。仅可信本地目录，完整性校验不是认证。
 
 ## 故障矩阵
 
@@ -26,6 +26,6 @@
 
 ## 当前状态
 
-已编译并实际运行最小 staging 拒绝和提交后恢复；首轮 34 个开发场景中，两个 RB 资源失败场景的 Desktop 清理仍为红项，原始 false summary 保留。正式矩阵和完整回归尚未执行，不宣布 R5-004 通过。历史 CreateProcessW/5 门禁独立保留，人工宿主交互未执行。
+已编译并实际运行最小 staging 拒绝和提交后恢复；首轮 34 个、后续 42 个开发场景均保留原始 false summary：两款应用的 RB 资源失败场景均未通过 Desktop 消失核对。进程退出、观测句柄/Job 释放顺序调整、枚举替代打开及独立监督阶段的有界对照均未解决该红项，未保留无效绕行作为成功路径。首轮正式矩阵 63 个场景、2,895 项检查中仍有上述两项红项；完整旧回归通过。随后在已响应且未发布的窗口失败路径增加目标 GUI 线程原生 WM_CLOSE 与 HWND 失效核对，最小 fixture 实验通过；新双轮矩阵和完整回归尚待完成，不提前宣布 R5-004 通过。历史 CreateProcessW/5 门禁独立保留，人工宿主交互未执行。
 
 原生依据：[TerminateProcess 与等待退出](https://learn.microsoft.com/en-us/windows/win32/api/processthreadsapi/nf-processthreadsapi-terminateprocess)、[嵌套 Job 的归属和终止](https://learn.microsoft.com/en-us/windows/win32/procthread/nested-jobs)、[进程结束与对象引用生命周期](https://learn.microsoft.com/en-us/windows/win32/procthread/terminating-a-process)。文档依据与本机观测分别报告，不从 Job 标志本身推导恢复或清理成功。

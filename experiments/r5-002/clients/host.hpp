@@ -241,11 +241,29 @@ public:
             experimental::point("view-published",name);
 #endif
         }catch(const Error& e){
-            if(result.child){if(result.input){close_input(*result.child,*result.input);result.input.reset();}result.child->stop();}
+            if(result.child){if(result.input){close_input(*result.child,*result.input);result.input.reset();}
+#ifdef FOCUS_VIEWS_CRASH_EXPERIMENT
+                try{close_unpublished_window(*result.child);}catch(const Error& cleanup){log_.emit("discard_window_cleanup_error","\"view\":"+json(name)+",\"api\":"+json(cleanup.api)+",\"error\":"+std::to_string(cleanup.code)+",\"primaryApi\":"+json(e.api));}
+#endif
+                result.child->stop();}
             if(workspace_owned)std::filesystem::remove_all(workspace);
             actions_.fail(ticket,e);log_.emit("view_restore_rejected","\"view\":"+json(name)+",\"api\":"+json(e.api)+",\"error\":"+std::to_string(e.code)+",\"published\":false,\"workspaceExists\":"+(std::filesystem::exists(workspace)?"true":"false"));throw;
         }
     }
+#ifdef FOCUS_VIEWS_CRASH_EXPERIMENT
+    void close_unpublished_window(Child& v){
+        if(v.pending||v.published||!v.m.window||v.p.exited)return;
+        auto send=[&](const wchar_t* op,UINT message){const auto name=L"Local\\"+prefix_+L"_discard_"+std::to_wstring(++serial_);Mapping reply(name,sizeof(Reply),true);auto& r=*new(reply.view)Reply{};
+            auto worker=launch(helper_,v.desktop->full,{L"--role",L"bridge",L"--state",v.shared_name,L"--reply",name,L"--target",L"top",L"--op",op,L"--message",std::to_wstring(message)},0,log_,"helper");assign(worker);confirm(worker,v);
+            DWORD code=0;check(GetExitCodeProcess(worker.process.value,&code),"GetExitCodeProcess.discard_window");if(!r.done)throw Error("discard.window.no_reply",ERROR_INVALID_STATE);
+            log_.emit("discard_window_native_result","\"view\":"+json(v.name)+",\"operation\":"+json(op)+",\"api\":"+json(r.api)+",\"error\":"+std::to_string(r.error)+",\"exit\":"+std::to_string(code)+",\"result\":"+std::to_string(r.api_result));
+            if(!wcscmp(op,L"send")){if(code||r.error||!r.api_result)throw Error("discard.window.close",r.error?r.error:ERROR_INVALID_STATE);}
+            else if(code!=2||r.error!=ERROR_INVALID_WINDOW_HANDLE||strcmp(r.api,"validate_target_window"))throw Error("discard.window.still_present",ERROR_BUSY);
+        };
+        send(L"send",WM_CLOSE);send(L"observe",0);
+        log_.emit("unpublished_window_discarded","\"view\":"+json(v.name)+",\"pid\":"+std::to_string(v.p.pid)+",\"hwnd\":"+std::to_string(v.m.window)+",\"nativeCloseAndAbsenceConfirmed\":true");
+    }
+#endif
     struct Observed {Resources resource;Observation work;};
     Observed observe(Child& v,const char* phase){
         auto r=resource(v,3,phase);auto w=state(v);
