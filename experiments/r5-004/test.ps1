@@ -29,6 +29,12 @@ function Complete-Restore([string]$Label,[string]$App,[object]$Save,[object]$Res
  Check-Restore $Label $App $Save.manager $Restore.manager $SourceRows $normal $Failure
  return ,$m
 }
+Safe-Case 'ownership-lock-refusal' 'controller-failure-summary' {
+ $root=Join-Path $ResultsDir 'ownership-lock-refusal';$store=Join-Path $root 'store';New-Item -ItemType Directory -Path ($store+'.owners')|Out-Null
+ $lock=[IO.File]::Open(($store+'.owners/lock'),[IO.FileMode]::OpenOrCreate,[IO.FileAccess]::ReadWrite,[IO.FileShare]::None)
+ try{& (Join-Path $OutDir 'controller.exe') --manager (Join-Path $OutDir 'manager.exe') --client (Join-Path $OutDir 'fixture-client.dll') --fixture (Join-Path $OutDir 'fixture.exe') --mode restore --store $store --manager-output (Join-Path $root 'manager') --output (Join-Path $root 'supervisor') *> (Join-Path $root 'console.log');$exit=$LASTEXITCODE}finally{$lock.Dispose()}
+ $s=Get-Content -Raw (Join-Path $root 'supervisor/summary.json')|ConvertFrom-Json;Check 'ownership-lock-refusal.precise-primary-error-no-application' ($exit -ne 0 -and -not $s.applicationsStarted -and $s.managerPid -eq 0 -and $s.api -eq 'CreateFileW.session_owner_lock' -and $s.error -eq 32 -and -not(Test-Path (Join-Path $root 'manager')))
+}
 $pre=@('staging-half:S0.fvs','staging-verified:S0.fvs','published:S0.fvs','artifact-published:A-v1','published:SA.fvs','published:SB.fvs','staging-half:session.fvs','staging-verified:session.fvs')
 foreach($app in @('fixture','recorder')){
  $baseSave=$null;$baseRows=@();$baseStore='';$partial=''
