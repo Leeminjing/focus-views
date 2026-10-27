@@ -2,6 +2,7 @@
 #include "../r5-004/crash.hpp"
 namespace r5004a {
 inline void inspect_desktop(const std::string& full,r305::Log& log){
+    if(!r5004::desktop_exists(full)){log.emit("desktop_diagnostic_absent","\"name\":"+r305::json(full));return;}
     const auto pos=full.find('\\');if(pos==std::string::npos)throw r305::Error("cleanup.desktop_name",ERROR_INVALID_DATA);
     const auto short_name=full.substr(pos+1);const std::wstring name(short_name.begin(),short_name.end());
     auto desk=OpenDesktopW(name.c_str(),0,FALSE,DESKTOP_ENUMERATE|DESKTOP_READOBJECTS);

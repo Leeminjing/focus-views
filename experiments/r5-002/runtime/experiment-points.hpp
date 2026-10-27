@@ -1,5 +1,6 @@
 #pragma once
 #include <filesystem>
+#include <set>
 namespace r305 {class Child;}
 // Opt-in experiment instrumentation. No callbacks or changes to target ABI.
 namespace r305::experimental {
@@ -11,6 +12,8 @@ inline thread_local std::wstring generation;
 inline thread_local bool reject_image=false;
 inline thread_local bool detach_cleanup=false;
 inline thread_local bool suspend_cleanup=false;
+inline thread_local bool reject_after_context=false;
+inline thread_local std::set<unsigned long> source_writes_started;
 using PrepareCleanup=void(*)(void*,Child&,void*);
 using StopCleanup=void(*)(void*,Child&);
 inline thread_local void* cleanup_state=nullptr;

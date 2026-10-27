@@ -84,6 +84,8 @@ public:
         }catch(const std::exception& e){log_.emit("cleanup_error","\"error\":"+json(e.what()));}if(registered)pump_.remove(*this);
 #ifdef FOCUS_VIEWS_STOPPOINT_EXPERIMENT
         for(auto* process:{&p,&courier})if(process->exited)for(auto* h:{&process->thread,&process->process})if(h->value){const auto value=reinterpret_cast<ULONG_PTR>(h->value);const auto okay=CloseHandle(h->value);const auto error=okay?0:GetLastError();if(okay)h->value=nullptr;log_.emit("cleanup_own_instance_handle_closed","\"pid\":"+std::to_string(process->pid)+",\"handle\":"+std::to_string(value)+",\"closed\":"+(okay?"true":"false")+",\"error\":"+std::to_string(error));}
+        experimental::source_writes_started.erase(p.pid);
+        experimental::preparation_failures.erase(p.pid);
 #endif
     }
     Metadata metadata(){
@@ -129,7 +131,8 @@ public:
         demand(threads.contains(event.dwThreadId),"event thread registered to routed PID");
         log_.emit("debug_event","\"view\":"+json(name)+",\"pid\":"+std::to_string(p.pid)+",\"tid\":"+std::to_string(event.dwThreadId)+",\"code\":"+std::to_string(event.dwDebugEventCode));
 #ifdef FOCUS_VIEWS_STOPPOINT_EXPERIMENT
-        if(stopping_&&event.dwDebugEventCode==EXCEPTION_DEBUG_EVENT){const auto& fault=event.u.Exception.ExceptionRecord;auto cpu=context();log_.emit("cleanup_exception","\"pid\":"+std::to_string(p.pid)+",\"code\":"+std::to_string(fault.ExceptionCode)+",\"firstChance\":"+std::to_string(event.u.Exception.dwFirstChance)+",\"address\":"+std::to_string(reinterpret_cast<ULONG_PTR>(fault.ExceptionAddress))+",\"parameter0\":"+std::to_string(fault.NumberParameters?fault.ExceptionInformation[0]:0)+",\"rip\":"+std::to_string(cpu.Rip)+",\"rsp\":"+std::to_string(cpu.Rsp));if(fault.ExceptionCode==0xE06D7363&&event.u.Exception.dwFirstChance){continue_event(DBG_EXCEPTION_NOT_HANDLED);return;}check(TerminateProcess(p.process.value,ERROR_PROCESS_ABORTED),"TerminateProcess.cleanup_exception");}
+        if(event.dwDebugEventCode==OUTPUT_DEBUG_STRING_EVENT)experimental::record_runtime_output(p.process.value,event,log_);
+        if(stopping_&&event.dwDebugEventCode==EXCEPTION_DEBUG_EVENT){experimental::record_cleanup_exception(event,log_);const auto& fault=event.u.Exception.ExceptionRecord;if(fault.ExceptionCode==0xE06D7363&&event.u.Exception.dwFirstChance){continue_event(DBG_EXCEPTION_NOT_HANDLED);return;}check(TerminateProcess(p.process.value,ERROR_PROCESS_ABORTED),"TerminateProcess.cleanup_exception");}
         if(event.dwDebugEventCode==CREATE_PROCESS_DEBUG_EVENT){auto& h=experimental::debug_handles[p.pid];h.process=reinterpret_cast<ULONG_PTR>(event.u.CreateProcessInfo.hProcess);h.threads[event.dwThreadId]=reinterpret_cast<ULONG_PTR>(event.u.CreateProcessInfo.hThread);log_.emit("cleanup_system_handles_created","\"pid\":"+std::to_string(p.pid)+",\"tid\":"+std::to_string(event.dwThreadId)+",\"processHandle\":"+std::to_string(h.process)+",\"threadHandle\":"+std::to_string(h.threads[event.dwThreadId]));}
         if(event.dwDebugEventCode==CREATE_THREAD_DEBUG_EVENT){const auto h=reinterpret_cast<ULONG_PTR>(event.u.CreateThread.hThread);experimental::debug_handles[p.pid].threads[event.dwThreadId]=h;log_.emit("cleanup_system_thread_created","\"pid\":"+std::to_string(p.pid)+",\"tid\":"+std::to_string(event.dwThreadId)+",\"handle\":"+std::to_string(h));}
 #endif
@@ -184,7 +187,8 @@ public:
         }
 #ifdef FOCUS_VIEWS_STOPPOINT_EXPERIMENT
         log_.emit("cleanup_stop_state","\"view\":"+json(name)+",\"pending\":"+(pending?"true":"false")+",\"halt\":"+json(halt)+",\"callerDesktop\":"+json(r3::thread_desktop().c_str())+",\"ownProcessHandle\":"+std::to_string(reinterpret_cast<ULONG_PTR>(p.process.value))+",\"ownThreadHandle\":"+std::to_string(reinterpret_cast<ULONG_PTR>(p.thread.value)));
-        if(experimental::stop_cleanup&&!p.exited&&pending&&halt=="checkpoint"&&!published){
+        if(experimental::stop_cleanup&&!p.exited&&pending&&halt=="checkpoint"&&!published&&experimental::source_writes_started.contains(p.pid))log_.emit("cleanup_abort_refused_dirty","\"view\":"+json(name)+",\"pid\":"+std::to_string(p.pid)+",\"sourceStateMayBePartiallyWritten\":true,\"continueForUserExecution\":false");
+        if(experimental::stop_cleanup&&!p.exited&&pending&&halt=="checkpoint"&&!published&&!experimental::source_writes_started.contains(p.pid)){
             stopping_=true;deadline=0;
             try{experimental::stop_cleanup(experimental::cleanup_state,*this);demand(p.exited,"native abort target exit confirmed");}
             catch(const Error& e){const auto original=std::current_exception();log_.emit("cleanup_abort_failure","\"api\":"+json(e.api)+",\"error\":"+std::to_string(e.code));
@@ -193,7 +197,7 @@ public:
             }
             return;
         }
-        if((experimental::detach_cleanup||experimental::suspend_cleanup)&&!p.exited&&pending&&halt=="checkpoint"&&!published){
+        if((experimental::detach_cleanup||experimental::suspend_cleanup)&&!p.exited&&pending&&halt=="checkpoint"&&!published&&!experimental::source_writes_started.contains(p.pid)){
             stopping_=true;deadline=0;bool detached=false;
             try{
                 auto suspended=experimental::suspend_owned_threads(p.pid,threads,log_);

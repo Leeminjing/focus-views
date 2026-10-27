@@ -15,6 +15,8 @@ $toolchain=Get-Content -Raw (Join-Path $OutDir 'build.json')|ConvertFrom-Json
 [ordered]@{time=(Get-Date -Format o);sourceHead=(& git -C $PSScriptRoot rev-parse HEAD);testSha256=$testHash;driverSha256=(Sha $driver);verificationSha256=(Sha (Join-Path $PSScriptRoot '../r5-004/verification.ps1'));oracleSha256=(Sha $verificationSource);system=[Environment]::OSVersion.VersionString;repeats=$Repeats;skipRegression=[bool]$SkipRegression}|ConvertTo-Json|Set-Content (Join-Path $ResultsDir 'identity.json')
 Copy-Item -LiteralPath (Join-Path $OutDir 'build.json') -Destination (Join-Path $ResultsDir 'build.json')
 Copy-Item -LiteralPath (Join-Path $OutDir 'reuse.json') -Destination (Join-Path $ResultsDir 'reuse.json')
+$legacy=Join-Path $ResultsDir 'reg3/r5-002-regression/r5-001b-regression/r5-001a-regression/r4-003-001-regression/r4-002a-regression/c001-regression/b001-regression/cet002-regression/register-1/target-active-stack-before-continue.bin'
+if(-not $SkipRegression -and $legacy.Length -ge 260){[ordered]@{allEvidenceChecksPassed=$false;stage='legacy-path-preflight';length=$legacy.Length;applicationsStarted=$false}|ConvertTo-Json|Set-Content (Join-Path $ResultsDir 'summary.json');throw 'Use a shorter ResultsDir for legacy native evidence'}
 foreach($app in @('fixture','recorder')){foreach($iteration in 1..$Repeats){$label="$app-$iteration";$root=Join-Path $ResultsDir $label
  Safe-Case $label 'pending-rejection-cleanup-then-independent-recovery' {
   $store=Join-Path $root 'store';$save=Run-Supervised $app save (Join-Path $root 'save') $store 'session-committed'
@@ -44,10 +46,59 @@ foreach($app in @('fixture','recorder')){foreach($iteration in 1..$Repeats){$lab
   Check "$label.fixed-Snapshots-and-Artifacts-survive-recovery" ((InventoryText $store) -ceq $fixed)
  }
 }}
+# Per-instance cleanup must still work after a different View has restored source state.
+foreach($app in @('fixture','recorder')){$label="$app-RB";$root=Join-Path $ResultsDir $label
+ Safe-Case $label 'published-RA-survives-RB-checkpoint-rejection' {
+  $store=Join-Path $root 'store';$save=Run-Supervised $app save (Join-Path $root 'save') $store 'session-committed';$source=Crash-Audit $save.manager $save.supervisor "$label.source" $true;$fixed=InventoryText $store
+  $rejected=Run-Supervised $app restore (Join-Path $root 'reject') $store '' $save.certificate 'checkpoint-abort-RB-reject'
+  $m=Crash-Audit $rejected.manager $rejected.supervisor "$label.rejected" $false;$null=Audit $rejected.manager "$label.native"
+  $failure=@($m|Where-Object type -eq 'view_restore_rejected');$native=@($m|Where-Object type -eq 'abort_native_window_cleanup');$survivor=@($m|Where-Object type -eq 'other_view_survived_rejection')
+  Check "$label.only-RB-refused-after-RA-source-write" ($rejected.managerExit -eq 2 -and $failure.Count -eq 1 -and $failure[0].view -eq 'RB' -and $failure[0].api -eq 'restore.build_or_image_identity' -and @($m|Where-Object {$_.type -eq 'restore_source_write_begin' -and $_.view -eq 'RA'}).Count -eq 1 -and @($m|Where-Object {$_.type -eq 'restore_source_write_begin' -and $_.view -eq 'RB'}).Count -eq 0)
+  Check "$label.RB-native-destroy-and-exit" ($native.Count -eq 1 -and $native[0].view -eq 'RB' -and $native[0].verified -and $native[0].destroyWindow -and $native[0].goneMask -eq 7)
+  Check "$label.RA-still-runs-observes-and-paints" ($survivor.Count -eq 1 -and $survivor[0].rejected -eq 'RB' -and $survivor[0].survivor -eq 'RA' -and $survivor[0].alive -and $survivor[0].nativeObservationAndFrame -and @($m|Where-Object {$_.type -eq 'capture' -and $_.view -eq 'RA' -and $_.name -eq 'survived-rejection'}).Count -eq 1)
+  Check "$label.fixed-store-unchanged" ((InventoryText $store) -ceq $fixed)
+  $fresh=Run-Supervised $app restore (Join-Path $root 'fresh') $store '' $rejected.certificate;$null=Complete-Restore "$label.fresh" $app $save $fresh $source
+  Check "$label.fixed-store-unchanged-after-fresh-recovery" ((InventoryText $store) -ceq $fixed)
+ }
+}
+# Bounded safety negatives for the new hook/abort trust boundary.
+foreach($app in @('fixture','recorder')){foreach($fault in @('abort-wrong-thread','abort-mapping-missing','checkpoint-postwrite-reject')){$label="$app-$fault";$root=Join-Path $ResultsDir $label
+ Safe-Case $label 'unsafe-cleanup-refused' {
+  $store=Join-Path $root 'store';$save=Run-Supervised $app save (Join-Path $root 'save') $store 'session-committed';$source=Crash-Audit $save.manager $save.supervisor "$label.source" $true;$fixed=InventoryText $store
+  $before=$operations.Count;$rejected=$null
+  try{$rejected=Run-Supervised $app restore (Join-Path $root 'reject') $store '' $save.certificate $fault}catch{if($operations.Count -ne $before+1){throw};$rejected=$operations[-1]}
+  $summary=Get-Content -Raw (Join-Path $rejected.supervisor 'summary.json')|ConvertFrom-Json;$m=Rows (Join-Path $rejected.manager 'controller.jsonl')
+  Check "$label.no-usable-View" ($summary.protocolPassed -and $rejected.managerExit -ne 0 -and @($m|Where-Object type -eq 'view_published').Count -eq 0 -and @($m|Where-Object type -eq 'abort_exception_dispatched').Count -eq 0)
+  if($fault -eq 'abort-wrong-thread'){
+   $helper=Rows (Join-Path $rejected.manager 'RA/abort-helper.jsonl');$native=@($helper|Where-Object type -eq 'abort_helper_failure')
+   Check "$label.native-owner-rejection-before-install" ($native.Count -eq 1 -and $native[0].api -eq 'abort.thread_owner' -and $native[0].error -eq 1307 -and @($helper|Where-Object type -eq 'abort_hook_installed').Count -eq 0 -and @($m|Where-Object type -eq 'restored_context').Count -eq 0)
+  }elseif($fault -eq 'abort-mapping-missing'){
+   $failure=@($m|Where-Object type -eq 'cleanup_runtime_failure');$refusal=@($m|Where-Object type -eq 'view_restore_rejected')
+   Check "$label.native-mapping-failure-once-no-retry" ($failure.Count -eq 1 -and $failure[0].api -eq 'OpenFileMappingW.abort' -and $failure[0].error -eq 2 -and -not $failure[0].queryRetried -and $refusal.Count -eq 1 -and $refusal[0].api -eq 'OpenFileMappingW.abort' -and @($m|Where-Object type -in @('abort_handler_prepared','restored_context')).Count -eq 0)
+  }else{
+   $written=@($m|Where-Object type -eq 'after_context_fault');$refused=@($m|Where-Object type -eq 'cleanup_abort_refused_dirty')
+   Check "$label.actual-source-context-written-abort-forbidden" ($written.Count -eq 1 -and $written[0].sourceCpuWritten -and $refused.Count -ge 1 -and @($refused|Where-Object {$_.continueForUserExecution -or -not $_.sourceStateMayBePartiallyWritten}).Count -eq 0)
+  }
+  Check "$label.fixed-store-unchanged" ((InventoryText $store) -ceq $fixed)
+  if($summary.cleanupVerified){
+   $null=Crash-Audit $rejected.manager $rejected.supervisor "$label.cleanup" $false
+   $fresh=Run-Supervised $app restore (Join-Path $root 'fresh') $store '' $rejected.certificate
+   $null=Complete-Restore "$label.fresh" $app $save $fresh $source
+  }else{
+   $supervisor=Rows (Join-Path $rejected.supervisor 'supervisor.jsonl');$failure=@($supervisor|Where-Object type -eq 'supervisor_failure')
+   Check "$label.unconfirmed-cleanup-no-certificate" (-not(Test-Path -LiteralPath $rejected.certificate) -and $failure.Count -eq 1 -and $failure[0].api -eq 'crash.desktop_retained' -and -not(Test-Path -LiteralPath (Join-Path ($store+'.owners') ("$($summary.managerPid)-$($summary.managerCreated).owner.done"))))
+   # This is a new explicit operation, not a retry of the failed restore.
+   $blocked=Run-Supervised $app restore (Join-Path $root 'blocked') $store '' $save.certificate -ExactPrevious
+   $recovery=Rows (Join-Path $blocked.manager 'recovery.jsonl');Check "$label.next-operation-fails-closed" ($blocked.managerExit -eq 2 -and @($recovery|Where-Object {$_.type -eq 'recovery_failure' -and $_.api -eq 'recovery.owner_cleanup_unconfirmed'}).Count -eq 1 -and -not(Test-Path -LiteralPath (Join-Path $blocked.manager 'controller.jsonl')))
+  }
+  Check "$label.fixed-store-still-unchanged" ((InventoryText $store) -ceq $fixed)
+ }
+}}
+foreach($operation in $operations){$rows=Rows (Join-Path $operation.supervisor 'supervisor.jsonl');foreach($pending in @($rows|Where-Object type -eq 'image_diagnostic_pending')){$resolved=@($rows|Where-Object {$_.type -eq 'deferred_image_exit_confirmed' -and $_.pid -eq $pending.pid -and $_.created -eq $pending.created});Check "$($operation.app).$($operation.managerPid).image-diagnostic-$($pending.pid)-same-instance" ($resolved.Count -eq 1 -and $resolved[0].originalError -eq $pending.error -and $resolved[0].samePinnedHandle -and $resolved[0].nativeWaitSignaled -and -not $resolved[0].queryRetried)}}
 Check 'test-source-unchanged' ((Sha $PSCommandPath) -eq $testHash)
 $body=$errors.Count -eq 0 -and @($checks|Where-Object {-not $_.passed}).Count -eq 0;$regression='not_run'
 if(-not $SkipRegression){try{& (Join-Path $PSScriptRoot '../r5-003/build.ps1') -MsvcRoot $toolchain.msvc -SdkRoot $toolchain.sdk -SdkVersion $toolchain.sdkVersion *> (Join-Path $ResultsDir 'regression-build.log');& (Join-Path $PSScriptRoot '../r5-003/test.ps1') -ResultsDir (Join-Path $ResultsDir 'reg3') *> (Join-Path $ResultsDir 'regression-console.log');$old=Get-Content -Raw (Join-Path $ResultsDir 'reg3/summary.json')|ConvertFrom-Json;$regression=if($old.allEvidenceChecksPassed -and $old.regressions -eq 'passed'){'passed'}else{'failed'};Check 'R5-003-and-complete-nested-regressions' ($regression -eq 'passed')}catch{$regression='failed';$errors.Add([pscustomobject]@{case='regression';error=$_.ToString()});Check 'R5-003-and-complete-nested-regressions' $false}}
 $okay=$errors.Count -eq 0 -and @($checks|Where-Object {-not $_.passed}).Count -eq 0
-[ordered]@{allEvidenceChecksPassed=$okay;stoppedFailureCleanupVerified=$body;regressions=$regression;aslrRelocationVerified=$false;fullR5004Passed=$false;gateClosed=$false;manualHostTest='not_executed';checks=$checks;cases=$cases;operations=$operations;errors=$errors}|ConvertTo-Json -Depth 10|Set-Content (Join-Path $ResultsDir 'summary.json') -Encoding utf8
+[ordered]@{allEvidenceChecksPassed=$okay;preSourceWriteCheckpointCleanupVerified=$body;regressions=$regression;aslrRelocationVerified=$false;fullR5004Passed=$false;gateClosed=$false;manualHostTest='not_executed';checks=$checks;cases=$cases;operations=$operations;errors=$errors}|ConvertTo-Json -Depth 10|Set-Content (Join-Path $ResultsDir 'summary.json') -Encoding utf8
 if(-not $okay){throw 'R5-004a failed; native evidence preserved'}
 'R5_004A_STOPPED_FAILURE_CLEANUP_PASSED'
