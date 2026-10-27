@@ -6,6 +6,29 @@
 // Experiment-only native cleanup support. The debug event must still be held
 // when this is called. No thread is resumed after acquiring these suspensions.
 namespace r305::experimental {
+struct PreparationFailure {std::string api;DWORD error=0;};
+inline thread_local std::map<DWORD,PreparationFailure> preparation_failures;
+template<class Recorder>
+void record_runtime_output(HANDLE process,const DEBUG_EVENT& event,Recorder& log){
+    const auto& info=event.u.DebugString;if(info.fUnicode||!info.nDebugStringLength||info.nDebugStringLength>256)return;
+    char bytes[257]{};SIZE_T count=0;
+    if(!ReadProcessMemory(process,info.lpDebugStringData,bytes,info.nDebugStringLength,&count)){const auto error=GetLastError();log.emit("cleanup_runtime_diagnostic_unreadable","\"pid\":"+std::to_string(event.dwProcessId)+",\"error\":"+std::to_string(error));return;}
+    bytes[count]=0;const std::string text(bytes);constexpr auto prefix="FV_ABORT_FAILURE|";if(!text.starts_with(prefix))return;
+    const auto at=text.find('|',strlen(prefix));if(at==std::string::npos)return;const auto api=text.substr(strlen(prefix),at-strlen(prefix));
+    if(api.empty()||api.size()>96||api.find_first_not_of("abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789._")!=std::string::npos)return;
+    std::uint64_t error=0;if(at+1==text.size())return;for(auto n=at+1;n<text.size();++n){if(text[n]<'0'||text[n]>'9')return;error=error*10+text[n]-'0';if(error>MAXDWORD)return;}
+    preparation_failures.try_emplace(event.dwProcessId,PreparationFailure{api,static_cast<DWORD>(error)});
+    log.emit("cleanup_runtime_failure","\"pid\":"+std::to_string(event.dwProcessId)+",\"tid\":"+std::to_string(event.dwThreadId)+",\"api\":"+json(api)+",\"error\":"+std::to_string(error)+",\"queryRetried\":false");
+}
+template<class Recorder>
+void record_cleanup_exception(const DEBUG_EVENT& event,Recorder& log){
+    const auto& fault=event.u.Exception.ExceptionRecord;CONTEXT cpu{};cpu.ContextFlags=CONTEXT_CONTROL;
+    DWORD error=0;Handle thread(OpenThread(THREAD_GET_CONTEXT|THREAD_QUERY_LIMITED_INFORMATION,FALSE,event.dwThreadId));
+    if(!thread.value)error=GetLastError();
+    else if(GetProcessIdOfThread(thread.value)!=event.dwProcessId)error=ERROR_INVALID_OWNER;
+    else if(!GetThreadContext(thread.value,&cpu))error=GetLastError();
+    log.emit("cleanup_exception","\"pid\":"+std::to_string(event.dwProcessId)+",\"tid\":"+std::to_string(event.dwThreadId)+",\"code\":"+std::to_string(fault.ExceptionCode)+",\"firstChance\":"+std::to_string(event.u.Exception.dwFirstChance)+",\"address\":"+std::to_string(reinterpret_cast<ULONG_PTR>(fault.ExceptionAddress))+",\"parameter0\":"+std::to_string(fault.NumberParameters?fault.ExceptionInformation[0]:0)+",\"contextSampled\":"+(error?"false":"true")+",\"samplingError\":"+std::to_string(error)+",\"rip\":"+std::to_string(error?0:cpu.Rip)+",\"rsp\":"+std::to_string(error?0:cpu.Rsp));
+}
 struct DebugHandles {ULONG_PTR process=0;std::map<DWORD,ULONG_PTR> threads;};
 inline thread_local std::map<DWORD,DebugHandles> debug_handles;
 template<class Recorder>

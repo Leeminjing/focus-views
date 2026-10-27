@@ -5,8 +5,15 @@ int wmain(int argc,wchar_t** argv){using namespace r305;std::unique_ptr<Log> evi
     Mapping mapping(args.get(L"--map"),sizeof(r5004a::AbortChannel),false);auto& c=*static_cast<r5004a::AbortChannel*>(mapping.view);
     Handle process(OpenProcess(SYNCHRONIZE|PROCESS_QUERY_LIMITED_INFORMATION,FALSE,pid));check(process.value!=nullptr,"OpenProcess.abort_target");
     if(c.magic!=r5004a::abort_magic||c.pid!=pid||c.tid!=tid||c.created!=r5004a::process_created(process.value))throw Error("abort.helper_identity",ERROR_INVALID_OWNER);
+    Handle thread(OpenThread(THREAD_QUERY_LIMITED_INFORMATION|SYNCHRONIZE,FALSE,tid));check(thread.value!=nullptr,"OpenThread.abort_target");
+    const auto actual_pid=GetProcessIdOfThread(thread.value);check(actual_pid!=0,"GetProcessIdOfThread.abort_target");
+    const auto actual_tid=GetThreadId(thread.value);check(actual_tid!=0,"GetThreadId.abort_target");
+    const auto actual_created=r5004a::thread_created(thread.value);if(!actual_created)throw Error("GetThreadTimes.abort_target",GetLastError());
+    if(actual_pid!=pid||actual_tid!=tid||actual_created!=c.thread_created)throw Error("abort.thread_owner",ERROR_INVALID_OWNER);
+    log.emit("abort_thread_pinned","\"pid\":"+std::to_string(pid)+",\"tid\":"+std::to_string(tid)+",\"created\":"+std::to_string(c.thread_created));
     HMODULE module=LoadLibraryW(args.get(L"--dll").c_str());check(module!=nullptr,"LoadLibraryW.abort_runtime");
     const auto entry=reinterpret_cast<HOOKPROC>(GetProcAddress(module,"CleanupGetMessage"));check(entry!=nullptr,"GetProcAddress.CleanupGetMessage");
+    if(WaitForSingleObject(thread.value,0)!=WAIT_TIMEOUT||WaitForSingleObject(process.value,0)!=WAIT_TIMEOUT)throw Error("abort.target_exited_before_hook",ERROR_PROCESS_ABORTED);
     HHOOK hook=SetWindowsHookExW(WH_GETMESSAGE,entry,module,tid);check(hook!=nullptr,"SetWindowsHookExW.abort_thread");
     log.emit("abort_hook_installed","\"pid\":"+std::to_string(pid)+",\"tid\":"+std::to_string(tid)+",\"global\":false");
     check(PostThreadMessageW(tid,WM_NULL,0,0),"PostThreadMessageW.abort_prepare");

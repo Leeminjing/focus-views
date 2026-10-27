@@ -102,6 +102,10 @@ void Execution::verify(const std::string& name,bool okay,const std::string& deta
             const auto offset=static_cast<size_t>(ref.address-(data?s.meta.root:s.meta.stack+4096));std::uint64_t old=0;memcpy(&old,(data?s.memory:s.stack).data()+offset,8);if(old!=old_handle(ref.logical))throw Error("restore.reference_preimage",ERROR_INVALID_DATA);
         }
         if(v.m.gui)demand(v.m.window!=s.meta.window && v.m.window!=0,"new native window identity");
+#ifdef FOCUS_VIEWS_STOPPOINT_EXPERIMENT
+        experimental::source_writes_started.insert(v.p.pid);
+        log_.emit("restore_source_write_begin","\"view\":"+json(v.name)+",\"pid\":"+std::to_string(v.p.pid)+",\"cleanupMayDispatch\":false");
+#endif
         native::write_memory(v.p.process.value,s.meta.root,s.memory.data(),s.memory.size());native::write_memory(v.p.process.value,s.meta.stack+4096,s.stack.data(),s.stack.size());
         for(auto ref:refs){const auto handle=new_handle(ref.logical);native::write_memory(v.p.process.value,ref.address,&handle,8);log_.emit("resource_rebind","\"view\":"+json(v.name)+",\"logicalWindow\":"+std::to_string(ref.logical)+",\"address\":"+std::to_string(ref.address)+",\"oldHwnd\":"+std::to_string(old_handle(ref.logical))+",\"newHwnd\":"+std::to_string(handle));}
         if(fault!="cookie"){native::write_memory(v.p.process.value,v.m.cookie_address,&s.cookie,8);native::write_memory(v.p.process.value,v.m.complement_address,&s.complement,8);}
@@ -117,6 +121,9 @@ void Execution::verify(const std::string& name,bool okay,const std::string& deta
         auto cpu=s.cpu;cpu.R11=boot_cpu.R11;if(fault=="register")cpu.R10=boot_cpu.R10;
         if(fault=="context"){Handle denied(OpenThread(THREAD_GET_CONTEXT,FALSE,v.p.tid));check(denied.value!=nullptr,"OpenThread.without_SET_CONTEXT");if(!SetThreadContext(denied.value,&cpu))throw Error("SetThreadContext.restore.denied",GetLastError());throw Error("context_fault_not_rejected",ERROR_INVALID_STATE);}
         check(SetThreadContext(v.p.thread.value,&cpu),"SetThreadContext.restore");
+#ifdef FOCUS_VIEWS_STOPPOINT_EXPERIMENT
+        if(experimental::reject_after_context){experimental::reject_after_context=false;log_.emit("after_context_fault","\"view\":"+json(v.name)+",\"sourceCpuWritten\":true,\"deliberateExperimentFault\":true");throw Error("cleanup.injected_after_context",ERROR_OPERATION_ABORTED);}
+#endif
         const LONG rebuilt_done=0;native::write_memory(v.p.process.value,v.m.rebuild_address,&rebuilt_done,sizeof(rebuilt_done));
         chain(v,"after-ordinary-context-restore");
         const auto got=v.context();verify(v.name+".CPU-context-readback",got.Rip==cpu.Rip && got.Rsp==cpu.Rsp && got.R10==cpu.R10 && got.MxCsr==cpu.MxCsr,"stopped target RIP/RSP/register and floating point control read back after SetThreadContext");

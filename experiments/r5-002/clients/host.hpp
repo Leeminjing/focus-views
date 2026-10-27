@@ -260,6 +260,9 @@ public:
                 cleanup("process-stop",[&]{result.child->stop();});
             }
             if(workspace_owned)cleanup("private-workspace",[&]{std::filesystem::remove_all(workspace);});
+#ifdef FOCUS_VIEWS_STOPPOINT_EXPERIMENT
+            if(other&&other->published)cleanup("surviving-View-proof",[&]{const auto alive=WaitForSingleObject(other->p.process.value,0)==WAIT_TIMEOUT;if(!alive)throw Error("cleanup.other_View_exited",ERROR_PROCESS_ABORTED);observe(*other,"survived-rejection");capture(*other,"survived-rejection");log_.emit("other_view_survived_rejection","\"rejected\":"+json(name)+",\"survivor\":"+json(other->name)+",\"pid\":"+std::to_string(other->p.pid)+",\"alive\":true,\"nativeObservationAndFrame\":true");});
+#endif
 #else
             if(result.child){if(result.input){close_input(*result.child,*result.input);result.input.reset();}result.child->stop();}
             if(workspace_owned)std::filesystem::remove_all(workspace);

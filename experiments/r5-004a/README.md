@@ -8,11 +8,13 @@
 
 停止点失败时：
 
-1. 在创建/调试线程核对 Toolhelp 原生线程集合与事件泵登记集合完全一致。
-2. 为全部线程打开自有句柄、核对 PID，并增加显式挂起计数。
-3. 继续尚未处理的调试事件。显式挂起仍阻止目标执行，不恢复源 CONTEXT、不执行业务前缀。
-4. 调用 `DebugActiveProcessStop`，记录 Windows 对事件句柄的释放，再 `TerminateProcess` 并确认进程和线程退出。
-5. 关闭自有线程/进程句柄及 Desktop。原 R5-004 监督器独立检查所有实例、Job、句柄和 Desktop；只有实际全部清理才发布 `.done`。
+1. 在目标 GUI 仍响应时，由同 Desktop 常驻助手安装仅针对该线程的 WH_GETMESSAGE。运行时 DLL 注册 VEH 并持有自己的引用；目标 EXE 无改动。
+2. 真正到达 checkpoint 后，若源 CPU 尚未写回就发生拒绝，核对 PID/TID、创建时间和检查点地址，只给该清理通道提交 abort。
+3. 在原创建/调试线程以 DBG_EXCEPTION_NOT_HANDLED 继续该断点。Windows 在原线程、当前未改写的上下文中调用 VEH；清理代码不修改 RIP/RSP/SSP。
+4. VEH 核对三个已知窗口的线程/父子归属，原生 DestroyWindow 后检查旧身份失效，再 ExitProcess。它不返回到应用计算。清理期间第一机会 C++ 异常仍传给目标正常处理，未知/二次异常则保留证据并终止，不反复吞掉异常。
+5. 持有目标实例句柄的助手确认目标退出后结束钩子生命周期；Windows 关闭调试事件句柄，管理器释放自己的句柄和 Desktop。原 R5-004 监督器独立检查实例、Job、全部自有句柄和 Desktop；只有物理清理完成才发布 `.done`。
+
+卸钩返回值与“目标实例已退出、回调不再可执行”分别记录。不能将已退出目标上的 UnhookWindowsHookEx 返回 0 写成 API 成功。DLL 在 VEH 注册期间不卸载，最终随目标进程退出释放。
 
 失败保留原恢复错误和独立的清理错误；不延长原有 Desktop 验证期限、不重试 Snapshot、不伪造 `.done`。
 
@@ -27,7 +29,7 @@
 
 输出目录必须不存在。脚本将强制终止提交后的 Manager 1；在 Manager 2 的真实 RA checkpoint 用私有错误映像描述触发原有内核 guard，验证清理；Manager 3 再从未修改的 Session 完整恢复 RA/RB/C。两种 ABI 各重复两次。完整 CPU/CET、Undo、GDI 像素、输入、私有文件和 Artifact 审计复用旧只读 oracle。
 
-`--scenario checkpoint-image-reject` 保留原来的终止路径，`checkpoint-suspend-reject` 仅增加挂起但保留调试关系，`checkpoint-detach-reject` 使用新路径。这些是单次诊断对照，不是创建压力循环。`positive` 模式也会为真实停止点恢复拒绝使用新清理。
+`--scenario checkpoint-image-reject` 保留原来的终止路径，`checkpoint-suspend-reject` 仅增加挂起但保留调试关系，`checkpoint-detach-reject` 是解除调试对照（第二轮仍失败），`checkpoint-abort-reject` 使用目标线程原生清理路径。这些是单次诊断对照，不是创建压力循环。`positive` 模式也会为真实停止点恢复拒绝使用新清理。
 
 `build-minimal.ps1` 和 `minimal.cpp` 是普通启动栈上的无恢复 Win32 对照；`inspect.cpp` 只观察指定 Desktop，不清除或接管外部进程。它们不能证明执行恢复。
 
@@ -35,4 +37,4 @@
 
 正式结果见 [report.md](results/r5004a/report.md)。探索阶段的成功和失败均另行保留；原生拒绝与恢复成功分别计数。新路径证明的是本实验 ABI v1/v2、同会话、固定布局、已知单 GUI 线程/窗口结构的停止点清理。Windows 内部引用计数的精确原因未由公开接口直接证明，不将机制相关性写成已定位 Windows 内核缺陷。
 
-没有关闭 CET/CFG/GS、ASLR 或宿主保护，没有新增目标进程 VEH、全局输入或目标业务恢复逻辑。ASLR 异基址、完整 R5-004、宿主重启/断电和历史 CreateProcessW/5 可靠性门禁仍未通过。
+没有关闭 CET/CFG/GS、ASLR 或宿主保护，没有全局输入、目标业务恢复逻辑或目标 EXE 重编译；只新增有界的目标线程清理 DLL/助手。ASLR 异基址、完整 R5-004、宿主重启/断电和历史 CreateProcessW/5 可靠性门禁仍未通过。
