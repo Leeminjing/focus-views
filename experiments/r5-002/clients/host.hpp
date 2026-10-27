@@ -1,5 +1,8 @@
 #pragma once
 #include "observation.hpp"
+#ifdef FOCUS_VIEWS_CRASH_EXPERIMENT
+#include "../runtime/experiment-points.hpp"
+#endif
 namespace r305 {
 struct Input {std::unique_ptr<Mapping> mapping;Process bridge;std::uint64_t sequence=0;LONG request=0;r304::Channel& c(){return *static_cast<r304::Channel*>(mapping->view);}};
 struct CaseSnapshot : Snapshot {Observation work{};std::uint64_t expected=0;};
@@ -217,6 +220,9 @@ public:
             result.child=start(name,false,name=="RB"&&scenario_==L"branch-failure");auto& v=*result.child;
             if(other)routing_guard(*other,v);
             auto resources=s.resources;if(name=="RB"&&scenario_==L"resource-failure"){resources.nodes[2].parent=0;log_.emit("resource_rebuild_fault","\"view\":\"RB\",\"field\":\"BUTTON.parent\",\"privatePayloadOnly\":true");}v.resume();resource(v,2,"prepared",&resources);
+#ifdef FOCUS_VIEWS_CRASH_EXPERIMENT
+            experimental::point("view-resources",name);
+#endif
             Files::restore(s.file,workspace,name=="RB"&&scenario_==L"file-version"?"version":name=="RB"&&scenario_==L"file-write"?"write":"");workspace_owned=true;
             const auto id=s.file.present?Files::identity(workspace/Client::file_name()):Files::Identity{};
             log_.emit("workspace_restored","\"view\":"+json(name)+",\"file\":"+s.file.describe()+",\"targetVolume\":"+std::to_string(id.volume)+",\"targetObject\":"+std::to_string(id.object)+",\"directory\":"+json(workspace.wstring().c_str()));
@@ -231,6 +237,9 @@ public:
             verify(name+".input-processed-before-publication",static_cast<std::uint64_t>(result.input->c().consumed)==result.input->sequence&&!wcscmp(ready.nodes[1].caption,s.resources.nodes[1].caption)&&ready.selection_start==s.resources.selection_start&&ready.selection_end==s.resources.selection_end&&ready.modified==s.resources.modified&&ready.can_undo==s.resources.can_undo&&ready.focus==s.resources.focus,"owner GUI thread processed managed mouse move/barrier and native control readback without changing Snapshot state");
             demand(failed_==0,"no failed evidence before View publication");v.published=true;actions_.state(ticket,3,"{\"pid\":"+std::to_string(v.p.pid)+"}");
             log_.emit("view_published","\"view\":"+json(name)+",\"pid\":"+std::to_string(v.p.pid)+",\"resourceExecutionFrameAndInputChannelVerified\":true");
+#ifdef FOCUS_VIEWS_CRASH_EXPERIMENT
+            experimental::point("view-published",name);
+#endif
         }catch(const Error& e){
             if(result.child){if(result.input){close_input(*result.child,*result.input);result.input.reset();}result.child->stop();}
             if(workspace_owned)std::filesystem::remove_all(workspace);
