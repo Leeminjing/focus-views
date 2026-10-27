@@ -1,6 +1,10 @@
 #pragma once
 #include "abi.hpp"
 #include "native.hpp"
+#ifdef FOCUS_VIEWS_STOPPOINT_EXPERIMENT
+#include "experiment-points.hpp"
+#include "../../r5-004a/stopped-cleanup.hpp"
+#endif
 #include "../../r4-001-gate-001/courier.hpp"
 #include "../../r4-001-gate-001/launch-diagnostics.hpp"
 #include <map>
@@ -67,10 +71,21 @@ public:
     unsigned initialized=0,checkpoints=0,input_epoch=0;
     std::set<DWORD> threads; ULONGLONG deadline=0; std::string stage; bool registered=false,published=false;
     unsigned business[execution_capacity]{};
+#ifdef FOCUS_VIEWS_STOPPOINT_EXPERIMENT
+    Log& recorder(){return log_;}
+#endif
     unsigned prefix_count()const{unsigned n=0;for(auto x:business)n+=x;return n;}
     bool prefixes_once()const{for(unsigned i=0;i<layout.frames;++i)if(business[i]!=1)return false;return true;}
     Child(Log& log,DebugPump& pump,DWORD rva):log_(log),pump_(pump),metadata_rva_(rva){}
-    ~Child(){try{stop();}catch(const std::exception& e){log_.emit("cleanup_error","\"error\":"+json(e.what()));}if(registered)pump_.remove(*this);}
+    ~Child(){try{stop();
+#ifdef FOCUS_VIEWS_STOPPOINT_EXPERIMENT
+        if(experimental::release_cleanup)experimental::release_cleanup(experimental::cleanup_state,*this);
+#endif
+        }catch(const std::exception& e){log_.emit("cleanup_error","\"error\":"+json(e.what()));}if(registered)pump_.remove(*this);
+#ifdef FOCUS_VIEWS_STOPPOINT_EXPERIMENT
+        for(auto* process:{&p,&courier})if(process->exited)for(auto* h:{&process->thread,&process->process})if(h->value){const auto value=reinterpret_cast<ULONG_PTR>(h->value);const auto okay=CloseHandle(h->value);const auto error=okay?0:GetLastError();if(okay)h->value=nullptr;log_.emit("cleanup_own_instance_handle_closed","\"pid\":"+std::to_string(process->pid)+",\"handle\":"+std::to_string(value)+",\"closed\":"+(okay?"true":"false")+",\"error\":"+std::to_string(error));}
+#endif
+    }
     Metadata metadata(){
         m=native::read_value<Metadata>(p.process.value,image+metadata_rva_);
         if(m.magic!=signature||(m.abi_version!=1&&m.abi_version!=2)||m.machine!=IMAGE_FILE_MACHINE_AMD64||
@@ -96,7 +111,16 @@ public:
         return m;
     }
     CONTEXT context(){demand(pending,"context requires stopped debuggee");CONTEXT cpu{};cpu.ContextFlags=cpu_flags;check(GetThreadContext(p.thread.value,&cpu),"GetThreadContext");return cpu;}
-    void continue_event(DWORD status=DBG_CONTINUE){pump_.owner();demand(pending && event.dwProcessId==p.pid && threads.contains(event.dwThreadId),"continue only matching PID/TID event");check(ContinueDebugEvent(p.pid,event.dwThreadId,status),"ContinueDebugEvent");pending=false;halt.clear();}
+    void continue_event(DWORD status=DBG_CONTINUE){pump_.owner();demand(pending && event.dwProcessId==p.pid && threads.contains(event.dwThreadId),"continue only matching PID/TID event");
+#ifdef FOCUS_VIEWS_STOPPOINT_EXPERIMENT
+        log_.emit("cleanup_debug_continue_begin","\"view\":"+json(name)+",\"event\":"+std::to_string(event.dwDebugEventCode)+",\"tid\":"+std::to_string(event.dwThreadId)+",\"status\":"+std::to_string(status)+",\"stopping\":"+(stopping_?"true":"false"));
+#endif
+        check(ContinueDebugEvent(p.pid,event.dwThreadId,status),"ContinueDebugEvent");
+#ifdef FOCUS_VIEWS_STOPPOINT_EXPERIMENT
+        log_.emit("cleanup_debug_continue_end","\"view\":"+json(name)+",\"event\":"+std::to_string(event.dwDebugEventCode)+",\"tid\":"+std::to_string(event.dwThreadId));
+        if(event.dwDebugEventCode==EXIT_THREAD_DEBUG_EVENT||event.dwDebugEventCode==EXIT_PROCESS_DEBUG_EVENT){auto& handles=experimental::debug_handles[p.pid];const auto found=handles.threads.find(event.dwThreadId);if(found!=handles.threads.end()){experimental::released_debug_handle(found->second,"thread-after-exit-continue",log_);handles.threads.erase(found);}if(event.dwDebugEventCode==EXIT_PROCESS_DEBUG_EVENT){experimental::released_debug_handle(handles.process,"process-after-exit-continue",log_);experimental::debug_handles.erase(p.pid);}}
+#endif
+        pending=false;halt.clear();}
     void resume(bool trap=true){auto cpu=context();if(trap){cpu.Rip=reinterpret_cast<std::uint64_t>(event.u.Exception.ExceptionRecord.ExceptionAddress)+1;check(SetThreadContext(p.thread.value,&cpu),"SetThreadContext.advance_trap");}continue_event();}
     void poll(DWORD timeout=10){pump_.poll(timeout,name);}
     void receive(const DEBUG_EVENT& incoming){
@@ -104,6 +128,11 @@ public:
         if(event.dwDebugEventCode==CREATE_PROCESS_DEBUG_EVENT || event.dwDebugEventCode==CREATE_THREAD_DEBUG_EVENT)threads.insert(event.dwThreadId);
         demand(threads.contains(event.dwThreadId),"event thread registered to routed PID");
         log_.emit("debug_event","\"view\":"+json(name)+",\"pid\":"+std::to_string(p.pid)+",\"tid\":"+std::to_string(event.dwThreadId)+",\"code\":"+std::to_string(event.dwDebugEventCode));
+#ifdef FOCUS_VIEWS_STOPPOINT_EXPERIMENT
+        if(stopping_&&event.dwDebugEventCode==EXCEPTION_DEBUG_EVENT){const auto& fault=event.u.Exception.ExceptionRecord;auto cpu=context();log_.emit("cleanup_exception","\"pid\":"+std::to_string(p.pid)+",\"code\":"+std::to_string(fault.ExceptionCode)+",\"firstChance\":"+std::to_string(event.u.Exception.dwFirstChance)+",\"address\":"+std::to_string(reinterpret_cast<ULONG_PTR>(fault.ExceptionAddress))+",\"parameter0\":"+std::to_string(fault.NumberParameters?fault.ExceptionInformation[0]:0)+",\"rip\":"+std::to_string(cpu.Rip)+",\"rsp\":"+std::to_string(cpu.Rsp));if(fault.ExceptionCode==0xE06D7363&&event.u.Exception.dwFirstChance){continue_event(DBG_EXCEPTION_NOT_HANDLED);return;}check(TerminateProcess(p.process.value,ERROR_PROCESS_ABORTED),"TerminateProcess.cleanup_exception");}
+        if(event.dwDebugEventCode==CREATE_PROCESS_DEBUG_EVENT){auto& h=experimental::debug_handles[p.pid];h.process=reinterpret_cast<ULONG_PTR>(event.u.CreateProcessInfo.hProcess);h.threads[event.dwThreadId]=reinterpret_cast<ULONG_PTR>(event.u.CreateProcessInfo.hThread);log_.emit("cleanup_system_handles_created","\"pid\":"+std::to_string(p.pid)+",\"tid\":"+std::to_string(event.dwThreadId)+",\"processHandle\":"+std::to_string(h.process)+",\"threadHandle\":"+std::to_string(h.threads[event.dwThreadId]));}
+        if(event.dwDebugEventCode==CREATE_THREAD_DEBUG_EVENT){const auto h=reinterpret_cast<ULONG_PTR>(event.u.CreateThread.hThread);experimental::debug_handles[p.pid].threads[event.dwThreadId]=h;log_.emit("cleanup_system_thread_created","\"pid\":"+std::to_string(p.pid)+",\"tid\":"+std::to_string(event.dwThreadId)+",\"handle\":"+std::to_string(h));}
+#endif
         if(event.dwDebugEventCode==CREATE_PROCESS_DEBUG_EVENT){image=reinterpret_cast<std::uint64_t>(event.u.CreateProcessInfo.lpBaseOfImage);if(event.u.CreateProcessInfo.hFile)CloseHandle(event.u.CreateProcessInfo.hFile);}
         // Debug-event process/thread handles are closed by Windows when their
         // EXIT events are continued. Keep them alive until then; closing early
@@ -153,7 +182,53 @@ public:
             DWORD code=0;check(GetExitCodeProcess(courier.process.value,&code),"GetExitCodeProcess.courier");courier.exited=true;
             log_.emit("process_exited","\"name\":"+json(name+"-courier")+",\"pid\":"+std::to_string(courier.pid)+",\"exitCode\":"+std::to_string(code));
         }
-if(!p.process.value||p.exited)return;stopping_=true;deadline=0;published=false;check(TerminateProcess(p.process.value,0xE3050001),"TerminateProcess.owned_GUI");if(pending)continue_event();const auto stop_end=GetTickCount64()+5000;while(!p.exited&&GetTickCount64()<stop_end)poll();demand(p.exited,"GUI exit confirmed");}
+#ifdef FOCUS_VIEWS_STOPPOINT_EXPERIMENT
+        log_.emit("cleanup_stop_state","\"view\":"+json(name)+",\"pending\":"+(pending?"true":"false")+",\"halt\":"+json(halt)+",\"callerDesktop\":"+json(r3::thread_desktop().c_str())+",\"ownProcessHandle\":"+std::to_string(reinterpret_cast<ULONG_PTR>(p.process.value))+",\"ownThreadHandle\":"+std::to_string(reinterpret_cast<ULONG_PTR>(p.thread.value)));
+        if(experimental::stop_cleanup&&!p.exited&&pending&&halt=="checkpoint"&&!published){
+            stopping_=true;deadline=0;
+            try{experimental::stop_cleanup(experimental::cleanup_state,*this);demand(p.exited,"native abort target exit confirmed");}
+            catch(const Error& e){const auto original=std::current_exception();log_.emit("cleanup_abort_failure","\"api\":"+json(e.api)+",\"error\":"+std::to_string(e.code));
+                if(!p.exited)try{check(TerminateProcess(p.process.value,ERROR_PROCESS_ABORTED),"TerminateProcess.failed_abort");if(pending)continue_event();const auto end=GetTickCount64()+5000;while(!p.exited&&GetTickCount64()<end)poll();demand(p.exited,"failed abort target exit confirmed");}catch(const Error& secondary){log_.emit("cleanup_stop_secondary_failure","\"api\":"+json(secondary.api)+",\"error\":"+std::to_string(secondary.code)+",\"primaryApi\":"+json(e.api));}
+                std::rethrow_exception(original);
+            }
+            return;
+        }
+        if((experimental::detach_cleanup||experimental::suspend_cleanup)&&!p.exited&&pending&&halt=="checkpoint"&&!published){
+            stopping_=true;deadline=0;bool detached=false;
+            try{
+                auto suspended=experimental::suspend_owned_threads(p.pid,threads,log_);
+                if(experimental::detach_cleanup){
+                    // Continue releases the debug-event freeze; explicit suspend
+                    // counts still prevent every target thread from executing.
+                    continue_event();check(DebugActiveProcessStop(p.pid),"DebugActiveProcessStop.cleanup");detached=true;
+                    log_.emit("cleanup_debug_detached","\"pid\":"+std::to_string(p.pid)+",\"allRegisteredThreadsSuspended\":true,\"sourceCpuWritten\":false");
+                    auto& system=experimental::debug_handles[p.pid];for(const auto& [tid,h]:system.threads){(void)tid;experimental::released_debug_handle(h,"thread-after-detach",log_);}experimental::released_debug_handle(system.process,"process-after-detach",log_);experimental::debug_handles.erase(p.pid);
+                    check(TerminateProcess(p.process.value,0xE3050001),"TerminateProcess.detached_GUI");
+                    if(WaitForSingleObject(p.process.value,5000)!=WAIT_OBJECT_0)throw Error("WaitForSingleObject.detached_GUI",ERROR_TIMEOUT);
+                    p.exited=true;experimental::close_exited_threads(suspended,log_);
+                    log_.emit("process_exited","\"name\":"+json(name)+",\"pid\":"+std::to_string(p.pid)+",\"exitCode\":3808755713,\"detached\":true");return;
+                }
+                // Diagnostic control: identical explicit suspensions, retaining
+                // the debugger association and the original terminate order.
+                check(TerminateProcess(p.process.value,0xE3050001),"TerminateProcess.suspended_debug_GUI");
+                continue_event();const auto end=GetTickCount64()+5000;while(!p.exited&&GetTickCount64()<end)poll();
+                demand(p.exited,"suspended debug GUI exit confirmed");experimental::close_exited_threads(suspended,log_);return;
+            }catch(const Error& e){
+                const auto original=std::current_exception();
+                log_.emit("cleanup_stop_native_failure","\"api\":"+json(e.api)+",\"error\":"+std::to_string(e.code));
+                // Fail closed. Suspensions are never undone. The normal kill
+                // path remains available if detach itself was refused.
+                if(!p.exited){
+                    try{check(TerminateProcess(p.process.value,0xE3050001),"TerminateProcess.cleanup_failure");
+                        if(detached){if(WaitForSingleObject(p.process.value,5000)!=WAIT_OBJECT_0)throw Error("WaitForSingleObject.failed_detached_GUI",ERROR_TIMEOUT);p.exited=true;}
+                        else{if(pending)continue_event();const auto end=GetTickCount64()+5000;while(!p.exited&&GetTickCount64()<end)poll();demand(p.exited,"failed cleanup target exited");}
+                    }catch(const Error& secondary){log_.emit("cleanup_stop_secondary_failure","\"api\":"+json(secondary.api)+",\"error\":"+std::to_string(secondary.code)+",\"primaryApi\":"+json(e.api));}
+                }
+                std::rethrow_exception(original);
+            }
+        }
+#endif
+        if(!p.process.value||p.exited)return;stopping_=true;deadline=0;published=false;check(TerminateProcess(p.process.value,0xE3050001),"TerminateProcess.owned_GUI");if(pending)continue_event();const auto stop_end=GetTickCount64()+5000;while(!p.exited&&GetTickCount64()<stop_end)poll();demand(p.exited,"GUI exit confirmed");}
 };
 inline void DebugPump::add(Child& v){owner();demand(!branches_.contains(v.p.pid),"duplicate live PID");branches_.emplace(v.p.pid,&v);v.registered=true;}
 inline void DebugPump::remove(Child& v){owner();demand(v.p.exited,"unregister only confirmed exited PID");branches_.erase(v.p.pid);v.registered=false;}

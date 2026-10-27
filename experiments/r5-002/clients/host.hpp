@@ -160,6 +160,9 @@ public:
     }
     void restore(Child& v,const CaseSnapshot& s){
         const auto fault=v.name=="RB"&&scenario_==L"omit-fourth"?"stack-last":v.name=="RB"&&scenario_==L"omit-register"?"register":"";
+#ifdef FOCUS_VIEWS_STOPPOINT_EXPERIMENT
+        if(experimental::reject_image){experimental::reject_image=false;Snapshot rejected{};rejected.meta=s.meta;rejected.executable=s.executable;rejected.meta.image=v.image^0x10000ULL;log_.emit("private_image_guard_fault","\"view\":"+json(v.name)+",\"originalSnapshotUntouched\":true,\"snapshotCpuApplied\":false");execution_.restore(v,rejected);throw Error("cleanup.expected_rejection_missing",ERROR_INVALID_STATE);}
+#endif
         execution_.restore(v,s,fault);const auto actual=state(v);
         log_.emit("execution_result","\"view\":"+json(v.name)+",\"work\":"+work_json(actual)+",\"expectedReceipt\":"+std::to_string(s.expected)+",\"fault\":"+json(fault));
         if(actual.receipt!=s.expected||actual.returned!=Client::return_mask)throw Error("oracle.execution_receipt",ERROR_CRC);
@@ -226,7 +229,15 @@ public:
             Files::restore(s.file,workspace,name=="RB"&&scenario_==L"file-version"?"version":name=="RB"&&scenario_==L"file-write"?"write":"");workspace_owned=true;
             const auto id=s.file.present?Files::identity(workspace/Client::file_name()):Files::Identity{};
             log_.emit("workspace_restored","\"view\":"+json(name)+",\"file\":"+s.file.describe()+",\"targetVolume\":"+std::to_string(id.volume)+",\"targetObject\":"+std::to_string(id.object)+",\"directory\":"+json(workspace.wstring().c_str()));
-            post(v,prepare_stop_message);v.wait("checkpoint");actions_.state(ticket,2);restore(v,s);
+#ifdef FOCUS_VIEWS_STOPPOINT_EXPERIMENT
+            if(experimental::prepare_cleanup)experimental::prepare_cleanup(experimental::cleanup_state,v,job_.value);
+#endif
+            post(v,prepare_stop_message);v.wait("checkpoint");actions_.state(ticket,2);
+#ifdef FOCUS_VIEWS_STOPPOINT_EXPERIMENT
+            const auto checkpoint_cpu=v.context();log_.emit("checkpoint_before_snapshot_restore","\"view\":"+json(name)+",\"pid\":"+std::to_string(v.p.pid)+",\"tid\":"+std::to_string(v.event.dwThreadId)+",\"pending\":true,\"eventCode\":"+std::to_string(v.event.dwDebugEventCode)+",\"rip\":"+std::to_string(checkpoint_cpu.Rip)+",\"snapshotCpuApplied\":false");
+            experimental::point("checkpoint-before-restore",name);
+#endif
+            restore(v,s);
             const auto r=resource(v,3,"initial");
             verify(name+".native-initial-snapshot",!wcscmp(r.nodes[1].caption,s.resources.nodes[1].caption)&&r.selection_start==s.resources.selection_start&&r.selection_end==s.resources.selection_end&&r.modified==s.resources.modified&&r.focus==s.resources.focus&&r.can_undo==s.resources.can_undo,"native control and original Undo match selected Snapshot after actual C++ returns");
             if(s.file.present)verify(name+".private-file-version",Artifacts::digest(workspace/Client::file_name())==s.file.sha256,"private workspace bytes match captured completed file version");
