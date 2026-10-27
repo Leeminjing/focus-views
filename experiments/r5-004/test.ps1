@@ -10,13 +10,15 @@ $testSha=Sha $PSCommandPath;$build=Get-Content -Raw (Join-Path $OutDir 'build.js
 Copy-Item (Join-Path $OutDir 'build.json') (Join-Path $ResultsDir 'build.json')
 $legacy=Join-Path $ResultsDir 'reg3/r5-002-regression/r5-001b-regression/r5-001a-regression/r4-003-001-regression/r4-002a-regression/c001-regression/b001-regression/cet002-regression/register-1/target-active-stack-before-continue.bin'
 if(-not $SkipRegression -and $legacy.Length -ge 260){[ordered]@{allEvidenceChecksPassed=$false;stage='legacy-path-preflight';length=$legacy.Length;applicationsStarted=$false}|ConvertTo-Json|Set-Content (Join-Path $ResultsDir 'summary.json');throw 'Use a shorter ResultsDir for legacy native evidence'}
-function Run-Supervised([string]$App,[string]$Mode,[string]$Root,[string]$Store,[string]$Kill='',[string]$Previous='',[string]$Scenario='positive'){
+$latestOwners=@{}
+function Run-Supervised([string]$App,[string]$Mode,[string]$Root,[string]$Store,[string]$Kill='',[string]$Previous='',[string]$Scenario='positive',[switch]$ExactPrevious){
+ if($Previous -and -not $ExactPrevious -and $latestOwners.ContainsKey($Store)){$Previous=$latestOwners[$Store]}
  $manager=Join-Path $Root 'manager';$supervisor=Join-Path $Root 'supervisor';New-Item -ItemType Directory -Path $Root|Out-Null
  $target=Join-Path $OutDir $(if($App -eq 'fixture'){'fixture.exe'}else{'second.exe'})
  & (Join-Path $OutDir 'controller.exe') --manager (Join-Path $OutDir 'manager.exe') --client (Join-Path $OutDir "$App-client.dll") --fixture $target --mode $Mode --store $Store --manager-output $manager --output $supervisor --kill-at $Kill --previous $Previous --scenario $Scenario *> (Join-Path $Root 'supervisor-console.log')
  $exit=$LASTEXITCODE;if(-not(Test-Path (Join-Path $supervisor 'summary.json'))){throw "Supervisor exited $exit without summary; retain native stderr"};$s=Get-Content -Raw (Join-Path $supervisor 'summary.json')|ConvertFrom-Json
  $result=[pscustomobject]@{app=$App;mode=$Mode;point=$Kill;root=$Root;manager=$manager;supervisor=$supervisor;certificate=(Join-Path $supervisor 'owner.fvc');managerPid=$s.managerPid;managerCreated=$s.managerCreated;managerExit=$s.managerExit;controllerExit=$exit}
- $operations.Add($result);if($exit -ne 0){throw "Supervisor protocol/cleanup failed; preserve summary $supervisor"};return $result
+ $operations.Add($result);if($exit -ne 0){throw "Supervisor protocol/cleanup failed; preserve summary $supervisor"};$latestOwners[$Store]=$result.certificate;return $result
 }
 function Safe-Case([string]$Label,[string]$Kind,[scriptblock]$Body){try{& $Body;$passed=@($checks|Where-Object{$_.name -like "$Label.*" -and -not $_.passed}).Count -eq 0;$cases.Add([pscustomobject]@{case=$Label;kind=$Kind;passed=$passed})}catch{$errors.Add([pscustomobject]@{case=$Label;error=$_.ToString();scriptStack=$_.ScriptStackTrace});Check "$Label.evidence-complete" $false;$cases.Add([pscustomobject]@{case=$Label;kind=$Kind;passed=$false})}}
 function Complete-Restore([string]$Label,[string]$App,[object]$Save,[object]$Restore,[object[]]$SourceRows,[bool]$Failure=$false){
@@ -70,20 +72,24 @@ foreach($app in @('fixture','recorder')){
    Check "$label.no-fixed-data-mutation" ((InventoryText $baseStore) -ceq $fixed)
   }
  }
- foreach($fault in @('extra-partial','truncated','missing-session','resource-failure')){$label="$app-fault-$fault";$root=Join-Path $ResultsDir $label
+ foreach($fault in @('extra-partial','foreign-generation','truncated','missing-session','stale-owner','wrong-session','missing-owner-proof','resource-failure')){$label="$app-fault-$fault";$root=Join-Path $ResultsDir $label
   Safe-Case $label 'recovery-fault-or-isolation' {
    $store=$baseStore;$fixed=InventoryText $baseStore;$scenario='positive'
-   if($fault -ne 'resource-failure'){New-Item -ItemType Directory -Path $root|Out-Null;$store=Join-Path $root 'copy';Copy-Item -LiteralPath $baseStore -Destination $store -Recurse
+   if($fault -notin @('resource-failure','stale-owner')){New-Item -ItemType Directory -Path $root|Out-Null;$store=Join-Path $root 'copy';Copy-Item -LiteralPath $baseStore -Destination $store -Recurse
     switch($fault){
+     missing-owner-proof {New-Item -ItemType Directory -Path ($store+'.owners')|Out-Null;$record=Get-ChildItem -LiteralPath ($baseStore+'.owners') -Filter '*.owner'|Select-Object -First 1;Copy-Item -LiteralPath $record.FullName -Destination ($store+'.owners')}
      extra-partial {if(-not $partial){throw 'Actual staging-verified partial not available'};Copy-Item -LiteralPath $partial -Destination (Join-Path $store (Split-Path $partial -Leaf))}
      truncated {$path=Join-Path $store 'SA.fvs';$b=[IO.File]::ReadAllBytes($path);[IO.File]::WriteAllBytes($path,$b[0..([int]($b.Length/2))])}
      missing-session {Remove-Item -LiteralPath (Join-Path $store 'session.fvs')}
     }
-   }else{$scenario='resource-failure'}
-   $before=InventoryText $store;$restore=Run-Supervised $app restore (Join-Path $root 'restore') $store '' $baseSave.certificate $scenario
-   if($fault -in @('extra-partial','resource-failure')){$null=Complete-Restore $label $app $baseSave $restore $baseRows ($fault -eq 'resource-failure')}
-   else{$m=Crash-Audit $restore.manager $restore.supervisor $label $false;$recovery=@(Optional-Rows (Join-Path $restore.manager 'recovery.jsonl'));$primary=@($m+$recovery|Where-Object type -in @('experiment_failure','recovery_failure'));$api=if($fault -eq 'truncated'){'snapshot.blob_length'}else{'recovery.session_uncommitted'};Check "$label.refused-before-View" ($restore.managerExit -ne 0 -and @($primary|Where-Object api -eq $api).Count -eq 1 -and @($m|Where-Object type -eq 'view_published').Count -eq 0)}
-   Check "$label.store-unchanged" ((InventoryText $store) -ceq $before);Check "$label.original-version-unchanged" ((InventoryText $baseStore) -ceq $fixed)
+   }elseif($fault -eq 'resource-failure'){$scenario='resource-failure'};if($fault -eq 'foreign-generation'){$scenario='foreign-generation'}
+   $before=InventoryText $store;$previous=$baseSave.certificate
+   if($fault -eq 'wrong-session'){$previous=Join-Path $ResultsDir "$app-committed-rename-1/save/supervisor/owner.fvc"}
+   $restore=Run-Supervised $app restore (Join-Path $root 'restore') $store '' $previous $scenario -ExactPrevious:($fault -in @('stale-owner','wrong-session'))
+   if($fault -in @('extra-partial','foreign-generation','resource-failure')){$null=Complete-Restore $label $app $baseSave $restore $baseRows ($fault -eq 'resource-failure')}
+   else{$m=Crash-Audit $restore.manager $restore.supervisor $label $false;$recovery=@(Optional-Rows (Join-Path $restore.manager 'recovery.jsonl'));$primary=@($m+$recovery|Where-Object type -in @('experiment_failure','recovery_failure'));$api=switch($fault){truncated {'snapshot.blob_length'};missing-session {'recovery.session_uncommitted'};stale-owner {'recovery.stale_owner_certificate'};wrong-session {'recovery.owner_session_mismatch'};missing-owner-proof {'recovery.owner_cleanup_unconfirmed'}};Check "$label.refused-before-View" ($restore.managerExit -ne 0 -and @($primary|Where-Object api -eq $api).Count -eq 1 -and @($m|Where-Object type -eq 'view_published').Count -eq 0)}
+   if($fault -eq 'foreign-generation'){$events=Rows (Join-Path $restore.supervisor 'supervisor.jsonl');$probe=@($events|Where-Object type -eq 'foreign_generation_probe_created');$ignored=@($events|Where-Object type -eq 'foreign_partial_ignored');Check "$label.same-PID-different-birth-never-quarantined" ($probe.Count -eq 1 -and @($ignored|Where-Object path -eq $probe[0].file).Count -eq 1 -and (Test-Path -LiteralPath $probe[0].file));$unchanged=@(Inventory $store|Where-Object file -ne (Split-Path $probe[0].file -Leaf))|ConvertTo-Json -Compress -Depth 4;Check "$label.fixed-files-unchanged-with-foreign-generation" ($unchanged -ceq $before)}
+   if($fault -ne 'foreign-generation'){Check "$label.store-unchanged" ((InventoryText $store) -ceq $before)};Check "$label.original-version-unchanged" ((InventoryText $baseStore) -ceq $fixed)
   }
  }
  Remove-Variable committedSave,committedRows,committedStore,capturedPartial -Scope Script -ErrorAction SilentlyContinue
