@@ -1,0 +1,183 @@
+{
+  "evidenceComplete": true,
+  "sameBuild": true,
+  "boot": "2026-10-28T19:42:46.5+08:00",
+  "testSha256": "D50F84EBE834C71C38C42D9D2DD0F765F1EA817BEF1D45ABC395A82CF441DB86",
+  "binaries": [
+    {
+      "file": "manager.exe",
+      "sha256": "7c4d871fc6520747f36d7580424c21edebefeb470371a50b879173f1b5da0ee6"
+    },
+    {
+      "file": "second.exe",
+      "sha256": "abcd481567349636501f06929fbe64afd140c4152c785f1a5be6a396f82abe56"
+    },
+    {
+      "file": "trim-client.dll",
+      "sha256": "22725582ed34877de799dc4a898095513beb8ca59d23fda1c2c5c49dbfd95a17"
+    },
+    {
+      "file": "abort-runtime.dll",
+      "sha256": "a13224e597e17f55f68fcf76244be97e938c716e1152291ca46651e7805da3d0"
+    },
+    {
+      "file": "abort-helper.exe",
+      "sha256": "08a0b0e06db83d844bb2092c4c79dc925c7132967954beb7dd847cc460772418"
+    },
+    {
+      "file": "close-probe.exe",
+      "sha256": "594cbcb8927e933212925684fccab90382e2a6962c19948faee0b428291f1b29"
+    },
+    {
+      "file": "diagnose.exe",
+      "sha256": "47970c954431de5d357019d65e47c1a449cc0fa8762d5c93426269125558f4ff"
+    },
+    {
+      "file": "kernel.lib",
+      "sha256": "10cbf2d22d7666100396265a25aded38d67eadc35a4d5a93498b2d8cc91724db"
+    }
+  ],
+  "cases": [
+    {
+      "mode": "profile-normal",
+      "controllerExit": 0,
+      "error": "",
+      "supervisor": {
+        "protocolPassed": true,
+        "cleanupVerified": true,
+        "forcedTermination": false,
+        "managerPid": 17640,
+        "managerCreated": 134376654008704794,
+        "managerExit": 0,
+        "point": "",
+        "explicitSurvivorCleanup": false,
+        "instances": 10,
+        "desktops": 1,
+        "failureApi": "",
+        "failureError": 0
+      },
+      "installationAttested": true,
+      "installation": [
+        {
+          "type": "cleanup_runtime_installation",
+          "tickMs": 4035593,
+          "enabled": true,
+          "registryCreated": true,
+          "prepareCalled": true
+        }
+      ],
+      "moduleStages": [
+        {
+          "type": "trim_module_observation",
+          "tickMs": 4035046,
+          "stage": "ready",
+          "pid": 32452,
+          "complete": true,
+          "error": 18,
+          "known": 5,
+          "total": 20,
+          "cleanupRuntimeModules": 0
+        },
+        {
+          "type": "trim_module_observation",
+          "tickMs": 4035343,
+          "stage": "resource-ready",
+          "pid": 32452,
+          "complete": true,
+          "error": 18,
+          "known": 7,
+          "total": 27,
+          "cleanupRuntimeModules": 0
+        },
+        {
+          "type": "trim_module_observation",
+          "tickMs": 4035609,
+          "stage": "cleanup-runtime-ready",
+          "pid": 32452,
+          "complete": true,
+          "error": 18,
+          "known": 8,
+          "total": 29,
+          "cleanupRuntimeModules": 1
+        }
+      ],
+      "cleanupHelperCount": 1,
+      "nativeCleanupPassed": true,
+      "sameWaitingPattern": false,
+      "profileUnchanged": true
+    },
+    {
+      "mode": "normal-no-cleanup-runtime",
+      "controllerExit": 0,
+      "error": "",
+      "supervisor": {
+        "protocolPassed": true,
+        "cleanupVerified": true,
+        "forcedTermination": false,
+        "managerPid": 35440,
+        "managerCreated": 134376654026609061,
+        "managerExit": 0,
+        "point": "",
+        "explicitSurvivorCleanup": false,
+        "instances": 8,
+        "desktops": 1,
+        "failureApi": "",
+        "failureError": 0
+      },
+      "installationAttested": true,
+      "installation": [
+        {
+          "type": "cleanup_runtime_installation",
+          "tickMs": 4036812,
+          "enabled": false,
+          "registryCreated": false,
+          "prepareCalled": false
+        }
+      ],
+      "moduleStages": [
+        {
+          "type": "trim_module_observation",
+          "tickMs": 4036640,
+          "stage": "ready",
+          "pid": 12776,
+          "complete": true,
+          "error": 18,
+          "known": 5,
+          "total": 19,
+          "cleanupRuntimeModules": 0
+        },
+        {
+          "type": "trim_module_observation",
+          "tickMs": 4036812,
+          "stage": "resource-ready",
+          "pid": 12776,
+          "complete": true,
+          "error": 18,
+          "known": 7,
+          "total": 26,
+          "cleanupRuntimeModules": 0
+        },
+        {
+          "type": "trim_module_observation",
+          "tickMs": 4036843,
+          "stage": "cleanup-runtime-skipped",
+          "pid": 12776,
+          "complete": true,
+          "error": 18,
+          "known": 7,
+          "total": 26,
+          "cleanupRuntimeModules": 0
+        }
+      ],
+      "cleanupHelperCount": 0,
+      "nativeCleanupPassed": true,
+      "sameWaitingPattern": false,
+      "profileUnchanged": true
+    }
+  ],
+  "nativeCleanupPassed": true,
+  "cleanupCausalFixVerified": false,
+  "fullR5004Passed": false,
+  "gateClosed": false,
+  "manualHostTest": "not_executed"
+}

@@ -1,6 +1,7 @@
 #include "../r5-002/clients/recorder_model.hpp"
 #include "../r5-004c/run.hpp"
 #include "profile.hpp"
+#include "observe.hpp"
 namespace {
 class Trim : public r305::Experiment<RecorderClient> {
     void threads(r305::Child& v,const char* stage){using namespace r305;
@@ -12,15 +13,20 @@ class Trim : public r305::Experiment<RecorderClient> {
 public:
     using Base=r305::Experiment<RecorderClient>;
     Trim(const std::filesystem::path& manager,const std::filesystem::path& app,const std::filesystem::path& output):Base(manager,app,output){gui_=true;}
-    int run(const std::filesystem::path& store,bool checkpoint,bool profile){using namespace r305;
+    int run(const std::filesystem::path& store,bool checkpoint,bool profile,bool cleanup=true,bool rebuild=true){using namespace r305;
         // Reduction step 1: only the existing native resource descriptor is
         // consumed. No memory/stack/CPU restore, SA/SB, artifacts or file work.
-        const auto resources=profile?wait_probe::resource_profile(store/"resource.bin",executable_):r5003::load(store/"S0.fvs",executable_).resources;
-        r5004a::AbortRegistry abort(exe_.parent_path(),out_,log_,true);
-        auto v=start("trim",false);threads(*v,"ready");bool native_cleanup=false;std::string first_api;DWORD first_error=0;
+        Resources resources{};if(rebuild)resources=profile?wait_probe::resource_profile(store/"resource.bin",executable_):r5003::load(store/"S0.fvs",executable_).resources;
+        std::unique_ptr<r5004a::AbortRegistry> abort;if(cleanup)abort=std::make_unique<r5004a::AbortRegistry>(exe_.parent_path(),out_,log_,true);
+        else demand(!experimental::prepare_cleanup&&!experimental::stop_cleanup&&!experimental::release_cleanup,"fresh manager has no cleanup callbacks");
+        auto v=start("trim",false);threads(*v,"ready");wait_probe::modules(*v,"ready",log_);bool native_cleanup=false;std::string first_api;DWORD first_error=0;
         try{
-            v->resume();resource(*v,2,"prepared",&resources);
-            experimental::prepare_cleanup(experimental::cleanup_state,*v,job_.value);
+            v->resume();if(rebuild)resource(*v,2,"prepared",&resources);
+            threads(*v,"resource-ready");wait_probe::modules(*v,"resource-ready",log_);
+            log_.emit("trim_resource_preparation","\"performed\":"+std::string(rebuild?"true":"false"));
+            if(cleanup)experimental::prepare_cleanup(experimental::cleanup_state,*v,job_.value);
+            log_.emit("cleanup_runtime_installation","\"enabled\":"+std::string(cleanup?"true":"false")+",\"registryCreated\":"+(abort?"true":"false")+",\"prepareCalled\":"+(cleanup?"true":"false"));
+            threads(*v,cleanup?"cleanup-runtime-ready":"cleanup-runtime-skipped");wait_probe::modules(*v,cleanup?"cleanup-runtime-ready":"cleanup-runtime-skipped",log_);
             threads(*v,"prepared");
             log_.emit("trim_prepared","\"pid\":"+std::to_string(v->p.pid)+",\"created\":"+std::to_string(r5003::creation(v->p.process.value))+",\"tid\":"+std::to_string(v->p.tid)+",\"window\":"+std::to_string(v->m.window)+",\"snapshotCpuApplied\":false,\"snapshotBusinessMemoryApplied\":false,\"checkpoint\":"+(checkpoint?"true":"false"));
             if(checkpoint){post(*v,prepare_stop_message);v->wait("checkpoint");threads(*v,"checkpoint-cleanup-start");v->stop();native_cleanup=true;}
@@ -51,10 +57,10 @@ public:
 }
 extern "C" __declspec(dllexport) unsigned ClientVersion(){return 4;}
 extern "C" __declspec(dllexport) int RunCrashClient(const wchar_t* manager,const wchar_t* app,const wchar_t* output,const wchar_t* mode,const wchar_t* store,const wchar_t* scenario,const wchar_t* gate,const wchar_t* previous){using namespace r305;try{
-    const std::wstring name(scenario);const bool profile=name.starts_with(L"profile-");
+    const std::wstring name(scenario);const bool without_cleanup=name==L"normal-no-cleanup-runtime"||name==L"normal-new-window-direct";const bool rebuild=name!=L"normal-new-window-direct";const bool profile=name.starts_with(L"profile-")||without_cleanup;
     demand((profile&&!wcscmp(mode,L"save"))||(!profile&&!wcscmp(mode,L"restore")),"explicit preparation protocol, never execution restore");
-    demand(name==L"trim-normal"||name==L"trim-checkpoint"||name==L"profile-normal"||name==L"profile-checkpoint","explicit reduction close mode");
+    demand(name==L"trim-normal"||name==L"trim-checkpoint"||name==L"profile-normal"||name==L"profile-checkpoint"||without_cleanup,"explicit reduction close mode");
     r5004::Gate synchronization(gate,output);Log proof(std::filesystem::path(output)/"recovery.jsonl");if(!profile)r5004::verify_previous(previous,store,proof);
     proof.emit("reduction_scope","\"snapshotRead\":"+std::string(profile?"false":"true")+",\"sessionRead\":"+(profile?"false":"true")+",\"executionRestored\":false,\"profileOnly\":"+(profile?"true":"false"));
-    r5004a::inline_control=true;Trim experiment(manager,app,output);return experiment.run(store,name.ends_with(L"checkpoint"),profile);
+    r5004a::inline_control=true;Trim experiment(manager,app,output);return experiment.run(store,name.ends_with(L"checkpoint"),profile,!without_cleanup,rebuild);
 }catch(const std::exception& e){std::cerr<<e.what()<<'\n';return 2;}}

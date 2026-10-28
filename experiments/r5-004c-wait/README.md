@@ -2,6 +2,12 @@
 
 本实验没有提供清理修复。普通 WM_CLOSE 与停止点清理均有自然失败；WCT COM 回调把旧的等待边延伸到了 COM 对象及仅有 PID 的 RPCSS 终点。服务端线程和未完成操作仍未知，门禁保持 false。
 
+新增 [完全不安装清理运行时的正常关闭对照](results/no-cleanup001/report.md)。test-no-cleanup.ps1 串行对比 profile-normal / normal-no-cleanup-runtime；后者根本不构造 AbortRegistry、不调用 prepare_cleanup，且记录清理助手为零与目标 DLL 未加载。ready、resource-ready、安装完成/跳过后分别记录实际线程实例和已知模块。本次两组均正常关闭，但系统在本轮前已重启，历史等待未复现，不能宣布因果修复。预留 -DirectWindow 后续裁剪本轮未执行。
+
+~~~powershell
+./experiments/r5-004c-wait/test-no-cleanup.ps1 -OutDir <同一构建目录> -Profile <固定resource.bin> -ResultsDir <全新目录>
+~~~
+
 沿用同一个四帧 recorder EXE、后台 Desktop、EDIT/BUTTON、受限窗口资源适配器与原 inline 清理 DLL；不再改变异常清理入口。裁剪分两步：先只消费 S0 的窗口资源描述，去掉执行状态恢复和成果编排；再导出独立资源 profile，测量管理器不读取任何 Session/Snapshot/Artifact，只建立新的原生窗口。它是清理诊断，不是执行恢复证明，也不宣称已经找到全局最小程序。
 
 ~~~powershell
