@@ -250,7 +250,9 @@ public:
         auto in=std::make_unique<Input>();in->mapping=std::make_unique<Mapping>(r304::channel_name(v.p.pid,v.p.tid),sizeof(r304::Channel),true);auto& c=*new(in->mapping->view)r304::Channel{};
         c.pid=v.p.pid;c.tid=v.p.tid;c.top=v.m.window;c.edit=c.top;c.enabled=1;c.virtualize=1;c.token=(GetTickCount64()<<16)^v.p.pid;
         in->bridge=launch(exe_,v.desktop->full,{L"--role",L"input",L"--channel",r304::channel_name(v.p.pid,v.p.tid),L"--dll",(exe_.parent_path()/L"runtime304.dll").wstring(),L"--log",(out_/(v.name+"-input.jsonl")).wstring()},0,log_,v.name+"-input");assign(in->bridge);
-        run_until(v,[&]{return c.ready!=0;},"input.install");demand(c.health==1 && c.ready==1,"existing R304 runtime installed");return in;
+        try{run_until(v,[&]{return c.ready!=0;},"input.install");if(c.health==-1)throw Error(c.error_api,static_cast<DWORD>(c.error));demand(c.health==1 && c.ready==1,"existing R304 runtime installed");}
+        catch(...){try{confirm(in->bridge,v);}catch(const std::exception& e){log_.emit("cleanup_error","\"stage\":\"input-install-exit\",\"error\":"+json(e.what()));}throw;}
+        return in;
     }
     void submit(Child& v,Input& in,std::vector<r304::Packet> packets,bool close=false){auto& c=in.c();demand(c.health==1,"input healthy");r304::Packet end{};end.kind=r304::barrier;packets.push_back(end);c.count=static_cast<unsigned>(packets.size());c.command=close?2:1;
         for(unsigned i=0;i<c.count;++i){packets[i].sequence=++in.sequence;c.packets[i]=packets[i];}MemoryBarrier();InterlockedExchange(&c.request,++in.request);

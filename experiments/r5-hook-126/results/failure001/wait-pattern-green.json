@@ -1,0 +1,103 @@
+{
+  "passed": true,
+  "nativeProcessesStarted": false,
+  "checks": [
+    {
+      "name": "linked",
+      "artificial": true,
+      "actual": {
+        "sameWaitingPattern": true,
+        "status": "matched",
+        "reason": "linked-native-observation",
+        "links": {
+          "targetPid": 10,
+          "targetCreated": 100,
+          "guiTid": 20,
+          "guiCreated": 200,
+          "workerTid": 30,
+          "workerCreated": 300,
+          "comName": "COM-object",
+          "rpcssReportedPid": 99,
+          "guiNodeIndices": [
+            0,
+            1,
+            2
+          ],
+          "workerNodeIndices": [
+            0,
+            1,
+            2
+          ]
+        },
+        "rootCauseKnown": false
+      },
+      "passed": true
+    },
+    {
+      "name": "unrelated-query-nodes",
+      "artificial": true,
+      "actual": {
+        "sameWaitingPattern": false,
+        "status": "insufficient_evidence",
+        "reason": "linked-worker-query",
+        "links": null
+      },
+      "passed": true
+    },
+    {
+      "name": "three-unconnected-queries",
+      "artificial": true,
+      "actual": {
+        "sameWaitingPattern": false,
+        "status": "insufficient_evidence",
+        "reason": "linked-worker-query",
+        "links": null
+      },
+      "passed": true
+    },
+    {
+      "name": "truncated",
+      "artificial": true,
+      "actual": {
+        "sameWaitingPattern": false,
+        "status": "insufficient_evidence",
+        "reason": "query-failed-or-incomplete",
+        "links": null
+      },
+      "passed": true
+    },
+    {
+      "name": "wrong-gui-instance",
+      "artificial": true,
+      "actual": {
+        "sameWaitingPattern": false,
+        "status": "insufficient_evidence",
+        "reason": "gui-query-instance",
+        "links": null
+      },
+      "passed": true
+    },
+    {
+      "name": "failed-worker-query",
+      "artificial": true,
+      "actual": {
+        "sameWaitingPattern": false,
+        "status": "insufficient_evidence",
+        "reason": "query-failed-or-incomplete",
+        "links": null
+      },
+      "passed": true
+    },
+    {
+      "name": "same-tid-different-worker-instance",
+      "artificial": true,
+      "actual": {
+        "sameWaitingPattern": false,
+        "status": "insufficient_evidence",
+        "reason": "worker-instance-not-linked",
+        "links": null
+      },
+      "passed": true
+    }
+  ]
+}

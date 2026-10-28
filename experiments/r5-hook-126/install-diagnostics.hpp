@@ -25,6 +25,9 @@ class Recorder{
 public:
     explicit Recorder(std::ofstream& log):log_(log){}
     void context(DWORD pid,DWORD tid,const std::wstring& argument){sample([&]{write("dll_argument","\"path\":"+json(argument.c_str())+",\"targetPid\":"+std::to_string(pid)+",\"targetTid\":"+std::to_string(tid));});
+#ifdef FOCUS_VIEWS_INPUT_DIAGNOSTIC_TEST_FAILURE
+        sample([&]{write("diagnostic_test_fault","\"artificial\":true,\"affectsInstallationAPI\":false");FILETIME c{},e{},k{},u{};const auto result=GetProcessTimes(nullptr,&c,&e,&k,&u);const auto error=result?0:GetLastError();if(!result)throw Error("GetProcessTimes.install_diagnostic_test",error);});
+#endif
         sample([&]{const auto exe=module_path(nullptr);write("helper_identity","\"path\":"+json(exe.c_str())+",\"diskSha256\":"+json(disk_sha256(exe))+",\"created\":"+std::to_string(creation(GetCurrentProcess(),false))+",\"threadCreated\":"+std::to_string(creation(GetCurrentThread(),true))+",\"desktop\":"+json(thread_desktop().c_str()));});
         sample([&]{Handle p(OpenProcess(PROCESS_QUERY_LIMITED_INFORMATION|SYNCHRONIZE,FALSE,pid));check(p.value!=nullptr,"OpenProcess.install_diagnostic");Handle t(OpenThread(THREAD_QUERY_LIMITED_INFORMATION|SYNCHRONIZE,FALSE,tid));check(t.value!=nullptr,"OpenThread.install_diagnostic");const auto pw=WaitForSingleObject(p.value,0),tw=WaitForSingleObject(t.value,0);write("target_identity","\"targetPid\":"+std::to_string(pid)+",\"targetTid\":"+std::to_string(tid)+",\"threadOwner\":"+std::to_string(GetProcessIdOfThread(t.value))+",\"created\":"+std::to_string(creation(p.value,false))+",\"threadCreated\":"+std::to_string(creation(t.value,true))+",\"processWait\":"+std::to_string(pw)+",\"threadWait\":"+std::to_string(tw)+",\"desktop\":"+json(user_object_name(GetThreadDesktop(tid)).c_str()));});
         sample([&]{write("argument_file","\"path\":"+json(argument.c_str())+",\"diskSha256\":"+json(disk_sha256(argument)));});

@@ -1,6 +1,6 @@
 # 资源能力与实验结果清单
 
-2026-10-28 更新：[正常关闭测试整例判定](../experiments/r5-004c-wait/results/verdict001/report.md) 已有确定性红/绿对照，evidenceComplete 与 operationPassed 分开。[真实旧输入路径取证](../experiments/r5-hook-126/results/real001/report.md) 显式构建下验证两个最小路径与 32 个本体套件场景，26 个真实通道有安装现场；历史等待、/126 均未复现，未执行新的故障后关闭对照或完整 R5 嵌套回归。原生恢复能力不增加，入口缺日志的红项保留，nativeCleanupPassed、cleanupCausalFixVerified、fullR5004Passed、gateClosed 在历史关口继续 false。
+2026-10-28 更新：[失败路径端到端验收](../experiments/r5-hook-126/results/failure001/report.md) 最终串行入口通过。已有人工阻塞的原 summary 仍失败，诊断链单独通过；缺失清理证明的真实入口拒绝，加载失败原错和助手退出、仅附加查询失败均通过受限核对。等待分类必须关联 GUI→工作线程→COM/RPCSS 查询及实例身份；七项人工反例/正例符合预期，未用人工阻塞伪造历史同类等待。旧 b001/CET 本体 32 场景符合预期，完整 R5 嵌套回归未执行。没有新增恢复能力；历史根因未知，nativeCleanupPassed、cleanupCausalFixVerified、fullR5004Passed、gateClosed 继续 false。
 
 更新日期：2026-10-25。[R1-001](../experiments/r1/results/20261024-r1/report.md) 与 [R2-001 / R2-002](../experiments/r2/results/20261024-r2/report.md) 已实测通过受控计算片段续接、多分支内存及受管普通文件子集。只有下列明确范围有证据；不代表完整 R2 或通用运行时已实现。策略列仍是各项完整能力的研究方向。
 

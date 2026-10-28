@@ -2,6 +2,14 @@
 
 最初的独立探针只诊断文件定位、实际加载模块、导出归属和 SetWindowsHookExW 安装阶段。新增显式真实路径诊断见 [real001](results/real001/report.md)：通过构建开关在旧 input.cpp 的实际 API 调用点取证，不改变输入/恢复机制。两种实验分别记录二进制身份，不把诊断构建称为旧二进制原样运行；均不证明历史关闭等待或 /126 已修复。
 
+最新 [失败路径端到端验收](results/failure001/report.md) 复用已有 blocked:，通过 -BlockedCleanup 运行原失败处理、证明核对、一次独立关闭对照及缺少证明的实际入口拒绝。原失败不改绿，诊断链单独 assessment。新增 -QueryFailureOutDir 指向用 -InstallDiagnostics -DiagnosticQueryFailure 编译的独立 b001：只令附加 GetProcessTimes 查询实际失败，不改安装 API。默认构建不启用该测试；另一个真实负例在私有目录有意缺少 DLL，不能称为历史钩子 /126 复现。
+
+~~~powershell
+./experiments/r5-hook-126/test-real.ps1 -InputOutDir <正常b001诊断构建> -CetOutDir <CET诊断构建> -ControlOutDir <完整wait构建> -Profile <resource.bin> -BlockedCleanup -QueryFailureOutDir <显式取证失败构建> -ResultsDir <全新短目录>
+~~~
+
+test-input-failures.ps1 检验原始主错、真实助手退出和仅取证失败；test-missing-proof.ps1 仅删私有副本证书，再调用实际主入口 -FollowupOnlyEvidence，禁止发布或重试原 Snapshot。等待分类改用关联查询及实例创建时间，材料不足不触发 direct-window。最终入口已实跑通过，历史根因、完整 R5-004 和可靠性门禁未关闭。
+
 ## 真实路径诊断（独立探针无需重复运行）
 
 ~~~powershell

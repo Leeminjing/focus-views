@@ -1,6 +1,7 @@
 param([Parameter(Mandatory)][string]$OutDir,[Parameter(Mandatory)][string]$Profile,[Parameter(Mandatory)][string]$ResultsDir,[switch]$DirectWindow)
 $ErrorActionPreference='Stop';Set-StrictMode -Version Latest
 . (Join-Path $PSScriptRoot 'assessment.ps1')
+. (Join-Path $PSScriptRoot 'wait-pattern.ps1')
 $OutDir=[IO.Path]::GetFullPath($OutDir);$ResultsDir=[IO.Path]::GetFullPath($ResultsDir)
 if(Test-Path -LiteralPath $ResultsDir){throw 'New results root required'}
 New-Item -ItemType Directory -Path $ResultsDir|Out-Null
@@ -19,10 +20,11 @@ foreach($mode in $modes){
  $absent=$mode -ne 'profile-normal';$expectedStage=if($absent){'cleanup-runtime-skipped'}else{'cleanup-runtime-ready'}
  $last=@($moduleStages|Where-Object stage -eq $expectedStage)
  $attested=$installation.Count -eq 1 -and $installation[0].enabled -eq (-not $absent) -and $installation[0].registryCreated -eq (-not $absent) -and $installation[0].prepareCalled -eq (-not $absent) -and $last.Count -eq 1 -and $last[0].complete -and $last[0].cleanupRuntimeModules -eq $(if($absent){0}else{1}) -and $helpers.Count -eq $(if($absent){0}else{1})
- $diag="$root/manager/normal-diagnostic.jsonl";$wct=if(Test-Path $diag){@(Get-Content $diag|ForEach-Object{$_|ConvertFrom-Json})}else{@()};$nodes=@($wct|Where-Object type -eq 'wait_node')
- $pattern=@($nodes|Where-Object kind -eq 6).Count -gt 0 -and @($nodes|Where-Object kind -eq 5).Count -gt 0 -and @($nodes|Where-Object{$_.kind -eq 8 -and $_.status -eq 5}).Count -gt 0
+ $diag="$root/manager/normal-diagnostic.jsonl";$wct=if(Test-Path $diag){@(Get-Content $diag|ForEach-Object{$_|ConvertFrom-Json})}else{@()}
+ $prepared=@($rows|Where-Object type -eq 'trim_prepared');$pattern=[pscustomobject]@{sameWaitingPattern=$false;status='insufficient_evidence';reason='not-sampled-or-unconfirmed-target';links=$null}
+ if($prepared.Count -eq 1){$target=$prepared[0];$gui=@($rows|Where-Object{$_.type -eq 'trim_thread_observation' -and $_.pid -eq $target.pid -and $_.tid -eq $target.tid -and $_.error -eq 0});if($gui.Count){$pattern=Get-LinkedTextServiceWait $wct $target.pid $target.created $target.tid $gui[-1].created}}
  $outcome=Get-NormalCloseOutcome $exit $s $complete
- $cases+=[ordered]@{mode=$mode;controllerExit=$exit;error=$errorText;supervisor=$s;trimComplete=$complete;evidenceComplete=$outcome.evidenceComplete;operationPassed=$outcome.operationPassed;installationAttested=$attested;installation=$installation;moduleStages=$moduleStages;cleanupHelperCount=$helpers.Count;nativeCleanupPassed=$outcome.nativeCloseObserved;sameWaitingPattern=$pattern;profileUnchanged=((Get-FileHash "$root/store/resource.bin").Hash -eq $hash)}
+ $cases+=[ordered]@{mode=$mode;controllerExit=$exit;error=$errorText;supervisor=$s;trimComplete=$complete;evidenceComplete=$outcome.evidenceComplete;operationPassed=$outcome.operationPassed;installationAttested=$attested;installation=$installation;moduleStages=$moduleStages;cleanupHelperCount=$helpers.Count;nativeCleanupPassed=$outcome.nativeCloseObserved;sameWaitingPattern=$pattern.sameWaitingPattern;waitingEvidence=$pattern;profileUnchanged=((Get-FileHash "$root/store/resource.bin").Hash -eq $hash)}
 }
 $sameBuild=@($identity|Where-Object{(Get-FileHash "$OutDir/$($_.file)").Hash.ToLowerInvariant() -ne $_.sha256}).Count -eq 0
 $evidence=$sameBuild -and $boot -eq (Get-CimInstance Win32_OperatingSystem).LastBootUpTime -and (Get-FileHash $PSCommandPath).Hash -eq $scriptHash -and (Get-FileHash "$PSScriptRoot/assessment.ps1").Hash -eq $assessmentHash -and @($cases|Where-Object{-not $_.installationAttested -or -not $_.profileUnchanged -or -not $_.evidenceComplete -or $_.error}).Count -eq 0

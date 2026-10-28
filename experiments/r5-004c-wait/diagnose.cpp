@@ -52,7 +52,7 @@ int wmain(int argc,wchar_t** argv){using namespace r305;try{
             FILETIME c{},e{},k{},u{};check(GetThreadTimes(worker.value,&c,&e,&k,&u),"GetThreadTimes.wct_worker");
             log.emit("wct_query_begin","\"tid\":"+std::to_string(next)+",\"created\":"+std::to_string((std::uint64_t(c.dwHighDateTime)<<32)|c.dwLowDateTime));
             WAITCHAIN_NODE_INFO nodes[WCT_MAX_NODE_COUNT]{};DWORD count=WCT_MAX_NODE_COUNT;BOOL cycle=FALSE;const auto result=GetThreadWaitChain(session,0,WCTP_GETINFO_ALL_FLAGS,next,&count,nodes,&cycle);const auto error=result?0:GetLastError();
-            log.emit("wait_chain","\"pid\":"+std::to_string(pid)+",\"tid\":"+std::to_string(next)+",\"result\":"+std::to_string(result)+",\"error\":"+std::to_string(error)+",\"cycle\":"+std::to_string(cycle));
+            log.emit("wait_chain","\"pid\":"+std::to_string(pid)+",\"tid\":"+std::to_string(next)+",\"result\":"+std::to_string(result)+",\"error\":"+std::to_string(error)+",\"count\":"+std::to_string(count)+",\"cycle\":"+std::to_string(cycle));
             if(result)for(DWORD i=0;i<std::min<DWORD>(count,WCT_MAX_NODE_COUNT);++i){const auto& n=nodes[i];const bool is_thread=n.ObjectType==WctThreadType;log.emit("wait_node","\"queryTid\":"+std::to_string(next)+",\"index\":"+std::to_string(i)+",\"kind\":"+std::to_string(n.ObjectType)+",\"status\":"+std::to_string(n.ObjectStatus)+(is_thread?",\"pid\":"+std::to_string(n.ThreadObject.ProcessId)+",\"tid\":"+std::to_string(n.ThreadObject.ThreadId):",\"name\":"+json(n.LockObject.ObjectName)));
                 if(is_thread&&n.ThreadObject.ProcessId==pid&&!visited.contains(n.ThreadObject.ThreadId))pending.push_back(n.ThreadObject.ThreadId);
             }

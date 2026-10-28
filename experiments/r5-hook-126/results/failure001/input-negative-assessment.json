@@ -1,0 +1,318 @@
+{
+  "passed": true,
+  "cases": [
+    {
+      "mode": "missing-dll",
+      "synthetic": true,
+      "exit": 2,
+      "error": "",
+      "passed": true,
+      "checks": {
+        "ownedLifetimes": true,
+        "noScriptException": true,
+        "originalExecutableBytes": true,
+        "realLoadLibraryFailure": true,
+        "channelFirstError": true,
+        "controllerFirstError": true,
+        "hookNeverAttempted": true,
+        "inputHelperExitConfirmed": true,
+        "noViewPublished": true
+      },
+      "lifetimeAudit": {
+        "passed": true,
+        "issues": [],
+        "instances": [
+          {
+            "instance": 1,
+            "pid": 53072,
+            "createTick": 11199328,
+            "exitTick": 11199390
+          },
+          {
+            "instance": 2,
+            "pid": 43292,
+            "createTick": 11199375,
+            "exitTick": 11199390
+          }
+        ],
+        "closedDesktops": 1
+      },
+      "rawAPIs": [
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "api",
+          "diagnosticVersion": 1,
+          "tickMs": 11199390,
+          "pid": 43292,
+          "tid": 51032,
+          "api": "LoadLibraryW.runtime",
+          "result": 0,
+          "error": 126
+        }
+      ]
+    },
+    {
+      "mode": "query-failure",
+      "synthetic": true,
+      "exit": 0,
+      "error": "",
+      "passed": true,
+      "checks": {
+        "ownedLifetimes": true,
+        "noScriptException": true,
+        "realAdditionalQueryFailed": true,
+        "originalCallsStillSucceed": true,
+        "noChannelFirstError": true,
+        "realControlAndContinuation": true
+      },
+      "lifetimeAudit": {
+        "passed": true,
+        "issues": [],
+        "instances": [
+          {
+            "instance": 1,
+            "pid": 42936,
+            "createTick": 11199437,
+            "exitTick": 11200000
+          },
+          {
+            "instance": 2,
+            "pid": 52204,
+            "createTick": 11199484,
+            "exitTick": 11199562
+          },
+          {
+            "instance": 3,
+            "pid": 63172,
+            "createTick": 11199562,
+            "exitTick": 11199984
+          },
+          {
+            "instance": 4,
+            "pid": 58148,
+            "createTick": 11199687,
+            "exitTick": 11199812
+          },
+          {
+            "instance": 5,
+            "pid": 61816,
+            "createTick": 11200000,
+            "exitTick": 11200687
+          },
+          {
+            "instance": 6,
+            "pid": 56308,
+            "createTick": 11200046,
+            "exitTick": 11200671
+          },
+          {
+            "instance": 7,
+            "pid": 59560,
+            "createTick": 11200203,
+            "exitTick": 11200531
+          }
+        ],
+        "closedDesktops": 2
+      },
+      "rawAPIs": [
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "api",
+          "diagnosticVersion": 1,
+          "tickMs": 11200234,
+          "pid": 59560,
+          "tid": 60216,
+          "api": "LoadLibraryW.runtime",
+          "result": 140720829956096,
+          "error": 0
+        },
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "api",
+          "diagnosticVersion": 1,
+          "tickMs": 11200234,
+          "pid": 59560,
+          "tid": 60216,
+          "api": "GetProcAddress.ManagedGetMessage",
+          "result": 140720829987376,
+          "error": 0
+        },
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "api",
+          "diagnosticVersion": 1,
+          "tickMs": 11200234,
+          "pid": 59560,
+          "tid": 60216,
+          "api": "SetWindowsHookExW.thread_only",
+          "result": 2297969,
+          "error": 0
+        },
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "api",
+          "diagnosticVersion": 1,
+          "tickMs": 11200234,
+          "pid": 59560,
+          "tid": 60216,
+          "api": "GetProcAddress.ManagedCallWindow",
+          "result": 140720829986528,
+          "error": 0
+        },
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "api",
+          "diagnosticVersion": 1,
+          "tickMs": 11200234,
+          "pid": 59560,
+          "tid": 60216,
+          "api": "SetWindowsHookExW.thread_control",
+          "result": 102435233,
+          "error": 0
+        },
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "api",
+          "diagnosticVersion": 1,
+          "tickMs": 11200515,
+          "pid": 59560,
+          "tid": 60216,
+          "api": "UnhookWindowsHookEx.control",
+          "result": 1,
+          "error": 0
+        },
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "api",
+          "diagnosticVersion": 1,
+          "tickMs": 11200515,
+          "pid": 59560,
+          "tid": 60216,
+          "api": "UnhookWindowsHookEx.queue",
+          "result": 1,
+          "error": 0
+        },
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "api",
+          "diagnosticVersion": 1,
+          "tickMs": 11200515,
+          "pid": 59560,
+          "tid": 60216,
+          "api": "FreeLibrary.bridge_module",
+          "result": 1,
+          "error": 0
+        },
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "api",
+          "diagnosticVersion": 1,
+          "tickMs": 11199718,
+          "pid": 58148,
+          "tid": 51528,
+          "api": "LoadLibraryW.runtime",
+          "result": 140720829956096,
+          "error": 0
+        },
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "api",
+          "diagnosticVersion": 1,
+          "tickMs": 11199718,
+          "pid": 58148,
+          "tid": 51528,
+          "api": "GetProcAddress.ManagedGetMessage",
+          "result": 140720829987376,
+          "error": 0
+        },
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "api",
+          "diagnosticVersion": 1,
+          "tickMs": 11199718,
+          "pid": 58148,
+          "tid": 51528,
+          "api": "SetWindowsHookExW.thread_only",
+          "result": 1904797,
+          "error": 0
+        },
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "api",
+          "diagnosticVersion": 1,
+          "tickMs": 11199718,
+          "pid": 58148,
+          "tid": 51528,
+          "api": "GetProcAddress.ManagedCallWindow",
+          "result": 140720829986528,
+          "error": 0
+        },
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "api",
+          "diagnosticVersion": 1,
+          "tickMs": 11199718,
+          "pid": 58148,
+          "tid": 51528,
+          "api": "SetWindowsHookExW.thread_control",
+          "result": 7802975,
+          "error": 0
+        },
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "api",
+          "diagnosticVersion": 1,
+          "tickMs": 11199812,
+          "pid": 58148,
+          "tid": 51528,
+          "api": "UnhookWindowsHookEx.control",
+          "result": 1,
+          "error": 0
+        },
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "api",
+          "diagnosticVersion": 1,
+          "tickMs": 11199812,
+          "pid": 58148,
+          "tid": 51528,
+          "api": "UnhookWindowsHookEx.queue",
+          "result": 1,
+          "error": 0
+        },
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "api",
+          "diagnosticVersion": 1,
+          "tickMs": 11199812,
+          "pid": 58148,
+          "tid": 51528,
+          "api": "FreeLibrary.bridge_module",
+          "result": 1,
+          "error": 0
+        }
+      ]
+    }
+  ],
+  "historicalSetWindowsHook126Reproduced": false,
+  "installationAPIReturnsModified": false,
+  "rootCauseConfirmed": false,
+  "gateClosed": false
+}

@@ -1,0 +1,42 @@
+{
+  "passed": false,
+  "nativeProcessesStarted": false,
+  "checks": [
+    {
+      "name": "linked",
+      "artificial": true,
+      "actual": {
+        "sameWaitingPattern": true,
+        "status": "matched"
+      },
+      "passed": true
+    },
+    {
+      "name": "unrelated-query-nodes",
+      "artificial": true,
+      "actual": {
+        "sameWaitingPattern": true,
+        "status": "matched"
+      },
+      "passed": false
+    },
+    {
+      "name": "truncated",
+      "artificial": true,
+      "actual": {
+        "sameWaitingPattern": false,
+        "status": "insufficient_evidence"
+      },
+      "passed": true
+    },
+    {
+      "name": "wrong-gui-instance",
+      "artificial": true,
+      "actual": {
+        "sameWaitingPattern": true,
+        "status": "matched"
+      },
+      "passed": false
+    }
+  ]
+}

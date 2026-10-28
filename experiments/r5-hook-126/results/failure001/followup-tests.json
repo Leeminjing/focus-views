@@ -1,0 +1,86 @@
+{
+  "passed": true,
+  "nativeProcessesStarted": false,
+  "checks": [
+    {
+      "name": "natural-failure-after-cleanup",
+      "passed": true,
+      "actual": {
+        "run": true,
+        "cleanupFailed": true,
+        "physicalCleanupConfirmed": true,
+        "sameBoot": true,
+        "alreadyAttempted": false
+      },
+      "artificial": true
+    },
+    {
+      "name": "no-natural-failure",
+      "passed": true,
+      "actual": {
+        "run": false,
+        "cleanupFailed": false,
+        "physicalCleanupConfirmed": true,
+        "sameBoot": true,
+        "alreadyAttempted": false
+      },
+      "artificial": true
+    },
+    {
+      "name": "unconfirmed-resources",
+      "passed": true,
+      "actual": {
+        "run": false,
+        "cleanupFailed": true,
+        "physicalCleanupConfirmed": false,
+        "sameBoot": true,
+        "alreadyAttempted": false
+      },
+      "artificial": true
+    },
+    {
+      "name": "changed-boot",
+      "passed": true,
+      "actual": {
+        "run": false,
+        "cleanupFailed": true,
+        "physicalCleanupConfirmed": true,
+        "sameBoot": false,
+        "alreadyAttempted": false
+      },
+      "artificial": true
+    },
+    {
+      "name": "already-attempted",
+      "passed": true,
+      "actual": {
+        "run": false,
+        "cleanupFailed": true,
+        "physicalCleanupConfirmed": true,
+        "sameBoot": true,
+        "alreadyAttempted": true
+      },
+      "artificial": true
+    },
+    {
+      "name": "direct-only-both-patterns-False",
+      "passed": true,
+      "artificial": true
+    },
+    {
+      "name": "direct-only-both-patterns-True",
+      "passed": true,
+      "artificial": true
+    },
+    {
+      "name": "json-date-object-same-utc-instance",
+      "passed": true,
+      "artificial": true
+    },
+    {
+      "name": "one-tick-difference-is-different-boot",
+      "passed": true,
+      "artificial": true
+    }
+  ]
+}
