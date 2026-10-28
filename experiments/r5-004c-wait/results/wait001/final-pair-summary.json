@@ -1,0 +1,100 @@
+{
+  "diagnosticSequenceCompleted": true,
+  "sameBuild": true,
+  "sameBoot": true,
+  "nativeCleanupPassed": false,
+  "cleanupCausalFixVerified": false,
+  "fullR5004Passed": false,
+  "gateClosed": false,
+  "profileSha256": "AD3DFF2B35009257A3298355A1EF54B85D9B1F9A21AC59B24C9393C51B6B4DBB",
+  "binaries": [
+    {
+      "file": "manager.exe",
+      "sha256": "7c4d871fc6520747f36d7580424c21edebefeb470371a50b879173f1b5da0ee6"
+    },
+    {
+      "file": "second.exe",
+      "sha256": "abcd481567349636501f06929fbe64afd140c4152c785f1a5be6a396f82abe56"
+    },
+    {
+      "file": "kernel.lib",
+      "sha256": "10cbf2d22d7666100396265a25aded38d67eadc35a4d5a93498b2d8cc91724db"
+    },
+    {
+      "file": "abort-runtime.dll",
+      "sha256": "a13224e597e17f55f68fcf76244be97e938c716e1152291ca46651e7805da3d0"
+    },
+    {
+      "file": "abort-helper.exe",
+      "sha256": "08a0b0e06db83d844bb2092c4c79dc925c7132967954beb7dd847cc460772418"
+    },
+    {
+      "file": "diagnose.exe",
+      "sha256": "61c0cb0c8bd4f6a35fa9122f3fee0c4ed9332dc0c493dd3843a6da6822524489"
+    },
+    {
+      "file": "trim-client.dll",
+      "sha256": "f0782a5193b93ae35f4ff4092d8197c43d474aaecf212c9ce34a07efee8de155"
+    },
+    {
+      "file": "close-probe.exe",
+      "sha256": "4efcc39cffc649673a1713c4916cc6748c298f0d47b8172f9aaebbb8e49c9180"
+    }
+  ],
+  "cases": [
+    {
+      "mode": "normal",
+      "controllerExit": 0,
+      "error": "",
+      "supervisor": {
+        "protocolPassed": true,
+        "cleanupVerified": true,
+        "forcedTermination": false,
+        "managerPid": 60844,
+        "managerCreated": 134376421577346908,
+        "managerExit": 2,
+        "point": "",
+        "explicitSurvivorCleanup": false,
+        "instances": 12,
+        "desktops": 1,
+        "failureApi": "",
+        "failureError": 0
+      },
+      "nativeCleanupPassed": false,
+      "naturalWaitPatternRetained": true,
+      "workerQueries": [
+        61320,
+        2936
+      ],
+      "profileUnchanged": true,
+      "snapshotOrSessionPresent": false
+    },
+    {
+      "mode": "checkpoint",
+      "controllerExit": 0,
+      "error": "",
+      "supervisor": {
+        "protocolPassed": true,
+        "cleanupVerified": true,
+        "forcedTermination": false,
+        "managerPid": 65064,
+        "managerCreated": 134376421651287398,
+        "managerExit": 2,
+        "point": "",
+        "explicitSurvivorCleanup": false,
+        "instances": 10,
+        "desktops": 1,
+        "failureApi": "",
+        "failureError": 0
+      },
+      "nativeCleanupPassed": false,
+      "naturalWaitPatternRetained": true,
+      "workerQueries": [
+        67000,
+        64428
+      ],
+      "profileUnchanged": true,
+      "snapshotOrSessionPresent": false
+    }
+  ]
+}

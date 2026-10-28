@@ -1,5 +1,7 @@
 # 实验与研发关口
 
+最新跟进不增加关口声明：[PID 实例身份红/绿对照及完整旧回归](../experiments/r5-003/results/pid-identity/report.md)、[从 recorder 裁剪文本服务等待](../experiments/r5-004c-wait/results/wait001/report.md)。前者本体通过、深层旧链失败；后者正常关闭与 checkpoint 均保留自然失败，并新增工作线程 COM/RPCSS 等待边。清理修复尚未出现，不扩大恢复矩阵或进入 R5-005。
+
 状态：R1 的受控计算片段子实验已实测通过，见 [R1-001 报告](../experiments/r1/results/20261024-r1/report.md) 和 [可运行源码](../experiments/r1/README.md)。R2 首轮的多分支内存及受管普通文件子实验也已实测通过，见 [R2-001 / R2-002 报告](../experiments/r2/results/20261024-r2/report.md)。均不涵盖下文列出的所有资源或全部关口。R3 和完整 R4 关口未通过；R4-001 子实验已有本体证据及未通过的回归记录。阶段可以缩小受测范围，不能替换 [行为规格](spec.md) 中的目标。
 
 R3-001 的提前诊断已执行，见 [原生后台图形与输入报告](../experiments/r3/results/20261024-r3/report.md)：冷启动 Win32 实例的正常 GDI 取图有效，修饰键和鼠标状态未通过，GUI 恢复未尝试。R3 关口未通过，R4 未执行。

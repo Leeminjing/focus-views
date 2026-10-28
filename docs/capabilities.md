@@ -1,5 +1,7 @@
 # 资源能力与实验结果清单
 
+2026-10-28 更新：[跨生命周期身份修复](../experiments/r5-003/results/pid-identity/report.md) 改用 PID+创建时间，确定性对照与 22 个 R5-003 本体场景通过，完整旧回归在原输入钩子 /126 处失败，未写成全绿。[受限裁剪诊断](../experiments/r5-004c-wait/results/wait001/report.md) 将实际等待延伸到 COM/RPCSS 节点，但没有定位服务端具体操作或获得可靠清理修复；cleanupCausalFixVerified、fullR5004Passed、gateClosed 继续为 false。
+
 更新日期：2026-10-25。[R1-001](../experiments/r1/results/20261024-r1/report.md) 与 [R2-001 / R2-002](../experiments/r2/results/20261024-r2/report.md) 已实测通过受控计算片段续接、多分支内存及受管普通文件子集。只有下列明确范围有证据；不代表完整 R2 或通用运行时已实现。策略列仍是各项完整能力的研究方向。
 
 [R3-001 诊断](../experiments/r3/results/20261024-r3/report.md) 已完成原生冷启动图形/输入基线；存在明确的键鼠状态失败，R3 整体未通过。以下局部有效路径不等于 GUI 恢复或完整输入隔离。
