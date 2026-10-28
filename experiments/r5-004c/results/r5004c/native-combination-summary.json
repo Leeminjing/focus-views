@@ -1,0 +1,44 @@
+{
+  "candidateFunctionalVerificationPassed": false,
+  "sameFinalBuild": true,
+  "sameBoot": true,
+  "boot": "2026-10-28T08:51:50.5+08:00",
+  "regressions": "failed",
+  "stages": [
+    {
+      "name": "focus",
+      "passed": true,
+      "error": "",
+      "summary": "C:\\fv-c\\v2/focus/summary.json"
+    },
+    {
+      "name": "cleanup",
+      "passed": true,
+      "error": "",
+      "summary": "C:\\fv-c\\v2/cleanup/summary.json"
+    },
+    {
+      "name": "relocation",
+      "passed": false,
+      "error": "R5-004b matrix failed: C:\\fv-c\\v2\\relocation/summary.json",
+      "summary": "C:\\fv-c\\v2/relocation/summary.json"
+    },
+    {
+      "name": "crash",
+      "passed": true,
+      "error": "",
+      "summary": "C:\\fv-c\\v2/crash/summary.json"
+    },
+    {
+      "name": "legacy",
+      "passed": false,
+      "error": "R5-003 evidence failed; preserve primary API errors and all raw records",
+      "summary": "C:\\fv-c\\v2/reg3/summary.json"
+    }
+  ],
+  "cleanupCausalFixVerified": false,
+  "fullR5004Passed": false,
+  "gateClosed": false,
+  "manualHostTest": "not_executed",
+  "hostRebootRecoveryVerified": false
+}

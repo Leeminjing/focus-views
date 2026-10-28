@@ -1,0 +1,550 @@
+{
+  "application": "recorder",
+  "scenario": "relocation-bad-offset",
+  "killRestore": "",
+  "legacy": false,
+  "sameBase": false,
+  "sourceHead": "21e747eea101bfb95e33d83bb100569eda4b513c",
+  "sourceExe": "D:\\focus-views\\experiments\\r5-004c\\out-final2\\second.exe",
+  "copyExe": "D:\\focus-views\\experiments\\r5-004c\\out-final2\\r5004b-87325F769181785D1CEAB4A7.exe",
+  "workingDirectory": "D:\\focus-views\\experiments\\r5-004c\\out-final2",
+  "sourceExeSha256": "abcd481567349636501f06929fbe64afd140c4152c785f1a5be6a396f82abe56",
+  "copyExeSha256": "abcd481567349636501f06929fbe64afd140c4152c785f1a5be6a396f82abe56",
+  "checks": [
+    {
+      "name": "same-EXE-bytes-no-relink",
+      "passed": true
+    },
+    {
+      "name": "same-working-and-DLL-search-directory",
+      "passed": true
+    },
+    {
+      "name": "save.explicit-standard-handle-inheritance",
+      "passed": true
+    },
+    {
+      "name": "save.supervisor-protocol",
+      "passed": true
+    },
+    {
+      "name": "save.physical-cleanup",
+      "passed": true
+    },
+    {
+      "name": "save.all-pinned-instance-identities-exited",
+      "passed": true
+    },
+    {
+      "name": "save.job-empty-before-release",
+      "passed": true
+    },
+    {
+      "name": "save.every-created-desktop-absent",
+      "passed": true
+    },
+    {
+      "name": "save.owned-handle-closes",
+      "passed": true
+    },
+    {
+      "name": "save.no-failed-native-assertions",
+      "passed": true
+    },
+    {
+      "name": "save.not-forced",
+      "passed": true
+    },
+    {
+      "name": "save-native-manager-completed",
+      "passed": true
+    },
+    {
+      "name": "restore.explicit-standard-handle-inheritance",
+      "passed": true
+    },
+    {
+      "name": "restore.supervisor-protocol",
+      "passed": true
+    },
+    {
+      "name": "restore.physical-cleanup",
+      "passed": true
+    },
+    {
+      "name": "restore.all-pinned-instance-identities-exited",
+      "passed": true
+    },
+    {
+      "name": "restore.job-empty-before-release",
+      "passed": true
+    },
+    {
+      "name": "restore.every-created-desktop-absent",
+      "passed": true
+    },
+    {
+      "name": "restore.owned-handle-closes",
+      "passed": true
+    },
+    {
+      "name": "restore.no-failed-native-assertions",
+      "passed": true
+    },
+    {
+      "name": "restore.not-forced",
+      "passed": true
+    },
+    {
+      "name": "fault-rejected-before-source-write",
+      "passed": true
+    },
+    {
+      "name": "fault-target-native-cleanup-confirmed",
+      "passed": false
+    },
+    {
+      "name": "already-restored-RA-still-runs-and-paints",
+      "passed": true
+    },
+    {
+      "name": "rejected-object-never-published",
+      "passed": true
+    },
+    {
+      "name": "fixed-store-unchanged-after-refusal",
+      "passed": true
+    },
+    {
+      "name": "fresh.explicit-standard-handle-inheritance",
+      "passed": true
+    },
+    {
+      "name": "fresh.supervisor-protocol",
+      "passed": true
+    },
+    {
+      "name": "fresh.physical-cleanup",
+      "passed": true
+    },
+    {
+      "name": "fresh.all-pinned-instance-identities-exited",
+      "passed": true
+    },
+    {
+      "name": "fresh.job-empty-before-release",
+      "passed": true
+    },
+    {
+      "name": "fresh.every-created-desktop-absent",
+      "passed": true
+    },
+    {
+      "name": "fresh.owned-handle-closes",
+      "passed": true
+    },
+    {
+      "name": "fresh.no-failed-native-assertions",
+      "passed": true
+    },
+    {
+      "name": "fresh.not-forced",
+      "passed": true
+    },
+    {
+      "name": "restore-native-manager-completed",
+      "passed": true
+    },
+    {
+      "name": "native.owned-processes-and-desktops-cleaned",
+      "passed": true
+    },
+    {
+      "name": "native.all-native-assertions",
+      "passed": true
+    },
+    {
+      "name": "native.RA-initial-real-frame",
+      "passed": true
+    },
+    {
+      "name": "native.RB-initial-real-frame",
+      "passed": true
+    },
+    {
+      "name": "native.C-initial-real-frame",
+      "passed": true
+    },
+    {
+      "name": "native.RA-undo1-real-frame",
+      "passed": true
+    },
+    {
+      "name": "native.RA-undo2-real-frame",
+      "passed": true
+    },
+    {
+      "name": "native.RA-continued-input-real-frame",
+      "passed": true
+    },
+    {
+      "name": "native.RB-undo1-real-frame",
+      "passed": true
+    },
+    {
+      "name": "native.RB-undo2-real-frame",
+      "passed": true
+    },
+    {
+      "name": "native.RB-continued-input-real-frame",
+      "passed": true
+    },
+    {
+      "name": "native.C-final-edit-real-frame",
+      "passed": true
+    },
+    {
+      "name": "native.RA-final-real-frame",
+      "passed": true
+    },
+    {
+      "name": "native.RB-final-real-frame",
+      "passed": true
+    },
+    {
+      "name": "native.C-final-real-frame",
+      "passed": true
+    },
+    {
+      "name": "native.C-1-Action",
+      "passed": true
+    },
+    {
+      "name": "native.C-2-Action",
+      "passed": true
+    },
+    {
+      "name": "native.C-3-Action",
+      "passed": true
+    },
+    {
+      "name": "native.C-4-Action",
+      "passed": true
+    },
+    {
+      "name": "native.RA-1-Action",
+      "passed": true
+    },
+    {
+      "name": "native.RA-2-Action",
+      "passed": true
+    },
+    {
+      "name": "native.RB-1-Action",
+      "passed": true
+    },
+    {
+      "name": "native.RB-2-Action",
+      "passed": true
+    },
+    {
+      "name": "native.C-input-1.jsonl-queries-no-loss-or-duplicate",
+      "passed": true
+    },
+    {
+      "name": "native.RA-input-1.jsonl-queries-no-loss-or-duplicate",
+      "passed": true
+    },
+    {
+      "name": "native.RB-input-1.jsonl-queries-no-loss-or-duplicate",
+      "passed": true
+    },
+    {
+      "name": "restored.exact-restored-Views",
+      "passed": true
+    },
+    {
+      "name": "restored.no-business-initialization-replay",
+      "passed": true
+    },
+    {
+      "name": "restored.S0.raw-CPU-stack-memory-computation",
+      "passed": true
+    },
+    {
+      "name": "restored.S0.loaded-data.bin",
+      "passed": true
+    },
+    {
+      "name": "restored.S0.loaded-context.bin",
+      "passed": true
+    },
+    {
+      "name": "restored.S0.loaded-metadata.bin",
+      "passed": true
+    },
+    {
+      "name": "restored.S0.loaded-execution-layout.bin",
+      "passed": true
+    },
+    {
+      "name": "restored.S0.loaded-full-stack.bin",
+      "passed": true
+    },
+    {
+      "name": "restored.S0.loaded-resources.bin",
+      "passed": true
+    },
+    {
+      "name": "restored.S0.loaded-abi.bin",
+      "passed": true
+    },
+    {
+      "name": "restored.S0.loaded-returns.bin",
+      "passed": true
+    },
+    {
+      "name": "restored.S0.loaded-executable.bin",
+      "passed": true
+    },
+    {
+      "name": "restored.S0.loaded-target-image.bin",
+      "passed": true
+    },
+    {
+      "name": "restored.S0.loaded-file.json",
+      "passed": true
+    },
+    {
+      "name": "restored.S0.loaded-file.bin",
+      "passed": true
+    },
+    {
+      "name": "restored.C.real-RET-and-original-state",
+      "passed": true
+    },
+    {
+      "name": "restored.C.own-CET-chain",
+      "passed": true
+    },
+    {
+      "name": "restored.C.seven-explicit-HWND-rebindings",
+      "passed": true
+    },
+    {
+      "name": "restored.S0.actual-ABI",
+      "passed": true
+    },
+    {
+      "name": "restored.SA.raw-CPU-stack-memory-computation",
+      "passed": true
+    },
+    {
+      "name": "restored.SA.loaded-data.bin",
+      "passed": true
+    },
+    {
+      "name": "restored.SA.loaded-context.bin",
+      "passed": true
+    },
+    {
+      "name": "restored.SA.loaded-metadata.bin",
+      "passed": true
+    },
+    {
+      "name": "restored.SA.loaded-execution-layout.bin",
+      "passed": true
+    },
+    {
+      "name": "restored.SA.loaded-full-stack.bin",
+      "passed": true
+    },
+    {
+      "name": "restored.SA.loaded-resources.bin",
+      "passed": true
+    },
+    {
+      "name": "restored.SA.loaded-abi.bin",
+      "passed": true
+    },
+    {
+      "name": "restored.SA.loaded-returns.bin",
+      "passed": true
+    },
+    {
+      "name": "restored.SA.loaded-executable.bin",
+      "passed": true
+    },
+    {
+      "name": "restored.SA.loaded-target-image.bin",
+      "passed": true
+    },
+    {
+      "name": "restored.SA.loaded-file.json",
+      "passed": true
+    },
+    {
+      "name": "restored.SA.loaded-file.bin",
+      "passed": true
+    },
+    {
+      "name": "restored.RA.real-RET-and-original-state",
+      "passed": true
+    },
+    {
+      "name": "restored.RA.own-CET-chain",
+      "passed": true
+    },
+    {
+      "name": "restored.RA.seven-explicit-HWND-rebindings",
+      "passed": true
+    },
+    {
+      "name": "restored.SA.actual-ABI",
+      "passed": true
+    },
+    {
+      "name": "restored.SB.raw-CPU-stack-memory-computation",
+      "passed": true
+    },
+    {
+      "name": "restored.SB.loaded-data.bin",
+      "passed": true
+    },
+    {
+      "name": "restored.SB.loaded-context.bin",
+      "passed": true
+    },
+    {
+      "name": "restored.SB.loaded-metadata.bin",
+      "passed": true
+    },
+    {
+      "name": "restored.SB.loaded-execution-layout.bin",
+      "passed": true
+    },
+    {
+      "name": "restored.SB.loaded-full-stack.bin",
+      "passed": true
+    },
+    {
+      "name": "restored.SB.loaded-resources.bin",
+      "passed": true
+    },
+    {
+      "name": "restored.SB.loaded-abi.bin",
+      "passed": true
+    },
+    {
+      "name": "restored.SB.loaded-returns.bin",
+      "passed": true
+    },
+    {
+      "name": "restored.SB.loaded-executable.bin",
+      "passed": true
+    },
+    {
+      "name": "restored.SB.loaded-target-image.bin",
+      "passed": true
+    },
+    {
+      "name": "restored.SB.loaded-file.json",
+      "passed": true
+    },
+    {
+      "name": "restored.SB.loaded-file.bin",
+      "passed": true
+    },
+    {
+      "name": "restored.RB.real-RET-and-original-state",
+      "passed": true
+    },
+    {
+      "name": "restored.RB.own-CET-chain",
+      "passed": true
+    },
+    {
+      "name": "restored.RB.seven-explicit-HWND-rebindings",
+      "passed": true
+    },
+    {
+      "name": "restored.SB.actual-ABI",
+      "passed": true
+    },
+    {
+      "name": "restored.RA.Undo-and-selection",
+      "passed": true
+    },
+    {
+      "name": "restored.RA.actual-restored-EDIT-pixels",
+      "passed": true
+    },
+    {
+      "name": "restored.RB.Undo-and-selection",
+      "passed": true
+    },
+    {
+      "name": "restored.RB.actual-restored-EDIT-pixels",
+      "passed": true
+    },
+    {
+      "name": "restored.C-native-file-processing",
+      "passed": true
+    },
+    {
+      "name": "restored.RA.different-application-PID",
+      "passed": true
+    },
+    {
+      "name": "restored.RB.different-application-PID",
+      "passed": true
+    },
+    {
+      "name": "restored.C.different-application-PID",
+      "passed": true
+    },
+    {
+      "name": "all-three-Views-actually-rebased",
+      "passed": true
+    },
+    {
+      "name": "independent-raw-byte-reassociation-audit",
+      "passed": true
+    },
+    {
+      "name": "fixed-store-unchanged",
+      "passed": true
+    }
+  ],
+  "operations": [
+    {
+      "manager": "C:\\fv-c\\v2\\relocation\\recorder-relocation-bad-offset\\save/manager",
+      "supervisor": "C:\\fv-c\\v2\\relocation\\recorder-relocation-bad-offset\\save/supervisor",
+      "certificate": "C:\\fv-c\\v2\\relocation\\recorder-relocation-bad-offset\\save/supervisor/owner.fvc",
+      "managerExit": 0,
+      "controllerExit": 0,
+      "managerPid": 972
+    },
+    {
+      "manager": "C:\\fv-c\\v2\\relocation\\recorder-relocation-bad-offset\\restore/manager",
+      "supervisor": "C:\\fv-c\\v2\\relocation\\recorder-relocation-bad-offset\\restore/supervisor",
+      "certificate": "C:\\fv-c\\v2\\relocation\\recorder-relocation-bad-offset\\restore/supervisor/owner.fvc",
+      "managerExit": 2,
+      "controllerExit": 0,
+      "managerPid": 27264
+    },
+    {
+      "manager": "C:\\fv-c\\v2\\relocation\\recorder-relocation-bad-offset\\fresh/manager",
+      "supervisor": "C:\\fv-c\\v2\\relocation\\recorder-relocation-bad-offset\\fresh/supervisor",
+      "certificate": "C:\\fv-c\\v2\\relocation\\recorder-relocation-bad-offset\\fresh/supervisor/owner.fvc",
+      "managerExit": 0,
+      "controllerExit": 0,
+      "managerPid": 29680
+    }
+  ],
+  "error": "",
+  "passed": false,
+  "aslrRelocationVerified": false,
+  "hostRebootRecoveryVerified": false,
+  "gateClosed": false
+}

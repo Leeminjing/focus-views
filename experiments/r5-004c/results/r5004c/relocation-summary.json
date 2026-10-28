@@ -1,0 +1,125 @@
+{
+  "passed": false,
+  "aslrRelocationVerified": false,
+  "fullR5004Passed": false,
+  "regressions": "not_run",
+  "gateClosed": false,
+  "cases": [
+    {
+      "name": "fixture-positive",
+      "passed": true,
+      "error": "",
+      "checks": 112,
+      "aslr": true
+    },
+    {
+      "name": "fixture-legacy-same-base",
+      "passed": true,
+      "error": "",
+      "checks": 111,
+      "aslr": false
+    },
+    {
+      "name": "fixture-relocation-missing-return",
+      "passed": true,
+      "error": "",
+      "checks": 126,
+      "aslr": true
+    },
+    {
+      "name": "fixture-relocation-bad-offset",
+      "passed": true,
+      "error": "",
+      "checks": 126,
+      "aslr": true
+    },
+    {
+      "name": "fixture-relocation-missing-reference",
+      "passed": true,
+      "error": "",
+      "checks": 126,
+      "aslr": true
+    },
+    {
+      "name": "fixture-relocation-wrong-image",
+      "passed": true,
+      "error": "",
+      "checks": 126,
+      "aslr": true
+    },
+    {
+      "name": "fixture-view-resources-RA",
+      "passed": true,
+      "error": "",
+      "checks": 126,
+      "aslr": true
+    },
+    {
+      "name": "fixture-view-published-RA",
+      "passed": true,
+      "error": "",
+      "checks": 126,
+      "aslr": true
+    },
+    {
+      "name": "recorder-positive",
+      "passed": true,
+      "error": "",
+      "checks": 112,
+      "aslr": true
+    },
+    {
+      "name": "recorder-legacy-same-base",
+      "passed": true,
+      "error": "",
+      "checks": 111,
+      "aslr": false
+    },
+    {
+      "name": "recorder-relocation-missing-return",
+      "passed": true,
+      "error": "",
+      "checks": 126,
+      "aslr": true
+    },
+    {
+      "name": "recorder-relocation-bad-offset",
+      "passed": false,
+      "error": "R5-004b case failed: C:\\fv-c\\v2\\relocation\\recorder-relocation-bad-offset/summary.json",
+      "checks": 126,
+      "aslr": false
+    },
+    {
+      "name": "recorder-relocation-missing-reference",
+      "passed": false,
+      "error": "R5-004b case failed: C:\\fv-c\\v2\\relocation\\recorder-relocation-missing-reference/summary.json",
+      "checks": 126,
+      "aslr": false
+    },
+    {
+      "name": "recorder-relocation-wrong-image",
+      "passed": false,
+      "error": "R5-004b case failed: C:\\fv-c\\v2\\relocation\\recorder-relocation-wrong-image/summary.json",
+      "checks": 126,
+      "aslr": false
+    },
+    {
+      "name": "recorder-view-resources-RA",
+      "passed": true,
+      "error": "",
+      "checks": 126,
+      "aslr": true
+    },
+    {
+      "name": "recorder-view-published-RA",
+      "passed": true,
+      "error": "",
+      "checks": 126,
+      "aslr": true
+    }
+  ],
+  "checks": 1958.0,
+  "sourceHead": "21e747eea101bfb95e33d83bb100569eda4b513c",
+  "manualHostTest": "not_executed",
+  "hostRebootRecoveryVerified": false
+}

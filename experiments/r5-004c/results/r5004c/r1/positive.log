@@ -1,0 +1,37 @@
+CASE positive timeout_ms=10000 pointer_bits=64
+FIXTURE_SHA256 9d0e90af7fbe901f394942326c2318ff47b69b85c8aaa13340eab8b3d5f0e13c
+ORACLE seed=0x73f52f84dd935ff1 memory=0xfe75251bed568f1b stack=0x1dd19a1edce0873e r15=0x82214bd7de6344a3 expected=0x8fd5da2eb2a9033a
+PROCESS_CREATED pid=63376 tid=47132
+SYSTEM_STARTUP_BREAKPOINT pid=63376 address=0x7ffd4d0426c9
+FIXTURE_READY pid=63376 build=d294a2beab8c9c1c082ca37506dd92e66cf5b9406c22a4d5dbd9470c1ae51769
+MITIGATION shadow_stack_flags=0x105
+MITIGATION dynamic_code_flags=0x0
+TASK_INIT role=source pid=63376 count=1
+TRAP_CONTEXT raw_rip=0x1b000000001 resume_rip=0x1b000000001
+CHECKPOINT role=source pid=63376 count=1
+TRAP_CONTEXT raw_rip=0x1b00000004b resume_rip=0x1b00000004b
+CAPTURE_REGION address=0x1b000000000 size=4096 protection=0x20 sha256=d23a77a111ac2e55c37a20c3ef437747005c45a18ae4cbc537cfd0bd9713a657
+CAPTURE_REGION address=0x1b000010000 size=4096 protection=0x4 sha256=2d3ab6ddc7449abd4fc4c03301d220dd7ac5f2951921138726f42c69e89f5dc5
+CAPTURE_REGION address=0x1b000020000 size=65536 protection=0x4 sha256=b1d0becd266090c56722daa9a8e9df98bf931524a65cf4bc13d0f1148d507aa0
+CAPTURE_CONTEXT rip=0x1b00000004b rsp=0x1b00002ff70 r15=0x82214bd7de6344a3 eflags=0xa87
+PROCESS_TERMINATED_CONFIRMED pid=63376 exit_event=0xe0420000
+SOURCE_EXIT_CONFIRMED_BEFORE_RESTORE pid=63376
+PROCESS_CREATED pid=24664 tid=60736
+SYSTEM_STARTUP_BREAKPOINT pid=24664 address=0x7ffd4d0426c9
+FIXTURE_READY pid=24664 build=d294a2beab8c9c1c082ca37506dd92e66cf5b9406c22a4d5dbd9470c1ae51769
+MITIGATION shadow_stack_flags=0x105
+MITIGATION dynamic_code_flags=0x0
+RESTORED_CONTEXT pid=24664 rip=0x1b00000004b rsp=0x1b00002ff70 r15=0x82214bd7de6344a3 eflags=0xa85
+RESULT restore=1 pid=24664 actual=0x8fd5da2eb2a9033a expected=0x8fd5da2eb2a9033a observed_memory=0xfe75251bed568f1b observed_r15=0x82214bd7de6344a3 observed_stack=0x1dd19a1edce0873e
+EVENT_COUNTS role=restore init=0 checkpoint=0 result=1
+PROCESS_TERMINATED_CONFIRMED pid=24664 exit_event=0xe0420000
+PROCESS_CREATED pid=62104 tid=63204
+SYSTEM_STARTUP_BREAKPOINT pid=62104 address=0x7ffd4d0426c9
+FIXTURE_READY pid=62104 build=d294a2beab8c9c1c082ca37506dd92e66cf5b9406c22a4d5dbd9470c1ae51769
+MITIGATION shadow_stack_flags=0x105
+MITIGATION dynamic_code_flags=0x0
+RESTORED_CONTEXT pid=62104 rip=0x1b00000004b rsp=0x1b00002ff70 r15=0x82214bd7de6344a3 eflags=0xa85
+RESULT restore=2 pid=62104 actual=0x8fd5da2eb2a9033a expected=0x8fd5da2eb2a9033a observed_memory=0xfe75251bed568f1b observed_r15=0x82214bd7de6344a3 observed_stack=0x1dd19a1edce0873e
+EVENT_COUNTS role=restore init=0 checkpoint=0 result=1
+PROCESS_TERMINATED_CONFIRMED pid=62104 exit_event=0xe0420000
+R1_CONTROLLED_EXPERIMENT_PASS restores=2 source_init=1 source_checkpoint=1 restored_init=0

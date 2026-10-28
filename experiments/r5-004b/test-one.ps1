@@ -1,4 +1,4 @@
-param([ValidateSet('fixture','recorder')][string]$Application='fixture',[string]$ResultsDir='D:/fv/b/p1',[string]$OutDir=(Join-Path $PSScriptRoot 'out'),[string]$KillRestore='',[string]$Scenario='positive',[switch]$Legacy,[switch]$SameBase)
+param([ValidateSet('fixture','recorder')][string]$Application='fixture',[string]$ResultsDir='D:/fv/b/p1',[string]$OutDir=(Join-Path $PSScriptRoot 'out'),[string]$KillRestore='',[string]$Scenario='positive',[switch]$Legacy,[switch]$SameBase,[string]$InputScenarioPrefix='')
 $ErrorActionPreference='Stop';Set-StrictMode -Version Latest
 $OutDir=[IO.Path]::GetFullPath($OutDir);$ResultsDir=[IO.Path]::GetFullPath($ResultsDir)
 if(Test-Path -LiteralPath $ResultsDir){throw 'Evidence directory must be new'}
@@ -15,7 +15,7 @@ Check 'same-EXE-bytes-no-relink' ((Sha $source) -eq (Sha $copy))
 Check 'same-working-and-DLL-search-directory' ((Split-Path $source) -ceq (Split-Path $copy))
 function Phase([string]$Mode,[string]$App,[string]$Previous,[string]$Stage,[string]$Kill='',[string]$Fault='positive'){
  $root=Join-Path $ResultsDir $Stage;New-Item -ItemType Directory -Path $root|Out-Null
- & "$OutDir/controller.exe" --manager "$OutDir/manager.exe" --client "$OutDir/$Application-client.dll" --fixture $App --mode $Mode --store $store --manager-output "$root/manager" --output "$root/supervisor" --kill-at $Kill --previous $Previous --scenario $Fault *> "$root/console.log"
+ & "$OutDir/controller.exe" --manager "$OutDir/manager.exe" --client "$OutDir/$Application-client.dll" --fixture $App --mode $Mode --store $store --manager-output "$root/manager" --output "$root/supervisor" --kill-at $Kill --previous $Previous --scenario ($InputScenarioPrefix+$Fault) *> "$root/console.log"
  $exit=$LASTEXITCODE;$summary=Get-Content -Raw "$root/supervisor/summary.json"|ConvertFrom-Json
  $r=[pscustomobject]@{manager="$root/manager";supervisor="$root/supervisor";certificate="$root/supervisor/owner.fvc";managerExit=$summary.managerExit;controllerExit=$exit;managerPid=$summary.managerPid}
  $operations.Add($r);if($exit -ne 0){throw "Supervisor failed ($exit): $root/supervisor/summary.json"};return $r
