@@ -1,0 +1,8 @@
+{"type":"check","tickMs":18696968,"name":"same-pid-different-created-is-gone","passed":true}
+{"type":"check","tickMs":18696968,"name":"same-live-instance-is-not-gone","passed":true}
+{"type":"check","tickMs":18696968,"name":"query-error-is-not-gone","passed":false}
+{"type":"check","tickMs":18697046,"name":"reused-pid","passed":false}
+{"type":"identity_case","tickMs":18697046,"case":"reused-pid","syntheticDeclaration":true,"pid":35432,"actualCreated":134376410071219895,"declaredCreated":134376410071219894,"expected":"snapshot.runtime_abi"}
+{"type":"check","tickMs":18697125,"name":"live-previous","passed":true}
+{"type":"identity_case","tickMs":18697125,"case":"live-previous","syntheticDeclaration":true,"pid":35432,"actualCreated":134376410071219895,"declaredCreated":134376410071219895,"expected":"snapshot.previous_lifetime_alive"}
+{"type":"complete","tickMs":18697125,"passed":false,"failed":2}

@@ -1,0 +1,12 @@
+{"type":"check","tickMs":18814218,"name":"same-pid-different-created-is-gone","passed":true}
+{"type":"check","tickMs":18814218,"name":"same-live-instance-is-not-gone","passed":true}
+{"type":"query_failure","tickMs":18814218,"api":"GetProcessTimes.restart_identity","error":6}
+{"type":"check","tickMs":18814218,"name":"query-error-is-not-gone","passed":true}
+{"type":"check","tickMs":18814218,"name":"same-pid-new-created-is-distinct","passed":true}
+{"type":"check","tickMs":18814218,"name":"same-instance-is-not-distinct","passed":true}
+{"type":"check","tickMs":18814218,"name":"unknown-identity-refused","passed":true}
+{"type":"check","tickMs":18814312,"name":"reused-pid","passed":true}
+{"type":"identity_case","tickMs":18814312,"case":"reused-pid","syntheticDeclaration":true,"pid":62732,"actualCreated":134376411244958798,"declaredCreated":134376411244958797,"expected":"snapshot.runtime_abi"}
+{"type":"check","tickMs":18814390,"name":"live-previous","passed":true}
+{"type":"identity_case","tickMs":18814390,"case":"live-previous","syntheticDeclaration":true,"pid":62732,"actualCreated":134376411244958798,"declaredCreated":134376411244958798,"expected":"snapshot.previous_lifetime_alive"}
+{"type":"complete","tickMs":18814390,"passed":true,"failed":0}

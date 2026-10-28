@@ -1,5 +1,6 @@
 # Reuse the tested R5-003 read-only evidence oracles, not its experiment driver.
 . (Join-Path $PSScriptRoot '../r4-001-gate-001/lifetimes.ps1')
+. (Join-Path $PSScriptRoot '../r5-003/instance-check.ps1')
 Add-Type -AssemblyName System.Drawing
 $verificationSource=Join-Path $PSScriptRoot '../r5-003/test.ps1'
 $verificationTokens=$null;$verificationErrors=$null

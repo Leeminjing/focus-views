@@ -35,7 +35,7 @@ try {
  }
  $reuse|ConvertTo-Json|Set-Content (Join-Path $OutDir 'reuse.json') -Encoding utf8
  $common=@('/nologo','/std:c++20','/EHsc','/W4','/WX','/O2','/MT','/GS','/guard:cf','/Gy','/utf-8','/D_WIN32_WINNT=0x0A00','/DUNICODE','/D_UNICODE','/Zi',"/Fd$(Join-Path $OutDir 'compiler.pdb')")
- $groups=[ordered]@{manager=@('manager_main.cpp');fixture=@('clients/fixture_client.cpp');recorder=@('clients/recorder_client.cpp');store=@('runtime/store.cpp');codec_test=@('codec_test.cpp');helper=@('../r5-001a/helper_main.cpp','../r5-001a/runtime/bridge.cpp','../r4-001/input.cpp','../r3-004/observer.cpp');input_runtime=@('../r4-001/runtime.cpp')}
+ $groups=[ordered]@{manager=@('manager_main.cpp');fixture=@('clients/fixture_client.cpp');recorder=@('clients/recorder_client.cpp');store=@('runtime/store.cpp');codec_test=@('codec_test.cpp');identity_test=@('identity_test.cpp');helper=@('../r5-001a/helper_main.cpp','../r5-001a/runtime/bridge.cpp','../r4-001/input.cpp','../r3-004/observer.cpp');input_runtime=@('../r4-001/runtime.cpp')}
  $objects=@{}
  foreach($group in $groups.Keys){$objects[$group]=@();foreach($unit in $groups[$group]){
   $obj=Join-Path $OutDir ($group+'-'+[IO.Path]::GetFileNameWithoutExtension($unit)+'.obj')
@@ -52,11 +52,11 @@ try {
  }
  & $taskCompiler /nologo /LD @($objects.input_runtime) "/Fe$(Join-Path $OutDir 'runtime304.dll')" user32.lib /link /INCREMENTAL:NO /DYNAMICBASE /NXCOMPAT /CETCOMPAT /guard:cf /DEBUG:FULL
  if($LASTEXITCODE -ne 0){throw 'Diagnostic-stream input DLL failed'}
- foreach($exe in @('manager','codec_test','helper')){
+ foreach($exe in @('manager','codec_test','identity_test','helper')){
   & $taskCompiler /nologo @($objects[$exe]) (Join-Path $OutDir 'snapshot-store.lib') (Join-Path $OutDir 'kernel.lib') "/Fe$(Join-Path $OutDir ($exe+'.exe'))" @libs /link /INCREMENTAL:NO /DYNAMICBASE /NXCOMPAT /CETCOMPAT /guard:cf /DEBUG:FULL
   if($LASTEXITCODE -ne 0){throw "Link failed $exe"}
  }
- $inputs=@('manager_main.cpp','clients/fixture_client.cpp','clients/recorder_client.cpp','clients/restart.hpp','runtime/store.hpp','runtime/store.cpp','runtime/query-stream.hpp','codec_test.cpp','build.ps1','../r5-002/clients/host.hpp','../r5-002/clients/fixture_model.hpp','../r5-002/clients/recorder_model.hpp','../r5-002/clients/observation.hpp','../r5-002/clients/command.hpp','../r4-001/runtime.cpp','../r4-001/input.cpp','../r5-001a/helper_main.cpp','../r5-001a/runtime/bridge.cpp','../r3-004/observer.cpp','../r3-004/channel.hpp')
+ $inputs=@('manager_main.cpp','clients/fixture_client.cpp','clients/recorder_client.cpp','clients/restart.hpp','runtime/store.hpp','runtime/store.cpp','runtime/query-stream.hpp','codec_test.cpp','identity_test.cpp','instance-check.ps1','test-identity.ps1','build.ps1','../r5-002/clients/host.hpp','../r5-002/clients/fixture_model.hpp','../r5-002/clients/recorder_model.hpp','../r5-002/clients/observation.hpp','../r5-002/clients/command.hpp','../r4-001/runtime.cpp','../r4-001/input.cpp','../r5-001a/helper_main.cpp','../r5-001a/runtime/bridge.cpp','../r3-004/observer.cpp','../r3-004/channel.hpp')
  [ordered]@{time=(Get-Date -Format o);sourceHead=(& git -C $PSScriptRoot rev-parse HEAD);system=[Environment]::OSVersion.VersionString;msvc=$MsvcRoot;sdk=$SdkRoot;sdkVersion=$SdkVersion;compilerVersion=(Get-Item $taskCompiler).VersionInfo.FileVersion;security='/GS /guard:cf /CETCOMPAT';queryTransport=$(if($LegacyQueryLog){'legacy-total-quota'}else{'acknowledged-ring'});systemSettingsChanged=$false;sourceInputs=@($inputs|ForEach-Object{[ordered]@{file=$_;sha256=(Get-FileHash (Join-Path $PSScriptRoot $_)).Hash.ToLowerInvariant()}});binaries=@(Get-ChildItem $OutDir -File|Where-Object Extension -in @('.exe','.dll','.lib')|ForEach-Object{[ordered]@{file=$_.Name;sha256=(Get-FileHash $_.FullName).Hash.ToLowerInvariant()}})}|ConvertTo-Json -Depth 8|Set-Content (Join-Path $OutDir 'build.json') -Encoding utf8
  Write-Output 'R5_003_BUILD_OK'
 } finally {$env:PATH=$taskOldPath;$env:INCLUDE=$taskOldInclude;$env:LIB=$taskOldLib}

@@ -1,0 +1,75 @@
+{
+  "passed": true,
+  "nativeExit": 0,
+  "syntheticIdentityDeclarations": true,
+  "naturalPidReuseClaimed": false,
+  "nativeChecks": [
+    {
+      "type": "check",
+      "tickMs": 18814218,
+      "name": "same-pid-different-created-is-gone",
+      "passed": true
+    },
+    {
+      "type": "check",
+      "tickMs": 18814218,
+      "name": "same-live-instance-is-not-gone",
+      "passed": true
+    },
+    {
+      "type": "check",
+      "tickMs": 18814218,
+      "name": "query-error-is-not-gone",
+      "passed": true
+    },
+    {
+      "type": "check",
+      "tickMs": 18814218,
+      "name": "same-pid-new-created-is-distinct",
+      "passed": true
+    },
+    {
+      "type": "check",
+      "tickMs": 18814218,
+      "name": "same-instance-is-not-distinct",
+      "passed": true
+    },
+    {
+      "type": "check",
+      "tickMs": 18814218,
+      "name": "unknown-identity-refused",
+      "passed": true
+    },
+    {
+      "type": "check",
+      "tickMs": 18814312,
+      "name": "reused-pid",
+      "passed": true
+    },
+    {
+      "type": "check",
+      "tickMs": 18814390,
+      "name": "live-previous",
+      "passed": true
+    }
+  ],
+  "scriptChecks": [
+    {
+      "name": "same-PID-new-created",
+      "passed": true
+    },
+    {
+      "name": "same-instance",
+      "passed": true
+    },
+    {
+      "name": "missing-created",
+      "passed": true
+    },
+    {
+      "name": "unknown-created",
+      "passed": true
+    }
+  ],
+  "sourceHead": "b1560bfd21f791f03efe5a7e10236471a9c8e5f1"
+}

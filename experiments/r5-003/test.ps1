@@ -1,6 +1,7 @@
 param([string]$OutDir=(Join-Path $PSScriptRoot 'out'),[string]$ResultsDir=(Join-Path $PSScriptRoot ('results/'+(Get-Date -Format 'yyyyMMdd-HHmmss'))),[ValidateRange(1,3)][int]$Repeats=2,[switch]$SkipRegression)
 $ErrorActionPreference='Stop';Set-StrictMode -Version Latest
 . (Join-Path $PSScriptRoot '../r4-001-gate-001/lifetimes.ps1')
+. (Join-Path $PSScriptRoot 'instance-check.ps1')
 Add-Type -AssemblyName System.Drawing
 if(-not ('RestartReceipt' -as [type])){Add-Type -TypeDefinition 'public static class RestartReceipt { public static ulong Fixture(ulong r,ulong l,ulong m,ulong o,ulong seed){unchecked{ulong v=(r^l)+m;return ((v<<13)|(v>>51))^o^seed;}} public static ulong Four(ulong r,ulong l,ulong m,ulong o,ulong lastLocal,ulong d,ulong last){unchecked{ulong v=((r+l)^m)*1099511628211UL;return (((((v<<7)|(v>>57))+o)^lastLocal)+0x10591UL)^d^last;}}}'}
 $OutDir=[IO.Path]::GetFullPath($OutDir);$ResultsDir=[IO.Path]::GetFullPath($ResultsDir)
@@ -26,10 +27,10 @@ function Run-Manager([string]$Application,[string]$Mode,[string]$Store,[string]$
  foreach($arg in @('--client',(Join-Path $OutDir "$Application-client.dll"),'--fixture',$app,'--mode',$Mode,'--store',$Store,'--output',$Output,'--scenario',$Scenario)){$info.ArgumentList.Add($arg)}
  $p=[Diagnostics.Process]::new();$p.StartInfo=$info;$start=Get-Date
  if(-not $p.Start()){throw 'Manager process did not start'}
- $taskManagerPid=$p.Id;$created=$p.StartTime.ToUniversalTime().ToString('o');$stdout=$p.StandardOutput.ReadToEndAsync();$stderr=$p.StandardError.ReadToEndAsync();$timedOut=-not $p.WaitForExit(120000)
+ $taskManagerPid=$p.Id;$createdTime=$p.StartTime.ToUniversalTime();$created=$createdTime.ToString('o');$createdFileTime=[uint64]$createdTime.ToFileTimeUtc();$stdout=$p.StandardOutput.ReadToEndAsync();$stderr=$p.StandardError.ReadToEndAsync();$timedOut=-not $p.WaitForExit(120000)
  if($timedOut){$p.Kill($true);$p.WaitForExit()}
  [IO.File]::WriteAllText($Output+'-stdout.log',$stdout.GetAwaiter().GetResult());[IO.File]::WriteAllText($Output+'-stderr.log',$stderr.GetAwaiter().GetResult())
- $result=[pscustomobject]@{application=$Application;mode=$Mode;scenario=$Scenario;pid=$taskManagerPid;createdUtc=$created;start=$start.ToString('o');ended=(Get-Date -Format o);exit=$p.ExitCode;exited=$p.HasExited;timedOut=$timedOut;output=$Output;store=$Store;sha256=(Sha $exe)}
+ $result=[pscustomobject]@{application=$Application;mode=$Mode;scenario=$Scenario;pid=$taskManagerPid;created=$createdFileTime;createdUtc=$created;start=$start.ToString('o');ended=(Get-Date -Format o);exit=$p.ExitCode;exited=$p.HasExited;timedOut=$timedOut;output=$Output;store=$Store;sha256=(Sha $exe)}
  $managers.Add($result);$p.Dispose();return $result
 }
 function Audit([string]$Dir,[string]$Label){
@@ -100,8 +101,8 @@ function Check-Restore([string]$Label,[string]$Application,[string]$First,[strin
  }
  $effect=@((Rows (Join-Path $Second 'C/file-effects.jsonl'))|Where-Object operation -eq 2)[0]
  Check "$Label.C-native-file-processing" ($effect.reads -eq 2 -and $effect.writes -eq 3 -and $effect.closes -eq 5 -and $effect.liveHandles -eq 0 -and $effect.written -ceq [IO.File]::ReadAllText((Join-Path $Second 'workspace/C/processed.txt')))
- $firstCreated=@($SaveRows|Where-Object type -eq 'process_created');$nextCreated=@($RestoreRows|Where-Object type -eq 'process_created')
- foreach($pair in @(@('A','RA'),@('B','RB'),@('source','C'))){if($Failure -and $pair[1] -eq 'RB'){continue};$old=@($firstCreated|Where-Object name -eq $pair[0])[0];$new=@($nextCreated|Where-Object name -eq $pair[1])[0];Check "$Label.$($pair[1]).different-application-PID" ($old.pid -ne $new.pid)}
+ $firstCreated=@($SaveRows|Where-Object type -eq 'instance_recorded');$nextCreated=@($RestoreRows|Where-Object type -eq 'instance_recorded')
+ foreach($pair in @(@('A','RA'),@('B','RB'),@('source','C'))){if($Failure -and $pair[1] -eq 'RB'){continue};$old=@($firstCreated|Where-Object view -eq $pair[0]);$new=@($nextCreated|Where-Object view -eq $pair[1]);Check "$Label.$($pair[1]).different-application-instance" ($old.Count -eq 1 -and $new.Count -eq 1 -and (Test-DifferentProcessInstance $old[0] $new[0]))}
 }
 Copy-Item (Join-Path $OutDir 'build.json') (Join-Path $ResultsDir 'build.json')
 $originalManagerHash=Sha (Join-Path $OutDir 'manager.exe');$kernelHash=Sha (Join-Path $OutDir 'kernel.lib')
@@ -118,7 +119,7 @@ foreach($application in @('fixture','recorder')){
    if(-not($resolved.StartsWith($boundary) -and $destination.StartsWith($boundary))){throw 'Evidence rename escaped owned case directory'}
    Move-Item -LiteralPath $resolved -Destination $destination
    Check "$label.Manager1-evidence-path-unavailable" (-not(Test-Path -LiteralPath $first))
-   $two=Run-Manager $application restore $store $second;Check "$label.Manager2-new-PID-and-normal-exit" ($two.pid -ne $one.pid -and $two.exit -eq 0 -and $two.exited -and -not $two.timedOut -and $two.createdUtc -gt $one.createdUtc)
+   $two=Run-Manager $application restore $store $second;Check "$label.Manager2-new-instance-and-normal-exit" ((Test-DifferentProcessInstance $one $two) -and $one.exited -and $two.exit -eq 0 -and $two.exited -and -not $two.timedOut -and $two.created -gt $one.created)
    $rows=Audit $second "$label.restore";$finish=@($rows|Where-Object type -eq 'restart_complete');Check "$label.actual-cross-manager-restore" ($finish.Count -eq 1 -and $finish[0].passed -and $two.exit -eq 0)
    Check-Restore $label $application $offline $second $firstRows $rows
    Check "$label.entire-store-unchanged" ((InventoryText $store) -ceq $fixed)

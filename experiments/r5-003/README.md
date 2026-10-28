@@ -1,5 +1,7 @@
 # R5-003：正常退出后的跨管理器 Snapshot 恢复
 
+跨生命周期的 PID 复用误判已改为 PID+创建时间核对，包括恢复前拒绝、原生应用断言与脚本验收；活动资源归属要求不变。确定性红/绿对照、真实查询错误和回归范围见 [身份修复报告](results/pid-identity/report.md)。不要将新进程实例误写成必须有不同 PID 数字。
+
 实验目标：同一 Windows 会话中，Manager 1 保存 S0/SA/SB 和固定成果，确认所属应用退出并正常退出；不同 PID 的 Manager 2 只读取磁盘存储，恢复 RA/RB、从 S0 恢复 C，再实际 Undo、输入、GDI 绘制和私有文件处理。
 
 本轮沿用 R5-002 的同一份 `kernel.lib` 和 ABI v1 三帧 `fixture.exe` / ABI v2 四帧 `second.exe`，不重新研究调用深度。新增 `snapshot-store.lib` 只负责磁盘编码、校验和发布；业务 oracle 仍在两个显式实验客户端。两个模型从 R5-002 原客户端小幅提取，Observation 只读重建，不写入应用。helper/输入 DLL 因诊断传输耗尽问题独立重建，不宣称逐字节复用。
