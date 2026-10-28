@@ -1,0 +1,73 @@
+{
+  "passed": false,
+  "nativeProcessesStarted": false,
+  "assessmentSha256": "7E3A1A4D84BD92D00C02DD177AC1B339746F235A88555BC3B69DF6CAB650F031",
+  "checks": [
+    {
+      "name": "normal-success",
+      "artificialEvidence": true,
+      "expected": true,
+      "actual": {
+        "evidenceComplete": true,
+        "nativeCloseObserved": true,
+        "operationPassed": true
+      },
+      "passed": true
+    },
+    {
+      "name": "close-success-manager-failed-cleanup-succeeded",
+      "artificialEvidence": true,
+      "expected": false,
+      "actual": {
+        "evidenceComplete": true,
+        "nativeCloseObserved": true,
+        "operationPassed": true
+      },
+      "passed": false
+    },
+    {
+      "name": "controller-failed",
+      "artificialEvidence": true,
+      "expected": false,
+      "actual": {
+        "evidenceComplete": true,
+        "nativeCloseObserved": true,
+        "operationPassed": true
+      },
+      "passed": false
+    },
+    {
+      "name": "primary-error-preserved",
+      "artificialEvidence": true,
+      "expected": false,
+      "actual": {
+        "evidenceComplete": true,
+        "nativeCloseObserved": true,
+        "operationPassed": true
+      },
+      "passed": false
+    },
+    {
+      "name": "duplicate-completion",
+      "artificialEvidence": true,
+      "expected": false,
+      "actual": {
+        "evidenceComplete": false,
+        "nativeCloseObserved": false,
+        "operationPassed": false
+      },
+      "passed": true
+    },
+    {
+      "name": "missing-completion",
+      "artificialEvidence": true,
+      "expected": false,
+      "actual": {
+        "evidenceComplete": false,
+        "nativeCloseObserved": false,
+        "operationPassed": false
+      },
+      "passed": true
+    }
+  ]
+}

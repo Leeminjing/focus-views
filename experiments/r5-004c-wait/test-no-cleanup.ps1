@@ -1,5 +1,6 @@
 param([Parameter(Mandatory)][string]$OutDir,[Parameter(Mandatory)][string]$Profile,[Parameter(Mandatory)][string]$ResultsDir,[switch]$DirectWindow)
 $ErrorActionPreference='Stop';Set-StrictMode -Version Latest
+. (Join-Path $PSScriptRoot 'assessment.ps1')
 $OutDir=[IO.Path]::GetFullPath($OutDir);$ResultsDir=[IO.Path]::GetFullPath($ResultsDir)
 if(Test-Path -LiteralPath $ResultsDir){throw 'New results root required'}
 New-Item -ItemType Directory -Path $ResultsDir|Out-Null
@@ -20,10 +21,12 @@ foreach($mode in $modes){
  $attested=$installation.Count -eq 1 -and $installation[0].enabled -eq (-not $absent) -and $installation[0].registryCreated -eq (-not $absent) -and $installation[0].prepareCalled -eq (-not $absent) -and $last.Count -eq 1 -and $last[0].complete -and $last[0].cleanupRuntimeModules -eq $(if($absent){0}else{1}) -and $helpers.Count -eq $(if($absent){0}else{1})
  $diag="$root/manager/normal-diagnostic.jsonl";$wct=if(Test-Path $diag){@(Get-Content $diag|ForEach-Object{$_|ConvertFrom-Json})}else{@()};$nodes=@($wct|Where-Object type -eq 'wait_node')
  $pattern=@($nodes|Where-Object kind -eq 6).Count -gt 0 -and @($nodes|Where-Object kind -eq 5).Count -gt 0 -and @($nodes|Where-Object{$_.kind -eq 8 -and $_.status -eq 5}).Count -gt 0
- $cases+=[ordered]@{mode=$mode;controllerExit=$exit;error=$errorText;supervisor=$s;installationAttested=$attested;installation=$installation;moduleStages=$moduleStages;cleanupHelperCount=$helpers.Count;nativeCleanupPassed=($complete.Count -eq 1 -and $complete[0].nativeCleanupPassed);sameWaitingPattern=$pattern;profileUnchanged=((Get-FileHash "$root/store/resource.bin").Hash -eq $hash)}
+ $outcome=Get-NormalCloseOutcome $exit $s $complete
+ $cases+=[ordered]@{mode=$mode;controllerExit=$exit;error=$errorText;supervisor=$s;trimComplete=$complete;evidenceComplete=$outcome.evidenceComplete;operationPassed=$outcome.operationPassed;installationAttested=$attested;installation=$installation;moduleStages=$moduleStages;cleanupHelperCount=$helpers.Count;nativeCleanupPassed=$outcome.nativeCloseObserved;sameWaitingPattern=$pattern;profileUnchanged=((Get-FileHash "$root/store/resource.bin").Hash -eq $hash)}
 }
 $sameBuild=@($identity|Where-Object{(Get-FileHash "$OutDir/$($_.file)").Hash.ToLowerInvariant() -ne $_.sha256}).Count -eq 0
-$evidence=$sameBuild -and $boot -eq (Get-CimInstance Win32_OperatingSystem).LastBootUpTime -and (Get-FileHash $PSCommandPath).Hash -eq $scriptHash -and @($cases|Where-Object{-not $_.installationAttested -or -not $_.profileUnchanged -or $null -eq $_.supervisor -or -not $_.supervisor.protocolPassed -or -not $_.supervisor.cleanupVerified -or $_.error}).Count -eq 0
+$evidence=$sameBuild -and $boot -eq (Get-CimInstance Win32_OperatingSystem).LastBootUpTime -and (Get-FileHash $PSCommandPath).Hash -eq $scriptHash -and @($cases|Where-Object{-not $_.installationAttested -or -not $_.profileUnchanged -or -not $_.evidenceComplete -or $_.error}).Count -eq 0
 $native=@($cases|Where-Object{-not $_.nativeCleanupPassed}).Count -eq 0
-[ordered]@{evidenceComplete=$evidence;sameBuild=$sameBuild;boot=$boot;testSha256=$scriptHash;binaries=$identity;cases=$cases;nativeCleanupPassed=$native;cleanupCausalFixVerified=$false;fullR5004Passed=$false;gateClosed=$false;manualHostTest='not_executed'}|ConvertTo-Json -Depth 10|Set-Content "$ResultsDir/summary.json" -Encoding utf8
-if(-not $evidence -or -not $native){throw 'Native normal close did not pass; inspect independent observation and physical cleanup'}
+$operation=$evidence -and @($cases|Where-Object{-not $_.operationPassed}).Count -eq 0
+[ordered]@{evidenceComplete=$evidence;operationPassed=$operation;sameBuild=$sameBuild;boot=$boot;testSha256=$scriptHash;assessmentSha256=(Get-FileHash "$PSScriptRoot/assessment.ps1").Hash;binaries=$identity;cases=$cases;nativeCleanupPassed=$native;cleanupCausalFixVerified=$false;fullR5004Passed=$false;gateClosed=$false;manualHostTest='not_executed'}|ConvertTo-Json -Depth 10|Set-Content "$ResultsDir/summary.json" -Encoding utf8
+if(-not $operation){throw 'Normal-close operation failed; inspect manager exit, first error and independent cleanup'}
