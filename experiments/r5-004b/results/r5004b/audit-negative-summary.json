@@ -1,0 +1,40 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "case": "unregistered-data-change",
+      "passed": true,
+      "error": "SA.RA.all-data-bytes-exactly-declared-changes",
+      "nativeExperiment": false
+    },
+    {
+      "case": "unregistered-stack-change",
+      "passed": true,
+      "error": "SA.RA.all-active-stack-bytes-exactly-declared-changes",
+      "nativeExperiment": false
+    },
+    {
+      "case": "wrong-RIP",
+      "passed": true,
+      "error": "SA.RA.CPU-ripOffset",
+      "nativeExperiment": false
+    },
+    {
+      "case": "wrong-R8",
+      "passed": true,
+      "error": "SA.RA.CPU-r8Offset",
+      "nativeExperiment": false
+    },
+    {
+      "case": "wrong-target-SSP",
+      "passed": true,
+      "error": "SA.RA.target-SSP-preserved",
+      "nativeExperiment": false
+    },
+    {
+      "case": "original-native-evidence-unchanged",
+      "passed": true
+    }
+  ],
+  "nativeExperiments": 0
+}

@@ -1,11 +1,17 @@
 #pragma once
 #include "image.hpp"
 #include "files.hpp"
+#ifdef FOCUS_VIEWS_IMAGE_RELOCATION_EXPERIMENT
+#include "../../r5-004b/image-contract.hpp"
+#endif
 namespace r305 {
 struct Snapshot {
     Metadata meta;ExecutionLayout layout;CONTEXT cpu{};std::vector<BYTE> memory,stack;
     std::array<BYTE,32> executable{};std::uint64_t cookie=0,complement=0;
     std::vector<std::uint64_t> returns;Resources resources{};FileVersion file;ImageBytes image;
+#ifdef FOCUS_VIEWS_IMAGE_RELOCATION_EXPERIMENT
+    r5004b::ImageReferences image_references{};std::vector<std::uint64_t> image_return_slots;
+#endif
 };
 class Execution {
     Log& log_;std::filesystem::path file_,out_;

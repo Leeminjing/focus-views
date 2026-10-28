@@ -1,0 +1,108 @@
+{
+  "reportDate": "2026-10-28",
+  "sourceBaseHead": "e7313d7b18ed108d6b9a416a9f971268e341efa1",
+  "sourceIdentity": "base commit plus exact primary sources in tested-build archive / final-build.json",
+  "aslrRelocationVerified": true,
+  "finalMatrix": {
+    "passed": true,
+    "scenarios": 16,
+    "checks": 1958,
+    "summary": "final-summary.json",
+    "archive": "final-matrix.tar.xz"
+  },
+  "originalCrashMatrix": {
+    "passed": true,
+    "scenarios": 63,
+    "checks": 3174,
+    "summary": "crash-final-summary.json",
+    "regressionsThisRun": "not_run"
+  },
+  "completeOldRegressions": {
+    "passed": true,
+    "run": "g1 / development R12 prototype, default old full suite",
+    "summary": "complete-regressions-summary.json",
+    "repeatedInFinalMatrix": false
+  },
+  "retainedFailures": {
+    "controlledMatrix": {
+      "failedCases": 6,
+      "failedChecks": 6,
+      "summary": "controlled-failed-summary.json"
+    },
+    "oldCleanupRegression": {
+      "passed": false,
+      "scenarios": 12,
+      "failedChecks": 10,
+      "summary": "cleanup-regression-failed-summary.json"
+    }
+  },
+  "cleanupRootCauseConfirmed": false,
+  "cleanupCausalFixVerified": false,
+  "fullR5004Passed": false,
+  "gateClosed": false,
+  "notes": [
+    "Both inline and deferred cleanup passed after an observed new OS boot; not causal proof of a fix.",
+    "The restart snapshots used in m4 were saved and restored within the same current Windows session.",
+    "Public diagnostic archives contain text only; no private .dmp."
+  ],
+  "manualHostTest": "not_executed",
+  "hostRebootRecoveryVerified": false,
+  "powerLossRecoveryVerified": false,
+  "arbitraryWindowsApplicationsSupported": false,
+  "archives": [
+    {
+      "file": "cleanup-diagnostics.tar.xz",
+      "bytes": 26156,
+      "sha256": "126fd53e3b54f43f388d0ed386622d7b0eec2736d49ea244f4afe245a9375543",
+      "rawFiles": 19
+    },
+    {
+      "file": "cleanup-followup.tar.xz",
+      "bytes": 57344,
+      "sha256": "1143585236e836d881c0ce320393e79f27fae696c060316a640ac2a60fee4f35",
+      "rawFiles": 36
+    },
+    {
+      "file": "cleanup-regression.tar.xz",
+      "bytes": 17160276,
+      "sha256": "1f9720b4c2c290f5393fe0241ec4f47dc04c3ae3c9edbe625cf3aee1290f436a",
+      "rawFiles": 4000
+    },
+    {
+      "file": "complete-regressions.tar.xz",
+      "bytes": 125966672,
+      "sha256": "61b1d97d740b50867446d584f33dc2a2bb547572bf1687c1bfe27cf7a2176c2e",
+      "rawFiles": 43801
+    },
+    {
+      "file": "controlled-matrix.tar.xz",
+      "bytes": 17099760,
+      "sha256": "b78c2111bdccc83d50b016f9057d3eb05ba22b79278e1e1385c814850a1d49bf",
+      "rawFiles": 5551
+    },
+    {
+      "file": "crash-matrix.tar.xz",
+      "bytes": 21851232,
+      "sha256": "daaeae6000122ee0097433283b305d98f6903382d8403e7d2d3e899666675d43",
+      "rawFiles": 7956
+    },
+    {
+      "file": "development.tar.xz",
+      "bytes": 20192236,
+      "sha256": "de2bb7664ea3212e2b6a5b4046f92a1a934db92eafcb5ff53eb7691626e1ca31",
+      "rawFiles": 6598
+    },
+    {
+      "file": "final-matrix.tar.xz",
+      "bytes": 20545568,
+      "sha256": "9dbf41aa620f9f58e08f720df394eb4809cb94b18b88d778af930b9dc1b159cd",
+      "rawFiles": 5551
+    },
+    {
+      "file": "tested-build.tar.xz",
+      "bytes": 3105888,
+      "sha256": "5dd494dc8027ed1d1c6b9ab40acb03fb25f6facea7dcc4dd4913a1fe1bff813d",
+      "rawFiles": 45
+    }
+  ]
+}

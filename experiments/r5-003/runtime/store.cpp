@@ -5,7 +5,11 @@
 namespace r5003 {
 namespace {
 constexpr std::uint64_t disk_magic=0x3150414e535646;
+#ifdef FOCUS_VIEWS_IMAGE_RELOCATION_EXPERIMENT
+constexpr std::uint32_t disk_version=2; // Opt-in experiment, never accepted as v1.
+#else
 constexpr std::uint32_t disk_version=1;
+#endif
 template<class T>void block(Writer& w,unsigned tag,const T& x){w.pod(tag);w.pod(static_cast<std::uint64_t>(sizeof(x)));w.pod(x);}
 template<class T>T block(Reader& r,unsigned tag){if(r.pod<unsigned>()!=tag||r.pod<std::uint64_t>()!=sizeof(T))throw Error("snapshot.block_abi",ERROR_REVISION_MISMATCH);return r.pod<T>();}
 bool terminated(const char* x,size_t n){return memchr(x,0,n)!=nullptr;}
@@ -71,6 +75,11 @@ void publish(const std::filesystem::path& path,Kind kind,const Bytes& b,bool int
 }
 Bytes payload(const std::filesystem::path& path,Kind kind){return unpack(kind,read(path));}
 void validate(const Snapshot& s){
+#ifdef FOCUS_VIEWS_IMAGE_RELOCATION_EXPERIMENT
+    const auto& refs=s.image_references;
+    require(refs.magic==r5004b::ImageReferences{}.magic&&refs.version==2&&refs.bytes==sizeof(refs)&&refs.count<=r5004b::image_capacity&&refs.required==refs.count,"snapshot.image_reference_ABI");
+    require(s.image_return_slots.size()==s.returns.size(),"snapshot.image_return_slots");
+#endif
     const auto& m=s.meta;const auto& l=s.layout;
     if(m.magic!=signature||(m.abi_version!=1&&m.abi_version!=2)||m.abi_bytes!=(m.abi_version==1?sizeof(Metadata):sizeof(MetadataV2))||m.machine!=IMAGE_FILE_MACHINE_AMD64)throw Error("snapshot.runtime_abi",ERROR_REVISION_MISMATCH);
     require(m.resource_kinds==15,"snapshot.resource_profile");
@@ -104,14 +113,22 @@ void validate(const Snapshot& s){
 Bytes encode(const Snapshot& s){
     Writer w;const auto env=environment();block(w,1,env);block(w,2,s.meta);block(w,3,s.layout);block(w,4,s.cpu);w.blob(s.memory);w.blob(s.stack);block(w,5,s.executable);w.pod(s.cookie);w.pod(s.complement);
     w.pod(static_cast<unsigned>(s.returns.size()));for(auto x:s.returns)w.pod(x);block(w,6,s.resources);
-    const auto& f=s.file;w.pod(static_cast<unsigned>(f.present));w.pod(f.pid);w.pod(f.action);w.pod(f.object);w.pod(f.volume);w.text(f.view);w.text(f.sha256);w.text(f.name);w.blob(f.content);w.pod(s.image.base);w.blob(s.image.bytes);return w.bytes;
+    const auto& f=s.file;w.pod(static_cast<unsigned>(f.present));w.pod(f.pid);w.pod(f.action);w.pod(f.object);w.pod(f.volume);w.text(f.view);w.text(f.sha256);w.text(f.name);w.blob(f.content);w.pod(s.image.base);w.blob(s.image.bytes);
+#ifdef FOCUS_VIEWS_IMAGE_RELOCATION_EXPERIMENT
+    block(w,7,s.image_references);w.pod(static_cast<unsigned>(s.image_return_slots.size()));for(auto slot:s.image_return_slots)w.pod(slot);
+#endif
+    return w.bytes;
 }
 Snapshot decode(const Bytes& b,const std::array<BYTE,32>& expected_image){Reader r{b};const auto saved=block<Environment>(r,1),now=environment();
     if(saved.session!=now.session||saved.ntdll!=now.ntdll||saved.kernel32!=now.kernel32)throw Error("snapshot.windows_session",ERROR_REVISION_MISMATCH);
     Snapshot s;s.meta=block<Metadata>(r,2);s.layout=block<ExecutionLayout>(r,3);s.cpu=block<CONTEXT>(r,4);s.memory=r.blob(16*1024*1024);s.stack=r.blob(32*1024*1024);s.executable=block<std::array<BYTE,32>>(r,5);
     if(s.executable!=expected_image)throw Error("snapshot.target_image",ERROR_REVISION_MISMATCH);
     s.cookie=r.pod<std::uint64_t>();s.complement=r.pod<std::uint64_t>();const auto count=r.pod<unsigned>();if(count!=5&&count!=6)throw Error("snapshot.return_count",ERROR_NOT_SUPPORTED);for(unsigned i=0;i<count;++i)s.returns.push_back(r.pod<std::uint64_t>());s.resources=block<Resources>(r,6);
-    auto& f=s.file;const auto present=r.pod<unsigned>();require(present<=1,"snapshot.file_presence");f.present=present!=0;f.pid=r.pod<DWORD>();f.action=r.pod<std::uint64_t>();f.object=r.pod<std::uint64_t>();f.volume=r.pod<DWORD>();f.view=r.text(128);f.sha256=r.text(64);f.name=r.text(128);f.content=r.blob(4096);s.image.base=r.pod<std::uint64_t>();s.image.bytes=r.blob(64*1024*1024);r.end();
+    auto& f=s.file;const auto present=r.pod<unsigned>();require(present<=1,"snapshot.file_presence");f.present=present!=0;f.pid=r.pod<DWORD>();f.action=r.pod<std::uint64_t>();f.object=r.pod<std::uint64_t>();f.volume=r.pod<DWORD>();f.view=r.text(128);f.sha256=r.text(64);f.name=r.text(128);f.content=r.blob(4096);s.image.base=r.pod<std::uint64_t>();s.image.bytes=r.blob(64*1024*1024);
+#ifdef FOCUS_VIEWS_IMAGE_RELOCATION_EXPERIMENT
+    s.image_references=block<r5004b::ImageReferences>(r,7);const auto slots=r.pod<unsigned>();if(slots!=count)throw Error("snapshot.image_return_count",ERROR_INVALID_DATA);for(unsigned i=0;i<slots;++i)s.image_return_slots.push_back(r.pod<std::uint64_t>());
+#endif
+    r.end();
     validate(s);return s;
 }
 void save(const std::filesystem::path& path,const Snapshot& s,bool interrupt){validate(s);publish(path,Kind::snapshot,encode(s),interrupt);}

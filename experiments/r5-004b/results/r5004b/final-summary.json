@@ -1,0 +1,125 @@
+{
+  "passed": true,
+  "aslrRelocationVerified": true,
+  "fullR5004Passed": false,
+  "regressions": "not_run",
+  "gateClosed": false,
+  "cases": [
+    {
+      "name": "fixture-positive",
+      "passed": true,
+      "error": "",
+      "checks": 112,
+      "aslr": true
+    },
+    {
+      "name": "fixture-legacy-same-base",
+      "passed": true,
+      "error": "",
+      "checks": 111,
+      "aslr": false
+    },
+    {
+      "name": "fixture-relocation-missing-return",
+      "passed": true,
+      "error": "",
+      "checks": 126,
+      "aslr": true
+    },
+    {
+      "name": "fixture-relocation-bad-offset",
+      "passed": true,
+      "error": "",
+      "checks": 126,
+      "aslr": true
+    },
+    {
+      "name": "fixture-relocation-missing-reference",
+      "passed": true,
+      "error": "",
+      "checks": 126,
+      "aslr": true
+    },
+    {
+      "name": "fixture-relocation-wrong-image",
+      "passed": true,
+      "error": "",
+      "checks": 126,
+      "aslr": true
+    },
+    {
+      "name": "fixture-view-resources-RA",
+      "passed": true,
+      "error": "",
+      "checks": 126,
+      "aslr": true
+    },
+    {
+      "name": "fixture-view-published-RA",
+      "passed": true,
+      "error": "",
+      "checks": 126,
+      "aslr": true
+    },
+    {
+      "name": "recorder-positive",
+      "passed": true,
+      "error": "",
+      "checks": 112,
+      "aslr": true
+    },
+    {
+      "name": "recorder-legacy-same-base",
+      "passed": true,
+      "error": "",
+      "checks": 111,
+      "aslr": false
+    },
+    {
+      "name": "recorder-relocation-missing-return",
+      "passed": true,
+      "error": "",
+      "checks": 126,
+      "aslr": true
+    },
+    {
+      "name": "recorder-relocation-bad-offset",
+      "passed": true,
+      "error": "",
+      "checks": 126,
+      "aslr": true
+    },
+    {
+      "name": "recorder-relocation-missing-reference",
+      "passed": true,
+      "error": "",
+      "checks": 126,
+      "aslr": true
+    },
+    {
+      "name": "recorder-relocation-wrong-image",
+      "passed": true,
+      "error": "",
+      "checks": 126,
+      "aslr": true
+    },
+    {
+      "name": "recorder-view-resources-RA",
+      "passed": true,
+      "error": "",
+      "checks": 126,
+      "aslr": true
+    },
+    {
+      "name": "recorder-view-published-RA",
+      "passed": true,
+      "error": "",
+      "checks": 126,
+      "aslr": true
+    }
+  ],
+  "checks": 1958.0,
+  "sourceHead": "e7313d7b18ed108d6b9a416a9f971268e341efa1",
+  "manualHostTest": "not_executed",
+  "hostRebootRecoveryVerified": false
+}

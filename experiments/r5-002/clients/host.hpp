@@ -182,6 +182,9 @@ public:
         part("targetImage",s.image.bytes.data(),s.image.bytes.size());part("memory",s.memory.data(),s.memory.size());part("stack",s.stack.data(),s.stack.size());
         part("context",&s.cpu,sizeof(s.cpu));part("resources",&s.resources,sizeof(s.resources));
         part("metadata",&s.meta,sizeof(s.meta));part("executionLayout",&s.layout,sizeof(s.layout));part("returns",s.returns.data(),s.returns.size()*sizeof(std::uint64_t));
+#ifdef FOCUS_VIEWS_IMAGE_RELOCATION_EXPERIMENT
+        part("imageReferences",&s.image_references,sizeof(s.image_references));part("imageReturnSlots",s.image_return_slots.data(),s.image_return_slots.size()*sizeof(std::uint64_t));
+#endif
         const std::array<std::uint64_t,3> abi{s.cookie,s.complement,s.expected};
         part("abi",abi.data(),sizeof(abi));part("executable",s.executable.data(),sizeof(s.executable));
         const auto hash=native::digest_text(native::digest(material));log_.emit("snapshot_fingerprint",fields+",\"sha256\":"+json(hash));return hash;
@@ -338,6 +341,9 @@ public:
         write_bytes(out_/(label+"-resources.bin"),&s.resources,sizeof(s.resources));
         write_bytes(out_/(label+"-execution-layout.bin"),&s.layout,sizeof(s.layout));
         write_bytes(out_/(label+"-returns.bin"),s.returns.data(),s.returns.size()*sizeof(std::uint64_t));
+#ifdef FOCUS_VIEWS_IMAGE_RELOCATION_EXPERIMENT
+        write_bytes(out_/(label+"-image-references.bin"),&s.image_references,sizeof(s.image_references));write_bytes(out_/(label+"-image-return-slots.bin"),s.image_return_slots.data(),s.image_return_slots.size()*sizeof(std::uint64_t));
+#endif
         const std::array<std::uint64_t,3> abi{s.cookie,s.complement,s.expected};
         write_bytes(out_/(label+"-abi.bin"),abi.data(),sizeof(abi));
         write_bytes(out_/(label+"-executable.bin"),s.executable.data(),s.executable.size());

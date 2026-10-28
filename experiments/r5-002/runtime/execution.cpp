@@ -1,4 +1,7 @@
 #include "execution.hpp"
+#ifdef FOCUS_VIEWS_IMAGE_RELOCATION_EXPERIMENT
+#include "../../r5-004b/relocation.hpp"
+#endif
 namespace r305 {
 Execution::Execution(Log& log,const std::filesystem::path& file,const std::filesystem::path& output):log_(log),file_(file),out_(output),identity_(native::digest(native::read_file(file))){}
 void Execution::verify_file(const std::filesystem::path& file,const std::array<BYTE,32>& expected){const auto actual=native::digest(native::read_file(file));log_.emit("application_image_identity","\"file\":"+json(file.wstring().c_str())+",\"expected\":"+json(native::digest_text(expected))+",\"actual\":"+json(native::digest_text(actual)));if(actual!=expected)throw Error("image.file_identity_mismatch",ERROR_REVISION_MISMATCH);}
@@ -64,9 +67,18 @@ void Execution::verify(const std::string& name,bool okay,const std::string& deta
         s.memory.resize(s.meta.data_bytes);native::read_memory(v.p.process.value,s.meta.root,s.memory.data(),s.memory.size());
         s.stack.resize(s.meta.stack_bytes-4096);native::read_memory(v.p.process.value,s.meta.stack+4096,s.stack.data(),s.stack.size());
         s.cookie=native::read_value<std::uint64_t>(v.p.process.value,s.meta.cookie_address);s.complement=native::read_value<std::uint64_t>(v.p.process.value,s.meta.complement_address);
-        s.returns=chain(v,"source-checkpoint");unwind(s);return s;
+        s.returns=chain(v,"source-checkpoint");unwind(s);
+#ifdef FOCUS_VIEWS_IMAGE_RELOCATION_EXPERIMENT
+        s.image_references=r5004b::read_references(v,file_);s.image_return_slots=r5004b::return_slots(s);
+#endif
+        return s;
     }
-    void Execution::restore(Child& v,const Snapshot& s,const std::string& fault){
+    void Execution::restore(Child& v,const Snapshot& original,const std::string& fault){
+#ifdef FOCUS_VIEWS_IMAGE_RELOCATION_EXPERIMENT
+        const auto prepared=r5004b::relocate(v,original,file_,log_);const auto& s=prepared;
+#else
+        const auto& s=original;
+#endif
         demand(v.pending && v.halt=="checkpoint" && !v.m.published,"restore private structurally rebuilt View only");
         if(strcmp(v.m.build,s.meta.build) || s.executable!=identity_ || v.image!=s.meta.image)throw Error("restore.build_or_image_identity",ERROR_REVISION_MISMATCH);
         const auto boot_cpu=v.context();const auto rebuilt=chain(v,"target-before-restore");
