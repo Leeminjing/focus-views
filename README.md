@@ -1,6 +1,6 @@
 # focus-views
 
-最新跟进：[PID 实例身份修复](experiments/r5-003/results/pid-identity/report.md) 已通过确定性对照及 R5-003 本体；完整旧回归仍因更深层输入钩子 /126 失败。[文本服务裁剪实验](experiments/r5-004c-wait/results/wait001/report.md) 已在不读取 Snapshot/Session 的管理器中复现正常关闭与停止点关闭的同类等待，WCT 实际追到 COM 对象及 RPCSS 的 PID 终点；具体服务端操作仍未知，没有清理修复或 R5-004 全关口通过声明。
+最新跟进：[完全无清理运行时对照](experiments/r5-004c-wait/results/no-cleanup001/report.md) 已补齐：同构建两组正常关闭，但与历史失败不在同一启动周期，不能宣称清理修复。[旧 /126 安装探针](experiments/r5-hook-126/results/hook126001/report.md) 分别核对文件、实际加载模块、导出及线程钩子；两份旧 DLL 与一个旧程序正例本次成功，历史拒绝未复现、根因未知。未重跑完整旧回归；清理因果修复、完整 R5-004 和可靠性门禁继续未关闭，原 [PID 修复记录](experiments/r5-003/results/pid-identity/report.md) 及 [自然等待失败](experiments/r5-004c-wait/results/wait001/report.md) 保留。
 
 focus-views 是一个 Windows 原生隔离与恢复运行时研发项目，完全独立于 Focus。它研究在不依赖虚拟机的前提下，为原生图形应用提供独立交互环境、可恢复检查点和运行状态分叉能力。各分支独立执行并保留自身状态、记录和成果；调用者可以从共同检查点创建新分支，在其中开展成果整合。运行时负责隔离与恢复，不负责 Agent 决策、任务调度或自动状态合并。
 

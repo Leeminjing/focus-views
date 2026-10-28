@@ -1,0 +1,225 @@
+{
+  "boot": "2026-10-28T19:42:46.5+08:00",
+  "exeSha256": "764208D17BD7572E4B24E8768E1E87434489E32621342968D1728B0A1701AF1B",
+  "scriptSha256": "4FC6A7D0D5D465FD217C8DB33ACC8FC3EC8824C9DA694C2C1AFF6E91AD5B3C87",
+  "sameBoot": true,
+  "sameBuild": true,
+  "cases": [
+    {
+      "path": "D:\\focus-views\\experiments\\r3-005b-001\\out\\runtime304.dll",
+      "dllSha256": "2379BA82F7C1F55C1D1E9FD6DC079C0308142062882AAF8795760F041032AE7B",
+      "controllerExit": 0,
+      "error": "",
+      "cleanupVerified": true,
+      "fileUnchanged": true,
+      "installationPassed": true,
+      "supervisor": {
+        "installerExit": 0,
+        "installerForced": false,
+        "targetForced": false,
+        "jobEmpty": true,
+        "ownedHandlesClosed": true,
+        "desktopAbsent": true,
+        "desktopError": 2,
+        "inputCapabilityClaimed": false
+      },
+      "apiStages": [
+        {
+          "type": "file_location",
+          "tickMs": 4732093,
+          "argument": "D:\\focus-views\\experiments\\r3-005b-001\\out\\runtime304.dll",
+          "sha256": "2379ba82f7c1f55c1d1e9fd6dc079c0308142062882aaf8795760f041032ae7b",
+          "pid": 9848,
+          "tid": 17364,
+          "processCreated": 134376660983277462,
+          "threadCreated": 134376660983277475,
+          "desktop": "fv_hook126_38492_4732046"
+        },
+        {
+          "type": "LoadLibraryW",
+          "tickMs": 4732093,
+          "result": 140721018241024,
+          "error": 0
+        },
+        {
+          "type": "loaded_module",
+          "tickMs": 4732093,
+          "path": "D:\\focus-views\\experiments\\r3-005b-001\\out\\runtime304.dll",
+          "sha256": "2379ba82f7c1f55c1d1e9fd6dc079c0308142062882aaf8795760f041032ae7b",
+          "base": 140721018241024
+        },
+        {
+          "type": "GetProcAddress",
+          "tickMs": 4732093,
+          "name": "ManagedGetMessage",
+          "result": 140721018272304,
+          "error": 0
+        },
+        {
+          "type": "export_owner",
+          "tickMs": 4732093,
+          "module": 140721018241024,
+          "sameModule": true,
+          "path": "D:\\focus-views\\experiments\\r3-005b-001\\out\\runtime304.dll",
+          "machine": 34404,
+          "imageBytes": 491520,
+          "exportRva": 31280
+        },
+        {
+          "type": "SetWindowsHookExW.thread_only",
+          "tickMs": 4732093,
+          "hook": 23003631,
+          "error": 0,
+          "global": false
+        },
+        {
+          "type": "target_noop_dispatch",
+          "tickMs": 4732109,
+          "observed": true,
+          "inputVirtualizationClaimed": false
+        },
+        {
+          "type": "UnhookWindowsHookEx",
+          "tickMs": 4732109,
+          "result": true,
+          "error": 0
+        },
+        {
+          "type": "FreeLibrary",
+          "tickMs": 4732109,
+          "result": true,
+          "error": 0
+        },
+        {
+          "type": "target_quit_posted",
+          "tickMs": 4732109,
+          "result": true,
+          "error": 0
+        },
+        {
+          "type": "install_complete",
+          "tickMs": 4732109,
+          "accepted": true,
+          "noopDispatched": true,
+          "unhookRequired": true,
+          "unhookConfirmed": true,
+          "moduleReleased": true,
+          "firstApi": "",
+          "firstError": 0
+        }
+      ]
+    },
+    {
+      "path": "D:\\focus-views\\experiments\\r3-005a-cet-002\\out\\runtime304.dll",
+      "dllSha256": "B47C20BC158F8E0C03B042F8EF3AB7937EAB293BABE023BF53C3EB6C5BD2654A",
+      "controllerExit": 0,
+      "error": "",
+      "cleanupVerified": true,
+      "fileUnchanged": true,
+      "installationPassed": true,
+      "supervisor": {
+        "installerExit": 0,
+        "installerForced": false,
+        "targetForced": false,
+        "jobEmpty": true,
+        "ownedHandlesClosed": true,
+        "desktopAbsent": true,
+        "desktopError": 2,
+        "inputCapabilityClaimed": false
+      },
+      "apiStages": [
+        {
+          "type": "file_location",
+          "tickMs": 4732203,
+          "argument": "D:\\focus-views\\experiments\\r3-005a-cet-002\\out\\runtime304.dll",
+          "sha256": "b47c20bc158f8e0c03b042f8ef3ab7937eab293babe023bf53c3eb6c5bd2654a",
+          "pid": 6044,
+          "tid": 34240,
+          "processCreated": 134376660984404626,
+          "threadCreated": 134376660984404645,
+          "desktop": "fv_hook126_37824_4732156"
+        },
+        {
+          "type": "LoadLibraryW",
+          "tickMs": 4732203,
+          "result": 140721018241024,
+          "error": 0
+        },
+        {
+          "type": "loaded_module",
+          "tickMs": 4732203,
+          "path": "D:\\focus-views\\experiments\\r3-005a-cet-002\\out\\runtime304.dll",
+          "sha256": "b47c20bc158f8e0c03b042f8ef3ab7937eab293babe023bf53c3eb6c5bd2654a",
+          "base": 140721018241024
+        },
+        {
+          "type": "GetProcAddress",
+          "tickMs": 4732203,
+          "name": "ManagedGetMessage",
+          "result": 140721018272304,
+          "error": 0
+        },
+        {
+          "type": "export_owner",
+          "tickMs": 4732203,
+          "module": 140721018241024,
+          "sameModule": true,
+          "path": "D:\\focus-views\\experiments\\r3-005a-cet-002\\out\\runtime304.dll",
+          "machine": 34404,
+          "imageBytes": 491520,
+          "exportRva": 31280
+        },
+        {
+          "type": "SetWindowsHookExW.thread_only",
+          "tickMs": 4732203,
+          "hook": 23069167,
+          "error": 0,
+          "global": false
+        },
+        {
+          "type": "target_noop_dispatch",
+          "tickMs": 4732218,
+          "observed": true,
+          "inputVirtualizationClaimed": false
+        },
+        {
+          "type": "UnhookWindowsHookEx",
+          "tickMs": 4732218,
+          "result": true,
+          "error": 0
+        },
+        {
+          "type": "FreeLibrary",
+          "tickMs": 4732218,
+          "result": true,
+          "error": 0
+        },
+        {
+          "type": "target_quit_posted",
+          "tickMs": 4732218,
+          "result": true,
+          "error": 0
+        },
+        {
+          "type": "install_complete",
+          "tickMs": 4732218,
+          "accepted": true,
+          "noopDispatched": true,
+          "unhookRequired": true,
+          "unhookConfirmed": true,
+          "moduleReleased": true,
+          "firstApi": "",
+          "firstError": 0
+        }
+      ]
+    }
+  ],
+  "probePassed": true,
+  "historical126Reproduced": false,
+  "rootCauseConfirmed": false,
+  "causalFixVerified": false,
+  "inputCapabilityClaimed": false,
+  "fullLegacyRegressionRerun": false,
+  "fullR5004Passed": false,
+  "gateClosed": false
+}

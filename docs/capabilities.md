@@ -1,6 +1,6 @@
 # 资源能力与实验结果清单
 
-2026-10-28 更新：[跨生命周期身份修复](../experiments/r5-003/results/pid-identity/report.md) 改用 PID+创建时间，确定性对照与 22 个 R5-003 本体场景通过，完整旧回归在原输入钩子 /126 处失败，未写成全绿。[受限裁剪诊断](../experiments/r5-004c-wait/results/wait001/report.md) 将实际等待延伸到 COM/RPCSS 节点，但没有定位服务端具体操作或获得可靠清理修复；cleanupCausalFixVerified、fullR5004Passed、gateClosed 继续为 false。
+2026-10-28 更新：[无清理运行时正常关闭对照](../experiments/r5-004c-wait/results/no-cleanup001/report.md) 真实跳过 Registry/prepare_cleanup，并观测助手/DLL 缺席；安装与不安装两组本次均成功，历史等待未复现。两组属同一新启动周期，与历史自然失败周期不同，不构成修复。[旧 /126 分阶段探针](../experiments/r5-hook-126/results/hook126001/report.md) 两份旧 DLL 安装及单个旧原程序正例成功，历史原因仍未知；没有完整旧回归新通过结论。PID 修复不再重复改动；nativeCleanupPassed、cleanupCausalFixVerified、fullR5004Passed、gateClosed 在历史清理关口仍为 false，不新增恢复能力声明。
 
 更新日期：2026-10-25。[R1-001](../experiments/r1/results/20261024-r1/report.md) 与 [R2-001 / R2-002](../experiments/r2/results/20261024-r2/report.md) 已实测通过受控计算片段续接、多分支内存及受管普通文件子集。只有下列明确范围有证据；不代表完整 R2 或通用运行时已实现。策略列仍是各项完整能力的研究方向。
 
