@@ -4,7 +4,7 @@ $ErrorActionPreference='Stop';Set-StrictMode -Version Latest
 $OutDir=[IO.Path]::GetFullPath($OutDir);$ResultsDir=[IO.Path]::GetFullPath($ResultsDir)
 if(Test-Path -LiteralPath $ResultsDir){throw 'New results root required'}
 New-Item -ItemType Directory -Path $ResultsDir|Out-Null
-$boot=(Get-CimInstance Win32_OperatingSystem).LastBootUpTime;$hash=(Get-FileHash $Profile).Hash;$scriptHash=(Get-FileHash $PSCommandPath).Hash
+$boot=(Get-CimInstance Win32_OperatingSystem).LastBootUpTime;$hash=(Get-FileHash $Profile).Hash;$scriptHash=(Get-FileHash $PSCommandPath).Hash;$assessmentHash=(Get-FileHash "$PSScriptRoot/assessment.ps1").Hash
 $bins=@('manager.exe','second.exe','trim-client.dll','abort-runtime.dll','abort-helper.exe','close-probe.exe','diagnose.exe','kernel.lib')
 $identity=@($bins|ForEach-Object{[ordered]@{file=$_;sha256=(Get-FileHash "$OutDir/$_").Hash.ToLowerInvariant()}})
 $modes=if($DirectWindow){@('normal-new-window-direct')}else{@('profile-normal','normal-no-cleanup-runtime')};$cases=@()
@@ -25,8 +25,8 @@ foreach($mode in $modes){
  $cases+=[ordered]@{mode=$mode;controllerExit=$exit;error=$errorText;supervisor=$s;trimComplete=$complete;evidenceComplete=$outcome.evidenceComplete;operationPassed=$outcome.operationPassed;installationAttested=$attested;installation=$installation;moduleStages=$moduleStages;cleanupHelperCount=$helpers.Count;nativeCleanupPassed=$outcome.nativeCloseObserved;sameWaitingPattern=$pattern;profileUnchanged=((Get-FileHash "$root/store/resource.bin").Hash -eq $hash)}
 }
 $sameBuild=@($identity|Where-Object{(Get-FileHash "$OutDir/$($_.file)").Hash.ToLowerInvariant() -ne $_.sha256}).Count -eq 0
-$evidence=$sameBuild -and $boot -eq (Get-CimInstance Win32_OperatingSystem).LastBootUpTime -and (Get-FileHash $PSCommandPath).Hash -eq $scriptHash -and @($cases|Where-Object{-not $_.installationAttested -or -not $_.profileUnchanged -or -not $_.evidenceComplete -or $_.error}).Count -eq 0
+$evidence=$sameBuild -and $boot -eq (Get-CimInstance Win32_OperatingSystem).LastBootUpTime -and (Get-FileHash $PSCommandPath).Hash -eq $scriptHash -and (Get-FileHash "$PSScriptRoot/assessment.ps1").Hash -eq $assessmentHash -and @($cases|Where-Object{-not $_.installationAttested -or -not $_.profileUnchanged -or -not $_.evidenceComplete -or $_.error}).Count -eq 0
 $native=@($cases|Where-Object{-not $_.nativeCleanupPassed}).Count -eq 0
 $operation=$evidence -and @($cases|Where-Object{-not $_.operationPassed}).Count -eq 0
-[ordered]@{evidenceComplete=$evidence;operationPassed=$operation;sameBuild=$sameBuild;boot=$boot;testSha256=$scriptHash;assessmentSha256=(Get-FileHash "$PSScriptRoot/assessment.ps1").Hash;binaries=$identity;cases=$cases;nativeCleanupPassed=$native;cleanupCausalFixVerified=$false;fullR5004Passed=$false;gateClosed=$false;manualHostTest='not_executed'}|ConvertTo-Json -Depth 10|Set-Content "$ResultsDir/summary.json" -Encoding utf8
+[ordered]@{evidenceComplete=$evidence;operationPassed=$operation;sameBuild=$sameBuild;boot=$boot;testSha256=$scriptHash;assessmentSha256=$assessmentHash;binaries=$identity;cases=$cases;nativeCleanupPassed=$native;cleanupCausalFixVerified=$false;fullR5004Passed=$false;gateClosed=$false;manualHostTest='not_executed'}|ConvertTo-Json -Depth 10|Set-Content "$ResultsDir/summary.json" -Encoding utf8
 if(-not $operation){throw 'Normal-close operation failed; inspect manager exit, first error and independent cleanup'}

@@ -1,4 +1,4 @@
-param([string]$MsvcRoot, [string]$SdkRoot, [string]$SdkVersion,
+param([string]$MsvcRoot, [string]$SdkRoot, [string]$SdkVersion, [switch]$InstallDiagnostics,
     [string]$OutDir = (Join-Path $PSScriptRoot 'out'))
 $ErrorActionPreference = 'Stop'
 Set-StrictMode -Version Latest
@@ -21,7 +21,9 @@ $OutDir = [IO.Path]::GetFullPath($OutDir)
 New-Item -ItemType Directory -Path $OutDir -Force | Out-Null
 $taskCompiler = Join-Path $MsvcRoot 'bin\Hostx64\x64\cl.exe'
 $taskCompileInputs=@('controller.cpp','fixture.cpp','protocol.hpp','traps.asm','build.ps1','../r3-004/runtime.cpp','../r3-004/iat.hpp','../r3-004/channel.hpp','../r3-004/input.cpp','../r3-004/observer.cpp','../r3/bridge.cpp','../r3/protocol.hpp','../common/native.hpp','../r1/snapshot.hpp','../r4-001-gate-001/launch-diagnostics.hpp','../r4-001-gate-001/courier.hpp')
+if($InstallDiagnostics){$taskCompileInputs+='../r5-hook-126/install-diagnostics.hpp'}
 $taskHashMaterial=@($taskCompileInputs | ForEach-Object { (Get-FileHash -LiteralPath (Join-Path $PSScriptRoot $_)).Hash }) -join ''
+if($InstallDiagnostics){$taskHashMaterial+='FOCUS_VIEWS_INPUT_INSTALL_DIAGNOSTICS=1'}
 $taskSha=[Security.Cryptography.SHA256]::Create()
 try { $taskBuildId=[BitConverter]::ToString($taskSha.ComputeHash([Text.Encoding]::UTF8.GetBytes($taskHashMaterial))).Replace('-','').ToLowerInvariant() } finally { $taskSha.Dispose() }
 [IO.File]::WriteAllText((Join-Path $OutDir 'build_id.hpp'), "#pragma once`n#define R305_BUILD_ID `"$taskBuildId`"`n", [Text.Encoding]::ASCII)
@@ -42,6 +44,7 @@ try {
     foreach ($taskUnit in @('controller','input','observer','fixture','bridge')) {
         $taskObject = Join-Path $OutDir ($taskUnit + '.obj')
         $taskOptions=$taskCommon
+        if($InstallDiagnostics -and $taskUnit -eq 'input'){$taskOptions+=@('/DFOCUS_VIEWS_INPUT_INSTALL_DIAGNOSTICS')}
         if($taskUnit -eq 'fixture'){$taskOptions=@($taskCommon | Where-Object {$_ -ne '/O2'})+@('/Od','/Ob0','/FAs',"/Fa$(Join-Path $OutDir 'fixture.asm')")}
         & $taskCompiler @taskOptions /c "/Fo$taskObject" $(if ($taskUnit -eq 'bridge') { Join-Path $PSScriptRoot ('../r3/' + $taskUnit + '.cpp') } elseif ($taskUnit -in 'input','observer') { Join-Path $PSScriptRoot ('../r3-004/' + $taskUnit + '.cpp') } else { Join-Path $PSScriptRoot ($taskUnit + '.cpp') })
         if ($LASTEXITCODE -ne 0) { throw "Compile failed: $taskUnit" }
@@ -50,7 +53,7 @@ try {
     & $taskCompiler /nologo @taskObjects "/Fe$(Join-Path $OutDir 'r305a.exe')" user32.lib gdi32.lib ole32.lib windowscodecs.lib bcrypt.lib advapi32.lib /link /INCREMENTAL:NO /DYNAMICBASE /NXCOMPAT /CETCOMPAT /guard:cf /DEBUG:FULL /MAP
     if ($LASTEXITCODE -ne 0) { throw 'Link failed' }
     [ordered]@{ time=(Get-Date -Format o); architecture='x64'; compilerVersion=(Get-Item $taskCompiler).VersionInfo.FileVersion
-        msvc=$MsvcRoot; sdk=$SdkRoot; sdkVersion=$SdkVersion; runtime='static /MT'; systemSettingsChanged=$false; buildId=$taskBuildId; fixtureOptimization='/Od /Ob0'; security='/GS /guard:cf /CETCOMPAT'
+        msvc=$MsvcRoot; sdk=$SdkRoot; sdkVersion=$SdkVersion; runtime='static /MT'; systemSettingsChanged=$false; buildId=$taskBuildId; inputInstallDiagnostics=[bool]$InstallDiagnostics; inputSourceSha256=(Get-FileHash (Join-Path $PSScriptRoot '../r3-004/input.cpp')).Hash; diagnosticHeaderSha256=$(if($InstallDiagnostics){(Get-FileHash (Join-Path $PSScriptRoot '../r5-hook-126/install-diagnostics.hpp')).Hash}else{''}); fixtureOptimization='/Od /Ob0'; security='/GS /guard:cf /CETCOMPAT'
     } | ConvertTo-Json | Set-Content -LiteralPath (Join-Path $OutDir 'build.json') -Encoding UTF8
     & (Join-Path $MsvcRoot 'bin/Hostx64/x64/dumpbin.exe') /loadconfig (Join-Path $OutDir 'r305a.exe') | Set-Content -LiteralPath (Join-Path $OutDir 'loadconfig.txt') -Encoding utf8
     Write-Output "BUILD_OK $OutDir\r305a.exe"

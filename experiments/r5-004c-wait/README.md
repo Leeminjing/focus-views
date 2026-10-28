@@ -2,6 +2,8 @@
 
 本实验没有提供清理修复。普通 WM_CLOSE 与停止点清理均有自然失败；WCT COM 回调把旧的等待边延伸到了 COM 对象及仅有 PID 的 RPCSS 终点。服务端线程和未完成操作仍未知，门禁保持 false。
 
+正常关闭脚本的整例判定已修正，见 [红/绿对照](results/verdict001/report.md) 和 [新增独立反例](results/verdict001/expanded-green.json)。窗口消失仍单独记录，只有管理器/控制器正常退出、唯一完成且无首错、协议及物理清理均通过，operationPassed 才为 true；不改通用监督器的预期失败语义。故障后的有界关闭对照通过 [真实路径入口](../r5-hook-126/test-real.ps1) 调用，先核对原失败、物理收尾及同启动周期；本轮未自然触发，不重复运行独立探针。
+
 新增 [完全不安装清理运行时的正常关闭对照](results/no-cleanup001/report.md)。test-no-cleanup.ps1 串行对比 profile-normal / normal-no-cleanup-runtime；后者根本不构造 AbortRegistry、不调用 prepare_cleanup，且记录清理助手为零与目标 DLL 未加载。ready、resource-ready、安装完成/跳过后分别记录实际线程实例和已知模块。本次两组均正常关闭，但系统在本轮前已重启，历史等待未复现，不能宣布因果修复。预留 -DirectWindow 后续裁剪本轮未执行。
 
 ~~~powershell

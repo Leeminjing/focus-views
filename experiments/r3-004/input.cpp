@@ -1,10 +1,16 @@
 #include "channel.hpp"
+#ifdef FOCUS_VIEWS_INPUT_INSTALL_DIAGNOSTICS
+#include "../r5-hook-126/install-diagnostics.hpp"
+#endif
 
 namespace r304 {
 int input_main(const Args& args) {
     Mapping mapping(args.get(L"--channel"), sizeof(Channel), false);
     auto& c = *static_cast<Channel*>(mapping.view);
     std::ofstream log(std::filesystem::path(args.get(L"--log")), std::ios::binary);
+#ifdef FOCUS_VIEWS_INPUT_INSTALL_DIAGNOSTICS
+    hook_install_diagnostic::Recorder installation(log);
+#endif
     HMODULE module = nullptr; HHOOK hook = nullptr, controls = nullptr;
     unsigned written = 0, queried = 0;
     std::vector<Packet> pending;
@@ -86,13 +92,44 @@ int input_main(const Args& args) {
         demand(thread_desktop() == user_object_name(GetThreadDesktop(c.tid)), "input same desktop");
         Handle target(OpenProcess(SYNCHRONIZE,FALSE,c.pid)); check(target.value != nullptr,"OpenProcess.owned_target_liveness");
         c.bridge_pid = GetCurrentProcessId();
-        module = LoadLibraryW(args.get(L"--dll").c_str()); check(module != nullptr, "LoadLibraryW.runtime");
+#ifdef FOCUS_VIEWS_INPUT_INSTALL_DIAGNOSTICS
+        installation.context(c.pid,c.tid,args.get(L"--dll"));
+#endif
+        module = LoadLibraryW(args.get(L"--dll").c_str());
+#ifdef FOCUS_VIEWS_INPUT_INSTALL_DIAGNOSTICS
+        const auto load_error=module?0:GetLastError();installation.api("LoadLibraryW.runtime",reinterpret_cast<std::uint64_t>(module),load_error);installation.loaded(module);
+        if(!module)throw Error("LoadLibraryW.runtime",load_error);
+#else
+        check(module != nullptr, "LoadLibraryW.runtime");
+#endif
         const auto proc = reinterpret_cast<HOOKPROC>(GetProcAddress(module, "ManagedGetMessage"));
+#ifdef FOCUS_VIEWS_INPUT_INSTALL_DIAGNOSTICS
+        const auto proc_error=proc?0:GetLastError();installation.api("GetProcAddress.ManagedGetMessage",reinterpret_cast<std::uint64_t>(proc),proc_error);installation.exported(module,proc,"ManagedGetMessage");
+        if(!proc)throw Error("GetProcAddress.ManagedGetMessage",proc_error);
+#else
         check(proc != nullptr, "GetProcAddress.ManagedGetMessage");
-        hook = SetWindowsHookExW(WH_GETMESSAGE, proc, module, c.tid); check(hook != nullptr, "SetWindowsHookExW.thread_only");
+#endif
+        hook = SetWindowsHookExW(WH_GETMESSAGE, proc, module, c.tid);
+#ifdef FOCUS_VIEWS_INPUT_INSTALL_DIAGNOSTICS
+        const auto hook_error=hook?0:GetLastError();installation.api("SetWindowsHookExW.thread_only",reinterpret_cast<std::uint64_t>(hook),hook_error);
+        if(!hook)throw Error("SetWindowsHookExW.thread_only",hook_error);
+#else
+        check(hook != nullptr, "SetWindowsHookExW.thread_only");
+#endif
         const auto control_proc = reinterpret_cast<HOOKPROC>(GetProcAddress(module,"ManagedCallWindow"));
+#ifdef FOCUS_VIEWS_INPUT_INSTALL_DIAGNOSTICS
+        const auto control_proc_error=control_proc?0:GetLastError();installation.api("GetProcAddress.ManagedCallWindow",reinterpret_cast<std::uint64_t>(control_proc),control_proc_error);installation.exported(module,control_proc,"ManagedCallWindow");
+        if(!control_proc)throw Error("GetProcAddress.ManagedCallWindow",control_proc_error);
+#else
         check(control_proc != nullptr,"GetProcAddress.ManagedCallWindow");
-        controls = SetWindowsHookExW(WH_CALLWNDPROC,control_proc,module,c.tid); check(controls != nullptr,"SetWindowsHookExW.thread_control");
+#endif
+        controls = SetWindowsHookExW(WH_CALLWNDPROC,control_proc,module,c.tid);
+#ifdef FOCUS_VIEWS_INPUT_INSTALL_DIAGNOSTICS
+        const auto controls_error=controls?0:GetLastError();installation.api("SetWindowsHookExW.thread_control",reinterpret_cast<std::uint64_t>(controls),controls_error);
+        if(!controls)throw Error("SetWindowsHookExW.thread_control",controls_error);
+#else
+        check(controls != nullptr,"SetWindowsHookExW.thread_control");
+#endif
         control(install_iat);
         demand(c.initialized && (!c.virtualize || c.iat_installed),"IAT install attestation");
         InterlockedExchange(&c.health, 1); InterlockedExchange(&c.ready, 1); emit("hook_installed", 0);
@@ -174,6 +211,11 @@ int input_main(const Args& args) {
         }
     }
     flush();
+#ifdef FOCUS_VIEWS_INPUT_INSTALL_DIAGNOSTICS
+    if(controls){const auto result=UnhookWindowsHookEx(controls);const auto error=result?0:GetLastError();installation.api("UnhookWindowsHookEx.control",result,error);if(!result){fault(c,error,"UnhookWindowsHookEx.control");emit("UnhookWindowsHookEx.control.failed",error);}}
+    if(hook){const auto result=UnhookWindowsHookEx(hook);const auto error=result?0:GetLastError();installation.api("UnhookWindowsHookEx.queue",result,error);if(!result){fault(c,error,"UnhookWindowsHookEx.queue");emit("UnhookWindowsHookEx.queue.failed",error);}}
+    if(module){const auto result=FreeLibrary(module);const auto error=result?0:GetLastError();installation.api("FreeLibrary.bridge_module",result,error);if(!result){fault(c,error,"FreeLibrary.bridge_module");emit("FreeLibrary.bridge_module.failed",error);}}
+#else
     if (controls && !UnhookWindowsHookEx(controls)) {
         const auto error = GetLastError(); fault(c,error,"UnhookWindowsHookEx.control"); emit("UnhookWindowsHookEx.control.failed",error);
     }
@@ -183,6 +225,7 @@ int input_main(const Args& args) {
     if (module && !FreeLibrary(module)) {
         const auto error = GetLastError(); fault(c,error,"FreeLibrary.bridge_module"); emit("FreeLibrary.bridge_module.failed",error);
     }
+#endif
     if (c.health == 1) InterlockedExchange(&c.health, 0);
     emit(c.health == -1 ? "channel_invalid" : "channel_closed", static_cast<DWORD>(c.error));
     InterlockedExchange(&c.ready, 2);

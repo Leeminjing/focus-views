@@ -1,6 +1,7 @@
-param([string]$OutDir=(Join-Path $PSScriptRoot 'out'),[string]$ResultsDir=(Join-Path $PSScriptRoot ('results/'+(Get-Date -Format 'yyyyMMdd-HHmmss'))),[ValidateRange(1,4)][int]$Repeats=2,[switch]$SkipRegression,[switch]$GateDeniedLaunch)
+param([string]$OutDir=(Join-Path $PSScriptRoot 'out'),[string]$ResultsDir=(Join-Path $PSScriptRoot ('results/'+(Get-Date -Format 'yyyyMMdd-HHmmss'))),[ValidateRange(1,4)][int]$Repeats=2,[switch]$SkipRegression,[switch]$GateDeniedLaunch,[switch]$InstallDiagnostics)
 $ErrorActionPreference='Stop';Set-StrictMode -Version Latest
 . (Join-Path $PSScriptRoot '../r4-001-gate-001/lifetimes.ps1')
+if($InstallDiagnostics){. (Join-Path $PSScriptRoot '../r5-hook-126/verification.ps1');Assert-InputDiagnosticBuild $OutDir;if(-not $SkipRegression){throw 'Diagnostic suites require explicitly prebuilt separate CET output; use SkipRegression and run that suite separately'}}
 Add-Type -AssemblyName System.Drawing
 Add-Type -TypeDefinition 'public static class R305bReceipt { public static ulong Compute(ulong r,ulong l,ulong m,ulong o,ulong seed) { unchecked { ulong v=(r^l)+m; return ((v<<13)|(v>>51))^o^seed; } } }'
 $ResultsDir=[IO.Path]::GetFullPath($ResultsDir)
@@ -114,7 +115,8 @@ if(-not $SkipRegression){
  try{& (Join-Path $PSScriptRoot '../r3-005a-cet-002/test.ps1') -ResultsDir (Join-Path $ResultsDir 'cet002-regression')|Tee-Object -FilePath (Join-Path $ResultsDir 'cet002-regression-console.log');$r=Get-Content (Join-Path $ResultsDir 'cet002-regression/summary.json') -Raw|ConvertFrom-Json;$regression=if($r.allEvidenceChecksPassed){'passed'}else{'failed'}}catch{$regression='failed';$_|Out-String|Set-Content (Join-Path $ResultsDir 'cet002-regression-error.txt')}
  Check 'CET002-full-regression' ($regression -eq 'passed')
 }
-$baseline=Test-GateBaseline $PSScriptRoot 759326d @('../r1','../r2','../r3','../r3-002','../r3-003','../r3-004','../r3-005a','../r3-005a-cet-001','../r3-005a-cet-002','../common') (Get-GateAllowedSources)
+$allowed=@(Get-GateAllowedSources);if($InstallDiagnostics){$allowed+='experiments/r3-004/input.cpp'}
+$baseline=Test-GateBaseline $PSScriptRoot 759326d @('../r1','../r2','../r3','../r3-002','../r3-003','../r3-004','../r3-005a','../r3-005a-cet-001','../r3-005a-cet-002','../common') $allowed
 $baseline|ConvertTo-Json -Depth 5|Set-Content (Join-Path $ResultsDir 'baseline-changes.json') -Encoding utf8
 Check 'historical-evidence-and-unapproved-implementations-unchanged' $baseline.passed
 $okay=$cases.Count -eq 9*$Repeats -and @($checks|Where-Object{-not $_.passed}).Count -eq 0

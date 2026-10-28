@@ -9,6 +9,9 @@ foreach($case in @(
  @{name='close-success-manager-failed-cleanup-succeeded';controller=0;manager=2;api='v.stop';error=170;copies=1;expected=$false},
  @{name='controller-failed';controller=2;manager=0;api='';error=0;copies=1;expected=$false},
  @{name='primary-error-preserved';controller=0;manager=0;api='v.stop';error=170;copies=1;expected=$false},
+ @{name='manager-nonzero-with-no-first-error';controller=0;manager=2;api='';error=0;copies=1;expected=$false},
+ @{name='first-api-with-zero-code';controller=0;manager=0;api='v.stop';error=0;copies=1;expected=$false},
+ @{name='first-code-with-empty-api';controller=0;manager=0;api='';error=170;copies=1;expected=$false},
  @{name='duplicate-completion';controller=0;manager=0;api='';error=0;copies=2;expected=$false},
  @{name='missing-completion';controller=0;manager=0;api='';error=0;copies=0;expected=$false}
 )){

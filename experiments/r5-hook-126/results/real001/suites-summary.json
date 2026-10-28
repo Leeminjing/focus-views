@@ -1,0 +1,2612 @@
+{
+  "passed": true,
+  "boot": "2026-10-28T19:42:46.5+08:00",
+  "sameBuild": true,
+  "sameBoot": true,
+  "frozenInputs": [
+    {
+      "path": "C:\\fv-c\\rd\\b001-build\\build.log",
+      "sha256": "5085C36A7C641F1842FDD5CE436F087C1F92C3A8BC84DEE6150F31A16105104F"
+    },
+    {
+      "path": "C:\\fv-c\\rd\\b001-build\\loadconfig.txt",
+      "sha256": "340038D74AE0B8CA440D7CEE9D6DE4B3C84D1E98AAAC15A74D95DF2740F752E0"
+    },
+    {
+      "path": "C:\\fv-c\\rd\\b001-build\\build.json",
+      "sha256": "4FB6190E50D10CD00BAAE865BD6FFFA588AC8521E33EF06C4CD38BE1F8379F65"
+    },
+    {
+      "path": "C:\\fv-c\\rd\\b001-build\\r305a.exe",
+      "sha256": "A93AD8445B3CA373106F897B1C1F56A9FFF27896F88F20622154FC1DD4250411"
+    },
+    {
+      "path": "C:\\fv-c\\rd\\b001-build\\runtime304.dll",
+      "sha256": "10104C69171AC6AD8E20CEF1A555E788E935F77BCF03F019DD74B5E0B7915343"
+    },
+    {
+      "path": "C:\\fv-c\\rd\\cet-build\\build.log",
+      "sha256": "061F9DD8D93AF71B957D366BF4651F92661A7B64DED87FF6FBD6882893C73A94"
+    },
+    {
+      "path": "C:\\fv-c\\rd\\cet-build\\loadconfig.txt",
+      "sha256": "C43EE6642F24AC2E9600C319723B61DBD91CC4592047024ED3175B2A289923BC"
+    },
+    {
+      "path": "C:\\fv-c\\rd\\cet-build\\build.json",
+      "sha256": "B1705411905683A586FD9D16D5F2C5BF2F5314D647AA847018DE90524870EA2C"
+    },
+    {
+      "path": "C:\\fv-c\\rd\\cet-build\\r305a.exe",
+      "sha256": "C8B9196D40FA75EC9DC1750AFF733482E69E37E3ECC6267691B5152F9A76A163"
+    },
+    {
+      "path": "C:\\fv-c\\rd\\cet-build\\runtime304.dll",
+      "sha256": "B32D63FE2F5966B5A6A4767BE0D8A2F793037D717322388A6B420E4F9922B9E2"
+    }
+  ],
+  "cases": [
+    {
+      "suite": "b001",
+      "error": "",
+      "summary": {
+        "allEvidenceChecksPassed": true,
+        "declaredEDITResourceReconstructionPassed": true,
+        "controlledExecutionContinuationPassed": true,
+        "declaredGUIIntegrationPassed": true,
+        "generalGUIRestore": false,
+        "R3Complete": false,
+        "R4Started": false,
+        "checks": [
+          {
+            "name": "adapter-does-not-empty-source-undo-buffer",
+            "passed": true
+          },
+          {
+            "name": "adapter-is-independent-of-business-text",
+            "passed": true
+          },
+          {
+            "name": "positive-1.actual-verdict-and-error-status",
+            "passed": true
+          },
+          {
+            "name": "positive-1.S0-owner-GUI-thread-query",
+            "passed": true
+          },
+          {
+            "name": "positive-1.source-changed-owner-GUI-thread-query",
+            "passed": true
+          },
+          {
+            "name": "positive-1.target-prepared-owner-GUI-thread-query",
+            "passed": true
+          },
+          {
+            "name": "positive-1.restored-S0-owner-GUI-thread-query",
+            "passed": true
+          },
+          {
+            "name": "positive-1.selected-after-restore-owner-GUI-thread-query",
+            "passed": true
+          },
+          {
+            "name": "positive-1.after-home-owner-GUI-thread-query",
+            "passed": true
+          },
+          {
+            "name": "positive-1.after-input-owner-GUI-thread-query",
+            "passed": true
+          },
+          {
+            "name": "positive-1.CET-CFG-stay-enabled",
+            "passed": true
+          },
+          {
+            "name": "positive-1.native-source-state-supported-with-empty-undo",
+            "passed": true
+          },
+          {
+            "name": "positive-1.resource-capture-before-debug-freeze",
+            "passed": true
+          },
+          {
+            "name": "positive-1.source-real-edit-changes-after-S0",
+            "passed": true
+          },
+          {
+            "name": "positive-1.source-exited-before-new-PID-TID",
+            "passed": true
+          },
+          {
+            "name": "positive-1.native-resource-preparation-matches-S0",
+            "passed": true
+          },
+          {
+            "name": "positive-1.window-1-identity-geometry-class",
+            "passed": true
+          },
+          {
+            "name": "positive-1.window-2-identity-geometry-class",
+            "passed": true
+          },
+          {
+            "name": "positive-1.window-3-identity-geometry-class",
+            "passed": true
+          },
+          {
+            "name": "positive-1.native-preparation-precedes-CET-chain-checkpoint",
+            "passed": true
+          },
+          {
+            "name": "positive-1.raw-memory-stack-register-computation-and-original-S0",
+            "passed": true
+          },
+          {
+            "name": "positive-1.normal-and-CET-shadow-returns-match-before-and-after-restore",
+            "passed": true
+          },
+          {
+            "name": "positive-1.target-does-not-replay-business",
+            "passed": true
+          },
+          {
+            "name": "positive-1.reference-1859720839208-source-preimage",
+            "passed": true
+          },
+          {
+            "name": "positive-1.reference-1859720839488-source-preimage",
+            "passed": true
+          },
+          {
+            "name": "positive-1.reference-1859720839496-source-preimage",
+            "passed": true
+          },
+          {
+            "name": "positive-1.reference-1859723001272-source-preimage",
+            "passed": true
+          },
+          {
+            "name": "positive-1.reference-1859723001264-source-preimage",
+            "passed": true
+          },
+          {
+            "name": "positive-1.reference-1859723001136-source-preimage",
+            "passed": true
+          },
+          {
+            "name": "positive-1.reference-1859723001144-source-preimage",
+            "passed": true
+          },
+          {
+            "name": "positive-1.only-seven-declared-HWND-relocations",
+            "passed": true
+          },
+          {
+            "name": "positive-1.native-state-after-CPU-return-still-S0",
+            "passed": true
+          },
+          {
+            "name": "positive-1.native-selection-edit-and-caret-after-restore",
+            "passed": true
+          },
+          {
+            "name": "positive-1.original-control-processes-key-and-char-messages",
+            "passed": true
+          },
+          {
+            "name": "positive-1.source-S0-native-paint-and-PNG",
+            "passed": true
+          },
+          {
+            "name": "positive-1.source-CHANGED-native-paint-and-PNG",
+            "passed": true
+          },
+          {
+            "name": "positive-1.restored-S0-native-paint-and-PNG",
+            "passed": true
+          },
+          {
+            "name": "positive-1.restored-after-input-native-paint-and-PNG",
+            "passed": true
+          },
+          {
+            "name": "positive-1.real-EDIT-region-restored-and-button-caption-painted",
+            "passed": true
+          },
+          {
+            "name": "positive-1.publish-only-after-control-execution-input-validation",
+            "passed": true
+          },
+          {
+            "name": "positive-1.owned-process-and-desktop-cleanup",
+            "passed": true
+          },
+          {
+            "name": "undo-1.actual-verdict-and-error-status",
+            "passed": true
+          },
+          {
+            "name": "undo-1.S0-owner-GUI-thread-query",
+            "passed": true
+          },
+          {
+            "name": "undo-1.source-after-rejection-owner-GUI-thread-query",
+            "passed": true
+          },
+          {
+            "name": "undo-1.CET-CFG-stay-enabled",
+            "passed": true
+          },
+          {
+            "name": "undo-1.snapshot-not-published",
+            "passed": true
+          },
+          {
+            "name": "undo-1.source-resource-state-not-changed-to-force-success",
+            "passed": true
+          },
+          {
+            "name": "undo-1.real-undo-history-refused-and-preserved",
+            "passed": true
+          },
+          {
+            "name": "undo-1.failed-case-not-published",
+            "passed": true
+          },
+          {
+            "name": "undo-1.owned-process-and-desktop-cleanup",
+            "passed": true
+          },
+          {
+            "name": "unknown-child-1.actual-verdict-and-error-status",
+            "passed": true
+          },
+          {
+            "name": "unknown-child-1.S0-owner-GUI-thread-query",
+            "passed": true
+          },
+          {
+            "name": "unknown-child-1.source-after-rejection-owner-GUI-thread-query",
+            "passed": true
+          },
+          {
+            "name": "unknown-child-1.CET-CFG-stay-enabled",
+            "passed": true
+          },
+          {
+            "name": "unknown-child-1.snapshot-not-published",
+            "passed": true
+          },
+          {
+            "name": "unknown-child-1.source-resource-state-not-changed-to-force-success",
+            "passed": true
+          },
+          {
+            "name": "unknown-child-1.actual-unknown-descendant-refused",
+            "passed": true
+          },
+          {
+            "name": "unknown-child-1.failed-case-not-published",
+            "passed": true
+          },
+          {
+            "name": "unknown-child-1.owned-process-and-desktop-cleanup",
+            "passed": true
+          },
+          {
+            "name": "bad-parent-1.actual-verdict-and-error-status",
+            "passed": true
+          },
+          {
+            "name": "bad-parent-1.S0-owner-GUI-thread-query",
+            "passed": true
+          },
+          {
+            "name": "bad-parent-1.source-changed-owner-GUI-thread-query",
+            "passed": true
+          },
+          {
+            "name": "bad-parent-1.target-prepared-owner-GUI-thread-query",
+            "passed": true
+          },
+          {
+            "name": "bad-parent-1.CET-CFG-stay-enabled",
+            "passed": true
+          },
+          {
+            "name": "bad-parent-1.native-source-state-supported-with-empty-undo",
+            "passed": true
+          },
+          {
+            "name": "bad-parent-1.resource-capture-before-debug-freeze",
+            "passed": true
+          },
+          {
+            "name": "bad-parent-1.source-real-edit-changes-after-S0",
+            "passed": true
+          },
+          {
+            "name": "bad-parent-1.source-exited-before-new-PID-TID",
+            "passed": true
+          },
+          {
+            "name": "bad-parent-1.actual-native-parent-mismatch-rejected",
+            "passed": true
+          },
+          {
+            "name": "bad-parent-1.failed-case-not-published",
+            "passed": true
+          },
+          {
+            "name": "bad-parent-1.owned-process-and-desktop-cleanup",
+            "passed": true
+          },
+          {
+            "name": "unregistered-ref-1.actual-verdict-and-error-status",
+            "passed": true
+          },
+          {
+            "name": "unregistered-ref-1.S0-owner-GUI-thread-query",
+            "passed": true
+          },
+          {
+            "name": "unregistered-ref-1.source-changed-owner-GUI-thread-query",
+            "passed": true
+          },
+          {
+            "name": "unregistered-ref-1.target-prepared-owner-GUI-thread-query",
+            "passed": true
+          },
+          {
+            "name": "unregistered-ref-1.CET-CFG-stay-enabled",
+            "passed": true
+          },
+          {
+            "name": "unregistered-ref-1.native-source-state-supported-with-empty-undo",
+            "passed": true
+          },
+          {
+            "name": "unregistered-ref-1.resource-capture-before-debug-freeze",
+            "passed": true
+          },
+          {
+            "name": "unregistered-ref-1.source-real-edit-changes-after-S0",
+            "passed": true
+          },
+          {
+            "name": "unregistered-ref-1.source-exited-before-new-PID-TID",
+            "passed": true
+          },
+          {
+            "name": "unregistered-ref-1.native-resource-preparation-matches-S0",
+            "passed": true
+          },
+          {
+            "name": "unregistered-ref-1.window-1-identity-geometry-class",
+            "passed": true
+          },
+          {
+            "name": "unregistered-ref-1.window-2-identity-geometry-class",
+            "passed": true
+          },
+          {
+            "name": "unregistered-ref-1.window-3-identity-geometry-class",
+            "passed": true
+          },
+          {
+            "name": "unregistered-ref-1.native-preparation-precedes-CET-chain-checkpoint",
+            "passed": true
+          },
+          {
+            "name": "unregistered-ref-1.declared-live-reference-omission-refused",
+            "passed": true
+          },
+          {
+            "name": "unregistered-ref-1.failed-case-not-published",
+            "passed": true
+          },
+          {
+            "name": "unregistered-ref-1.owned-process-and-desktop-cleanup",
+            "passed": true
+          },
+          {
+            "name": "omit-text-1.actual-verdict-and-error-status",
+            "passed": true
+          },
+          {
+            "name": "omit-text-1.S0-owner-GUI-thread-query",
+            "passed": true
+          },
+          {
+            "name": "omit-text-1.source-changed-owner-GUI-thread-query",
+            "passed": true
+          },
+          {
+            "name": "omit-text-1.target-prepared-owner-GUI-thread-query",
+            "passed": true
+          },
+          {
+            "name": "omit-text-1.CET-CFG-stay-enabled",
+            "passed": true
+          },
+          {
+            "name": "omit-text-1.native-source-state-supported-with-empty-undo",
+            "passed": true
+          },
+          {
+            "name": "omit-text-1.resource-capture-before-debug-freeze",
+            "passed": true
+          },
+          {
+            "name": "omit-text-1.source-real-edit-changes-after-S0",
+            "passed": true
+          },
+          {
+            "name": "omit-text-1.source-exited-before-new-PID-TID",
+            "passed": true
+          },
+          {
+            "name": "omit-text-1.omission-refused-before-execution",
+            "passed": true
+          },
+          {
+            "name": "omit-text-1.actual-native-field-mismatch-recorded",
+            "passed": true
+          },
+          {
+            "name": "omit-text-1.failed-case-not-published",
+            "passed": true
+          },
+          {
+            "name": "omit-text-1.owned-process-and-desktop-cleanup",
+            "passed": true
+          },
+          {
+            "name": "omit-selection-1.actual-verdict-and-error-status",
+            "passed": true
+          },
+          {
+            "name": "omit-selection-1.S0-owner-GUI-thread-query",
+            "passed": true
+          },
+          {
+            "name": "omit-selection-1.source-changed-owner-GUI-thread-query",
+            "passed": true
+          },
+          {
+            "name": "omit-selection-1.target-prepared-owner-GUI-thread-query",
+            "passed": true
+          },
+          {
+            "name": "omit-selection-1.CET-CFG-stay-enabled",
+            "passed": true
+          },
+          {
+            "name": "omit-selection-1.native-source-state-supported-with-empty-undo",
+            "passed": true
+          },
+          {
+            "name": "omit-selection-1.resource-capture-before-debug-freeze",
+            "passed": true
+          },
+          {
+            "name": "omit-selection-1.source-real-edit-changes-after-S0",
+            "passed": true
+          },
+          {
+            "name": "omit-selection-1.source-exited-before-new-PID-TID",
+            "passed": true
+          },
+          {
+            "name": "omit-selection-1.omission-refused-before-execution",
+            "passed": true
+          },
+          {
+            "name": "omit-selection-1.actual-native-field-mismatch-recorded",
+            "passed": true
+          },
+          {
+            "name": "omit-selection-1.failed-case-not-published",
+            "passed": true
+          },
+          {
+            "name": "omit-selection-1.owned-process-and-desktop-cleanup",
+            "passed": true
+          },
+          {
+            "name": "omit-modify-1.actual-verdict-and-error-status",
+            "passed": true
+          },
+          {
+            "name": "omit-modify-1.S0-owner-GUI-thread-query",
+            "passed": true
+          },
+          {
+            "name": "omit-modify-1.source-changed-owner-GUI-thread-query",
+            "passed": true
+          },
+          {
+            "name": "omit-modify-1.target-prepared-owner-GUI-thread-query",
+            "passed": true
+          },
+          {
+            "name": "omit-modify-1.CET-CFG-stay-enabled",
+            "passed": true
+          },
+          {
+            "name": "omit-modify-1.native-source-state-supported-with-empty-undo",
+            "passed": true
+          },
+          {
+            "name": "omit-modify-1.resource-capture-before-debug-freeze",
+            "passed": true
+          },
+          {
+            "name": "omit-modify-1.source-real-edit-changes-after-S0",
+            "passed": true
+          },
+          {
+            "name": "omit-modify-1.source-exited-before-new-PID-TID",
+            "passed": true
+          },
+          {
+            "name": "omit-modify-1.omission-refused-before-execution",
+            "passed": true
+          },
+          {
+            "name": "omit-modify-1.actual-native-field-mismatch-recorded",
+            "passed": true
+          },
+          {
+            "name": "omit-modify-1.failed-case-not-published",
+            "passed": true
+          },
+          {
+            "name": "omit-modify-1.owned-process-and-desktop-cleanup",
+            "passed": true
+          },
+          {
+            "name": "omit-focus-1.actual-verdict-and-error-status",
+            "passed": true
+          },
+          {
+            "name": "omit-focus-1.S0-owner-GUI-thread-query",
+            "passed": true
+          },
+          {
+            "name": "omit-focus-1.source-changed-owner-GUI-thread-query",
+            "passed": true
+          },
+          {
+            "name": "omit-focus-1.target-prepared-owner-GUI-thread-query",
+            "passed": true
+          },
+          {
+            "name": "omit-focus-1.CET-CFG-stay-enabled",
+            "passed": true
+          },
+          {
+            "name": "omit-focus-1.native-source-state-supported-with-empty-undo",
+            "passed": true
+          },
+          {
+            "name": "omit-focus-1.resource-capture-before-debug-freeze",
+            "passed": true
+          },
+          {
+            "name": "omit-focus-1.source-real-edit-changes-after-S0",
+            "passed": true
+          },
+          {
+            "name": "omit-focus-1.source-exited-before-new-PID-TID",
+            "passed": true
+          },
+          {
+            "name": "omit-focus-1.omission-refused-before-execution",
+            "passed": true
+          },
+          {
+            "name": "omit-focus-1.actual-native-field-mismatch-recorded",
+            "passed": true
+          },
+          {
+            "name": "omit-focus-1.failed-case-not-published",
+            "passed": true
+          },
+          {
+            "name": "omit-focus-1.owned-process-and-desktop-cleanup",
+            "passed": true
+          },
+          {
+            "name": "positive-2.actual-verdict-and-error-status",
+            "passed": true
+          },
+          {
+            "name": "positive-2.S0-owner-GUI-thread-query",
+            "passed": true
+          },
+          {
+            "name": "positive-2.source-changed-owner-GUI-thread-query",
+            "passed": true
+          },
+          {
+            "name": "positive-2.target-prepared-owner-GUI-thread-query",
+            "passed": true
+          },
+          {
+            "name": "positive-2.restored-S0-owner-GUI-thread-query",
+            "passed": true
+          },
+          {
+            "name": "positive-2.selected-after-restore-owner-GUI-thread-query",
+            "passed": true
+          },
+          {
+            "name": "positive-2.after-home-owner-GUI-thread-query",
+            "passed": true
+          },
+          {
+            "name": "positive-2.after-input-owner-GUI-thread-query",
+            "passed": true
+          },
+          {
+            "name": "positive-2.CET-CFG-stay-enabled",
+            "passed": true
+          },
+          {
+            "name": "positive-2.native-source-state-supported-with-empty-undo",
+            "passed": true
+          },
+          {
+            "name": "positive-2.resource-capture-before-debug-freeze",
+            "passed": true
+          },
+          {
+            "name": "positive-2.source-real-edit-changes-after-S0",
+            "passed": true
+          },
+          {
+            "name": "positive-2.source-exited-before-new-PID-TID",
+            "passed": true
+          },
+          {
+            "name": "positive-2.native-resource-preparation-matches-S0",
+            "passed": true
+          },
+          {
+            "name": "positive-2.window-1-identity-geometry-class",
+            "passed": true
+          },
+          {
+            "name": "positive-2.window-2-identity-geometry-class",
+            "passed": true
+          },
+          {
+            "name": "positive-2.window-3-identity-geometry-class",
+            "passed": true
+          },
+          {
+            "name": "positive-2.native-preparation-precedes-CET-chain-checkpoint",
+            "passed": true
+          },
+          {
+            "name": "positive-2.raw-memory-stack-register-computation-and-original-S0",
+            "passed": true
+          },
+          {
+            "name": "positive-2.normal-and-CET-shadow-returns-match-before-and-after-restore",
+            "passed": true
+          },
+          {
+            "name": "positive-2.target-does-not-replay-business",
+            "passed": true
+          },
+          {
+            "name": "positive-2.reference-1859720839208-source-preimage",
+            "passed": true
+          },
+          {
+            "name": "positive-2.reference-1859720839488-source-preimage",
+            "passed": true
+          },
+          {
+            "name": "positive-2.reference-1859720839496-source-preimage",
+            "passed": true
+          },
+          {
+            "name": "positive-2.reference-1859723001272-source-preimage",
+            "passed": true
+          },
+          {
+            "name": "positive-2.reference-1859723001264-source-preimage",
+            "passed": true
+          },
+          {
+            "name": "positive-2.reference-1859723001136-source-preimage",
+            "passed": true
+          },
+          {
+            "name": "positive-2.reference-1859723001144-source-preimage",
+            "passed": true
+          },
+          {
+            "name": "positive-2.only-seven-declared-HWND-relocations",
+            "passed": true
+          },
+          {
+            "name": "positive-2.native-state-after-CPU-return-still-S0",
+            "passed": true
+          },
+          {
+            "name": "positive-2.native-selection-edit-and-caret-after-restore",
+            "passed": true
+          },
+          {
+            "name": "positive-2.original-control-processes-key-and-char-messages",
+            "passed": true
+          },
+          {
+            "name": "positive-2.source-S0-native-paint-and-PNG",
+            "passed": true
+          },
+          {
+            "name": "positive-2.source-CHANGED-native-paint-and-PNG",
+            "passed": true
+          },
+          {
+            "name": "positive-2.restored-S0-native-paint-and-PNG",
+            "passed": true
+          },
+          {
+            "name": "positive-2.restored-after-input-native-paint-and-PNG",
+            "passed": true
+          },
+          {
+            "name": "positive-2.real-EDIT-region-restored-and-button-caption-painted",
+            "passed": true
+          },
+          {
+            "name": "positive-2.publish-only-after-control-execution-input-validation",
+            "passed": true
+          },
+          {
+            "name": "positive-2.owned-process-and-desktop-cleanup",
+            "passed": true
+          },
+          {
+            "name": "undo-2.actual-verdict-and-error-status",
+            "passed": true
+          },
+          {
+            "name": "undo-2.S0-owner-GUI-thread-query",
+            "passed": true
+          },
+          {
+            "name": "undo-2.source-after-rejection-owner-GUI-thread-query",
+            "passed": true
+          },
+          {
+            "name": "undo-2.CET-CFG-stay-enabled",
+            "passed": true
+          },
+          {
+            "name": "undo-2.snapshot-not-published",
+            "passed": true
+          },
+          {
+            "name": "undo-2.source-resource-state-not-changed-to-force-success",
+            "passed": true
+          },
+          {
+            "name": "undo-2.real-undo-history-refused-and-preserved",
+            "passed": true
+          },
+          {
+            "name": "undo-2.failed-case-not-published",
+            "passed": true
+          },
+          {
+            "name": "undo-2.owned-process-and-desktop-cleanup",
+            "passed": true
+          },
+          {
+            "name": "unknown-child-2.actual-verdict-and-error-status",
+            "passed": true
+          },
+          {
+            "name": "unknown-child-2.S0-owner-GUI-thread-query",
+            "passed": true
+          },
+          {
+            "name": "unknown-child-2.source-after-rejection-owner-GUI-thread-query",
+            "passed": true
+          },
+          {
+            "name": "unknown-child-2.CET-CFG-stay-enabled",
+            "passed": true
+          },
+          {
+            "name": "unknown-child-2.snapshot-not-published",
+            "passed": true
+          },
+          {
+            "name": "unknown-child-2.source-resource-state-not-changed-to-force-success",
+            "passed": true
+          },
+          {
+            "name": "unknown-child-2.actual-unknown-descendant-refused",
+            "passed": true
+          },
+          {
+            "name": "unknown-child-2.failed-case-not-published",
+            "passed": true
+          },
+          {
+            "name": "unknown-child-2.owned-process-and-desktop-cleanup",
+            "passed": true
+          },
+          {
+            "name": "bad-parent-2.actual-verdict-and-error-status",
+            "passed": true
+          },
+          {
+            "name": "bad-parent-2.S0-owner-GUI-thread-query",
+            "passed": true
+          },
+          {
+            "name": "bad-parent-2.source-changed-owner-GUI-thread-query",
+            "passed": true
+          },
+          {
+            "name": "bad-parent-2.target-prepared-owner-GUI-thread-query",
+            "passed": true
+          },
+          {
+            "name": "bad-parent-2.CET-CFG-stay-enabled",
+            "passed": true
+          },
+          {
+            "name": "bad-parent-2.native-source-state-supported-with-empty-undo",
+            "passed": true
+          },
+          {
+            "name": "bad-parent-2.resource-capture-before-debug-freeze",
+            "passed": true
+          },
+          {
+            "name": "bad-parent-2.source-real-edit-changes-after-S0",
+            "passed": true
+          },
+          {
+            "name": "bad-parent-2.source-exited-before-new-PID-TID",
+            "passed": true
+          },
+          {
+            "name": "bad-parent-2.actual-native-parent-mismatch-rejected",
+            "passed": true
+          },
+          {
+            "name": "bad-parent-2.failed-case-not-published",
+            "passed": true
+          },
+          {
+            "name": "bad-parent-2.owned-process-and-desktop-cleanup",
+            "passed": true
+          },
+          {
+            "name": "unregistered-ref-2.actual-verdict-and-error-status",
+            "passed": true
+          },
+          {
+            "name": "unregistered-ref-2.S0-owner-GUI-thread-query",
+            "passed": true
+          },
+          {
+            "name": "unregistered-ref-2.source-changed-owner-GUI-thread-query",
+            "passed": true
+          },
+          {
+            "name": "unregistered-ref-2.target-prepared-owner-GUI-thread-query",
+            "passed": true
+          },
+          {
+            "name": "unregistered-ref-2.CET-CFG-stay-enabled",
+            "passed": true
+          },
+          {
+            "name": "unregistered-ref-2.native-source-state-supported-with-empty-undo",
+            "passed": true
+          },
+          {
+            "name": "unregistered-ref-2.resource-capture-before-debug-freeze",
+            "passed": true
+          },
+          {
+            "name": "unregistered-ref-2.source-real-edit-changes-after-S0",
+            "passed": true
+          },
+          {
+            "name": "unregistered-ref-2.source-exited-before-new-PID-TID",
+            "passed": true
+          },
+          {
+            "name": "unregistered-ref-2.native-resource-preparation-matches-S0",
+            "passed": true
+          },
+          {
+            "name": "unregistered-ref-2.window-1-identity-geometry-class",
+            "passed": true
+          },
+          {
+            "name": "unregistered-ref-2.window-2-identity-geometry-class",
+            "passed": true
+          },
+          {
+            "name": "unregistered-ref-2.window-3-identity-geometry-class",
+            "passed": true
+          },
+          {
+            "name": "unregistered-ref-2.native-preparation-precedes-CET-chain-checkpoint",
+            "passed": true
+          },
+          {
+            "name": "unregistered-ref-2.declared-live-reference-omission-refused",
+            "passed": true
+          },
+          {
+            "name": "unregistered-ref-2.failed-case-not-published",
+            "passed": true
+          },
+          {
+            "name": "unregistered-ref-2.owned-process-and-desktop-cleanup",
+            "passed": true
+          },
+          {
+            "name": "omit-text-2.actual-verdict-and-error-status",
+            "passed": true
+          },
+          {
+            "name": "omit-text-2.S0-owner-GUI-thread-query",
+            "passed": true
+          },
+          {
+            "name": "omit-text-2.source-changed-owner-GUI-thread-query",
+            "passed": true
+          },
+          {
+            "name": "omit-text-2.target-prepared-owner-GUI-thread-query",
+            "passed": true
+          },
+          {
+            "name": "omit-text-2.CET-CFG-stay-enabled",
+            "passed": true
+          },
+          {
+            "name": "omit-text-2.native-source-state-supported-with-empty-undo",
+            "passed": true
+          },
+          {
+            "name": "omit-text-2.resource-capture-before-debug-freeze",
+            "passed": true
+          },
+          {
+            "name": "omit-text-2.source-real-edit-changes-after-S0",
+            "passed": true
+          },
+          {
+            "name": "omit-text-2.source-exited-before-new-PID-TID",
+            "passed": true
+          },
+          {
+            "name": "omit-text-2.omission-refused-before-execution",
+            "passed": true
+          },
+          {
+            "name": "omit-text-2.actual-native-field-mismatch-recorded",
+            "passed": true
+          },
+          {
+            "name": "omit-text-2.failed-case-not-published",
+            "passed": true
+          },
+          {
+            "name": "omit-text-2.owned-process-and-desktop-cleanup",
+            "passed": true
+          },
+          {
+            "name": "omit-selection-2.actual-verdict-and-error-status",
+            "passed": true
+          },
+          {
+            "name": "omit-selection-2.S0-owner-GUI-thread-query",
+            "passed": true
+          },
+          {
+            "name": "omit-selection-2.source-changed-owner-GUI-thread-query",
+            "passed": true
+          },
+          {
+            "name": "omit-selection-2.target-prepared-owner-GUI-thread-query",
+            "passed": true
+          },
+          {
+            "name": "omit-selection-2.CET-CFG-stay-enabled",
+            "passed": true
+          },
+          {
+            "name": "omit-selection-2.native-source-state-supported-with-empty-undo",
+            "passed": true
+          },
+          {
+            "name": "omit-selection-2.resource-capture-before-debug-freeze",
+            "passed": true
+          },
+          {
+            "name": "omit-selection-2.source-real-edit-changes-after-S0",
+            "passed": true
+          },
+          {
+            "name": "omit-selection-2.source-exited-before-new-PID-TID",
+            "passed": true
+          },
+          {
+            "name": "omit-selection-2.omission-refused-before-execution",
+            "passed": true
+          },
+          {
+            "name": "omit-selection-2.actual-native-field-mismatch-recorded",
+            "passed": true
+          },
+          {
+            "name": "omit-selection-2.failed-case-not-published",
+            "passed": true
+          },
+          {
+            "name": "omit-selection-2.owned-process-and-desktop-cleanup",
+            "passed": true
+          },
+          {
+            "name": "omit-modify-2.actual-verdict-and-error-status",
+            "passed": true
+          },
+          {
+            "name": "omit-modify-2.S0-owner-GUI-thread-query",
+            "passed": true
+          },
+          {
+            "name": "omit-modify-2.source-changed-owner-GUI-thread-query",
+            "passed": true
+          },
+          {
+            "name": "omit-modify-2.target-prepared-owner-GUI-thread-query",
+            "passed": true
+          },
+          {
+            "name": "omit-modify-2.CET-CFG-stay-enabled",
+            "passed": true
+          },
+          {
+            "name": "omit-modify-2.native-source-state-supported-with-empty-undo",
+            "passed": true
+          },
+          {
+            "name": "omit-modify-2.resource-capture-before-debug-freeze",
+            "passed": true
+          },
+          {
+            "name": "omit-modify-2.source-real-edit-changes-after-S0",
+            "passed": true
+          },
+          {
+            "name": "omit-modify-2.source-exited-before-new-PID-TID",
+            "passed": true
+          },
+          {
+            "name": "omit-modify-2.omission-refused-before-execution",
+            "passed": true
+          },
+          {
+            "name": "omit-modify-2.actual-native-field-mismatch-recorded",
+            "passed": true
+          },
+          {
+            "name": "omit-modify-2.failed-case-not-published",
+            "passed": true
+          },
+          {
+            "name": "omit-modify-2.owned-process-and-desktop-cleanup",
+            "passed": true
+          },
+          {
+            "name": "omit-focus-2.actual-verdict-and-error-status",
+            "passed": true
+          },
+          {
+            "name": "omit-focus-2.S0-owner-GUI-thread-query",
+            "passed": true
+          },
+          {
+            "name": "omit-focus-2.source-changed-owner-GUI-thread-query",
+            "passed": true
+          },
+          {
+            "name": "omit-focus-2.target-prepared-owner-GUI-thread-query",
+            "passed": true
+          },
+          {
+            "name": "omit-focus-2.CET-CFG-stay-enabled",
+            "passed": true
+          },
+          {
+            "name": "omit-focus-2.native-source-state-supported-with-empty-undo",
+            "passed": true
+          },
+          {
+            "name": "omit-focus-2.resource-capture-before-debug-freeze",
+            "passed": true
+          },
+          {
+            "name": "omit-focus-2.source-real-edit-changes-after-S0",
+            "passed": true
+          },
+          {
+            "name": "omit-focus-2.source-exited-before-new-PID-TID",
+            "passed": true
+          },
+          {
+            "name": "omit-focus-2.omission-refused-before-execution",
+            "passed": true
+          },
+          {
+            "name": "omit-focus-2.actual-native-field-mismatch-recorded",
+            "passed": true
+          },
+          {
+            "name": "omit-focus-2.failed-case-not-published",
+            "passed": true
+          },
+          {
+            "name": "omit-focus-2.owned-process-and-desktop-cleanup",
+            "passed": true
+          },
+          {
+            "name": "historical-evidence-and-unapproved-implementations-unchanged",
+            "passed": true
+          }
+        ],
+        "cases": [
+          {
+            "scenario": "positive",
+            "repeat": 1,
+            "processExit": 0,
+            "controlResourcesPassed": true,
+            "executionPassed": true,
+            "declaredEDITIntegrationPassed": true,
+            "expectedFailure": false
+          },
+          {
+            "scenario": "undo",
+            "repeat": 1,
+            "processExit": 2,
+            "controlResourcesPassed": false,
+            "executionPassed": false,
+            "declaredEDITIntegrationPassed": false,
+            "expectedFailure": true
+          },
+          {
+            "scenario": "unknown-child",
+            "repeat": 1,
+            "processExit": 2,
+            "controlResourcesPassed": false,
+            "executionPassed": false,
+            "declaredEDITIntegrationPassed": false,
+            "expectedFailure": true
+          },
+          {
+            "scenario": "bad-parent",
+            "repeat": 1,
+            "processExit": 2,
+            "controlResourcesPassed": false,
+            "executionPassed": false,
+            "declaredEDITIntegrationPassed": false,
+            "expectedFailure": true
+          },
+          {
+            "scenario": "unregistered-ref",
+            "repeat": 1,
+            "processExit": 2,
+            "controlResourcesPassed": true,
+            "executionPassed": false,
+            "declaredEDITIntegrationPassed": false,
+            "expectedFailure": true
+          },
+          {
+            "scenario": "omit-text",
+            "repeat": 1,
+            "processExit": 2,
+            "controlResourcesPassed": false,
+            "executionPassed": false,
+            "declaredEDITIntegrationPassed": false,
+            "expectedFailure": true
+          },
+          {
+            "scenario": "omit-selection",
+            "repeat": 1,
+            "processExit": 2,
+            "controlResourcesPassed": false,
+            "executionPassed": false,
+            "declaredEDITIntegrationPassed": false,
+            "expectedFailure": true
+          },
+          {
+            "scenario": "omit-modify",
+            "repeat": 1,
+            "processExit": 2,
+            "controlResourcesPassed": false,
+            "executionPassed": false,
+            "declaredEDITIntegrationPassed": false,
+            "expectedFailure": true
+          },
+          {
+            "scenario": "omit-focus",
+            "repeat": 1,
+            "processExit": 2,
+            "controlResourcesPassed": false,
+            "executionPassed": false,
+            "declaredEDITIntegrationPassed": false,
+            "expectedFailure": true
+          },
+          {
+            "scenario": "positive",
+            "repeat": 2,
+            "processExit": 0,
+            "controlResourcesPassed": true,
+            "executionPassed": true,
+            "declaredEDITIntegrationPassed": true,
+            "expectedFailure": false
+          },
+          {
+            "scenario": "undo",
+            "repeat": 2,
+            "processExit": 2,
+            "controlResourcesPassed": false,
+            "executionPassed": false,
+            "declaredEDITIntegrationPassed": false,
+            "expectedFailure": true
+          },
+          {
+            "scenario": "unknown-child",
+            "repeat": 2,
+            "processExit": 2,
+            "controlResourcesPassed": false,
+            "executionPassed": false,
+            "declaredEDITIntegrationPassed": false,
+            "expectedFailure": true
+          },
+          {
+            "scenario": "bad-parent",
+            "repeat": 2,
+            "processExit": 2,
+            "controlResourcesPassed": false,
+            "executionPassed": false,
+            "declaredEDITIntegrationPassed": false,
+            "expectedFailure": true
+          },
+          {
+            "scenario": "unregistered-ref",
+            "repeat": 2,
+            "processExit": 2,
+            "controlResourcesPassed": true,
+            "executionPassed": false,
+            "declaredEDITIntegrationPassed": false,
+            "expectedFailure": true
+          },
+          {
+            "scenario": "omit-text",
+            "repeat": 2,
+            "processExit": 2,
+            "controlResourcesPassed": false,
+            "executionPassed": false,
+            "declaredEDITIntegrationPassed": false,
+            "expectedFailure": true
+          },
+          {
+            "scenario": "omit-selection",
+            "repeat": 2,
+            "processExit": 2,
+            "controlResourcesPassed": false,
+            "executionPassed": false,
+            "declaredEDITIntegrationPassed": false,
+            "expectedFailure": true
+          },
+          {
+            "scenario": "omit-modify",
+            "repeat": 2,
+            "processExit": 2,
+            "controlResourcesPassed": false,
+            "executionPassed": false,
+            "declaredEDITIntegrationPassed": false,
+            "expectedFailure": true
+          },
+          {
+            "scenario": "omit-focus",
+            "repeat": 2,
+            "processExit": 2,
+            "controlResourcesPassed": false,
+            "executionPassed": false,
+            "declaredEDITIntegrationPassed": false,
+            "expectedFailure": true
+          }
+        ],
+        "caseProcessingErrors": [],
+        "CET002Regression": "not_run",
+        "manualHostTest": "not_executed"
+      },
+      "passed": true
+    },
+    {
+      "suite": "cet002",
+      "error": "",
+      "summary": {
+        "allEvidenceChecksPassed": true,
+        "controlledCooperativeContinuationPassed": true,
+        "controlledGUIIntegrationPassed": true,
+        "generalGUIRestore": false,
+        "R3Complete": false,
+        "R3005bStarted": false,
+        "R4Started": false,
+        "checks": [
+          {
+            "name": "compiler-emits-normal-CALL-RET-and-GS-checks",
+            "passed": true
+          },
+          {
+            "name": "PE-contains-CFG-instrumentation-and-function-table",
+            "passed": true
+          },
+          {
+            "name": "core-1.verdict-and-exit",
+            "passed": true
+          },
+          {
+            "name": "core-1.independent-business-events-source-only",
+            "passed": true
+          },
+          {
+            "name": "core-1.actual-CET-CFG-policies-enabled",
+            "passed": true
+          },
+          {
+            "name": "core-1.source-dead-before-new-PID",
+            "passed": true
+          },
+          {
+            "name": "core-1.source-receipt-recomputed-from-raw-bytes",
+            "passed": true
+          },
+          {
+            "name": "core-1.normal-returns-match-kernel-observed-shadow-returns",
+            "passed": true
+          },
+          {
+            "name": "core-1.source-return-slot-0",
+            "passed": true
+          },
+          {
+            "name": "core-1.source-return-slot-1",
+            "passed": true
+          },
+          {
+            "name": "core-1.source-return-slot-2",
+            "passed": true
+          },
+          {
+            "name": "core-1.source-return-slot-3",
+            "passed": true
+          },
+          {
+            "name": "core-1.source-return-slot-4",
+            "passed": true
+          },
+          {
+            "name": "core-1.structural-entry-no-business-replay",
+            "passed": true
+          },
+          {
+            "name": "core-1.same-original-call-sites-and-RSP",
+            "passed": true
+          },
+          {
+            "name": "core-1.target-had-no-saved-business-data-before-restore",
+            "passed": true
+          },
+          {
+            "name": "core-1.only-declared-relocations-or-explicit-omission-in-raw-state",
+            "passed": true
+          },
+          {
+            "name": "core-1.rebuilt-chain-still-valid-after-raw-restore",
+            "passed": true
+          },
+          {
+            "name": "core-1.actual-computation-consumes-restored-memory-locals-register",
+            "passed": true
+          },
+          {
+            "name": "core-1.real-source-execution-restored",
+            "passed": true
+          },
+          {
+            "name": "core-1.minimal-run-no-windows-input-or-capture",
+            "passed": true
+          },
+          {
+            "name": "core-1.cleanup-owned-processes-and-desktops",
+            "passed": true
+          },
+          {
+            "name": "return-mismatch-1.verdict-and-exit",
+            "passed": true
+          },
+          {
+            "name": "return-mismatch-1.independent-business-events-source-only",
+            "passed": true
+          },
+          {
+            "name": "return-mismatch-1.actual-CET-CFG-policies-enabled",
+            "passed": true
+          },
+          {
+            "name": "return-mismatch-1.source-dead-before-new-PID",
+            "passed": true
+          },
+          {
+            "name": "return-mismatch-1.source-receipt-recomputed-from-raw-bytes",
+            "passed": true
+          },
+          {
+            "name": "return-mismatch-1.normal-returns-match-kernel-observed-shadow-returns",
+            "passed": true
+          },
+          {
+            "name": "return-mismatch-1.source-return-slot-0",
+            "passed": true
+          },
+          {
+            "name": "return-mismatch-1.source-return-slot-1",
+            "passed": true
+          },
+          {
+            "name": "return-mismatch-1.source-return-slot-2",
+            "passed": true
+          },
+          {
+            "name": "return-mismatch-1.source-return-slot-3",
+            "passed": true
+          },
+          {
+            "name": "return-mismatch-1.source-return-slot-4",
+            "passed": true
+          },
+          {
+            "name": "return-mismatch-1.structural-entry-no-business-replay",
+            "passed": true
+          },
+          {
+            "name": "return-mismatch-1.actual-alternate-callsite-rejected-before-state-write",
+            "passed": true
+          },
+          {
+            "name": "return-mismatch-1.failed-case-never-published",
+            "passed": true
+          },
+          {
+            "name": "return-mismatch-1.cleanup-owned-processes-and-desktops",
+            "passed": true
+          },
+          {
+            "name": "stack-1.verdict-and-exit",
+            "passed": true
+          },
+          {
+            "name": "stack-1.independent-business-events-source-only",
+            "passed": true
+          },
+          {
+            "name": "stack-1.actual-CET-CFG-policies-enabled",
+            "passed": true
+          },
+          {
+            "name": "stack-1.source-dead-before-new-PID",
+            "passed": true
+          },
+          {
+            "name": "stack-1.source-receipt-recomputed-from-raw-bytes",
+            "passed": true
+          },
+          {
+            "name": "stack-1.normal-returns-match-kernel-observed-shadow-returns",
+            "passed": true
+          },
+          {
+            "name": "stack-1.source-return-slot-0",
+            "passed": true
+          },
+          {
+            "name": "stack-1.source-return-slot-1",
+            "passed": true
+          },
+          {
+            "name": "stack-1.source-return-slot-2",
+            "passed": true
+          },
+          {
+            "name": "stack-1.source-return-slot-3",
+            "passed": true
+          },
+          {
+            "name": "stack-1.source-return-slot-4",
+            "passed": true
+          },
+          {
+            "name": "stack-1.structural-entry-no-business-replay",
+            "passed": true
+          },
+          {
+            "name": "stack-1.same-original-call-sites-and-RSP",
+            "passed": true
+          },
+          {
+            "name": "stack-1.target-had-no-saved-business-data-before-restore",
+            "passed": true
+          },
+          {
+            "name": "stack-1.only-declared-relocations-or-explicit-omission-in-raw-state",
+            "passed": true
+          },
+          {
+            "name": "stack-1.rebuilt-chain-still-valid-after-raw-restore",
+            "passed": true
+          },
+          {
+            "name": "stack-1.actual-computation-consumes-restored-memory-locals-register",
+            "passed": true
+          },
+          {
+            "name": "stack-1.omission-not-masked-by-CET-or-early-fault",
+            "passed": true
+          },
+          {
+            "name": "stack-1.failed-case-never-published",
+            "passed": true
+          },
+          {
+            "name": "stack-1.cleanup-owned-processes-and-desktops",
+            "passed": true
+          },
+          {
+            "name": "register-1.verdict-and-exit",
+            "passed": true
+          },
+          {
+            "name": "register-1.independent-business-events-source-only",
+            "passed": true
+          },
+          {
+            "name": "register-1.actual-CET-CFG-policies-enabled",
+            "passed": true
+          },
+          {
+            "name": "register-1.source-dead-before-new-PID",
+            "passed": true
+          },
+          {
+            "name": "register-1.source-receipt-recomputed-from-raw-bytes",
+            "passed": true
+          },
+          {
+            "name": "register-1.normal-returns-match-kernel-observed-shadow-returns",
+            "passed": true
+          },
+          {
+            "name": "register-1.source-return-slot-0",
+            "passed": true
+          },
+          {
+            "name": "register-1.source-return-slot-1",
+            "passed": true
+          },
+          {
+            "name": "register-1.source-return-slot-2",
+            "passed": true
+          },
+          {
+            "name": "register-1.source-return-slot-3",
+            "passed": true
+          },
+          {
+            "name": "register-1.source-return-slot-4",
+            "passed": true
+          },
+          {
+            "name": "register-1.structural-entry-no-business-replay",
+            "passed": true
+          },
+          {
+            "name": "register-1.same-original-call-sites-and-RSP",
+            "passed": true
+          },
+          {
+            "name": "register-1.target-had-no-saved-business-data-before-restore",
+            "passed": true
+          },
+          {
+            "name": "register-1.only-declared-relocations-or-explicit-omission-in-raw-state",
+            "passed": true
+          },
+          {
+            "name": "register-1.rebuilt-chain-still-valid-after-raw-restore",
+            "passed": true
+          },
+          {
+            "name": "register-1.actual-computation-consumes-restored-memory-locals-register",
+            "passed": true
+          },
+          {
+            "name": "register-1.omission-not-masked-by-CET-or-early-fault",
+            "passed": true
+          },
+          {
+            "name": "register-1.failed-case-never-published",
+            "passed": true
+          },
+          {
+            "name": "register-1.cleanup-owned-processes-and-desktops",
+            "passed": true
+          },
+          {
+            "name": "memory-1.verdict-and-exit",
+            "passed": true
+          },
+          {
+            "name": "memory-1.independent-business-events-source-only",
+            "passed": true
+          },
+          {
+            "name": "memory-1.actual-CET-CFG-policies-enabled",
+            "passed": true
+          },
+          {
+            "name": "memory-1.source-dead-before-new-PID",
+            "passed": true
+          },
+          {
+            "name": "memory-1.source-receipt-recomputed-from-raw-bytes",
+            "passed": true
+          },
+          {
+            "name": "memory-1.normal-returns-match-kernel-observed-shadow-returns",
+            "passed": true
+          },
+          {
+            "name": "memory-1.source-return-slot-0",
+            "passed": true
+          },
+          {
+            "name": "memory-1.source-return-slot-1",
+            "passed": true
+          },
+          {
+            "name": "memory-1.source-return-slot-2",
+            "passed": true
+          },
+          {
+            "name": "memory-1.source-return-slot-3",
+            "passed": true
+          },
+          {
+            "name": "memory-1.source-return-slot-4",
+            "passed": true
+          },
+          {
+            "name": "memory-1.structural-entry-no-business-replay",
+            "passed": true
+          },
+          {
+            "name": "memory-1.same-original-call-sites-and-RSP",
+            "passed": true
+          },
+          {
+            "name": "memory-1.target-had-no-saved-business-data-before-restore",
+            "passed": true
+          },
+          {
+            "name": "memory-1.only-declared-relocations-or-explicit-omission-in-raw-state",
+            "passed": true
+          },
+          {
+            "name": "memory-1.rebuilt-chain-still-valid-after-raw-restore",
+            "passed": true
+          },
+          {
+            "name": "memory-1.actual-computation-consumes-restored-memory-locals-register",
+            "passed": true
+          },
+          {
+            "name": "memory-1.omission-not-masked-by-CET-or-early-fault",
+            "passed": true
+          },
+          {
+            "name": "memory-1.failed-case-never-published",
+            "passed": true
+          },
+          {
+            "name": "memory-1.cleanup-owned-processes-and-desktops",
+            "passed": true
+          },
+          {
+            "name": "cookie-1.verdict-and-exit",
+            "passed": true
+          },
+          {
+            "name": "cookie-1.independent-business-events-source-only",
+            "passed": true
+          },
+          {
+            "name": "cookie-1.actual-CET-CFG-policies-enabled",
+            "passed": true
+          },
+          {
+            "name": "cookie-1.source-dead-before-new-PID",
+            "passed": true
+          },
+          {
+            "name": "cookie-1.source-receipt-recomputed-from-raw-bytes",
+            "passed": true
+          },
+          {
+            "name": "cookie-1.normal-returns-match-kernel-observed-shadow-returns",
+            "passed": true
+          },
+          {
+            "name": "cookie-1.source-return-slot-0",
+            "passed": true
+          },
+          {
+            "name": "cookie-1.source-return-slot-1",
+            "passed": true
+          },
+          {
+            "name": "cookie-1.source-return-slot-2",
+            "passed": true
+          },
+          {
+            "name": "cookie-1.source-return-slot-3",
+            "passed": true
+          },
+          {
+            "name": "cookie-1.source-return-slot-4",
+            "passed": true
+          },
+          {
+            "name": "cookie-1.structural-entry-no-business-replay",
+            "passed": true
+          },
+          {
+            "name": "cookie-1.same-original-call-sites-and-RSP",
+            "passed": true
+          },
+          {
+            "name": "cookie-1.target-had-no-saved-business-data-before-restore",
+            "passed": true
+          },
+          {
+            "name": "cookie-1.only-declared-relocations-or-explicit-omission-in-raw-state",
+            "passed": true
+          },
+          {
+            "name": "cookie-1.rebuilt-chain-still-valid-after-raw-restore",
+            "passed": true
+          },
+          {
+            "name": "cookie-1.GS-really-rejects-foreign-cookie",
+            "passed": true
+          },
+          {
+            "name": "cookie-1.failed-case-never-published",
+            "passed": true
+          },
+          {
+            "name": "cookie-1.cleanup-owned-processes-and-desktops",
+            "passed": true
+          },
+          {
+            "name": "gui-1.verdict-and-exit",
+            "passed": true
+          },
+          {
+            "name": "gui-1.independent-business-events-source-only",
+            "passed": true
+          },
+          {
+            "name": "gui-1.actual-CET-CFG-policies-enabled",
+            "passed": true
+          },
+          {
+            "name": "gui-1.source-dead-before-new-PID",
+            "passed": true
+          },
+          {
+            "name": "gui-1.source-receipt-recomputed-from-raw-bytes",
+            "passed": true
+          },
+          {
+            "name": "gui-1.normal-returns-match-kernel-observed-shadow-returns",
+            "passed": true
+          },
+          {
+            "name": "gui-1.source-return-slot-0",
+            "passed": true
+          },
+          {
+            "name": "gui-1.source-return-slot-1",
+            "passed": true
+          },
+          {
+            "name": "gui-1.source-return-slot-2",
+            "passed": true
+          },
+          {
+            "name": "gui-1.source-return-slot-3",
+            "passed": true
+          },
+          {
+            "name": "gui-1.source-return-slot-4",
+            "passed": true
+          },
+          {
+            "name": "gui-1.structural-entry-no-business-replay",
+            "passed": true
+          },
+          {
+            "name": "gui-1.same-original-call-sites-and-RSP",
+            "passed": true
+          },
+          {
+            "name": "gui-1.target-had-no-saved-business-data-before-restore",
+            "passed": true
+          },
+          {
+            "name": "gui-1.HWND-preimage-1859720839208",
+            "passed": true
+          },
+          {
+            "name": "gui-1.HWND-preimage-1859723001296",
+            "passed": true
+          },
+          {
+            "name": "gui-1.HWND-preimage-1859723001184",
+            "passed": true
+          },
+          {
+            "name": "gui-1.only-declared-relocations-or-explicit-omission-in-raw-state",
+            "passed": true
+          },
+          {
+            "name": "gui-1.rebuilt-chain-still-valid-after-raw-restore",
+            "passed": true
+          },
+          {
+            "name": "gui-1.actual-computation-consumes-restored-memory-locals-register",
+            "passed": true
+          },
+          {
+            "name": "gui-1.real-source-execution-restored",
+            "passed": true
+          },
+          {
+            "name": "gui-1.source-S0-real-GDI-and-PNG",
+            "passed": true
+          },
+          {
+            "name": "gui-1.source-CHANGED-real-GDI-and-PNG",
+            "passed": true
+          },
+          {
+            "name": "gui-1.restored-S0-real-GDI-and-PNG",
+            "passed": true
+          },
+          {
+            "name": "gui-1.restored-after-input-real-GDI-and-PNG",
+            "passed": true
+          },
+          {
+            "name": "gui-1.restored-native-window-input-and-rendering",
+            "passed": true
+          },
+          {
+            "name": "gui-1.cleanup-owned-processes-and-desktops",
+            "passed": true
+          },
+          {
+            "name": "core-2.verdict-and-exit",
+            "passed": true
+          },
+          {
+            "name": "core-2.independent-business-events-source-only",
+            "passed": true
+          },
+          {
+            "name": "core-2.actual-CET-CFG-policies-enabled",
+            "passed": true
+          },
+          {
+            "name": "core-2.source-dead-before-new-PID",
+            "passed": true
+          },
+          {
+            "name": "core-2.source-receipt-recomputed-from-raw-bytes",
+            "passed": true
+          },
+          {
+            "name": "core-2.normal-returns-match-kernel-observed-shadow-returns",
+            "passed": true
+          },
+          {
+            "name": "core-2.source-return-slot-0",
+            "passed": true
+          },
+          {
+            "name": "core-2.source-return-slot-1",
+            "passed": true
+          },
+          {
+            "name": "core-2.source-return-slot-2",
+            "passed": true
+          },
+          {
+            "name": "core-2.source-return-slot-3",
+            "passed": true
+          },
+          {
+            "name": "core-2.source-return-slot-4",
+            "passed": true
+          },
+          {
+            "name": "core-2.structural-entry-no-business-replay",
+            "passed": true
+          },
+          {
+            "name": "core-2.same-original-call-sites-and-RSP",
+            "passed": true
+          },
+          {
+            "name": "core-2.target-had-no-saved-business-data-before-restore",
+            "passed": true
+          },
+          {
+            "name": "core-2.only-declared-relocations-or-explicit-omission-in-raw-state",
+            "passed": true
+          },
+          {
+            "name": "core-2.rebuilt-chain-still-valid-after-raw-restore",
+            "passed": true
+          },
+          {
+            "name": "core-2.actual-computation-consumes-restored-memory-locals-register",
+            "passed": true
+          },
+          {
+            "name": "core-2.real-source-execution-restored",
+            "passed": true
+          },
+          {
+            "name": "core-2.minimal-run-no-windows-input-or-capture",
+            "passed": true
+          },
+          {
+            "name": "core-2.cleanup-owned-processes-and-desktops",
+            "passed": true
+          },
+          {
+            "name": "return-mismatch-2.verdict-and-exit",
+            "passed": true
+          },
+          {
+            "name": "return-mismatch-2.independent-business-events-source-only",
+            "passed": true
+          },
+          {
+            "name": "return-mismatch-2.actual-CET-CFG-policies-enabled",
+            "passed": true
+          },
+          {
+            "name": "return-mismatch-2.source-dead-before-new-PID",
+            "passed": true
+          },
+          {
+            "name": "return-mismatch-2.source-receipt-recomputed-from-raw-bytes",
+            "passed": true
+          },
+          {
+            "name": "return-mismatch-2.normal-returns-match-kernel-observed-shadow-returns",
+            "passed": true
+          },
+          {
+            "name": "return-mismatch-2.source-return-slot-0",
+            "passed": true
+          },
+          {
+            "name": "return-mismatch-2.source-return-slot-1",
+            "passed": true
+          },
+          {
+            "name": "return-mismatch-2.source-return-slot-2",
+            "passed": true
+          },
+          {
+            "name": "return-mismatch-2.source-return-slot-3",
+            "passed": true
+          },
+          {
+            "name": "return-mismatch-2.source-return-slot-4",
+            "passed": true
+          },
+          {
+            "name": "return-mismatch-2.structural-entry-no-business-replay",
+            "passed": true
+          },
+          {
+            "name": "return-mismatch-2.actual-alternate-callsite-rejected-before-state-write",
+            "passed": true
+          },
+          {
+            "name": "return-mismatch-2.failed-case-never-published",
+            "passed": true
+          },
+          {
+            "name": "return-mismatch-2.cleanup-owned-processes-and-desktops",
+            "passed": true
+          },
+          {
+            "name": "stack-2.verdict-and-exit",
+            "passed": true
+          },
+          {
+            "name": "stack-2.independent-business-events-source-only",
+            "passed": true
+          },
+          {
+            "name": "stack-2.actual-CET-CFG-policies-enabled",
+            "passed": true
+          },
+          {
+            "name": "stack-2.source-dead-before-new-PID",
+            "passed": true
+          },
+          {
+            "name": "stack-2.source-receipt-recomputed-from-raw-bytes",
+            "passed": true
+          },
+          {
+            "name": "stack-2.normal-returns-match-kernel-observed-shadow-returns",
+            "passed": true
+          },
+          {
+            "name": "stack-2.source-return-slot-0",
+            "passed": true
+          },
+          {
+            "name": "stack-2.source-return-slot-1",
+            "passed": true
+          },
+          {
+            "name": "stack-2.source-return-slot-2",
+            "passed": true
+          },
+          {
+            "name": "stack-2.source-return-slot-3",
+            "passed": true
+          },
+          {
+            "name": "stack-2.source-return-slot-4",
+            "passed": true
+          },
+          {
+            "name": "stack-2.structural-entry-no-business-replay",
+            "passed": true
+          },
+          {
+            "name": "stack-2.same-original-call-sites-and-RSP",
+            "passed": true
+          },
+          {
+            "name": "stack-2.target-had-no-saved-business-data-before-restore",
+            "passed": true
+          },
+          {
+            "name": "stack-2.only-declared-relocations-or-explicit-omission-in-raw-state",
+            "passed": true
+          },
+          {
+            "name": "stack-2.rebuilt-chain-still-valid-after-raw-restore",
+            "passed": true
+          },
+          {
+            "name": "stack-2.actual-computation-consumes-restored-memory-locals-register",
+            "passed": true
+          },
+          {
+            "name": "stack-2.omission-not-masked-by-CET-or-early-fault",
+            "passed": true
+          },
+          {
+            "name": "stack-2.failed-case-never-published",
+            "passed": true
+          },
+          {
+            "name": "stack-2.cleanup-owned-processes-and-desktops",
+            "passed": true
+          },
+          {
+            "name": "register-2.verdict-and-exit",
+            "passed": true
+          },
+          {
+            "name": "register-2.independent-business-events-source-only",
+            "passed": true
+          },
+          {
+            "name": "register-2.actual-CET-CFG-policies-enabled",
+            "passed": true
+          },
+          {
+            "name": "register-2.source-dead-before-new-PID",
+            "passed": true
+          },
+          {
+            "name": "register-2.source-receipt-recomputed-from-raw-bytes",
+            "passed": true
+          },
+          {
+            "name": "register-2.normal-returns-match-kernel-observed-shadow-returns",
+            "passed": true
+          },
+          {
+            "name": "register-2.source-return-slot-0",
+            "passed": true
+          },
+          {
+            "name": "register-2.source-return-slot-1",
+            "passed": true
+          },
+          {
+            "name": "register-2.source-return-slot-2",
+            "passed": true
+          },
+          {
+            "name": "register-2.source-return-slot-3",
+            "passed": true
+          },
+          {
+            "name": "register-2.source-return-slot-4",
+            "passed": true
+          },
+          {
+            "name": "register-2.structural-entry-no-business-replay",
+            "passed": true
+          },
+          {
+            "name": "register-2.same-original-call-sites-and-RSP",
+            "passed": true
+          },
+          {
+            "name": "register-2.target-had-no-saved-business-data-before-restore",
+            "passed": true
+          },
+          {
+            "name": "register-2.only-declared-relocations-or-explicit-omission-in-raw-state",
+            "passed": true
+          },
+          {
+            "name": "register-2.rebuilt-chain-still-valid-after-raw-restore",
+            "passed": true
+          },
+          {
+            "name": "register-2.actual-computation-consumes-restored-memory-locals-register",
+            "passed": true
+          },
+          {
+            "name": "register-2.omission-not-masked-by-CET-or-early-fault",
+            "passed": true
+          },
+          {
+            "name": "register-2.failed-case-never-published",
+            "passed": true
+          },
+          {
+            "name": "register-2.cleanup-owned-processes-and-desktops",
+            "passed": true
+          },
+          {
+            "name": "memory-2.verdict-and-exit",
+            "passed": true
+          },
+          {
+            "name": "memory-2.independent-business-events-source-only",
+            "passed": true
+          },
+          {
+            "name": "memory-2.actual-CET-CFG-policies-enabled",
+            "passed": true
+          },
+          {
+            "name": "memory-2.source-dead-before-new-PID",
+            "passed": true
+          },
+          {
+            "name": "memory-2.source-receipt-recomputed-from-raw-bytes",
+            "passed": true
+          },
+          {
+            "name": "memory-2.normal-returns-match-kernel-observed-shadow-returns",
+            "passed": true
+          },
+          {
+            "name": "memory-2.source-return-slot-0",
+            "passed": true
+          },
+          {
+            "name": "memory-2.source-return-slot-1",
+            "passed": true
+          },
+          {
+            "name": "memory-2.source-return-slot-2",
+            "passed": true
+          },
+          {
+            "name": "memory-2.source-return-slot-3",
+            "passed": true
+          },
+          {
+            "name": "memory-2.source-return-slot-4",
+            "passed": true
+          },
+          {
+            "name": "memory-2.structural-entry-no-business-replay",
+            "passed": true
+          },
+          {
+            "name": "memory-2.same-original-call-sites-and-RSP",
+            "passed": true
+          },
+          {
+            "name": "memory-2.target-had-no-saved-business-data-before-restore",
+            "passed": true
+          },
+          {
+            "name": "memory-2.only-declared-relocations-or-explicit-omission-in-raw-state",
+            "passed": true
+          },
+          {
+            "name": "memory-2.rebuilt-chain-still-valid-after-raw-restore",
+            "passed": true
+          },
+          {
+            "name": "memory-2.actual-computation-consumes-restored-memory-locals-register",
+            "passed": true
+          },
+          {
+            "name": "memory-2.omission-not-masked-by-CET-or-early-fault",
+            "passed": true
+          },
+          {
+            "name": "memory-2.failed-case-never-published",
+            "passed": true
+          },
+          {
+            "name": "memory-2.cleanup-owned-processes-and-desktops",
+            "passed": true
+          },
+          {
+            "name": "cookie-2.verdict-and-exit",
+            "passed": true
+          },
+          {
+            "name": "cookie-2.independent-business-events-source-only",
+            "passed": true
+          },
+          {
+            "name": "cookie-2.actual-CET-CFG-policies-enabled",
+            "passed": true
+          },
+          {
+            "name": "cookie-2.source-dead-before-new-PID",
+            "passed": true
+          },
+          {
+            "name": "cookie-2.source-receipt-recomputed-from-raw-bytes",
+            "passed": true
+          },
+          {
+            "name": "cookie-2.normal-returns-match-kernel-observed-shadow-returns",
+            "passed": true
+          },
+          {
+            "name": "cookie-2.source-return-slot-0",
+            "passed": true
+          },
+          {
+            "name": "cookie-2.source-return-slot-1",
+            "passed": true
+          },
+          {
+            "name": "cookie-2.source-return-slot-2",
+            "passed": true
+          },
+          {
+            "name": "cookie-2.source-return-slot-3",
+            "passed": true
+          },
+          {
+            "name": "cookie-2.source-return-slot-4",
+            "passed": true
+          },
+          {
+            "name": "cookie-2.structural-entry-no-business-replay",
+            "passed": true
+          },
+          {
+            "name": "cookie-2.same-original-call-sites-and-RSP",
+            "passed": true
+          },
+          {
+            "name": "cookie-2.target-had-no-saved-business-data-before-restore",
+            "passed": true
+          },
+          {
+            "name": "cookie-2.only-declared-relocations-or-explicit-omission-in-raw-state",
+            "passed": true
+          },
+          {
+            "name": "cookie-2.rebuilt-chain-still-valid-after-raw-restore",
+            "passed": true
+          },
+          {
+            "name": "cookie-2.GS-really-rejects-foreign-cookie",
+            "passed": true
+          },
+          {
+            "name": "cookie-2.failed-case-never-published",
+            "passed": true
+          },
+          {
+            "name": "cookie-2.cleanup-owned-processes-and-desktops",
+            "passed": true
+          },
+          {
+            "name": "gui-2.verdict-and-exit",
+            "passed": true
+          },
+          {
+            "name": "gui-2.independent-business-events-source-only",
+            "passed": true
+          },
+          {
+            "name": "gui-2.actual-CET-CFG-policies-enabled",
+            "passed": true
+          },
+          {
+            "name": "gui-2.source-dead-before-new-PID",
+            "passed": true
+          },
+          {
+            "name": "gui-2.source-receipt-recomputed-from-raw-bytes",
+            "passed": true
+          },
+          {
+            "name": "gui-2.normal-returns-match-kernel-observed-shadow-returns",
+            "passed": true
+          },
+          {
+            "name": "gui-2.source-return-slot-0",
+            "passed": true
+          },
+          {
+            "name": "gui-2.source-return-slot-1",
+            "passed": true
+          },
+          {
+            "name": "gui-2.source-return-slot-2",
+            "passed": true
+          },
+          {
+            "name": "gui-2.source-return-slot-3",
+            "passed": true
+          },
+          {
+            "name": "gui-2.source-return-slot-4",
+            "passed": true
+          },
+          {
+            "name": "gui-2.structural-entry-no-business-replay",
+            "passed": true
+          },
+          {
+            "name": "gui-2.same-original-call-sites-and-RSP",
+            "passed": true
+          },
+          {
+            "name": "gui-2.target-had-no-saved-business-data-before-restore",
+            "passed": true
+          },
+          {
+            "name": "gui-2.HWND-preimage-1859720839208",
+            "passed": true
+          },
+          {
+            "name": "gui-2.HWND-preimage-1859723001296",
+            "passed": true
+          },
+          {
+            "name": "gui-2.HWND-preimage-1859723001184",
+            "passed": true
+          },
+          {
+            "name": "gui-2.only-declared-relocations-or-explicit-omission-in-raw-state",
+            "passed": true
+          },
+          {
+            "name": "gui-2.rebuilt-chain-still-valid-after-raw-restore",
+            "passed": true
+          },
+          {
+            "name": "gui-2.actual-computation-consumes-restored-memory-locals-register",
+            "passed": true
+          },
+          {
+            "name": "gui-2.real-source-execution-restored",
+            "passed": true
+          },
+          {
+            "name": "gui-2.source-S0-real-GDI-and-PNG",
+            "passed": true
+          },
+          {
+            "name": "gui-2.source-CHANGED-real-GDI-and-PNG",
+            "passed": true
+          },
+          {
+            "name": "gui-2.restored-S0-real-GDI-and-PNG",
+            "passed": true
+          },
+          {
+            "name": "gui-2.restored-after-input-real-GDI-and-PNG",
+            "passed": true
+          },
+          {
+            "name": "gui-2.restored-native-window-input-and-rendering",
+            "passed": true
+          },
+          {
+            "name": "gui-2.cleanup-owned-processes-and-desktops",
+            "passed": true
+          },
+          {
+            "name": "old-evidence-unchanged-except-explicit-input-diagnostic",
+            "passed": true
+          }
+        ],
+        "cases": [
+          {
+            "scenario": "core",
+            "repeat": 1,
+            "processExit": 0,
+            "sourceExecutionRestored": true,
+            "expectedFailure": false
+          },
+          {
+            "scenario": "return-mismatch",
+            "repeat": 1,
+            "processExit": 2,
+            "sourceExecutionRestored": false,
+            "expectedFailure": true
+          },
+          {
+            "scenario": "stack",
+            "repeat": 1,
+            "processExit": 2,
+            "sourceExecutionRestored": false,
+            "expectedFailure": true
+          },
+          {
+            "scenario": "register",
+            "repeat": 1,
+            "processExit": 2,
+            "sourceExecutionRestored": false,
+            "expectedFailure": true
+          },
+          {
+            "scenario": "memory",
+            "repeat": 1,
+            "processExit": 2,
+            "sourceExecutionRestored": false,
+            "expectedFailure": true
+          },
+          {
+            "scenario": "cookie",
+            "repeat": 1,
+            "processExit": 2,
+            "sourceExecutionRestored": false,
+            "expectedFailure": true
+          },
+          {
+            "scenario": "gui",
+            "repeat": 1,
+            "processExit": 0,
+            "sourceExecutionRestored": true,
+            "expectedFailure": false
+          },
+          {
+            "scenario": "core",
+            "repeat": 2,
+            "processExit": 0,
+            "sourceExecutionRestored": true,
+            "expectedFailure": false
+          },
+          {
+            "scenario": "return-mismatch",
+            "repeat": 2,
+            "processExit": 2,
+            "sourceExecutionRestored": false,
+            "expectedFailure": true
+          },
+          {
+            "scenario": "stack",
+            "repeat": 2,
+            "processExit": 2,
+            "sourceExecutionRestored": false,
+            "expectedFailure": true
+          },
+          {
+            "scenario": "register",
+            "repeat": 2,
+            "processExit": 2,
+            "sourceExecutionRestored": false,
+            "expectedFailure": true
+          },
+          {
+            "scenario": "memory",
+            "repeat": 2,
+            "processExit": 2,
+            "sourceExecutionRestored": false,
+            "expectedFailure": true
+          },
+          {
+            "scenario": "cookie",
+            "repeat": 2,
+            "processExit": 2,
+            "sourceExecutionRestored": false,
+            "expectedFailure": true
+          },
+          {
+            "scenario": "gui",
+            "repeat": 2,
+            "processExit": 0,
+            "sourceExecutionRestored": true,
+            "expectedFailure": false
+          }
+        ],
+        "caseProcessingErrors": [],
+        "manualHostTest": "not_executed",
+        "oldGateRerun": false
+      },
+      "passed": true
+    }
+  ],
+  "fullNestedRegressionExecuted": false,
+  "cleanupCausalFixVerified": false,
+  "fullR5004Passed": false,
+  "gateClosed": false
+}

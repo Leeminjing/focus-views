@@ -1,0 +1,6358 @@
+{
+  "passed": true,
+  "readOnly": true,
+  "newNativeExperiment": false,
+  "channels": [
+    {
+      "file": "run1\\legacy-minimal\\restored-input.jsonl",
+      "target": [
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "target_identity",
+          "diagnosticVersion": 1,
+          "tickMs": 7076968,
+          "pid": 11856,
+          "tid": 44428,
+          "targetPid": 43976,
+          "targetTid": 17396,
+          "threadOwner": 43976,
+          "created": 134376684430707523,
+          "threadCreated": 134376684430707540,
+          "processWait": 258,
+          "threadWait": 258,
+          "desktop": "fv_r305_44836_7076281_restored"
+        }
+      ],
+      "helper": [
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "helper_identity",
+          "diagnosticVersion": 1,
+          "tickMs": 7076968,
+          "pid": 11856,
+          "tid": 44428,
+          "path": "C:\\fv-c\\rd\\b001-build\\r305a.exe",
+          "diskSha256": "a93ad8445b3ca373106f897b1c1f56a9fff27896f88f20622154fc1dd4250411",
+          "created": 134376684432235889,
+          "threadCreated": 134376684432235904,
+          "desktop": "fv_r305_44836_7076281_restored"
+        }
+      ],
+      "loaded": [
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "loaded_module",
+          "diagnosticVersion": 1,
+          "tickMs": 7076968,
+          "pid": 11856,
+          "tid": 44428,
+          "module": 140720175185920,
+          "path": "C:\\fv-c\\rd\\b001-build\\runtime304.dll",
+          "diskSha256": "10104c69171ac6ad8e20cef1a555e788e935f77bcf03f019dd74b5e0b7915343"
+        }
+      ],
+      "exports": [
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "export_owner",
+          "diagnosticVersion": 1,
+          "tickMs": 7076968,
+          "pid": 11856,
+          "tid": 44428,
+          "export": "ManagedGetMessage",
+          "address": 140720175217200,
+          "owner": 140720175185920,
+          "passedModule": 140720175185920,
+          "sameModule": true,
+          "path": "C:\\fv-c\\rd\\b001-build\\runtime304.dll"
+        },
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "export_owner",
+          "diagnosticVersion": 1,
+          "tickMs": 7076968,
+          "pid": 11856,
+          "tid": 44428,
+          "export": "ManagedCallWindow",
+          "address": 140720175216352,
+          "owner": 140720175185920,
+          "passedModule": 140720175185920,
+          "sameModule": true,
+          "path": "C:\\fv-c\\rd\\b001-build\\runtime304.dll"
+        }
+      ],
+      "api": [
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "api",
+          "diagnosticVersion": 1,
+          "tickMs": 7076968,
+          "pid": 11856,
+          "tid": 44428,
+          "api": "LoadLibraryW.runtime",
+          "result": 140720175185920,
+          "error": 0
+        },
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "api",
+          "diagnosticVersion": 1,
+          "tickMs": 7076968,
+          "pid": 11856,
+          "tid": 44428,
+          "api": "GetProcAddress.ManagedGetMessage",
+          "result": 140720175217200,
+          "error": 0
+        },
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "api",
+          "diagnosticVersion": 1,
+          "tickMs": 7076968,
+          "pid": 11856,
+          "tid": 44428,
+          "api": "SetWindowsHookExW.thread_only",
+          "result": 593297,
+          "error": 0
+        },
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "api",
+          "diagnosticVersion": 1,
+          "tickMs": 7076968,
+          "pid": 11856,
+          "tid": 44428,
+          "api": "GetProcAddress.ManagedCallWindow",
+          "result": 140720175216352,
+          "error": 0
+        },
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "api",
+          "diagnosticVersion": 1,
+          "tickMs": 7076968,
+          "pid": 11856,
+          "tid": 44428,
+          "api": "SetWindowsHookExW.thread_control",
+          "result": 4328817,
+          "error": 0
+        },
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "api",
+          "diagnosticVersion": 1,
+          "tickMs": 7077218,
+          "pid": 11856,
+          "tid": 44428,
+          "api": "UnhookWindowsHookEx.control",
+          "result": 1,
+          "error": 0
+        },
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "api",
+          "diagnosticVersion": 1,
+          "tickMs": 7077218,
+          "pid": 11856,
+          "tid": 44428,
+          "api": "UnhookWindowsHookEx.queue",
+          "result": 1,
+          "error": 0
+        },
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "api",
+          "diagnosticVersion": 1,
+          "tickMs": 7077218,
+          "pid": 11856,
+          "tid": 44428,
+          "api": "FreeLibrary.bridge_module",
+          "result": 1,
+          "error": 0
+        }
+      ],
+      "checks": {
+        "one_argument": true,
+        "target_instance": true,
+        "same_desktop": true,
+        "module_and_exports": true,
+        "raw_api_sequence": true,
+        "raw_calls_succeeded_this_run": true,
+        "no_diagnostic_query_failures": true,
+        "helper_identity_disk_identity": true,
+        "argument_file_disk_identity": true,
+        "loaded_module_disk_identity": true
+      }
+    },
+    {
+      "file": "run1\\legacy-minimal\\source-input.jsonl",
+      "target": [
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "target_identity",
+          "diagnosticVersion": 1,
+          "tickMs": 7076531,
+          "pid": 45724,
+          "tid": 5336,
+          "targetPid": 45208,
+          "targetTid": 37872,
+          "threadOwner": 45208,
+          "created": 134376684425612108,
+          "threadCreated": 134376684425612130,
+          "processWait": 258,
+          "threadWait": 258,
+          "desktop": "fv_r305_44836_7076281_source"
+        }
+      ],
+      "helper": [
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "helper_identity",
+          "diagnosticVersion": 1,
+          "tickMs": 7076531,
+          "pid": 45724,
+          "tid": 5336,
+          "path": "C:\\fv-c\\rd\\b001-build\\r305a.exe",
+          "diskSha256": "a93ad8445b3ca373106f897b1c1f56a9fff27896f88f20622154fc1dd4250411",
+          "created": 134376684427844207,
+          "threadCreated": 134376684427844226,
+          "desktop": "fv_r305_44836_7076281_source"
+        }
+      ],
+      "loaded": [
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "loaded_module",
+          "diagnosticVersion": 1,
+          "tickMs": 7076531,
+          "pid": 45724,
+          "tid": 5336,
+          "module": 140721757814784,
+          "path": "C:\\fv-c\\rd\\b001-build\\runtime304.dll",
+          "diskSha256": "10104c69171ac6ad8e20cef1a555e788e935f77bcf03f019dd74b5e0b7915343"
+        }
+      ],
+      "exports": [
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "export_owner",
+          "diagnosticVersion": 1,
+          "tickMs": 7076531,
+          "pid": 45724,
+          "tid": 5336,
+          "export": "ManagedGetMessage",
+          "address": 140721757846064,
+          "owner": 140721757814784,
+          "passedModule": 140721757814784,
+          "sameModule": true,
+          "path": "C:\\fv-c\\rd\\b001-build\\runtime304.dll"
+        },
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "export_owner",
+          "diagnosticVersion": 1,
+          "tickMs": 7076531,
+          "pid": 45724,
+          "tid": 5336,
+          "export": "ManagedCallWindow",
+          "address": 140721757845216,
+          "owner": 140721757814784,
+          "passedModule": 140721757814784,
+          "sameModule": true,
+          "path": "C:\\fv-c\\rd\\b001-build\\runtime304.dll"
+        }
+      ],
+      "api": [
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "api",
+          "diagnosticVersion": 1,
+          "tickMs": 7076531,
+          "pid": 45724,
+          "tid": 5336,
+          "api": "LoadLibraryW.runtime",
+          "result": 140721757814784,
+          "error": 0
+        },
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "api",
+          "diagnosticVersion": 1,
+          "tickMs": 7076531,
+          "pid": 45724,
+          "tid": 5336,
+          "api": "GetProcAddress.ManagedGetMessage",
+          "result": 140721757846064,
+          "error": 0
+        },
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "api",
+          "diagnosticVersion": 1,
+          "tickMs": 7076531,
+          "pid": 45724,
+          "tid": 5336,
+          "api": "SetWindowsHookExW.thread_only",
+          "result": 2166167,
+          "error": 0
+        },
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "api",
+          "diagnosticVersion": 1,
+          "tickMs": 7076531,
+          "pid": 45724,
+          "tid": 5336,
+          "api": "GetProcAddress.ManagedCallWindow",
+          "result": 140721757845216,
+          "error": 0
+        },
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "api",
+          "diagnosticVersion": 1,
+          "tickMs": 7076531,
+          "pid": 45724,
+          "tid": 5336,
+          "api": "SetWindowsHookExW.thread_control",
+          "result": 13569397,
+          "error": 0
+        },
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "api",
+          "diagnosticVersion": 1,
+          "tickMs": 7076593,
+          "pid": 45724,
+          "tid": 5336,
+          "api": "UnhookWindowsHookEx.control",
+          "result": 1,
+          "error": 0
+        },
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "api",
+          "diagnosticVersion": 1,
+          "tickMs": 7076593,
+          "pid": 45724,
+          "tid": 5336,
+          "api": "UnhookWindowsHookEx.queue",
+          "result": 1,
+          "error": 0
+        },
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "api",
+          "diagnosticVersion": 1,
+          "tickMs": 7076593,
+          "pid": 45724,
+          "tid": 5336,
+          "api": "FreeLibrary.bridge_module",
+          "result": 1,
+          "error": 0
+        }
+      ],
+      "checks": {
+        "one_argument": true,
+        "target_instance": true,
+        "same_desktop": true,
+        "module_and_exports": true,
+        "raw_api_sequence": true,
+        "raw_calls_succeeded_this_run": true,
+        "no_diagnostic_query_failures": true,
+        "helper_identity_disk_identity": true,
+        "argument_file_disk_identity": true,
+        "loaded_module_disk_identity": true
+      }
+    },
+    {
+      "file": "suites1\\b001\\bad-parent-1\\source-input.jsonl",
+      "target": [
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "target_identity",
+          "diagnosticVersion": 1,
+          "tickMs": 7181015,
+          "pid": 40704,
+          "tid": 41872,
+          "targetPid": 37092,
+          "targetTid": 25056,
+          "threadOwner": 37092,
+          "created": 134376685470226197,
+          "threadCreated": 134376685470226215,
+          "processWait": 258,
+          "threadWait": 258,
+          "desktop": "fv_r305_39092_7180734_source"
+        }
+      ],
+      "helper": [
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "helper_identity",
+          "diagnosticVersion": 1,
+          "tickMs": 7181015,
+          "pid": 40704,
+          "tid": 41872,
+          "path": "C:\\fv-c\\rd\\b001-build\\r305a.exe",
+          "diskSha256": "a93ad8445b3ca373106f897b1c1f56a9fff27896f88f20622154fc1dd4250411",
+          "created": 134376685472685975,
+          "threadCreated": 134376685472685992,
+          "desktop": "fv_r305_39092_7180734_source"
+        }
+      ],
+      "loaded": [
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "loaded_module",
+          "diagnosticVersion": 1,
+          "tickMs": 7181015,
+          "pid": 40704,
+          "tid": 41872,
+          "module": 140721661411328,
+          "path": "C:\\fv-c\\rd\\b001-build\\runtime304.dll",
+          "diskSha256": "10104c69171ac6ad8e20cef1a555e788e935f77bcf03f019dd74b5e0b7915343"
+        }
+      ],
+      "exports": [
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "export_owner",
+          "diagnosticVersion": 1,
+          "tickMs": 7181015,
+          "pid": 40704,
+          "tid": 41872,
+          "export": "ManagedGetMessage",
+          "address": 140721661442608,
+          "owner": 140721661411328,
+          "passedModule": 140721661411328,
+          "sameModule": true,
+          "path": "C:\\fv-c\\rd\\b001-build\\runtime304.dll"
+        },
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "export_owner",
+          "diagnosticVersion": 1,
+          "tickMs": 7181015,
+          "pid": 40704,
+          "tid": 41872,
+          "export": "ManagedCallWindow",
+          "address": 140721661441760,
+          "owner": 140721661411328,
+          "passedModule": 140721661411328,
+          "sameModule": true,
+          "path": "C:\\fv-c\\rd\\b001-build\\runtime304.dll"
+        }
+      ],
+      "api": [
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "api",
+          "diagnosticVersion": 1,
+          "tickMs": 7181015,
+          "pid": 40704,
+          "tid": 41872,
+          "api": "LoadLibraryW.runtime",
+          "result": 140721661411328,
+          "error": 0
+        },
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "api",
+          "diagnosticVersion": 1,
+          "tickMs": 7181015,
+          "pid": 40704,
+          "tid": 41872,
+          "api": "GetProcAddress.ManagedGetMessage",
+          "result": 140721661442608,
+          "error": 0
+        },
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "api",
+          "diagnosticVersion": 1,
+          "tickMs": 7181015,
+          "pid": 40704,
+          "tid": 41872,
+          "api": "SetWindowsHookExW.thread_only",
+          "result": 5574035,
+          "error": 0
+        },
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "api",
+          "diagnosticVersion": 1,
+          "tickMs": 7181015,
+          "pid": 40704,
+          "tid": 41872,
+          "api": "GetProcAddress.ManagedCallWindow",
+          "result": 140721661441760,
+          "error": 0
+        },
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "api",
+          "diagnosticVersion": 1,
+          "tickMs": 7181015,
+          "pid": 40704,
+          "tid": 41872,
+          "api": "SetWindowsHookExW.thread_control",
+          "result": 265655,
+          "error": 0
+        },
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "api",
+          "diagnosticVersion": 1,
+          "tickMs": 7181093,
+          "pid": 40704,
+          "tid": 41872,
+          "api": "UnhookWindowsHookEx.control",
+          "result": 1,
+          "error": 0
+        },
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "api",
+          "diagnosticVersion": 1,
+          "tickMs": 7181093,
+          "pid": 40704,
+          "tid": 41872,
+          "api": "UnhookWindowsHookEx.queue",
+          "result": 1,
+          "error": 0
+        },
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "api",
+          "diagnosticVersion": 1,
+          "tickMs": 7181093,
+          "pid": 40704,
+          "tid": 41872,
+          "api": "FreeLibrary.bridge_module",
+          "result": 1,
+          "error": 0
+        }
+      ],
+      "checks": {
+        "one_argument": true,
+        "target_instance": true,
+        "same_desktop": true,
+        "module_and_exports": true,
+        "raw_api_sequence": true,
+        "raw_calls_succeeded_this_run": true,
+        "no_diagnostic_query_failures": true,
+        "helper_identity_disk_identity": true,
+        "argument_file_disk_identity": true,
+        "loaded_module_disk_identity": true
+      }
+    },
+    {
+      "file": "suites1\\b001\\bad-parent-2\\source-input.jsonl",
+      "target": [
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "target_identity",
+          "diagnosticVersion": 1,
+          "tickMs": 7187656,
+          "pid": 44484,
+          "tid": 42016,
+          "targetPid": 43632,
+          "targetTid": 43336,
+          "threadOwner": 43632,
+          "created": 134376685536621962,
+          "threadCreated": 134376685536621976,
+          "processWait": 258,
+          "threadWait": 258,
+          "desktop": "fv_r305_26548_7187375_source"
+        }
+      ],
+      "helper": [
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "helper_identity",
+          "diagnosticVersion": 1,
+          "tickMs": 7187656,
+          "pid": 44484,
+          "tid": 42016,
+          "path": "C:\\fv-c\\rd\\b001-build\\r305a.exe",
+          "diskSha256": "a93ad8445b3ca373106f897b1c1f56a9fff27896f88f20622154fc1dd4250411",
+          "created": 134376685539117310,
+          "threadCreated": 134376685539117333,
+          "desktop": "fv_r305_26548_7187375_source"
+        }
+      ],
+      "loaded": [
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "loaded_module",
+          "diagnosticVersion": 1,
+          "tickMs": 7187656,
+          "pid": 44484,
+          "tid": 42016,
+          "module": 140721661411328,
+          "path": "C:\\fv-c\\rd\\b001-build\\runtime304.dll",
+          "diskSha256": "10104c69171ac6ad8e20cef1a555e788e935f77bcf03f019dd74b5e0b7915343"
+        }
+      ],
+      "exports": [
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "export_owner",
+          "diagnosticVersion": 1,
+          "tickMs": 7187656,
+          "pid": 44484,
+          "tid": 42016,
+          "export": "ManagedGetMessage",
+          "address": 140721661442608,
+          "owner": 140721661411328,
+          "passedModule": 140721661411328,
+          "sameModule": true,
+          "path": "C:\\fv-c\\rd\\b001-build\\runtime304.dll"
+        },
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "export_owner",
+          "diagnosticVersion": 1,
+          "tickMs": 7187656,
+          "pid": 44484,
+          "tid": 42016,
+          "export": "ManagedCallWindow",
+          "address": 140721661441760,
+          "owner": 140721661411328,
+          "passedModule": 140721661411328,
+          "sameModule": true,
+          "path": "C:\\fv-c\\rd\\b001-build\\runtime304.dll"
+        }
+      ],
+      "api": [
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "api",
+          "diagnosticVersion": 1,
+          "tickMs": 7187656,
+          "pid": 44484,
+          "tid": 42016,
+          "api": "LoadLibraryW.runtime",
+          "result": 140721661411328,
+          "error": 0
+        },
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "api",
+          "diagnosticVersion": 1,
+          "tickMs": 7187656,
+          "pid": 44484,
+          "tid": 42016,
+          "api": "GetProcAddress.ManagedGetMessage",
+          "result": 140721661442608,
+          "error": 0
+        },
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "api",
+          "diagnosticVersion": 1,
+          "tickMs": 7187656,
+          "pid": 44484,
+          "tid": 42016,
+          "api": "SetWindowsHookExW.thread_only",
+          "result": 527859,
+          "error": 0
+        },
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "api",
+          "diagnosticVersion": 1,
+          "tickMs": 7187656,
+          "pid": 44484,
+          "tid": 42016,
+          "api": "GetProcAddress.ManagedCallWindow",
+          "result": 140721661441760,
+          "error": 0
+        },
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "api",
+          "diagnosticVersion": 1,
+          "tickMs": 7187656,
+          "pid": 44484,
+          "tid": 42016,
+          "api": "SetWindowsHookExW.thread_control",
+          "result": 186515543,
+          "error": 0
+        },
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "api",
+          "diagnosticVersion": 1,
+          "tickMs": 7187781,
+          "pid": 44484,
+          "tid": 42016,
+          "api": "UnhookWindowsHookEx.control",
+          "result": 1,
+          "error": 0
+        },
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "api",
+          "diagnosticVersion": 1,
+          "tickMs": 7187781,
+          "pid": 44484,
+          "tid": 42016,
+          "api": "UnhookWindowsHookEx.queue",
+          "result": 1,
+          "error": 0
+        },
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "api",
+          "diagnosticVersion": 1,
+          "tickMs": 7187781,
+          "pid": 44484,
+          "tid": 42016,
+          "api": "FreeLibrary.bridge_module",
+          "result": 1,
+          "error": 0
+        }
+      ],
+      "checks": {
+        "one_argument": true,
+        "target_instance": true,
+        "same_desktop": true,
+        "module_and_exports": true,
+        "raw_api_sequence": true,
+        "raw_calls_succeeded_this_run": true,
+        "no_diagnostic_query_failures": true,
+        "helper_identity_disk_identity": true,
+        "argument_file_disk_identity": true,
+        "loaded_module_disk_identity": true
+      }
+    },
+    {
+      "file": "suites1\\b001\\omit-focus-1\\source-input.jsonl",
+      "target": [
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "target_identity",
+          "diagnosticVersion": 1,
+          "tickMs": 7184468,
+          "pid": 39144,
+          "tid": 14064,
+          "targetPid": 43984,
+          "targetTid": 38392,
+          "threadOwner": 43984,
+          "created": 134376685504885135,
+          "threadCreated": 134376685504885152,
+          "processWait": 258,
+          "threadWait": 258,
+          "desktop": "fv_r305_36964_7184203_source"
+        }
+      ],
+      "helper": [
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "helper_identity",
+          "diagnosticVersion": 1,
+          "tickMs": 7184468,
+          "pid": 39144,
+          "tid": 14064,
+          "path": "C:\\fv-c\\rd\\b001-build\\r305a.exe",
+          "diskSha256": "a93ad8445b3ca373106f897b1c1f56a9fff27896f88f20622154fc1dd4250411",
+          "created": 134376685507332432,
+          "threadCreated": 134376685507332448,
+          "desktop": "fv_r305_36964_7184203_source"
+        }
+      ],
+      "loaded": [
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "loaded_module",
+          "diagnosticVersion": 1,
+          "tickMs": 7184468,
+          "pid": 39144,
+          "tid": 14064,
+          "module": 140721661411328,
+          "path": "C:\\fv-c\\rd\\b001-build\\runtime304.dll",
+          "diskSha256": "10104c69171ac6ad8e20cef1a555e788e935f77bcf03f019dd74b5e0b7915343"
+        }
+      ],
+      "exports": [
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "export_owner",
+          "diagnosticVersion": 1,
+          "tickMs": 7184468,
+          "pid": 39144,
+          "tid": 14064,
+          "export": "ManagedGetMessage",
+          "address": 140721661442608,
+          "owner": 140721661411328,
+          "passedModule": 140721661411328,
+          "sameModule": true,
+          "path": "C:\\fv-c\\rd\\b001-build\\runtime304.dll"
+        },
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "export_owner",
+          "diagnosticVersion": 1,
+          "tickMs": 7184468,
+          "pid": 39144,
+          "tid": 14064,
+          "export": "ManagedCallWindow",
+          "address": 140721661441760,
+          "owner": 140721661411328,
+          "passedModule": 140721661411328,
+          "sameModule": true,
+          "path": "C:\\fv-c\\rd\\b001-build\\runtime304.dll"
+        }
+      ],
+      "api": [
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "api",
+          "diagnosticVersion": 1,
+          "tickMs": 7184468,
+          "pid": 39144,
+          "tid": 14064,
+          "api": "LoadLibraryW.runtime",
+          "result": 140721661411328,
+          "error": 0
+        },
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "api",
+          "diagnosticVersion": 1,
+          "tickMs": 7184468,
+          "pid": 39144,
+          "tid": 14064,
+          "api": "GetProcAddress.ManagedGetMessage",
+          "result": 140721661442608,
+          "error": 0
+        },
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "api",
+          "diagnosticVersion": 1,
+          "tickMs": 7184468,
+          "pid": 39144,
+          "tid": 14064,
+          "api": "SetWindowsHookExW.thread_only",
+          "result": 5442949,
+          "error": 0
+        },
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "api",
+          "diagnosticVersion": 1,
+          "tickMs": 7184468,
+          "pid": 39144,
+          "tid": 14064,
+          "api": "GetProcAddress.ManagedCallWindow",
+          "result": 140721661441760,
+          "error": 0
+        },
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "api",
+          "diagnosticVersion": 1,
+          "tickMs": 7184468,
+          "pid": 39144,
+          "tid": 14064,
+          "api": "SetWindowsHookExW.thread_control",
+          "result": 6753721,
+          "error": 0
+        },
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "api",
+          "diagnosticVersion": 1,
+          "tickMs": 7184562,
+          "pid": 39144,
+          "tid": 14064,
+          "api": "UnhookWindowsHookEx.control",
+          "result": 1,
+          "error": 0
+        },
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "api",
+          "diagnosticVersion": 1,
+          "tickMs": 7184562,
+          "pid": 39144,
+          "tid": 14064,
+          "api": "UnhookWindowsHookEx.queue",
+          "result": 1,
+          "error": 0
+        },
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "api",
+          "diagnosticVersion": 1,
+          "tickMs": 7184562,
+          "pid": 39144,
+          "tid": 14064,
+          "api": "FreeLibrary.bridge_module",
+          "result": 1,
+          "error": 0
+        }
+      ],
+      "checks": {
+        "one_argument": true,
+        "target_instance": true,
+        "same_desktop": true,
+        "module_and_exports": true,
+        "raw_api_sequence": true,
+        "raw_calls_succeeded_this_run": true,
+        "no_diagnostic_query_failures": true,
+        "helper_identity_disk_identity": true,
+        "argument_file_disk_identity": true,
+        "loaded_module_disk_identity": true
+      }
+    },
+    {
+      "file": "suites1\\b001\\omit-focus-2\\source-input.jsonl",
+      "target": [
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "target_identity",
+          "diagnosticVersion": 1,
+          "tickMs": 7191265,
+          "pid": 41672,
+          "tid": 36064,
+          "targetPid": 37456,
+          "targetTid": 44332,
+          "threadOwner": 37456,
+          "created": 134376685572751281,
+          "threadCreated": 134376685572751299,
+          "processWait": 258,
+          "threadWait": 258,
+          "desktop": "fv_r305_34880_7191000_source"
+        }
+      ],
+      "helper": [
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "helper_identity",
+          "diagnosticVersion": 1,
+          "tickMs": 7191265,
+          "pid": 41672,
+          "tid": 36064,
+          "path": "C:\\fv-c\\rd\\b001-build\\r305a.exe",
+          "diskSha256": "a93ad8445b3ca373106f897b1c1f56a9fff27896f88f20622154fc1dd4250411",
+          "created": 134376685575267041,
+          "threadCreated": 134376685575267056,
+          "desktop": "fv_r305_34880_7191000_source"
+        }
+      ],
+      "loaded": [
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "loaded_module",
+          "diagnosticVersion": 1,
+          "tickMs": 7191265,
+          "pid": 41672,
+          "tid": 36064,
+          "module": 140721661280256,
+          "path": "C:\\fv-c\\rd\\b001-build\\runtime304.dll",
+          "diskSha256": "10104c69171ac6ad8e20cef1a555e788e935f77bcf03f019dd74b5e0b7915343"
+        }
+      ],
+      "exports": [
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "export_owner",
+          "diagnosticVersion": 1,
+          "tickMs": 7191265,
+          "pid": 41672,
+          "tid": 36064,
+          "export": "ManagedGetMessage",
+          "address": 140721661311536,
+          "owner": 140721661280256,
+          "passedModule": 140721661280256,
+          "sameModule": true,
+          "path": "C:\\fv-c\\rd\\b001-build\\runtime304.dll"
+        },
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "export_owner",
+          "diagnosticVersion": 1,
+          "tickMs": 7191265,
+          "pid": 41672,
+          "tid": 36064,
+          "export": "ManagedCallWindow",
+          "address": 140721661310688,
+          "owner": 140721661280256,
+          "passedModule": 140721661280256,
+          "sameModule": true,
+          "path": "C:\\fv-c\\rd\\b001-build\\runtime304.dll"
+        }
+      ],
+      "api": [
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "api",
+          "diagnosticVersion": 1,
+          "tickMs": 7191265,
+          "pid": 41672,
+          "tid": 36064,
+          "api": "LoadLibraryW.runtime",
+          "result": 140721661280256,
+          "error": 0
+        },
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "api",
+          "diagnosticVersion": 1,
+          "tickMs": 7191265,
+          "pid": 41672,
+          "tid": 36064,
+          "api": "GetProcAddress.ManagedGetMessage",
+          "result": 140721661311536,
+          "error": 0
+        },
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "api",
+          "diagnosticVersion": 1,
+          "tickMs": 7191265,
+          "pid": 41672,
+          "tid": 36064,
+          "api": "SetWindowsHookExW.thread_only",
+          "result": 66194574,
+          "error": 0
+        },
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "api",
+          "diagnosticVersion": 1,
+          "tickMs": 7191265,
+          "pid": 41672,
+          "tid": 36064,
+          "api": "GetProcAddress.ManagedCallWindow",
+          "result": 140721661310688,
+          "error": 0
+        },
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "api",
+          "diagnosticVersion": 1,
+          "tickMs": 7191265,
+          "pid": 41672,
+          "tid": 36064,
+          "api": "SetWindowsHookExW.thread_control",
+          "result": 658766,
+          "error": 0
+        },
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "api",
+          "diagnosticVersion": 1,
+          "tickMs": 7191375,
+          "pid": 41672,
+          "tid": 36064,
+          "api": "UnhookWindowsHookEx.control",
+          "result": 1,
+          "error": 0
+        },
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "api",
+          "diagnosticVersion": 1,
+          "tickMs": 7191375,
+          "pid": 41672,
+          "tid": 36064,
+          "api": "UnhookWindowsHookEx.queue",
+          "result": 1,
+          "error": 0
+        },
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "api",
+          "diagnosticVersion": 1,
+          "tickMs": 7191375,
+          "pid": 41672,
+          "tid": 36064,
+          "api": "FreeLibrary.bridge_module",
+          "result": 1,
+          "error": 0
+        }
+      ],
+      "checks": {
+        "one_argument": true,
+        "target_instance": true,
+        "same_desktop": true,
+        "module_and_exports": true,
+        "raw_api_sequence": true,
+        "raw_calls_succeeded_this_run": true,
+        "no_diagnostic_query_failures": true,
+        "helper_identity_disk_identity": true,
+        "argument_file_disk_identity": true,
+        "loaded_module_disk_identity": true
+      }
+    },
+    {
+      "file": "suites1\\b001\\omit-modify-1\\source-input.jsonl",
+      "target": [
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "target_identity",
+          "diagnosticVersion": 1,
+          "tickMs": 7183828,
+          "pid": 17396,
+          "tid": 45612,
+          "targetPid": 24296,
+          "targetTid": 17640,
+          "threadOwner": 24296,
+          "created": 134376685498247219,
+          "threadCreated": 134376685498247234,
+          "processWait": 258,
+          "threadWait": 258,
+          "desktop": "fv_r305_44056_7183546_source"
+        }
+      ],
+      "helper": [
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "helper_identity",
+          "diagnosticVersion": 1,
+          "tickMs": 7183828,
+          "pid": 17396,
+          "tid": 45612,
+          "path": "C:\\fv-c\\rd\\b001-build\\r305a.exe",
+          "diskSha256": "a93ad8445b3ca373106f897b1c1f56a9fff27896f88f20622154fc1dd4250411",
+          "created": 134376685500841444,
+          "threadCreated": 134376685500841464,
+          "desktop": "fv_r305_44056_7183546_source"
+        }
+      ],
+      "loaded": [
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "loaded_module",
+          "diagnosticVersion": 1,
+          "tickMs": 7183828,
+          "pid": 17396,
+          "tid": 45612,
+          "module": 140721661411328,
+          "path": "C:\\fv-c\\rd\\b001-build\\runtime304.dll",
+          "diskSha256": "10104c69171ac6ad8e20cef1a555e788e935f77bcf03f019dd74b5e0b7915343"
+        }
+      ],
+      "exports": [
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "export_owner",
+          "diagnosticVersion": 1,
+          "tickMs": 7183828,
+          "pid": 17396,
+          "tid": 45612,
+          "export": "ManagedGetMessage",
+          "address": 140721661442608,
+          "owner": 140721661411328,
+          "passedModule": 140721661411328,
+          "sameModule": true,
+          "path": "C:\\fv-c\\rd\\b001-build\\runtime304.dll"
+        },
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "export_owner",
+          "diagnosticVersion": 1,
+          "tickMs": 7183828,
+          "pid": 17396,
+          "tid": 45612,
+          "export": "ManagedCallWindow",
+          "address": 140721661441760,
+          "owner": 140721661411328,
+          "passedModule": 140721661411328,
+          "sameModule": true,
+          "path": "C:\\fv-c\\rd\\b001-build\\runtime304.dll"
+        }
+      ],
+      "api": [
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "api",
+          "diagnosticVersion": 1,
+          "tickMs": 7183828,
+          "pid": 17396,
+          "tid": 45612,
+          "api": "LoadLibraryW.runtime",
+          "result": 140721661411328,
+          "error": 0
+        },
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "api",
+          "diagnosticVersion": 1,
+          "tickMs": 7183828,
+          "pid": 17396,
+          "tid": 45612,
+          "api": "GetProcAddress.ManagedGetMessage",
+          "result": 140721661442608,
+          "error": 0
+        },
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "api",
+          "diagnosticVersion": 1,
+          "tickMs": 7183828,
+          "pid": 17396,
+          "tid": 45612,
+          "api": "SetWindowsHookExW.thread_only",
+          "result": 7015871,
+          "error": 0
+        },
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "api",
+          "diagnosticVersion": 1,
+          "tickMs": 7183828,
+          "pid": 17396,
+          "tid": 45612,
+          "api": "GetProcAddress.ManagedCallWindow",
+          "result": 140721661441760,
+          "error": 0
+        },
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "api",
+          "diagnosticVersion": 1,
+          "tickMs": 7183828,
+          "pid": 17396,
+          "tid": 45612,
+          "api": "SetWindowsHookExW.thread_control",
+          "result": 69099,
+          "error": 0
+        },
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "api",
+          "diagnosticVersion": 1,
+          "tickMs": 7183890,
+          "pid": 17396,
+          "tid": 45612,
+          "api": "UnhookWindowsHookEx.control",
+          "result": 1,
+          "error": 0
+        },
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "api",
+          "diagnosticVersion": 1,
+          "tickMs": 7183890,
+          "pid": 17396,
+          "tid": 45612,
+          "api": "UnhookWindowsHookEx.queue",
+          "result": 1,
+          "error": 0
+        },
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "api",
+          "diagnosticVersion": 1,
+          "tickMs": 7183890,
+          "pid": 17396,
+          "tid": 45612,
+          "api": "FreeLibrary.bridge_module",
+          "result": 1,
+          "error": 0
+        }
+      ],
+      "checks": {
+        "one_argument": true,
+        "target_instance": true,
+        "same_desktop": true,
+        "module_and_exports": true,
+        "raw_api_sequence": true,
+        "raw_calls_succeeded_this_run": true,
+        "no_diagnostic_query_failures": true,
+        "helper_identity_disk_identity": true,
+        "argument_file_disk_identity": true,
+        "loaded_module_disk_identity": true
+      }
+    },
+    {
+      "file": "suites1\\b001\\omit-modify-2\\source-input.jsonl",
+      "target": [
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "target_identity",
+          "diagnosticVersion": 1,
+          "tickMs": 7190562,
+          "pid": 34356,
+          "tid": 35488,
+          "targetPid": 45916,
+          "targetTid": 45516,
+          "threadOwner": 45916,
+          "created": 134376685565779376,
+          "threadCreated": 134376685565779396,
+          "processWait": 258,
+          "threadWait": 258,
+          "desktop": "fv_r305_36112_7190296_source"
+        }
+      ],
+      "helper": [
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "helper_identity",
+          "diagnosticVersion": 1,
+          "tickMs": 7190562,
+          "pid": 34356,
+          "tid": 35488,
+          "path": "C:\\fv-c\\rd\\b001-build\\r305a.exe",
+          "diskSha256": "a93ad8445b3ca373106f897b1c1f56a9fff27896f88f20622154fc1dd4250411",
+          "created": 134376685568195272,
+          "threadCreated": 134376685568195292,
+          "desktop": "fv_r305_36112_7190296_source"
+        }
+      ],
+      "loaded": [
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "loaded_module",
+          "diagnosticVersion": 1,
+          "tickMs": 7190562,
+          "pid": 34356,
+          "tid": 35488,
+          "module": 140721661280256,
+          "path": "C:\\fv-c\\rd\\b001-build\\runtime304.dll",
+          "diskSha256": "10104c69171ac6ad8e20cef1a555e788e935f77bcf03f019dd74b5e0b7915343"
+        }
+      ],
+      "exports": [
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "export_owner",
+          "diagnosticVersion": 1,
+          "tickMs": 7190562,
+          "pid": 34356,
+          "tid": 35488,
+          "export": "ManagedGetMessage",
+          "address": 140721661311536,
+          "owner": 140721661280256,
+          "passedModule": 140721661280256,
+          "sameModule": true,
+          "path": "C:\\fv-c\\rd\\b001-build\\runtime304.dll"
+        },
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "export_owner",
+          "diagnosticVersion": 1,
+          "tickMs": 7190562,
+          "pid": 34356,
+          "tid": 35488,
+          "export": "ManagedCallWindow",
+          "address": 140721661310688,
+          "owner": 140721661280256,
+          "passedModule": 140721661280256,
+          "sameModule": true,
+          "path": "C:\\fv-c\\rd\\b001-build\\runtime304.dll"
+        }
+      ],
+      "api": [
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "api",
+          "diagnosticVersion": 1,
+          "tickMs": 7190562,
+          "pid": 34356,
+          "tid": 35488,
+          "api": "LoadLibraryW.runtime",
+          "result": 140721661280256,
+          "error": 0
+        },
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "api",
+          "diagnosticVersion": 1,
+          "tickMs": 7190562,
+          "pid": 34356,
+          "tid": 35488,
+          "api": "GetProcAddress.ManagedGetMessage",
+          "result": 140721661311536,
+          "error": 0
+        },
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "api",
+          "diagnosticVersion": 1,
+          "tickMs": 7190562,
+          "pid": 34356,
+          "tid": 35488,
+          "api": "SetWindowsHookExW.thread_only",
+          "result": 986390,
+          "error": 0
+        },
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "api",
+          "diagnosticVersion": 1,
+          "tickMs": 7190562,
+          "pid": 34356,
+          "tid": 35488,
+          "api": "GetProcAddress.ManagedCallWindow",
+          "result": 140721661310688,
+          "error": 0
+        },
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "api",
+          "diagnosticVersion": 1,
+          "tickMs": 7190562,
+          "pid": 34356,
+          "tid": 35488,
+          "api": "SetWindowsHookExW.thread_control",
+          "result": 331044,
+          "error": 0
+        },
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "api",
+          "diagnosticVersion": 1,
+          "tickMs": 7190656,
+          "pid": 34356,
+          "tid": 35488,
+          "api": "UnhookWindowsHookEx.control",
+          "result": 1,
+          "error": 0
+        },
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "api",
+          "diagnosticVersion": 1,
+          "tickMs": 7190656,
+          "pid": 34356,
+          "tid": 35488,
+          "api": "UnhookWindowsHookEx.queue",
+          "result": 1,
+          "error": 0
+        },
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "api",
+          "diagnosticVersion": 1,
+          "tickMs": 7190656,
+          "pid": 34356,
+          "tid": 35488,
+          "api": "FreeLibrary.bridge_module",
+          "result": 1,
+          "error": 0
+        }
+      ],
+      "checks": {
+        "one_argument": true,
+        "target_instance": true,
+        "same_desktop": true,
+        "module_and_exports": true,
+        "raw_api_sequence": true,
+        "raw_calls_succeeded_this_run": true,
+        "no_diagnostic_query_failures": true,
+        "helper_identity_disk_identity": true,
+        "argument_file_disk_identity": true,
+        "loaded_module_disk_identity": true
+      }
+    },
+    {
+      "file": "suites1\\b001\\omit-selection-1\\source-input.jsonl",
+      "target": [
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "target_identity",
+          "diagnosticVersion": 1,
+          "tickMs": 7183156,
+          "pid": 39208,
+          "tid": 41140,
+          "targetPid": 43368,
+          "targetTid": 44576,
+          "threadOwner": 43368,
+          "created": 134376685491550682,
+          "threadCreated": 134376685491550705,
+          "processWait": 258,
+          "threadWait": 258,
+          "desktop": "fv_r305_44536_7182875_source"
+        }
+      ],
+      "helper": [
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "helper_identity",
+          "diagnosticVersion": 1,
+          "tickMs": 7183156,
+          "pid": 39208,
+          "tid": 41140,
+          "path": "C:\\fv-c\\rd\\b001-build\\r305a.exe",
+          "diskSha256": "a93ad8445b3ca373106f897b1c1f56a9fff27896f88f20622154fc1dd4250411",
+          "created": 134376685494079385,
+          "threadCreated": 134376685494079403,
+          "desktop": "fv_r305_44536_7182875_source"
+        }
+      ],
+      "loaded": [
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "loaded_module",
+          "diagnosticVersion": 1,
+          "tickMs": 7183156,
+          "pid": 39208,
+          "tid": 41140,
+          "module": 140721661411328,
+          "path": "C:\\fv-c\\rd\\b001-build\\runtime304.dll",
+          "diskSha256": "10104c69171ac6ad8e20cef1a555e788e935f77bcf03f019dd74b5e0b7915343"
+        }
+      ],
+      "exports": [
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "export_owner",
+          "diagnosticVersion": 1,
+          "tickMs": 7183156,
+          "pid": 39208,
+          "tid": 41140,
+          "export": "ManagedGetMessage",
+          "address": 140721661442608,
+          "owner": 140721661411328,
+          "passedModule": 140721661411328,
+          "sameModule": true,
+          "path": "C:\\fv-c\\rd\\b001-build\\runtime304.dll"
+        },
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "export_owner",
+          "diagnosticVersion": 1,
+          "tickMs": 7183156,
+          "pid": 39208,
+          "tid": 41140,
+          "export": "ManagedCallWindow",
+          "address": 140721661441760,
+          "owner": 140721661411328,
+          "passedModule": 140721661411328,
+          "sameModule": true,
+          "path": "C:\\fv-c\\rd\\b001-build\\runtime304.dll"
+        }
+      ],
+      "api": [
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "api",
+          "diagnosticVersion": 1,
+          "tickMs": 7183156,
+          "pid": 39208,
+          "tid": 41140,
+          "api": "LoadLibraryW.runtime",
+          "result": 140721661411328,
+          "error": 0
+        },
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "api",
+          "diagnosticVersion": 1,
+          "tickMs": 7183156,
+          "pid": 39208,
+          "tid": 41140,
+          "api": "GetProcAddress.ManagedGetMessage",
+          "result": 140721661442608,
+          "error": 0
+        },
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "api",
+          "diagnosticVersion": 1,
+          "tickMs": 7183156,
+          "pid": 39208,
+          "tid": 41140,
+          "api": "SetWindowsHookExW.thread_only",
+          "result": 13307259,
+          "error": 0
+        },
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "api",
+          "diagnosticVersion": 1,
+          "tickMs": 7183156,
+          "pid": 39208,
+          "tid": 41140,
+          "api": "GetProcAddress.ManagedCallWindow",
+          "result": 140721661441760,
+          "error": 0
+        },
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "api",
+          "diagnosticVersion": 1,
+          "tickMs": 7183156,
+          "pid": 39208,
+          "tid": 41140,
+          "api": "SetWindowsHookExW.thread_control",
+          "result": 69091,
+          "error": 0
+        },
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "api",
+          "diagnosticVersion": 1,
+          "tickMs": 7183234,
+          "pid": 39208,
+          "tid": 41140,
+          "api": "UnhookWindowsHookEx.control",
+          "result": 1,
+          "error": 0
+        },
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "api",
+          "diagnosticVersion": 1,
+          "tickMs": 7183234,
+          "pid": 39208,
+          "tid": 41140,
+          "api": "UnhookWindowsHookEx.queue",
+          "result": 1,
+          "error": 0
+        },
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "api",
+          "diagnosticVersion": 1,
+          "tickMs": 7183234,
+          "pid": 39208,
+          "tid": 41140,
+          "api": "FreeLibrary.bridge_module",
+          "result": 1,
+          "error": 0
+        }
+      ],
+      "checks": {
+        "one_argument": true,
+        "target_instance": true,
+        "same_desktop": true,
+        "module_and_exports": true,
+        "raw_api_sequence": true,
+        "raw_calls_succeeded_this_run": true,
+        "no_diagnostic_query_failures": true,
+        "helper_identity_disk_identity": true,
+        "argument_file_disk_identity": true,
+        "loaded_module_disk_identity": true
+      }
+    },
+    {
+      "file": "suites1\\b001\\omit-selection-2\\source-input.jsonl",
+      "target": [
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "target_identity",
+          "diagnosticVersion": 1,
+          "tickMs": 7189875,
+          "pid": 43700,
+          "tid": 42376,
+          "targetPid": 41256,
+          "targetTid": 16044,
+          "threadOwner": 41256,
+          "created": 134376685558712706,
+          "threadCreated": 134376685558712730,
+          "processWait": 258,
+          "threadWait": 258,
+          "desktop": "fv_r305_45896_7189593_source"
+        }
+      ],
+      "helper": [
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "helper_identity",
+          "diagnosticVersion": 1,
+          "tickMs": 7189875,
+          "pid": 43700,
+          "tid": 42376,
+          "path": "C:\\fv-c\\rd\\b001-build\\r305a.exe",
+          "diskSha256": "a93ad8445b3ca373106f897b1c1f56a9fff27896f88f20622154fc1dd4250411",
+          "created": 134376685561282658,
+          "threadCreated": 134376685561282684,
+          "desktop": "fv_r305_45896_7189593_source"
+        }
+      ],
+      "loaded": [
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "loaded_module",
+          "diagnosticVersion": 1,
+          "tickMs": 7189875,
+          "pid": 43700,
+          "tid": 42376,
+          "module": 140721661411328,
+          "path": "C:\\fv-c\\rd\\b001-build\\runtime304.dll",
+          "diskSha256": "10104c69171ac6ad8e20cef1a555e788e935f77bcf03f019dd74b5e0b7915343"
+        }
+      ],
+      "exports": [
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "export_owner",
+          "diagnosticVersion": 1,
+          "tickMs": 7189875,
+          "pid": 43700,
+          "tid": 42376,
+          "export": "ManagedGetMessage",
+          "address": 140721661442608,
+          "owner": 140721661411328,
+          "passedModule": 140721661411328,
+          "sameModule": true,
+          "path": "C:\\fv-c\\rd\\b001-build\\runtime304.dll"
+        },
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "export_owner",
+          "diagnosticVersion": 1,
+          "tickMs": 7189875,
+          "pid": 43700,
+          "tid": 42376,
+          "export": "ManagedCallWindow",
+          "address": 140721661441760,
+          "owner": 140721661411328,
+          "passedModule": 140721661411328,
+          "sameModule": true,
+          "path": "C:\\fv-c\\rd\\b001-build\\runtime304.dll"
+        }
+      ],
+      "api": [
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "api",
+          "diagnosticVersion": 1,
+          "tickMs": 7189875,
+          "pid": 43700,
+          "tid": 42376,
+          "api": "LoadLibraryW.runtime",
+          "result": 140721661411328,
+          "error": 0
+        },
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "api",
+          "diagnosticVersion": 1,
+          "tickMs": 7189875,
+          "pid": 43700,
+          "tid": 42376,
+          "api": "GetProcAddress.ManagedGetMessage",
+          "result": 140721661442608,
+          "error": 0
+        },
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "api",
+          "diagnosticVersion": 1,
+          "tickMs": 7189875,
+          "pid": 43700,
+          "tid": 42376,
+          "api": "SetWindowsHookExW.thread_only",
+          "result": 49941572,
+          "error": 0
+        },
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "api",
+          "diagnosticVersion": 1,
+          "tickMs": 7189875,
+          "pid": 43700,
+          "tid": 42376,
+          "api": "GetProcAddress.ManagedCallWindow",
+          "result": 140721661441760,
+          "error": 0
+        },
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "api",
+          "diagnosticVersion": 1,
+          "tickMs": 7189875,
+          "pid": 43700,
+          "tid": 42376,
+          "api": "SetWindowsHookExW.thread_control",
+          "result": 2690158,
+          "error": 0
+        },
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "api",
+          "diagnosticVersion": 1,
+          "tickMs": 7189968,
+          "pid": 43700,
+          "tid": 42376,
+          "api": "UnhookWindowsHookEx.control",
+          "result": 1,
+          "error": 0
+        },
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "api",
+          "diagnosticVersion": 1,
+          "tickMs": 7189968,
+          "pid": 43700,
+          "tid": 42376,
+          "api": "UnhookWindowsHookEx.queue",
+          "result": 1,
+          "error": 0
+        },
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "api",
+          "diagnosticVersion": 1,
+          "tickMs": 7189968,
+          "pid": 43700,
+          "tid": 42376,
+          "api": "FreeLibrary.bridge_module",
+          "result": 1,
+          "error": 0
+        }
+      ],
+      "checks": {
+        "one_argument": true,
+        "target_instance": true,
+        "same_desktop": true,
+        "module_and_exports": true,
+        "raw_api_sequence": true,
+        "raw_calls_succeeded_this_run": true,
+        "no_diagnostic_query_failures": true,
+        "helper_identity_disk_identity": true,
+        "argument_file_disk_identity": true,
+        "loaded_module_disk_identity": true
+      }
+    },
+    {
+      "file": "suites1\\b001\\omit-text-1\\source-input.jsonl",
+      "target": [
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "target_identity",
+          "diagnosticVersion": 1,
+          "tickMs": 7182453,
+          "pid": 44820,
+          "tid": 43268,
+          "targetPid": 37872,
+          "targetTid": 45616,
+          "threadOwner": 37872,
+          "created": 134376685484644631,
+          "threadCreated": 134376685484644650,
+          "processWait": 258,
+          "threadWait": 258,
+          "desktop": "fv_r305_36748_7182187_source"
+        }
+      ],
+      "helper": [
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "helper_identity",
+          "diagnosticVersion": 1,
+          "tickMs": 7182453,
+          "pid": 44820,
+          "tid": 43268,
+          "path": "C:\\fv-c\\rd\\b001-build\\r305a.exe",
+          "diskSha256": "a93ad8445b3ca373106f897b1c1f56a9fff27896f88f20622154fc1dd4250411",
+          "created": 134376685487032196,
+          "threadCreated": 134376685487032215,
+          "desktop": "fv_r305_36748_7182187_source"
+        }
+      ],
+      "loaded": [
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "loaded_module",
+          "diagnosticVersion": 1,
+          "tickMs": 7182453,
+          "pid": 44820,
+          "tid": 43268,
+          "module": 140721661411328,
+          "path": "C:\\fv-c\\rd\\b001-build\\runtime304.dll",
+          "diskSha256": "10104c69171ac6ad8e20cef1a555e788e935f77bcf03f019dd74b5e0b7915343"
+        }
+      ],
+      "exports": [
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "export_owner",
+          "diagnosticVersion": 1,
+          "tickMs": 7182453,
+          "pid": 44820,
+          "tid": 43268,
+          "export": "ManagedGetMessage",
+          "address": 140721661442608,
+          "owner": 140721661411328,
+          "passedModule": 140721661411328,
+          "sameModule": true,
+          "path": "C:\\fv-c\\rd\\b001-build\\runtime304.dll"
+        },
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "export_owner",
+          "diagnosticVersion": 1,
+          "tickMs": 7182453,
+          "pid": 44820,
+          "tid": 43268,
+          "export": "ManagedCallWindow",
+          "address": 140721661441760,
+          "owner": 140721661411328,
+          "passedModule": 140721661411328,
+          "sameModule": true,
+          "path": "C:\\fv-c\\rd\\b001-build\\runtime304.dll"
+        }
+      ],
+      "api": [
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "api",
+          "diagnosticVersion": 1,
+          "tickMs": 7182453,
+          "pid": 44820,
+          "tid": 43268,
+          "api": "LoadLibraryW.runtime",
+          "result": 140721661411328,
+          "error": 0
+        },
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "api",
+          "diagnosticVersion": 1,
+          "tickMs": 7182453,
+          "pid": 44820,
+          "tid": 43268,
+          "api": "GetProcAddress.ManagedGetMessage",
+          "result": 140721661442608,
+          "error": 0
+        },
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "api",
+          "diagnosticVersion": 1,
+          "tickMs": 7182453,
+          "pid": 44820,
+          "tid": 43268,
+          "api": "SetWindowsHookExW.thread_only",
+          "result": 69085,
+          "error": 0
+        },
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "api",
+          "diagnosticVersion": 1,
+          "tickMs": 7182453,
+          "pid": 44820,
+          "tid": 43268,
+          "api": "GetProcAddress.ManagedCallWindow",
+          "result": 140721661441760,
+          "error": 0
+        },
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "api",
+          "diagnosticVersion": 1,
+          "tickMs": 7182453,
+          "pid": 44820,
+          "tid": 43268,
+          "api": "SetWindowsHookExW.thread_control",
+          "result": 69087,
+          "error": 0
+        },
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "api",
+          "diagnosticVersion": 1,
+          "tickMs": 7182546,
+          "pid": 44820,
+          "tid": 43268,
+          "api": "UnhookWindowsHookEx.control",
+          "result": 1,
+          "error": 0
+        },
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "api",
+          "diagnosticVersion": 1,
+          "tickMs": 7182546,
+          "pid": 44820,
+          "tid": 43268,
+          "api": "UnhookWindowsHookEx.queue",
+          "result": 1,
+          "error": 0
+        },
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "api",
+          "diagnosticVersion": 1,
+          "tickMs": 7182546,
+          "pid": 44820,
+          "tid": 43268,
+          "api": "FreeLibrary.bridge_module",
+          "result": 1,
+          "error": 0
+        }
+      ],
+      "checks": {
+        "one_argument": true,
+        "target_instance": true,
+        "same_desktop": true,
+        "module_and_exports": true,
+        "raw_api_sequence": true,
+        "raw_calls_succeeded_this_run": true,
+        "no_diagnostic_query_failures": true,
+        "helper_identity_disk_identity": true,
+        "argument_file_disk_identity": true,
+        "loaded_module_disk_identity": true
+      }
+    },
+    {
+      "file": "suites1\\b001\\omit-text-2\\source-input.jsonl",
+      "target": [
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "target_identity",
+          "diagnosticVersion": 1,
+          "tickMs": 7189203,
+          "pid": 45620,
+          "tid": 40164,
+          "targetPid": 43904,
+          "targetTid": 42780,
+          "threadOwner": 43904,
+          "created": 134376685551547412,
+          "threadCreated": 134376685551547432,
+          "processWait": 258,
+          "threadWait": 258,
+          "desktop": "fv_r305_43420_7188875_source"
+        }
+      ],
+      "helper": [
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "helper_identity",
+          "diagnosticVersion": 1,
+          "tickMs": 7189203,
+          "pid": 45620,
+          "tid": 40164,
+          "path": "C:\\fv-c\\rd\\b001-build\\r305a.exe",
+          "diskSha256": "a93ad8445b3ca373106f897b1c1f56a9fff27896f88f20622154fc1dd4250411",
+          "created": 134376685554515599,
+          "threadCreated": 134376685554515616,
+          "desktop": "fv_r305_43420_7188875_source"
+        }
+      ],
+      "loaded": [
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "loaded_module",
+          "diagnosticVersion": 1,
+          "tickMs": 7189203,
+          "pid": 45620,
+          "tid": 40164,
+          "module": 140721661411328,
+          "path": "C:\\fv-c\\rd\\b001-build\\runtime304.dll",
+          "diskSha256": "10104c69171ac6ad8e20cef1a555e788e935f77bcf03f019dd74b5e0b7915343"
+        }
+      ],
+      "exports": [
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "export_owner",
+          "diagnosticVersion": 1,
+          "tickMs": 7189203,
+          "pid": 45620,
+          "tid": 40164,
+          "export": "ManagedGetMessage",
+          "address": 140721661442608,
+          "owner": 140721661411328,
+          "passedModule": 140721661411328,
+          "sameModule": true,
+          "path": "C:\\fv-c\\rd\\b001-build\\runtime304.dll"
+        },
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "export_owner",
+          "diagnosticVersion": 1,
+          "tickMs": 7189203,
+          "pid": 45620,
+          "tid": 40164,
+          "export": "ManagedCallWindow",
+          "address": 140721661441760,
+          "owner": 140721661411328,
+          "passedModule": 140721661411328,
+          "sameModule": true,
+          "path": "C:\\fv-c\\rd\\b001-build\\runtime304.dll"
+        }
+      ],
+      "api": [
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "api",
+          "diagnosticVersion": 1,
+          "tickMs": 7189203,
+          "pid": 45620,
+          "tid": 40164,
+          "api": "LoadLibraryW.runtime",
+          "result": 140721661411328,
+          "error": 0
+        },
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "api",
+          "diagnosticVersion": 1,
+          "tickMs": 7189203,
+          "pid": 45620,
+          "tid": 40164,
+          "api": "GetProcAddress.ManagedGetMessage",
+          "result": 140721661442608,
+          "error": 0
+        },
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "api",
+          "diagnosticVersion": 1,
+          "tickMs": 7189203,
+          "pid": 45620,
+          "tid": 40164,
+          "api": "SetWindowsHookExW.thread_only",
+          "result": 9113005,
+          "error": 0
+        },
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "api",
+          "diagnosticVersion": 1,
+          "tickMs": 7189203,
+          "pid": 45620,
+          "tid": 40164,
+          "api": "GetProcAddress.ManagedCallWindow",
+          "result": 140721661441760,
+          "error": 0
+        },
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "api",
+          "diagnosticVersion": 1,
+          "tickMs": 7189203,
+          "pid": 45620,
+          "tid": 40164,
+          "api": "SetWindowsHookExW.thread_control",
+          "result": 5967287,
+          "error": 0
+        },
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "api",
+          "diagnosticVersion": 1,
+          "tickMs": 7189281,
+          "pid": 45620,
+          "tid": 40164,
+          "api": "UnhookWindowsHookEx.control",
+          "result": 1,
+          "error": 0
+        },
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "api",
+          "diagnosticVersion": 1,
+          "tickMs": 7189281,
+          "pid": 45620,
+          "tid": 40164,
+          "api": "UnhookWindowsHookEx.queue",
+          "result": 1,
+          "error": 0
+        },
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "api",
+          "diagnosticVersion": 1,
+          "tickMs": 7189281,
+          "pid": 45620,
+          "tid": 40164,
+          "api": "FreeLibrary.bridge_module",
+          "result": 1,
+          "error": 0
+        }
+      ],
+      "checks": {
+        "one_argument": true,
+        "target_instance": true,
+        "same_desktop": true,
+        "module_and_exports": true,
+        "raw_api_sequence": true,
+        "raw_calls_succeeded_this_run": true,
+        "no_diagnostic_query_failures": true,
+        "helper_identity_disk_identity": true,
+        "argument_file_disk_identity": true,
+        "loaded_module_disk_identity": true
+      }
+    },
+    {
+      "file": "suites1\\b001\\positive-1\\restored-input.jsonl",
+      "target": [
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "target_identity",
+          "diagnosticVersion": 1,
+          "tickMs": 7178625,
+          "pid": 30088,
+          "tid": 28904,
+          "targetPid": 37872,
+          "targetTid": 44260,
+          "threadOwner": 37872,
+          "created": 134376685447235020,
+          "threadCreated": 134376685447235037,
+          "processWait": 258,
+          "threadWait": 258,
+          "desktop": "fv_r305_43336_7177921_restored"
+        }
+      ],
+      "helper": [
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "helper_identity",
+          "diagnosticVersion": 1,
+          "tickMs": 7178625,
+          "pid": 30088,
+          "tid": 28904,
+          "path": "C:\\fv-c\\rd\\b001-build\\r305a.exe",
+          "diskSha256": "a93ad8445b3ca373106f897b1c1f56a9fff27896f88f20622154fc1dd4250411",
+          "created": 134376685448811577,
+          "threadCreated": 134376685448811598,
+          "desktop": "fv_r305_43336_7177921_restored"
+        }
+      ],
+      "loaded": [
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "loaded_module",
+          "diagnosticVersion": 1,
+          "tickMs": 7178625,
+          "pid": 30088,
+          "tid": 28904,
+          "module": 140721661149184,
+          "path": "C:\\fv-c\\rd\\b001-build\\runtime304.dll",
+          "diskSha256": "10104c69171ac6ad8e20cef1a555e788e935f77bcf03f019dd74b5e0b7915343"
+        }
+      ],
+      "exports": [
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "export_owner",
+          "diagnosticVersion": 1,
+          "tickMs": 7178625,
+          "pid": 30088,
+          "tid": 28904,
+          "export": "ManagedGetMessage",
+          "address": 140721661180464,
+          "owner": 140721661149184,
+          "passedModule": 140721661149184,
+          "sameModule": true,
+          "path": "C:\\fv-c\\rd\\b001-build\\runtime304.dll"
+        },
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "export_owner",
+          "diagnosticVersion": 1,
+          "tickMs": 7178625,
+          "pid": 30088,
+          "tid": 28904,
+          "export": "ManagedCallWindow",
+          "address": 140721661179616,
+          "owner": 140721661149184,
+          "passedModule": 140721661149184,
+          "sameModule": true,
+          "path": "C:\\fv-c\\rd\\b001-build\\runtime304.dll"
+        }
+      ],
+      "api": [
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "api",
+          "diagnosticVersion": 1,
+          "tickMs": 7178625,
+          "pid": 30088,
+          "tid": 28904,
+          "api": "LoadLibraryW.runtime",
+          "result": 140721661149184,
+          "error": 0
+        },
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "api",
+          "diagnosticVersion": 1,
+          "tickMs": 7178625,
+          "pid": 30088,
+          "tid": 28904,
+          "api": "GetProcAddress.ManagedGetMessage",
+          "result": 140721661180464,
+          "error": 0
+        },
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "api",
+          "diagnosticVersion": 1,
+          "tickMs": 7178625,
+          "pid": 30088,
+          "tid": 28904,
+          "api": "SetWindowsHookExW.thread_only",
+          "result": 200119,
+          "error": 0
+        },
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "api",
+          "diagnosticVersion": 1,
+          "tickMs": 7178625,
+          "pid": 30088,
+          "tid": 28904,
+          "api": "GetProcAddress.ManagedCallWindow",
+          "result": 140721661179616,
+          "error": 0
+        },
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "api",
+          "diagnosticVersion": 1,
+          "tickMs": 7178625,
+          "pid": 30088,
+          "tid": 28904,
+          "api": "SetWindowsHookExW.thread_control",
+          "result": 200107,
+          "error": 0
+        },
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "api",
+          "diagnosticVersion": 1,
+          "tickMs": 7178890,
+          "pid": 30088,
+          "tid": 28904,
+          "api": "UnhookWindowsHookEx.control",
+          "result": 1,
+          "error": 0
+        },
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "api",
+          "diagnosticVersion": 1,
+          "tickMs": 7178890,
+          "pid": 30088,
+          "tid": 28904,
+          "api": "UnhookWindowsHookEx.queue",
+          "result": 1,
+          "error": 0
+        },
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "api",
+          "diagnosticVersion": 1,
+          "tickMs": 7178890,
+          "pid": 30088,
+          "tid": 28904,
+          "api": "FreeLibrary.bridge_module",
+          "result": 1,
+          "error": 0
+        }
+      ],
+      "checks": {
+        "one_argument": true,
+        "target_instance": true,
+        "same_desktop": true,
+        "module_and_exports": true,
+        "raw_api_sequence": true,
+        "raw_calls_succeeded_this_run": true,
+        "no_diagnostic_query_failures": true,
+        "helper_identity_disk_identity": true,
+        "argument_file_disk_identity": true,
+        "loaded_module_disk_identity": true
+      }
+    },
+    {
+      "file": "suites1\\b001\\positive-1\\source-input.jsonl",
+      "target": [
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "target_identity",
+          "diagnosticVersion": 1,
+          "tickMs": 7178187,
+          "pid": 31192,
+          "tid": 44780,
+          "targetPid": 42832,
+          "targetTid": 43780,
+          "threadOwner": 42832,
+          "created": 134376685442027941,
+          "threadCreated": 134376685442027956,
+          "processWait": 258,
+          "threadWait": 258,
+          "desktop": "fv_r305_43336_7177921_source"
+        }
+      ],
+      "helper": [
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "helper_identity",
+          "diagnosticVersion": 1,
+          "tickMs": 7178187,
+          "pid": 31192,
+          "tid": 44780,
+          "path": "C:\\fv-c\\rd\\b001-build\\r305a.exe",
+          "diskSha256": "a93ad8445b3ca373106f897b1c1f56a9fff27896f88f20622154fc1dd4250411",
+          "created": 134376685444452318,
+          "threadCreated": 134376685444452336,
+          "desktop": "fv_r305_43336_7177921_source"
+        }
+      ],
+      "loaded": [
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "loaded_module",
+          "diagnosticVersion": 1,
+          "tickMs": 7178187,
+          "pid": 31192,
+          "tid": 44780,
+          "module": 140721661411328,
+          "path": "C:\\fv-c\\rd\\b001-build\\runtime304.dll",
+          "diskSha256": "10104c69171ac6ad8e20cef1a555e788e935f77bcf03f019dd74b5e0b7915343"
+        }
+      ],
+      "exports": [
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "export_owner",
+          "diagnosticVersion": 1,
+          "tickMs": 7178187,
+          "pid": 31192,
+          "tid": 44780,
+          "export": "ManagedGetMessage",
+          "address": 140721661442608,
+          "owner": 140721661411328,
+          "passedModule": 140721661411328,
+          "sameModule": true,
+          "path": "C:\\fv-c\\rd\\b001-build\\runtime304.dll"
+        },
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "export_owner",
+          "diagnosticVersion": 1,
+          "tickMs": 7178187,
+          "pid": 31192,
+          "tid": 44780,
+          "export": "ManagedCallWindow",
+          "address": 140721661441760,
+          "owner": 140721661411328,
+          "passedModule": 140721661411328,
+          "sameModule": true,
+          "path": "C:\\fv-c\\rd\\b001-build\\runtime304.dll"
+        }
+      ],
+      "api": [
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "api",
+          "diagnosticVersion": 1,
+          "tickMs": 7178187,
+          "pid": 31192,
+          "tid": 44780,
+          "api": "LoadLibraryW.runtime",
+          "result": 140721661411328,
+          "error": 0
+        },
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "api",
+          "diagnosticVersion": 1,
+          "tickMs": 7178187,
+          "pid": 31192,
+          "tid": 44780,
+          "api": "GetProcAddress.ManagedGetMessage",
+          "result": 140721661442608,
+          "error": 0
+        },
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "api",
+          "diagnosticVersion": 1,
+          "tickMs": 7178187,
+          "pid": 31192,
+          "tid": 44780,
+          "api": "SetWindowsHookExW.thread_only",
+          "result": 134591,
+          "error": 0
+        },
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "api",
+          "diagnosticVersion": 1,
+          "tickMs": 7178187,
+          "pid": 31192,
+          "tid": 44780,
+          "api": "GetProcAddress.ManagedCallWindow",
+          "result": 140721661441760,
+          "error": 0
+        },
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "api",
+          "diagnosticVersion": 1,
+          "tickMs": 7178187,
+          "pid": 31192,
+          "tid": 44780,
+          "api": "SetWindowsHookExW.thread_control",
+          "result": 134583,
+          "error": 0
+        },
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "api",
+          "diagnosticVersion": 1,
+          "tickMs": 7178265,
+          "pid": 31192,
+          "tid": 44780,
+          "api": "UnhookWindowsHookEx.control",
+          "result": 1,
+          "error": 0
+        },
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "api",
+          "diagnosticVersion": 1,
+          "tickMs": 7178265,
+          "pid": 31192,
+          "tid": 44780,
+          "api": "UnhookWindowsHookEx.queue",
+          "result": 1,
+          "error": 0
+        },
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "api",
+          "diagnosticVersion": 1,
+          "tickMs": 7178265,
+          "pid": 31192,
+          "tid": 44780,
+          "api": "FreeLibrary.bridge_module",
+          "result": 1,
+          "error": 0
+        }
+      ],
+      "checks": {
+        "one_argument": true,
+        "target_instance": true,
+        "same_desktop": true,
+        "module_and_exports": true,
+        "raw_api_sequence": true,
+        "raw_calls_succeeded_this_run": true,
+        "no_diagnostic_query_failures": true,
+        "helper_identity_disk_identity": true,
+        "argument_file_disk_identity": true,
+        "loaded_module_disk_identity": true
+      }
+    },
+    {
+      "file": "suites1\\b001\\positive-2\\restored-input.jsonl",
+      "target": [
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "target_identity",
+          "diagnosticVersion": 1,
+          "tickMs": 7185718,
+          "pid": 40524,
+          "tid": 45560,
+          "targetPid": 34356,
+          "targetTid": 44884,
+          "threadOwner": 34356,
+          "created": 134376685518050316,
+          "threadCreated": 134376685518050332,
+          "processWait": 258,
+          "threadWait": 258,
+          "desktop": "fv_r305_43420_7184890_restored"
+        }
+      ],
+      "helper": [
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "helper_identity",
+          "diagnosticVersion": 1,
+          "tickMs": 7185718,
+          "pid": 40524,
+          "tid": 45560,
+          "path": "C:\\fv-c\\rd\\b001-build\\r305a.exe",
+          "diskSha256": "a93ad8445b3ca373106f897b1c1f56a9fff27896f88f20622154fc1dd4250411",
+          "created": 134376685519770623,
+          "threadCreated": 134376685519770640,
+          "desktop": "fv_r305_43420_7184890_restored"
+        }
+      ],
+      "loaded": [
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "loaded_module",
+          "diagnosticVersion": 1,
+          "tickMs": 7185718,
+          "pid": 40524,
+          "tid": 45560,
+          "module": 140721661411328,
+          "path": "C:\\fv-c\\rd\\b001-build\\runtime304.dll",
+          "diskSha256": "10104c69171ac6ad8e20cef1a555e788e935f77bcf03f019dd74b5e0b7915343"
+        }
+      ],
+      "exports": [
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "export_owner",
+          "diagnosticVersion": 1,
+          "tickMs": 7185718,
+          "pid": 40524,
+          "tid": 45560,
+          "export": "ManagedGetMessage",
+          "address": 140721661442608,
+          "owner": 140721661411328,
+          "passedModule": 140721661411328,
+          "sameModule": true,
+          "path": "C:\\fv-c\\rd\\b001-build\\runtime304.dll"
+        },
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "export_owner",
+          "diagnosticVersion": 1,
+          "tickMs": 7185718,
+          "pid": 40524,
+          "tid": 45560,
+          "export": "ManagedCallWindow",
+          "address": 140721661441760,
+          "owner": 140721661411328,
+          "passedModule": 140721661411328,
+          "sameModule": true,
+          "path": "C:\\fv-c\\rd\\b001-build\\runtime304.dll"
+        }
+      ],
+      "api": [
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "api",
+          "diagnosticVersion": 1,
+          "tickMs": 7185718,
+          "pid": 40524,
+          "tid": 45560,
+          "api": "LoadLibraryW.runtime",
+          "result": 140721661411328,
+          "error": 0
+        },
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "api",
+          "diagnosticVersion": 1,
+          "tickMs": 7185718,
+          "pid": 40524,
+          "tid": 45560,
+          "api": "GetProcAddress.ManagedGetMessage",
+          "result": 140721661442608,
+          "error": 0
+        },
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "api",
+          "diagnosticVersion": 1,
+          "tickMs": 7185718,
+          "pid": 40524,
+          "tid": 45560,
+          "api": "SetWindowsHookExW.thread_only",
+          "result": 62652566,
+          "error": 0
+        },
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "api",
+          "diagnosticVersion": 1,
+          "tickMs": 7185718,
+          "pid": 40524,
+          "tid": 45560,
+          "api": "GetProcAddress.ManagedCallWindow",
+          "result": 140721661441760,
+          "error": 0
+        },
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "api",
+          "diagnosticVersion": 1,
+          "tickMs": 7185718,
+          "pid": 40524,
+          "tid": 45560,
+          "api": "SetWindowsHookExW.thread_control",
+          "result": 31984618,
+          "error": 0
+        },
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "api",
+          "diagnosticVersion": 1,
+          "tickMs": 7185968,
+          "pid": 40524,
+          "tid": 45560,
+          "api": "UnhookWindowsHookEx.control",
+          "result": 1,
+          "error": 0
+        },
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "api",
+          "diagnosticVersion": 1,
+          "tickMs": 7185968,
+          "pid": 40524,
+          "tid": 45560,
+          "api": "UnhookWindowsHookEx.queue",
+          "result": 1,
+          "error": 0
+        },
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "api",
+          "diagnosticVersion": 1,
+          "tickMs": 7185968,
+          "pid": 40524,
+          "tid": 45560,
+          "api": "FreeLibrary.bridge_module",
+          "result": 1,
+          "error": 0
+        }
+      ],
+      "checks": {
+        "one_argument": true,
+        "target_instance": true,
+        "same_desktop": true,
+        "module_and_exports": true,
+        "raw_api_sequence": true,
+        "raw_calls_succeeded_this_run": true,
+        "no_diagnostic_query_failures": true,
+        "helper_identity_disk_identity": true,
+        "argument_file_disk_identity": true,
+        "loaded_module_disk_identity": true
+      }
+    },
+    {
+      "file": "suites1\\b001\\positive-2\\source-input.jsonl",
+      "target": [
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "target_identity",
+          "diagnosticVersion": 1,
+          "tickMs": 7185203,
+          "pid": 14120,
+          "tid": 8000,
+          "targetPid": 42348,
+          "targetTid": 46052,
+          "threadOwner": 42348,
+          "created": 134376685511745766,
+          "threadCreated": 134376685511745782,
+          "processWait": 258,
+          "threadWait": 258,
+          "desktop": "fv_r305_43420_7184890_source"
+        }
+      ],
+      "helper": [
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "helper_identity",
+          "diagnosticVersion": 1,
+          "tickMs": 7185203,
+          "pid": 14120,
+          "tid": 8000,
+          "path": "C:\\fv-c\\rd\\b001-build\\r305a.exe",
+          "diskSha256": "a93ad8445b3ca373106f897b1c1f56a9fff27896f88f20622154fc1dd4250411",
+          "created": 134376685514540730,
+          "threadCreated": 134376685514540749,
+          "desktop": "fv_r305_43420_7184890_source"
+        }
+      ],
+      "loaded": [
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "loaded_module",
+          "diagnosticVersion": 1,
+          "tickMs": 7185203,
+          "pid": 14120,
+          "tid": 8000,
+          "module": 140721661411328,
+          "path": "C:\\fv-c\\rd\\b001-build\\runtime304.dll",
+          "diskSha256": "10104c69171ac6ad8e20cef1a555e788e935f77bcf03f019dd74b5e0b7915343"
+        }
+      ],
+      "exports": [
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "export_owner",
+          "diagnosticVersion": 1,
+          "tickMs": 7185203,
+          "pid": 14120,
+          "tid": 8000,
+          "export": "ManagedGetMessage",
+          "address": 140721661442608,
+          "owner": 140721661411328,
+          "passedModule": 140721661411328,
+          "sameModule": true,
+          "path": "C:\\fv-c\\rd\\b001-build\\runtime304.dll"
+        },
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "export_owner",
+          "diagnosticVersion": 1,
+          "tickMs": 7185203,
+          "pid": 14120,
+          "tid": 8000,
+          "export": "ManagedCallWindow",
+          "address": 140721661441760,
+          "owner": 140721661411328,
+          "passedModule": 140721661411328,
+          "sameModule": true,
+          "path": "C:\\fv-c\\rd\\b001-build\\runtime304.dll"
+        }
+      ],
+      "api": [
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "api",
+          "diagnosticVersion": 1,
+          "tickMs": 7185203,
+          "pid": 14120,
+          "tid": 8000,
+          "api": "LoadLibraryW.runtime",
+          "result": 140721661411328,
+          "error": 0
+        },
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "api",
+          "diagnosticVersion": 1,
+          "tickMs": 7185203,
+          "pid": 14120,
+          "tid": 8000,
+          "api": "GetProcAddress.ManagedGetMessage",
+          "result": 140721661442608,
+          "error": 0
+        },
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "api",
+          "diagnosticVersion": 1,
+          "tickMs": 7185203,
+          "pid": 14120,
+          "tid": 8000,
+          "api": "SetWindowsHookExW.thread_only",
+          "result": 789822,
+          "error": 0
+        },
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "api",
+          "diagnosticVersion": 1,
+          "tickMs": 7185203,
+          "pid": 14120,
+          "tid": 8000,
+          "api": "GetProcAddress.ManagedCallWindow",
+          "result": 140721661441760,
+          "error": 0
+        },
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "api",
+          "diagnosticVersion": 1,
+          "tickMs": 7185203,
+          "pid": 14120,
+          "tid": 8000,
+          "api": "SetWindowsHookExW.thread_control",
+          "result": 1772844,
+          "error": 0
+        },
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "api",
+          "diagnosticVersion": 1,
+          "tickMs": 7185296,
+          "pid": 14120,
+          "tid": 8000,
+          "api": "UnhookWindowsHookEx.control",
+          "result": 1,
+          "error": 0
+        },
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "api",
+          "diagnosticVersion": 1,
+          "tickMs": 7185296,
+          "pid": 14120,
+          "tid": 8000,
+          "api": "UnhookWindowsHookEx.queue",
+          "result": 1,
+          "error": 0
+        },
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "api",
+          "diagnosticVersion": 1,
+          "tickMs": 7185296,
+          "pid": 14120,
+          "tid": 8000,
+          "api": "FreeLibrary.bridge_module",
+          "result": 1,
+          "error": 0
+        }
+      ],
+      "checks": {
+        "one_argument": true,
+        "target_instance": true,
+        "same_desktop": true,
+        "module_and_exports": true,
+        "raw_api_sequence": true,
+        "raw_calls_succeeded_this_run": true,
+        "no_diagnostic_query_failures": true,
+        "helper_identity_disk_identity": true,
+        "argument_file_disk_identity": true,
+        "loaded_module_disk_identity": true
+      }
+    },
+    {
+      "file": "suites1\\b001\\undo-1\\source-input.jsonl",
+      "target": [
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "target_identity",
+          "diagnosticVersion": 1,
+          "tickMs": 7180125,
+          "pid": 16044,
+          "tid": 14064,
+          "targetPid": 20964,
+          "targetTid": 32420,
+          "threadOwner": 20964,
+          "created": 134376685463018316,
+          "threadCreated": 134376685463018333,
+          "processWait": 258,
+          "threadWait": 258,
+          "desktop": "fv_r305_31628_7180015_source"
+        }
+      ],
+      "helper": [
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "helper_identity",
+          "diagnosticVersion": 1,
+          "tickMs": 7180125,
+          "pid": 16044,
+          "tid": 14064,
+          "path": "C:\\fv-c\\rd\\b001-build\\r305a.exe",
+          "diskSha256": "a93ad8445b3ca373106f897b1c1f56a9fff27896f88f20622154fc1dd4250411",
+          "created": 134376685463370573,
+          "threadCreated": 134376685463370587,
+          "desktop": "fv_r305_31628_7180015_source"
+        }
+      ],
+      "loaded": [
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "loaded_module",
+          "diagnosticVersion": 1,
+          "tickMs": 7180125,
+          "pid": 16044,
+          "tid": 14064,
+          "module": 140721661411328,
+          "path": "C:\\fv-c\\rd\\b001-build\\runtime304.dll",
+          "diskSha256": "10104c69171ac6ad8e20cef1a555e788e935f77bcf03f019dd74b5e0b7915343"
+        }
+      ],
+      "exports": [
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "export_owner",
+          "diagnosticVersion": 1,
+          "tickMs": 7180125,
+          "pid": 16044,
+          "tid": 14064,
+          "export": "ManagedGetMessage",
+          "address": 140721661442608,
+          "owner": 140721661411328,
+          "passedModule": 140721661411328,
+          "sameModule": true,
+          "path": "C:\\fv-c\\rd\\b001-build\\runtime304.dll"
+        },
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "export_owner",
+          "diagnosticVersion": 1,
+          "tickMs": 7180125,
+          "pid": 16044,
+          "tid": 14064,
+          "export": "ManagedCallWindow",
+          "address": 140721661441760,
+          "owner": 140721661411328,
+          "passedModule": 140721661411328,
+          "sameModule": true,
+          "path": "C:\\fv-c\\rd\\b001-build\\runtime304.dll"
+        }
+      ],
+      "api": [
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "api",
+          "diagnosticVersion": 1,
+          "tickMs": 7180125,
+          "pid": 16044,
+          "tid": 14064,
+          "api": "LoadLibraryW.runtime",
+          "result": 140721661411328,
+          "error": 0
+        },
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "api",
+          "diagnosticVersion": 1,
+          "tickMs": 7180125,
+          "pid": 16044,
+          "tid": 14064,
+          "api": "GetProcAddress.ManagedGetMessage",
+          "result": 140721661442608,
+          "error": 0
+        },
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "api",
+          "diagnosticVersion": 1,
+          "tickMs": 7180125,
+          "pid": 16044,
+          "tid": 14064,
+          "api": "SetWindowsHookExW.thread_only",
+          "result": 5180739,
+          "error": 0
+        },
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "api",
+          "diagnosticVersion": 1,
+          "tickMs": 7180125,
+          "pid": 16044,
+          "tid": 14064,
+          "api": "GetProcAddress.ManagedCallWindow",
+          "result": 140721661441760,
+          "error": 0
+        },
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "api",
+          "diagnosticVersion": 1,
+          "tickMs": 7180125,
+          "pid": 16044,
+          "tid": 14064,
+          "api": "SetWindowsHookExW.thread_control",
+          "result": 16846179,
+          "error": 0
+        },
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "api",
+          "diagnosticVersion": 1,
+          "tickMs": 7180218,
+          "pid": 16044,
+          "tid": 14064,
+          "api": "UnhookWindowsHookEx.control",
+          "result": 1,
+          "error": 0
+        },
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "api",
+          "diagnosticVersion": 1,
+          "tickMs": 7180218,
+          "pid": 16044,
+          "tid": 14064,
+          "api": "UnhookWindowsHookEx.queue",
+          "result": 1,
+          "error": 0
+        },
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "api",
+          "diagnosticVersion": 1,
+          "tickMs": 7180218,
+          "pid": 16044,
+          "tid": 14064,
+          "api": "FreeLibrary.bridge_module",
+          "result": 1,
+          "error": 0
+        }
+      ],
+      "checks": {
+        "one_argument": true,
+        "target_instance": true,
+        "same_desktop": true,
+        "module_and_exports": true,
+        "raw_api_sequence": true,
+        "raw_calls_succeeded_this_run": true,
+        "no_diagnostic_query_failures": true,
+        "helper_identity_disk_identity": true,
+        "argument_file_disk_identity": true,
+        "loaded_module_disk_identity": true
+      }
+    },
+    {
+      "file": "suites1\\b001\\undo-2\\source-input.jsonl",
+      "target": [
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "target_identity",
+          "diagnosticVersion": 1,
+          "tickMs": 7186750,
+          "pid": 40064,
+          "tid": 19672,
+          "targetPid": 44968,
+          "targetTid": 43120,
+          "threadOwner": 44968,
+          "created": 134376685529645397,
+          "threadCreated": 134376685529645413,
+          "processWait": 258,
+          "threadWait": 258,
+          "desktop": "fv_r305_37092_7186687_source"
+        }
+      ],
+      "helper": [
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "helper_identity",
+          "diagnosticVersion": 1,
+          "tickMs": 7186750,
+          "pid": 40064,
+          "tid": 19672,
+          "path": "C:\\fv-c\\rd\\b001-build\\r305a.exe",
+          "diskSha256": "a93ad8445b3ca373106f897b1c1f56a9fff27896f88f20622154fc1dd4250411",
+          "created": 134376685530017688,
+          "threadCreated": 134376685530017702,
+          "desktop": "fv_r305_37092_7186687_source"
+        }
+      ],
+      "loaded": [
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "loaded_module",
+          "diagnosticVersion": 1,
+          "tickMs": 7186750,
+          "pid": 40064,
+          "tid": 19672,
+          "module": 140721661411328,
+          "path": "C:\\fv-c\\rd\\b001-build\\runtime304.dll",
+          "diskSha256": "10104c69171ac6ad8e20cef1a555e788e935f77bcf03f019dd74b5e0b7915343"
+        }
+      ],
+      "exports": [
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "export_owner",
+          "diagnosticVersion": 1,
+          "tickMs": 7186750,
+          "pid": 40064,
+          "tid": 19672,
+          "export": "ManagedGetMessage",
+          "address": 140721661442608,
+          "owner": 140721661411328,
+          "passedModule": 140721661411328,
+          "sameModule": true,
+          "path": "C:\\fv-c\\rd\\b001-build\\runtime304.dll"
+        },
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "export_owner",
+          "diagnosticVersion": 1,
+          "tickMs": 7186750,
+          "pid": 40064,
+          "tid": 19672,
+          "export": "ManagedCallWindow",
+          "address": 140721661441760,
+          "owner": 140721661411328,
+          "passedModule": 140721661411328,
+          "sameModule": true,
+          "path": "C:\\fv-c\\rd\\b001-build\\runtime304.dll"
+        }
+      ],
+      "api": [
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "api",
+          "diagnosticVersion": 1,
+          "tickMs": 7186750,
+          "pid": 40064,
+          "tid": 19672,
+          "api": "LoadLibraryW.runtime",
+          "result": 140721661411328,
+          "error": 0
+        },
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "api",
+          "diagnosticVersion": 1,
+          "tickMs": 7186750,
+          "pid": 40064,
+          "tid": 19672,
+          "api": "GetProcAddress.ManagedGetMessage",
+          "result": 140721661442608,
+          "error": 0
+        },
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "api",
+          "diagnosticVersion": 1,
+          "tickMs": 7186750,
+          "pid": 40064,
+          "tid": 19672,
+          "api": "SetWindowsHookExW.thread_only",
+          "result": 19664265,
+          "error": 0
+        },
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "api",
+          "diagnosticVersion": 1,
+          "tickMs": 7186750,
+          "pid": 40064,
+          "tid": 19672,
+          "api": "GetProcAddress.ManagedCallWindow",
+          "result": 140721661441760,
+          "error": 0
+        },
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "api",
+          "diagnosticVersion": 1,
+          "tickMs": 7186750,
+          "pid": 40064,
+          "tid": 19672,
+          "api": "SetWindowsHookExW.thread_control",
+          "result": 4394413,
+          "error": 0
+        },
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "api",
+          "diagnosticVersion": 1,
+          "tickMs": 7186843,
+          "pid": 40064,
+          "tid": 19672,
+          "api": "UnhookWindowsHookEx.control",
+          "result": 1,
+          "error": 0
+        },
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "api",
+          "diagnosticVersion": 1,
+          "tickMs": 7186843,
+          "pid": 40064,
+          "tid": 19672,
+          "api": "UnhookWindowsHookEx.queue",
+          "result": 1,
+          "error": 0
+        },
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "api",
+          "diagnosticVersion": 1,
+          "tickMs": 7186843,
+          "pid": 40064,
+          "tid": 19672,
+          "api": "FreeLibrary.bridge_module",
+          "result": 1,
+          "error": 0
+        }
+      ],
+      "checks": {
+        "one_argument": true,
+        "target_instance": true,
+        "same_desktop": true,
+        "module_and_exports": true,
+        "raw_api_sequence": true,
+        "raw_calls_succeeded_this_run": true,
+        "no_diagnostic_query_failures": true,
+        "helper_identity_disk_identity": true,
+        "argument_file_disk_identity": true,
+        "loaded_module_disk_identity": true
+      }
+    },
+    {
+      "file": "suites1\\b001\\unknown-child-1\\source-input.jsonl",
+      "target": [
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "target_identity",
+          "diagnosticVersion": 1,
+          "tickMs": 7180531,
+          "pid": 34752,
+          "tid": 36804,
+          "targetPid": 45048,
+          "targetTid": 1872,
+          "threadOwner": 45048,
+          "created": 134376685467092046,
+          "threadCreated": 134376685467092074,
+          "processWait": 258,
+          "threadWait": 258,
+          "desktop": "fv_r305_46068_7180421_source"
+        }
+      ],
+      "helper": [
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "helper_identity",
+          "diagnosticVersion": 1,
+          "tickMs": 7180531,
+          "pid": 34752,
+          "tid": 36804,
+          "path": "C:\\fv-c\\rd\\b001-build\\r305a.exe",
+          "diskSha256": "a93ad8445b3ca373106f897b1c1f56a9fff27896f88f20622154fc1dd4250411",
+          "created": 134376685467783709,
+          "threadCreated": 134376685467783732,
+          "desktop": "fv_r305_46068_7180421_source"
+        }
+      ],
+      "loaded": [
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "loaded_module",
+          "diagnosticVersion": 1,
+          "tickMs": 7180531,
+          "pid": 34752,
+          "tid": 36804,
+          "module": 140721661411328,
+          "path": "C:\\fv-c\\rd\\b001-build\\runtime304.dll",
+          "diskSha256": "10104c69171ac6ad8e20cef1a555e788e935f77bcf03f019dd74b5e0b7915343"
+        }
+      ],
+      "exports": [
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "export_owner",
+          "diagnosticVersion": 1,
+          "tickMs": 7180531,
+          "pid": 34752,
+          "tid": 36804,
+          "export": "ManagedGetMessage",
+          "address": 140721661442608,
+          "owner": 140721661411328,
+          "passedModule": 140721661411328,
+          "sameModule": true,
+          "path": "C:\\fv-c\\rd\\b001-build\\runtime304.dll"
+        },
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "export_owner",
+          "diagnosticVersion": 1,
+          "tickMs": 7180531,
+          "pid": 34752,
+          "tid": 36804,
+          "export": "ManagedCallWindow",
+          "address": 140721661441760,
+          "owner": 140721661411328,
+          "passedModule": 140721661411328,
+          "sameModule": true,
+          "path": "C:\\fv-c\\rd\\b001-build\\runtime304.dll"
+        }
+      ],
+      "api": [
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "api",
+          "diagnosticVersion": 1,
+          "tickMs": 7180531,
+          "pid": 34752,
+          "tid": 36804,
+          "api": "LoadLibraryW.runtime",
+          "result": 140721661411328,
+          "error": 0
+        },
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "api",
+          "diagnosticVersion": 1,
+          "tickMs": 7180531,
+          "pid": 34752,
+          "tid": 36804,
+          "api": "GetProcAddress.ManagedGetMessage",
+          "result": 140721661442608,
+          "error": 0
+        },
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "api",
+          "diagnosticVersion": 1,
+          "tickMs": 7180531,
+          "pid": 34752,
+          "tid": 36804,
+          "api": "SetWindowsHookExW.thread_only",
+          "result": 5115195,
+          "error": 0
+        },
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "api",
+          "diagnosticVersion": 1,
+          "tickMs": 7180531,
+          "pid": 34752,
+          "tid": 36804,
+          "api": "GetProcAddress.ManagedCallWindow",
+          "result": 140721661441760,
+          "error": 0
+        },
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "api",
+          "diagnosticVersion": 1,
+          "tickMs": 7180531,
+          "pid": 34752,
+          "tid": 36804,
+          "api": "SetWindowsHookExW.thread_control",
+          "result": 2952553,
+          "error": 0
+        },
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "api",
+          "diagnosticVersion": 1,
+          "tickMs": 7180609,
+          "pid": 34752,
+          "tid": 36804,
+          "api": "UnhookWindowsHookEx.control",
+          "result": 1,
+          "error": 0
+        },
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "api",
+          "diagnosticVersion": 1,
+          "tickMs": 7180609,
+          "pid": 34752,
+          "tid": 36804,
+          "api": "UnhookWindowsHookEx.queue",
+          "result": 1,
+          "error": 0
+        },
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "api",
+          "diagnosticVersion": 1,
+          "tickMs": 7180609,
+          "pid": 34752,
+          "tid": 36804,
+          "api": "FreeLibrary.bridge_module",
+          "result": 1,
+          "error": 0
+        }
+      ],
+      "checks": {
+        "one_argument": true,
+        "target_instance": true,
+        "same_desktop": true,
+        "module_and_exports": true,
+        "raw_api_sequence": true,
+        "raw_calls_succeeded_this_run": true,
+        "no_diagnostic_query_failures": true,
+        "helper_identity_disk_identity": true,
+        "argument_file_disk_identity": true,
+        "loaded_module_disk_identity": true
+      }
+    },
+    {
+      "file": "suites1\\b001\\unknown-child-2\\source-input.jsonl",
+      "target": [
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "target_identity",
+          "diagnosticVersion": 1,
+          "tickMs": 7187078,
+          "pid": 45620,
+          "tid": 40724,
+          "targetPid": 35512,
+          "targetTid": 43716,
+          "threadOwner": 35512,
+          "created": 134376685533014179,
+          "threadCreated": 134376685533014196,
+          "processWait": 258,
+          "threadWait": 258,
+          "desktop": "fv_r305_20964_7187015_source"
+        }
+      ],
+      "helper": [
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "helper_identity",
+          "diagnosticVersion": 1,
+          "tickMs": 7187078,
+          "pid": 45620,
+          "tid": 40724,
+          "path": "C:\\fv-c\\rd\\b001-build\\r305a.exe",
+          "diskSha256": "a93ad8445b3ca373106f897b1c1f56a9fff27896f88f20622154fc1dd4250411",
+          "created": 134376685533385248,
+          "threadCreated": 134376685533385263,
+          "desktop": "fv_r305_20964_7187015_source"
+        }
+      ],
+      "loaded": [
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "loaded_module",
+          "diagnosticVersion": 1,
+          "tickMs": 7187078,
+          "pid": 45620,
+          "tid": 40724,
+          "module": 140721661411328,
+          "path": "C:\\fv-c\\rd\\b001-build\\runtime304.dll",
+          "diskSha256": "10104c69171ac6ad8e20cef1a555e788e935f77bcf03f019dd74b5e0b7915343"
+        }
+      ],
+      "exports": [
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "export_owner",
+          "diagnosticVersion": 1,
+          "tickMs": 7187078,
+          "pid": 45620,
+          "tid": 40724,
+          "export": "ManagedGetMessage",
+          "address": 140721661442608,
+          "owner": 140721661411328,
+          "passedModule": 140721661411328,
+          "sameModule": true,
+          "path": "C:\\fv-c\\rd\\b001-build\\runtime304.dll"
+        },
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "export_owner",
+          "diagnosticVersion": 1,
+          "tickMs": 7187078,
+          "pid": 45620,
+          "tid": 40724,
+          "export": "ManagedCallWindow",
+          "address": 140721661441760,
+          "owner": 140721661411328,
+          "passedModule": 140721661411328,
+          "sameModule": true,
+          "path": "C:\\fv-c\\rd\\b001-build\\runtime304.dll"
+        }
+      ],
+      "api": [
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "api",
+          "diagnosticVersion": 1,
+          "tickMs": 7187078,
+          "pid": 45620,
+          "tid": 40724,
+          "api": "LoadLibraryW.runtime",
+          "result": 140721661411328,
+          "error": 0
+        },
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "api",
+          "diagnosticVersion": 1,
+          "tickMs": 7187078,
+          "pid": 45620,
+          "tid": 40724,
+          "api": "GetProcAddress.ManagedGetMessage",
+          "result": 140721661442608,
+          "error": 0
+        },
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "api",
+          "diagnosticVersion": 1,
+          "tickMs": 7187078,
+          "pid": 45620,
+          "tid": 40724,
+          "api": "SetWindowsHookExW.thread_only",
+          "result": 33426853,
+          "error": 0
+        },
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "api",
+          "diagnosticVersion": 1,
+          "tickMs": 7187078,
+          "pid": 45620,
+          "tid": 40724,
+          "api": "GetProcAddress.ManagedCallWindow",
+          "result": 140721661441760,
+          "error": 0
+        },
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "api",
+          "diagnosticVersion": 1,
+          "tickMs": 7187078,
+          "pid": 45620,
+          "tid": 40724,
+          "api": "SetWindowsHookExW.thread_control",
+          "result": 7998905,
+          "error": 0
+        },
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "api",
+          "diagnosticVersion": 1,
+          "tickMs": 7187140,
+          "pid": 45620,
+          "tid": 40724,
+          "api": "UnhookWindowsHookEx.control",
+          "result": 1,
+          "error": 0
+        },
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "api",
+          "diagnosticVersion": 1,
+          "tickMs": 7187140,
+          "pid": 45620,
+          "tid": 40724,
+          "api": "UnhookWindowsHookEx.queue",
+          "result": 1,
+          "error": 0
+        },
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "api",
+          "diagnosticVersion": 1,
+          "tickMs": 7187156,
+          "pid": 45620,
+          "tid": 40724,
+          "api": "FreeLibrary.bridge_module",
+          "result": 1,
+          "error": 0
+        }
+      ],
+      "checks": {
+        "one_argument": true,
+        "target_instance": true,
+        "same_desktop": true,
+        "module_and_exports": true,
+        "raw_api_sequence": true,
+        "raw_calls_succeeded_this_run": true,
+        "no_diagnostic_query_failures": true,
+        "helper_identity_disk_identity": true,
+        "argument_file_disk_identity": true,
+        "loaded_module_disk_identity": true
+      }
+    },
+    {
+      "file": "suites1\\b001\\unregistered-ref-1\\source-input.jsonl",
+      "target": [
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "target_identity",
+          "diagnosticVersion": 1,
+          "tickMs": 7181703,
+          "pid": 45356,
+          "tid": 40524,
+          "targetPid": 45480,
+          "targetTid": 34968,
+          "threadOwner": 45480,
+          "created": 134376685477146769,
+          "threadCreated": 134376685477146795,
+          "processWait": 258,
+          "threadWait": 258,
+          "desktop": "fv_r305_41008_7181437_source"
+        }
+      ],
+      "helper": [
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "helper_identity",
+          "diagnosticVersion": 1,
+          "tickMs": 7181703,
+          "pid": 45356,
+          "tid": 40524,
+          "path": "C:\\fv-c\\rd\\b001-build\\r305a.exe",
+          "diskSha256": "a93ad8445b3ca373106f897b1c1f56a9fff27896f88f20622154fc1dd4250411",
+          "created": 134376685479638773,
+          "threadCreated": 134376685479638795,
+          "desktop": "fv_r305_41008_7181437_source"
+        }
+      ],
+      "loaded": [
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "loaded_module",
+          "diagnosticVersion": 1,
+          "tickMs": 7181703,
+          "pid": 45356,
+          "tid": 40524,
+          "module": 140721661411328,
+          "path": "C:\\fv-c\\rd\\b001-build\\runtime304.dll",
+          "diskSha256": "10104c69171ac6ad8e20cef1a555e788e935f77bcf03f019dd74b5e0b7915343"
+        }
+      ],
+      "exports": [
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "export_owner",
+          "diagnosticVersion": 1,
+          "tickMs": 7181703,
+          "pid": 45356,
+          "tid": 40524,
+          "export": "ManagedGetMessage",
+          "address": 140721661442608,
+          "owner": 140721661411328,
+          "passedModule": 140721661411328,
+          "sameModule": true,
+          "path": "C:\\fv-c\\rd\\b001-build\\runtime304.dll"
+        },
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "export_owner",
+          "diagnosticVersion": 1,
+          "tickMs": 7181703,
+          "pid": 45356,
+          "tid": 40524,
+          "export": "ManagedCallWindow",
+          "address": 140721661441760,
+          "owner": 140721661411328,
+          "passedModule": 140721661411328,
+          "sameModule": true,
+          "path": "C:\\fv-c\\rd\\b001-build\\runtime304.dll"
+        }
+      ],
+      "api": [
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "api",
+          "diagnosticVersion": 1,
+          "tickMs": 7181703,
+          "pid": 45356,
+          "tid": 40524,
+          "api": "LoadLibraryW.runtime",
+          "result": 140721661411328,
+          "error": 0
+        },
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "api",
+          "diagnosticVersion": 1,
+          "tickMs": 7181703,
+          "pid": 45356,
+          "tid": 40524,
+          "api": "GetProcAddress.ManagedGetMessage",
+          "result": 140721661442608,
+          "error": 0
+        },
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "api",
+          "diagnosticVersion": 1,
+          "tickMs": 7181703,
+          "pid": 45356,
+          "tid": 40524,
+          "api": "SetWindowsHookExW.thread_only",
+          "result": 855483,
+          "error": 0
+        },
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "api",
+          "diagnosticVersion": 1,
+          "tickMs": 7181703,
+          "pid": 45356,
+          "tid": 40524,
+          "api": "GetProcAddress.ManagedCallWindow",
+          "result": 140721661441760,
+          "error": 0
+        },
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "api",
+          "diagnosticVersion": 1,
+          "tickMs": 7181703,
+          "pid": 45356,
+          "tid": 40524,
+          "api": "SetWindowsHookExW.thread_control",
+          "result": 21171665,
+          "error": 0
+        },
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "api",
+          "diagnosticVersion": 1,
+          "tickMs": 7181812,
+          "pid": 45356,
+          "tid": 40524,
+          "api": "UnhookWindowsHookEx.control",
+          "result": 1,
+          "error": 0
+        },
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "api",
+          "diagnosticVersion": 1,
+          "tickMs": 7181812,
+          "pid": 45356,
+          "tid": 40524,
+          "api": "UnhookWindowsHookEx.queue",
+          "result": 1,
+          "error": 0
+        },
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "api",
+          "diagnosticVersion": 1,
+          "tickMs": 7181812,
+          "pid": 45356,
+          "tid": 40524,
+          "api": "FreeLibrary.bridge_module",
+          "result": 1,
+          "error": 0
+        }
+      ],
+      "checks": {
+        "one_argument": true,
+        "target_instance": true,
+        "same_desktop": true,
+        "module_and_exports": true,
+        "raw_api_sequence": true,
+        "raw_calls_succeeded_this_run": true,
+        "no_diagnostic_query_failures": true,
+        "helper_identity_disk_identity": true,
+        "argument_file_disk_identity": true,
+        "loaded_module_disk_identity": true
+      }
+    },
+    {
+      "file": "suites1\\b001\\unregistered-ref-2\\source-input.jsonl",
+      "target": [
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "target_identity",
+          "diagnosticVersion": 1,
+          "tickMs": 7188406,
+          "pid": 33856,
+          "tid": 34428,
+          "targetPid": 8000,
+          "targetTid": 14120,
+          "threadOwner": 8000,
+          "created": 134376685544472392,
+          "threadCreated": 134376685544472412,
+          "processWait": 258,
+          "threadWait": 258,
+          "desktop": "fv_r305_40780_7188171_source"
+        }
+      ],
+      "helper": [
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "helper_identity",
+          "diagnosticVersion": 1,
+          "tickMs": 7188406,
+          "pid": 33856,
+          "tid": 34428,
+          "path": "C:\\fv-c\\rd\\b001-build\\r305a.exe",
+          "diskSha256": "a93ad8445b3ca373106f897b1c1f56a9fff27896f88f20622154fc1dd4250411",
+          "created": 134376685546706019,
+          "threadCreated": 134376685546706036,
+          "desktop": "fv_r305_40780_7188171_source"
+        }
+      ],
+      "loaded": [
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "loaded_module",
+          "diagnosticVersion": 1,
+          "tickMs": 7188421,
+          "pid": 33856,
+          "tid": 34428,
+          "module": 140721661411328,
+          "path": "C:\\fv-c\\rd\\b001-build\\runtime304.dll",
+          "diskSha256": "10104c69171ac6ad8e20cef1a555e788e935f77bcf03f019dd74b5e0b7915343"
+        }
+      ],
+      "exports": [
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "export_owner",
+          "diagnosticVersion": 1,
+          "tickMs": 7188421,
+          "pid": 33856,
+          "tid": 34428,
+          "export": "ManagedGetMessage",
+          "address": 140721661442608,
+          "owner": 140721661411328,
+          "passedModule": 140721661411328,
+          "sameModule": true,
+          "path": "C:\\fv-c\\rd\\b001-build\\runtime304.dll"
+        },
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "export_owner",
+          "diagnosticVersion": 1,
+          "tickMs": 7188421,
+          "pid": 33856,
+          "tid": 34428,
+          "export": "ManagedCallWindow",
+          "address": 140721661441760,
+          "owner": 140721661411328,
+          "passedModule": 140721661411328,
+          "sameModule": true,
+          "path": "C:\\fv-c\\rd\\b001-build\\runtime304.dll"
+        }
+      ],
+      "api": [
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "api",
+          "diagnosticVersion": 1,
+          "tickMs": 7188406,
+          "pid": 33856,
+          "tid": 34428,
+          "api": "LoadLibraryW.runtime",
+          "result": 140721661411328,
+          "error": 0
+        },
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "api",
+          "diagnosticVersion": 1,
+          "tickMs": 7188421,
+          "pid": 33856,
+          "tid": 34428,
+          "api": "GetProcAddress.ManagedGetMessage",
+          "result": 140721661442608,
+          "error": 0
+        },
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "api",
+          "diagnosticVersion": 1,
+          "tickMs": 7188421,
+          "pid": 33856,
+          "tid": 34428,
+          "api": "SetWindowsHookExW.thread_only",
+          "result": 186581079,
+          "error": 0
+        },
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "api",
+          "diagnosticVersion": 1,
+          "tickMs": 7188421,
+          "pid": 33856,
+          "tid": 34428,
+          "api": "GetProcAddress.ManagedCallWindow",
+          "result": 140721661441760,
+          "error": 0
+        },
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "api",
+          "diagnosticVersion": 1,
+          "tickMs": 7188421,
+          "pid": 33856,
+          "tid": 34428,
+          "api": "SetWindowsHookExW.thread_control",
+          "result": 3018047,
+          "error": 0
+        },
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "api",
+          "diagnosticVersion": 1,
+          "tickMs": 7188531,
+          "pid": 33856,
+          "tid": 34428,
+          "api": "UnhookWindowsHookEx.control",
+          "result": 1,
+          "error": 0
+        },
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "api",
+          "diagnosticVersion": 1,
+          "tickMs": 7188531,
+          "pid": 33856,
+          "tid": 34428,
+          "api": "UnhookWindowsHookEx.queue",
+          "result": 1,
+          "error": 0
+        },
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "api",
+          "diagnosticVersion": 1,
+          "tickMs": 7188531,
+          "pid": 33856,
+          "tid": 34428,
+          "api": "FreeLibrary.bridge_module",
+          "result": 1,
+          "error": 0
+        }
+      ],
+      "checks": {
+        "one_argument": true,
+        "target_instance": true,
+        "same_desktop": true,
+        "module_and_exports": true,
+        "raw_api_sequence": true,
+        "raw_calls_succeeded_this_run": true,
+        "no_diagnostic_query_failures": true,
+        "helper_identity_disk_identity": true,
+        "argument_file_disk_identity": true,
+        "loaded_module_disk_identity": true
+      }
+    },
+    {
+      "file": "suites1\\cet002\\gui-1\\restored-input.jsonl",
+      "target": [
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "target_identity",
+          "diagnosticVersion": 1,
+          "tickMs": 7193171,
+          "pid": 40912,
+          "tid": 33008,
+          "targetPid": 44184,
+          "targetTid": 41484,
+          "threadOwner": 44184,
+          "created": 134376685594005646,
+          "threadCreated": 134376685594005663,
+          "processWait": 258,
+          "threadWait": 258,
+          "desktop": "fv_r305_36064_7192703_restored"
+        }
+      ],
+      "helper": [
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "helper_identity",
+          "diagnosticVersion": 1,
+          "tickMs": 7193171,
+          "pid": 40912,
+          "tid": 33008,
+          "path": "C:\\fv-c\\rd\\cet-build\\r305a.exe",
+          "diskSha256": "c8b9196d40fa75ec9dc1750aff733482e69e37e3ecc6267691b5152f9a76a163",
+          "created": 134376685594334685,
+          "threadCreated": 134376685594334703,
+          "desktop": "fv_r305_36064_7192703_restored"
+        }
+      ],
+      "loaded": [
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "loaded_module",
+          "diagnosticVersion": 1,
+          "tickMs": 7193171,
+          "pid": 40912,
+          "tid": 33008,
+          "module": 140721661280256,
+          "path": "C:\\fv-c\\rd\\cet-build\\runtime304.dll",
+          "diskSha256": "b32d63fe2f5966b5a6a4767be0d8a2f793037d717322388a6b420e4f9922b9e2"
+        }
+      ],
+      "exports": [
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "export_owner",
+          "diagnosticVersion": 1,
+          "tickMs": 7193171,
+          "pid": 40912,
+          "tid": 33008,
+          "export": "ManagedGetMessage",
+          "address": 140721661311536,
+          "owner": 140721661280256,
+          "passedModule": 140721661280256,
+          "sameModule": true,
+          "path": "C:\\fv-c\\rd\\cet-build\\runtime304.dll"
+        },
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "export_owner",
+          "diagnosticVersion": 1,
+          "tickMs": 7193171,
+          "pid": 40912,
+          "tid": 33008,
+          "export": "ManagedCallWindow",
+          "address": 140721661310688,
+          "owner": 140721661280256,
+          "passedModule": 140721661280256,
+          "sameModule": true,
+          "path": "C:\\fv-c\\rd\\cet-build\\runtime304.dll"
+        }
+      ],
+      "api": [
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "api",
+          "diagnosticVersion": 1,
+          "tickMs": 7193171,
+          "pid": 40912,
+          "tid": 33008,
+          "api": "LoadLibraryW.runtime",
+          "result": 140721661280256,
+          "error": 0
+        },
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "api",
+          "diagnosticVersion": 1,
+          "tickMs": 7193171,
+          "pid": 40912,
+          "tid": 33008,
+          "api": "GetProcAddress.ManagedGetMessage",
+          "result": 140721661311536,
+          "error": 0
+        },
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "api",
+          "diagnosticVersion": 1,
+          "tickMs": 7193171,
+          "pid": 40912,
+          "tid": 33008,
+          "api": "SetWindowsHookExW.thread_only",
+          "result": 1576419,
+          "error": 0
+        },
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "api",
+          "diagnosticVersion": 1,
+          "tickMs": 7193171,
+          "pid": 40912,
+          "tid": 33008,
+          "api": "GetProcAddress.ManagedCallWindow",
+          "result": 140721661310688,
+          "error": 0
+        },
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "api",
+          "diagnosticVersion": 1,
+          "tickMs": 7193171,
+          "pid": 40912,
+          "tid": 33008,
+          "api": "SetWindowsHookExW.thread_control",
+          "result": 6229463,
+          "error": 0
+        },
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "api",
+          "diagnosticVersion": 1,
+          "tickMs": 7193421,
+          "pid": 40912,
+          "tid": 33008,
+          "api": "UnhookWindowsHookEx.control",
+          "result": 1,
+          "error": 0
+        },
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "api",
+          "diagnosticVersion": 1,
+          "tickMs": 7193421,
+          "pid": 40912,
+          "tid": 33008,
+          "api": "UnhookWindowsHookEx.queue",
+          "result": 1,
+          "error": 0
+        },
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "api",
+          "diagnosticVersion": 1,
+          "tickMs": 7193421,
+          "pid": 40912,
+          "tid": 33008,
+          "api": "FreeLibrary.bridge_module",
+          "result": 1,
+          "error": 0
+        }
+      ],
+      "checks": {
+        "one_argument": true,
+        "target_instance": true,
+        "same_desktop": true,
+        "module_and_exports": true,
+        "raw_api_sequence": true,
+        "raw_calls_succeeded_this_run": true,
+        "no_diagnostic_query_failures": true,
+        "helper_identity_disk_identity": true,
+        "argument_file_disk_identity": true,
+        "loaded_module_disk_identity": true
+      }
+    },
+    {
+      "file": "suites1\\cet002\\gui-1\\source-input.jsonl",
+      "target": [
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "target_identity",
+          "diagnosticVersion": 1,
+          "tickMs": 7192765,
+          "pid": 20964,
+          "tid": 36312,
+          "targetPid": 14104,
+          "targetTid": 10124,
+          "threadOwner": 14104,
+          "created": 134376685589840578,
+          "threadCreated": 134376685589840592,
+          "processWait": 258,
+          "threadWait": 258,
+          "desktop": "fv_r305_36064_7192703_source"
+        }
+      ],
+      "helper": [
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "helper_identity",
+          "diagnosticVersion": 1,
+          "tickMs": 7192765,
+          "pid": 20964,
+          "tid": 36312,
+          "path": "C:\\fv-c\\rd\\cet-build\\r305a.exe",
+          "diskSha256": "c8b9196d40fa75ec9dc1750aff733482e69e37e3ecc6267691b5152f9a76a163",
+          "created": 134376685590284738,
+          "threadCreated": 134376685590284768,
+          "desktop": "fv_r305_36064_7192703_source"
+        }
+      ],
+      "loaded": [
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "loaded_module",
+          "diagnosticVersion": 1,
+          "tickMs": 7192781,
+          "pid": 20964,
+          "tid": 36312,
+          "module": 140721661280256,
+          "path": "C:\\fv-c\\rd\\cet-build\\runtime304.dll",
+          "diskSha256": "b32d63fe2f5966b5a6a4767be0d8a2f793037d717322388a6b420e4f9922b9e2"
+        }
+      ],
+      "exports": [
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "export_owner",
+          "diagnosticVersion": 1,
+          "tickMs": 7192781,
+          "pid": 20964,
+          "tid": 36312,
+          "export": "ManagedGetMessage",
+          "address": 140721661311536,
+          "owner": 140721661280256,
+          "passedModule": 140721661280256,
+          "sameModule": true,
+          "path": "C:\\fv-c\\rd\\cet-build\\runtime304.dll"
+        },
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "export_owner",
+          "diagnosticVersion": 1,
+          "tickMs": 7192781,
+          "pid": 20964,
+          "tid": 36312,
+          "export": "ManagedCallWindow",
+          "address": 140721661310688,
+          "owner": 140721661280256,
+          "passedModule": 140721661280256,
+          "sameModule": true,
+          "path": "C:\\fv-c\\rd\\cet-build\\runtime304.dll"
+        }
+      ],
+      "api": [
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "api",
+          "diagnosticVersion": 1,
+          "tickMs": 7192765,
+          "pid": 20964,
+          "tid": 36312,
+          "api": "LoadLibraryW.runtime",
+          "result": 140721661280256,
+          "error": 0
+        },
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "api",
+          "diagnosticVersion": 1,
+          "tickMs": 7192781,
+          "pid": 20964,
+          "tid": 36312,
+          "api": "GetProcAddress.ManagedGetMessage",
+          "result": 140721661311536,
+          "error": 0
+        },
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "api",
+          "diagnosticVersion": 1,
+          "tickMs": 7192781,
+          "pid": 20964,
+          "tid": 36312,
+          "api": "SetWindowsHookExW.thread_only",
+          "result": 189074527,
+          "error": 0
+        },
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "api",
+          "diagnosticVersion": 1,
+          "tickMs": 7192781,
+          "pid": 20964,
+          "tid": 36312,
+          "api": "GetProcAddress.ManagedCallWindow",
+          "result": 140721661310688,
+          "error": 0
+        },
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "api",
+          "diagnosticVersion": 1,
+          "tickMs": 7192781,
+          "pid": 20964,
+          "tid": 36312,
+          "api": "SetWindowsHookExW.thread_control",
+          "result": 16453019,
+          "error": 0
+        },
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "api",
+          "diagnosticVersion": 1,
+          "tickMs": 7192890,
+          "pid": 20964,
+          "tid": 36312,
+          "api": "UnhookWindowsHookEx.control",
+          "result": 1,
+          "error": 0
+        },
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "api",
+          "diagnosticVersion": 1,
+          "tickMs": 7192890,
+          "pid": 20964,
+          "tid": 36312,
+          "api": "UnhookWindowsHookEx.queue",
+          "result": 1,
+          "error": 0
+        },
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "api",
+          "diagnosticVersion": 1,
+          "tickMs": 7192890,
+          "pid": 20964,
+          "tid": 36312,
+          "api": "FreeLibrary.bridge_module",
+          "result": 1,
+          "error": 0
+        }
+      ],
+      "checks": {
+        "one_argument": true,
+        "target_instance": true,
+        "same_desktop": true,
+        "module_and_exports": true,
+        "raw_api_sequence": true,
+        "raw_calls_succeeded_this_run": true,
+        "no_diagnostic_query_failures": true,
+        "helper_identity_disk_identity": true,
+        "argument_file_disk_identity": true,
+        "loaded_module_disk_identity": true
+      }
+    },
+    {
+      "file": "suites1\\cet002\\gui-2\\restored-input.jsonl",
+      "target": [
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "target_identity",
+          "diagnosticVersion": 1,
+          "tickMs": 7194718,
+          "pid": 34200,
+          "tid": 42664,
+          "targetPid": 43980,
+          "targetTid": 5336,
+          "threadOwner": 43980,
+          "created": 134376685609506846,
+          "threadCreated": 134376685609506861,
+          "processWait": 258,
+          "threadWait": 258,
+          "desktop": "fv_r305_42148_7194234_restored"
+        }
+      ],
+      "helper": [
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "helper_identity",
+          "diagnosticVersion": 1,
+          "tickMs": 7194718,
+          "pid": 34200,
+          "tid": 42664,
+          "path": "C:\\fv-c\\rd\\cet-build\\r305a.exe",
+          "diskSha256": "c8b9196d40fa75ec9dc1750aff733482e69e37e3ecc6267691b5152f9a76a163",
+          "created": 134376685609798064,
+          "threadCreated": 134376685609798084,
+          "desktop": "fv_r305_42148_7194234_restored"
+        }
+      ],
+      "loaded": [
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "loaded_module",
+          "diagnosticVersion": 1,
+          "tickMs": 7194718,
+          "pid": 34200,
+          "tid": 42664,
+          "module": 140721661280256,
+          "path": "C:\\fv-c\\rd\\cet-build\\runtime304.dll",
+          "diskSha256": "b32d63fe2f5966b5a6a4767be0d8a2f793037d717322388a6b420e4f9922b9e2"
+        }
+      ],
+      "exports": [
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "export_owner",
+          "diagnosticVersion": 1,
+          "tickMs": 7194718,
+          "pid": 34200,
+          "tid": 42664,
+          "export": "ManagedGetMessage",
+          "address": 140721661311536,
+          "owner": 140721661280256,
+          "passedModule": 140721661280256,
+          "sameModule": true,
+          "path": "C:\\fv-c\\rd\\cet-build\\runtime304.dll"
+        },
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "export_owner",
+          "diagnosticVersion": 1,
+          "tickMs": 7194718,
+          "pid": 34200,
+          "tid": 42664,
+          "export": "ManagedCallWindow",
+          "address": 140721661310688,
+          "owner": 140721661280256,
+          "passedModule": 140721661280256,
+          "sameModule": true,
+          "path": "C:\\fv-c\\rd\\cet-build\\runtime304.dll"
+        }
+      ],
+      "api": [
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "api",
+          "diagnosticVersion": 1,
+          "tickMs": 7194718,
+          "pid": 34200,
+          "tid": 42664,
+          "api": "LoadLibraryW.runtime",
+          "result": 140721661280256,
+          "error": 0
+        },
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "api",
+          "diagnosticVersion": 1,
+          "tickMs": 7194718,
+          "pid": 34200,
+          "tid": 42664,
+          "api": "GetProcAddress.ManagedGetMessage",
+          "result": 140721661311536,
+          "error": 0
+        },
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "api",
+          "diagnosticVersion": 1,
+          "tickMs": 7194718,
+          "pid": 34200,
+          "tid": 42664,
+          "api": "SetWindowsHookExW.thread_only",
+          "result": 6622717,
+          "error": 0
+        },
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "api",
+          "diagnosticVersion": 1,
+          "tickMs": 7194718,
+          "pid": 34200,
+          "tid": 42664,
+          "api": "GetProcAddress.ManagedCallWindow",
+          "result": 140721661310688,
+          "error": 0
+        },
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "api",
+          "diagnosticVersion": 1,
+          "tickMs": 7194718,
+          "pid": 34200,
+          "tid": 42664,
+          "api": "SetWindowsHookExW.thread_control",
+          "result": 21368201,
+          "error": 0
+        },
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "api",
+          "diagnosticVersion": 1,
+          "tickMs": 7194937,
+          "pid": 34200,
+          "tid": 42664,
+          "api": "UnhookWindowsHookEx.control",
+          "result": 1,
+          "error": 0
+        },
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "api",
+          "diagnosticVersion": 1,
+          "tickMs": 7194937,
+          "pid": 34200,
+          "tid": 42664,
+          "api": "UnhookWindowsHookEx.queue",
+          "result": 1,
+          "error": 0
+        },
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "api",
+          "diagnosticVersion": 1,
+          "tickMs": 7194937,
+          "pid": 34200,
+          "tid": 42664,
+          "api": "FreeLibrary.bridge_module",
+          "result": 1,
+          "error": 0
+        }
+      ],
+      "checks": {
+        "one_argument": true,
+        "target_instance": true,
+        "same_desktop": true,
+        "module_and_exports": true,
+        "raw_api_sequence": true,
+        "raw_calls_succeeded_this_run": true,
+        "no_diagnostic_query_failures": true,
+        "helper_identity_disk_identity": true,
+        "argument_file_disk_identity": true,
+        "loaded_module_disk_identity": true
+      }
+    },
+    {
+      "file": "suites1\\cet002\\gui-2\\source-input.jsonl",
+      "target": [
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "target_identity",
+          "diagnosticVersion": 1,
+          "tickMs": 7194312,
+          "pid": 45952,
+          "tid": 36912,
+          "targetPid": 45392,
+          "targetTid": 16460,
+          "threadOwner": 45392,
+          "created": 134376685605195863,
+          "threadCreated": 134376685605195881,
+          "processWait": 258,
+          "threadWait": 258,
+          "desktop": "fv_r305_42148_7194234_source"
+        }
+      ],
+      "helper": [
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "helper_identity",
+          "diagnosticVersion": 1,
+          "tickMs": 7194312,
+          "pid": 45952,
+          "tid": 36912,
+          "path": "C:\\fv-c\\rd\\cet-build\\r305a.exe",
+          "diskSha256": "c8b9196d40fa75ec9dc1750aff733482e69e37e3ecc6267691b5152f9a76a163",
+          "created": 134376685605631191,
+          "threadCreated": 134376685605631220,
+          "desktop": "fv_r305_42148_7194234_source"
+        }
+      ],
+      "loaded": [
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "loaded_module",
+          "diagnosticVersion": 1,
+          "tickMs": 7194312,
+          "pid": 45952,
+          "tid": 36912,
+          "module": 140721661280256,
+          "path": "C:\\fv-c\\rd\\cet-build\\runtime304.dll",
+          "diskSha256": "b32d63fe2f5966b5a6a4767be0d8a2f793037d717322388a6b420e4f9922b9e2"
+        }
+      ],
+      "exports": [
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "export_owner",
+          "diagnosticVersion": 1,
+          "tickMs": 7194312,
+          "pid": 45952,
+          "tid": 36912,
+          "export": "ManagedGetMessage",
+          "address": 140721661311536,
+          "owner": 140721661280256,
+          "passedModule": 140721661280256,
+          "sameModule": true,
+          "path": "C:\\fv-c\\rd\\cet-build\\runtime304.dll"
+        },
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "export_owner",
+          "diagnosticVersion": 1,
+          "tickMs": 7194312,
+          "pid": 45952,
+          "tid": 36912,
+          "export": "ManagedCallWindow",
+          "address": 140721661310688,
+          "owner": 140721661280256,
+          "passedModule": 140721661280256,
+          "sameModule": true,
+          "path": "C:\\fv-c\\rd\\cet-build\\runtime304.dll"
+        }
+      ],
+      "api": [
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "api",
+          "diagnosticVersion": 1,
+          "tickMs": 7194312,
+          "pid": 45952,
+          "tid": 36912,
+          "api": "LoadLibraryW.runtime",
+          "result": 140721661280256,
+          "error": 0
+        },
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "api",
+          "diagnosticVersion": 1,
+          "tickMs": 7194312,
+          "pid": 45952,
+          "tid": 36912,
+          "api": "GetProcAddress.ManagedGetMessage",
+          "result": 140721661311536,
+          "error": 0
+        },
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "api",
+          "diagnosticVersion": 1,
+          "tickMs": 7194312,
+          "pid": 45952,
+          "tid": 36912,
+          "api": "SetWindowsHookExW.thread_only",
+          "result": 12127713,
+          "error": 0
+        },
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "api",
+          "diagnosticVersion": 1,
+          "tickMs": 7194312,
+          "pid": 45952,
+          "tid": 36912,
+          "api": "GetProcAddress.ManagedCallWindow",
+          "result": 140721661310688,
+          "error": 0
+        },
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "api",
+          "diagnosticVersion": 1,
+          "tickMs": 7194312,
+          "pid": 45952,
+          "tid": 36912,
+          "api": "SetWindowsHookExW.thread_control",
+          "result": 19074547,
+          "error": 0
+        },
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "api",
+          "diagnosticVersion": 1,
+          "tickMs": 7194437,
+          "pid": 45952,
+          "tid": 36912,
+          "api": "UnhookWindowsHookEx.control",
+          "result": 1,
+          "error": 0
+        },
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "api",
+          "diagnosticVersion": 1,
+          "tickMs": 7194437,
+          "pid": 45952,
+          "tid": 36912,
+          "api": "UnhookWindowsHookEx.queue",
+          "result": 1,
+          "error": 0
+        },
+        {
+          "type": "input_install_diagnostic",
+          "stage": "install_diag",
+          "event": "api",
+          "diagnosticVersion": 1,
+          "tickMs": 7194437,
+          "pid": 45952,
+          "tid": 36912,
+          "api": "FreeLibrary.bridge_module",
+          "result": 1,
+          "error": 0
+        }
+      ],
+      "checks": {
+        "one_argument": true,
+        "target_instance": true,
+        "same_desktop": true,
+        "module_and_exports": true,
+        "raw_api_sequence": true,
+        "raw_calls_succeeded_this_run": true,
+        "no_diagnostic_query_failures": true,
+        "helper_identity_disk_identity": true,
+        "argument_file_disk_identity": true,
+        "loaded_module_disk_identity": true
+      }
+    }
+  ],
+  "checks": [
+    {
+      "file": "run1\\legacy-minimal\\restored-input.jsonl",
+      "check": "one_argument",
+      "passed": true
+    },
+    {
+      "file": "run1\\legacy-minimal\\restored-input.jsonl",
+      "check": "target_instance",
+      "passed": true
+    },
+    {
+      "file": "run1\\legacy-minimal\\restored-input.jsonl",
+      "check": "same_desktop",
+      "passed": true
+    },
+    {
+      "file": "run1\\legacy-minimal\\restored-input.jsonl",
+      "check": "module_and_exports",
+      "passed": true
+    },
+    {
+      "file": "run1\\legacy-minimal\\restored-input.jsonl",
+      "check": "raw_api_sequence",
+      "passed": true
+    },
+    {
+      "file": "run1\\legacy-minimal\\restored-input.jsonl",
+      "check": "raw_calls_succeeded_this_run",
+      "passed": true
+    },
+    {
+      "file": "run1\\legacy-minimal\\restored-input.jsonl",
+      "check": "no_diagnostic_query_failures",
+      "passed": true
+    },
+    {
+      "file": "run1\\legacy-minimal\\restored-input.jsonl",
+      "check": "helper_identity_disk_identity",
+      "passed": true
+    },
+    {
+      "file": "run1\\legacy-minimal\\restored-input.jsonl",
+      "check": "argument_file_disk_identity",
+      "passed": true
+    },
+    {
+      "file": "run1\\legacy-minimal\\restored-input.jsonl",
+      "check": "loaded_module_disk_identity",
+      "passed": true
+    },
+    {
+      "file": "run1\\legacy-minimal\\source-input.jsonl",
+      "check": "one_argument",
+      "passed": true
+    },
+    {
+      "file": "run1\\legacy-minimal\\source-input.jsonl",
+      "check": "target_instance",
+      "passed": true
+    },
+    {
+      "file": "run1\\legacy-minimal\\source-input.jsonl",
+      "check": "same_desktop",
+      "passed": true
+    },
+    {
+      "file": "run1\\legacy-minimal\\source-input.jsonl",
+      "check": "module_and_exports",
+      "passed": true
+    },
+    {
+      "file": "run1\\legacy-minimal\\source-input.jsonl",
+      "check": "raw_api_sequence",
+      "passed": true
+    },
+    {
+      "file": "run1\\legacy-minimal\\source-input.jsonl",
+      "check": "raw_calls_succeeded_this_run",
+      "passed": true
+    },
+    {
+      "file": "run1\\legacy-minimal\\source-input.jsonl",
+      "check": "no_diagnostic_query_failures",
+      "passed": true
+    },
+    {
+      "file": "run1\\legacy-minimal\\source-input.jsonl",
+      "check": "helper_identity_disk_identity",
+      "passed": true
+    },
+    {
+      "file": "run1\\legacy-minimal\\source-input.jsonl",
+      "check": "argument_file_disk_identity",
+      "passed": true
+    },
+    {
+      "file": "run1\\legacy-minimal\\source-input.jsonl",
+      "check": "loaded_module_disk_identity",
+      "passed": true
+    },
+    {
+      "file": "suites1\\b001\\bad-parent-1\\source-input.jsonl",
+      "check": "one_argument",
+      "passed": true
+    },
+    {
+      "file": "suites1\\b001\\bad-parent-1\\source-input.jsonl",
+      "check": "target_instance",
+      "passed": true
+    },
+    {
+      "file": "suites1\\b001\\bad-parent-1\\source-input.jsonl",
+      "check": "same_desktop",
+      "passed": true
+    },
+    {
+      "file": "suites1\\b001\\bad-parent-1\\source-input.jsonl",
+      "check": "module_and_exports",
+      "passed": true
+    },
+    {
+      "file": "suites1\\b001\\bad-parent-1\\source-input.jsonl",
+      "check": "raw_api_sequence",
+      "passed": true
+    },
+    {
+      "file": "suites1\\b001\\bad-parent-1\\source-input.jsonl",
+      "check": "raw_calls_succeeded_this_run",
+      "passed": true
+    },
+    {
+      "file": "suites1\\b001\\bad-parent-1\\source-input.jsonl",
+      "check": "no_diagnostic_query_failures",
+      "passed": true
+    },
+    {
+      "file": "suites1\\b001\\bad-parent-1\\source-input.jsonl",
+      "check": "helper_identity_disk_identity",
+      "passed": true
+    },
+    {
+      "file": "suites1\\b001\\bad-parent-1\\source-input.jsonl",
+      "check": "argument_file_disk_identity",
+      "passed": true
+    },
+    {
+      "file": "suites1\\b001\\bad-parent-1\\source-input.jsonl",
+      "check": "loaded_module_disk_identity",
+      "passed": true
+    },
+    {
+      "file": "suites1\\b001\\bad-parent-2\\source-input.jsonl",
+      "check": "one_argument",
+      "passed": true
+    },
+    {
+      "file": "suites1\\b001\\bad-parent-2\\source-input.jsonl",
+      "check": "target_instance",
+      "passed": true
+    },
+    {
+      "file": "suites1\\b001\\bad-parent-2\\source-input.jsonl",
+      "check": "same_desktop",
+      "passed": true
+    },
+    {
+      "file": "suites1\\b001\\bad-parent-2\\source-input.jsonl",
+      "check": "module_and_exports",
+      "passed": true
+    },
+    {
+      "file": "suites1\\b001\\bad-parent-2\\source-input.jsonl",
+      "check": "raw_api_sequence",
+      "passed": true
+    },
+    {
+      "file": "suites1\\b001\\bad-parent-2\\source-input.jsonl",
+      "check": "raw_calls_succeeded_this_run",
+      "passed": true
+    },
+    {
+      "file": "suites1\\b001\\bad-parent-2\\source-input.jsonl",
+      "check": "no_diagnostic_query_failures",
+      "passed": true
+    },
+    {
+      "file": "suites1\\b001\\bad-parent-2\\source-input.jsonl",
+      "check": "helper_identity_disk_identity",
+      "passed": true
+    },
+    {
+      "file": "suites1\\b001\\bad-parent-2\\source-input.jsonl",
+      "check": "argument_file_disk_identity",
+      "passed": true
+    },
+    {
+      "file": "suites1\\b001\\bad-parent-2\\source-input.jsonl",
+      "check": "loaded_module_disk_identity",
+      "passed": true
+    },
+    {
+      "file": "suites1\\b001\\omit-focus-1\\source-input.jsonl",
+      "check": "one_argument",
+      "passed": true
+    },
+    {
+      "file": "suites1\\b001\\omit-focus-1\\source-input.jsonl",
+      "check": "target_instance",
+      "passed": true
+    },
+    {
+      "file": "suites1\\b001\\omit-focus-1\\source-input.jsonl",
+      "check": "same_desktop",
+      "passed": true
+    },
+    {
+      "file": "suites1\\b001\\omit-focus-1\\source-input.jsonl",
+      "check": "module_and_exports",
+      "passed": true
+    },
+    {
+      "file": "suites1\\b001\\omit-focus-1\\source-input.jsonl",
+      "check": "raw_api_sequence",
+      "passed": true
+    },
+    {
+      "file": "suites1\\b001\\omit-focus-1\\source-input.jsonl",
+      "check": "raw_calls_succeeded_this_run",
+      "passed": true
+    },
+    {
+      "file": "suites1\\b001\\omit-focus-1\\source-input.jsonl",
+      "check": "no_diagnostic_query_failures",
+      "passed": true
+    },
+    {
+      "file": "suites1\\b001\\omit-focus-1\\source-input.jsonl",
+      "check": "helper_identity_disk_identity",
+      "passed": true
+    },
+    {
+      "file": "suites1\\b001\\omit-focus-1\\source-input.jsonl",
+      "check": "argument_file_disk_identity",
+      "passed": true
+    },
+    {
+      "file": "suites1\\b001\\omit-focus-1\\source-input.jsonl",
+      "check": "loaded_module_disk_identity",
+      "passed": true
+    },
+    {
+      "file": "suites1\\b001\\omit-focus-2\\source-input.jsonl",
+      "check": "one_argument",
+      "passed": true
+    },
+    {
+      "file": "suites1\\b001\\omit-focus-2\\source-input.jsonl",
+      "check": "target_instance",
+      "passed": true
+    },
+    {
+      "file": "suites1\\b001\\omit-focus-2\\source-input.jsonl",
+      "check": "same_desktop",
+      "passed": true
+    },
+    {
+      "file": "suites1\\b001\\omit-focus-2\\source-input.jsonl",
+      "check": "module_and_exports",
+      "passed": true
+    },
+    {
+      "file": "suites1\\b001\\omit-focus-2\\source-input.jsonl",
+      "check": "raw_api_sequence",
+      "passed": true
+    },
+    {
+      "file": "suites1\\b001\\omit-focus-2\\source-input.jsonl",
+      "check": "raw_calls_succeeded_this_run",
+      "passed": true
+    },
+    {
+      "file": "suites1\\b001\\omit-focus-2\\source-input.jsonl",
+      "check": "no_diagnostic_query_failures",
+      "passed": true
+    },
+    {
+      "file": "suites1\\b001\\omit-focus-2\\source-input.jsonl",
+      "check": "helper_identity_disk_identity",
+      "passed": true
+    },
+    {
+      "file": "suites1\\b001\\omit-focus-2\\source-input.jsonl",
+      "check": "argument_file_disk_identity",
+      "passed": true
+    },
+    {
+      "file": "suites1\\b001\\omit-focus-2\\source-input.jsonl",
+      "check": "loaded_module_disk_identity",
+      "passed": true
+    },
+    {
+      "file": "suites1\\b001\\omit-modify-1\\source-input.jsonl",
+      "check": "one_argument",
+      "passed": true
+    },
+    {
+      "file": "suites1\\b001\\omit-modify-1\\source-input.jsonl",
+      "check": "target_instance",
+      "passed": true
+    },
+    {
+      "file": "suites1\\b001\\omit-modify-1\\source-input.jsonl",
+      "check": "same_desktop",
+      "passed": true
+    },
+    {
+      "file": "suites1\\b001\\omit-modify-1\\source-input.jsonl",
+      "check": "module_and_exports",
+      "passed": true
+    },
+    {
+      "file": "suites1\\b001\\omit-modify-1\\source-input.jsonl",
+      "check": "raw_api_sequence",
+      "passed": true
+    },
+    {
+      "file": "suites1\\b001\\omit-modify-1\\source-input.jsonl",
+      "check": "raw_calls_succeeded_this_run",
+      "passed": true
+    },
+    {
+      "file": "suites1\\b001\\omit-modify-1\\source-input.jsonl",
+      "check": "no_diagnostic_query_failures",
+      "passed": true
+    },
+    {
+      "file": "suites1\\b001\\omit-modify-1\\source-input.jsonl",
+      "check": "helper_identity_disk_identity",
+      "passed": true
+    },
+    {
+      "file": "suites1\\b001\\omit-modify-1\\source-input.jsonl",
+      "check": "argument_file_disk_identity",
+      "passed": true
+    },
+    {
+      "file": "suites1\\b001\\omit-modify-1\\source-input.jsonl",
+      "check": "loaded_module_disk_identity",
+      "passed": true
+    },
+    {
+      "file": "suites1\\b001\\omit-modify-2\\source-input.jsonl",
+      "check": "one_argument",
+      "passed": true
+    },
+    {
+      "file": "suites1\\b001\\omit-modify-2\\source-input.jsonl",
+      "check": "target_instance",
+      "passed": true
+    },
+    {
+      "file": "suites1\\b001\\omit-modify-2\\source-input.jsonl",
+      "check": "same_desktop",
+      "passed": true
+    },
+    {
+      "file": "suites1\\b001\\omit-modify-2\\source-input.jsonl",
+      "check": "module_and_exports",
+      "passed": true
+    },
+    {
+      "file": "suites1\\b001\\omit-modify-2\\source-input.jsonl",
+      "check": "raw_api_sequence",
+      "passed": true
+    },
+    {
+      "file": "suites1\\b001\\omit-modify-2\\source-input.jsonl",
+      "check": "raw_calls_succeeded_this_run",
+      "passed": true
+    },
+    {
+      "file": "suites1\\b001\\omit-modify-2\\source-input.jsonl",
+      "check": "no_diagnostic_query_failures",
+      "passed": true
+    },
+    {
+      "file": "suites1\\b001\\omit-modify-2\\source-input.jsonl",
+      "check": "helper_identity_disk_identity",
+      "passed": true
+    },
+    {
+      "file": "suites1\\b001\\omit-modify-2\\source-input.jsonl",
+      "check": "argument_file_disk_identity",
+      "passed": true
+    },
+    {
+      "file": "suites1\\b001\\omit-modify-2\\source-input.jsonl",
+      "check": "loaded_module_disk_identity",
+      "passed": true
+    },
+    {
+      "file": "suites1\\b001\\omit-selection-1\\source-input.jsonl",
+      "check": "one_argument",
+      "passed": true
+    },
+    {
+      "file": "suites1\\b001\\omit-selection-1\\source-input.jsonl",
+      "check": "target_instance",
+      "passed": true
+    },
+    {
+      "file": "suites1\\b001\\omit-selection-1\\source-input.jsonl",
+      "check": "same_desktop",
+      "passed": true
+    },
+    {
+      "file": "suites1\\b001\\omit-selection-1\\source-input.jsonl",
+      "check": "module_and_exports",
+      "passed": true
+    },
+    {
+      "file": "suites1\\b001\\omit-selection-1\\source-input.jsonl",
+      "check": "raw_api_sequence",
+      "passed": true
+    },
+    {
+      "file": "suites1\\b001\\omit-selection-1\\source-input.jsonl",
+      "check": "raw_calls_succeeded_this_run",
+      "passed": true
+    },
+    {
+      "file": "suites1\\b001\\omit-selection-1\\source-input.jsonl",
+      "check": "no_diagnostic_query_failures",
+      "passed": true
+    },
+    {
+      "file": "suites1\\b001\\omit-selection-1\\source-input.jsonl",
+      "check": "helper_identity_disk_identity",
+      "passed": true
+    },
+    {
+      "file": "suites1\\b001\\omit-selection-1\\source-input.jsonl",
+      "check": "argument_file_disk_identity",
+      "passed": true
+    },
+    {
+      "file": "suites1\\b001\\omit-selection-1\\source-input.jsonl",
+      "check": "loaded_module_disk_identity",
+      "passed": true
+    },
+    {
+      "file": "suites1\\b001\\omit-selection-2\\source-input.jsonl",
+      "check": "one_argument",
+      "passed": true
+    },
+    {
+      "file": "suites1\\b001\\omit-selection-2\\source-input.jsonl",
+      "check": "target_instance",
+      "passed": true
+    },
+    {
+      "file": "suites1\\b001\\omit-selection-2\\source-input.jsonl",
+      "check": "same_desktop",
+      "passed": true
+    },
+    {
+      "file": "suites1\\b001\\omit-selection-2\\source-input.jsonl",
+      "check": "module_and_exports",
+      "passed": true
+    },
+    {
+      "file": "suites1\\b001\\omit-selection-2\\source-input.jsonl",
+      "check": "raw_api_sequence",
+      "passed": true
+    },
+    {
+      "file": "suites1\\b001\\omit-selection-2\\source-input.jsonl",
+      "check": "raw_calls_succeeded_this_run",
+      "passed": true
+    },
+    {
+      "file": "suites1\\b001\\omit-selection-2\\source-input.jsonl",
+      "check": "no_diagnostic_query_failures",
+      "passed": true
+    },
+    {
+      "file": "suites1\\b001\\omit-selection-2\\source-input.jsonl",
+      "check": "helper_identity_disk_identity",
+      "passed": true
+    },
+    {
+      "file": "suites1\\b001\\omit-selection-2\\source-input.jsonl",
+      "check": "argument_file_disk_identity",
+      "passed": true
+    },
+    {
+      "file": "suites1\\b001\\omit-selection-2\\source-input.jsonl",
+      "check": "loaded_module_disk_identity",
+      "passed": true
+    },
+    {
+      "file": "suites1\\b001\\omit-text-1\\source-input.jsonl",
+      "check": "one_argument",
+      "passed": true
+    },
+    {
+      "file": "suites1\\b001\\omit-text-1\\source-input.jsonl",
+      "check": "target_instance",
+      "passed": true
+    },
+    {
+      "file": "suites1\\b001\\omit-text-1\\source-input.jsonl",
+      "check": "same_desktop",
+      "passed": true
+    },
+    {
+      "file": "suites1\\b001\\omit-text-1\\source-input.jsonl",
+      "check": "module_and_exports",
+      "passed": true
+    },
+    {
+      "file": "suites1\\b001\\omit-text-1\\source-input.jsonl",
+      "check": "raw_api_sequence",
+      "passed": true
+    },
+    {
+      "file": "suites1\\b001\\omit-text-1\\source-input.jsonl",
+      "check": "raw_calls_succeeded_this_run",
+      "passed": true
+    },
+    {
+      "file": "suites1\\b001\\omit-text-1\\source-input.jsonl",
+      "check": "no_diagnostic_query_failures",
+      "passed": true
+    },
+    {
+      "file": "suites1\\b001\\omit-text-1\\source-input.jsonl",
+      "check": "helper_identity_disk_identity",
+      "passed": true
+    },
+    {
+      "file": "suites1\\b001\\omit-text-1\\source-input.jsonl",
+      "check": "argument_file_disk_identity",
+      "passed": true
+    },
+    {
+      "file": "suites1\\b001\\omit-text-1\\source-input.jsonl",
+      "check": "loaded_module_disk_identity",
+      "passed": true
+    },
+    {
+      "file": "suites1\\b001\\omit-text-2\\source-input.jsonl",
+      "check": "one_argument",
+      "passed": true
+    },
+    {
+      "file": "suites1\\b001\\omit-text-2\\source-input.jsonl",
+      "check": "target_instance",
+      "passed": true
+    },
+    {
+      "file": "suites1\\b001\\omit-text-2\\source-input.jsonl",
+      "check": "same_desktop",
+      "passed": true
+    },
+    {
+      "file": "suites1\\b001\\omit-text-2\\source-input.jsonl",
+      "check": "module_and_exports",
+      "passed": true
+    },
+    {
+      "file": "suites1\\b001\\omit-text-2\\source-input.jsonl",
+      "check": "raw_api_sequence",
+      "passed": true
+    },
+    {
+      "file": "suites1\\b001\\omit-text-2\\source-input.jsonl",
+      "check": "raw_calls_succeeded_this_run",
+      "passed": true
+    },
+    {
+      "file": "suites1\\b001\\omit-text-2\\source-input.jsonl",
+      "check": "no_diagnostic_query_failures",
+      "passed": true
+    },
+    {
+      "file": "suites1\\b001\\omit-text-2\\source-input.jsonl",
+      "check": "helper_identity_disk_identity",
+      "passed": true
+    },
+    {
+      "file": "suites1\\b001\\omit-text-2\\source-input.jsonl",
+      "check": "argument_file_disk_identity",
+      "passed": true
+    },
+    {
+      "file": "suites1\\b001\\omit-text-2\\source-input.jsonl",
+      "check": "loaded_module_disk_identity",
+      "passed": true
+    },
+    {
+      "file": "suites1\\b001\\positive-1\\restored-input.jsonl",
+      "check": "one_argument",
+      "passed": true
+    },
+    {
+      "file": "suites1\\b001\\positive-1\\restored-input.jsonl",
+      "check": "target_instance",
+      "passed": true
+    },
+    {
+      "file": "suites1\\b001\\positive-1\\restored-input.jsonl",
+      "check": "same_desktop",
+      "passed": true
+    },
+    {
+      "file": "suites1\\b001\\positive-1\\restored-input.jsonl",
+      "check": "module_and_exports",
+      "passed": true
+    },
+    {
+      "file": "suites1\\b001\\positive-1\\restored-input.jsonl",
+      "check": "raw_api_sequence",
+      "passed": true
+    },
+    {
+      "file": "suites1\\b001\\positive-1\\restored-input.jsonl",
+      "check": "raw_calls_succeeded_this_run",
+      "passed": true
+    },
+    {
+      "file": "suites1\\b001\\positive-1\\restored-input.jsonl",
+      "check": "no_diagnostic_query_failures",
+      "passed": true
+    },
+    {
+      "file": "suites1\\b001\\positive-1\\restored-input.jsonl",
+      "check": "helper_identity_disk_identity",
+      "passed": true
+    },
+    {
+      "file": "suites1\\b001\\positive-1\\restored-input.jsonl",
+      "check": "argument_file_disk_identity",
+      "passed": true
+    },
+    {
+      "file": "suites1\\b001\\positive-1\\restored-input.jsonl",
+      "check": "loaded_module_disk_identity",
+      "passed": true
+    },
+    {
+      "file": "suites1\\b001\\positive-1\\source-input.jsonl",
+      "check": "one_argument",
+      "passed": true
+    },
+    {
+      "file": "suites1\\b001\\positive-1\\source-input.jsonl",
+      "check": "target_instance",
+      "passed": true
+    },
+    {
+      "file": "suites1\\b001\\positive-1\\source-input.jsonl",
+      "check": "same_desktop",
+      "passed": true
+    },
+    {
+      "file": "suites1\\b001\\positive-1\\source-input.jsonl",
+      "check": "module_and_exports",
+      "passed": true
+    },
+    {
+      "file": "suites1\\b001\\positive-1\\source-input.jsonl",
+      "check": "raw_api_sequence",
+      "passed": true
+    },
+    {
+      "file": "suites1\\b001\\positive-1\\source-input.jsonl",
+      "check": "raw_calls_succeeded_this_run",
+      "passed": true
+    },
+    {
+      "file": "suites1\\b001\\positive-1\\source-input.jsonl",
+      "check": "no_diagnostic_query_failures",
+      "passed": true
+    },
+    {
+      "file": "suites1\\b001\\positive-1\\source-input.jsonl",
+      "check": "helper_identity_disk_identity",
+      "passed": true
+    },
+    {
+      "file": "suites1\\b001\\positive-1\\source-input.jsonl",
+      "check": "argument_file_disk_identity",
+      "passed": true
+    },
+    {
+      "file": "suites1\\b001\\positive-1\\source-input.jsonl",
+      "check": "loaded_module_disk_identity",
+      "passed": true
+    },
+    {
+      "file": "suites1\\b001\\positive-2\\restored-input.jsonl",
+      "check": "one_argument",
+      "passed": true
+    },
+    {
+      "file": "suites1\\b001\\positive-2\\restored-input.jsonl",
+      "check": "target_instance",
+      "passed": true
+    },
+    {
+      "file": "suites1\\b001\\positive-2\\restored-input.jsonl",
+      "check": "same_desktop",
+      "passed": true
+    },
+    {
+      "file": "suites1\\b001\\positive-2\\restored-input.jsonl",
+      "check": "module_and_exports",
+      "passed": true
+    },
+    {
+      "file": "suites1\\b001\\positive-2\\restored-input.jsonl",
+      "check": "raw_api_sequence",
+      "passed": true
+    },
+    {
+      "file": "suites1\\b001\\positive-2\\restored-input.jsonl",
+      "check": "raw_calls_succeeded_this_run",
+      "passed": true
+    },
+    {
+      "file": "suites1\\b001\\positive-2\\restored-input.jsonl",
+      "check": "no_diagnostic_query_failures",
+      "passed": true
+    },
+    {
+      "file": "suites1\\b001\\positive-2\\restored-input.jsonl",
+      "check": "helper_identity_disk_identity",
+      "passed": true
+    },
+    {
+      "file": "suites1\\b001\\positive-2\\restored-input.jsonl",
+      "check": "argument_file_disk_identity",
+      "passed": true
+    },
+    {
+      "file": "suites1\\b001\\positive-2\\restored-input.jsonl",
+      "check": "loaded_module_disk_identity",
+      "passed": true
+    },
+    {
+      "file": "suites1\\b001\\positive-2\\source-input.jsonl",
+      "check": "one_argument",
+      "passed": true
+    },
+    {
+      "file": "suites1\\b001\\positive-2\\source-input.jsonl",
+      "check": "target_instance",
+      "passed": true
+    },
+    {
+      "file": "suites1\\b001\\positive-2\\source-input.jsonl",
+      "check": "same_desktop",
+      "passed": true
+    },
+    {
+      "file": "suites1\\b001\\positive-2\\source-input.jsonl",
+      "check": "module_and_exports",
+      "passed": true
+    },
+    {
+      "file": "suites1\\b001\\positive-2\\source-input.jsonl",
+      "check": "raw_api_sequence",
+      "passed": true
+    },
+    {
+      "file": "suites1\\b001\\positive-2\\source-input.jsonl",
+      "check": "raw_calls_succeeded_this_run",
+      "passed": true
+    },
+    {
+      "file": "suites1\\b001\\positive-2\\source-input.jsonl",
+      "check": "no_diagnostic_query_failures",
+      "passed": true
+    },
+    {
+      "file": "suites1\\b001\\positive-2\\source-input.jsonl",
+      "check": "helper_identity_disk_identity",
+      "passed": true
+    },
+    {
+      "file": "suites1\\b001\\positive-2\\source-input.jsonl",
+      "check": "argument_file_disk_identity",
+      "passed": true
+    },
+    {
+      "file": "suites1\\b001\\positive-2\\source-input.jsonl",
+      "check": "loaded_module_disk_identity",
+      "passed": true
+    },
+    {
+      "file": "suites1\\b001\\undo-1\\source-input.jsonl",
+      "check": "one_argument",
+      "passed": true
+    },
+    {
+      "file": "suites1\\b001\\undo-1\\source-input.jsonl",
+      "check": "target_instance",
+      "passed": true
+    },
+    {
+      "file": "suites1\\b001\\undo-1\\source-input.jsonl",
+      "check": "same_desktop",
+      "passed": true
+    },
+    {
+      "file": "suites1\\b001\\undo-1\\source-input.jsonl",
+      "check": "module_and_exports",
+      "passed": true
+    },
+    {
+      "file": "suites1\\b001\\undo-1\\source-input.jsonl",
+      "check": "raw_api_sequence",
+      "passed": true
+    },
+    {
+      "file": "suites1\\b001\\undo-1\\source-input.jsonl",
+      "check": "raw_calls_succeeded_this_run",
+      "passed": true
+    },
+    {
+      "file": "suites1\\b001\\undo-1\\source-input.jsonl",
+      "check": "no_diagnostic_query_failures",
+      "passed": true
+    },
+    {
+      "file": "suites1\\b001\\undo-1\\source-input.jsonl",
+      "check": "helper_identity_disk_identity",
+      "passed": true
+    },
+    {
+      "file": "suites1\\b001\\undo-1\\source-input.jsonl",
+      "check": "argument_file_disk_identity",
+      "passed": true
+    },
+    {
+      "file": "suites1\\b001\\undo-1\\source-input.jsonl",
+      "check": "loaded_module_disk_identity",
+      "passed": true
+    },
+    {
+      "file": "suites1\\b001\\undo-2\\source-input.jsonl",
+      "check": "one_argument",
+      "passed": true
+    },
+    {
+      "file": "suites1\\b001\\undo-2\\source-input.jsonl",
+      "check": "target_instance",
+      "passed": true
+    },
+    {
+      "file": "suites1\\b001\\undo-2\\source-input.jsonl",
+      "check": "same_desktop",
+      "passed": true
+    },
+    {
+      "file": "suites1\\b001\\undo-2\\source-input.jsonl",
+      "check": "module_and_exports",
+      "passed": true
+    },
+    {
+      "file": "suites1\\b001\\undo-2\\source-input.jsonl",
+      "check": "raw_api_sequence",
+      "passed": true
+    },
+    {
+      "file": "suites1\\b001\\undo-2\\source-input.jsonl",
+      "check": "raw_calls_succeeded_this_run",
+      "passed": true
+    },
+    {
+      "file": "suites1\\b001\\undo-2\\source-input.jsonl",
+      "check": "no_diagnostic_query_failures",
+      "passed": true
+    },
+    {
+      "file": "suites1\\b001\\undo-2\\source-input.jsonl",
+      "check": "helper_identity_disk_identity",
+      "passed": true
+    },
+    {
+      "file": "suites1\\b001\\undo-2\\source-input.jsonl",
+      "check": "argument_file_disk_identity",
+      "passed": true
+    },
+    {
+      "file": "suites1\\b001\\undo-2\\source-input.jsonl",
+      "check": "loaded_module_disk_identity",
+      "passed": true
+    },
+    {
+      "file": "suites1\\b001\\unknown-child-1\\source-input.jsonl",
+      "check": "one_argument",
+      "passed": true
+    },
+    {
+      "file": "suites1\\b001\\unknown-child-1\\source-input.jsonl",
+      "check": "target_instance",
+      "passed": true
+    },
+    {
+      "file": "suites1\\b001\\unknown-child-1\\source-input.jsonl",
+      "check": "same_desktop",
+      "passed": true
+    },
+    {
+      "file": "suites1\\b001\\unknown-child-1\\source-input.jsonl",
+      "check": "module_and_exports",
+      "passed": true
+    },
+    {
+      "file": "suites1\\b001\\unknown-child-1\\source-input.jsonl",
+      "check": "raw_api_sequence",
+      "passed": true
+    },
+    {
+      "file": "suites1\\b001\\unknown-child-1\\source-input.jsonl",
+      "check": "raw_calls_succeeded_this_run",
+      "passed": true
+    },
+    {
+      "file": "suites1\\b001\\unknown-child-1\\source-input.jsonl",
+      "check": "no_diagnostic_query_failures",
+      "passed": true
+    },
+    {
+      "file": "suites1\\b001\\unknown-child-1\\source-input.jsonl",
+      "check": "helper_identity_disk_identity",
+      "passed": true
+    },
+    {
+      "file": "suites1\\b001\\unknown-child-1\\source-input.jsonl",
+      "check": "argument_file_disk_identity",
+      "passed": true
+    },
+    {
+      "file": "suites1\\b001\\unknown-child-1\\source-input.jsonl",
+      "check": "loaded_module_disk_identity",
+      "passed": true
+    },
+    {
+      "file": "suites1\\b001\\unknown-child-2\\source-input.jsonl",
+      "check": "one_argument",
+      "passed": true
+    },
+    {
+      "file": "suites1\\b001\\unknown-child-2\\source-input.jsonl",
+      "check": "target_instance",
+      "passed": true
+    },
+    {
+      "file": "suites1\\b001\\unknown-child-2\\source-input.jsonl",
+      "check": "same_desktop",
+      "passed": true
+    },
+    {
+      "file": "suites1\\b001\\unknown-child-2\\source-input.jsonl",
+      "check": "module_and_exports",
+      "passed": true
+    },
+    {
+      "file": "suites1\\b001\\unknown-child-2\\source-input.jsonl",
+      "check": "raw_api_sequence",
+      "passed": true
+    },
+    {
+      "file": "suites1\\b001\\unknown-child-2\\source-input.jsonl",
+      "check": "raw_calls_succeeded_this_run",
+      "passed": true
+    },
+    {
+      "file": "suites1\\b001\\unknown-child-2\\source-input.jsonl",
+      "check": "no_diagnostic_query_failures",
+      "passed": true
+    },
+    {
+      "file": "suites1\\b001\\unknown-child-2\\source-input.jsonl",
+      "check": "helper_identity_disk_identity",
+      "passed": true
+    },
+    {
+      "file": "suites1\\b001\\unknown-child-2\\source-input.jsonl",
+      "check": "argument_file_disk_identity",
+      "passed": true
+    },
+    {
+      "file": "suites1\\b001\\unknown-child-2\\source-input.jsonl",
+      "check": "loaded_module_disk_identity",
+      "passed": true
+    },
+    {
+      "file": "suites1\\b001\\unregistered-ref-1\\source-input.jsonl",
+      "check": "one_argument",
+      "passed": true
+    },
+    {
+      "file": "suites1\\b001\\unregistered-ref-1\\source-input.jsonl",
+      "check": "target_instance",
+      "passed": true
+    },
+    {
+      "file": "suites1\\b001\\unregistered-ref-1\\source-input.jsonl",
+      "check": "same_desktop",
+      "passed": true
+    },
+    {
+      "file": "suites1\\b001\\unregistered-ref-1\\source-input.jsonl",
+      "check": "module_and_exports",
+      "passed": true
+    },
+    {
+      "file": "suites1\\b001\\unregistered-ref-1\\source-input.jsonl",
+      "check": "raw_api_sequence",
+      "passed": true
+    },
+    {
+      "file": "suites1\\b001\\unregistered-ref-1\\source-input.jsonl",
+      "check": "raw_calls_succeeded_this_run",
+      "passed": true
+    },
+    {
+      "file": "suites1\\b001\\unregistered-ref-1\\source-input.jsonl",
+      "check": "no_diagnostic_query_failures",
+      "passed": true
+    },
+    {
+      "file": "suites1\\b001\\unregistered-ref-1\\source-input.jsonl",
+      "check": "helper_identity_disk_identity",
+      "passed": true
+    },
+    {
+      "file": "suites1\\b001\\unregistered-ref-1\\source-input.jsonl",
+      "check": "argument_file_disk_identity",
+      "passed": true
+    },
+    {
+      "file": "suites1\\b001\\unregistered-ref-1\\source-input.jsonl",
+      "check": "loaded_module_disk_identity",
+      "passed": true
+    },
+    {
+      "file": "suites1\\b001\\unregistered-ref-2\\source-input.jsonl",
+      "check": "one_argument",
+      "passed": true
+    },
+    {
+      "file": "suites1\\b001\\unregistered-ref-2\\source-input.jsonl",
+      "check": "target_instance",
+      "passed": true
+    },
+    {
+      "file": "suites1\\b001\\unregistered-ref-2\\source-input.jsonl",
+      "check": "same_desktop",
+      "passed": true
+    },
+    {
+      "file": "suites1\\b001\\unregistered-ref-2\\source-input.jsonl",
+      "check": "module_and_exports",
+      "passed": true
+    },
+    {
+      "file": "suites1\\b001\\unregistered-ref-2\\source-input.jsonl",
+      "check": "raw_api_sequence",
+      "passed": true
+    },
+    {
+      "file": "suites1\\b001\\unregistered-ref-2\\source-input.jsonl",
+      "check": "raw_calls_succeeded_this_run",
+      "passed": true
+    },
+    {
+      "file": "suites1\\b001\\unregistered-ref-2\\source-input.jsonl",
+      "check": "no_diagnostic_query_failures",
+      "passed": true
+    },
+    {
+      "file": "suites1\\b001\\unregistered-ref-2\\source-input.jsonl",
+      "check": "helper_identity_disk_identity",
+      "passed": true
+    },
+    {
+      "file": "suites1\\b001\\unregistered-ref-2\\source-input.jsonl",
+      "check": "argument_file_disk_identity",
+      "passed": true
+    },
+    {
+      "file": "suites1\\b001\\unregistered-ref-2\\source-input.jsonl",
+      "check": "loaded_module_disk_identity",
+      "passed": true
+    },
+    {
+      "file": "suites1\\cet002\\gui-1\\restored-input.jsonl",
+      "check": "one_argument",
+      "passed": true
+    },
+    {
+      "file": "suites1\\cet002\\gui-1\\restored-input.jsonl",
+      "check": "target_instance",
+      "passed": true
+    },
+    {
+      "file": "suites1\\cet002\\gui-1\\restored-input.jsonl",
+      "check": "same_desktop",
+      "passed": true
+    },
+    {
+      "file": "suites1\\cet002\\gui-1\\restored-input.jsonl",
+      "check": "module_and_exports",
+      "passed": true
+    },
+    {
+      "file": "suites1\\cet002\\gui-1\\restored-input.jsonl",
+      "check": "raw_api_sequence",
+      "passed": true
+    },
+    {
+      "file": "suites1\\cet002\\gui-1\\restored-input.jsonl",
+      "check": "raw_calls_succeeded_this_run",
+      "passed": true
+    },
+    {
+      "file": "suites1\\cet002\\gui-1\\restored-input.jsonl",
+      "check": "no_diagnostic_query_failures",
+      "passed": true
+    },
+    {
+      "file": "suites1\\cet002\\gui-1\\restored-input.jsonl",
+      "check": "helper_identity_disk_identity",
+      "passed": true
+    },
+    {
+      "file": "suites1\\cet002\\gui-1\\restored-input.jsonl",
+      "check": "argument_file_disk_identity",
+      "passed": true
+    },
+    {
+      "file": "suites1\\cet002\\gui-1\\restored-input.jsonl",
+      "check": "loaded_module_disk_identity",
+      "passed": true
+    },
+    {
+      "file": "suites1\\cet002\\gui-1\\source-input.jsonl",
+      "check": "one_argument",
+      "passed": true
+    },
+    {
+      "file": "suites1\\cet002\\gui-1\\source-input.jsonl",
+      "check": "target_instance",
+      "passed": true
+    },
+    {
+      "file": "suites1\\cet002\\gui-1\\source-input.jsonl",
+      "check": "same_desktop",
+      "passed": true
+    },
+    {
+      "file": "suites1\\cet002\\gui-1\\source-input.jsonl",
+      "check": "module_and_exports",
+      "passed": true
+    },
+    {
+      "file": "suites1\\cet002\\gui-1\\source-input.jsonl",
+      "check": "raw_api_sequence",
+      "passed": true
+    },
+    {
+      "file": "suites1\\cet002\\gui-1\\source-input.jsonl",
+      "check": "raw_calls_succeeded_this_run",
+      "passed": true
+    },
+    {
+      "file": "suites1\\cet002\\gui-1\\source-input.jsonl",
+      "check": "no_diagnostic_query_failures",
+      "passed": true
+    },
+    {
+      "file": "suites1\\cet002\\gui-1\\source-input.jsonl",
+      "check": "helper_identity_disk_identity",
+      "passed": true
+    },
+    {
+      "file": "suites1\\cet002\\gui-1\\source-input.jsonl",
+      "check": "argument_file_disk_identity",
+      "passed": true
+    },
+    {
+      "file": "suites1\\cet002\\gui-1\\source-input.jsonl",
+      "check": "loaded_module_disk_identity",
+      "passed": true
+    },
+    {
+      "file": "suites1\\cet002\\gui-2\\restored-input.jsonl",
+      "check": "one_argument",
+      "passed": true
+    },
+    {
+      "file": "suites1\\cet002\\gui-2\\restored-input.jsonl",
+      "check": "target_instance",
+      "passed": true
+    },
+    {
+      "file": "suites1\\cet002\\gui-2\\restored-input.jsonl",
+      "check": "same_desktop",
+      "passed": true
+    },
+    {
+      "file": "suites1\\cet002\\gui-2\\restored-input.jsonl",
+      "check": "module_and_exports",
+      "passed": true
+    },
+    {
+      "file": "suites1\\cet002\\gui-2\\restored-input.jsonl",
+      "check": "raw_api_sequence",
+      "passed": true
+    },
+    {
+      "file": "suites1\\cet002\\gui-2\\restored-input.jsonl",
+      "check": "raw_calls_succeeded_this_run",
+      "passed": true
+    },
+    {
+      "file": "suites1\\cet002\\gui-2\\restored-input.jsonl",
+      "check": "no_diagnostic_query_failures",
+      "passed": true
+    },
+    {
+      "file": "suites1\\cet002\\gui-2\\restored-input.jsonl",
+      "check": "helper_identity_disk_identity",
+      "passed": true
+    },
+    {
+      "file": "suites1\\cet002\\gui-2\\restored-input.jsonl",
+      "check": "argument_file_disk_identity",
+      "passed": true
+    },
+    {
+      "file": "suites1\\cet002\\gui-2\\restored-input.jsonl",
+      "check": "loaded_module_disk_identity",
+      "passed": true
+    },
+    {
+      "file": "suites1\\cet002\\gui-2\\source-input.jsonl",
+      "check": "one_argument",
+      "passed": true
+    },
+    {
+      "file": "suites1\\cet002\\gui-2\\source-input.jsonl",
+      "check": "target_instance",
+      "passed": true
+    },
+    {
+      "file": "suites1\\cet002\\gui-2\\source-input.jsonl",
+      "check": "same_desktop",
+      "passed": true
+    },
+    {
+      "file": "suites1\\cet002\\gui-2\\source-input.jsonl",
+      "check": "module_and_exports",
+      "passed": true
+    },
+    {
+      "file": "suites1\\cet002\\gui-2\\source-input.jsonl",
+      "check": "raw_api_sequence",
+      "passed": true
+    },
+    {
+      "file": "suites1\\cet002\\gui-2\\source-input.jsonl",
+      "check": "raw_calls_succeeded_this_run",
+      "passed": true
+    },
+    {
+      "file": "suites1\\cet002\\gui-2\\source-input.jsonl",
+      "check": "no_diagnostic_query_failures",
+      "passed": true
+    },
+    {
+      "file": "suites1\\cet002\\gui-2\\source-input.jsonl",
+      "check": "helper_identity_disk_identity",
+      "passed": true
+    },
+    {
+      "file": "suites1\\cet002\\gui-2\\source-input.jsonl",
+      "check": "argument_file_disk_identity",
+      "passed": true
+    },
+    {
+      "file": "suites1\\cet002\\gui-2\\source-input.jsonl",
+      "check": "loaded_module_disk_identity",
+      "passed": true
+    }
+  ],
+  "apiErrors": [],
+  "hook126Observed": false,
+  "rootCauseConfirmed": false,
+  "cleanupCausalFixVerified": false,
+  "fullR5004Passed": false
+}

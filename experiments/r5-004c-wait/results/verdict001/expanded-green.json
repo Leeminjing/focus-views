@@ -1,0 +1,106 @@
+{
+  "passed": true,
+  "nativeProcessesStarted": false,
+  "assessmentSha256": "3326D170E2AA31F8DA112860076169288CFB16A45C7E2D3DF92F77664791017A",
+  "checks": [
+    {
+      "name": "normal-success",
+      "artificialEvidence": true,
+      "expected": true,
+      "actual": {
+        "evidenceComplete": true,
+        "nativeCloseObserved": true,
+        "operationPassed": true
+      },
+      "passed": true
+    },
+    {
+      "name": "close-success-manager-failed-cleanup-succeeded",
+      "artificialEvidence": true,
+      "expected": false,
+      "actual": {
+        "evidenceComplete": true,
+        "nativeCloseObserved": true,
+        "operationPassed": false
+      },
+      "passed": true
+    },
+    {
+      "name": "controller-failed",
+      "artificialEvidence": true,
+      "expected": false,
+      "actual": {
+        "evidenceComplete": true,
+        "nativeCloseObserved": true,
+        "operationPassed": false
+      },
+      "passed": true
+    },
+    {
+      "name": "primary-error-preserved",
+      "artificialEvidence": true,
+      "expected": false,
+      "actual": {
+        "evidenceComplete": true,
+        "nativeCloseObserved": true,
+        "operationPassed": false
+      },
+      "passed": true
+    },
+    {
+      "name": "manager-nonzero-with-no-first-error",
+      "artificialEvidence": true,
+      "expected": false,
+      "actual": {
+        "evidenceComplete": true,
+        "nativeCloseObserved": true,
+        "operationPassed": false
+      },
+      "passed": true
+    },
+    {
+      "name": "first-api-with-zero-code",
+      "artificialEvidence": true,
+      "expected": false,
+      "actual": {
+        "evidenceComplete": true,
+        "nativeCloseObserved": true,
+        "operationPassed": false
+      },
+      "passed": true
+    },
+    {
+      "name": "first-code-with-empty-api",
+      "artificialEvidence": true,
+      "expected": false,
+      "actual": {
+        "evidenceComplete": true,
+        "nativeCloseObserved": true,
+        "operationPassed": false
+      },
+      "passed": true
+    },
+    {
+      "name": "duplicate-completion",
+      "artificialEvidence": true,
+      "expected": false,
+      "actual": {
+        "evidenceComplete": false,
+        "nativeCloseObserved": false,
+        "operationPassed": false
+      },
+      "passed": true
+    },
+    {
+      "name": "missing-completion",
+      "artificialEvidence": true,
+      "expected": false,
+      "actual": {
+        "evidenceComplete": false,
+        "nativeCloseObserved": false,
+        "operationPassed": false
+      },
+      "passed": true
+    }
+  ]
+}
