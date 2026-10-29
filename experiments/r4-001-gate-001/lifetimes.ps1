@@ -38,9 +38,17 @@ function Test-GateBaseline([string]$Root,[string]$Base,[string[]]$Paths,[string[
  [pscustomobject]@{passed=($unexpected.Count -eq 0);changed=$changed;allowed=$Allowed;unexpected=$unexpected}
 }
 
-function Get-GateAllowedSources {
+# A committed, compile-gated diagnostic source is also present in default
+# builds. Accept only that reviewed blob, never arbitrary future input changes.
+function Get-ApprovedInputDiagnosticSource([string]$Root) {
+ & git -C $Root diff --quiet 1ef786b92d808fe543edbbd80e40c47ae9bb160a -- ':(top)experiments/r3-004/input.cpp'
+ if($LASTEXITCODE -eq 0){'experiments/r3-004/input.cpp'}
+ elseif($LASTEXITCODE -ne 1){throw 'Approved input source comparison failed'}
+}
+function Get-GateAllowedSources([string]$Root=$PSScriptRoot) {
  foreach($experiment in @('r3-005a-cet-002','r3-005b-001','r3-005c-001')){
   foreach($file in @('controller.cpp','build.ps1','test.ps1')){"experiments/$experiment/$file"}
  }
  foreach($file in @('fixture.cpp','protocol.hpp','bridge.cpp','capture.cpp')){"experiments/r3-005b-001/$file"}
+ Get-ApprovedInputDiagnosticSource $Root
 }

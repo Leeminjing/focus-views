@@ -1,4 +1,4 @@
-param([string]$OutDir=(Join-Path $PSScriptRoot 'out'),[string]$ResultsDir=(Join-Path $PSScriptRoot ('results/'+(Get-Date -Format 'yyyyMMdd-HHmmss'))),[ValidateRange(1,3)][int]$Repeats=2,[switch]$SkipRegression)
+param([string]$OutDir=(Join-Path $PSScriptRoot 'out'),[string]$ResultsDir=(Join-Path $PSScriptRoot ('results/'+(Get-Date -Format 'yyyyMMdd-HHmmss'))),[ValidateRange(1,3)][int]$Repeats=2,[switch]$SkipRegression,[string]$PreparedRegressionInput='')
 $ErrorActionPreference='Stop';Set-StrictMode -Version Latest
 . (Join-Path $PSScriptRoot '../r4-001-gate-001/lifetimes.ps1')
 . (Join-Path $PSScriptRoot 'instance-check.ps1')
@@ -186,7 +186,15 @@ Check 'test-source-unchanged-during-run' ((Sha $PSCommandPath) -eq $testSourceSh
 $bodyPassed=$errors.Count -eq 0 -and @($checks|Where-Object{-not $_.passed}).Count -eq 0
 $regression='not_run'
 if(-not $SkipRegression){try{
- & (Join-Path $PSScriptRoot 'prepare-regression-input.ps1') -OutDir $OutDir -EvidenceDir (Join-Path $ResultsDir 'regression-input-profile') | Tee-Object -FilePath (Join-Path $ResultsDir 'regression-input-profile-console.log')
+ if($PreparedRegressionInput){
+  $profile=Get-Content $PreparedRegressionInput -Raw|ConvertFrom-Json
+  if($profile.profile -ne 'acknowledged-ring'){throw 'Wrong prebuilt regression input profile'}
+  foreach($entry in @($profile.dependencyChanges)+@($profile.recoveryAndApplicationBinaries)){
+   $expected=if($entry.PSObject.Properties.Name -contains 'after'){$entry.after}else{$entry.sha256}
+   if((Sha $entry.path) -ne $expected){throw "Prebuilt regression input changed: $($entry.path)"}
+  }
+  Copy-Item $PreparedRegressionInput (Join-Path $ResultsDir 'prepared-regression-input.json')
+ }else{& (Join-Path $PSScriptRoot 'prepare-regression-input.ps1') -OutDir $OutDir -EvidenceDir (Join-Path $ResultsDir 'regression-input-profile') | Tee-Object -FilePath (Join-Path $ResultsDir 'regression-input-profile-console.log')}
  & (Join-Path $PSScriptRoot '../r5-002/test.ps1') -ResultsDir (Join-Path $ResultsDir 'r5-002-regression') | Tee-Object -FilePath (Join-Path $ResultsDir 'regression-console.log')
  $old=Get-Content -Raw (Join-Path $ResultsDir 'r5-002-regression/summary.json')|ConvertFrom-Json
  Check 'R5-002-and-all-nested-regressions' ($old.allEvidenceChecksPassed -and $old.oldRegressions -eq 'passed');$regression=if($old.allEvidenceChecksPassed -and $old.oldRegressions -eq 'passed'){'passed'}else{'failed'}

@@ -32,12 +32,15 @@ inline 不产生 3/4；进入 5 时仍在 VEH 调用栈。阶段写入使用固�
 先按 R5-004b 的说明准备其 MSVC/SDK、自研依赖及构建输出。显式指定新短证据目录，不能覆盖原始失败。
 
 ~~~powershell
-./experiments/r5-004c/build.ps1 -Source D:/focus-views/experiments/r5-004b/out-final -OutDir D:/focus-views/experiments/r5-004c/out
-./experiments/r5-004c/test-focus.ps1 -OutDir D:/focus-views/experiments/r5-004c/out -ResultsDir D:/fv/c/newfocus
-./experiments/r5-004c/test.ps1 -OutDir D:/focus-views/experiments/r5-004c/out -ResultsDir D:/fv/c/r1
+./experiments/r5-004c/prepare-combination.ps1 -Root C:/fv-c/new-builds
+./experiments/r5-004c/test.ps1 -OutDir C:/fv-c/new-builds/candidate -ControlOutDir C:/fv-c/new-builds/control -InputOutDir C:/fv-c/new-builds/b001 -CetOutDir C:/fv-c/new-builds/cet -QueryFailureOutDir C:/fv-c/new-builds/query -FrozenInputs C:/fv-c/new-builds/frozen-inputs.json -Profile C:/fv-c/new-builds/resource.bin -ResultsDir C:/fv-c/newrun
 ~~~
 
-test.ps1 显式执行：聚焦对照 → R5-004a 完整独立断言矩阵 → R5-004b 矩阵 → 原 R5-004 崩溃矩阵 → 完整旧嵌套回归。test-cleanup.ps1 保留原 R5-004a 的断言正文，仅切换为当前磁盘版本 2 的既有 oracle。旧回归按自己的默认构建重编译；不声称旧的版本 1 磁盘套件使用了候选版本 2 的同一二进制。
+test.ps1 显式执行：防重复/必要失败链验收 → 聚焦对照 → R5-004a 完整独立断言矩阵 → R5-004b 矩阵 → 原 R5-004 崩溃矩阵 → 完整旧嵌套回归。test-cleanup.ps1 保留原 R5-004a 的断言正文，仅切换为当前磁盘版本 2 的既有 oracle。prepare-combination.ps1 在测试前准备全部构建及既有 acknowledged-ring 依赖 profile，备份被替换的旧构建；测试阶段不再编译或替换依赖。默认构建、候选、输入诊断变体分开，源码/脚本、EXE/DLL/库/PDB、资源 profile 逐文件 SHA256 冻结，每阶段前后核对。旧版本 1 磁盘套件不使用候选版本 2 二进制。
+
+失败后的关闭对照使用同一用户 LocalAppData/focus-views/failure-followups 下的不可覆盖记录，按原管理器 PID＋创建时间集合和完整启动时间生成身份。真实入口在启动窗口前以 CreateNew 原子取得执行权并 flush，原始 summary/log/proof 哈希保存在记录中；成功、失败或中断都不删除记录。改变结果目录不能重新获得执行权。原失败材料不修改；缺失证明或启动周期变化仍先拒绝，人工阻塞不能冒充历史自然等待。
+
+资源 profile 必须由当前包的 recorder S0 经已有 profile.exe 提取，不能沿用旧 EXE 的 profile。准备阶段先独立确认源进程清理，入口再验证 profile 自身哈希及绑定的 EXE SHA256。旧默认套件的历史源码审计只额外认可 input.cpp 在 1ef786b 的已核对提交版本；该文件有后续未批准修改、其他旧实现或历史证据变化仍拒绝。默认构建与启用输入诊断的变体分别记录，不因审计认可而启用宏。
 
 test-focus.ps1 对三/四帧应用交替运行 inline:/deferred:，核对真实阶段、GUI TID、未写源现场及硬件 SSP。同一最终候选包用于本体组合复验。外部调用 test-one.ps1 新增的可选前缀默认空，不改变旧用例。
 

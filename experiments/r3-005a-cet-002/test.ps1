@@ -107,7 +107,10 @@ foreach($repeat in 1..$Repeats){foreach($scenario in @('core','return-mismatch',
 }}
 $old=@(& git -C $PSScriptRoot diff 2ec1d2b -- '../r1' '../r2' '../r3' '../r3-002' '../r3-003' '../r3-004' '../r3-005a' '../r3-005a-cet-001' '../common')
 if($InstallDiagnostics){$baseline=Test-GateBaseline $PSScriptRoot 2ec1d2b @('../r1','../r2','../r3','../r3-002','../r3-003','../r3-004','../r3-005a','../r3-005a-cet-001','../common') @('experiments/r3-004/input.cpp');$baseline|ConvertTo-Json -Depth 5|Set-Content "$ResultsDir/diagnostic-baseline.json";Check 'old-evidence-unchanged-except-explicit-input-diagnostic' $baseline.passed}
-else{Check 'old-experiments-and-evidence-unchanged' ($old.Count -eq 0)}
+else{
+ $baseline=Test-GateBaseline $PSScriptRoot 2ec1d2b @('../r1','../r2','../r3','../r3-002','../r3-003','../r3-004','../r3-005a','../r3-005a-cet-001','../common') @(Get-ApprovedInputDiagnosticSource $PSScriptRoot)
+ $baseline|ConvertTo-Json -Depth 5|Set-Content "$ResultsDir/default-source-baseline.json";Check 'old-experiments-and-evidence-unchanged' $baseline.passed
+}
 $okay=$cases.Count -eq 7*$Repeats -and @($checks | Where-Object {-not $_.passed}).Count -eq 0
 [ordered]@{allEvidenceChecksPassed=$okay;controlledCooperativeContinuationPassed=$okay;controlledGUIIntegrationPassed=$okay;generalGUIRestore=$false;R3Complete=$false;R3005bStarted=$false;R4Started=$false;checks=$checks;cases=$cases;caseProcessingErrors=$caseErrors;manualHostTest='not_executed';oldGateRerun=$false} | ConvertTo-Json -Depth 7 | Set-Content (Join-Path $ResultsDir 'summary.json') -Encoding utf8
 if(-not $okay){throw 'CET002 evidence mismatch; preserve failure logs.'}
