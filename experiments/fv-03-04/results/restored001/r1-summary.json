@@ -1,0 +1,200 @@
+{
+  "time": "2026-10-29T13:13:16.6094120+08:00",
+  "os": "Microsoft Windows 11 家庭版 中文版",
+  "osVersion": "10.0.26200",
+  "osBuild": "26200",
+  "processor": [
+    "13th Gen Intel(R) Core(TM) i9-13900HX"
+  ],
+  "architecture": "AMD64",
+  "elevated": false,
+  "build": {
+    "time": "2026-10-24T12:20:41.2221451+08:00",
+    "msvc": "D:\\focus-distinct-browser\\.tools\\msvc\\VC\\Tools\\MSVC\\14.44.35207",
+    "sdk": "D:\\Windows Kits\\10",
+    "sdkVersion": "10.0.18362.0",
+    "compilerVersion": "19.44.35229.0",
+    "buildId": "d294a2beab8c9c1c082ca37506dd92e66cf5b9406c22a4d5dbd9470c1ae51769",
+    "architecture": "x64",
+    "runtime": "static /MT",
+    "systemSettingsChanged": false
+  },
+  "sourceHashes": [
+    {
+      "Path": "D:\\focus-views\\experiments\\r1\\build.ps1",
+      "Hash": "67C9295088BCD9D555313A89C11C112F400BBDC3F45331B3D015E9BE5F133EFA"
+    },
+    {
+      "Path": "D:\\focus-views\\experiments\\r1\\controller.cpp",
+      "Hash": "74767D5AFE3E055DAD7ADFBAA8CEDA55CB4C0409A4F1D09B34AE6B1F992E06AC"
+    },
+    {
+      "Path": "D:\\focus-views\\experiments\\r1\\fixture.cpp",
+      "Hash": "50DF5B0030964CA2DF98665BDD41406742530D3D57708E2A4A75C4F75CE1F226"
+    },
+    {
+      "Path": "D:\\focus-views\\experiments\\r1\\snapshot.hpp",
+      "Hash": "D236EDCC87DD1AE87ED096F25809CC45090B4D04D1C2FC05604FED6ED2F40822"
+    },
+    {
+      "Path": "D:\\focus-views\\experiments\\r1\\test.ps1",
+      "Hash": "43B1F547F698054873AA3DB8E6E72A2E3964057A7CC2D9CB5003FABF23BDFE24"
+    },
+    {
+      "Path": "D:\\focus-views\\experiments\\r1\\workload.asm",
+      "Hash": "C5A042682C3EDD440C9A732C59BC3ED5827E3D6321563E544BF955242D03C318"
+    }
+  ],
+  "sharedSourceHashes": [
+    {
+      "Path": "D:\\focus-views\\experiments\\common\\native.hpp",
+      "Hash": "732EBEC822865F4457BE253BB2DA8322F3FB4CA1C5324ADDF7E1EF0B689B6721"
+    }
+  ],
+  "executableHashes": [
+    {
+      "Path": "D:\\focus-views\\experiments\\r1\\out\\controller.exe",
+      "Hash": "D82463B596FDB8BCC429C7143710705D2105892534A98C3E7E085B19F40398A8"
+    },
+    {
+      "Path": "D:\\focus-views\\experiments\\r1\\out\\fixture.exe",
+      "Hash": "9D0E90AF7FBE901F394942326C2318FF47B69B85C8AAA13340EAB8B3D5F0E13C"
+    }
+  ],
+  "cases": [
+    {
+      "case": "positive",
+      "expectedExit": 0,
+      "actualExit": 0,
+      "harnessPassed": true,
+      "computationSucceeded": true,
+      "createdPids": [
+        "58824",
+        "56372",
+        "59908"
+      ],
+      "terminatedPids": [
+        "58824",
+        "56372",
+        "59908"
+      ]
+    },
+    {
+      "case": "omit-memory",
+      "expectedExit": 2,
+      "actualExit": 2,
+      "harnessPassed": true,
+      "computationSucceeded": false,
+      "createdPids": [
+        "32148",
+        "44876"
+      ],
+      "terminatedPids": [
+        "32148",
+        "44876"
+      ]
+    },
+    {
+      "case": "omit-stack",
+      "expectedExit": 2,
+      "actualExit": 2,
+      "harnessPassed": true,
+      "computationSucceeded": false,
+      "createdPids": [
+        "55320",
+        "59596"
+      ],
+      "terminatedPids": [
+        "55320",
+        "59596"
+      ]
+    },
+    {
+      "case": "omit-register",
+      "expectedExit": 2,
+      "actualExit": 2,
+      "harnessPassed": true,
+      "computationSucceeded": false,
+      "createdPids": [
+        "43692",
+        "54220"
+      ],
+      "terminatedPids": [
+        "43692",
+        "54220"
+      ]
+    },
+    {
+      "case": "omit-flags",
+      "expectedExit": 2,
+      "actualExit": 2,
+      "harnessPassed": true,
+      "computationSucceeded": false,
+      "createdPids": [
+        "61412",
+        "57200"
+      ],
+      "terminatedPids": [
+        "61412",
+        "57200"
+      ]
+    },
+    {
+      "case": "address-conflict",
+      "expectedExit": 3,
+      "actualExit": 3,
+      "harnessPassed": true,
+      "computationSucceeded": false,
+      "createdPids": [
+        "54928",
+        "57932"
+      ],
+      "terminatedPids": [
+        "54928",
+        "57932"
+      ]
+    },
+    {
+      "case": "build-mismatch",
+      "expectedExit": 3,
+      "actualExit": 3,
+      "harnessPassed": true,
+      "computationSucceeded": false,
+      "createdPids": [
+        "38276",
+        "31876"
+      ],
+      "terminatedPids": [
+        "38276",
+        "31876"
+      ]
+    },
+    {
+      "case": "timeout",
+      "expectedExit": 4,
+      "actualExit": 4,
+      "harnessPassed": true,
+      "computationSucceeded": false,
+      "createdPids": [
+        "42068"
+      ],
+      "terminatedPids": [
+        "42068"
+      ]
+    },
+    {
+      "case": "unexpected-exception",
+      "expectedExit": 1,
+      "actualExit": 1,
+      "harnessPassed": true,
+      "computationSucceeded": false,
+      "createdPids": [
+        "36608"
+      ],
+      "terminatedPids": [
+        "36608"
+      ]
+    }
+  ],
+  "allHarnessChecksPassed": true
+}

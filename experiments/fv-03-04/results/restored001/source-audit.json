@@ -1,0 +1,1359 @@
+{
+  "implementationCommit": "cc4f2a2afe9828a3d6fa77e211f880c40b15ba84",
+  "nativeInputs": [
+    {
+      "path": "experiments/common/native.hpp",
+      "recorded": "732ebec822865f4457be253bb2da8322f3fb4ca1c5324addf7e1ef0b689b6721",
+      "current": "732ebec822865f4457be253bb2da8322f3fb4ca1c5324addf7e1ef0b689b6721",
+      "match": true
+    },
+    {
+      "path": "experiments/fv-03-04/auxiliary.cpp",
+      "recorded": "1929690c7b0603e4610ac1e3c776a53229c7107c9ecdd0d34194113ac115db6c",
+      "current": "1929690c7b0603e4610ac1e3c776a53229c7107c9ecdd0d34194113ac115db6c",
+      "match": true
+    },
+    {
+      "path": "experiments/fv-03-04/fixture-client.cpp",
+      "recorded": "70aa8f6c09a4d9d6bfe6bf31e9566af80e352db8b87a526c484b4b4a0713a70f",
+      "current": "70aa8f6c09a4d9d6bfe6bf31e9566af80e352db8b87a526c484b4b4a0713a70f",
+      "match": true
+    },
+    {
+      "path": "experiments/fv-03-04/interaction.inl",
+      "recorded": "338f9bc3853c31c50273b24aa384269d8a1337522f0f193535726e14c1e9b9e5",
+      "current": "338f9bc3853c31c50273b24aa384269d8a1337522f0f193535726e14c1e9b9e5",
+      "match": true
+    },
+    {
+      "path": "experiments/fv-03-04/mode.hpp",
+      "recorded": "242664ad76423e7129daf149e6becd47f4af004ff61e7372202984424a23df7d",
+      "current": "242664ad76423e7129daf149e6becd47f4af004ff61e7372202984424a23df7d",
+      "match": true
+    },
+    {
+      "path": "experiments/fv-03-04/protocol.hpp",
+      "recorded": "b6dd216694fffec18ecef998d7712847f31df107b0c61681a4d3fb313c1315fe",
+      "current": "b6dd216694fffec18ecef998d7712847f31df107b0c61681a4d3fb313c1315fe",
+      "match": true
+    },
+    {
+      "path": "experiments/fv-03-04/recorder-client.cpp",
+      "recorded": "2b16c0fb2441c9a6b08c9fa23649f0386cc429a2f656aec41c7578242e00cf54",
+      "current": "2b16c0fb2441c9a6b08c9fa23649f0386cc429a2f656aec41c7578242e00cf54",
+      "match": true
+    },
+    {
+      "path": "experiments/r1/controller.cpp",
+      "recorded": "74767d5afe3e055dad7adfbaa8ceda55cb4c0409a4f1d09b34ae6b1f992e06ac",
+      "current": "74767d5afe3e055dad7adfbaa8ceda55cb4c0409a4f1d09b34ae6b1f992e06ac",
+      "match": true
+    },
+    {
+      "path": "experiments/r1/fixture.cpp",
+      "recorded": "50df5b0030964ca2df98665bdd41406742530d3d57708e2a4a75c4f75ce1f226",
+      "current": "50df5b0030964ca2df98665bdd41406742530d3d57708e2a4a75c4f75ce1f226",
+      "match": true
+    },
+    {
+      "path": "experiments/r1/snapshot.hpp",
+      "recorded": "d236edcc87dd1ae87ed096f25809cc45090b4d04d1c2fc05604fed6ed2f40822",
+      "current": "d236edcc87dd1ae87ed096f25809cc45090b4d04d1c2fc05604fed6ed2f40822",
+      "match": true
+    },
+    {
+      "path": "experiments/r1/workload.asm",
+      "recorded": "c5a042682c3edd440c9a732c59bc3ed5827e3d6321563e544bf955242d03c318",
+      "current": "c5a042682c3edd440c9a732c59bc3ed5827e3d6321563e544bf955242d03c318",
+      "match": true
+    },
+    {
+      "path": "experiments/r2/controller.cpp",
+      "recorded": "900473f3e6a828462d3937890a160f50414d49c047b50de6a84c335bce2e69c8",
+      "current": "900473f3e6a828462d3937890a160f50414d49c047b50de6a84c335bce2e69c8",
+      "match": true
+    },
+    {
+      "path": "experiments/r2/debugger.hpp",
+      "recorded": "b7170718845bffce7c29b32ceb5de8096236a2e68b46d74fab3100c1e512e7cc",
+      "current": "b7170718845bffce7c29b32ceb5de8096236a2e68b46d74fab3100c1e512e7cc",
+      "match": true
+    },
+    {
+      "path": "experiments/r2/files.hpp",
+      "recorded": "80a09ef116318ccfab860973c3b04a0b3e6e0372b95cfff7cbdda25fdf74d881",
+      "current": "80a09ef116318ccfab860973c3b04a0b3e6e0372b95cfff7cbdda25fdf74d881",
+      "match": true
+    },
+    {
+      "path": "experiments/r2/fixture.cpp",
+      "recorded": "3b676dc18b5100395341d74c927660adb4a536d7edb634a8144777289daec2ad",
+      "current": "3b676dc18b5100395341d74c927660adb4a536d7edb634a8144777289daec2ad",
+      "match": true
+    },
+    {
+      "path": "experiments/r2/snapshot.hpp",
+      "recorded": "afecb242ed0b4c568485e514b63734ff91c16b685f772596ebbd6aca5f31ae46",
+      "current": "afecb242ed0b4c568485e514b63734ff91c16b685f772596ebbd6aca5f31ae46",
+      "match": true
+    },
+    {
+      "path": "experiments/r2/workload.asm",
+      "recorded": "e6bd7440749448b41495fbb977e8e71c7630a8bdd330b1e70d169c1ee22163fc",
+      "current": "e6bd7440749448b41495fbb977e8e71c7630a8bdd330b1e70d169c1ee22163fc",
+      "match": true
+    },
+    {
+      "path": "experiments/r3-002/channel.hpp",
+      "recorded": "16a29924de2774527f0da66acbbb687ba4d3d248d3fdd6ff2c82761492406dbf",
+      "current": "16a29924de2774527f0da66acbbb687ba4d3d248d3fdd6ff2c82761492406dbf",
+      "match": true
+    },
+    {
+      "path": "experiments/r3-002/controller.cpp",
+      "recorded": "538c9b2b5a712ab8760cef612cadcc39e74a0a2473ea5ed408d8318b114f610d",
+      "current": "538c9b2b5a712ab8760cef612cadcc39e74a0a2473ea5ed408d8318b114f610d",
+      "match": true
+    },
+    {
+      "path": "experiments/r3-002/input.cpp",
+      "recorded": "71209ea91241e823154b583e3e76ab24b5ceea847e8887ae15ca1ee3652798d6",
+      "current": "71209ea91241e823154b583e3e76ab24b5ceea847e8887ae15ca1ee3652798d6",
+      "match": true
+    },
+    {
+      "path": "experiments/r3-002/runtime.cpp",
+      "recorded": "e95915d300e77855f37204099115e6712ae8aada43071394ffdaf61682b6cfc5",
+      "current": "e95915d300e77855f37204099115e6712ae8aada43071394ffdaf61682b6cfc5",
+      "match": true
+    },
+    {
+      "path": "experiments/r3-003/channel.hpp",
+      "recorded": "e1f5307e96d7f6151cfde22df575cd82cc6c0813e1345eb7d99953a7c9bab750",
+      "current": "e1f5307e96d7f6151cfde22df575cd82cc6c0813e1345eb7d99953a7c9bab750",
+      "match": true
+    },
+    {
+      "path": "experiments/r3-003/controller.cpp",
+      "recorded": "d0ad89bef0c24c615b438318f96e2b5fb1493a74121673addfa4f26b2c946d92",
+      "current": "d0ad89bef0c24c615b438318f96e2b5fb1493a74121673addfa4f26b2c946d92",
+      "match": true
+    },
+    {
+      "path": "experiments/r3-003/iat.hpp",
+      "recorded": "67944d97755ad86d886b9919c1d302f37a64598411d54aa862ef1d211b574a7a",
+      "current": "67944d97755ad86d886b9919c1d302f37a64598411d54aa862ef1d211b574a7a",
+      "match": true
+    },
+    {
+      "path": "experiments/r3-003/input.cpp",
+      "recorded": "ea3df2b8487060ff9991749e7b2d26d8f817f2620fd2f8cb8259615a29e365ff",
+      "current": "ea3df2b8487060ff9991749e7b2d26d8f817f2620fd2f8cb8259615a29e365ff",
+      "match": true
+    },
+    {
+      "path": "experiments/r3-003/observer.cpp",
+      "recorded": "81e19415af573896a30f356f211f64a64aafa46ace1576419b748daee149ffbb",
+      "current": "81e19415af573896a30f356f211f64a64aafa46ace1576419b748daee149ffbb",
+      "match": true
+    },
+    {
+      "path": "experiments/r3-003/runtime.cpp",
+      "recorded": "f20f06f7e96e8c02b3de00112d1044d8d34950d50eed20d10b9f3b021b7a87ee",
+      "current": "f20f06f7e96e8c02b3de00112d1044d8d34950d50eed20d10b9f3b021b7a87ee",
+      "match": true
+    },
+    {
+      "path": "experiments/r3-004/channel.hpp",
+      "recorded": "a319f631a4260c832f448ebc1fd85075c8db0f45c12b22846740e0a6003e2ac0",
+      "current": "a319f631a4260c832f448ebc1fd85075c8db0f45c12b22846740e0a6003e2ac0",
+      "match": true
+    },
+    {
+      "path": "experiments/r3-004/controller.cpp",
+      "recorded": "7a96cf3d97922bbf24dfc8d3350598eec04b4e71be515c2b733ae12bd4453007",
+      "current": "7a96cf3d97922bbf24dfc8d3350598eec04b4e71be515c2b733ae12bd4453007",
+      "match": true
+    },
+    {
+      "path": "experiments/r3-004/iat.hpp",
+      "recorded": "33dd8edddbf9a9d0b0a72b8e2f58c5c8436d112d4824ea241a713c0ad3ba696f",
+      "current": "33dd8edddbf9a9d0b0a72b8e2f58c5c8436d112d4824ea241a713c0ad3ba696f",
+      "match": true
+    },
+    {
+      "path": "experiments/r3-004/input.cpp",
+      "recorded": "f592c780307d62d8cc0e27d0fe758f7956c0a4a7a97153b50ed89247d2b6e67d",
+      "current": "f592c780307d62d8cc0e27d0fe758f7956c0a4a7a97153b50ed89247d2b6e67d",
+      "match": true
+    },
+    {
+      "path": "experiments/r3-004/observer.cpp",
+      "recorded": "5710ab08ece7737dcb2bad6527f6a0cb321e7f9eb8c86cb1370f42badba96484",
+      "current": "5710ab08ece7737dcb2bad6527f6a0cb321e7f9eb8c86cb1370f42badba96484",
+      "match": true
+    },
+    {
+      "path": "experiments/r3-004/runtime.cpp",
+      "recorded": "38ff66f06d8e4e4aff5b3999400428bff641cf6528c0b131866e109e9730b9e2",
+      "current": "38ff66f06d8e4e4aff5b3999400428bff641cf6528c0b131866e109e9730b9e2",
+      "match": true
+    },
+    {
+      "path": "experiments/r3-005a-cet-001/controller.cpp",
+      "recorded": "7993255aff75bd62f2a0ef097edc29978fc8e793b5ea694eb5899ecf334ef3a8",
+      "current": "7993255aff75bd62f2a0ef097edc29978fc8e793b5ea694eb5899ecf334ef3a8",
+      "match": true
+    },
+    {
+      "path": "experiments/r3-005a-cet-001/fixture.cpp",
+      "recorded": "481162f116015c2f1f36f7f0c8bf7879f2a9a20dcdff00d70bb565d79801e062",
+      "current": "481162f116015c2f1f36f7f0c8bf7879f2a9a20dcdff00d70bb565d79801e062",
+      "match": true
+    },
+    {
+      "path": "experiments/r3-005a-cet-001/protocol.hpp",
+      "recorded": "22182f2a4a83636a6a243a89d1515a575c996632f1afe1049636aa3d8eaea81d",
+      "current": "22182f2a4a83636a6a243a89d1515a575c996632f1afe1049636aa3d8eaea81d",
+      "match": true
+    },
+    {
+      "path": "experiments/r3-005a-cet-001/traps.asm",
+      "recorded": "322342a6819d30c070298e5e834a4a3be307f708030f28993505fe397da665ad",
+      "current": "322342a6819d30c070298e5e834a4a3be307f708030f28993505fe397da665ad",
+      "match": true
+    },
+    {
+      "path": "experiments/r3-005a-cet-002/controller.cpp",
+      "recorded": "37ca4bfd1f5593536bbd6a4e25ab82514fcb2a44f3a9bd622bb5d4388304913d",
+      "current": "37ca4bfd1f5593536bbd6a4e25ab82514fcb2a44f3a9bd622bb5d4388304913d",
+      "match": true
+    },
+    {
+      "path": "experiments/r3-005a-cet-002/fixture.cpp",
+      "recorded": "825ebfd20b8a449933997574fcbe67425fe3acae014c95a6a81b6b5a0aaf34f6",
+      "current": "825ebfd20b8a449933997574fcbe67425fe3acae014c95a6a81b6b5a0aaf34f6",
+      "match": true
+    },
+    {
+      "path": "experiments/r3-005a-cet-002/protocol.hpp",
+      "recorded": "9f854ca926c94ba8b0bf60ab5c06de0fc367c74b5c1ecfc39c9b1b51b70211ab",
+      "current": "9f854ca926c94ba8b0bf60ab5c06de0fc367c74b5c1ecfc39c9b1b51b70211ab",
+      "match": true
+    },
+    {
+      "path": "experiments/r3-005a-cet-002/traps.asm",
+      "recorded": "0e1fcac7efe8a6f1ccf0e5887e07045000440a079fb20fc30b207be98061faec",
+      "current": "0e1fcac7efe8a6f1ccf0e5887e07045000440a079fb20fc30b207be98061faec",
+      "match": true
+    },
+    {
+      "path": "experiments/r3-005a/controller.cpp",
+      "recorded": "c7926d8c5408d9e14586f32c9e417be831cc55f6b47a905afd63914ffa4f0a9f",
+      "current": "c7926d8c5408d9e14586f32c9e417be831cc55f6b47a905afd63914ffa4f0a9f",
+      "match": true
+    },
+    {
+      "path": "experiments/r3-005a/fixture.cpp",
+      "recorded": "76c914eb76ca335fa3be41657c51982a8b296abf820bd64f6cc16261e61ada43",
+      "current": "76c914eb76ca335fa3be41657c51982a8b296abf820bd64f6cc16261e61ada43",
+      "match": true
+    },
+    {
+      "path": "experiments/r3-005a/protocol.hpp",
+      "recorded": "48c25a8fc3fe2479a5d7a907224c50e399a93e9a448d8ce22cb476b489e3537e",
+      "current": "48c25a8fc3fe2479a5d7a907224c50e399a93e9a448d8ce22cb476b489e3537e",
+      "match": true
+    },
+    {
+      "path": "experiments/r3-005a/traps.asm",
+      "recorded": "52fcdefd2bf01d74345b9593b0aade425a23f6a82ee6713a636b2700b880c43c",
+      "current": "52fcdefd2bf01d74345b9593b0aade425a23f6a82ee6713a636b2700b880c43c",
+      "match": true
+    },
+    {
+      "path": "experiments/r3-005b-001/bridge.cpp",
+      "recorded": "ac2a83524cfc3fb236e4bcfae472dc669e373434d5e508fbf418aa1a3a71727e",
+      "current": "ac2a83524cfc3fb236e4bcfae472dc669e373434d5e508fbf418aa1a3a71727e",
+      "match": true
+    },
+    {
+      "path": "experiments/r3-005b-001/capture.cpp",
+      "recorded": "c667d4f2af30e9249d10017d1c090e97327f08e196ec6f567426fb1b8e5d7d0c",
+      "current": "c667d4f2af30e9249d10017d1c090e97327f08e196ec6f567426fb1b8e5d7d0c",
+      "match": true
+    },
+    {
+      "path": "experiments/r3-005b-001/controller.cpp",
+      "recorded": "201d3f8b13971c715a7f8b8ef6aafdbdd97f565ed73ae1a78c7fbb083b3f8b45",
+      "current": "201d3f8b13971c715a7f8b8ef6aafdbdd97f565ed73ae1a78c7fbb083b3f8b45",
+      "match": true
+    },
+    {
+      "path": "experiments/r3-005b-001/fixture.cpp",
+      "recorded": "63e5e50e6d1b1eb6c2ccd8dceeb56c1f36cc5d3d10fcf4619746f5dc9b23c344",
+      "current": "63e5e50e6d1b1eb6c2ccd8dceeb56c1f36cc5d3d10fcf4619746f5dc9b23c344",
+      "match": true
+    },
+    {
+      "path": "experiments/r3-005b-001/protocol.hpp",
+      "recorded": "ed2954af5cff6664b9ec18796308499b5ab8b8d7a2592833b8d4e88457541338",
+      "current": "ed2954af5cff6664b9ec18796308499b5ab8b8d7a2592833b8d4e88457541338",
+      "match": true
+    },
+    {
+      "path": "experiments/r3-005b-001/resources.cpp",
+      "recorded": "ebf9edc52e2f308e3cacb51707dbbc23d2a3d0eb196224feb27d4ef22261fabe",
+      "current": "ebf9edc52e2f308e3cacb51707dbbc23d2a3d0eb196224feb27d4ef22261fabe",
+      "match": true
+    },
+    {
+      "path": "experiments/r3-005b-001/traps.asm",
+      "recorded": "0e1fcac7efe8a6f1ccf0e5887e07045000440a079fb20fc30b207be98061faec",
+      "current": "0e1fcac7efe8a6f1ccf0e5887e07045000440a079fb20fc30b207be98061faec",
+      "match": true
+    },
+    {
+      "path": "experiments/r3-005c-001/bridge.cpp",
+      "recorded": "ac2a83524cfc3fb236e4bcfae472dc669e373434d5e508fbf418aa1a3a71727e",
+      "current": "ac2a83524cfc3fb236e4bcfae472dc669e373434d5e508fbf418aa1a3a71727e",
+      "match": true
+    },
+    {
+      "path": "experiments/r3-005c-001/capture.cpp",
+      "recorded": "c667d4f2af30e9249d10017d1c090e97327f08e196ec6f567426fb1b8e5d7d0c",
+      "current": "c667d4f2af30e9249d10017d1c090e97327f08e196ec6f567426fb1b8e5d7d0c",
+      "match": true
+    },
+    {
+      "path": "experiments/r3-005c-001/controller.cpp",
+      "recorded": "75216ec1ec3ae912ed534ad0e708b529c78e1a4ca4d9dd2a072aeeaa3fa5f95d",
+      "current": "75216ec1ec3ae912ed534ad0e708b529c78e1a4ca4d9dd2a072aeeaa3fa5f95d",
+      "match": true
+    },
+    {
+      "path": "experiments/r3-005c-001/fixture.cpp",
+      "recorded": "780e187640795bea05ab49cedc74bb1656f2828c416f656897bbaddee9e2bf7d",
+      "current": "780e187640795bea05ab49cedc74bb1656f2828c416f656897bbaddee9e2bf7d",
+      "match": true
+    },
+    {
+      "path": "experiments/r3-005c-001/protocol.hpp",
+      "recorded": "7fe7be741e30d922ad8d2572f11f1e9d0c7f442c801e9420c40e8a1f6d1191c3",
+      "current": "7fe7be741e30d922ad8d2572f11f1e9d0c7f442c801e9420c40e8a1f6d1191c3",
+      "match": true
+    },
+    {
+      "path": "experiments/r3-005c-001/resources.cpp",
+      "recorded": "ebf9edc52e2f308e3cacb51707dbbc23d2a3d0eb196224feb27d4ef22261fabe",
+      "current": "ebf9edc52e2f308e3cacb51707dbbc23d2a3d0eb196224feb27d4ef22261fabe",
+      "match": true
+    },
+    {
+      "path": "experiments/r3-005c-001/traps.asm",
+      "recorded": "0e1fcac7efe8a6f1ccf0e5887e07045000440a079fb20fc30b207be98061faec",
+      "current": "0e1fcac7efe8a6f1ccf0e5887e07045000440a079fb20fc30b207be98061faec",
+      "match": true
+    },
+    {
+      "path": "experiments/r3/bridge.cpp",
+      "recorded": "e9323fd24d47c878a60f3cb9526aa0525510b7bf2e38e41591262d175f93cfac",
+      "current": "e9323fd24d47c878a60f3cb9526aa0525510b7bf2e38e41591262d175f93cfac",
+      "match": true
+    },
+    {
+      "path": "experiments/r3/controller.cpp",
+      "recorded": "0003c95ff989aaff6fafd63ad46b5215534dc875a2d1a54ea669dfeb0095b083",
+      "current": "0003c95ff989aaff6fafd63ad46b5215534dc875a2d1a54ea669dfeb0095b083",
+      "match": true
+    },
+    {
+      "path": "experiments/r3/fixture.cpp",
+      "recorded": "dd68aa119ce9689c3b2db185ef5f20f88c99677b9157c119d147c503f159c7af",
+      "current": "dd68aa119ce9689c3b2db185ef5f20f88c99677b9157c119d147c503f159c7af",
+      "match": true
+    },
+    {
+      "path": "experiments/r3/protocol.hpp",
+      "recorded": "2ce18fdaaf14df642a9c78b1761fb5d46b00b3b893ab6c5c9dc6d737d37b5606",
+      "current": "2ce18fdaaf14df642a9c78b1761fb5d46b00b3b893ab6c5c9dc6d737d37b5606",
+      "match": true
+    },
+    {
+      "path": "experiments/r4-001-gate-001/courier.hpp",
+      "recorded": "05c510d19e75286f4bf1572f83407ee5ab5990e54457012188aa442433fb9c63",
+      "current": "05c510d19e75286f4bf1572f83407ee5ab5990e54457012188aa442433fb9c63",
+      "match": true
+    },
+    {
+      "path": "experiments/r4-001-gate-001/handle-probe.cpp",
+      "recorded": "35f26338dd87d9e8ac4b6436fd28ea18c2078b29a84129b5777d98fadff8b882",
+      "current": "35f26338dd87d9e8ac4b6436fd28ea18c2078b29a84129b5777d98fadff8b882",
+      "match": true
+    },
+    {
+      "path": "experiments/r4-001-gate-001/launch-diagnostics.hpp",
+      "recorded": "c54bef438de4be2479e586a7784f66970bfddcd0ba3b5770f905ce6d3c9503e5",
+      "current": "c54bef438de4be2479e586a7784f66970bfddcd0ba3b5770f905ce6d3c9503e5",
+      "match": true
+    },
+    {
+      "path": "experiments/r4-001-gate-001/launch-probe.cpp",
+      "recorded": "0ca44f80633e9d25e415f5b1f70a99da8641c160f0cda623f12820a210fbacfc",
+      "current": "0ca44f80633e9d25e415f5b1f70a99da8641c160f0cda623f12820a210fbacfc",
+      "match": true
+    },
+    {
+      "path": "experiments/r4-001-gate-002/common.hpp",
+      "recorded": "c8e708181373577fc19c826c35f8489c1905a6bdd460de6423f78d73544b5bbe",
+      "current": "c8e708181373577fc19c826c35f8489c1905a6bdd460de6423f78d73544b5bbe",
+      "match": true
+    },
+    {
+      "path": "experiments/r4-001-gate-002/probe.cpp",
+      "recorded": "43b7540e5d126e6c52470dbe434a0ee8442689ed1115a772bbc1af0332aaa152",
+      "current": "43b7540e5d126e6c52470dbe434a0ee8442689ed1115a772bbc1af0332aaa152",
+      "match": true
+    },
+    {
+      "path": "experiments/r4-001-gate-002/trace.cpp",
+      "recorded": "30195109bb8f37bf97966faea5a1793b61791a25843e4d3f7d181ce734adc2e5",
+      "current": "30195109bb8f37bf97966faea5a1793b61791a25843e4d3f7d181ce734adc2e5",
+      "match": true
+    },
+    {
+      "path": "experiments/r4-001/actions.hpp",
+      "recorded": "24479881a356a5849553bb37939d5fbb7b0b326499ac334543f9b4e2d198b9c1",
+      "current": "24479881a356a5849553bb37939d5fbb7b0b326499ac334543f9b4e2d198b9c1",
+      "match": true
+    },
+    {
+      "path": "experiments/r4-001/application.cpp",
+      "recorded": "f75459bef070f0998d851291e606b03d223ab9bbdb4117020d6b241f24aff378",
+      "current": "f75459bef070f0998d851291e606b03d223ab9bbdb4117020d6b241f24aff378",
+      "match": true
+    },
+    {
+      "path": "experiments/r4-001/artifacts.hpp",
+      "recorded": "2f39deebe2fa9440b2bbca193039726f55bdf0244992efa7bc4df1fd0fae52d8",
+      "current": "2f39deebe2fa9440b2bbca193039726f55bdf0244992efa7bc4df1fd0fae52d8",
+      "match": true
+    },
+    {
+      "path": "experiments/r4-001/bridge.cpp",
+      "recorded": "5d684c3fa171ec8214eff2c9a5c692da22f8b645b08d152aa00b343cc5745a9a",
+      "current": "5d684c3fa171ec8214eff2c9a5c692da22f8b645b08d152aa00b343cc5745a9a",
+      "match": true
+    },
+    {
+      "path": "experiments/r4-001/capture.cpp",
+      "recorded": "c667d4f2af30e9249d10017d1c090e97327f08e196ec6f567426fb1b8e5d7d0c",
+      "current": "c667d4f2af30e9249d10017d1c090e97327f08e196ec6f567426fb1b8e5d7d0c",
+      "match": true
+    },
+    {
+      "path": "experiments/r4-001/controller.cpp",
+      "recorded": "ddd051759599a3df2b951dc415b121623d8116ea4ffe8075665036ca3536d595",
+      "current": "ddd051759599a3df2b951dc415b121623d8116ea4ffe8075665036ca3536d595",
+      "match": true
+    },
+    {
+      "path": "experiments/r4-001/fixture.cpp",
+      "recorded": "6097fbad05f9689120714347a28e3ef37c4923764aade4416045138455c1ea6b",
+      "current": "6097fbad05f9689120714347a28e3ef37c4923764aade4416045138455c1ea6b",
+      "match": true
+    },
+    {
+      "path": "experiments/r4-001/input.cpp",
+      "recorded": "5ad287379f77547b257898e51c8fed4e73acbe0b02fcaa5f6f348e8cf5144da4",
+      "current": "5ad287379f77547b257898e51c8fed4e73acbe0b02fcaa5f6f348e8cf5144da4",
+      "match": true
+    },
+    {
+      "path": "experiments/r4-001/protocol.hpp",
+      "recorded": "5cbb9fb85bc52d8e65f69501e97f5b41e700bfca0131ee23d33151100fe9b09c",
+      "current": "5cbb9fb85bc52d8e65f69501e97f5b41e700bfca0131ee23d33151100fe9b09c",
+      "match": true
+    },
+    {
+      "path": "experiments/r4-001/resources.cpp",
+      "recorded": "ebf9edc52e2f308e3cacb51707dbbc23d2a3d0eb196224feb27d4ef22261fabe",
+      "current": "ebf9edc52e2f308e3cacb51707dbbc23d2a3d0eb196224feb27d4ef22261fabe",
+      "match": true
+    },
+    {
+      "path": "experiments/r4-001/runtime.cpp",
+      "recorded": "7182c9bd9c9987160f3c26537dc9aedbf6dd2eb19a5024497ccf1aa7bb1eda0e",
+      "current": "7182c9bd9c9987160f3c26537dc9aedbf6dd2eb19a5024497ccf1aa7bb1eda0e",
+      "match": true
+    },
+    {
+      "path": "experiments/r4-001/traps.asm",
+      "recorded": "0e1fcac7efe8a6f1ccf0e5887e07045000440a079fb20fc30b207be98061faec",
+      "current": "0e1fcac7efe8a6f1ccf0e5887e07045000440a079fb20fc30b207be98061faec",
+      "match": true
+    },
+    {
+      "path": "experiments/r4-002a/bridge.cpp",
+      "recorded": "ac2a83524cfc3fb236e4bcfae472dc669e373434d5e508fbf418aa1a3a71727e",
+      "current": "ac2a83524cfc3fb236e4bcfae472dc669e373434d5e508fbf418aa1a3a71727e",
+      "match": true
+    },
+    {
+      "path": "experiments/r4-002a/capture.cpp",
+      "recorded": "c667d4f2af30e9249d10017d1c090e97327f08e196ec6f567426fb1b8e5d7d0c",
+      "current": "c667d4f2af30e9249d10017d1c090e97327f08e196ec6f567426fb1b8e5d7d0c",
+      "match": true
+    },
+    {
+      "path": "experiments/r4-002a/controller.cpp",
+      "recorded": "50f3ff00e5782eb2988e30d56ca2ad967407e7baa65c35d3f868e84485f2c9b7",
+      "current": "50f3ff00e5782eb2988e30d56ca2ad967407e7baa65c35d3f868e84485f2c9b7",
+      "match": true
+    },
+    {
+      "path": "experiments/r4-002a/fixture.cpp",
+      "recorded": "0d062091273e78593f7d13178c56daecc3e564d28529831e694b31600d0c7dae",
+      "current": "0d062091273e78593f7d13178c56daecc3e564d28529831e694b31600d0c7dae",
+      "match": true
+    },
+    {
+      "path": "experiments/r4-002a/protocol.hpp",
+      "recorded": "b28b1345019fd26d6ae6460ef02a31651d417a54cda4463422854082d217d474",
+      "current": "b28b1345019fd26d6ae6460ef02a31651d417a54cda4463422854082d217d474",
+      "match": true
+    },
+    {
+      "path": "experiments/r4-002a/resources.cpp",
+      "recorded": "220f630a1524c655e6bd5f342ab012ab37df4a79ade592575eb70952e0ad6a46",
+      "current": "220f630a1524c655e6bd5f342ab012ab37df4a79ade592575eb70952e0ad6a46",
+      "match": true
+    },
+    {
+      "path": "experiments/r4-002a/traps.asm",
+      "recorded": "0e1fcac7efe8a6f1ccf0e5887e07045000440a079fb20fc30b207be98061faec",
+      "current": "0e1fcac7efe8a6f1ccf0e5887e07045000440a079fb20fc30b207be98061faec",
+      "match": true
+    },
+    {
+      "path": "experiments/r4-002a/undo-probe.cpp",
+      "recorded": "caffec534e4944f242565a6eaa27e1ca8d1b9d681a10dacb25841b5cd75a48df",
+      "current": "caffec534e4944f242565a6eaa27e1ca8d1b9d681a10dacb25841b5cd75a48df",
+      "match": true
+    },
+    {
+      "path": "experiments/r4-002a/undo.cpp",
+      "recorded": "81ee6a4a9b58de1c93945722a32ffbaf6a6da9799f87275503b3f62e3b0db48e",
+      "current": "81ee6a4a9b58de1c93945722a32ffbaf6a6da9799f87275503b3f62e3b0db48e",
+      "match": true
+    },
+    {
+      "path": "experiments/r4-002a/undo.hpp",
+      "recorded": "5a95a1ffe45f6dab1ef669b26ba857d31012511e451cec65e28987317fa10307",
+      "current": "5a95a1ffe45f6dab1ef669b26ba857d31012511e451cec65e28987317fa10307",
+      "match": true
+    },
+    {
+      "path": "experiments/r4-003-001/actions.hpp",
+      "recorded": "24479881a356a5849553bb37939d5fbb7b0b326499ac334543f9b4e2d198b9c1",
+      "current": "24479881a356a5849553bb37939d5fbb7b0b326499ac334543f9b4e2d198b9c1",
+      "match": true
+    },
+    {
+      "path": "experiments/r4-003-001/application.cpp",
+      "recorded": "f75459bef070f0998d851291e606b03d223ab9bbdb4117020d6b241f24aff378",
+      "current": "f75459bef070f0998d851291e606b03d223ab9bbdb4117020d6b241f24aff378",
+      "match": true
+    },
+    {
+      "path": "experiments/r4-003-001/artifacts.hpp",
+      "recorded": "2f39deebe2fa9440b2bbca193039726f55bdf0244992efa7bc4df1fd0fae52d8",
+      "current": "2f39deebe2fa9440b2bbca193039726f55bdf0244992efa7bc4df1fd0fae52d8",
+      "match": true
+    },
+    {
+      "path": "experiments/r4-003-001/bridge.cpp",
+      "recorded": "ac2a83524cfc3fb236e4bcfae472dc669e373434d5e508fbf418aa1a3a71727e",
+      "current": "ac2a83524cfc3fb236e4bcfae472dc669e373434d5e508fbf418aa1a3a71727e",
+      "match": true
+    },
+    {
+      "path": "experiments/r4-003-001/capture.cpp",
+      "recorded": "c667d4f2af30e9249d10017d1c090e97327f08e196ec6f567426fb1b8e5d7d0c",
+      "current": "c667d4f2af30e9249d10017d1c090e97327f08e196ec6f567426fb1b8e5d7d0c",
+      "match": true
+    },
+    {
+      "path": "experiments/r4-003-001/controller.cpp",
+      "recorded": "25a5a580267ce77b7f24350e9f417754809cf24fd8fdd74182ada1b3ba644a36",
+      "current": "25a5a580267ce77b7f24350e9f417754809cf24fd8fdd74182ada1b3ba644a36",
+      "match": true
+    },
+    {
+      "path": "experiments/r4-003-001/files.hpp",
+      "recorded": "0c3ea31cc31904d9be1a4415659cd8095a2dfd94f226e524fb92293ead1f9370",
+      "current": "0c3ea31cc31904d9be1a4415659cd8095a2dfd94f226e524fb92293ead1f9370",
+      "match": true
+    },
+    {
+      "path": "experiments/r4-003-001/fixture.cpp",
+      "recorded": "5e00a99d37d3de699be5776d69d95272782762485528a091cb08b2c65717a98b",
+      "current": "5e00a99d37d3de699be5776d69d95272782762485528a091cb08b2c65717a98b",
+      "match": true
+    },
+    {
+      "path": "experiments/r4-003-001/protocol.hpp",
+      "recorded": "fa824952852686742d202dea0b4886fae6c166caec40cf9936317e908b326be3",
+      "current": "fa824952852686742d202dea0b4886fae6c166caec40cf9936317e908b326be3",
+      "match": true
+    },
+    {
+      "path": "experiments/r4-003-001/resources.cpp",
+      "recorded": "220f630a1524c655e6bd5f342ab012ab37df4a79ade592575eb70952e0ad6a46",
+      "current": "220f630a1524c655e6bd5f342ab012ab37df4a79ade592575eb70952e0ad6a46",
+      "match": true
+    },
+    {
+      "path": "experiments/r4-003-001/traps.asm",
+      "recorded": "0e1fcac7efe8a6f1ccf0e5887e07045000440a079fb20fc30b207be98061faec",
+      "current": "0e1fcac7efe8a6f1ccf0e5887e07045000440a079fb20fc30b207be98061faec",
+      "match": true
+    },
+    {
+      "path": "experiments/r4-003-001/undo-probe.cpp",
+      "recorded": "caffec534e4944f242565a6eaa27e1ca8d1b9d681a10dacb25841b5cd75a48df",
+      "current": "caffec534e4944f242565a6eaa27e1ca8d1b9d681a10dacb25841b5cd75a48df",
+      "match": true
+    },
+    {
+      "path": "experiments/r4-003-001/undo.cpp",
+      "recorded": "81ee6a4a9b58de1c93945722a32ffbaf6a6da9799f87275503b3f62e3b0db48e",
+      "current": "81ee6a4a9b58de1c93945722a32ffbaf6a6da9799f87275503b3f62e3b0db48e",
+      "match": true
+    },
+    {
+      "path": "experiments/r4-003-001/undo.hpp",
+      "recorded": "5a95a1ffe45f6dab1ef669b26ba857d31012511e451cec65e28987317fa10307",
+      "current": "5a95a1ffe45f6dab1ef669b26ba857d31012511e451cec65e28987317fa10307",
+      "match": true
+    },
+    {
+      "path": "experiments/r5-001a/app/application.cpp",
+      "recorded": "91ae3291a67f2f068248ffd4ffb4bed01bf381f4598ba08de3aea443218dfc5a",
+      "current": "91ae3291a67f2f068248ffd4ffb4bed01bf381f4598ba08de3aea443218dfc5a",
+      "match": true
+    },
+    {
+      "path": "experiments/r5-001a/app/fixture_main.cpp",
+      "recorded": "ca525396fbc3c06bfeb4e6061aca0b05c570bb8f5f14d9394548775327116d8d",
+      "current": "ca525396fbc3c06bfeb4e6061aca0b05c570bb8f5f14d9394548775327116d8d",
+      "match": true
+    },
+    {
+      "path": "experiments/r5-001a/app/fixture.cpp",
+      "recorded": "b88d49947bd10a64f3f90b136f364c55afb6b9d0d18ed5862fc5152b4b9d1d0d",
+      "current": "b88d49947bd10a64f3f90b136f364c55afb6b9d0d18ed5862fc5152b4b9d1d0d",
+      "match": true
+    },
+    {
+      "path": "experiments/r5-001a/app/traps.asm",
+      "recorded": "7e758fabd5c324b733d2530ed947adf819a59b3f733672d78073bc6c5cef8db8",
+      "current": "7e758fabd5c324b733d2530ed947adf819a59b3f733672d78073bc6c5cef8db8",
+      "match": true
+    },
+    {
+      "path": "experiments/r5-001a/helper_main.cpp",
+      "recorded": "a80ee16c30137da4d74ea7988c6ac1d39cf591a71b48ccceab3e48af532e27f2",
+      "current": "a80ee16c30137da4d74ea7988c6ac1d39cf591a71b48ccceab3e48af532e27f2",
+      "match": true
+    },
+    {
+      "path": "experiments/r5-001a/manager_main.cpp",
+      "recorded": "9edc04160e40eebe5cc7847b7eb79ccc8866e84564faa9913e5c96525b604066",
+      "current": "9edc04160e40eebe5cc7847b7eb79ccc8866e84564faa9913e5c96525b604066",
+      "match": true
+    },
+    {
+      "path": "experiments/r5-001a/runtime/abi.hpp",
+      "recorded": "62daf31d3d5e7be30eb15a628308334c4402c64d610354720f1e86872fd95779",
+      "current": "62daf31d3d5e7be30eb15a628308334c4402c64d610354720f1e86872fd95779",
+      "match": true
+    },
+    {
+      "path": "experiments/r5-001a/runtime/actions.hpp",
+      "recorded": "8f9c8d382c85c7540f31bff52614a710b303e95ed9c7e9f1333701e9ebc90017",
+      "current": "8f9c8d382c85c7540f31bff52614a710b303e95ed9c7e9f1333701e9ebc90017",
+      "match": true
+    },
+    {
+      "path": "experiments/r5-001a/runtime/artifacts.hpp",
+      "recorded": "8c890ab1a4fa4a074a8c6846aa82a3f1fe67d9428c830090d863ee9314e2ecf6",
+      "current": "8c890ab1a4fa4a074a8c6846aa82a3f1fe67d9428c830090d863ee9314e2ecf6",
+      "match": true
+    },
+    {
+      "path": "experiments/r5-001a/runtime/bridge.cpp",
+      "recorded": "5ee94ef8787c5bb3e6fb719ed1a71a978e08da96dda9e23b00f6fbe3cb9da059",
+      "current": "5ee94ef8787c5bb3e6fb719ed1a71a978e08da96dda9e23b00f6fbe3cb9da059",
+      "match": true
+    },
+    {
+      "path": "experiments/r5-001a/runtime/capture.cpp",
+      "recorded": "d1919abdd3bc8ae267b6612cec1a04f3cd5b6bd49ab9d42444c044a0f85e56ba",
+      "current": "d1919abdd3bc8ae267b6612cec1a04f3cd5b6bd49ab9d42444c044a0f85e56ba",
+      "match": true
+    },
+    {
+      "path": "experiments/r5-001a/runtime/codec.cpp",
+      "recorded": "521bc6a3147a4e6c088f250e070dd1786be476505356bd71014e3cb76a428b13",
+      "current": "521bc6a3147a4e6c088f250e070dd1786be476505356bd71014e3cb76a428b13",
+      "match": true
+    },
+    {
+      "path": "experiments/r5-001a/runtime/execution.cpp",
+      "recorded": "2f94c5960c80300358e88af5a897688cf07911d84b1a0e9789f98871926fbb80",
+      "current": "2f94c5960c80300358e88af5a897688cf07911d84b1a0e9789f98871926fbb80",
+      "match": true
+    },
+    {
+      "path": "experiments/r5-001a/runtime/execution.hpp",
+      "recorded": "0a9a8e21333b546c661547a405aa2c35eb14c45765eaf4afeacd76cc79f5922c",
+      "current": "0a9a8e21333b546c661547a405aa2c35eb14c45765eaf4afeacd76cc79f5922c",
+      "match": true
+    },
+    {
+      "path": "experiments/r5-001a/runtime/files.hpp",
+      "recorded": "855853d8c587f06d8f2d3924155d9056999eefb7f9a0b6e7e5b98e04a5cd3585",
+      "current": "855853d8c587f06d8f2d3924155d9056999eefb7f9a0b6e7e5b98e04a5cd3585",
+      "match": true
+    },
+    {
+      "path": "experiments/r5-001a/runtime/image.hpp",
+      "recorded": "8068ab2dbd4420f6bd4946bfba655e65552c5c9cea0bcc1fb110919c00e7cce9",
+      "current": "8068ab2dbd4420f6bd4946bfba655e65552c5c9cea0bcc1fb110919c00e7cce9",
+      "match": true
+    },
+    {
+      "path": "experiments/r5-001a/runtime/native.cpp",
+      "recorded": "21c85ade220a9e5e4232b4cd765cb722017ccaf5994611f05abf431fb9aeb0df",
+      "current": "21c85ade220a9e5e4232b4cd765cb722017ccaf5994611f05abf431fb9aeb0df",
+      "match": true
+    },
+    {
+      "path": "experiments/r5-001a/runtime/native.hpp",
+      "recorded": "ed5ee4deacc0956f8877f8809d6b9263459016fd611449c42a718ee35d625f7f",
+      "current": "ed5ee4deacc0956f8877f8809d6b9263459016fd611449c42a718ee35d625f7f",
+      "match": true
+    },
+    {
+      "path": "experiments/r5-001a/runtime/processes.hpp",
+      "recorded": "8c1803fe8979accc80fa20884b95321cd42eeb83d5b7cd564b4a0bd5e89157d1",
+      "current": "8c1803fe8979accc80fa20884b95321cd42eeb83d5b7cd564b4a0bd5e89157d1",
+      "match": true
+    },
+    {
+      "path": "experiments/r5-001a/runtime/resources.cpp",
+      "recorded": "6cf04173ec59bab1ff4483d9379dc90e345142eb5c4ccffaaa16fe40cf0b6b2d",
+      "current": "6cf04173ec59bab1ff4483d9379dc90e345142eb5c4ccffaaa16fe40cf0b6b2d",
+      "match": true
+    },
+    {
+      "path": "experiments/r5-001a/runtime/undo.cpp",
+      "recorded": "f6ccbb463943f4d975eff19eb4f097412640cfbf0c1ba1b97875cf49099252d5",
+      "current": "f6ccbb463943f4d975eff19eb4f097412640cfbf0c1ba1b97875cf49099252d5",
+      "match": true
+    },
+    {
+      "path": "experiments/r5-001a/runtime/undo.hpp",
+      "recorded": "476325d1495dff57725d71d26df47d384059c24e88a9a462b6acb20baf761b14",
+      "current": "476325d1495dff57725d71d26df47d384059c24e88a9a462b6acb20baf761b14",
+      "match": true
+    },
+    {
+      "path": "experiments/r5-001a/scenario/fixture_contract.hpp",
+      "recorded": "8bde0de1f75febd4ad908b6b5f6c5b7c51a780e818f5b030c302663fa4df4780",
+      "current": "8bde0de1f75febd4ad908b6b5f6c5b7c51a780e818f5b030c302663fa4df4780",
+      "match": true
+    },
+    {
+      "path": "experiments/r5-001a/scenario/scenario.cpp",
+      "recorded": "d3ac6bae3362a55206407121b0983b28ab6283b546a8b07b890ae1311be58db7",
+      "current": "d3ac6bae3362a55206407121b0983b28ab6283b546a8b07b890ae1311be58db7",
+      "match": true
+    },
+    {
+      "path": "experiments/r5-001b/clients/command.hpp",
+      "recorded": "a227d4c67e66b2b6ab127732e9639c0866245ca7ae232c90830eff4f0929a58d",
+      "current": "a227d4c67e66b2b6ab127732e9639c0866245ca7ae232c90830eff4f0929a58d",
+      "match": true
+    },
+    {
+      "path": "experiments/r5-001b/clients/fixture_client.cpp",
+      "recorded": "d1eff60749ccec3454057dd314a9f17fbf82f975d6b4528a655c12c176de3878",
+      "current": "d1eff60749ccec3454057dd314a9f17fbf82f975d6b4528a655c12c176de3878",
+      "match": true
+    },
+    {
+      "path": "experiments/r5-001b/clients/host.hpp",
+      "recorded": "6dd8dffcb0d6ecd1c52ea6d89cf401f8bc92ad732bfe7277762a56572a3781fa",
+      "current": "6dd8dffcb0d6ecd1c52ea6d89cf401f8bc92ad732bfe7277762a56572a3781fa",
+      "match": true
+    },
+    {
+      "path": "experiments/r5-001b/clients/observation.hpp",
+      "recorded": "45d1051e7ec51b628b50fb4d6ef8c733cb093c08c387000c752557322eaf7833",
+      "current": "45d1051e7ec51b628b50fb4d6ef8c733cb093c08c387000c752557322eaf7833",
+      "match": true
+    },
+    {
+      "path": "experiments/r5-001b/clients/recorder_client.cpp",
+      "recorded": "ef98bdc9dc2b3c6e8cad87c0f5b5f335e51b138949e98af88576701b284c1a5d",
+      "current": "ef98bdc9dc2b3c6e8cad87c0f5b5f335e51b138949e98af88576701b284c1a5d",
+      "match": true
+    },
+    {
+      "path": "experiments/r5-001b/manager_main.cpp",
+      "recorded": "0d15445a7645c6a43272716c278ba2f7cf333a28e46fbf24333905147d1a643c",
+      "current": "0d15445a7645c6a43272716c278ba2f7cf333a28e46fbf24333905147d1a643c",
+      "match": true
+    },
+    {
+      "path": "experiments/r5-001b/recorder/contract.hpp",
+      "recorded": "7e9fd42c4ff8a75fcec9dffb70d9304e444ec398eb832c98e22c313af26044bb",
+      "current": "7e9fd42c4ff8a75fcec9dffb70d9304e444ec398eb832c98e22c313af26044bb",
+      "match": true
+    },
+    {
+      "path": "experiments/r5-001b/recorder/io.cpp",
+      "recorded": "dfbe8ef5e49d074593c983f72d3e47f486f5db8537792d9fca4dd4ff4f9a39a2",
+      "current": "dfbe8ef5e49d074593c983f72d3e47f486f5db8537792d9fca4dd4ff4f9a39a2",
+      "match": true
+    },
+    {
+      "path": "experiments/r5-001b/recorder/main.cpp",
+      "recorded": "d927eb49b42800593a45a4846f2f51e595a6dda6b173481a7980863301302b36",
+      "current": "d927eb49b42800593a45a4846f2f51e595a6dda6b173481a7980863301302b36",
+      "match": true
+    },
+    {
+      "path": "experiments/r5-002/clients/command.hpp",
+      "recorded": "b8dc3766566c32a99ff19bf3e101d46bb9aa0fd7bd1bb3fb66559a85be96f8d8",
+      "current": "b8dc3766566c32a99ff19bf3e101d46bb9aa0fd7bd1bb3fb66559a85be96f8d8",
+      "match": true
+    },
+    {
+      "path": "experiments/r5-002/clients/fixture_client.cpp",
+      "recorded": "05379004b7827ae47744fe36af2952d0eaef2f16892a5ef3026280ba6315ee94",
+      "current": "05379004b7827ae47744fe36af2952d0eaef2f16892a5ef3026280ba6315ee94",
+      "match": true
+    },
+    {
+      "path": "experiments/r5-002/clients/fixture_model.hpp",
+      "recorded": "75bc9f60cd20213f470717a612822f7cef456e6884da7605a2e1b56355488fda",
+      "current": "75bc9f60cd20213f470717a612822f7cef456e6884da7605a2e1b56355488fda",
+      "match": true
+    },
+    {
+      "path": "experiments/r5-002/clients/host.hpp",
+      "recorded": "91ba9b55e6d08ec0562fc21093cfd1b317b66ef472ca253448cab45a5a2fb105",
+      "current": "91ba9b55e6d08ec0562fc21093cfd1b317b66ef472ca253448cab45a5a2fb105",
+      "match": true
+    },
+    {
+      "path": "experiments/r5-002/clients/legacy_client.cpp",
+      "recorded": "ef98bdc9dc2b3c6e8cad87c0f5b5f335e51b138949e98af88576701b284c1a5d",
+      "current": "ef98bdc9dc2b3c6e8cad87c0f5b5f335e51b138949e98af88576701b284c1a5d",
+      "match": true
+    },
+    {
+      "path": "experiments/r5-002/clients/observation.hpp",
+      "recorded": "18656fa2a29ef4f0111107d7e62678b20e1c769badda811a11f5748699ed00f9",
+      "current": "18656fa2a29ef4f0111107d7e62678b20e1c769badda811a11f5748699ed00f9",
+      "match": true
+    },
+    {
+      "path": "experiments/r5-002/clients/recorder_client.cpp",
+      "recorded": "26d283b07f32ae90edf461c2234f11603a29aa820ad2d29e5bb80ea91abdda46",
+      "current": "26d283b07f32ae90edf461c2234f11603a29aa820ad2d29e5bb80ea91abdda46",
+      "match": true
+    },
+    {
+      "path": "experiments/r5-002/clients/recorder_model.hpp",
+      "recorded": "787e726040c7d0c5ffbce7dcd6e1ac8202ff383d01863822fcab13f9ded8876e",
+      "current": "787e726040c7d0c5ffbce7dcd6e1ac8202ff383d01863822fcab13f9ded8876e",
+      "match": true
+    },
+    {
+      "path": "experiments/r5-002/manager_main.cpp",
+      "recorded": "0d15445a7645c6a43272716c278ba2f7cf333a28e46fbf24333905147d1a643c",
+      "current": "0d15445a7645c6a43272716c278ba2f7cf333a28e46fbf24333905147d1a643c",
+      "match": true
+    },
+    {
+      "path": "experiments/r5-002/recorder/contract.hpp",
+      "recorded": "708efeee29de2c6f3f9046b347eff229340110cd520fb181548ebe7d8b1a30aa",
+      "current": "708efeee29de2c6f3f9046b347eff229340110cd520fb181548ebe7d8b1a30aa",
+      "match": true
+    },
+    {
+      "path": "experiments/r5-002/recorder/io.cpp",
+      "recorded": "dfbe8ef5e49d074593c983f72d3e47f486f5db8537792d9fca4dd4ff4f9a39a2",
+      "current": "dfbe8ef5e49d074593c983f72d3e47f486f5db8537792d9fca4dd4ff4f9a39a2",
+      "match": true
+    },
+    {
+      "path": "experiments/r5-002/recorder/main.cpp",
+      "recorded": "22c5e537d1d85de3d0bfde6dbf54276ac1950e9a4961305193d4a77421509180",
+      "current": "22c5e537d1d85de3d0bfde6dbf54276ac1950e9a4961305193d4a77421509180",
+      "match": true
+    },
+    {
+      "path": "experiments/r5-002/recorder/traps.asm",
+      "recorded": "bcb1670e93ecc61da17b8c119b0f1f5b09e91205ff07246c8f1382f30a2fb849",
+      "current": "bcb1670e93ecc61da17b8c119b0f1f5b09e91205ff07246c8f1382f30a2fb849",
+      "match": true
+    },
+    {
+      "path": "experiments/r5-002/runtime/abi.hpp",
+      "recorded": "ec13ebb75a7569a3a0f5a7f6c86d5cfc51a37c4f9f4a3a95e55053786216b273",
+      "current": "ec13ebb75a7569a3a0f5a7f6c86d5cfc51a37c4f9f4a3a95e55053786216b273",
+      "match": true
+    },
+    {
+      "path": "experiments/r5-002/runtime/execution.cpp",
+      "recorded": "c70b83d0d3162bd1c5167ea23e5a43886dbe8876bc92446a2cfa3ae3cc79e4b1",
+      "current": "c70b83d0d3162bd1c5167ea23e5a43886dbe8876bc92446a2cfa3ae3cc79e4b1",
+      "match": true
+    },
+    {
+      "path": "experiments/r5-002/runtime/execution.hpp",
+      "recorded": "439a6edae05cda9d212c6307d2a7f267bb6d189e304607f4e365de423fc78634",
+      "current": "439a6edae05cda9d212c6307d2a7f267bb6d189e304607f4e365de423fc78634",
+      "match": true
+    },
+    {
+      "path": "experiments/r5-002/runtime/experiment-points.hpp",
+      "recorded": "4d3ac41410795cd34f143745a8de0dbf1d858acfddf0612fa63ba4f4e713b5ae",
+      "current": "4d3ac41410795cd34f143745a8de0dbf1d858acfddf0612fa63ba4f4e713b5ae",
+      "match": true
+    },
+    {
+      "path": "experiments/r5-002/runtime/files.hpp",
+      "recorded": "47829618389832fe00f379c5026daa2f4bf8a1aefb456ca94cf6936d1d5aa902",
+      "current": "47829618389832fe00f379c5026daa2f4bf8a1aefb456ca94cf6936d1d5aa902",
+      "match": true
+    },
+    {
+      "path": "experiments/r5-002/runtime/image.hpp",
+      "recorded": "8068ab2dbd4420f6bd4946bfba655e65552c5c9cea0bcc1fb110919c00e7cce9",
+      "current": "8068ab2dbd4420f6bd4946bfba655e65552c5c9cea0bcc1fb110919c00e7cce9",
+      "match": true
+    },
+    {
+      "path": "experiments/r5-002/runtime/native.hpp",
+      "recorded": "2ea08706c346318a3f35d179fab2979b045eee716b9aaf7f90033ab588ba6d84",
+      "current": "2ea08706c346318a3f35d179fab2979b045eee716b9aaf7f90033ab588ba6d84",
+      "match": true
+    },
+    {
+      "path": "experiments/r5-002/runtime/processes.hpp",
+      "recorded": "0704d6e27ca4e11d170e64f7aa7e55419a1c7cc80122fee9f2dcfd64a875207e",
+      "current": "0704d6e27ca4e11d170e64f7aa7e55419a1c7cc80122fee9f2dcfd64a875207e",
+      "match": true
+    },
+    {
+      "path": "experiments/r5-003/clients/fixture_client.cpp",
+      "recorded": "b0e0c173a266e21f5d2d2e6f299c8849ab9b7181074cbd1dd530542feedae780",
+      "current": "b0e0c173a266e21f5d2d2e6f299c8849ab9b7181074cbd1dd530542feedae780",
+      "match": true
+    },
+    {
+      "path": "experiments/r5-003/clients/recorder_client.cpp",
+      "recorded": "9647a0698a74bdeff95d6700fb7c2320587e80021d9fd5addddfd08e94c2ad94",
+      "current": "9647a0698a74bdeff95d6700fb7c2320587e80021d9fd5addddfd08e94c2ad94",
+      "match": true
+    },
+    {
+      "path": "experiments/r5-003/clients/restart.hpp",
+      "recorded": "5b5b09abadf88895ceab6e2e8fb8a12a7f469d3c89f3c6ec85047fcd03dcadc3",
+      "current": "5b5b09abadf88895ceab6e2e8fb8a12a7f469d3c89f3c6ec85047fcd03dcadc3",
+      "match": true
+    },
+    {
+      "path": "experiments/r5-003/codec_test.cpp",
+      "recorded": "3d6ff1e7ecbd2396ba5e6bb91a7479a3b8e0605595c8c5fb157deda082e526eb",
+      "current": "3d6ff1e7ecbd2396ba5e6bb91a7479a3b8e0605595c8c5fb157deda082e526eb",
+      "match": true
+    },
+    {
+      "path": "experiments/r5-003/identity_test.cpp",
+      "recorded": "a9ae57115553a7680bbe48518e3c49990387624d3caf05b6caf9301126a196ff",
+      "current": "a9ae57115553a7680bbe48518e3c49990387624d3caf05b6caf9301126a196ff",
+      "match": true
+    },
+    {
+      "path": "experiments/r5-003/manager_main.cpp",
+      "recorded": "b363d34769a587c20bc0fc42c12a773887763303a3b146f977782d88e82819bb",
+      "current": "b363d34769a587c20bc0fc42c12a773887763303a3b146f977782d88e82819bb",
+      "match": true
+    },
+    {
+      "path": "experiments/r5-003/runtime/query-stream.hpp",
+      "recorded": "39cd075c1cd878e30fd124b0d447f69b21a3a8ecede42ed6d31848b623254188",
+      "current": "39cd075c1cd878e30fd124b0d447f69b21a3a8ecede42ed6d31848b623254188",
+      "match": true
+    },
+    {
+      "path": "experiments/r5-003/runtime/store.cpp",
+      "recorded": "c58ffb3359ef7c0bd7ea5a17adb7c65305561ab7047437222d964cb1fd6b9e07",
+      "current": "c58ffb3359ef7c0bd7ea5a17adb7c65305561ab7047437222d964cb1fd6b9e07",
+      "match": true
+    },
+    {
+      "path": "experiments/r5-003/runtime/store.hpp",
+      "recorded": "bf6c39312c61c65dec725185b43f62e503832e72cc16855e72940883a364f242",
+      "current": "bf6c39312c61c65dec725185b43f62e503832e72cc16855e72940883a364f242",
+      "match": true
+    },
+    {
+      "path": "experiments/r5-004/clients/fixture_client.cpp",
+      "recorded": "ee63dcf4f3dd79cf0aa4d8529dbb64f381b46de7be2274e4a264ccbf0e649857",
+      "current": "ee63dcf4f3dd79cf0aa4d8529dbb64f381b46de7be2274e4a264ccbf0e649857",
+      "match": true
+    },
+    {
+      "path": "experiments/r5-004/clients/recorder_client.cpp",
+      "recorded": "7abc1f4ee63a2b5a3a2bd3d7af8438c68f10513f336bf6693eecb5ec4b380c88",
+      "current": "7abc1f4ee63a2b5a3a2bd3d7af8438c68f10513f336bf6693eecb5ec4b380c88",
+      "match": true
+    },
+    {
+      "path": "experiments/r5-004/clients/run.hpp",
+      "recorded": "4a0b119afdeab4623bd1fbb6faf658841dd120cfe1f095fa38142bdb9bb4a21b",
+      "current": "4a0b119afdeab4623bd1fbb6faf658841dd120cfe1f095fa38142bdb9bb4a21b",
+      "match": true
+    },
+    {
+      "path": "experiments/r5-004/controller.cpp",
+      "recorded": "72d2415e83aff19330d7f893983f1720355be4986234c923194a43204a599647",
+      "current": "72d2415e83aff19330d7f893983f1720355be4986234c923194a43204a599647",
+      "match": true
+    },
+    {
+      "path": "experiments/r5-004/crash.hpp",
+      "recorded": "c90528bd36a239f8d2e4ab7ea67ae45724b817b3763cd35a1f02befb0833725a",
+      "current": "c90528bd36a239f8d2e4ab7ea67ae45724b817b3763cd35a1f02befb0833725a",
+      "match": true
+    },
+    {
+      "path": "experiments/r5-004/manager_main.cpp",
+      "recorded": "f6c8df30f30a71a24192545299a5b45b616425cbf524255adc808713044f2894",
+      "current": "f6c8df30f30a71a24192545299a5b45b616425cbf524255adc808713044f2894",
+      "match": true
+    },
+    {
+      "path": "experiments/r5-004a/abort-channel.hpp",
+      "recorded": "1654558b08f05f67cd3696f59099d73288245f61616b464e6a99a7523f2cb7b9",
+      "current": "1654558b08f05f67cd3696f59099d73288245f61616b464e6a99a7523f2cb7b9",
+      "match": true
+    },
+    {
+      "path": "experiments/r5-004a/abort-helper.cpp",
+      "recorded": "1c8d927d5d676b61d768a0bf2c702f2ea4fe9dfae5d5e5ba73d430d0bbb56c53",
+      "current": "1c8d927d5d676b61d768a0bf2c702f2ea4fe9dfae5d5e5ba73d430d0bbb56c53",
+      "match": true
+    },
+    {
+      "path": "experiments/r5-004a/abort-host.hpp",
+      "recorded": "96b9411cb364a511187c2bc0b5dffc941eb8f29faf1c2a68379eaf71e17eff1f",
+      "current": "96b9411cb364a511187c2bc0b5dffc941eb8f29faf1c2a68379eaf71e17eff1f",
+      "match": true
+    },
+    {
+      "path": "experiments/r5-004a/abort-runtime.cpp",
+      "recorded": "c493eb2f2d7f7106ea126c2c4ff22d2e9e79daef57c0f43fe83df1e1073a81f6",
+      "current": "c493eb2f2d7f7106ea126c2c4ff22d2e9e79daef57c0f43fe83df1e1073a81f6",
+      "match": true
+    },
+    {
+      "path": "experiments/r5-004a/clients/fixture_client.cpp",
+      "recorded": "d08181a10efcaa1700f2d379855d862af77c2fe4a8b21794e83c7640ae57b554",
+      "current": "d08181a10efcaa1700f2d379855d862af77c2fe4a8b21794e83c7640ae57b554",
+      "match": true
+    },
+    {
+      "path": "experiments/r5-004a/clients/recorder_client.cpp",
+      "recorded": "4787c18709a32816fc08589a1f5d012e8169ac38adedf00707ae8c7379ee3e64",
+      "current": "4787c18709a32816fc08589a1f5d012e8169ac38adedf00707ae8c7379ee3e64",
+      "match": true
+    },
+    {
+      "path": "experiments/r5-004a/clients/run.hpp",
+      "recorded": "80b4e8fcde11621467ce59a77807ba18b1f8236a055fd2a8908e1ab2bdcdfdd1",
+      "current": "80b4e8fcde11621467ce59a77807ba18b1f8236a055fd2a8908e1ab2bdcdfdd1",
+      "match": true
+    },
+    {
+      "path": "experiments/r5-004a/desktop-diagnostic.hpp",
+      "recorded": "eb10573e4a6c249fdec8e69482683106a07cbee4c953f21ef460d00139af6962",
+      "current": "eb10573e4a6c249fdec8e69482683106a07cbee4c953f21ef460d00139af6962",
+      "match": true
+    },
+    {
+      "path": "experiments/r5-004a/inspect.cpp",
+      "recorded": "5c127551474d33aa9d17a89913f164221185d0f0ab894343d0e5cf5d38dbd688",
+      "current": "5c127551474d33aa9d17a89913f164221185d0f0ab894343d0e5cf5d38dbd688",
+      "match": true
+    },
+    {
+      "path": "experiments/r5-004a/minimal.cpp",
+      "recorded": "78395f2c3ada339bfbebe4059d58b99f1f8495671497882732529c98ccd9e671",
+      "current": "78395f2c3ada339bfbebe4059d58b99f1f8495671497882732529c98ccd9e671",
+      "match": true
+    },
+    {
+      "path": "experiments/r5-004a/stopped-cleanup.hpp",
+      "recorded": "667f5c8510eb6ac1cf7c7f2b23d7638ac8e81b6613473c736661b194db073668",
+      "current": "667f5c8510eb6ac1cf7c7f2b23d7638ac8e81b6613473c736661b194db073668",
+      "match": true
+    },
+    {
+      "path": "experiments/r5-004b/app-registration.hpp",
+      "recorded": "99b128dc0413fc79d52b0fd9415bf10c7d81c677524ab372d18ff4fd1c609a6c",
+      "current": "99b128dc0413fc79d52b0fd9415bf10c7d81c677524ab372d18ff4fd1c609a6c",
+      "match": true
+    },
+    {
+      "path": "experiments/r5-004b/apps/fixture.cpp",
+      "recorded": "24b2760cf47e21681d7ce7df9b19d1c90d82e3f03b55f2e3492f070c3254f996",
+      "current": "24b2760cf47e21681d7ce7df9b19d1c90d82e3f03b55f2e3492f070c3254f996",
+      "match": true
+    },
+    {
+      "path": "experiments/r5-004b/apps/recorder.cpp",
+      "recorded": "e197dd4c6cd152c1b9522bbfc160fef33befd2fca3dae66088d851758230069f",
+      "current": "e197dd4c6cd152c1b9522bbfc160fef33befd2fca3dae66088d851758230069f",
+      "match": true
+    },
+    {
+      "path": "experiments/r5-004b/apps/traps.asm",
+      "recorded": "7e8cadd1c9ae6df82531c588432efa7b58e27161a206896845d3a2a832bd42ab",
+      "current": "7e8cadd1c9ae6df82531c588432efa7b58e27161a206896845d3a2a832bd42ab",
+      "match": true
+    },
+    {
+      "path": "experiments/r5-004b/clients/fixture-client.cpp",
+      "recorded": "6922a7cdb7b36801657688ac239340c92a1464268049f5d68af969bbd44fc4b7",
+      "current": "6922a7cdb7b36801657688ac239340c92a1464268049f5d68af969bbd44fc4b7",
+      "match": true
+    },
+    {
+      "path": "experiments/r5-004b/clients/recorder-client.cpp",
+      "recorded": "bde2ac069647878bde352c6f47a1f2fe35b0bfc93f84bc84fd01adf5c2f1d41a",
+      "current": "bde2ac069647878bde352c6f47a1f2fe35b0bfc93f84bc84fd01adf5c2f1d41a",
+      "match": true
+    },
+    {
+      "path": "experiments/r5-004b/diagnostic/abort-channel.hpp",
+      "recorded": "1bc5f7d4f7c272740cb3e5703790c55b4730e32cebe0e4a0a7e205daf82dbd6b",
+      "current": "1bc5f7d4f7c272740cb3e5703790c55b4730e32cebe0e4a0a7e205daf82dbd6b",
+      "match": true
+    },
+    {
+      "path": "experiments/r5-004b/diagnostic/abort-helper.cpp",
+      "recorded": "25093b150794eb2b47131dd49d17cd105f54ae7d679b9b9409549cf9716e8651",
+      "current": "25093b150794eb2b47131dd49d17cd105f54ae7d679b9b9409549cf9716e8651",
+      "match": true
+    },
+    {
+      "path": "experiments/r5-004b/diagnostic/abort-host.hpp",
+      "recorded": "6bbcbf2f2ad91b89bd400a7c6ac87dfe31272c79c18a071fed6ebc1f80e875ca",
+      "current": "6bbcbf2f2ad91b89bd400a7c6ac87dfe31272c79c18a071fed6ebc1f80e875ca",
+      "match": true
+    },
+    {
+      "path": "experiments/r5-004b/diagnostic/abort-runtime.cpp",
+      "recorded": "6448e93807a9c5413bceed5bccb1424ae7ea56aa0ad96294d44ee805d68b1fda",
+      "current": "6448e93807a9c5413bceed5bccb1424ae7ea56aa0ad96294d44ee805d68b1fda",
+      "match": true
+    },
+    {
+      "path": "experiments/r5-004b/diagnostic/fixture-client.cpp",
+      "recorded": "0357863106a8207b36a2d814336c1ae979ec3ef00c02d6e274b845778a05184d",
+      "current": "0357863106a8207b36a2d814336c1ae979ec3ef00c02d6e274b845778a05184d",
+      "match": true
+    },
+    {
+      "path": "experiments/r5-004b/diagnostic/recorder-client.cpp",
+      "recorded": "bb723a80c1bf06e152eae079fe753b7b57dd9b5336d6e8951ad51f0f02421831",
+      "current": "bb723a80c1bf06e152eae079fe753b7b57dd9b5336d6e8951ad51f0f02421831",
+      "match": true
+    },
+    {
+      "path": "experiments/r5-004b/diagnostic/run.hpp",
+      "recorded": "d1c12db8346d7c4901cf3da759f71c5ff3f1d344a0d346ef9b807f46e42a0afa",
+      "current": "d1c12db8346d7c4901cf3da759f71c5ff3f1d344a0d346ef9b807f46e42a0afa",
+      "match": true
+    },
+    {
+      "path": "experiments/r5-004b/dump-reader.cpp",
+      "recorded": "52f0c3d7e8ed6424fb54946d3ace2f416dc945ba351d8271e7a0457ddd59a64c",
+      "current": "52f0c3d7e8ed6424fb54946d3ace2f416dc945ba351d8271e7a0457ddd59a64c",
+      "match": true
+    },
+    {
+      "path": "experiments/r5-004b/faults.hpp",
+      "recorded": "6e4c593f4e1cc5134a26ce65f9c83eb04dcbb73eef5ebd71f451b08d19f4daeb",
+      "current": "6e4c593f4e1cc5134a26ce65f9c83eb04dcbb73eef5ebd71f451b08d19f4daeb",
+      "match": true
+    },
+    {
+      "path": "experiments/r5-004b/image-contract.hpp",
+      "recorded": "ce54fd992ffae3c28b6cf59e779d5d6c3c7582e242216b9e6b44350895962768",
+      "current": "ce54fd992ffae3c28b6cf59e779d5d6c3c7582e242216b9e6b44350895962768",
+      "match": true
+    },
+    {
+      "path": "experiments/r5-004b/load-probe.cpp",
+      "recorded": "43a187a387bd9849b442cc01696d99739561f6d32c8f520b3919ce2797512cfe",
+      "current": "43a187a387bd9849b442cc01696d99739561f6d32c8f520b3919ce2797512cfe",
+      "match": true
+    },
+    {
+      "path": "experiments/r5-004b/relocation.hpp",
+      "recorded": "8dbe0fef637d0016a49719d75830c99ca549f77a369c6056ee2d5fecc21e249b",
+      "current": "8dbe0fef637d0016a49719d75830c99ca549f77a369c6056ee2d5fecc21e249b",
+      "match": true
+    },
+    {
+      "path": "experiments/r5-004c-wait/close-probe.cpp",
+      "recorded": "1be5348b82fa098d59d815d5125eed2b100d4da40c1ef115c581053b0af02e6e",
+      "current": "1be5348b82fa098d59d815d5125eed2b100d4da40c1ef115c581053b0af02e6e",
+      "match": true
+    },
+    {
+      "path": "experiments/r5-004c-wait/diagnose.cpp",
+      "recorded": "da809951e965840b5bb2fb716ec8e6f736c009df41e47ef1efd36bef239af8e5",
+      "current": "da809951e965840b5bb2fb716ec8e6f736c009df41e47ef1efd36bef239af8e5",
+      "match": true
+    },
+    {
+      "path": "experiments/r5-004c-wait/observe.hpp",
+      "recorded": "707fbedf0e3aae0285233eed0a16e15286ee3cc30f60641550cd0fdbceb4304e",
+      "current": "707fbedf0e3aae0285233eed0a16e15286ee3cc30f60641550cd0fdbceb4304e",
+      "match": true
+    },
+    {
+      "path": "experiments/r5-004c-wait/profile.cpp",
+      "recorded": "a7460c6f529fa25f94efb30233308232406703b4e1112c7b2a9498b9938de5ac",
+      "current": "a7460c6f529fa25f94efb30233308232406703b4e1112c7b2a9498b9938de5ac",
+      "match": true
+    },
+    {
+      "path": "experiments/r5-004c-wait/profile.hpp",
+      "recorded": "f4c7c6f348d93be5b7326f88694a2670e262a411141cac116e3f365a7f0db074",
+      "current": "f4c7c6f348d93be5b7326f88694a2670e262a411141cac116e3f365a7f0db074",
+      "match": true
+    },
+    {
+      "path": "experiments/r5-004c-wait/trim-client.cpp",
+      "recorded": "792ab39eadbc01f5a68a1d41110d9d11766cde2b9257a808152c8d7d7b8664bc",
+      "current": "792ab39eadbc01f5a68a1d41110d9d11766cde2b9257a808152c8d7d7b8664bc",
+      "match": true
+    },
+    {
+      "path": "experiments/r5-004c/abort-channel.hpp",
+      "recorded": "a147f704c831909d3ac7f4185f662b1bb47becc0d5969571e34b31ac1d90eae0",
+      "current": "a147f704c831909d3ac7f4185f662b1bb47becc0d5969571e34b31ac1d90eae0",
+      "match": true
+    },
+    {
+      "path": "experiments/r5-004c/abort-helper.cpp",
+      "recorded": "ab1a06cb739521af75fd56a138ec8d9eb67c9ab0b62c4ca1ddba6d7a52186798",
+      "current": "ab1a06cb739521af75fd56a138ec8d9eb67c9ab0b62c4ca1ddba6d7a52186798",
+      "match": true
+    },
+    {
+      "path": "experiments/r5-004c/abort-host.hpp",
+      "recorded": "5a45c93463adcbd6f46ff18f5ad79d22df7fa33e7092497826c9d2c700dd3f3a",
+      "current": "5a45c93463adcbd6f46ff18f5ad79d22df7fa33e7092497826c9d2c700dd3f3a",
+      "match": true
+    },
+    {
+      "path": "experiments/r5-004c/abort-runtime.cpp",
+      "recorded": "3f263ac32f56a863f9ecc936324efac7f2595a89334aa6a36380f7fff6d1da80",
+      "current": "3f263ac32f56a863f9ecc936324efac7f2595a89334aa6a36380f7fff6d1da80",
+      "match": true
+    },
+    {
+      "path": "experiments/r5-004c/diagnose.cpp",
+      "recorded": "9c50c8cde990e262aec85a12d9ee0de07f499f17b7e412caf0171fcba9347895",
+      "current": "9c50c8cde990e262aec85a12d9ee0de07f499f17b7e412caf0171fcba9347895",
+      "match": true
+    },
+    {
+      "path": "experiments/r5-004c/fixture-client.cpp",
+      "recorded": "0a80f3ed886d11dcc2572d515d5b5443d4f207a4c2931435f92cef2e6ac79aaa",
+      "current": "0a80f3ed886d11dcc2572d515d5b5443d4f207a4c2931435f92cef2e6ac79aaa",
+      "match": true
+    },
+    {
+      "path": "experiments/r5-004c/probe-channel.hpp",
+      "recorded": "0cd8f0e16e75071bcca42012b82c5ddb4aa4e9f4b14015b7ea98f59a02eecb02",
+      "current": "0cd8f0e16e75071bcca42012b82c5ddb4aa4e9f4b14015b7ea98f59a02eecb02",
+      "match": true
+    },
+    {
+      "path": "experiments/r5-004c/probe-target.cpp",
+      "recorded": "69d0396b013bd38092e7ef3193d4e9d40f07edf8de3088ddb702ffafed22273f",
+      "current": "69d0396b013bd38092e7ef3193d4e9d40f07edf8de3088ddb702ffafed22273f",
+      "match": true
+    },
+    {
+      "path": "experiments/r5-004c/probe-trap.asm",
+      "recorded": "dac9aaa2b70a0ae50d0218b0d1d234e2341a0685624e4f30f10964a87ee05e19",
+      "current": "dac9aaa2b70a0ae50d0218b0d1d234e2341a0685624e4f30f10964a87ee05e19",
+      "match": true
+    },
+    {
+      "path": "experiments/r5-004c/probe.cpp",
+      "recorded": "2a42e413bfb6719b6506e0baa2380a55e55f8988644eb4c1caff21fcb02e9bd7",
+      "current": "2a42e413bfb6719b6506e0baa2380a55e55f8988644eb4c1caff21fcb02e9bd7",
+      "match": true
+    },
+    {
+      "path": "experiments/r5-004c/recorder-client.cpp",
+      "recorded": "48e8ad4f77fcd533c7e6ccf05f93a34dc2aac64119d4af76f3859c176e675e95",
+      "current": "48e8ad4f77fcd533c7e6ccf05f93a34dc2aac64119d4af76f3859c176e675e95",
+      "match": true
+    },
+    {
+      "path": "experiments/r5-004c/run.hpp",
+      "recorded": "e76eadf633328c3dfab55545ba25c650f8c538083d8ae7ae2d08a8ec6c180eba",
+      "current": "e76eadf633328c3dfab55545ba25c650f8c538083d8ae7ae2d08a8ec6c180eba",
+      "match": true
+    },
+    {
+      "path": "experiments/r5-004c/runtime-sp.asm",
+      "recorded": "53a1852c3e0959ceac166da98de544d0ad91da3be80bb7a0960ef70a0acb2a63",
+      "current": "53a1852c3e0959ceac166da98de544d0ad91da3be80bb7a0960ef70a0acb2a63",
+      "match": true
+    },
+    {
+      "path": "experiments/r5-hook-126/install-diagnostics.hpp",
+      "recorded": "af3a012dfc1ad0264b0cb535ff29c1f95a305349374063a191909931b22d3d09",
+      "current": "af3a012dfc1ad0264b0cb535ff29c1f95a305349374063a191909931b22d3d09",
+      "match": true
+    },
+    {
+      "path": "experiments/r5-hook-126/probe.cpp",
+      "recorded": "31f2d95562abd096e999a41ed84a017f1fe484ad7f80bdeb2cca09282eca048f",
+      "current": "31f2d95562abd096e999a41ed84a017f1fe484ad7f80bdeb2cca09282eca048f",
+      "match": true
+    }
+  ],
+  "allNativeInputsMatch": true,
+  "testScriptSha256": "63cf219560be08838a1f6209ff2287195aeea006e25769795a52154a0c9f2104",
+  "buildRecordedTestScriptSha256": "95de3cb2b5ea2aed7d17c3f2e0ecd61c096eff3b5307f8de79c41ad9d5e9b7c5",
+  "scriptOnlyChange": "completed-log row caching and explicit test identity, after native build; assertions not removed"
+}
