@@ -1,0 +1,281 @@
+{
+  "diagnosticChainPassed": true,
+  "reason": "diagnostic-outcomes-recorded",
+  "synthetic": true,
+  "attemptIdentity": "3faa69f2aad0f11c794a751e9710dbb05006dc2180e9112d06bc09d794bf5a0a",
+  "attemptPath": "C:\\Users\\brubing\\AppData\\Local\\focus-views\\failure-followups\\3faa69f2aad0f11c794a751e9710dbb05006dc2180e9112d06bc09d794bf5a0a.json",
+  "attemptAcquired": true,
+  "originalOperationPassed": false,
+  "originalFailureRetained": true,
+  "originalSummarySha256": "E230E1A33BB120C608F82ADB1873B0F660BD9FE06826858A87E0FDED10AFB479",
+  "originalLogHashes": [
+    {
+      "path": "C:\\fv-c\\c3\\once\\race-origin\\fresh\\manager\\controller.jsonl",
+      "sha256": "5ECC360AC6DB07F8CF61AD744CD509BAD61304B55BAE1825CE1534DDAF4DF2C9"
+    },
+    {
+      "path": "C:\\fv-c\\c3\\once\\race-origin\\restore\\manager\\controller.jsonl",
+      "sha256": "CE3FBC495913D7429C6DC53858DBF6805BAA6A3020F642A7FF89F6BD53E97F03"
+    },
+    {
+      "path": "C:\\fv-c\\c3\\once\\race-origin\\save\\manager\\controller.jsonl",
+      "sha256": "BDC1CD1AA4822669C83ECB102458A57EAB3D7EA642EE90FB6B8E735D422458CD"
+    }
+  ],
+  "proofs": [
+    {
+      "summary": "C:\\fv-c\\c3\\once\\race-origin\\save\\supervisor\\summary.json",
+      "summarySha256": "F29063B430B7B199400C53CA0682749DB35E3A6433EBA34B7233E9EA8A9713BD",
+      "certificate": "C:\\fv-c\\c3\\once\\race-origin\\save\\supervisor\\owner.fvc",
+      "certificateSha256": "8629050DCCD35057D4B0B106847C0C5C0FEA3C085AF131AFFB5CB85252B773EA",
+      "managerPid": 46260,
+      "managerCreated": 134377162664141933,
+      "cleanupVerified": true
+    },
+    {
+      "summary": "C:\\fv-c\\c3\\once\\race-origin\\restore\\supervisor\\summary.json",
+      "summarySha256": "8A7E6DCB97ABA21733F77DEA0729249868552F453FC592056FDE66ED6E671586",
+      "certificate": "C:\\fv-c\\c3\\once\\race-origin\\restore\\supervisor\\owner.fvc",
+      "certificateSha256": "CBF56727FBEB65890496BA827F2B65CA349BFB1A0984B34F6E60A3779183AE64",
+      "managerPid": 35084,
+      "managerCreated": 134377162698097593,
+      "cleanupVerified": true
+    },
+    {
+      "summary": "C:\\fv-c\\c3\\once\\race-origin\\fresh\\supervisor\\summary.json",
+      "summarySha256": "7D99B1AF98F0587CE1972A14FD254277B78B2DD5BA573040207044978E201F83",
+      "certificate": "C:\\fv-c\\c3\\once\\race-origin\\fresh\\supervisor\\owner.fvc",
+      "certificateSha256": "3EDCE1EC80EF0F74147E72208F93582F325C26C1300C87656263BE13F167DE96",
+      "managerPid": 44768,
+      "managerCreated": 134377162785443929,
+      "cleanupVerified": true
+    }
+  ],
+  "newControlPairRuns": 1,
+  "controlPair": {
+    "evidenceComplete": true,
+    "operationPassed": true,
+    "sameBuild": true,
+    "boot": "2026-10-29T08:27:21.5+08:00",
+    "testSha256": "82A03D7838D8689426048E7BF32100DF1E33D50A983836A1B146547A2DA67ABC",
+    "assessmentSha256": "3326D170E2AA31F8DA112860076169288CFB16A45C7E2D3DF92F77664791017A",
+    "binaries": [
+      {
+        "file": "manager.exe",
+        "sha256": "923a06d4e1ad72d0e9d139b3ed50e5068c2db73a6d7386a9500f9aaedf67b78e"
+      },
+      {
+        "file": "second.exe",
+        "sha256": "0f8c87375852cdfd8e4125c711f2e1f41f568260e4271b1d223ce4f308d05ff7"
+      },
+      {
+        "file": "trim-client.dll",
+        "sha256": "68bd81e0f43eaff3865aec46b574cfc7e5351bdbd0bef2291db7f0460baa77e7"
+      },
+      {
+        "file": "abort-runtime.dll",
+        "sha256": "cac2720ba278e7865d5c6312a6bd8bc39b476db81f9ff73d411fb18f45620fea"
+      },
+      {
+        "file": "abort-helper.exe",
+        "sha256": "c9da2b7acb66b0b68ee2880d5c5abca303aaaba09cf20a706989cc1082aec55d"
+      },
+      {
+        "file": "close-probe.exe",
+        "sha256": "c19ab4a709030fdd994d2759ea00e1b702ea1cb6fbcf27f693dba43c0e045db9"
+      },
+      {
+        "file": "diagnose.exe",
+        "sha256": "eb629d812139553cda9d71b3afd9e8614e77fd9e8e26c5f59378072816562d99"
+      },
+      {
+        "file": "kernel.lib",
+        "sha256": "3bdd8a8c21642a168ae491cbe5067b478593b15ef486ecbc943ff4c441618e87"
+      }
+    ],
+    "cases": [
+      {
+        "mode": "profile-normal",
+        "controllerExit": 0,
+        "error": "",
+        "supervisor": {
+          "protocolPassed": true,
+          "cleanupVerified": true,
+          "forcedTermination": false,
+          "managerPid": 50340,
+          "managerCreated": 134377162913007867,
+          "managerExit": 0,
+          "point": "",
+          "explicitSurvivorCleanup": false,
+          "instances": 10,
+          "desktops": 1,
+          "failureApi": "",
+          "failureError": 0
+        },
+        "trimComplete": [
+          {
+            "type": "trim_complete",
+            "tickMs": 9050500,
+            "nativeCleanupPassed": true,
+            "firstApi": "",
+            "firstError": 0,
+            "restoredExecutionClaimed": false
+          }
+        ],
+        "evidenceComplete": true,
+        "operationPassed": true,
+        "installationAttested": true,
+        "installation": [
+          {
+            "type": "cleanup_runtime_installation",
+            "tickMs": 9050265,
+            "enabled": true,
+            "registryCreated": true,
+            "prepareCalled": true
+          }
+        ],
+        "moduleStages": [
+          {
+            "type": "trim_module_observation",
+            "tickMs": 9050109,
+            "stage": "ready",
+            "pid": 2300,
+            "complete": true,
+            "error": 18,
+            "known": 5,
+            "total": 19,
+            "cleanupRuntimeModules": 0
+          },
+          {
+            "type": "trim_module_observation",
+            "tickMs": 9050234,
+            "stage": "resource-ready",
+            "pid": 2300,
+            "complete": true,
+            "error": 18,
+            "known": 7,
+            "total": 26,
+            "cleanupRuntimeModules": 0
+          },
+          {
+            "type": "trim_module_observation",
+            "tickMs": 9050296,
+            "stage": "cleanup-runtime-ready",
+            "pid": 2300,
+            "complete": true,
+            "error": 18,
+            "known": 8,
+            "total": 29,
+            "cleanupRuntimeModules": 1
+          }
+        ],
+        "cleanupHelperCount": 1,
+        "nativeCleanupPassed": true,
+        "sameWaitingPattern": false,
+        "waitingEvidence": {
+          "sameWaitingPattern": false,
+          "status": "insufficient_evidence",
+          "reason": "missing-identity",
+          "links": null
+        },
+        "profileUnchanged": true
+      },
+      {
+        "mode": "normal-no-cleanup-runtime",
+        "controllerExit": 0,
+        "error": "",
+        "supervisor": {
+          "protocolPassed": true,
+          "cleanupVerified": true,
+          "forcedTermination": false,
+          "managerPid": 52444,
+          "managerCreated": 134377162920374035,
+          "managerExit": 0,
+          "point": "",
+          "explicitSurvivorCleanup": false,
+          "instances": 8,
+          "desktops": 1,
+          "failureApi": "",
+          "failureError": 0
+        },
+        "trimComplete": [
+          {
+            "type": "trim_complete",
+            "tickMs": 9051218,
+            "nativeCleanupPassed": true,
+            "firstApi": "",
+            "firstError": 0,
+            "restoredExecutionClaimed": false
+          }
+        ],
+        "evidenceComplete": true,
+        "operationPassed": true,
+        "installationAttested": true,
+        "installation": [
+          {
+            "type": "cleanup_runtime_installation",
+            "tickMs": 9050937,
+            "enabled": false,
+            "registryCreated": false,
+            "prepareCalled": false
+          }
+        ],
+        "moduleStages": [
+          {
+            "type": "trim_module_observation",
+            "tickMs": 9050859,
+            "stage": "ready",
+            "pid": 32136,
+            "complete": true,
+            "error": 18,
+            "known": 5,
+            "total": 19,
+            "cleanupRuntimeModules": 0
+          },
+          {
+            "type": "trim_module_observation",
+            "tickMs": 9050937,
+            "stage": "resource-ready",
+            "pid": 32136,
+            "complete": true,
+            "error": 18,
+            "known": 7,
+            "total": 26,
+            "cleanupRuntimeModules": 0
+          },
+          {
+            "type": "trim_module_observation",
+            "tickMs": 9050968,
+            "stage": "cleanup-runtime-skipped",
+            "pid": 32136,
+            "complete": true,
+            "error": 18,
+            "known": 7,
+            "total": 26,
+            "cleanupRuntimeModules": 0
+          }
+        ],
+        "cleanupHelperCount": 0,
+        "nativeCleanupPassed": true,
+        "sameWaitingPattern": false,
+        "waitingEvidence": {
+          "sameWaitingPattern": false,
+          "status": "insufficient_evidence",
+          "reason": "missing-identity",
+          "links": null
+        },
+        "profileUnchanged": true
+      }
+    ],
+    "nativeCleanupPassed": true,
+    "cleanupCausalFixVerified": false,
+    "fullR5004Passed": false,
+    "gateClosed": false,
+    "manualHostTest": "not_executed"
+  },
+  "directWindowExecuted": false,
+  "nativeCleanupPassed": false,
+  "cleanupCausalFixVerified": false,
+  "fullR5004Passed": false,
+  "gateClosed": false
+}

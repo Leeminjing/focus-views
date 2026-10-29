@@ -1,0 +1,53 @@
+{
+  "passed": true,
+  "synthetic": true,
+  "nativeOperationsStarted": false,
+  "approvedCommit": "1ef786b92d808fe543edbbd80e40c47ae9bb160a",
+  "checks": [
+    {
+      "name": "exact-approved-committed-source-accepted",
+      "passed": true,
+      "audit": {
+        "passed": true,
+        "changed": [
+          "experiments/r3-004/input.cpp"
+        ],
+        "allowed": [
+          "experiments/r3-004/input.cpp"
+        ],
+        "unexpected": []
+      }
+    },
+    {
+      "name": "later-input-source-change-still-rejected",
+      "passed": true,
+      "audit": {
+        "passed": false,
+        "changed": [
+          "experiments/r3-004/input.cpp"
+        ],
+        "allowed": [],
+        "unexpected": [
+          "experiments/r3-004/input.cpp"
+        ]
+      }
+    },
+    {
+      "name": "other-old-implementation-change-still-rejected",
+      "passed": true,
+      "audit": {
+        "passed": false,
+        "changed": [
+          "experiments/r3-004/input.cpp",
+          "experiments/r3-004/runtime.cpp"
+        ],
+        "allowed": [
+          "experiments/r3-004/input.cpp"
+        ],
+        "unexpected": [
+          "experiments/r3-004/runtime.cpp"
+        ]
+      }
+    }
+  ]
+}

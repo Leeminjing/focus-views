@@ -1,0 +1,4861 @@
+{
+  "allEvidenceChecksPassed": true,
+  "normalExitCrossManagerRestorePassed": true,
+  "regressions": "passed",
+  "gateClosed": false,
+  "crashRecoveryVerified": false,
+  "hostRebootRecoveryVerified": false,
+  "stableSnapshotProtocol": false,
+  "manualHostTest": "not_executed",
+  "managerSha256": "f89f689d34fa6b76933c773ed485f2f6871ca591ce71c700038e6de8b5baf39a",
+  "kernelSha256": "33a666708e65d4d0bc9ad24f5f1659addeea59e441d2f1953598980df19fd23c",
+  "checks": [
+    {
+      "name": "fixture-positive-1.Manager1-normal-exit",
+      "passed": true
+    },
+    {
+      "name": "fixture-positive-1.save.owned-processes-and-desktops-cleaned",
+      "passed": true
+    },
+    {
+      "name": "fixture-positive-1.save.all-native-assertions",
+      "passed": true
+    },
+    {
+      "name": "fixture-positive-1.save.source-S0-real-frame",
+      "passed": true
+    },
+    {
+      "name": "fixture-positive-1.save.A-initial-real-frame",
+      "passed": true
+    },
+    {
+      "name": "fixture-positive-1.save.B-initial-real-frame",
+      "passed": true
+    },
+    {
+      "name": "fixture-positive-1.save.A-single-edit-real-frame",
+      "passed": true
+    },
+    {
+      "name": "fixture-positive-1.save.B-single-edit-real-frame",
+      "passed": true
+    },
+    {
+      "name": "fixture-positive-1.save.A-SA-real-frame",
+      "passed": true
+    },
+    {
+      "name": "fixture-positive-1.save.B-SB-real-frame",
+      "passed": true
+    },
+    {
+      "name": "fixture-positive-1.save.A-1-Action",
+      "passed": true
+    },
+    {
+      "name": "fixture-positive-1.save.A-2-Action",
+      "passed": true
+    },
+    {
+      "name": "fixture-positive-1.save.A-3-Action",
+      "passed": true
+    },
+    {
+      "name": "fixture-positive-1.save.A-4-Action",
+      "passed": true
+    },
+    {
+      "name": "fixture-positive-1.save.A-5-Action",
+      "passed": true
+    },
+    {
+      "name": "fixture-positive-1.save.B-1-Action",
+      "passed": true
+    },
+    {
+      "name": "fixture-positive-1.save.B-2-Action",
+      "passed": true
+    },
+    {
+      "name": "fixture-positive-1.save.B-3-Action",
+      "passed": true
+    },
+    {
+      "name": "fixture-positive-1.save.B-4-Action",
+      "passed": true
+    },
+    {
+      "name": "fixture-positive-1.save.B-5-Action",
+      "passed": true
+    },
+    {
+      "name": "fixture-positive-1.save.source-1-Action",
+      "passed": true
+    },
+    {
+      "name": "fixture-positive-1.save.A-input-1.jsonl-queries-no-loss-or-duplicate",
+      "passed": true
+    },
+    {
+      "name": "fixture-positive-1.save.B-input-1.jsonl-queries-no-loss-or-duplicate",
+      "passed": true
+    },
+    {
+      "name": "fixture-positive-1.save.source-input-1.jsonl-queries-no-loss-or-duplicate",
+      "passed": true
+    },
+    {
+      "name": "fixture-positive-1.S0.packet-version-length-and-SHA256",
+      "passed": true
+    },
+    {
+      "name": "fixture-positive-1.SA.packet-version-length-and-SHA256",
+      "passed": true
+    },
+    {
+      "name": "fixture-positive-1.SB.packet-version-length-and-SHA256",
+      "passed": true
+    },
+    {
+      "name": "fixture-positive-1.session.packet-version-length-and-SHA256",
+      "passed": true
+    },
+    {
+      "name": "fixture-positive-1.Manager1-evidence-path-unavailable",
+      "passed": true
+    },
+    {
+      "name": "fixture-positive-1.Manager2-new-instance-and-normal-exit",
+      "passed": true
+    },
+    {
+      "name": "fixture-positive-1.restore.owned-processes-and-desktops-cleaned",
+      "passed": true
+    },
+    {
+      "name": "fixture-positive-1.restore.all-native-assertions",
+      "passed": true
+    },
+    {
+      "name": "fixture-positive-1.restore.RA-initial-real-frame",
+      "passed": true
+    },
+    {
+      "name": "fixture-positive-1.restore.RB-initial-real-frame",
+      "passed": true
+    },
+    {
+      "name": "fixture-positive-1.restore.C-initial-real-frame",
+      "passed": true
+    },
+    {
+      "name": "fixture-positive-1.restore.RA-undo1-real-frame",
+      "passed": true
+    },
+    {
+      "name": "fixture-positive-1.restore.RA-undo2-real-frame",
+      "passed": true
+    },
+    {
+      "name": "fixture-positive-1.restore.RA-continued-input-real-frame",
+      "passed": true
+    },
+    {
+      "name": "fixture-positive-1.restore.RB-undo1-real-frame",
+      "passed": true
+    },
+    {
+      "name": "fixture-positive-1.restore.RB-undo2-real-frame",
+      "passed": true
+    },
+    {
+      "name": "fixture-positive-1.restore.RB-continued-input-real-frame",
+      "passed": true
+    },
+    {
+      "name": "fixture-positive-1.restore.C-final-edit-real-frame",
+      "passed": true
+    },
+    {
+      "name": "fixture-positive-1.restore.RA-final-real-frame",
+      "passed": true
+    },
+    {
+      "name": "fixture-positive-1.restore.RB-final-real-frame",
+      "passed": true
+    },
+    {
+      "name": "fixture-positive-1.restore.C-final-real-frame",
+      "passed": true
+    },
+    {
+      "name": "fixture-positive-1.restore.C-1-Action",
+      "passed": true
+    },
+    {
+      "name": "fixture-positive-1.restore.C-2-Action",
+      "passed": true
+    },
+    {
+      "name": "fixture-positive-1.restore.C-3-Action",
+      "passed": true
+    },
+    {
+      "name": "fixture-positive-1.restore.C-4-Action",
+      "passed": true
+    },
+    {
+      "name": "fixture-positive-1.restore.RA-1-Action",
+      "passed": true
+    },
+    {
+      "name": "fixture-positive-1.restore.RA-2-Action",
+      "passed": true
+    },
+    {
+      "name": "fixture-positive-1.restore.RB-1-Action",
+      "passed": true
+    },
+    {
+      "name": "fixture-positive-1.restore.RB-2-Action",
+      "passed": true
+    },
+    {
+      "name": "fixture-positive-1.restore.C-input-1.jsonl-queries-no-loss-or-duplicate",
+      "passed": true
+    },
+    {
+      "name": "fixture-positive-1.restore.RA-input-1.jsonl-queries-no-loss-or-duplicate",
+      "passed": true
+    },
+    {
+      "name": "fixture-positive-1.restore.RB-input-1.jsonl-queries-no-loss-or-duplicate",
+      "passed": true
+    },
+    {
+      "name": "fixture-positive-1.actual-cross-manager-restore",
+      "passed": true
+    },
+    {
+      "name": "fixture-positive-1.exact-restored-Views",
+      "passed": true
+    },
+    {
+      "name": "fixture-positive-1.no-business-initialization-replay",
+      "passed": true
+    },
+    {
+      "name": "fixture-positive-1.S0.raw-CPU-stack-memory-computation",
+      "passed": true
+    },
+    {
+      "name": "fixture-positive-1.S0.loaded-data.bin",
+      "passed": true
+    },
+    {
+      "name": "fixture-positive-1.S0.loaded-context.bin",
+      "passed": true
+    },
+    {
+      "name": "fixture-positive-1.S0.loaded-metadata.bin",
+      "passed": true
+    },
+    {
+      "name": "fixture-positive-1.S0.loaded-execution-layout.bin",
+      "passed": true
+    },
+    {
+      "name": "fixture-positive-1.S0.loaded-full-stack.bin",
+      "passed": true
+    },
+    {
+      "name": "fixture-positive-1.S0.loaded-resources.bin",
+      "passed": true
+    },
+    {
+      "name": "fixture-positive-1.S0.loaded-abi.bin",
+      "passed": true
+    },
+    {
+      "name": "fixture-positive-1.S0.loaded-returns.bin",
+      "passed": true
+    },
+    {
+      "name": "fixture-positive-1.S0.loaded-executable.bin",
+      "passed": true
+    },
+    {
+      "name": "fixture-positive-1.S0.loaded-target-image.bin",
+      "passed": true
+    },
+    {
+      "name": "fixture-positive-1.S0.loaded-file.json",
+      "passed": true
+    },
+    {
+      "name": "fixture-positive-1.S0.loaded-file.bin",
+      "passed": true
+    },
+    {
+      "name": "fixture-positive-1.C.real-RET-and-original-state",
+      "passed": true
+    },
+    {
+      "name": "fixture-positive-1.C.own-CET-chain",
+      "passed": true
+    },
+    {
+      "name": "fixture-positive-1.C.seven-explicit-HWND-rebindings",
+      "passed": true
+    },
+    {
+      "name": "fixture-positive-1.S0.actual-ABI",
+      "passed": true
+    },
+    {
+      "name": "fixture-positive-1.SA.raw-CPU-stack-memory-computation",
+      "passed": true
+    },
+    {
+      "name": "fixture-positive-1.SA.loaded-data.bin",
+      "passed": true
+    },
+    {
+      "name": "fixture-positive-1.SA.loaded-context.bin",
+      "passed": true
+    },
+    {
+      "name": "fixture-positive-1.SA.loaded-metadata.bin",
+      "passed": true
+    },
+    {
+      "name": "fixture-positive-1.SA.loaded-execution-layout.bin",
+      "passed": true
+    },
+    {
+      "name": "fixture-positive-1.SA.loaded-full-stack.bin",
+      "passed": true
+    },
+    {
+      "name": "fixture-positive-1.SA.loaded-resources.bin",
+      "passed": true
+    },
+    {
+      "name": "fixture-positive-1.SA.loaded-abi.bin",
+      "passed": true
+    },
+    {
+      "name": "fixture-positive-1.SA.loaded-returns.bin",
+      "passed": true
+    },
+    {
+      "name": "fixture-positive-1.SA.loaded-executable.bin",
+      "passed": true
+    },
+    {
+      "name": "fixture-positive-1.SA.loaded-target-image.bin",
+      "passed": true
+    },
+    {
+      "name": "fixture-positive-1.SA.loaded-file.json",
+      "passed": true
+    },
+    {
+      "name": "fixture-positive-1.SA.loaded-file.bin",
+      "passed": true
+    },
+    {
+      "name": "fixture-positive-1.RA.real-RET-and-original-state",
+      "passed": true
+    },
+    {
+      "name": "fixture-positive-1.RA.own-CET-chain",
+      "passed": true
+    },
+    {
+      "name": "fixture-positive-1.RA.seven-explicit-HWND-rebindings",
+      "passed": true
+    },
+    {
+      "name": "fixture-positive-1.SA.actual-ABI",
+      "passed": true
+    },
+    {
+      "name": "fixture-positive-1.SB.raw-CPU-stack-memory-computation",
+      "passed": true
+    },
+    {
+      "name": "fixture-positive-1.SB.loaded-data.bin",
+      "passed": true
+    },
+    {
+      "name": "fixture-positive-1.SB.loaded-context.bin",
+      "passed": true
+    },
+    {
+      "name": "fixture-positive-1.SB.loaded-metadata.bin",
+      "passed": true
+    },
+    {
+      "name": "fixture-positive-1.SB.loaded-execution-layout.bin",
+      "passed": true
+    },
+    {
+      "name": "fixture-positive-1.SB.loaded-full-stack.bin",
+      "passed": true
+    },
+    {
+      "name": "fixture-positive-1.SB.loaded-resources.bin",
+      "passed": true
+    },
+    {
+      "name": "fixture-positive-1.SB.loaded-abi.bin",
+      "passed": true
+    },
+    {
+      "name": "fixture-positive-1.SB.loaded-returns.bin",
+      "passed": true
+    },
+    {
+      "name": "fixture-positive-1.SB.loaded-executable.bin",
+      "passed": true
+    },
+    {
+      "name": "fixture-positive-1.SB.loaded-target-image.bin",
+      "passed": true
+    },
+    {
+      "name": "fixture-positive-1.SB.loaded-file.json",
+      "passed": true
+    },
+    {
+      "name": "fixture-positive-1.SB.loaded-file.bin",
+      "passed": true
+    },
+    {
+      "name": "fixture-positive-1.RB.real-RET-and-original-state",
+      "passed": true
+    },
+    {
+      "name": "fixture-positive-1.RB.own-CET-chain",
+      "passed": true
+    },
+    {
+      "name": "fixture-positive-1.RB.seven-explicit-HWND-rebindings",
+      "passed": true
+    },
+    {
+      "name": "fixture-positive-1.SB.actual-ABI",
+      "passed": true
+    },
+    {
+      "name": "fixture-positive-1.RA.Undo-and-selection",
+      "passed": true
+    },
+    {
+      "name": "fixture-positive-1.RA.actual-restored-EDIT-pixels",
+      "passed": true
+    },
+    {
+      "name": "fixture-positive-1.RB.Undo-and-selection",
+      "passed": true
+    },
+    {
+      "name": "fixture-positive-1.RB.actual-restored-EDIT-pixels",
+      "passed": true
+    },
+    {
+      "name": "fixture-positive-1.C-native-file-processing",
+      "passed": true
+    },
+    {
+      "name": "fixture-positive-1.RA.different-application-instance",
+      "passed": true
+    },
+    {
+      "name": "fixture-positive-1.RB.different-application-instance",
+      "passed": true
+    },
+    {
+      "name": "fixture-positive-1.C.different-application-instance",
+      "passed": true
+    },
+    {
+      "name": "fixture-positive-1.entire-store-unchanged",
+      "passed": true
+    },
+    {
+      "name": "fixture-positive-1.native-codec-positive-and-negative-matrix",
+      "passed": true
+    },
+    {
+      "name": "fixture-positive-1.codec-raw-roundtrip",
+      "passed": true
+    },
+    {
+      "name": "fixture-positive-1.codec-tamper",
+      "passed": true
+    },
+    {
+      "name": "fixture-positive-1.codec-truncation",
+      "passed": true
+    },
+    {
+      "name": "fixture-positive-1.codec-unknown-format",
+      "passed": true
+    },
+    {
+      "name": "fixture-positive-1.codec-unknown-runtime-abi",
+      "passed": true
+    },
+    {
+      "name": "fixture-positive-1.codec-bad-layout",
+      "passed": true
+    },
+    {
+      "name": "fixture-positive-1.codec-bad-region-length",
+      "passed": true
+    },
+    {
+      "name": "fixture-positive-1.codec-tiny-region-reference-underflow",
+      "passed": true
+    },
+    {
+      "name": "fixture-positive-1.codec-cookie-span-outside-image",
+      "passed": true
+    },
+    {
+      "name": "fixture-positive-1.codec-truncated-PE-header",
+      "passed": true
+    },
+    {
+      "name": "fixture-positive-1.codec-bad-reference",
+      "passed": true
+    },
+    {
+      "name": "fixture-positive-1.codec-wrong-target",
+      "passed": true
+    },
+    {
+      "name": "fixture-positive-1.codec-interrupted-write",
+      "passed": true
+    },
+    {
+      "name": "fixture-positive-1.codec-no-partial-publication",
+      "passed": true
+    },
+    {
+      "name": "fixture-positive-1.codec-staging-removed",
+      "passed": true
+    },
+    {
+      "name": "fixture-positive-1.codec-staging-removed",
+      "passed": true
+    },
+    {
+      "name": "fixture-positive-1.codec-published-load",
+      "passed": true
+    },
+    {
+      "name": "fixture-positive-1.codec-immutable-version",
+      "passed": true
+    },
+    {
+      "name": "fixture-positive-1.codec-existing-version-unchanged",
+      "passed": true
+    },
+    {
+      "name": "fixture-positive-1.codec-query-stream-backpressure",
+      "passed": true
+    },
+    {
+      "name": "fixture-positive-1.codec-query-FIFO-before-wrap",
+      "passed": true
+    },
+    {
+      "name": "fixture-positive-1.codec-query-stream-wrap-no-loss",
+      "passed": true
+    },
+    {
+      "name": "fixture-positive-2.Manager1-normal-exit",
+      "passed": true
+    },
+    {
+      "name": "fixture-positive-2.save.owned-processes-and-desktops-cleaned",
+      "passed": true
+    },
+    {
+      "name": "fixture-positive-2.save.all-native-assertions",
+      "passed": true
+    },
+    {
+      "name": "fixture-positive-2.save.source-S0-real-frame",
+      "passed": true
+    },
+    {
+      "name": "fixture-positive-2.save.A-initial-real-frame",
+      "passed": true
+    },
+    {
+      "name": "fixture-positive-2.save.B-initial-real-frame",
+      "passed": true
+    },
+    {
+      "name": "fixture-positive-2.save.A-single-edit-real-frame",
+      "passed": true
+    },
+    {
+      "name": "fixture-positive-2.save.B-single-edit-real-frame",
+      "passed": true
+    },
+    {
+      "name": "fixture-positive-2.save.A-SA-real-frame",
+      "passed": true
+    },
+    {
+      "name": "fixture-positive-2.save.B-SB-real-frame",
+      "passed": true
+    },
+    {
+      "name": "fixture-positive-2.save.A-1-Action",
+      "passed": true
+    },
+    {
+      "name": "fixture-positive-2.save.A-2-Action",
+      "passed": true
+    },
+    {
+      "name": "fixture-positive-2.save.A-3-Action",
+      "passed": true
+    },
+    {
+      "name": "fixture-positive-2.save.A-4-Action",
+      "passed": true
+    },
+    {
+      "name": "fixture-positive-2.save.A-5-Action",
+      "passed": true
+    },
+    {
+      "name": "fixture-positive-2.save.B-1-Action",
+      "passed": true
+    },
+    {
+      "name": "fixture-positive-2.save.B-2-Action",
+      "passed": true
+    },
+    {
+      "name": "fixture-positive-2.save.B-3-Action",
+      "passed": true
+    },
+    {
+      "name": "fixture-positive-2.save.B-4-Action",
+      "passed": true
+    },
+    {
+      "name": "fixture-positive-2.save.B-5-Action",
+      "passed": true
+    },
+    {
+      "name": "fixture-positive-2.save.source-1-Action",
+      "passed": true
+    },
+    {
+      "name": "fixture-positive-2.save.A-input-1.jsonl-queries-no-loss-or-duplicate",
+      "passed": true
+    },
+    {
+      "name": "fixture-positive-2.save.B-input-1.jsonl-queries-no-loss-or-duplicate",
+      "passed": true
+    },
+    {
+      "name": "fixture-positive-2.save.source-input-1.jsonl-queries-no-loss-or-duplicate",
+      "passed": true
+    },
+    {
+      "name": "fixture-positive-2.S0.packet-version-length-and-SHA256",
+      "passed": true
+    },
+    {
+      "name": "fixture-positive-2.SA.packet-version-length-and-SHA256",
+      "passed": true
+    },
+    {
+      "name": "fixture-positive-2.SB.packet-version-length-and-SHA256",
+      "passed": true
+    },
+    {
+      "name": "fixture-positive-2.session.packet-version-length-and-SHA256",
+      "passed": true
+    },
+    {
+      "name": "fixture-positive-2.Manager1-evidence-path-unavailable",
+      "passed": true
+    },
+    {
+      "name": "fixture-positive-2.Manager2-new-instance-and-normal-exit",
+      "passed": true
+    },
+    {
+      "name": "fixture-positive-2.restore.owned-processes-and-desktops-cleaned",
+      "passed": true
+    },
+    {
+      "name": "fixture-positive-2.restore.all-native-assertions",
+      "passed": true
+    },
+    {
+      "name": "fixture-positive-2.restore.RA-initial-real-frame",
+      "passed": true
+    },
+    {
+      "name": "fixture-positive-2.restore.RB-initial-real-frame",
+      "passed": true
+    },
+    {
+      "name": "fixture-positive-2.restore.C-initial-real-frame",
+      "passed": true
+    },
+    {
+      "name": "fixture-positive-2.restore.RA-undo1-real-frame",
+      "passed": true
+    },
+    {
+      "name": "fixture-positive-2.restore.RA-undo2-real-frame",
+      "passed": true
+    },
+    {
+      "name": "fixture-positive-2.restore.RA-continued-input-real-frame",
+      "passed": true
+    },
+    {
+      "name": "fixture-positive-2.restore.RB-undo1-real-frame",
+      "passed": true
+    },
+    {
+      "name": "fixture-positive-2.restore.RB-undo2-real-frame",
+      "passed": true
+    },
+    {
+      "name": "fixture-positive-2.restore.RB-continued-input-real-frame",
+      "passed": true
+    },
+    {
+      "name": "fixture-positive-2.restore.C-final-edit-real-frame",
+      "passed": true
+    },
+    {
+      "name": "fixture-positive-2.restore.RA-final-real-frame",
+      "passed": true
+    },
+    {
+      "name": "fixture-positive-2.restore.RB-final-real-frame",
+      "passed": true
+    },
+    {
+      "name": "fixture-positive-2.restore.C-final-real-frame",
+      "passed": true
+    },
+    {
+      "name": "fixture-positive-2.restore.C-1-Action",
+      "passed": true
+    },
+    {
+      "name": "fixture-positive-2.restore.C-2-Action",
+      "passed": true
+    },
+    {
+      "name": "fixture-positive-2.restore.C-3-Action",
+      "passed": true
+    },
+    {
+      "name": "fixture-positive-2.restore.C-4-Action",
+      "passed": true
+    },
+    {
+      "name": "fixture-positive-2.restore.RA-1-Action",
+      "passed": true
+    },
+    {
+      "name": "fixture-positive-2.restore.RA-2-Action",
+      "passed": true
+    },
+    {
+      "name": "fixture-positive-2.restore.RB-1-Action",
+      "passed": true
+    },
+    {
+      "name": "fixture-positive-2.restore.RB-2-Action",
+      "passed": true
+    },
+    {
+      "name": "fixture-positive-2.restore.C-input-1.jsonl-queries-no-loss-or-duplicate",
+      "passed": true
+    },
+    {
+      "name": "fixture-positive-2.restore.RA-input-1.jsonl-queries-no-loss-or-duplicate",
+      "passed": true
+    },
+    {
+      "name": "fixture-positive-2.restore.RB-input-1.jsonl-queries-no-loss-or-duplicate",
+      "passed": true
+    },
+    {
+      "name": "fixture-positive-2.actual-cross-manager-restore",
+      "passed": true
+    },
+    {
+      "name": "fixture-positive-2.exact-restored-Views",
+      "passed": true
+    },
+    {
+      "name": "fixture-positive-2.no-business-initialization-replay",
+      "passed": true
+    },
+    {
+      "name": "fixture-positive-2.S0.raw-CPU-stack-memory-computation",
+      "passed": true
+    },
+    {
+      "name": "fixture-positive-2.S0.loaded-data.bin",
+      "passed": true
+    },
+    {
+      "name": "fixture-positive-2.S0.loaded-context.bin",
+      "passed": true
+    },
+    {
+      "name": "fixture-positive-2.S0.loaded-metadata.bin",
+      "passed": true
+    },
+    {
+      "name": "fixture-positive-2.S0.loaded-execution-layout.bin",
+      "passed": true
+    },
+    {
+      "name": "fixture-positive-2.S0.loaded-full-stack.bin",
+      "passed": true
+    },
+    {
+      "name": "fixture-positive-2.S0.loaded-resources.bin",
+      "passed": true
+    },
+    {
+      "name": "fixture-positive-2.S0.loaded-abi.bin",
+      "passed": true
+    },
+    {
+      "name": "fixture-positive-2.S0.loaded-returns.bin",
+      "passed": true
+    },
+    {
+      "name": "fixture-positive-2.S0.loaded-executable.bin",
+      "passed": true
+    },
+    {
+      "name": "fixture-positive-2.S0.loaded-target-image.bin",
+      "passed": true
+    },
+    {
+      "name": "fixture-positive-2.S0.loaded-file.json",
+      "passed": true
+    },
+    {
+      "name": "fixture-positive-2.S0.loaded-file.bin",
+      "passed": true
+    },
+    {
+      "name": "fixture-positive-2.C.real-RET-and-original-state",
+      "passed": true
+    },
+    {
+      "name": "fixture-positive-2.C.own-CET-chain",
+      "passed": true
+    },
+    {
+      "name": "fixture-positive-2.C.seven-explicit-HWND-rebindings",
+      "passed": true
+    },
+    {
+      "name": "fixture-positive-2.S0.actual-ABI",
+      "passed": true
+    },
+    {
+      "name": "fixture-positive-2.SA.raw-CPU-stack-memory-computation",
+      "passed": true
+    },
+    {
+      "name": "fixture-positive-2.SA.loaded-data.bin",
+      "passed": true
+    },
+    {
+      "name": "fixture-positive-2.SA.loaded-context.bin",
+      "passed": true
+    },
+    {
+      "name": "fixture-positive-2.SA.loaded-metadata.bin",
+      "passed": true
+    },
+    {
+      "name": "fixture-positive-2.SA.loaded-execution-layout.bin",
+      "passed": true
+    },
+    {
+      "name": "fixture-positive-2.SA.loaded-full-stack.bin",
+      "passed": true
+    },
+    {
+      "name": "fixture-positive-2.SA.loaded-resources.bin",
+      "passed": true
+    },
+    {
+      "name": "fixture-positive-2.SA.loaded-abi.bin",
+      "passed": true
+    },
+    {
+      "name": "fixture-positive-2.SA.loaded-returns.bin",
+      "passed": true
+    },
+    {
+      "name": "fixture-positive-2.SA.loaded-executable.bin",
+      "passed": true
+    },
+    {
+      "name": "fixture-positive-2.SA.loaded-target-image.bin",
+      "passed": true
+    },
+    {
+      "name": "fixture-positive-2.SA.loaded-file.json",
+      "passed": true
+    },
+    {
+      "name": "fixture-positive-2.SA.loaded-file.bin",
+      "passed": true
+    },
+    {
+      "name": "fixture-positive-2.RA.real-RET-and-original-state",
+      "passed": true
+    },
+    {
+      "name": "fixture-positive-2.RA.own-CET-chain",
+      "passed": true
+    },
+    {
+      "name": "fixture-positive-2.RA.seven-explicit-HWND-rebindings",
+      "passed": true
+    },
+    {
+      "name": "fixture-positive-2.SA.actual-ABI",
+      "passed": true
+    },
+    {
+      "name": "fixture-positive-2.SB.raw-CPU-stack-memory-computation",
+      "passed": true
+    },
+    {
+      "name": "fixture-positive-2.SB.loaded-data.bin",
+      "passed": true
+    },
+    {
+      "name": "fixture-positive-2.SB.loaded-context.bin",
+      "passed": true
+    },
+    {
+      "name": "fixture-positive-2.SB.loaded-metadata.bin",
+      "passed": true
+    },
+    {
+      "name": "fixture-positive-2.SB.loaded-execution-layout.bin",
+      "passed": true
+    },
+    {
+      "name": "fixture-positive-2.SB.loaded-full-stack.bin",
+      "passed": true
+    },
+    {
+      "name": "fixture-positive-2.SB.loaded-resources.bin",
+      "passed": true
+    },
+    {
+      "name": "fixture-positive-2.SB.loaded-abi.bin",
+      "passed": true
+    },
+    {
+      "name": "fixture-positive-2.SB.loaded-returns.bin",
+      "passed": true
+    },
+    {
+      "name": "fixture-positive-2.SB.loaded-executable.bin",
+      "passed": true
+    },
+    {
+      "name": "fixture-positive-2.SB.loaded-target-image.bin",
+      "passed": true
+    },
+    {
+      "name": "fixture-positive-2.SB.loaded-file.json",
+      "passed": true
+    },
+    {
+      "name": "fixture-positive-2.SB.loaded-file.bin",
+      "passed": true
+    },
+    {
+      "name": "fixture-positive-2.RB.real-RET-and-original-state",
+      "passed": true
+    },
+    {
+      "name": "fixture-positive-2.RB.own-CET-chain",
+      "passed": true
+    },
+    {
+      "name": "fixture-positive-2.RB.seven-explicit-HWND-rebindings",
+      "passed": true
+    },
+    {
+      "name": "fixture-positive-2.SB.actual-ABI",
+      "passed": true
+    },
+    {
+      "name": "fixture-positive-2.RA.Undo-and-selection",
+      "passed": true
+    },
+    {
+      "name": "fixture-positive-2.RA.actual-restored-EDIT-pixels",
+      "passed": true
+    },
+    {
+      "name": "fixture-positive-2.RB.Undo-and-selection",
+      "passed": true
+    },
+    {
+      "name": "fixture-positive-2.RB.actual-restored-EDIT-pixels",
+      "passed": true
+    },
+    {
+      "name": "fixture-positive-2.C-native-file-processing",
+      "passed": true
+    },
+    {
+      "name": "fixture-positive-2.RA.different-application-instance",
+      "passed": true
+    },
+    {
+      "name": "fixture-positive-2.RB.different-application-instance",
+      "passed": true
+    },
+    {
+      "name": "fixture-positive-2.C.different-application-instance",
+      "passed": true
+    },
+    {
+      "name": "fixture-positive-2.entire-store-unchanged",
+      "passed": true
+    },
+    {
+      "name": "fixture-positive-2.native-codec-positive-and-negative-matrix",
+      "passed": true
+    },
+    {
+      "name": "fixture-positive-2.codec-raw-roundtrip",
+      "passed": true
+    },
+    {
+      "name": "fixture-positive-2.codec-tamper",
+      "passed": true
+    },
+    {
+      "name": "fixture-positive-2.codec-truncation",
+      "passed": true
+    },
+    {
+      "name": "fixture-positive-2.codec-unknown-format",
+      "passed": true
+    },
+    {
+      "name": "fixture-positive-2.codec-unknown-runtime-abi",
+      "passed": true
+    },
+    {
+      "name": "fixture-positive-2.codec-bad-layout",
+      "passed": true
+    },
+    {
+      "name": "fixture-positive-2.codec-bad-region-length",
+      "passed": true
+    },
+    {
+      "name": "fixture-positive-2.codec-tiny-region-reference-underflow",
+      "passed": true
+    },
+    {
+      "name": "fixture-positive-2.codec-cookie-span-outside-image",
+      "passed": true
+    },
+    {
+      "name": "fixture-positive-2.codec-truncated-PE-header",
+      "passed": true
+    },
+    {
+      "name": "fixture-positive-2.codec-bad-reference",
+      "passed": true
+    },
+    {
+      "name": "fixture-positive-2.codec-wrong-target",
+      "passed": true
+    },
+    {
+      "name": "fixture-positive-2.codec-interrupted-write",
+      "passed": true
+    },
+    {
+      "name": "fixture-positive-2.codec-no-partial-publication",
+      "passed": true
+    },
+    {
+      "name": "fixture-positive-2.codec-staging-removed",
+      "passed": true
+    },
+    {
+      "name": "fixture-positive-2.codec-staging-removed",
+      "passed": true
+    },
+    {
+      "name": "fixture-positive-2.codec-published-load",
+      "passed": true
+    },
+    {
+      "name": "fixture-positive-2.codec-immutable-version",
+      "passed": true
+    },
+    {
+      "name": "fixture-positive-2.codec-existing-version-unchanged",
+      "passed": true
+    },
+    {
+      "name": "fixture-positive-2.codec-query-stream-backpressure",
+      "passed": true
+    },
+    {
+      "name": "fixture-positive-2.codec-query-FIFO-before-wrap",
+      "passed": true
+    },
+    {
+      "name": "fixture-positive-2.codec-query-stream-wrap-no-loss",
+      "passed": true
+    },
+    {
+      "name": "fixture-missing.owned-processes-and-desktops-cleaned",
+      "passed": true
+    },
+    {
+      "name": "fixture-missing.all-native-assertions",
+      "passed": true
+    },
+    {
+      "name": "fixture-missing.precise-refusal-no-View",
+      "passed": true
+    },
+    {
+      "name": "fixture-missing.original-fixed-store-unchanged",
+      "passed": true
+    },
+    {
+      "name": "fixture-tamper.owned-processes-and-desktops-cleaned",
+      "passed": true
+    },
+    {
+      "name": "fixture-tamper.all-native-assertions",
+      "passed": true
+    },
+    {
+      "name": "fixture-tamper.precise-refusal-no-View",
+      "passed": true
+    },
+    {
+      "name": "fixture-tamper.original-fixed-store-unchanged",
+      "passed": true
+    },
+    {
+      "name": "fixture-partial.owned-processes-and-desktops-cleaned",
+      "passed": true
+    },
+    {
+      "name": "fixture-partial.all-native-assertions",
+      "passed": true
+    },
+    {
+      "name": "fixture-partial.precise-refusal-no-View",
+      "passed": true
+    },
+    {
+      "name": "fixture-partial.original-fixed-store-unchanged",
+      "passed": true
+    },
+    {
+      "name": "fixture-format.owned-processes-and-desktops-cleaned",
+      "passed": true
+    },
+    {
+      "name": "fixture-format.all-native-assertions",
+      "passed": true
+    },
+    {
+      "name": "fixture-format.precise-refusal-no-View",
+      "passed": true
+    },
+    {
+      "name": "fixture-format.original-fixed-store-unchanged",
+      "passed": true
+    },
+    {
+      "name": "fixture-abi.owned-processes-and-desktops-cleaned",
+      "passed": true
+    },
+    {
+      "name": "fixture-abi.all-native-assertions",
+      "passed": true
+    },
+    {
+      "name": "fixture-abi.precise-refusal-no-View",
+      "passed": true
+    },
+    {
+      "name": "fixture-abi.original-fixed-store-unchanged",
+      "passed": true
+    },
+    {
+      "name": "fixture-wrong-image.owned-processes-and-desktops-cleaned",
+      "passed": true
+    },
+    {
+      "name": "fixture-wrong-image.all-native-assertions",
+      "passed": true
+    },
+    {
+      "name": "fixture-wrong-image.precise-refusal-no-View",
+      "passed": true
+    },
+    {
+      "name": "fixture-wrong-image.original-fixed-store-unchanged",
+      "passed": true
+    },
+    {
+      "name": "fixture-artifact-hash.owned-processes-and-desktops-cleaned",
+      "passed": true
+    },
+    {
+      "name": "fixture-artifact-hash.all-native-assertions",
+      "passed": true
+    },
+    {
+      "name": "fixture-artifact-hash.precise-refusal-no-View",
+      "passed": true
+    },
+    {
+      "name": "fixture-artifact-hash.original-fixed-store-unchanged",
+      "passed": true
+    },
+    {
+      "name": "fixture-resource-failure.Manager1-normal-exit",
+      "passed": true
+    },
+    {
+      "name": "fixture-resource-failure.save.owned-processes-and-desktops-cleaned",
+      "passed": true
+    },
+    {
+      "name": "fixture-resource-failure.save.all-native-assertions",
+      "passed": true
+    },
+    {
+      "name": "fixture-resource-failure.save.source-S0-real-frame",
+      "passed": true
+    },
+    {
+      "name": "fixture-resource-failure.save.A-initial-real-frame",
+      "passed": true
+    },
+    {
+      "name": "fixture-resource-failure.save.B-initial-real-frame",
+      "passed": true
+    },
+    {
+      "name": "fixture-resource-failure.save.A-single-edit-real-frame",
+      "passed": true
+    },
+    {
+      "name": "fixture-resource-failure.save.B-single-edit-real-frame",
+      "passed": true
+    },
+    {
+      "name": "fixture-resource-failure.save.A-SA-real-frame",
+      "passed": true
+    },
+    {
+      "name": "fixture-resource-failure.save.B-SB-real-frame",
+      "passed": true
+    },
+    {
+      "name": "fixture-resource-failure.save.A-1-Action",
+      "passed": true
+    },
+    {
+      "name": "fixture-resource-failure.save.A-2-Action",
+      "passed": true
+    },
+    {
+      "name": "fixture-resource-failure.save.A-3-Action",
+      "passed": true
+    },
+    {
+      "name": "fixture-resource-failure.save.A-4-Action",
+      "passed": true
+    },
+    {
+      "name": "fixture-resource-failure.save.A-5-Action",
+      "passed": true
+    },
+    {
+      "name": "fixture-resource-failure.save.B-1-Action",
+      "passed": true
+    },
+    {
+      "name": "fixture-resource-failure.save.B-2-Action",
+      "passed": true
+    },
+    {
+      "name": "fixture-resource-failure.save.B-3-Action",
+      "passed": true
+    },
+    {
+      "name": "fixture-resource-failure.save.B-4-Action",
+      "passed": true
+    },
+    {
+      "name": "fixture-resource-failure.save.B-5-Action",
+      "passed": true
+    },
+    {
+      "name": "fixture-resource-failure.save.source-1-Action",
+      "passed": true
+    },
+    {
+      "name": "fixture-resource-failure.save.A-input-1.jsonl-queries-no-loss-or-duplicate",
+      "passed": true
+    },
+    {
+      "name": "fixture-resource-failure.save.B-input-1.jsonl-queries-no-loss-or-duplicate",
+      "passed": true
+    },
+    {
+      "name": "fixture-resource-failure.save.source-input-1.jsonl-queries-no-loss-or-duplicate",
+      "passed": true
+    },
+    {
+      "name": "fixture-resource-failure.owned-processes-and-desktops-cleaned",
+      "passed": true
+    },
+    {
+      "name": "fixture-resource-failure.all-native-assertions",
+      "passed": true
+    },
+    {
+      "name": "fixture-resource-failure.RA-initial-real-frame",
+      "passed": true
+    },
+    {
+      "name": "fixture-resource-failure.C-initial-real-frame",
+      "passed": true
+    },
+    {
+      "name": "fixture-resource-failure.RA-undo1-real-frame",
+      "passed": true
+    },
+    {
+      "name": "fixture-resource-failure.RA-undo2-real-frame",
+      "passed": true
+    },
+    {
+      "name": "fixture-resource-failure.RA-continued-input-real-frame",
+      "passed": true
+    },
+    {
+      "name": "fixture-resource-failure.C-final-edit-real-frame",
+      "passed": true
+    },
+    {
+      "name": "fixture-resource-failure.RA-final-real-frame",
+      "passed": true
+    },
+    {
+      "name": "fixture-resource-failure.C-final-real-frame",
+      "passed": true
+    },
+    {
+      "name": "fixture-resource-failure.C-1-Action",
+      "passed": true
+    },
+    {
+      "name": "fixture-resource-failure.C-2-Action",
+      "passed": true
+    },
+    {
+      "name": "fixture-resource-failure.C-3-Action",
+      "passed": true
+    },
+    {
+      "name": "fixture-resource-failure.C-4-Action",
+      "passed": true
+    },
+    {
+      "name": "fixture-resource-failure.RA-1-Action",
+      "passed": true
+    },
+    {
+      "name": "fixture-resource-failure.RA-2-Action",
+      "passed": true
+    },
+    {
+      "name": "fixture-resource-failure.RB-1-Action",
+      "passed": true
+    },
+    {
+      "name": "fixture-resource-failure.C-input-1.jsonl-queries-no-loss-or-duplicate",
+      "passed": true
+    },
+    {
+      "name": "fixture-resource-failure.RA-input-1.jsonl-queries-no-loss-or-duplicate",
+      "passed": true
+    },
+    {
+      "name": "fixture-resource-failure.expected-isolated-resource-rejection",
+      "passed": true
+    },
+    {
+      "name": "fixture-resource-failure.exact-restored-Views",
+      "passed": true
+    },
+    {
+      "name": "fixture-resource-failure.no-business-initialization-replay",
+      "passed": true
+    },
+    {
+      "name": "fixture-resource-failure.S0.raw-CPU-stack-memory-computation",
+      "passed": true
+    },
+    {
+      "name": "fixture-resource-failure.S0.loaded-data.bin",
+      "passed": true
+    },
+    {
+      "name": "fixture-resource-failure.S0.loaded-context.bin",
+      "passed": true
+    },
+    {
+      "name": "fixture-resource-failure.S0.loaded-metadata.bin",
+      "passed": true
+    },
+    {
+      "name": "fixture-resource-failure.S0.loaded-execution-layout.bin",
+      "passed": true
+    },
+    {
+      "name": "fixture-resource-failure.S0.loaded-full-stack.bin",
+      "passed": true
+    },
+    {
+      "name": "fixture-resource-failure.S0.loaded-resources.bin",
+      "passed": true
+    },
+    {
+      "name": "fixture-resource-failure.S0.loaded-abi.bin",
+      "passed": true
+    },
+    {
+      "name": "fixture-resource-failure.S0.loaded-returns.bin",
+      "passed": true
+    },
+    {
+      "name": "fixture-resource-failure.S0.loaded-executable.bin",
+      "passed": true
+    },
+    {
+      "name": "fixture-resource-failure.S0.loaded-target-image.bin",
+      "passed": true
+    },
+    {
+      "name": "fixture-resource-failure.S0.loaded-file.json",
+      "passed": true
+    },
+    {
+      "name": "fixture-resource-failure.S0.loaded-file.bin",
+      "passed": true
+    },
+    {
+      "name": "fixture-resource-failure.C.real-RET-and-original-state",
+      "passed": true
+    },
+    {
+      "name": "fixture-resource-failure.C.own-CET-chain",
+      "passed": true
+    },
+    {
+      "name": "fixture-resource-failure.C.seven-explicit-HWND-rebindings",
+      "passed": true
+    },
+    {
+      "name": "fixture-resource-failure.S0.actual-ABI",
+      "passed": true
+    },
+    {
+      "name": "fixture-resource-failure.SA.raw-CPU-stack-memory-computation",
+      "passed": true
+    },
+    {
+      "name": "fixture-resource-failure.SA.loaded-data.bin",
+      "passed": true
+    },
+    {
+      "name": "fixture-resource-failure.SA.loaded-context.bin",
+      "passed": true
+    },
+    {
+      "name": "fixture-resource-failure.SA.loaded-metadata.bin",
+      "passed": true
+    },
+    {
+      "name": "fixture-resource-failure.SA.loaded-execution-layout.bin",
+      "passed": true
+    },
+    {
+      "name": "fixture-resource-failure.SA.loaded-full-stack.bin",
+      "passed": true
+    },
+    {
+      "name": "fixture-resource-failure.SA.loaded-resources.bin",
+      "passed": true
+    },
+    {
+      "name": "fixture-resource-failure.SA.loaded-abi.bin",
+      "passed": true
+    },
+    {
+      "name": "fixture-resource-failure.SA.loaded-returns.bin",
+      "passed": true
+    },
+    {
+      "name": "fixture-resource-failure.SA.loaded-executable.bin",
+      "passed": true
+    },
+    {
+      "name": "fixture-resource-failure.SA.loaded-target-image.bin",
+      "passed": true
+    },
+    {
+      "name": "fixture-resource-failure.SA.loaded-file.json",
+      "passed": true
+    },
+    {
+      "name": "fixture-resource-failure.SA.loaded-file.bin",
+      "passed": true
+    },
+    {
+      "name": "fixture-resource-failure.RA.real-RET-and-original-state",
+      "passed": true
+    },
+    {
+      "name": "fixture-resource-failure.RA.own-CET-chain",
+      "passed": true
+    },
+    {
+      "name": "fixture-resource-failure.RA.seven-explicit-HWND-rebindings",
+      "passed": true
+    },
+    {
+      "name": "fixture-resource-failure.SA.actual-ABI",
+      "passed": true
+    },
+    {
+      "name": "fixture-resource-failure.SB.raw-CPU-stack-memory-computation",
+      "passed": true
+    },
+    {
+      "name": "fixture-resource-failure.SB.loaded-data.bin",
+      "passed": true
+    },
+    {
+      "name": "fixture-resource-failure.SB.loaded-context.bin",
+      "passed": true
+    },
+    {
+      "name": "fixture-resource-failure.SB.loaded-metadata.bin",
+      "passed": true
+    },
+    {
+      "name": "fixture-resource-failure.SB.loaded-execution-layout.bin",
+      "passed": true
+    },
+    {
+      "name": "fixture-resource-failure.SB.loaded-full-stack.bin",
+      "passed": true
+    },
+    {
+      "name": "fixture-resource-failure.SB.loaded-resources.bin",
+      "passed": true
+    },
+    {
+      "name": "fixture-resource-failure.SB.loaded-abi.bin",
+      "passed": true
+    },
+    {
+      "name": "fixture-resource-failure.SB.loaded-returns.bin",
+      "passed": true
+    },
+    {
+      "name": "fixture-resource-failure.SB.loaded-executable.bin",
+      "passed": true
+    },
+    {
+      "name": "fixture-resource-failure.SB.loaded-target-image.bin",
+      "passed": true
+    },
+    {
+      "name": "fixture-resource-failure.SB.loaded-file.json",
+      "passed": true
+    },
+    {
+      "name": "fixture-resource-failure.SB.loaded-file.bin",
+      "passed": true
+    },
+    {
+      "name": "fixture-resource-failure.RA.Undo-and-selection",
+      "passed": true
+    },
+    {
+      "name": "fixture-resource-failure.RA.actual-restored-EDIT-pixels",
+      "passed": true
+    },
+    {
+      "name": "fixture-resource-failure.C-native-file-processing",
+      "passed": true
+    },
+    {
+      "name": "fixture-resource-failure.RA.different-application-instance",
+      "passed": true
+    },
+    {
+      "name": "fixture-resource-failure.C.different-application-instance",
+      "passed": true
+    },
+    {
+      "name": "fixture-resource-failure.original-fixed-store-unchanged",
+      "passed": true
+    },
+    {
+      "name": "fixture-query-capacity.Manager1-normal-exit",
+      "passed": true
+    },
+    {
+      "name": "fixture-query-capacity.save.owned-processes-and-desktops-cleaned",
+      "passed": true
+    },
+    {
+      "name": "fixture-query-capacity.save.all-native-assertions",
+      "passed": true
+    },
+    {
+      "name": "fixture-query-capacity.save.source-S0-real-frame",
+      "passed": true
+    },
+    {
+      "name": "fixture-query-capacity.save.A-initial-real-frame",
+      "passed": true
+    },
+    {
+      "name": "fixture-query-capacity.save.B-initial-real-frame",
+      "passed": true
+    },
+    {
+      "name": "fixture-query-capacity.save.A-single-edit-real-frame",
+      "passed": true
+    },
+    {
+      "name": "fixture-query-capacity.save.B-single-edit-real-frame",
+      "passed": true
+    },
+    {
+      "name": "fixture-query-capacity.save.A-SA-real-frame",
+      "passed": true
+    },
+    {
+      "name": "fixture-query-capacity.save.B-SB-real-frame",
+      "passed": true
+    },
+    {
+      "name": "fixture-query-capacity.save.A-1-Action",
+      "passed": true
+    },
+    {
+      "name": "fixture-query-capacity.save.A-2-Action",
+      "passed": true
+    },
+    {
+      "name": "fixture-query-capacity.save.A-3-Action",
+      "passed": true
+    },
+    {
+      "name": "fixture-query-capacity.save.A-4-Action",
+      "passed": true
+    },
+    {
+      "name": "fixture-query-capacity.save.A-5-Action",
+      "passed": true
+    },
+    {
+      "name": "fixture-query-capacity.save.B-1-Action",
+      "passed": true
+    },
+    {
+      "name": "fixture-query-capacity.save.B-2-Action",
+      "passed": true
+    },
+    {
+      "name": "fixture-query-capacity.save.B-3-Action",
+      "passed": true
+    },
+    {
+      "name": "fixture-query-capacity.save.B-4-Action",
+      "passed": true
+    },
+    {
+      "name": "fixture-query-capacity.save.B-5-Action",
+      "passed": true
+    },
+    {
+      "name": "fixture-query-capacity.save.source-1-Action",
+      "passed": true
+    },
+    {
+      "name": "fixture-query-capacity.save.A-input-1.jsonl-queries-no-loss-or-duplicate",
+      "passed": true
+    },
+    {
+      "name": "fixture-query-capacity.save.B-input-1.jsonl-queries-no-loss-or-duplicate",
+      "passed": true
+    },
+    {
+      "name": "fixture-query-capacity.save.source-input-1.jsonl-queries-no-loss-or-duplicate",
+      "passed": true
+    },
+    {
+      "name": "fixture-query-capacity.owned-processes-and-desktops-cleaned",
+      "passed": true
+    },
+    {
+      "name": "fixture-query-capacity.all-native-assertions",
+      "passed": true
+    },
+    {
+      "name": "fixture-query-capacity.RA-initial-real-frame",
+      "passed": true
+    },
+    {
+      "name": "fixture-query-capacity.RB-initial-real-frame",
+      "passed": true
+    },
+    {
+      "name": "fixture-query-capacity.C-initial-real-frame",
+      "passed": true
+    },
+    {
+      "name": "fixture-query-capacity.RA-undo1-real-frame",
+      "passed": true
+    },
+    {
+      "name": "fixture-query-capacity.RA-undo2-real-frame",
+      "passed": true
+    },
+    {
+      "name": "fixture-query-capacity.RA-continued-input-real-frame",
+      "passed": true
+    },
+    {
+      "name": "fixture-query-capacity.RB-undo1-real-frame",
+      "passed": true
+    },
+    {
+      "name": "fixture-query-capacity.RB-undo2-real-frame",
+      "passed": true
+    },
+    {
+      "name": "fixture-query-capacity.RB-continued-input-real-frame",
+      "passed": true
+    },
+    {
+      "name": "fixture-query-capacity.C-final-edit-real-frame",
+      "passed": true
+    },
+    {
+      "name": "fixture-query-capacity.RA-final-real-frame",
+      "passed": true
+    },
+    {
+      "name": "fixture-query-capacity.RB-final-real-frame",
+      "passed": true
+    },
+    {
+      "name": "fixture-query-capacity.C-final-real-frame",
+      "passed": true
+    },
+    {
+      "name": "fixture-query-capacity.C-1-Action",
+      "passed": true
+    },
+    {
+      "name": "fixture-query-capacity.C-2-Action",
+      "passed": true
+    },
+    {
+      "name": "fixture-query-capacity.C-3-Action",
+      "passed": true
+    },
+    {
+      "name": "fixture-query-capacity.C-4-Action",
+      "passed": true
+    },
+    {
+      "name": "fixture-query-capacity.RA-1-Action",
+      "passed": true
+    },
+    {
+      "name": "fixture-query-capacity.RA-2-Action",
+      "passed": true
+    },
+    {
+      "name": "fixture-query-capacity.RB-1-Action",
+      "passed": true
+    },
+    {
+      "name": "fixture-query-capacity.RB-2-Action",
+      "passed": true
+    },
+    {
+      "name": "fixture-query-capacity.C-input-1.jsonl-queries-no-loss-or-duplicate",
+      "passed": true
+    },
+    {
+      "name": "fixture-query-capacity.RA-input-1.jsonl-queries-no-loss-or-duplicate",
+      "passed": true
+    },
+    {
+      "name": "fixture-query-capacity.RB-input-1.jsonl-queries-no-loss-or-duplicate",
+      "passed": true
+    },
+    {
+      "name": "fixture-query-capacity.idle-past-old-limit",
+      "passed": true
+    },
+    {
+      "name": "fixture-query-capacity.exact-restored-Views",
+      "passed": true
+    },
+    {
+      "name": "fixture-query-capacity.no-business-initialization-replay",
+      "passed": true
+    },
+    {
+      "name": "fixture-query-capacity.S0.raw-CPU-stack-memory-computation",
+      "passed": true
+    },
+    {
+      "name": "fixture-query-capacity.S0.loaded-data.bin",
+      "passed": true
+    },
+    {
+      "name": "fixture-query-capacity.S0.loaded-context.bin",
+      "passed": true
+    },
+    {
+      "name": "fixture-query-capacity.S0.loaded-metadata.bin",
+      "passed": true
+    },
+    {
+      "name": "fixture-query-capacity.S0.loaded-execution-layout.bin",
+      "passed": true
+    },
+    {
+      "name": "fixture-query-capacity.S0.loaded-full-stack.bin",
+      "passed": true
+    },
+    {
+      "name": "fixture-query-capacity.S0.loaded-resources.bin",
+      "passed": true
+    },
+    {
+      "name": "fixture-query-capacity.S0.loaded-abi.bin",
+      "passed": true
+    },
+    {
+      "name": "fixture-query-capacity.S0.loaded-returns.bin",
+      "passed": true
+    },
+    {
+      "name": "fixture-query-capacity.S0.loaded-executable.bin",
+      "passed": true
+    },
+    {
+      "name": "fixture-query-capacity.S0.loaded-target-image.bin",
+      "passed": true
+    },
+    {
+      "name": "fixture-query-capacity.S0.loaded-file.json",
+      "passed": true
+    },
+    {
+      "name": "fixture-query-capacity.S0.loaded-file.bin",
+      "passed": true
+    },
+    {
+      "name": "fixture-query-capacity.C.real-RET-and-original-state",
+      "passed": true
+    },
+    {
+      "name": "fixture-query-capacity.C.own-CET-chain",
+      "passed": true
+    },
+    {
+      "name": "fixture-query-capacity.C.seven-explicit-HWND-rebindings",
+      "passed": true
+    },
+    {
+      "name": "fixture-query-capacity.S0.actual-ABI",
+      "passed": true
+    },
+    {
+      "name": "fixture-query-capacity.SA.raw-CPU-stack-memory-computation",
+      "passed": true
+    },
+    {
+      "name": "fixture-query-capacity.SA.loaded-data.bin",
+      "passed": true
+    },
+    {
+      "name": "fixture-query-capacity.SA.loaded-context.bin",
+      "passed": true
+    },
+    {
+      "name": "fixture-query-capacity.SA.loaded-metadata.bin",
+      "passed": true
+    },
+    {
+      "name": "fixture-query-capacity.SA.loaded-execution-layout.bin",
+      "passed": true
+    },
+    {
+      "name": "fixture-query-capacity.SA.loaded-full-stack.bin",
+      "passed": true
+    },
+    {
+      "name": "fixture-query-capacity.SA.loaded-resources.bin",
+      "passed": true
+    },
+    {
+      "name": "fixture-query-capacity.SA.loaded-abi.bin",
+      "passed": true
+    },
+    {
+      "name": "fixture-query-capacity.SA.loaded-returns.bin",
+      "passed": true
+    },
+    {
+      "name": "fixture-query-capacity.SA.loaded-executable.bin",
+      "passed": true
+    },
+    {
+      "name": "fixture-query-capacity.SA.loaded-target-image.bin",
+      "passed": true
+    },
+    {
+      "name": "fixture-query-capacity.SA.loaded-file.json",
+      "passed": true
+    },
+    {
+      "name": "fixture-query-capacity.SA.loaded-file.bin",
+      "passed": true
+    },
+    {
+      "name": "fixture-query-capacity.RA.real-RET-and-original-state",
+      "passed": true
+    },
+    {
+      "name": "fixture-query-capacity.RA.own-CET-chain",
+      "passed": true
+    },
+    {
+      "name": "fixture-query-capacity.RA.seven-explicit-HWND-rebindings",
+      "passed": true
+    },
+    {
+      "name": "fixture-query-capacity.SA.actual-ABI",
+      "passed": true
+    },
+    {
+      "name": "fixture-query-capacity.SB.raw-CPU-stack-memory-computation",
+      "passed": true
+    },
+    {
+      "name": "fixture-query-capacity.SB.loaded-data.bin",
+      "passed": true
+    },
+    {
+      "name": "fixture-query-capacity.SB.loaded-context.bin",
+      "passed": true
+    },
+    {
+      "name": "fixture-query-capacity.SB.loaded-metadata.bin",
+      "passed": true
+    },
+    {
+      "name": "fixture-query-capacity.SB.loaded-execution-layout.bin",
+      "passed": true
+    },
+    {
+      "name": "fixture-query-capacity.SB.loaded-full-stack.bin",
+      "passed": true
+    },
+    {
+      "name": "fixture-query-capacity.SB.loaded-resources.bin",
+      "passed": true
+    },
+    {
+      "name": "fixture-query-capacity.SB.loaded-abi.bin",
+      "passed": true
+    },
+    {
+      "name": "fixture-query-capacity.SB.loaded-returns.bin",
+      "passed": true
+    },
+    {
+      "name": "fixture-query-capacity.SB.loaded-executable.bin",
+      "passed": true
+    },
+    {
+      "name": "fixture-query-capacity.SB.loaded-target-image.bin",
+      "passed": true
+    },
+    {
+      "name": "fixture-query-capacity.SB.loaded-file.json",
+      "passed": true
+    },
+    {
+      "name": "fixture-query-capacity.SB.loaded-file.bin",
+      "passed": true
+    },
+    {
+      "name": "fixture-query-capacity.RB.real-RET-and-original-state",
+      "passed": true
+    },
+    {
+      "name": "fixture-query-capacity.RB.own-CET-chain",
+      "passed": true
+    },
+    {
+      "name": "fixture-query-capacity.RB.seven-explicit-HWND-rebindings",
+      "passed": true
+    },
+    {
+      "name": "fixture-query-capacity.SB.actual-ABI",
+      "passed": true
+    },
+    {
+      "name": "fixture-query-capacity.RA.Undo-and-selection",
+      "passed": true
+    },
+    {
+      "name": "fixture-query-capacity.RA.actual-restored-EDIT-pixels",
+      "passed": true
+    },
+    {
+      "name": "fixture-query-capacity.RB.Undo-and-selection",
+      "passed": true
+    },
+    {
+      "name": "fixture-query-capacity.RB.actual-restored-EDIT-pixels",
+      "passed": true
+    },
+    {
+      "name": "fixture-query-capacity.C-native-file-processing",
+      "passed": true
+    },
+    {
+      "name": "fixture-query-capacity.RA.different-application-instance",
+      "passed": true
+    },
+    {
+      "name": "fixture-query-capacity.RB.different-application-instance",
+      "passed": true
+    },
+    {
+      "name": "fixture-query-capacity.C.different-application-instance",
+      "passed": true
+    },
+    {
+      "name": "fixture-query-capacity.original-fixed-store-unchanged",
+      "passed": true
+    },
+    {
+      "name": "recorder-positive-1.Manager1-normal-exit",
+      "passed": true
+    },
+    {
+      "name": "recorder-positive-1.save.owned-processes-and-desktops-cleaned",
+      "passed": true
+    },
+    {
+      "name": "recorder-positive-1.save.all-native-assertions",
+      "passed": true
+    },
+    {
+      "name": "recorder-positive-1.save.source-S0-real-frame",
+      "passed": true
+    },
+    {
+      "name": "recorder-positive-1.save.A-initial-real-frame",
+      "passed": true
+    },
+    {
+      "name": "recorder-positive-1.save.B-initial-real-frame",
+      "passed": true
+    },
+    {
+      "name": "recorder-positive-1.save.A-single-edit-real-frame",
+      "passed": true
+    },
+    {
+      "name": "recorder-positive-1.save.B-single-edit-real-frame",
+      "passed": true
+    },
+    {
+      "name": "recorder-positive-1.save.A-SA-real-frame",
+      "passed": true
+    },
+    {
+      "name": "recorder-positive-1.save.B-SB-real-frame",
+      "passed": true
+    },
+    {
+      "name": "recorder-positive-1.save.A-1-Action",
+      "passed": true
+    },
+    {
+      "name": "recorder-positive-1.save.A-2-Action",
+      "passed": true
+    },
+    {
+      "name": "recorder-positive-1.save.A-3-Action",
+      "passed": true
+    },
+    {
+      "name": "recorder-positive-1.save.A-4-Action",
+      "passed": true
+    },
+    {
+      "name": "recorder-positive-1.save.A-5-Action",
+      "passed": true
+    },
+    {
+      "name": "recorder-positive-1.save.B-1-Action",
+      "passed": true
+    },
+    {
+      "name": "recorder-positive-1.save.B-2-Action",
+      "passed": true
+    },
+    {
+      "name": "recorder-positive-1.save.B-3-Action",
+      "passed": true
+    },
+    {
+      "name": "recorder-positive-1.save.B-4-Action",
+      "passed": true
+    },
+    {
+      "name": "recorder-positive-1.save.B-5-Action",
+      "passed": true
+    },
+    {
+      "name": "recorder-positive-1.save.source-1-Action",
+      "passed": true
+    },
+    {
+      "name": "recorder-positive-1.save.A-input-1.jsonl-queries-no-loss-or-duplicate",
+      "passed": true
+    },
+    {
+      "name": "recorder-positive-1.save.B-input-1.jsonl-queries-no-loss-or-duplicate",
+      "passed": true
+    },
+    {
+      "name": "recorder-positive-1.save.source-input-1.jsonl-queries-no-loss-or-duplicate",
+      "passed": true
+    },
+    {
+      "name": "recorder-positive-1.S0.packet-version-length-and-SHA256",
+      "passed": true
+    },
+    {
+      "name": "recorder-positive-1.SA.packet-version-length-and-SHA256",
+      "passed": true
+    },
+    {
+      "name": "recorder-positive-1.SB.packet-version-length-and-SHA256",
+      "passed": true
+    },
+    {
+      "name": "recorder-positive-1.session.packet-version-length-and-SHA256",
+      "passed": true
+    },
+    {
+      "name": "recorder-positive-1.Manager1-evidence-path-unavailable",
+      "passed": true
+    },
+    {
+      "name": "recorder-positive-1.Manager2-new-instance-and-normal-exit",
+      "passed": true
+    },
+    {
+      "name": "recorder-positive-1.restore.owned-processes-and-desktops-cleaned",
+      "passed": true
+    },
+    {
+      "name": "recorder-positive-1.restore.all-native-assertions",
+      "passed": true
+    },
+    {
+      "name": "recorder-positive-1.restore.RA-initial-real-frame",
+      "passed": true
+    },
+    {
+      "name": "recorder-positive-1.restore.RB-initial-real-frame",
+      "passed": true
+    },
+    {
+      "name": "recorder-positive-1.restore.C-initial-real-frame",
+      "passed": true
+    },
+    {
+      "name": "recorder-positive-1.restore.RA-undo1-real-frame",
+      "passed": true
+    },
+    {
+      "name": "recorder-positive-1.restore.RA-undo2-real-frame",
+      "passed": true
+    },
+    {
+      "name": "recorder-positive-1.restore.RA-continued-input-real-frame",
+      "passed": true
+    },
+    {
+      "name": "recorder-positive-1.restore.RB-undo1-real-frame",
+      "passed": true
+    },
+    {
+      "name": "recorder-positive-1.restore.RB-undo2-real-frame",
+      "passed": true
+    },
+    {
+      "name": "recorder-positive-1.restore.RB-continued-input-real-frame",
+      "passed": true
+    },
+    {
+      "name": "recorder-positive-1.restore.C-final-edit-real-frame",
+      "passed": true
+    },
+    {
+      "name": "recorder-positive-1.restore.RA-final-real-frame",
+      "passed": true
+    },
+    {
+      "name": "recorder-positive-1.restore.RB-final-real-frame",
+      "passed": true
+    },
+    {
+      "name": "recorder-positive-1.restore.C-final-real-frame",
+      "passed": true
+    },
+    {
+      "name": "recorder-positive-1.restore.C-1-Action",
+      "passed": true
+    },
+    {
+      "name": "recorder-positive-1.restore.C-2-Action",
+      "passed": true
+    },
+    {
+      "name": "recorder-positive-1.restore.C-3-Action",
+      "passed": true
+    },
+    {
+      "name": "recorder-positive-1.restore.C-4-Action",
+      "passed": true
+    },
+    {
+      "name": "recorder-positive-1.restore.RA-1-Action",
+      "passed": true
+    },
+    {
+      "name": "recorder-positive-1.restore.RA-2-Action",
+      "passed": true
+    },
+    {
+      "name": "recorder-positive-1.restore.RB-1-Action",
+      "passed": true
+    },
+    {
+      "name": "recorder-positive-1.restore.RB-2-Action",
+      "passed": true
+    },
+    {
+      "name": "recorder-positive-1.restore.C-input-1.jsonl-queries-no-loss-or-duplicate",
+      "passed": true
+    },
+    {
+      "name": "recorder-positive-1.restore.RA-input-1.jsonl-queries-no-loss-or-duplicate",
+      "passed": true
+    },
+    {
+      "name": "recorder-positive-1.restore.RB-input-1.jsonl-queries-no-loss-or-duplicate",
+      "passed": true
+    },
+    {
+      "name": "recorder-positive-1.actual-cross-manager-restore",
+      "passed": true
+    },
+    {
+      "name": "recorder-positive-1.exact-restored-Views",
+      "passed": true
+    },
+    {
+      "name": "recorder-positive-1.no-business-initialization-replay",
+      "passed": true
+    },
+    {
+      "name": "recorder-positive-1.S0.raw-CPU-stack-memory-computation",
+      "passed": true
+    },
+    {
+      "name": "recorder-positive-1.S0.loaded-data.bin",
+      "passed": true
+    },
+    {
+      "name": "recorder-positive-1.S0.loaded-context.bin",
+      "passed": true
+    },
+    {
+      "name": "recorder-positive-1.S0.loaded-metadata.bin",
+      "passed": true
+    },
+    {
+      "name": "recorder-positive-1.S0.loaded-execution-layout.bin",
+      "passed": true
+    },
+    {
+      "name": "recorder-positive-1.S0.loaded-full-stack.bin",
+      "passed": true
+    },
+    {
+      "name": "recorder-positive-1.S0.loaded-resources.bin",
+      "passed": true
+    },
+    {
+      "name": "recorder-positive-1.S0.loaded-abi.bin",
+      "passed": true
+    },
+    {
+      "name": "recorder-positive-1.S0.loaded-returns.bin",
+      "passed": true
+    },
+    {
+      "name": "recorder-positive-1.S0.loaded-executable.bin",
+      "passed": true
+    },
+    {
+      "name": "recorder-positive-1.S0.loaded-target-image.bin",
+      "passed": true
+    },
+    {
+      "name": "recorder-positive-1.S0.loaded-file.json",
+      "passed": true
+    },
+    {
+      "name": "recorder-positive-1.S0.loaded-file.bin",
+      "passed": true
+    },
+    {
+      "name": "recorder-positive-1.C.real-RET-and-original-state",
+      "passed": true
+    },
+    {
+      "name": "recorder-positive-1.C.own-CET-chain",
+      "passed": true
+    },
+    {
+      "name": "recorder-positive-1.C.seven-explicit-HWND-rebindings",
+      "passed": true
+    },
+    {
+      "name": "recorder-positive-1.S0.actual-ABI",
+      "passed": true
+    },
+    {
+      "name": "recorder-positive-1.SA.raw-CPU-stack-memory-computation",
+      "passed": true
+    },
+    {
+      "name": "recorder-positive-1.SA.loaded-data.bin",
+      "passed": true
+    },
+    {
+      "name": "recorder-positive-1.SA.loaded-context.bin",
+      "passed": true
+    },
+    {
+      "name": "recorder-positive-1.SA.loaded-metadata.bin",
+      "passed": true
+    },
+    {
+      "name": "recorder-positive-1.SA.loaded-execution-layout.bin",
+      "passed": true
+    },
+    {
+      "name": "recorder-positive-1.SA.loaded-full-stack.bin",
+      "passed": true
+    },
+    {
+      "name": "recorder-positive-1.SA.loaded-resources.bin",
+      "passed": true
+    },
+    {
+      "name": "recorder-positive-1.SA.loaded-abi.bin",
+      "passed": true
+    },
+    {
+      "name": "recorder-positive-1.SA.loaded-returns.bin",
+      "passed": true
+    },
+    {
+      "name": "recorder-positive-1.SA.loaded-executable.bin",
+      "passed": true
+    },
+    {
+      "name": "recorder-positive-1.SA.loaded-target-image.bin",
+      "passed": true
+    },
+    {
+      "name": "recorder-positive-1.SA.loaded-file.json",
+      "passed": true
+    },
+    {
+      "name": "recorder-positive-1.SA.loaded-file.bin",
+      "passed": true
+    },
+    {
+      "name": "recorder-positive-1.RA.real-RET-and-original-state",
+      "passed": true
+    },
+    {
+      "name": "recorder-positive-1.RA.own-CET-chain",
+      "passed": true
+    },
+    {
+      "name": "recorder-positive-1.RA.seven-explicit-HWND-rebindings",
+      "passed": true
+    },
+    {
+      "name": "recorder-positive-1.SA.actual-ABI",
+      "passed": true
+    },
+    {
+      "name": "recorder-positive-1.SB.raw-CPU-stack-memory-computation",
+      "passed": true
+    },
+    {
+      "name": "recorder-positive-1.SB.loaded-data.bin",
+      "passed": true
+    },
+    {
+      "name": "recorder-positive-1.SB.loaded-context.bin",
+      "passed": true
+    },
+    {
+      "name": "recorder-positive-1.SB.loaded-metadata.bin",
+      "passed": true
+    },
+    {
+      "name": "recorder-positive-1.SB.loaded-execution-layout.bin",
+      "passed": true
+    },
+    {
+      "name": "recorder-positive-1.SB.loaded-full-stack.bin",
+      "passed": true
+    },
+    {
+      "name": "recorder-positive-1.SB.loaded-resources.bin",
+      "passed": true
+    },
+    {
+      "name": "recorder-positive-1.SB.loaded-abi.bin",
+      "passed": true
+    },
+    {
+      "name": "recorder-positive-1.SB.loaded-returns.bin",
+      "passed": true
+    },
+    {
+      "name": "recorder-positive-1.SB.loaded-executable.bin",
+      "passed": true
+    },
+    {
+      "name": "recorder-positive-1.SB.loaded-target-image.bin",
+      "passed": true
+    },
+    {
+      "name": "recorder-positive-1.SB.loaded-file.json",
+      "passed": true
+    },
+    {
+      "name": "recorder-positive-1.SB.loaded-file.bin",
+      "passed": true
+    },
+    {
+      "name": "recorder-positive-1.RB.real-RET-and-original-state",
+      "passed": true
+    },
+    {
+      "name": "recorder-positive-1.RB.own-CET-chain",
+      "passed": true
+    },
+    {
+      "name": "recorder-positive-1.RB.seven-explicit-HWND-rebindings",
+      "passed": true
+    },
+    {
+      "name": "recorder-positive-1.SB.actual-ABI",
+      "passed": true
+    },
+    {
+      "name": "recorder-positive-1.RA.Undo-and-selection",
+      "passed": true
+    },
+    {
+      "name": "recorder-positive-1.RA.actual-restored-EDIT-pixels",
+      "passed": true
+    },
+    {
+      "name": "recorder-positive-1.RB.Undo-and-selection",
+      "passed": true
+    },
+    {
+      "name": "recorder-positive-1.RB.actual-restored-EDIT-pixels",
+      "passed": true
+    },
+    {
+      "name": "recorder-positive-1.C-native-file-processing",
+      "passed": true
+    },
+    {
+      "name": "recorder-positive-1.RA.different-application-instance",
+      "passed": true
+    },
+    {
+      "name": "recorder-positive-1.RB.different-application-instance",
+      "passed": true
+    },
+    {
+      "name": "recorder-positive-1.C.different-application-instance",
+      "passed": true
+    },
+    {
+      "name": "recorder-positive-1.entire-store-unchanged",
+      "passed": true
+    },
+    {
+      "name": "recorder-positive-1.native-codec-positive-and-negative-matrix",
+      "passed": true
+    },
+    {
+      "name": "recorder-positive-1.codec-raw-roundtrip",
+      "passed": true
+    },
+    {
+      "name": "recorder-positive-1.codec-tamper",
+      "passed": true
+    },
+    {
+      "name": "recorder-positive-1.codec-truncation",
+      "passed": true
+    },
+    {
+      "name": "recorder-positive-1.codec-unknown-format",
+      "passed": true
+    },
+    {
+      "name": "recorder-positive-1.codec-unknown-runtime-abi",
+      "passed": true
+    },
+    {
+      "name": "recorder-positive-1.codec-bad-layout",
+      "passed": true
+    },
+    {
+      "name": "recorder-positive-1.codec-bad-region-length",
+      "passed": true
+    },
+    {
+      "name": "recorder-positive-1.codec-tiny-region-reference-underflow",
+      "passed": true
+    },
+    {
+      "name": "recorder-positive-1.codec-cookie-span-outside-image",
+      "passed": true
+    },
+    {
+      "name": "recorder-positive-1.codec-truncated-PE-header",
+      "passed": true
+    },
+    {
+      "name": "recorder-positive-1.codec-bad-reference",
+      "passed": true
+    },
+    {
+      "name": "recorder-positive-1.codec-wrong-target",
+      "passed": true
+    },
+    {
+      "name": "recorder-positive-1.codec-interrupted-write",
+      "passed": true
+    },
+    {
+      "name": "recorder-positive-1.codec-no-partial-publication",
+      "passed": true
+    },
+    {
+      "name": "recorder-positive-1.codec-staging-removed",
+      "passed": true
+    },
+    {
+      "name": "recorder-positive-1.codec-staging-removed",
+      "passed": true
+    },
+    {
+      "name": "recorder-positive-1.codec-published-load",
+      "passed": true
+    },
+    {
+      "name": "recorder-positive-1.codec-immutable-version",
+      "passed": true
+    },
+    {
+      "name": "recorder-positive-1.codec-existing-version-unchanged",
+      "passed": true
+    },
+    {
+      "name": "recorder-positive-1.codec-query-stream-backpressure",
+      "passed": true
+    },
+    {
+      "name": "recorder-positive-1.codec-query-FIFO-before-wrap",
+      "passed": true
+    },
+    {
+      "name": "recorder-positive-1.codec-query-stream-wrap-no-loss",
+      "passed": true
+    },
+    {
+      "name": "recorder-positive-2.Manager1-normal-exit",
+      "passed": true
+    },
+    {
+      "name": "recorder-positive-2.save.owned-processes-and-desktops-cleaned",
+      "passed": true
+    },
+    {
+      "name": "recorder-positive-2.save.all-native-assertions",
+      "passed": true
+    },
+    {
+      "name": "recorder-positive-2.save.source-S0-real-frame",
+      "passed": true
+    },
+    {
+      "name": "recorder-positive-2.save.A-initial-real-frame",
+      "passed": true
+    },
+    {
+      "name": "recorder-positive-2.save.B-initial-real-frame",
+      "passed": true
+    },
+    {
+      "name": "recorder-positive-2.save.A-single-edit-real-frame",
+      "passed": true
+    },
+    {
+      "name": "recorder-positive-2.save.B-single-edit-real-frame",
+      "passed": true
+    },
+    {
+      "name": "recorder-positive-2.save.A-SA-real-frame",
+      "passed": true
+    },
+    {
+      "name": "recorder-positive-2.save.B-SB-real-frame",
+      "passed": true
+    },
+    {
+      "name": "recorder-positive-2.save.A-1-Action",
+      "passed": true
+    },
+    {
+      "name": "recorder-positive-2.save.A-2-Action",
+      "passed": true
+    },
+    {
+      "name": "recorder-positive-2.save.A-3-Action",
+      "passed": true
+    },
+    {
+      "name": "recorder-positive-2.save.A-4-Action",
+      "passed": true
+    },
+    {
+      "name": "recorder-positive-2.save.A-5-Action",
+      "passed": true
+    },
+    {
+      "name": "recorder-positive-2.save.B-1-Action",
+      "passed": true
+    },
+    {
+      "name": "recorder-positive-2.save.B-2-Action",
+      "passed": true
+    },
+    {
+      "name": "recorder-positive-2.save.B-3-Action",
+      "passed": true
+    },
+    {
+      "name": "recorder-positive-2.save.B-4-Action",
+      "passed": true
+    },
+    {
+      "name": "recorder-positive-2.save.B-5-Action",
+      "passed": true
+    },
+    {
+      "name": "recorder-positive-2.save.source-1-Action",
+      "passed": true
+    },
+    {
+      "name": "recorder-positive-2.save.A-input-1.jsonl-queries-no-loss-or-duplicate",
+      "passed": true
+    },
+    {
+      "name": "recorder-positive-2.save.B-input-1.jsonl-queries-no-loss-or-duplicate",
+      "passed": true
+    },
+    {
+      "name": "recorder-positive-2.save.source-input-1.jsonl-queries-no-loss-or-duplicate",
+      "passed": true
+    },
+    {
+      "name": "recorder-positive-2.S0.packet-version-length-and-SHA256",
+      "passed": true
+    },
+    {
+      "name": "recorder-positive-2.SA.packet-version-length-and-SHA256",
+      "passed": true
+    },
+    {
+      "name": "recorder-positive-2.SB.packet-version-length-and-SHA256",
+      "passed": true
+    },
+    {
+      "name": "recorder-positive-2.session.packet-version-length-and-SHA256",
+      "passed": true
+    },
+    {
+      "name": "recorder-positive-2.Manager1-evidence-path-unavailable",
+      "passed": true
+    },
+    {
+      "name": "recorder-positive-2.Manager2-new-instance-and-normal-exit",
+      "passed": true
+    },
+    {
+      "name": "recorder-positive-2.restore.owned-processes-and-desktops-cleaned",
+      "passed": true
+    },
+    {
+      "name": "recorder-positive-2.restore.all-native-assertions",
+      "passed": true
+    },
+    {
+      "name": "recorder-positive-2.restore.RA-initial-real-frame",
+      "passed": true
+    },
+    {
+      "name": "recorder-positive-2.restore.RB-initial-real-frame",
+      "passed": true
+    },
+    {
+      "name": "recorder-positive-2.restore.C-initial-real-frame",
+      "passed": true
+    },
+    {
+      "name": "recorder-positive-2.restore.RA-undo1-real-frame",
+      "passed": true
+    },
+    {
+      "name": "recorder-positive-2.restore.RA-undo2-real-frame",
+      "passed": true
+    },
+    {
+      "name": "recorder-positive-2.restore.RA-continued-input-real-frame",
+      "passed": true
+    },
+    {
+      "name": "recorder-positive-2.restore.RB-undo1-real-frame",
+      "passed": true
+    },
+    {
+      "name": "recorder-positive-2.restore.RB-undo2-real-frame",
+      "passed": true
+    },
+    {
+      "name": "recorder-positive-2.restore.RB-continued-input-real-frame",
+      "passed": true
+    },
+    {
+      "name": "recorder-positive-2.restore.C-final-edit-real-frame",
+      "passed": true
+    },
+    {
+      "name": "recorder-positive-2.restore.RA-final-real-frame",
+      "passed": true
+    },
+    {
+      "name": "recorder-positive-2.restore.RB-final-real-frame",
+      "passed": true
+    },
+    {
+      "name": "recorder-positive-2.restore.C-final-real-frame",
+      "passed": true
+    },
+    {
+      "name": "recorder-positive-2.restore.C-1-Action",
+      "passed": true
+    },
+    {
+      "name": "recorder-positive-2.restore.C-2-Action",
+      "passed": true
+    },
+    {
+      "name": "recorder-positive-2.restore.C-3-Action",
+      "passed": true
+    },
+    {
+      "name": "recorder-positive-2.restore.C-4-Action",
+      "passed": true
+    },
+    {
+      "name": "recorder-positive-2.restore.RA-1-Action",
+      "passed": true
+    },
+    {
+      "name": "recorder-positive-2.restore.RA-2-Action",
+      "passed": true
+    },
+    {
+      "name": "recorder-positive-2.restore.RB-1-Action",
+      "passed": true
+    },
+    {
+      "name": "recorder-positive-2.restore.RB-2-Action",
+      "passed": true
+    },
+    {
+      "name": "recorder-positive-2.restore.C-input-1.jsonl-queries-no-loss-or-duplicate",
+      "passed": true
+    },
+    {
+      "name": "recorder-positive-2.restore.RA-input-1.jsonl-queries-no-loss-or-duplicate",
+      "passed": true
+    },
+    {
+      "name": "recorder-positive-2.restore.RB-input-1.jsonl-queries-no-loss-or-duplicate",
+      "passed": true
+    },
+    {
+      "name": "recorder-positive-2.actual-cross-manager-restore",
+      "passed": true
+    },
+    {
+      "name": "recorder-positive-2.exact-restored-Views",
+      "passed": true
+    },
+    {
+      "name": "recorder-positive-2.no-business-initialization-replay",
+      "passed": true
+    },
+    {
+      "name": "recorder-positive-2.S0.raw-CPU-stack-memory-computation",
+      "passed": true
+    },
+    {
+      "name": "recorder-positive-2.S0.loaded-data.bin",
+      "passed": true
+    },
+    {
+      "name": "recorder-positive-2.S0.loaded-context.bin",
+      "passed": true
+    },
+    {
+      "name": "recorder-positive-2.S0.loaded-metadata.bin",
+      "passed": true
+    },
+    {
+      "name": "recorder-positive-2.S0.loaded-execution-layout.bin",
+      "passed": true
+    },
+    {
+      "name": "recorder-positive-2.S0.loaded-full-stack.bin",
+      "passed": true
+    },
+    {
+      "name": "recorder-positive-2.S0.loaded-resources.bin",
+      "passed": true
+    },
+    {
+      "name": "recorder-positive-2.S0.loaded-abi.bin",
+      "passed": true
+    },
+    {
+      "name": "recorder-positive-2.S0.loaded-returns.bin",
+      "passed": true
+    },
+    {
+      "name": "recorder-positive-2.S0.loaded-executable.bin",
+      "passed": true
+    },
+    {
+      "name": "recorder-positive-2.S0.loaded-target-image.bin",
+      "passed": true
+    },
+    {
+      "name": "recorder-positive-2.S0.loaded-file.json",
+      "passed": true
+    },
+    {
+      "name": "recorder-positive-2.S0.loaded-file.bin",
+      "passed": true
+    },
+    {
+      "name": "recorder-positive-2.C.real-RET-and-original-state",
+      "passed": true
+    },
+    {
+      "name": "recorder-positive-2.C.own-CET-chain",
+      "passed": true
+    },
+    {
+      "name": "recorder-positive-2.C.seven-explicit-HWND-rebindings",
+      "passed": true
+    },
+    {
+      "name": "recorder-positive-2.S0.actual-ABI",
+      "passed": true
+    },
+    {
+      "name": "recorder-positive-2.SA.raw-CPU-stack-memory-computation",
+      "passed": true
+    },
+    {
+      "name": "recorder-positive-2.SA.loaded-data.bin",
+      "passed": true
+    },
+    {
+      "name": "recorder-positive-2.SA.loaded-context.bin",
+      "passed": true
+    },
+    {
+      "name": "recorder-positive-2.SA.loaded-metadata.bin",
+      "passed": true
+    },
+    {
+      "name": "recorder-positive-2.SA.loaded-execution-layout.bin",
+      "passed": true
+    },
+    {
+      "name": "recorder-positive-2.SA.loaded-full-stack.bin",
+      "passed": true
+    },
+    {
+      "name": "recorder-positive-2.SA.loaded-resources.bin",
+      "passed": true
+    },
+    {
+      "name": "recorder-positive-2.SA.loaded-abi.bin",
+      "passed": true
+    },
+    {
+      "name": "recorder-positive-2.SA.loaded-returns.bin",
+      "passed": true
+    },
+    {
+      "name": "recorder-positive-2.SA.loaded-executable.bin",
+      "passed": true
+    },
+    {
+      "name": "recorder-positive-2.SA.loaded-target-image.bin",
+      "passed": true
+    },
+    {
+      "name": "recorder-positive-2.SA.loaded-file.json",
+      "passed": true
+    },
+    {
+      "name": "recorder-positive-2.SA.loaded-file.bin",
+      "passed": true
+    },
+    {
+      "name": "recorder-positive-2.RA.real-RET-and-original-state",
+      "passed": true
+    },
+    {
+      "name": "recorder-positive-2.RA.own-CET-chain",
+      "passed": true
+    },
+    {
+      "name": "recorder-positive-2.RA.seven-explicit-HWND-rebindings",
+      "passed": true
+    },
+    {
+      "name": "recorder-positive-2.SA.actual-ABI",
+      "passed": true
+    },
+    {
+      "name": "recorder-positive-2.SB.raw-CPU-stack-memory-computation",
+      "passed": true
+    },
+    {
+      "name": "recorder-positive-2.SB.loaded-data.bin",
+      "passed": true
+    },
+    {
+      "name": "recorder-positive-2.SB.loaded-context.bin",
+      "passed": true
+    },
+    {
+      "name": "recorder-positive-2.SB.loaded-metadata.bin",
+      "passed": true
+    },
+    {
+      "name": "recorder-positive-2.SB.loaded-execution-layout.bin",
+      "passed": true
+    },
+    {
+      "name": "recorder-positive-2.SB.loaded-full-stack.bin",
+      "passed": true
+    },
+    {
+      "name": "recorder-positive-2.SB.loaded-resources.bin",
+      "passed": true
+    },
+    {
+      "name": "recorder-positive-2.SB.loaded-abi.bin",
+      "passed": true
+    },
+    {
+      "name": "recorder-positive-2.SB.loaded-returns.bin",
+      "passed": true
+    },
+    {
+      "name": "recorder-positive-2.SB.loaded-executable.bin",
+      "passed": true
+    },
+    {
+      "name": "recorder-positive-2.SB.loaded-target-image.bin",
+      "passed": true
+    },
+    {
+      "name": "recorder-positive-2.SB.loaded-file.json",
+      "passed": true
+    },
+    {
+      "name": "recorder-positive-2.SB.loaded-file.bin",
+      "passed": true
+    },
+    {
+      "name": "recorder-positive-2.RB.real-RET-and-original-state",
+      "passed": true
+    },
+    {
+      "name": "recorder-positive-2.RB.own-CET-chain",
+      "passed": true
+    },
+    {
+      "name": "recorder-positive-2.RB.seven-explicit-HWND-rebindings",
+      "passed": true
+    },
+    {
+      "name": "recorder-positive-2.SB.actual-ABI",
+      "passed": true
+    },
+    {
+      "name": "recorder-positive-2.RA.Undo-and-selection",
+      "passed": true
+    },
+    {
+      "name": "recorder-positive-2.RA.actual-restored-EDIT-pixels",
+      "passed": true
+    },
+    {
+      "name": "recorder-positive-2.RB.Undo-and-selection",
+      "passed": true
+    },
+    {
+      "name": "recorder-positive-2.RB.actual-restored-EDIT-pixels",
+      "passed": true
+    },
+    {
+      "name": "recorder-positive-2.C-native-file-processing",
+      "passed": true
+    },
+    {
+      "name": "recorder-positive-2.RA.different-application-instance",
+      "passed": true
+    },
+    {
+      "name": "recorder-positive-2.RB.different-application-instance",
+      "passed": true
+    },
+    {
+      "name": "recorder-positive-2.C.different-application-instance",
+      "passed": true
+    },
+    {
+      "name": "recorder-positive-2.entire-store-unchanged",
+      "passed": true
+    },
+    {
+      "name": "recorder-positive-2.native-codec-positive-and-negative-matrix",
+      "passed": true
+    },
+    {
+      "name": "recorder-positive-2.codec-raw-roundtrip",
+      "passed": true
+    },
+    {
+      "name": "recorder-positive-2.codec-tamper",
+      "passed": true
+    },
+    {
+      "name": "recorder-positive-2.codec-truncation",
+      "passed": true
+    },
+    {
+      "name": "recorder-positive-2.codec-unknown-format",
+      "passed": true
+    },
+    {
+      "name": "recorder-positive-2.codec-unknown-runtime-abi",
+      "passed": true
+    },
+    {
+      "name": "recorder-positive-2.codec-bad-layout",
+      "passed": true
+    },
+    {
+      "name": "recorder-positive-2.codec-bad-region-length",
+      "passed": true
+    },
+    {
+      "name": "recorder-positive-2.codec-tiny-region-reference-underflow",
+      "passed": true
+    },
+    {
+      "name": "recorder-positive-2.codec-cookie-span-outside-image",
+      "passed": true
+    },
+    {
+      "name": "recorder-positive-2.codec-truncated-PE-header",
+      "passed": true
+    },
+    {
+      "name": "recorder-positive-2.codec-bad-reference",
+      "passed": true
+    },
+    {
+      "name": "recorder-positive-2.codec-wrong-target",
+      "passed": true
+    },
+    {
+      "name": "recorder-positive-2.codec-interrupted-write",
+      "passed": true
+    },
+    {
+      "name": "recorder-positive-2.codec-no-partial-publication",
+      "passed": true
+    },
+    {
+      "name": "recorder-positive-2.codec-staging-removed",
+      "passed": true
+    },
+    {
+      "name": "recorder-positive-2.codec-staging-removed",
+      "passed": true
+    },
+    {
+      "name": "recorder-positive-2.codec-published-load",
+      "passed": true
+    },
+    {
+      "name": "recorder-positive-2.codec-immutable-version",
+      "passed": true
+    },
+    {
+      "name": "recorder-positive-2.codec-existing-version-unchanged",
+      "passed": true
+    },
+    {
+      "name": "recorder-positive-2.codec-query-stream-backpressure",
+      "passed": true
+    },
+    {
+      "name": "recorder-positive-2.codec-query-FIFO-before-wrap",
+      "passed": true
+    },
+    {
+      "name": "recorder-positive-2.codec-query-stream-wrap-no-loss",
+      "passed": true
+    },
+    {
+      "name": "recorder-missing.owned-processes-and-desktops-cleaned",
+      "passed": true
+    },
+    {
+      "name": "recorder-missing.all-native-assertions",
+      "passed": true
+    },
+    {
+      "name": "recorder-missing.precise-refusal-no-View",
+      "passed": true
+    },
+    {
+      "name": "recorder-missing.original-fixed-store-unchanged",
+      "passed": true
+    },
+    {
+      "name": "recorder-tamper.owned-processes-and-desktops-cleaned",
+      "passed": true
+    },
+    {
+      "name": "recorder-tamper.all-native-assertions",
+      "passed": true
+    },
+    {
+      "name": "recorder-tamper.precise-refusal-no-View",
+      "passed": true
+    },
+    {
+      "name": "recorder-tamper.original-fixed-store-unchanged",
+      "passed": true
+    },
+    {
+      "name": "recorder-partial.owned-processes-and-desktops-cleaned",
+      "passed": true
+    },
+    {
+      "name": "recorder-partial.all-native-assertions",
+      "passed": true
+    },
+    {
+      "name": "recorder-partial.precise-refusal-no-View",
+      "passed": true
+    },
+    {
+      "name": "recorder-partial.original-fixed-store-unchanged",
+      "passed": true
+    },
+    {
+      "name": "recorder-format.owned-processes-and-desktops-cleaned",
+      "passed": true
+    },
+    {
+      "name": "recorder-format.all-native-assertions",
+      "passed": true
+    },
+    {
+      "name": "recorder-format.precise-refusal-no-View",
+      "passed": true
+    },
+    {
+      "name": "recorder-format.original-fixed-store-unchanged",
+      "passed": true
+    },
+    {
+      "name": "recorder-abi.owned-processes-and-desktops-cleaned",
+      "passed": true
+    },
+    {
+      "name": "recorder-abi.all-native-assertions",
+      "passed": true
+    },
+    {
+      "name": "recorder-abi.precise-refusal-no-View",
+      "passed": true
+    },
+    {
+      "name": "recorder-abi.original-fixed-store-unchanged",
+      "passed": true
+    },
+    {
+      "name": "recorder-wrong-image.owned-processes-and-desktops-cleaned",
+      "passed": true
+    },
+    {
+      "name": "recorder-wrong-image.all-native-assertions",
+      "passed": true
+    },
+    {
+      "name": "recorder-wrong-image.precise-refusal-no-View",
+      "passed": true
+    },
+    {
+      "name": "recorder-wrong-image.original-fixed-store-unchanged",
+      "passed": true
+    },
+    {
+      "name": "recorder-artifact-hash.owned-processes-and-desktops-cleaned",
+      "passed": true
+    },
+    {
+      "name": "recorder-artifact-hash.all-native-assertions",
+      "passed": true
+    },
+    {
+      "name": "recorder-artifact-hash.precise-refusal-no-View",
+      "passed": true
+    },
+    {
+      "name": "recorder-artifact-hash.original-fixed-store-unchanged",
+      "passed": true
+    },
+    {
+      "name": "recorder-resource-failure.Manager1-normal-exit",
+      "passed": true
+    },
+    {
+      "name": "recorder-resource-failure.save.owned-processes-and-desktops-cleaned",
+      "passed": true
+    },
+    {
+      "name": "recorder-resource-failure.save.all-native-assertions",
+      "passed": true
+    },
+    {
+      "name": "recorder-resource-failure.save.source-S0-real-frame",
+      "passed": true
+    },
+    {
+      "name": "recorder-resource-failure.save.A-initial-real-frame",
+      "passed": true
+    },
+    {
+      "name": "recorder-resource-failure.save.B-initial-real-frame",
+      "passed": true
+    },
+    {
+      "name": "recorder-resource-failure.save.A-single-edit-real-frame",
+      "passed": true
+    },
+    {
+      "name": "recorder-resource-failure.save.B-single-edit-real-frame",
+      "passed": true
+    },
+    {
+      "name": "recorder-resource-failure.save.A-SA-real-frame",
+      "passed": true
+    },
+    {
+      "name": "recorder-resource-failure.save.B-SB-real-frame",
+      "passed": true
+    },
+    {
+      "name": "recorder-resource-failure.save.A-1-Action",
+      "passed": true
+    },
+    {
+      "name": "recorder-resource-failure.save.A-2-Action",
+      "passed": true
+    },
+    {
+      "name": "recorder-resource-failure.save.A-3-Action",
+      "passed": true
+    },
+    {
+      "name": "recorder-resource-failure.save.A-4-Action",
+      "passed": true
+    },
+    {
+      "name": "recorder-resource-failure.save.A-5-Action",
+      "passed": true
+    },
+    {
+      "name": "recorder-resource-failure.save.B-1-Action",
+      "passed": true
+    },
+    {
+      "name": "recorder-resource-failure.save.B-2-Action",
+      "passed": true
+    },
+    {
+      "name": "recorder-resource-failure.save.B-3-Action",
+      "passed": true
+    },
+    {
+      "name": "recorder-resource-failure.save.B-4-Action",
+      "passed": true
+    },
+    {
+      "name": "recorder-resource-failure.save.B-5-Action",
+      "passed": true
+    },
+    {
+      "name": "recorder-resource-failure.save.source-1-Action",
+      "passed": true
+    },
+    {
+      "name": "recorder-resource-failure.save.A-input-1.jsonl-queries-no-loss-or-duplicate",
+      "passed": true
+    },
+    {
+      "name": "recorder-resource-failure.save.B-input-1.jsonl-queries-no-loss-or-duplicate",
+      "passed": true
+    },
+    {
+      "name": "recorder-resource-failure.save.source-input-1.jsonl-queries-no-loss-or-duplicate",
+      "passed": true
+    },
+    {
+      "name": "recorder-resource-failure.owned-processes-and-desktops-cleaned",
+      "passed": true
+    },
+    {
+      "name": "recorder-resource-failure.all-native-assertions",
+      "passed": true
+    },
+    {
+      "name": "recorder-resource-failure.RA-initial-real-frame",
+      "passed": true
+    },
+    {
+      "name": "recorder-resource-failure.C-initial-real-frame",
+      "passed": true
+    },
+    {
+      "name": "recorder-resource-failure.RA-undo1-real-frame",
+      "passed": true
+    },
+    {
+      "name": "recorder-resource-failure.RA-undo2-real-frame",
+      "passed": true
+    },
+    {
+      "name": "recorder-resource-failure.RA-continued-input-real-frame",
+      "passed": true
+    },
+    {
+      "name": "recorder-resource-failure.C-final-edit-real-frame",
+      "passed": true
+    },
+    {
+      "name": "recorder-resource-failure.RA-final-real-frame",
+      "passed": true
+    },
+    {
+      "name": "recorder-resource-failure.C-final-real-frame",
+      "passed": true
+    },
+    {
+      "name": "recorder-resource-failure.C-1-Action",
+      "passed": true
+    },
+    {
+      "name": "recorder-resource-failure.C-2-Action",
+      "passed": true
+    },
+    {
+      "name": "recorder-resource-failure.C-3-Action",
+      "passed": true
+    },
+    {
+      "name": "recorder-resource-failure.C-4-Action",
+      "passed": true
+    },
+    {
+      "name": "recorder-resource-failure.RA-1-Action",
+      "passed": true
+    },
+    {
+      "name": "recorder-resource-failure.RA-2-Action",
+      "passed": true
+    },
+    {
+      "name": "recorder-resource-failure.RB-1-Action",
+      "passed": true
+    },
+    {
+      "name": "recorder-resource-failure.C-input-1.jsonl-queries-no-loss-or-duplicate",
+      "passed": true
+    },
+    {
+      "name": "recorder-resource-failure.RA-input-1.jsonl-queries-no-loss-or-duplicate",
+      "passed": true
+    },
+    {
+      "name": "recorder-resource-failure.expected-isolated-resource-rejection",
+      "passed": true
+    },
+    {
+      "name": "recorder-resource-failure.exact-restored-Views",
+      "passed": true
+    },
+    {
+      "name": "recorder-resource-failure.no-business-initialization-replay",
+      "passed": true
+    },
+    {
+      "name": "recorder-resource-failure.S0.raw-CPU-stack-memory-computation",
+      "passed": true
+    },
+    {
+      "name": "recorder-resource-failure.S0.loaded-data.bin",
+      "passed": true
+    },
+    {
+      "name": "recorder-resource-failure.S0.loaded-context.bin",
+      "passed": true
+    },
+    {
+      "name": "recorder-resource-failure.S0.loaded-metadata.bin",
+      "passed": true
+    },
+    {
+      "name": "recorder-resource-failure.S0.loaded-execution-layout.bin",
+      "passed": true
+    },
+    {
+      "name": "recorder-resource-failure.S0.loaded-full-stack.bin",
+      "passed": true
+    },
+    {
+      "name": "recorder-resource-failure.S0.loaded-resources.bin",
+      "passed": true
+    },
+    {
+      "name": "recorder-resource-failure.S0.loaded-abi.bin",
+      "passed": true
+    },
+    {
+      "name": "recorder-resource-failure.S0.loaded-returns.bin",
+      "passed": true
+    },
+    {
+      "name": "recorder-resource-failure.S0.loaded-executable.bin",
+      "passed": true
+    },
+    {
+      "name": "recorder-resource-failure.S0.loaded-target-image.bin",
+      "passed": true
+    },
+    {
+      "name": "recorder-resource-failure.S0.loaded-file.json",
+      "passed": true
+    },
+    {
+      "name": "recorder-resource-failure.S0.loaded-file.bin",
+      "passed": true
+    },
+    {
+      "name": "recorder-resource-failure.C.real-RET-and-original-state",
+      "passed": true
+    },
+    {
+      "name": "recorder-resource-failure.C.own-CET-chain",
+      "passed": true
+    },
+    {
+      "name": "recorder-resource-failure.C.seven-explicit-HWND-rebindings",
+      "passed": true
+    },
+    {
+      "name": "recorder-resource-failure.S0.actual-ABI",
+      "passed": true
+    },
+    {
+      "name": "recorder-resource-failure.SA.raw-CPU-stack-memory-computation",
+      "passed": true
+    },
+    {
+      "name": "recorder-resource-failure.SA.loaded-data.bin",
+      "passed": true
+    },
+    {
+      "name": "recorder-resource-failure.SA.loaded-context.bin",
+      "passed": true
+    },
+    {
+      "name": "recorder-resource-failure.SA.loaded-metadata.bin",
+      "passed": true
+    },
+    {
+      "name": "recorder-resource-failure.SA.loaded-execution-layout.bin",
+      "passed": true
+    },
+    {
+      "name": "recorder-resource-failure.SA.loaded-full-stack.bin",
+      "passed": true
+    },
+    {
+      "name": "recorder-resource-failure.SA.loaded-resources.bin",
+      "passed": true
+    },
+    {
+      "name": "recorder-resource-failure.SA.loaded-abi.bin",
+      "passed": true
+    },
+    {
+      "name": "recorder-resource-failure.SA.loaded-returns.bin",
+      "passed": true
+    },
+    {
+      "name": "recorder-resource-failure.SA.loaded-executable.bin",
+      "passed": true
+    },
+    {
+      "name": "recorder-resource-failure.SA.loaded-target-image.bin",
+      "passed": true
+    },
+    {
+      "name": "recorder-resource-failure.SA.loaded-file.json",
+      "passed": true
+    },
+    {
+      "name": "recorder-resource-failure.SA.loaded-file.bin",
+      "passed": true
+    },
+    {
+      "name": "recorder-resource-failure.RA.real-RET-and-original-state",
+      "passed": true
+    },
+    {
+      "name": "recorder-resource-failure.RA.own-CET-chain",
+      "passed": true
+    },
+    {
+      "name": "recorder-resource-failure.RA.seven-explicit-HWND-rebindings",
+      "passed": true
+    },
+    {
+      "name": "recorder-resource-failure.SA.actual-ABI",
+      "passed": true
+    },
+    {
+      "name": "recorder-resource-failure.SB.raw-CPU-stack-memory-computation",
+      "passed": true
+    },
+    {
+      "name": "recorder-resource-failure.SB.loaded-data.bin",
+      "passed": true
+    },
+    {
+      "name": "recorder-resource-failure.SB.loaded-context.bin",
+      "passed": true
+    },
+    {
+      "name": "recorder-resource-failure.SB.loaded-metadata.bin",
+      "passed": true
+    },
+    {
+      "name": "recorder-resource-failure.SB.loaded-execution-layout.bin",
+      "passed": true
+    },
+    {
+      "name": "recorder-resource-failure.SB.loaded-full-stack.bin",
+      "passed": true
+    },
+    {
+      "name": "recorder-resource-failure.SB.loaded-resources.bin",
+      "passed": true
+    },
+    {
+      "name": "recorder-resource-failure.SB.loaded-abi.bin",
+      "passed": true
+    },
+    {
+      "name": "recorder-resource-failure.SB.loaded-returns.bin",
+      "passed": true
+    },
+    {
+      "name": "recorder-resource-failure.SB.loaded-executable.bin",
+      "passed": true
+    },
+    {
+      "name": "recorder-resource-failure.SB.loaded-target-image.bin",
+      "passed": true
+    },
+    {
+      "name": "recorder-resource-failure.SB.loaded-file.json",
+      "passed": true
+    },
+    {
+      "name": "recorder-resource-failure.SB.loaded-file.bin",
+      "passed": true
+    },
+    {
+      "name": "recorder-resource-failure.RA.Undo-and-selection",
+      "passed": true
+    },
+    {
+      "name": "recorder-resource-failure.RA.actual-restored-EDIT-pixels",
+      "passed": true
+    },
+    {
+      "name": "recorder-resource-failure.C-native-file-processing",
+      "passed": true
+    },
+    {
+      "name": "recorder-resource-failure.RA.different-application-instance",
+      "passed": true
+    },
+    {
+      "name": "recorder-resource-failure.C.different-application-instance",
+      "passed": true
+    },
+    {
+      "name": "recorder-resource-failure.original-fixed-store-unchanged",
+      "passed": true
+    },
+    {
+      "name": "recorder-query-capacity.Manager1-normal-exit",
+      "passed": true
+    },
+    {
+      "name": "recorder-query-capacity.save.owned-processes-and-desktops-cleaned",
+      "passed": true
+    },
+    {
+      "name": "recorder-query-capacity.save.all-native-assertions",
+      "passed": true
+    },
+    {
+      "name": "recorder-query-capacity.save.source-S0-real-frame",
+      "passed": true
+    },
+    {
+      "name": "recorder-query-capacity.save.A-initial-real-frame",
+      "passed": true
+    },
+    {
+      "name": "recorder-query-capacity.save.B-initial-real-frame",
+      "passed": true
+    },
+    {
+      "name": "recorder-query-capacity.save.A-single-edit-real-frame",
+      "passed": true
+    },
+    {
+      "name": "recorder-query-capacity.save.B-single-edit-real-frame",
+      "passed": true
+    },
+    {
+      "name": "recorder-query-capacity.save.A-SA-real-frame",
+      "passed": true
+    },
+    {
+      "name": "recorder-query-capacity.save.B-SB-real-frame",
+      "passed": true
+    },
+    {
+      "name": "recorder-query-capacity.save.A-1-Action",
+      "passed": true
+    },
+    {
+      "name": "recorder-query-capacity.save.A-2-Action",
+      "passed": true
+    },
+    {
+      "name": "recorder-query-capacity.save.A-3-Action",
+      "passed": true
+    },
+    {
+      "name": "recorder-query-capacity.save.A-4-Action",
+      "passed": true
+    },
+    {
+      "name": "recorder-query-capacity.save.A-5-Action",
+      "passed": true
+    },
+    {
+      "name": "recorder-query-capacity.save.B-1-Action",
+      "passed": true
+    },
+    {
+      "name": "recorder-query-capacity.save.B-2-Action",
+      "passed": true
+    },
+    {
+      "name": "recorder-query-capacity.save.B-3-Action",
+      "passed": true
+    },
+    {
+      "name": "recorder-query-capacity.save.B-4-Action",
+      "passed": true
+    },
+    {
+      "name": "recorder-query-capacity.save.B-5-Action",
+      "passed": true
+    },
+    {
+      "name": "recorder-query-capacity.save.source-1-Action",
+      "passed": true
+    },
+    {
+      "name": "recorder-query-capacity.save.A-input-1.jsonl-queries-no-loss-or-duplicate",
+      "passed": true
+    },
+    {
+      "name": "recorder-query-capacity.save.B-input-1.jsonl-queries-no-loss-or-duplicate",
+      "passed": true
+    },
+    {
+      "name": "recorder-query-capacity.save.source-input-1.jsonl-queries-no-loss-or-duplicate",
+      "passed": true
+    },
+    {
+      "name": "recorder-query-capacity.owned-processes-and-desktops-cleaned",
+      "passed": true
+    },
+    {
+      "name": "recorder-query-capacity.all-native-assertions",
+      "passed": true
+    },
+    {
+      "name": "recorder-query-capacity.RA-initial-real-frame",
+      "passed": true
+    },
+    {
+      "name": "recorder-query-capacity.RB-initial-real-frame",
+      "passed": true
+    },
+    {
+      "name": "recorder-query-capacity.C-initial-real-frame",
+      "passed": true
+    },
+    {
+      "name": "recorder-query-capacity.RA-undo1-real-frame",
+      "passed": true
+    },
+    {
+      "name": "recorder-query-capacity.RA-undo2-real-frame",
+      "passed": true
+    },
+    {
+      "name": "recorder-query-capacity.RA-continued-input-real-frame",
+      "passed": true
+    },
+    {
+      "name": "recorder-query-capacity.RB-undo1-real-frame",
+      "passed": true
+    },
+    {
+      "name": "recorder-query-capacity.RB-undo2-real-frame",
+      "passed": true
+    },
+    {
+      "name": "recorder-query-capacity.RB-continued-input-real-frame",
+      "passed": true
+    },
+    {
+      "name": "recorder-query-capacity.C-final-edit-real-frame",
+      "passed": true
+    },
+    {
+      "name": "recorder-query-capacity.RA-final-real-frame",
+      "passed": true
+    },
+    {
+      "name": "recorder-query-capacity.RB-final-real-frame",
+      "passed": true
+    },
+    {
+      "name": "recorder-query-capacity.C-final-real-frame",
+      "passed": true
+    },
+    {
+      "name": "recorder-query-capacity.C-1-Action",
+      "passed": true
+    },
+    {
+      "name": "recorder-query-capacity.C-2-Action",
+      "passed": true
+    },
+    {
+      "name": "recorder-query-capacity.C-3-Action",
+      "passed": true
+    },
+    {
+      "name": "recorder-query-capacity.C-4-Action",
+      "passed": true
+    },
+    {
+      "name": "recorder-query-capacity.RA-1-Action",
+      "passed": true
+    },
+    {
+      "name": "recorder-query-capacity.RA-2-Action",
+      "passed": true
+    },
+    {
+      "name": "recorder-query-capacity.RB-1-Action",
+      "passed": true
+    },
+    {
+      "name": "recorder-query-capacity.RB-2-Action",
+      "passed": true
+    },
+    {
+      "name": "recorder-query-capacity.C-input-1.jsonl-queries-no-loss-or-duplicate",
+      "passed": true
+    },
+    {
+      "name": "recorder-query-capacity.RA-input-1.jsonl-queries-no-loss-or-duplicate",
+      "passed": true
+    },
+    {
+      "name": "recorder-query-capacity.RB-input-1.jsonl-queries-no-loss-or-duplicate",
+      "passed": true
+    },
+    {
+      "name": "recorder-query-capacity.idle-past-old-limit",
+      "passed": true
+    },
+    {
+      "name": "recorder-query-capacity.exact-restored-Views",
+      "passed": true
+    },
+    {
+      "name": "recorder-query-capacity.no-business-initialization-replay",
+      "passed": true
+    },
+    {
+      "name": "recorder-query-capacity.S0.raw-CPU-stack-memory-computation",
+      "passed": true
+    },
+    {
+      "name": "recorder-query-capacity.S0.loaded-data.bin",
+      "passed": true
+    },
+    {
+      "name": "recorder-query-capacity.S0.loaded-context.bin",
+      "passed": true
+    },
+    {
+      "name": "recorder-query-capacity.S0.loaded-metadata.bin",
+      "passed": true
+    },
+    {
+      "name": "recorder-query-capacity.S0.loaded-execution-layout.bin",
+      "passed": true
+    },
+    {
+      "name": "recorder-query-capacity.S0.loaded-full-stack.bin",
+      "passed": true
+    },
+    {
+      "name": "recorder-query-capacity.S0.loaded-resources.bin",
+      "passed": true
+    },
+    {
+      "name": "recorder-query-capacity.S0.loaded-abi.bin",
+      "passed": true
+    },
+    {
+      "name": "recorder-query-capacity.S0.loaded-returns.bin",
+      "passed": true
+    },
+    {
+      "name": "recorder-query-capacity.S0.loaded-executable.bin",
+      "passed": true
+    },
+    {
+      "name": "recorder-query-capacity.S0.loaded-target-image.bin",
+      "passed": true
+    },
+    {
+      "name": "recorder-query-capacity.S0.loaded-file.json",
+      "passed": true
+    },
+    {
+      "name": "recorder-query-capacity.S0.loaded-file.bin",
+      "passed": true
+    },
+    {
+      "name": "recorder-query-capacity.C.real-RET-and-original-state",
+      "passed": true
+    },
+    {
+      "name": "recorder-query-capacity.C.own-CET-chain",
+      "passed": true
+    },
+    {
+      "name": "recorder-query-capacity.C.seven-explicit-HWND-rebindings",
+      "passed": true
+    },
+    {
+      "name": "recorder-query-capacity.S0.actual-ABI",
+      "passed": true
+    },
+    {
+      "name": "recorder-query-capacity.SA.raw-CPU-stack-memory-computation",
+      "passed": true
+    },
+    {
+      "name": "recorder-query-capacity.SA.loaded-data.bin",
+      "passed": true
+    },
+    {
+      "name": "recorder-query-capacity.SA.loaded-context.bin",
+      "passed": true
+    },
+    {
+      "name": "recorder-query-capacity.SA.loaded-metadata.bin",
+      "passed": true
+    },
+    {
+      "name": "recorder-query-capacity.SA.loaded-execution-layout.bin",
+      "passed": true
+    },
+    {
+      "name": "recorder-query-capacity.SA.loaded-full-stack.bin",
+      "passed": true
+    },
+    {
+      "name": "recorder-query-capacity.SA.loaded-resources.bin",
+      "passed": true
+    },
+    {
+      "name": "recorder-query-capacity.SA.loaded-abi.bin",
+      "passed": true
+    },
+    {
+      "name": "recorder-query-capacity.SA.loaded-returns.bin",
+      "passed": true
+    },
+    {
+      "name": "recorder-query-capacity.SA.loaded-executable.bin",
+      "passed": true
+    },
+    {
+      "name": "recorder-query-capacity.SA.loaded-target-image.bin",
+      "passed": true
+    },
+    {
+      "name": "recorder-query-capacity.SA.loaded-file.json",
+      "passed": true
+    },
+    {
+      "name": "recorder-query-capacity.SA.loaded-file.bin",
+      "passed": true
+    },
+    {
+      "name": "recorder-query-capacity.RA.real-RET-and-original-state",
+      "passed": true
+    },
+    {
+      "name": "recorder-query-capacity.RA.own-CET-chain",
+      "passed": true
+    },
+    {
+      "name": "recorder-query-capacity.RA.seven-explicit-HWND-rebindings",
+      "passed": true
+    },
+    {
+      "name": "recorder-query-capacity.SA.actual-ABI",
+      "passed": true
+    },
+    {
+      "name": "recorder-query-capacity.SB.raw-CPU-stack-memory-computation",
+      "passed": true
+    },
+    {
+      "name": "recorder-query-capacity.SB.loaded-data.bin",
+      "passed": true
+    },
+    {
+      "name": "recorder-query-capacity.SB.loaded-context.bin",
+      "passed": true
+    },
+    {
+      "name": "recorder-query-capacity.SB.loaded-metadata.bin",
+      "passed": true
+    },
+    {
+      "name": "recorder-query-capacity.SB.loaded-execution-layout.bin",
+      "passed": true
+    },
+    {
+      "name": "recorder-query-capacity.SB.loaded-full-stack.bin",
+      "passed": true
+    },
+    {
+      "name": "recorder-query-capacity.SB.loaded-resources.bin",
+      "passed": true
+    },
+    {
+      "name": "recorder-query-capacity.SB.loaded-abi.bin",
+      "passed": true
+    },
+    {
+      "name": "recorder-query-capacity.SB.loaded-returns.bin",
+      "passed": true
+    },
+    {
+      "name": "recorder-query-capacity.SB.loaded-executable.bin",
+      "passed": true
+    },
+    {
+      "name": "recorder-query-capacity.SB.loaded-target-image.bin",
+      "passed": true
+    },
+    {
+      "name": "recorder-query-capacity.SB.loaded-file.json",
+      "passed": true
+    },
+    {
+      "name": "recorder-query-capacity.SB.loaded-file.bin",
+      "passed": true
+    },
+    {
+      "name": "recorder-query-capacity.RB.real-RET-and-original-state",
+      "passed": true
+    },
+    {
+      "name": "recorder-query-capacity.RB.own-CET-chain",
+      "passed": true
+    },
+    {
+      "name": "recorder-query-capacity.RB.seven-explicit-HWND-rebindings",
+      "passed": true
+    },
+    {
+      "name": "recorder-query-capacity.SB.actual-ABI",
+      "passed": true
+    },
+    {
+      "name": "recorder-query-capacity.RA.Undo-and-selection",
+      "passed": true
+    },
+    {
+      "name": "recorder-query-capacity.RA.actual-restored-EDIT-pixels",
+      "passed": true
+    },
+    {
+      "name": "recorder-query-capacity.RB.Undo-and-selection",
+      "passed": true
+    },
+    {
+      "name": "recorder-query-capacity.RB.actual-restored-EDIT-pixels",
+      "passed": true
+    },
+    {
+      "name": "recorder-query-capacity.C-native-file-processing",
+      "passed": true
+    },
+    {
+      "name": "recorder-query-capacity.RA.different-application-instance",
+      "passed": true
+    },
+    {
+      "name": "recorder-query-capacity.RB.different-application-instance",
+      "passed": true
+    },
+    {
+      "name": "recorder-query-capacity.C.different-application-instance",
+      "passed": true
+    },
+    {
+      "name": "recorder-query-capacity.original-fixed-store-unchanged",
+      "passed": true
+    },
+    {
+      "name": "same-manager-throughout",
+      "passed": true
+    },
+    {
+      "name": "same-R5-002-kernel-binary",
+      "passed": true
+    },
+    {
+      "name": "test-source-unchanged-during-run",
+      "passed": true
+    },
+    {
+      "name": "R5-002-and-all-nested-regressions",
+      "passed": true
+    }
+  ],
+  "cases": [
+    {
+      "case": "fixture-positive-1",
+      "passed": true,
+      "kind": "cross-manager-positive",
+      "manager1": 28024,
+      "manager2": 38868
+    },
+    {
+      "case": "fixture-positive-2",
+      "passed": true,
+      "kind": "cross-manager-positive",
+      "manager1": 50596,
+      "manager2": 48216
+    },
+    {
+      "case": "fixture-missing",
+      "kind": "disk-load-rejection",
+      "exit": 2,
+      "manager2": 37552,
+      "passed": true
+    },
+    {
+      "case": "fixture-tamper",
+      "kind": "disk-load-rejection",
+      "exit": 2,
+      "manager2": 10752,
+      "passed": true
+    },
+    {
+      "case": "fixture-partial",
+      "kind": "disk-load-rejection",
+      "exit": 2,
+      "manager2": 23268,
+      "passed": true
+    },
+    {
+      "case": "fixture-format",
+      "kind": "disk-load-rejection",
+      "exit": 2,
+      "manager2": 41788,
+      "passed": true
+    },
+    {
+      "case": "fixture-abi",
+      "kind": "disk-load-rejection",
+      "exit": 2,
+      "manager2": 50208,
+      "passed": true
+    },
+    {
+      "case": "fixture-wrong-image",
+      "kind": "disk-load-rejection",
+      "exit": 2,
+      "manager2": 2948,
+      "passed": true
+    },
+    {
+      "case": "fixture-artifact-hash",
+      "kind": "disk-load-rejection",
+      "exit": 2,
+      "manager2": 12900,
+      "passed": true
+    },
+    {
+      "case": "fixture-resource-failure",
+      "kind": "isolated-resource-rejection",
+      "exit": 0,
+      "manager2": 52180,
+      "passed": true
+    },
+    {
+      "case": "fixture-query-capacity",
+      "kind": "idle-query-restart-positive",
+      "exit": 0,
+      "manager2": 26692,
+      "passed": true
+    },
+    {
+      "case": "recorder-positive-1",
+      "passed": true,
+      "kind": "cross-manager-positive",
+      "manager1": 46732,
+      "manager2": 28988
+    },
+    {
+      "case": "recorder-positive-2",
+      "passed": true,
+      "kind": "cross-manager-positive",
+      "manager1": 12752,
+      "manager2": 50324
+    },
+    {
+      "case": "recorder-missing",
+      "kind": "disk-load-rejection",
+      "exit": 2,
+      "manager2": 35340,
+      "passed": true
+    },
+    {
+      "case": "recorder-tamper",
+      "kind": "disk-load-rejection",
+      "exit": 2,
+      "manager2": 49220,
+      "passed": true
+    },
+    {
+      "case": "recorder-partial",
+      "kind": "disk-load-rejection",
+      "exit": 2,
+      "manager2": 20516,
+      "passed": true
+    },
+    {
+      "case": "recorder-format",
+      "kind": "disk-load-rejection",
+      "exit": 2,
+      "manager2": 35940,
+      "passed": true
+    },
+    {
+      "case": "recorder-abi",
+      "kind": "disk-load-rejection",
+      "exit": 2,
+      "manager2": 3720,
+      "passed": true
+    },
+    {
+      "case": "recorder-wrong-image",
+      "kind": "disk-load-rejection",
+      "exit": 2,
+      "manager2": 30896,
+      "passed": true
+    },
+    {
+      "case": "recorder-artifact-hash",
+      "kind": "disk-load-rejection",
+      "exit": 2,
+      "manager2": 49848,
+      "passed": true
+    },
+    {
+      "case": "recorder-resource-failure",
+      "kind": "isolated-resource-rejection",
+      "exit": 0,
+      "manager2": 50908,
+      "passed": true
+    },
+    {
+      "case": "recorder-query-capacity",
+      "kind": "idle-query-restart-positive",
+      "exit": 0,
+      "manager2": 16268,
+      "passed": true
+    }
+  ],
+  "managers": [
+    {
+      "application": "fixture",
+      "mode": "save",
+      "scenario": "positive",
+      "pid": 28024,
+      "created": 134377169298441530,
+      "createdUtc": "2026-10-29T03:08:49.8441530Z",
+      "start": "2026-10-29T11:08:49.8419377+08:00",
+      "ended": "2026-10-29T11:08:52.6097679+08:00",
+      "exit": 0,
+      "exited": true,
+      "timedOut": false,
+      "output": "C:\\fv-c\\c3\\reg3\\fixture-positive-1\\manager1",
+      "store": "C:\\fv-c\\c3\\reg3\\fixture-positive-1\\store",
+      "sha256": "f89f689d34fa6b76933c773ed485f2f6871ca591ce71c700038e6de8b5baf39a"
+    },
+    {
+      "application": "fixture",
+      "mode": "restore",
+      "scenario": "positive",
+      "pid": 38868,
+      "created": 134377169335008523,
+      "createdUtc": "2026-10-29T03:08:53.5008523Z",
+      "start": "2026-10-29T11:08:53.5001288+08:00",
+      "ended": "2026-10-29T11:08:56.7877086+08:00",
+      "exit": 0,
+      "exited": true,
+      "timedOut": false,
+      "output": "C:\\fv-c\\c3\\reg3\\fixture-positive-1\\manager2",
+      "store": "C:\\fv-c\\c3\\reg3\\fixture-positive-1\\store",
+      "sha256": "f89f689d34fa6b76933c773ed485f2f6871ca591ce71c700038e6de8b5baf39a"
+    },
+    {
+      "application": "fixture",
+      "mode": "save",
+      "scenario": "positive",
+      "pid": 50596,
+      "created": 134377169395041412,
+      "createdUtc": "2026-10-29T03:08:59.5041412Z",
+      "start": "2026-10-29T11:08:59.5035472+08:00",
+      "ended": "2026-10-29T11:09:02.3400676+08:00",
+      "exit": 0,
+      "exited": true,
+      "timedOut": false,
+      "output": "C:\\fv-c\\c3\\reg3\\fixture-positive-2\\manager1",
+      "store": "C:\\fv-c\\c3\\reg3\\fixture-positive-2\\store",
+      "sha256": "f89f689d34fa6b76933c773ed485f2f6871ca591ce71c700038e6de8b5baf39a"
+    },
+    {
+      "application": "fixture",
+      "mode": "restore",
+      "scenario": "positive",
+      "pid": 48216,
+      "created": 134377169433872986,
+      "createdUtc": "2026-10-29T03:09:03.3872986Z",
+      "start": "2026-10-29T11:09:03.3865882+08:00",
+      "ended": "2026-10-29T11:09:06.7229743+08:00",
+      "exit": 0,
+      "exited": true,
+      "timedOut": false,
+      "output": "C:\\fv-c\\c3\\reg3\\fixture-positive-2\\manager2",
+      "store": "C:\\fv-c\\c3\\reg3\\fixture-positive-2\\store",
+      "sha256": "f89f689d34fa6b76933c773ed485f2f6871ca591ce71c700038e6de8b5baf39a"
+    },
+    {
+      "application": "fixture",
+      "mode": "restore",
+      "scenario": "positive",
+      "pid": 37552,
+      "created": 134377169495036746,
+      "createdUtc": "2026-10-29T03:09:09.5036746Z",
+      "start": "2026-10-29T11:09:09.5030231+08:00",
+      "ended": "2026-10-29T11:09:09.5761244+08:00",
+      "exit": 2,
+      "exited": true,
+      "timedOut": false,
+      "output": "C:\\fv-c\\c3\\reg3\\fixture-missing\\manager2",
+      "store": "C:\\fv-c\\c3\\reg3\\fixture-missing\\fault-store",
+      "sha256": "f89f689d34fa6b76933c773ed485f2f6871ca591ce71c700038e6de8b5baf39a"
+    },
+    {
+      "application": "fixture",
+      "mode": "restore",
+      "scenario": "positive",
+      "pid": 10752,
+      "created": 134377169496517937,
+      "createdUtc": "2026-10-29T03:09:09.6517937Z",
+      "start": "2026-10-29T11:09:09.6508837+08:00",
+      "ended": "2026-10-29T11:09:09.7291821+08:00",
+      "exit": 2,
+      "exited": true,
+      "timedOut": false,
+      "output": "C:\\fv-c\\c3\\reg3\\fixture-tamper\\manager2",
+      "store": "C:\\fv-c\\c3\\reg3\\fixture-tamper\\fault-store",
+      "sha256": "f89f689d34fa6b76933c773ed485f2f6871ca591ce71c700038e6de8b5baf39a"
+    },
+    {
+      "application": "fixture",
+      "mode": "restore",
+      "scenario": "positive",
+      "pid": 23268,
+      "created": 134377169502521292,
+      "createdUtc": "2026-10-29T03:09:10.2521292Z",
+      "start": "2026-10-29T11:09:10.2513962+08:00",
+      "ended": "2026-10-29T11:09:10.3405514+08:00",
+      "exit": 2,
+      "exited": true,
+      "timedOut": false,
+      "output": "C:\\fv-c\\c3\\reg3\\fixture-partial\\manager2",
+      "store": "C:\\fv-c\\c3\\reg3\\fixture-partial\\fault-store",
+      "sha256": "f89f689d34fa6b76933c773ed485f2f6871ca591ce71c700038e6de8b5baf39a"
+    },
+    {
+      "application": "fixture",
+      "mode": "restore",
+      "scenario": "positive",
+      "pid": 41788,
+      "created": 134377169504114852,
+      "createdUtc": "2026-10-29T03:09:10.4114852Z",
+      "start": "2026-10-29T11:09:10.4107984+08:00",
+      "ended": "2026-10-29T11:09:10.4862271+08:00",
+      "exit": 2,
+      "exited": true,
+      "timedOut": false,
+      "output": "C:\\fv-c\\c3\\reg3\\fixture-format\\manager2",
+      "store": "C:\\fv-c\\c3\\reg3\\fixture-format\\fault-store",
+      "sha256": "f89f689d34fa6b76933c773ed485f2f6871ca591ce71c700038e6de8b5baf39a"
+    },
+    {
+      "application": "fixture",
+      "mode": "restore",
+      "scenario": "positive",
+      "pid": 50208,
+      "created": 134377169505555899,
+      "createdUtc": "2026-10-29T03:09:10.5555899Z",
+      "start": "2026-10-29T11:09:10.5549410+08:00",
+      "ended": "2026-10-29T11:09:10.6471096+08:00",
+      "exit": 2,
+      "exited": true,
+      "timedOut": false,
+      "output": "C:\\fv-c\\c3\\reg3\\fixture-abi\\manager2",
+      "store": "C:\\fv-c\\c3\\reg3\\fixture-abi\\fault-store",
+      "sha256": "f89f689d34fa6b76933c773ed485f2f6871ca591ce71c700038e6de8b5baf39a"
+    },
+    {
+      "application": "fixture",
+      "mode": "restore",
+      "scenario": "positive",
+      "pid": 2948,
+      "created": 134377169507046088,
+      "createdUtc": "2026-10-29T03:09:10.7046088Z",
+      "start": "2026-10-29T11:09:10.7015440+08:00",
+      "ended": "2026-10-29T11:09:10.7447759+08:00",
+      "exit": 2,
+      "exited": true,
+      "timedOut": false,
+      "output": "C:\\fv-c\\c3\\reg3\\fixture-wrong-image\\manager2",
+      "store": "C:\\fv-c\\c3\\reg3\\fixture-positive-1\\store",
+      "sha256": "f89f689d34fa6b76933c773ed485f2f6871ca591ce71c700038e6de8b5baf39a"
+    },
+    {
+      "application": "fixture",
+      "mode": "restore",
+      "scenario": "positive",
+      "pid": 12900,
+      "created": 134377169508147776,
+      "createdUtc": "2026-10-29T03:09:10.8147776Z",
+      "start": "2026-10-29T11:09:10.8141081+08:00",
+      "ended": "2026-10-29T11:09:10.9522373+08:00",
+      "exit": 2,
+      "exited": true,
+      "timedOut": false,
+      "output": "C:\\fv-c\\c3\\reg3\\fixture-artifact-hash\\manager2",
+      "store": "C:\\fv-c\\c3\\reg3\\fixture-artifact-hash\\fault-store",
+      "sha256": "f89f689d34fa6b76933c773ed485f2f6871ca591ce71c700038e6de8b5baf39a"
+    },
+    {
+      "application": "fixture",
+      "mode": "save",
+      "scenario": "positive",
+      "pid": 40032,
+      "created": 134377169510030600,
+      "createdUtc": "2026-10-29T03:09:11.0030600Z",
+      "start": "2026-10-29T11:09:11.0023202+08:00",
+      "ended": "2026-10-29T11:09:13.8287412+08:00",
+      "exit": 0,
+      "exited": true,
+      "timedOut": false,
+      "output": "C:\\fv-c\\c3\\reg3\\fixture-resource-failure\\manager1",
+      "store": "C:\\fv-c\\c3\\reg3\\fixture-resource-failure\\store",
+      "sha256": "f89f689d34fa6b76933c773ed485f2f6871ca591ce71c700038e6de8b5baf39a"
+    },
+    {
+      "application": "fixture",
+      "mode": "restore",
+      "scenario": "resource-failure",
+      "pid": 52180,
+      "created": 134377169546651001,
+      "createdUtc": "2026-10-29T03:09:14.6651001Z",
+      "start": "2026-10-29T11:09:14.6644681+08:00",
+      "ended": "2026-10-29T11:09:17.1270415+08:00",
+      "exit": 0,
+      "exited": true,
+      "timedOut": false,
+      "output": "C:\\fv-c\\c3\\reg3\\fixture-resource-failure\\manager2",
+      "store": "C:\\fv-c\\c3\\reg3\\fixture-resource-failure\\store",
+      "sha256": "f89f689d34fa6b76933c773ed485f2f6871ca591ce71c700038e6de8b5baf39a"
+    },
+    {
+      "application": "fixture",
+      "mode": "save",
+      "scenario": "positive",
+      "pid": 39340,
+      "created": 134377169590043990,
+      "createdUtc": "2026-10-29T03:09:19.0043990Z",
+      "start": "2026-10-29T11:09:19.0037307+08:00",
+      "ended": "2026-10-29T11:09:21.7205201+08:00",
+      "exit": 0,
+      "exited": true,
+      "timedOut": false,
+      "output": "C:\\fv-c\\c3\\reg3\\fixture-query-capacity\\manager1",
+      "store": "C:\\fv-c\\c3\\reg3\\fixture-query-capacity\\store",
+      "sha256": "f89f689d34fa6b76933c773ed485f2f6871ca591ce71c700038e6de8b5baf39a"
+    },
+    {
+      "application": "fixture",
+      "mode": "restore",
+      "scenario": "query-capacity",
+      "pid": 26692,
+      "created": 134377169625507468,
+      "createdUtc": "2026-10-29T03:09:22.5507468Z",
+      "start": "2026-10-29T11:09:22.5500827+08:00",
+      "ended": "2026-10-29T11:09:33.3034195+08:00",
+      "exit": 0,
+      "exited": true,
+      "timedOut": false,
+      "output": "C:\\fv-c\\c3\\reg3\\fixture-query-capacity\\manager2",
+      "store": "C:\\fv-c\\c3\\reg3\\fixture-query-capacity\\store",
+      "sha256": "f89f689d34fa6b76933c773ed485f2f6871ca591ce71c700038e6de8b5baf39a"
+    },
+    {
+      "application": "recorder",
+      "mode": "save",
+      "scenario": "positive",
+      "pid": 46732,
+      "created": 134377170044197174,
+      "createdUtc": "2026-10-29T03:10:04.4197174Z",
+      "start": "2026-10-29T11:10:04.4169229+08:00",
+      "ended": "2026-10-29T11:10:07.0931663+08:00",
+      "exit": 0,
+      "exited": true,
+      "timedOut": false,
+      "output": "C:\\fv-c\\c3\\reg3\\recorder-positive-1\\manager1",
+      "store": "C:\\fv-c\\c3\\reg3\\recorder-positive-1\\store",
+      "sha256": "f89f689d34fa6b76933c773ed485f2f6871ca591ce71c700038e6de8b5baf39a"
+    },
+    {
+      "application": "recorder",
+      "mode": "restore",
+      "scenario": "positive",
+      "pid": 28988,
+      "created": 134377170117525711,
+      "createdUtc": "2026-10-29T03:10:11.7525711Z",
+      "start": "2026-10-29T11:10:11.7499213+08:00",
+      "ended": "2026-10-29T11:10:15.0160925+08:00",
+      "exit": 0,
+      "exited": true,
+      "timedOut": false,
+      "output": "C:\\fv-c\\c3\\reg3\\recorder-positive-1\\manager2",
+      "store": "C:\\fv-c\\c3\\reg3\\recorder-positive-1\\store",
+      "sha256": "f89f689d34fa6b76933c773ed485f2f6871ca591ce71c700038e6de8b5baf39a"
+    },
+    {
+      "application": "recorder",
+      "mode": "save",
+      "scenario": "positive",
+      "pid": 12752,
+      "created": 134377170282878579,
+      "createdUtc": "2026-10-29T03:10:28.2878579Z",
+      "start": "2026-10-29T11:10:28.2855981+08:00",
+      "ended": "2026-10-29T11:10:30.9288670+08:00",
+      "exit": 0,
+      "exited": true,
+      "timedOut": false,
+      "output": "C:\\fv-c\\c3\\reg3\\recorder-positive-2\\manager1",
+      "store": "C:\\fv-c\\c3\\reg3\\recorder-positive-2\\store",
+      "sha256": "f89f689d34fa6b76933c773ed485f2f6871ca591ce71c700038e6de8b5baf39a"
+    },
+    {
+      "application": "recorder",
+      "mode": "restore",
+      "scenario": "positive",
+      "pid": 50324,
+      "created": 134377170354975234,
+      "createdUtc": "2026-10-29T03:10:35.4975234Z",
+      "start": "2026-10-29T11:10:35.4953410+08:00",
+      "ended": "2026-10-29T11:10:38.8859113+08:00",
+      "exit": 0,
+      "exited": true,
+      "timedOut": false,
+      "output": "C:\\fv-c\\c3\\reg3\\recorder-positive-2\\manager2",
+      "store": "C:\\fv-c\\c3\\reg3\\recorder-positive-2\\store",
+      "sha256": "f89f689d34fa6b76933c773ed485f2f6871ca591ce71c700038e6de8b5baf39a"
+    },
+    {
+      "application": "recorder",
+      "mode": "restore",
+      "scenario": "positive",
+      "pid": 35340,
+      "created": 134377170528069753,
+      "createdUtc": "2026-10-29T03:10:52.8069753Z",
+      "start": "2026-10-29T11:10:52.8048687+08:00",
+      "ended": "2026-10-29T11:10:52.8921240+08:00",
+      "exit": 2,
+      "exited": true,
+      "timedOut": false,
+      "output": "C:\\fv-c\\c3\\reg3\\recorder-missing\\manager2",
+      "store": "C:\\fv-c\\c3\\reg3\\recorder-missing\\fault-store",
+      "sha256": "f89f689d34fa6b76933c773ed485f2f6871ca591ce71c700038e6de8b5baf39a"
+    },
+    {
+      "application": "recorder",
+      "mode": "restore",
+      "scenario": "positive",
+      "pid": 49220,
+      "created": 134377170531806403,
+      "createdUtc": "2026-10-29T03:10:53.1806403Z",
+      "start": "2026-10-29T11:10:53.1776294+08:00",
+      "ended": "2026-10-29T11:10:53.2689882+08:00",
+      "exit": 2,
+      "exited": true,
+      "timedOut": false,
+      "output": "C:\\fv-c\\c3\\reg3\\recorder-tamper\\manager2",
+      "store": "C:\\fv-c\\c3\\reg3\\recorder-tamper\\fault-store",
+      "sha256": "f89f689d34fa6b76933c773ed485f2f6871ca591ce71c700038e6de8b5baf39a"
+    },
+    {
+      "application": "recorder",
+      "mode": "restore",
+      "scenario": "positive",
+      "pid": 20516,
+      "created": 134377170555093115,
+      "createdUtc": "2026-10-29T03:10:55.5093115Z",
+      "start": "2026-10-29T11:10:55.5071121+08:00",
+      "ended": "2026-10-29T11:10:55.5925814+08:00",
+      "exit": 2,
+      "exited": true,
+      "timedOut": false,
+      "output": "C:\\fv-c\\c3\\reg3\\recorder-partial\\manager2",
+      "store": "C:\\fv-c\\c3\\reg3\\recorder-partial\\fault-store",
+      "sha256": "f89f689d34fa6b76933c773ed485f2f6871ca591ce71c700038e6de8b5baf39a"
+    },
+    {
+      "application": "recorder",
+      "mode": "restore",
+      "scenario": "positive",
+      "pid": 35940,
+      "created": 134377170558724314,
+      "createdUtc": "2026-10-29T03:10:55.8724314Z",
+      "start": "2026-10-29T11:10:55.8711091+08:00",
+      "ended": "2026-10-29T11:10:55.9513088+08:00",
+      "exit": 2,
+      "exited": true,
+      "timedOut": false,
+      "output": "C:\\fv-c\\c3\\reg3\\recorder-format\\manager2",
+      "store": "C:\\fv-c\\c3\\reg3\\recorder-format\\fault-store",
+      "sha256": "f89f689d34fa6b76933c773ed485f2f6871ca591ce71c700038e6de8b5baf39a"
+    },
+    {
+      "application": "recorder",
+      "mode": "restore",
+      "scenario": "positive",
+      "pid": 3720,
+      "created": 134377170562389370,
+      "createdUtc": "2026-10-29T03:10:56.2389370Z",
+      "start": "2026-10-29T11:10:56.2365730+08:00",
+      "ended": "2026-10-29T11:10:56.3335966+08:00",
+      "exit": 2,
+      "exited": true,
+      "timedOut": false,
+      "output": "C:\\fv-c\\c3\\reg3\\recorder-abi\\manager2",
+      "store": "C:\\fv-c\\c3\\reg3\\recorder-abi\\fault-store",
+      "sha256": "f89f689d34fa6b76933c773ed485f2f6871ca591ce71c700038e6de8b5baf39a"
+    },
+    {
+      "application": "recorder",
+      "mode": "restore",
+      "scenario": "positive",
+      "pid": 30896,
+      "created": 134377170565366304,
+      "createdUtc": "2026-10-29T03:10:56.5366304Z",
+      "start": "2026-10-29T11:10:56.5341356+08:00",
+      "ended": "2026-10-29T11:10:56.5819703+08:00",
+      "exit": 2,
+      "exited": true,
+      "timedOut": false,
+      "output": "C:\\fv-c\\c3\\reg3\\recorder-wrong-image\\manager2",
+      "store": "C:\\fv-c\\c3\\reg3\\recorder-positive-1\\store",
+      "sha256": "f89f689d34fa6b76933c773ed485f2f6871ca591ce71c700038e6de8b5baf39a"
+    },
+    {
+      "application": "recorder",
+      "mode": "restore",
+      "scenario": "positive",
+      "pid": 49848,
+      "created": 134377170568847132,
+      "createdUtc": "2026-10-29T03:10:56.8847132Z",
+      "start": "2026-10-29T11:10:56.8822771+08:00",
+      "ended": "2026-10-29T11:10:57.0387238+08:00",
+      "exit": 2,
+      "exited": true,
+      "timedOut": false,
+      "output": "C:\\fv-c\\c3\\reg3\\recorder-artifact-hash\\manager2",
+      "store": "C:\\fv-c\\c3\\reg3\\recorder-artifact-hash\\fault-store",
+      "sha256": "f89f689d34fa6b76933c773ed485f2f6871ca591ce71c700038e6de8b5baf39a"
+    },
+    {
+      "application": "recorder",
+      "mode": "save",
+      "scenario": "positive",
+      "pid": 45616,
+      "created": 134377170572539849,
+      "createdUtc": "2026-10-29T03:10:57.2539849Z",
+      "start": "2026-10-29T11:10:57.2515192+08:00",
+      "ended": "2026-10-29T11:10:59.9698573+08:00",
+      "exit": 0,
+      "exited": true,
+      "timedOut": false,
+      "output": "C:\\fv-c\\c3\\reg3\\recorder-resource-failure\\manager1",
+      "store": "C:\\fv-c\\c3\\reg3\\recorder-resource-failure\\store",
+      "sha256": "f89f689d34fa6b76933c773ed485f2f6871ca591ce71c700038e6de8b5baf39a"
+    },
+    {
+      "application": "recorder",
+      "mode": "restore",
+      "scenario": "resource-failure",
+      "pid": 50908,
+      "created": 134377170646748499,
+      "createdUtc": "2026-10-29T03:11:04.6748499Z",
+      "start": "2026-10-29T11:11:04.6726419+08:00",
+      "ended": "2026-10-29T11:11:07.1557602+08:00",
+      "exit": 0,
+      "exited": true,
+      "timedOut": false,
+      "output": "C:\\fv-c\\c3\\reg3\\recorder-resource-failure\\manager2",
+      "store": "C:\\fv-c\\c3\\reg3\\recorder-resource-failure\\store",
+      "sha256": "f89f689d34fa6b76933c773ed485f2f6871ca591ce71c700038e6de8b5baf39a"
+    },
+    {
+      "application": "recorder",
+      "mode": "save",
+      "scenario": "positive",
+      "pid": 18620,
+      "created": 134377170760659258,
+      "createdUtc": "2026-10-29T03:11:16.0659258Z",
+      "start": "2026-10-29T11:11:16.0635853+08:00",
+      "ended": "2026-10-29T11:11:18.9126236+08:00",
+      "exit": 0,
+      "exited": true,
+      "timedOut": false,
+      "output": "C:\\fv-c\\c3\\reg3\\recorder-query-capacity\\manager1",
+      "store": "C:\\fv-c\\c3\\reg3\\recorder-query-capacity\\store",
+      "sha256": "f89f689d34fa6b76933c773ed485f2f6871ca591ce71c700038e6de8b5baf39a"
+    },
+    {
+      "application": "recorder",
+      "mode": "restore",
+      "scenario": "query-capacity",
+      "pid": 16268,
+      "created": 134377170839842771,
+      "createdUtc": "2026-10-29T03:11:23.9842771Z",
+      "start": "2026-10-29T11:11:23.9815073+08:00",
+      "ended": "2026-10-29T11:11:34.9568671+08:00",
+      "exit": 0,
+      "exited": true,
+      "timedOut": false,
+      "output": "C:\\fv-c\\c3\\reg3\\recorder-query-capacity\\manager2",
+      "store": "C:\\fv-c\\c3\\reg3\\recorder-query-capacity\\store",
+      "sha256": "f89f689d34fa6b76933c773ed485f2f6871ca591ce71c700038e6de8b5baf39a"
+    }
+  ],
+  "errors": []
+}

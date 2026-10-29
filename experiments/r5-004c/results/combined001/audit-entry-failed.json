@@ -1,0 +1,150 @@
+{
+  "candidateFunctionalVerificationPassed": false,
+  "sameFinalBuild": true,
+  "sameBoot": true,
+  "boot": "2026-10-29T08:27:21.5+08:00",
+  "regressions": "failed",
+  "stages": [
+    {
+      "name": "failure-once",
+      "passed": true,
+      "error": "",
+      "summary": "C:\\fv-c\\c2/once/summary.json",
+      "before": {
+        "passed": true,
+        "checked": 817,
+        "changed": []
+      },
+      "after": {
+        "passed": true,
+        "checked": 817,
+        "changed": []
+      }
+    },
+    {
+      "name": "missing-proof",
+      "passed": true,
+      "error": "",
+      "summary": "C:\\fv-c\\c2/proof/summary.json",
+      "before": {
+        "passed": true,
+        "checked": 817,
+        "changed": []
+      },
+      "after": {
+        "passed": true,
+        "checked": 817,
+        "changed": []
+      }
+    },
+    {
+      "name": "input-errors",
+      "passed": true,
+      "error": "",
+      "summary": "C:\\fv-c\\c2/input/summary.json",
+      "before": {
+        "passed": true,
+        "checked": 817,
+        "changed": []
+      },
+      "after": {
+        "passed": true,
+        "checked": 817,
+        "changed": []
+      }
+    },
+    {
+      "name": "focus",
+      "passed": true,
+      "error": "",
+      "summary": "C:\\fv-c\\c2/focus/summary.json",
+      "before": {
+        "passed": true,
+        "checked": 817,
+        "changed": []
+      },
+      "after": {
+        "passed": true,
+        "checked": 817,
+        "changed": []
+      }
+    },
+    {
+      "name": "cleanup",
+      "passed": true,
+      "error": "",
+      "summary": "C:\\fv-c\\c2/cleanup/summary.json",
+      "before": {
+        "passed": true,
+        "checked": 817,
+        "changed": []
+      },
+      "after": {
+        "passed": true,
+        "checked": 817,
+        "changed": []
+      }
+    },
+    {
+      "name": "relocation",
+      "passed": true,
+      "error": "",
+      "summary": "C:\\fv-c\\c2/relocation/summary.json",
+      "before": {
+        "passed": true,
+        "checked": 817,
+        "changed": []
+      },
+      "after": {
+        "passed": true,
+        "checked": 817,
+        "changed": []
+      }
+    },
+    {
+      "name": "crash",
+      "passed": true,
+      "error": "",
+      "summary": "C:\\fv-c\\c2/crash/summary.json",
+      "before": {
+        "passed": true,
+        "checked": 817,
+        "changed": []
+      },
+      "after": {
+        "passed": true,
+        "checked": 817,
+        "changed": []
+      }
+    },
+    {
+      "name": "legacy",
+      "passed": false,
+      "error": "R5-003 evidence failed; preserve primary API errors and all raw records",
+      "summary": "C:\\fv-c\\c2/reg3/summary.json",
+      "before": {
+        "passed": true,
+        "checked": 817,
+        "changed": []
+      },
+      "after": {
+        "passed": true,
+        "checked": 817,
+        "changed": []
+      }
+    }
+  ],
+  "frozenInputAudit": {
+    "passed": true,
+    "checked": 817,
+    "changed": []
+  },
+  "followups": [],
+  "fullNestedRegressionAttempted": true,
+  "fullNestedRegressionExecuted": true,
+  "cleanupCausalFixVerified": false,
+  "fullR5004Passed": false,
+  "gateClosed": false,
+  "manualHostTest": "not_executed",
+  "hostRebootRecoveryVerified": false
+}

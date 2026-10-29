@@ -1,0 +1,182 @@
+{
+  "candidateFunctionalVerificationPassed": false,
+  "sameFinalBuild": false,
+  "sameBoot": true,
+  "boot": "2026-10-29T08:27:21.5+08:00",
+  "regressions": "failed",
+  "stages": [
+    {
+      "name": "failure-once",
+      "passed": false,
+      "error": "Follow-up once-only acceptance failed",
+      "summary": "C:\\fv-c\\c1/once/summary.json",
+      "before": {
+        "passed": true,
+        "checked": 817,
+        "changed": []
+      },
+      "after": {
+        "passed": true,
+        "checked": 817,
+        "changed": []
+      }
+    },
+    {
+      "name": "missing-proof",
+      "passed": true,
+      "error": "",
+      "summary": "C:\\fv-c\\c1/proof/summary.json",
+      "before": {
+        "passed": true,
+        "checked": 817,
+        "changed": []
+      },
+      "after": {
+        "passed": true,
+        "checked": 817,
+        "changed": []
+      }
+    },
+    {
+      "name": "input-errors",
+      "passed": true,
+      "error": "",
+      "summary": "C:\\fv-c\\c1/input/summary.json",
+      "before": {
+        "passed": true,
+        "checked": 817,
+        "changed": []
+      },
+      "after": {
+        "passed": true,
+        "checked": 817,
+        "changed": []
+      }
+    },
+    {
+      "name": "focus",
+      "passed": true,
+      "error": "",
+      "summary": "C:\\fv-c\\c1/focus/summary.json",
+      "before": {
+        "passed": true,
+        "checked": 817,
+        "changed": []
+      },
+      "after": {
+        "passed": true,
+        "checked": 817,
+        "changed": []
+      }
+    },
+    {
+      "name": "cleanup",
+      "passed": false,
+      "error": "",
+      "summary": "C:\\fv-c\\c1/cleanup/summary.json",
+      "before": {
+        "passed": true,
+        "checked": 817,
+        "changed": []
+      },
+      "after": {
+        "passed": false,
+        "checked": 817,
+        "changed": [
+          "D:\\focus-views\\experiments\\r5-004c\\frozen-inputs.ps1",
+          "D:\\focus-views\\experiments\\r5-004c\\prepare-combination.ps1",
+          "D:\\focus-views\\experiments\\r5-004c\\test.ps1"
+        ]
+      }
+    },
+    {
+      "name": "relocation",
+      "passed": false,
+      "error": "Frozen input changed before stage",
+      "summary": "C:\\fv-c\\c1/relocation/summary.json",
+      "before": {
+        "passed": false,
+        "checked": 817,
+        "changed": [
+          "D:\\focus-views\\experiments\\r5-004c\\frozen-inputs.ps1",
+          "D:\\focus-views\\experiments\\r5-004c\\prepare-combination.ps1",
+          "D:\\focus-views\\experiments\\r5-004c\\test.ps1"
+        ]
+      },
+      "after": {
+        "passed": false,
+        "checked": 817,
+        "changed": [
+          "D:\\focus-views\\experiments\\r5-004c\\frozen-inputs.ps1",
+          "D:\\focus-views\\experiments\\r5-004c\\prepare-combination.ps1",
+          "D:\\focus-views\\experiments\\r5-004c\\test.ps1"
+        ]
+      }
+    },
+    {
+      "name": "crash",
+      "passed": false,
+      "error": "Frozen input changed before stage",
+      "summary": "C:\\fv-c\\c1/crash/summary.json",
+      "before": {
+        "passed": false,
+        "checked": 817,
+        "changed": [
+          "D:\\focus-views\\experiments\\r5-004c\\frozen-inputs.ps1",
+          "D:\\focus-views\\experiments\\r5-004c\\prepare-combination.ps1",
+          "D:\\focus-views\\experiments\\r5-004c\\test.ps1"
+        ]
+      },
+      "after": {
+        "passed": false,
+        "checked": 817,
+        "changed": [
+          "D:\\focus-views\\experiments\\r5-004c\\frozen-inputs.ps1",
+          "D:\\focus-views\\experiments\\r5-004c\\prepare-combination.ps1",
+          "D:\\focus-views\\experiments\\r5-004c\\test.ps1"
+        ]
+      }
+    },
+    {
+      "name": "legacy",
+      "passed": false,
+      "error": "Frozen input changed before stage",
+      "summary": "C:\\fv-c\\c1/reg3/summary.json",
+      "before": {
+        "passed": false,
+        "checked": 817,
+        "changed": [
+          "D:\\focus-views\\experiments\\r5-004c\\frozen-inputs.ps1",
+          "D:\\focus-views\\experiments\\r5-004c\\prepare-combination.ps1",
+          "D:\\focus-views\\experiments\\r5-004c\\test.ps1"
+        ]
+      },
+      "after": {
+        "passed": false,
+        "checked": 817,
+        "changed": [
+          "D:\\focus-views\\experiments\\r5-004c\\frozen-inputs.ps1",
+          "D:\\focus-views\\experiments\\r5-004c\\prepare-combination.ps1",
+          "D:\\focus-views\\experiments\\r5-004c\\test.ps1"
+        ]
+      }
+    }
+  ],
+  "frozenInputAudit": {
+    "passed": false,
+    "checked": 817,
+    "changed": [
+      "D:\\focus-views\\experiments\\r5-004c\\frozen-inputs.ps1",
+      "D:\\focus-views\\experiments\\r5-004c\\prepare-combination.ps1",
+      "D:\\focus-views\\experiments\\r5-004c\\test.ps1"
+    ]
+  },
+  "followups": [],
+  "fullNestedRegressionAttempted": true,
+  "fullNestedRegressionExecuted": false,
+  "cleanupCausalFixVerified": false,
+  "fullR5004Passed": false,
+  "gateClosed": false,
+  "manualHostTest": "not_executed",
+  "hostRebootRecoveryVerified": false
+}

@@ -1,0 +1,87 @@
+{
+  "baseline": "1ef786b92d808fe543edbbd80e40c47ae9bb160a",
+  "implementationCommit": "6415104b8f8df92c15351a197b15314169a181c8",
+  "frozenInputManifestSha256": "f808fb282d93671bde77a183a928b1cac68cc93915e331dc4cb78aa15b0bf792",
+  "finalEntryPassed": true,
+  "sameFinalBuild": true,
+  "sameBoot": true,
+  "boot": "2026-10-29T08:27:21.5+08:00",
+  "frozenFiles": 825,
+  "buildDirectories": 17,
+  "binaryBytesUnchangedAfterProfileCorrection": true,
+  "fullNestedRegressionExecuted": true,
+  "regressions": "passed",
+  "stages": [
+    {
+      "name": "focus",
+      "cases": 4,
+      "checks": null,
+      "passed": true
+    },
+    {
+      "name": "cleanup",
+      "cases": 12,
+      "checks": 1538,
+      "passed": true
+    },
+    {
+      "name": "relocation",
+      "cases": 16,
+      "checks": 1958.0,
+      "passed": true
+    },
+    {
+      "name": "crash",
+      "cases": 63,
+      "checks": 3174,
+      "passed": true
+    },
+    {
+      "name": "r5-003",
+      "passed": true,
+      "checks": 1052,
+      "cases": 22,
+      "path": "C:\\fv-c\\c3\\reg3"
+    },
+    {
+      "name": "r5-002",
+      "passed": true,
+      "checks": 14154,
+      "cases": 70,
+      "path": "C:\\fv-c\\c3\\reg3\\r5-002-regression",
+      "safetyChecks": 10
+    },
+    {
+      "name": "r5-001b",
+      "passed": true,
+      "checks": 8028,
+      "cases": 42,
+      "path": "C:\\fv-c\\c3\\reg3\\r5-002-regression\\r5-001b-regression"
+    },
+    {
+      "name": "r5-001a",
+      "passed": true,
+      "checks": 3710,
+      "cases": 20,
+      "path": "C:\\fv-c\\c3\\reg3\\r5-002-regression\\r5-001b-regression\\r5-001a-regression"
+    },
+    {
+      "name": "r4-003-001",
+      "passed": true,
+      "checks": 2519,
+      "cases": 14,
+      "path": "C:\\fv-c\\c3\\reg3\\r5-002-regression\\r5-001b-regression\\r5-001a-regression\\r4-003-001-regression"
+    }
+  ],
+  "naturalFollowups": [],
+  "naturalCleanupFailureObserved": false,
+  "historicalHook126Reproduced": false,
+  "rootCauseConfirmed": false,
+  "cleanupCausalFixVerified": false,
+  "fullR5004Passed": false,
+  "gateClosed": false,
+  "manualHostTest": "not_executed",
+  "hostRebootRecoveryVerified": false,
+  "r1HarnessPassed": true,
+  "r1Cases": 9
+}
