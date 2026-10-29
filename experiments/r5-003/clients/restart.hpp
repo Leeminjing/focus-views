@@ -1,4 +1,7 @@
 #pragma once
+#ifdef FOCUS_VIEWS_RESTORED_INTERACTION_EXPERIMENT
+#include "../../fv-03-04/mode.hpp"
+#endif
 #include "../../r5-002/clients/host.hpp"
 #include "../runtime/store.hpp"
 namespace r5003 {
@@ -76,6 +79,9 @@ template<class Client>class Restart : public Experiment<Client> {
         return a;
     }
 public:
+#ifdef FOCUS_VIEWS_RESTORED_INTERACTION_EXPERIMENT
+#include "../../fv-03-04/interaction.inl"
+#endif
     Restart(const std::filesystem::path& exe,const std::filesystem::path& app,const std::filesystem::path& out,const std::filesystem::path& store):Base(exe,app,out),store_(store){this->gui_=true;this->scenario_=L"positive";}
     int save_phase(){bool completed=false;Session session;session.manager=manager();session.executable=executable_;session.client=Client::kind();
         std::unique_ptr<Child> source;View a,b;
@@ -154,7 +160,11 @@ public:
             this->select_prefix(*c.child,*c.input);this->edit(c,L'C',L"C","final-edit");this->alive(rb.child&&rb.child->published?std::vector<Child*>{ra.child.get(),rb.child.get(),c.child.get()}:std::vector<Child*>{ra.child.get(),c.child.get()},"restart-final");
             unsigned i=0;for(const auto* snap:{&s,&sa,&sb}){const auto label=i==0?"S0":i==1?"SA":"SB";verify(std::string(label)+".disk-immutable",hash(read(store_/(std::string(label)+".fvs")))==session.packets[i]&&this->fingerprint(*snap,std::string(label)+"-after-restart")==session.fingerprints[i],"loaded state and original packet stay fixed");++i;}
             for(auto* view:{&ra,&rb,&c})if(view->child&&view->child->published){this->observe(*view->child,"final");this->capture(*view->child,"final");}
-            verify("Artifact.fixed-after-C",Artifacts::digest(artifact_a->directory/"data.bin")==sa.file.sha256&&Artifacts::digest(artifact_b->directory/"data.bin")==sb.file.sha256,"private processing and Undo do not change fixed versions");completed=true;
+            verify("Artifact.fixed-after-C",Artifacts::digest(artifact_a->directory/"data.bin")==sa.file.sha256&&Artifacts::digest(artifact_b->directory/"data.bin")==sb.file.sha256,"private processing and Undo do not change fixed versions");
+#ifdef FOCUS_VIEWS_RESTORED_INTERACTION_EXPERIMENT
+            if(fv_live::mode!=L"positive")interaction_stage(ra,rb,c);
+#endif
+            completed=true;
         }catch(const Error& e){log_.emit("experiment_failure","\"api\":"+json(e.api)+",\"error\":"+std::to_string(e.code)+",\"message\":"+json(e.what()));}
         for(auto* v:{&c,&rb,&ra})try{dispose(*v);}catch(const std::exception& e){++failed_;log_.emit("cleanup_error","\"message\":"+json(e.what()));}
         log_.emit("restart_complete","\"phase\":\"restore\",\"passed\":"+std::string(completed&&!failed_?"true":"false")+",\"expectedRejectionDetected\":"+(rejected?"true":"false")+",\"managerPid\":"+std::to_string(GetCurrentProcessId()));return completed&&!failed_?0:2;

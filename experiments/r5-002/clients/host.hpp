@@ -139,12 +139,20 @@ public:
         if(reply.error)throw Error(reply.api,reply.error);return reply.observed;
     }
     void freeze(Child& v){post(v,freeze_message);run_until(v,[&]{return v.metadata().frozen==1;},"runtime.freeze");}
-    void capture(Child& v,const std::string& label){const auto reply_name=L"Local\\"+prefix_+L"_png_"+std::to_wstring(++serial_);Mapping reply(reply_name,sizeof(Reply),true);auto* r=new(reply.view)Reply{};auto wide=std::wstring(label.begin(),label.end());
+#ifdef FOCUS_VIEWS_RESTORED_INTERACTION_EXPERIMENT
+    Reply
+#else
+    void
+#endif
+    capture(Child& v,const std::string& label){const auto reply_name=L"Local\\"+prefix_+L"_png_"+std::to_wstring(++serial_);Mapping reply(reply_name,sizeof(Reply),true);auto* r=new(reply.view)Reply{};auto wide=std::wstring(label.begin(),label.end());
         courier_command(v,reply_name,true,0,0,out_/v.name/(label+".png"));
         log_.emit("capture","\"name\":"+json(label)+",\"file\":"+json(v.name+"/"+label+".png")+",\"view\":"+json(v.name)+",\"api\":"+json(r->api)+",\"error\":"+std::to_string(r->error)+",\"counter\":"+std::to_string(r->print_update)+",\"beforeDraws\":"+std::to_string(r->before_draws)+",\"afterDraws\":"+std::to_string(r->after_draws)+",\"apiBeginMs\":"+std::to_string(r->api_begin_ms)+",\"apiEndMs\":"+std::to_string(r->api_end_ms)+",\"clientDx\":"+std::to_string(r->client_dx)+",\"clientDy\":"+std::to_string(r->client_dy));
         if(!r->done)throw Error("capture.no_ack",ERROR_INVALID_STATE);
         if(r->error)throw Error("capture/"+std::string(r->api),r->error);
         verify(label+".actual-GDI",r->after_draws>r->before_draws,"private native PrintWindow/WM_PRINT helper records actual target paint; script checks counter/control pixels");
+#ifdef FOCUS_VIEWS_RESTORED_INTERACTION_EXPERIMENT
+        return *r;
+#endif
     }
     Observation state(Child& v){return Client::observe(v);}
     ClientCommand mailbox(Child& v){return native::read_value<ClientCommand>(v.p.process.value,v.image+mailbox_rva_);}
